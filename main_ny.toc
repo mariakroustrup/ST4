@@ -1,13 +1,11 @@
 \changetocdepth {1}
 \select@language {danish}
-\contentsline {chapter}{Indholdsfortegnelse}{2}{section*.2}
 \contentsline {chapter}{\chapternumberline {1}Introduktion}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Indledning}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Initierende}{3}{subsection.1.1.1}
 \contentsline {chapter}{\chapternumberline {2}Disposition}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Amytrofisk lateral sklerose}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}F\IeC {\o }lger}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Livskvalitet}{4}{section.2.3}
-\contentsline {section}{\numberline {2.4}Teknologier og hj\IeC {\ae }lpemidler}{4}{section.2.4}
-\contentsline {section}{\numberline {2.5}Afgr\IeC {\ae }nsning}{4}{section.2.5}
-\contentsline {section}{\numberline {2.6}Kn\IeC {\ae }leddet}{5}{section.2.6}
+\contentsline {subsection}{\numberline {2.1.1}F\IeC {\o }lger}{4}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Livskvalitet}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Teknologier og hj\IeC {\ae }lpemidler}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Kn\IeC {\ae }leddet (m\IeC {\r a}ske anden titel?)}{5}{section.2.4}
