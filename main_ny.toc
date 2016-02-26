@@ -3,9 +3,17 @@
 \contentsline {chapter}{\chapternumberline {1}Introduktion}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Indledning}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Initierende}{3}{subsection.1.1.1}
-\contentsline {chapter}{\chapternumberline {2}Disposition}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Amytrofisk lateral sklerose}{4}{section.2.1}
+\contentsline {chapter}{\chapternumberline {2}Problemanalyse}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Amyotrofisk lateral sklerose}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}F\IeC {\o }lger}{4}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Livskvalitet}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Teknologier og hj\IeC {\ae }lpemidler}{4}{section.2.3}
-\contentsline {section}{\numberline {2.4}Kn\IeC {\ae }leddet (m\IeC {\r a}ske anden titel?)}{5}{section.2.4}
+\contentsline {section}{\numberline {2.2}Livskvalitet hos ALS-patienter}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Nuv\IeC {\ae }rende teknologier og hj\IeC {\ae }lpemidler}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Teknologiske og personlige hj\IeC {\ae }lpemidler}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Udfordringer og nye muligheder}{6}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Exoskelet}{6}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Gangfunktion}{6}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Kn\IeC {\ae }ets opbygning}{7}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Kn\IeC {\ae }ets funktion}{7}{subsection.2.4.2}
+\contentsline {subsubsection}{Kn\IeC {\ae }et funktion under squat \IeC {\o }velse}{7}{section*.4}
+\contentsline {section}{\numberline {2.5}Problemafgr\IeC {\ae }nsning}{8}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Problemformulering}{8}{subsection.2.5.1}
