@@ -26,8 +26,8 @@
 }
 
 @Book{brandt2010,
-  Title                    = {Grundbog om hjælpemidler: til personer med funktionsnedsættelse},
-  Author                   = {Å. Brandt and L. Jensen},
+  Title                    = {Grundbog om hjï¿½lpemidler: til personer med funktionsnedsï¿½ttelse},
+  Author                   = {ï¿½. Brandt and L. Jensen},
   Publisher                = {Gyldendal Akademisk},
   Year                     = {2010},
   Volume                   = {1},
@@ -98,7 +98,7 @@ et. al.},
 }
 
 @Manual{regmidt2015,
-  Title                    = {Rygmarvsskadet lammet mand laerer at gaa},
+  Title                    = {Rygmarvsskadet lammet mand lï¿½rer at gï¿½},
   Author                   = {Region Midtjylland},
   Year                     = {2015},
 
@@ -109,7 +109,7 @@ et. al.},
 
 @Book{miller2005,
   Title                    = {American Academy of Neurology: Amyotrophic Lateral Sclerosis},
-  Author                   = {R. G. Miller and D. F. Gelinas and P. OÕConnor. et. al.},
+  Author                   = {R. G. Miller and D. F. Gelinas and P. Oï¿½Connor. et. al.},
   Publisher                = {Demos Medical Publishing},
   Year                     = {2005},
 
@@ -183,7 +183,7 @@ G. D. Borasio},
 }
 
 @Manual{rcfm2001,
-  Title                    = {ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder},
+  Title                    = {ALS og vejrtrï¿½kning: Hjï¿½lpemidler og behandlingsmuligheder},
   Author                   = {O. Gredal, et. al.},
   Organization             = {RehabiliteringsCenter for Muskelsvind},
   Year                     = {2001},
@@ -208,7 +208,7 @@ G. D. Borasio},
 @Manual{russell2015,
   Title                    = {Amytrofisk lateral sklerose},
   Author                   = {M. B. Russell and J. S. Andersen and N. Witting, et. al.},
-  Organization             = {L¾gehŒndbogen},
+  Organization             = {Lï¿½gehï¿½ndbogen},
 
   Comment                  = {18-02-2016},
   Doi                      = {978-82-92002-25-4},

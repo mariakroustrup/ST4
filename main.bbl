@@ -1,0 +1,154 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Muskelsvindsfonden(2016{\natexlab{a}})]{hvadermuskelsvind2016}
+Muskelsvindsfonden.
+\newblock \emph{Hvad er muskelsvind?}
+\newblock Muskelsvindsfonden, 2016{\natexlab{a}}.
+\newblock URL
+  \url{http://muskelsvindfonden.dk/om-muskelsvind/hvad-er-muskelsvind/}.
+
+\bibitem[Muskelsvindsfonden(2016{\natexlab{b}})]{sygdomsbeskrivelser2016}
+Muskelsvindsfonden.
+\newblock \emph{Sygdomsbeskrivelser}.
+\newblock Muskelsvindsfonden, 2016{\natexlab{b}}.
+
+\bibitem[Russell et~al.()Russell, Andersen, and N.~Witting]{russell2015}
+M.~B. Russell, J.~S. Andersen, and et.~al. N.~Witting.
+\newblock \emph{Amytrofisk lateral sklerose}.
+\newblock Lægehåndbogen.
+
+\bibitem[Morris(2015)]{morris2015}
+J.~Morris.
+\newblock Amyotrophic lateral sclerosis (als) and related motor neuron
+  diseases: An overview.
+\newblock \emph{The Neurodiagnostic Journal}, 2015.
+\newblock \doi{10.1080/21646821.2015.1075181}.
+
+\bibitem[Miller et~al.(2005)Miller, Gelinas, and et. al.]{miller2005}
+R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
+\newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
+\newblock Demos Medical Publishing, 2005.
+\newblock \doi{9781934559062}.
+
+\bibitem[of~Neurological~Disorders and Stroke(2016)]{nationalinstitute2016}
+National~Institute of~Neurological~Disorders and Stroke.
+\newblock \emph{Amyotrophic lateral sclerosis (ALS) Fact sheet}.
+\newblock National Institute of Neurological Disorders and Stroke, 2016.
+\newblock URL
+  \url{nih.gov/disorders/amyotrophiclateralsclerosis/detail_ALS.htm}.
+
+\bibitem[Association(2016)]{themusculardystrophyassociation2016}
+The Muscular~Dystrophy Association.
+\newblock \emph{Amyotrophic lateral sclerosis - Stages of ALS}.
+\newblock The Muscular Dystrophy Association, 2016.
+\newblock URL
+  \url{https://www.mda.org/disease/amyotrophic-lateral-sclerosis/signs-and-symptoms/stages-of-als}.
+
+\bibitem[Grehl et~al.(2011)Grehl, Ruppand, and P.~Buddle]{grehl2011}
+T.~Grehl, M.~Ruppand, and et.~al. P.~Buddle.
+\newblock \emph{Depression and QOL in patients with ALS: How do self-ratings
+  and ratings by relatives differ?}
+\newblock Springer Netherlands, 2011.
+\newblock \doi{1573-2649}.
+
+\bibitem[Tidy(2015)]{tidy2015}
+C.~Tidy.
+\newblock \emph{Motor Neurone Disease}.
+\newblock Patient, 2015.
+\newblock URL \url{http://patient.info/health/motor-neurone-disease-leaflet}.
+
+\bibitem[Neudert et~al.(2004)Neudert, Wasner, and Borasio]{neudert2004}
+C.~Neudert, M.~Wasner, and G.~D. Borasio.
+\newblock Individual quality of life is not correlated with health-related
+  quality of life or physical function in patients with amyotrophic lateral
+  sclerosis.
+\newblock \emph{Journal of palliative medicine}, 7, 2004.
+\newblock \doi{10.1089/1096621041838443}.
+
+\bibitem[Ilse et~al.(2015)Ilse, Prell, and M.~Walther]{ilse2015}
+B.~Ilse, T.~Prell, and et.~al. M.~Walther.
+\newblock Relationships between disease severity, social support and
+  health-related quality of life in patients with amyotrophic lateral
+  sclerosis.
+\newblock \emph{Social Indicators Research}, 2015.
+\newblock \doi{10.1007/s11205-014-0621-y}.
+
+\bibitem[Pagnini(2013)]{pagnini2013}
+F.~Pagnini.
+\newblock Psychological wellbeing and quality of life inamyotrophic lateral
+  sclerosis: A review.
+\newblock \emph{International Journal of Psychology}, 48, 2013.
+\newblock \doi{http://dx.doi.org/10.1080/00207594.2012.691977}.
+
+\bibitem[Tramonti. et~al.(2012)Tramonti., Bongioanni., and
+  C.~Fanciullacci]{tramonti2012}
+F.~Tramonti., P.~Bongioanni., and et.~al. C.~Fanciullacci.
+\newblock Balancing between autonomy and support: Coping strategies by patients
+  with amyotrophic lateral sclerosis.
+\newblock \emph{Journal of the Neurological Sciences}, 320, 2012.
+\newblock \doi{10.1016/j.jns.2012.07.006}.
+
+\bibitem[Brandt and Jensen(2010)]{brandt2010}
+Å.~Brandt and L.~Jensen.
+\newblock \emph{Grundbog om hjælpemidler: til personer med
+  funktionsnedsættelse}, volume~1.
+\newblock Gyldendal Akademisk, 2010.
+\newblock \doi{9788762808034}.
+
+\bibitem[Heffernan et~al.(2006)Heffernan, Jenkinson, and
+  T.~Holmes]{hefferman2006}
+C.~Heffernan, C.~Jenkinson, and et.~al. T.~Holmes.
+\newblock Management of respiration in mnd/als patients: An evidence based
+  review.
+\newblock \emph{Amyotrophic Lateral Sclerosis}, 7, 2006.
+\newblock \doi{10.1080/14660820510043235}.
+
+\bibitem[O.~Gredal(2001)]{rcfm2001}
+et.~al. O.~Gredal.
+\newblock \emph{ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder}.
+\newblock RehabiliteringsCenter for Muskelsvind, 2001.
+\newblock URL
+  \url{http://rcfm.dk/wp-content/uploads/2015/02/ALS-og-respiration.pdf}.
+
+\bibitem[Erlen(2003)]{erlen2003}
+J.~A. Erlen.
+\newblock Technology: possibilities and pitfalls.
+\newblock \emph{Orthopedic nursing}, 2003.
+
+\bibitem[Yang et~al.(2008)Yang, Zhang, and Y.~Chen]{yang2008}
+C.~J. Yang, J.~F. Zhang, and et.~al. Y.~Chen.
+\newblock A review of exoskeleton-type systems and their key technologies.
+\newblock \emph{Journal of Mechanical Engineering Science}, 222, 2008.
+\newblock \doi{10.1243/09544062JMES936}.
+
+\bibitem[Bogue(2015)]{bogue2015}
+R.~Bogue.
+\newblock Robotic exoskeletons: a review of recent progress.
+\newblock \emph{Emerald Group Publishing Limited}, 42, 2015.
+\newblock \doi{http://dx.doi.org/10.1108/IR-08-2014-0379}.
+
+\bibitem[Midtjylland(2015)]{regmidt2015}
+Region Midtjylland.
+\newblock \emph{Rygmarvsskadet lammet mand lærer at gå}, 2015.
+\newblock URL
+  \url{http://www.rm.dk/om-os/aktuelt/nyheder/nyhedsarkiv-2015/december/rygmarvsskadet-lammet-mand-larer-at-ga1/}.
+
+\bibitem[Martini et~al.(2012)Martini, Nath, and Bartholomew]{martini2012}
+F.~H. Martini, J.~L. Nath, and E.~F. Bartholomew.
+\newblock \emph{Fundamentals of Anatomi and Physiology}.
+\newblock Pearson, 2012.
+\newblock \doi{978-0-321-70933-2}.
+
+\bibitem[Schoenfeld(2010)]{schoenfeld2010}
+B.~J. Schoenfeld.
+\newblock Squatting kinematics and kinetics and their application to exercise
+  performance.
+\newblock \emph{Journal of Strength and Conditioning Research}, 2010.
+\newblock \doi{10.1519/JSC.0b013e3181bac2d7}.
+
+\end{thebibliography}

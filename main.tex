@@ -1,5 +1,5 @@
 %implementing document formatting:
-\input{preamble.tex}
+\input{preambleNy.tex}
 \input{macros.tex}
 \begin{document}
 
@@ -20,7 +20,6 @@
 \input{rapportAfsnit/bInitierende/Indledning}
 \input{rapportAfsnit/bInitierende/initierende_spg}
 
-
 %-----------------------Problemanalyse---------------------------
 \chapter{Problemanalyse}
 \input{rapportAfsnit/cProblemanalyse/ALS}
@@ -30,11 +29,18 @@
 \input{rapportAfsnit/cProblemanalyse/Knaeleddet}
 \input{rapportAfsnit/dProblemformulering/Problemafgraensning}
 %-----------------------System udvikling-------------------------
-\chapter{Systemudvikling}
+%\chapter{Systemudvikling}
 
 
 %\input{rapportAfsnit/aIntroduktion/aIntroduktion}
 %\input{rapportAfsnit/aIntroduktion/bEtEksempel}
 %\input{rapportAfsnit/aIntroduktion/cTest}
-%\printbibliography
+
+\begingroup
+\raggedright
+
+\bibliographystyle{unsrtnat}
+\bibliography{kilder}
+
+\endgroup
 \end{document}
