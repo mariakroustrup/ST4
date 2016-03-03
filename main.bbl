@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,7 +20,7 @@ Muskelsvindsfonden.
 \bibitem[Russell et~al.()Russell, Andersen, and N.~Witting]{russell2015}
 M.~B. Russell, J.~S. Andersen, and et.~al. N.~Witting.
 \newblock \emph{Amytrofisk lateral sklerose}.
-\newblock Lægehåndbogen.
+\newblock L√¶geh√•ndbogen.
 
 \bibitem[Morris(2015)]{morris2015}
 J.~Morris.
@@ -30,7 +30,7 @@ J.~Morris.
 \newblock \doi{10.1080/21646821.2015.1075181}.
 
 \bibitem[Miller et~al.(2005)Miller, Gelinas, and et. al.]{miller2005}
-R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
+R.~G. Miller, D.~F. Gelinas, and P.~O‚ÄôConnor. et. al.
 \newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
 \newblock Demos Medical Publishing, 2005.
 \newblock \doi{9781934559062}.
@@ -55,12 +55,6 @@ T.~Grehl, M.~Ruppand, and et.~al. P.~Buddle.
   and ratings by relatives differ?}
 \newblock Springer Netherlands, 2011.
 \newblock \doi{1573-2649}.
-
-\bibitem[Tidy(2015)]{tidy2015}
-C.~Tidy.
-\newblock \emph{Motor Neurone Disease}.
-\newblock Patient, 2015.
-\newblock URL \url{http://patient.info/health/motor-neurone-disease-leaflet}.
 
 \bibitem[Neudert et~al.(2004)Neudert, Wasner, and Borasio]{neudert2004}
 C.~Neudert, M.~Wasner, and G.~D. Borasio.
@@ -94,9 +88,9 @@ F.~Tramonti., P.~Bongioanni., and et.~al. C.~Fanciullacci.
 \newblock \doi{10.1016/j.jns.2012.07.006}.
 
 \bibitem[Brandt and Jensen(2010)]{brandt2010}
-Å.~Brandt and L.~Jensen.
-\newblock \emph{Grundbog om hjælpemidler: til personer med
-  funktionsnedsættelse}, volume~1.
+√Ö. Brandt and L.~Jensen.
+\newblock \emph{Grundbog om hj√¶lpemidler: til personer med
+  funktionsneds√¶ttelse}, volume~1.
 \newblock Gyldendal Akademisk, 2010.
 \newblock \doi{9788762808034}.
 
@@ -110,7 +104,7 @@ C.~Heffernan, C.~Jenkinson, and et.~al. T.~Holmes.
 
 \bibitem[O.~Gredal(2001)]{rcfm2001}
 et.~al. O.~Gredal.
-\newblock \emph{ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder}.
+\newblock \emph{ALS og vejrtr√¶kning: Hj√¶lpemidler og behandlingsmuligheder}.
 \newblock RehabiliteringsCenter for Muskelsvind, 2001.
 \newblock URL
   \url{http://rcfm.dk/wp-content/uploads/2015/02/ALS-og-respiration.pdf}.
@@ -134,7 +128,7 @@ R.~Bogue.
 
 \bibitem[Midtjylland(2015)]{regmidt2015}
 Region Midtjylland.
-\newblock \emph{Rygmarvsskadet lammet mand lærer at gå}, 2015.
+\newblock \emph{Rygmarvsskadet lammet mand l√¶rer at g√•}, 2015.
 \newblock URL
   \url{http://www.rm.dk/om-os/aktuelt/nyheder/nyhedsarkiv-2015/december/rygmarvsskadet-lammet-mand-larer-at-ga1/}.
 
