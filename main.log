@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  5 MAR 2016 15:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  6 MAR 2016 21:07
 entering extended mode
 **main.tex
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\main.tex"
@@ -1874,12 +1874,12 @@ S.tex"
 Package natbib Warning: Citation `henschke2012' on page 2 undefined on input li
 ne 2.
 
-<figures/affectedneuron.jpg, id=48, 319.1925pt x 301.125pt>
+<figures/affectedneuron.jpg, id=48, 617.9085pt x 201.1515pt>
 File: figures/affectedneuron.jpg Graphic file (type jpg)
 
 <use figures/affectedneuron.jpg>
 Package pdftex.def Info: figures/affectedneuron.jpg used on input line 7.
-(pdftex.def)             Requested size: 220.5pt x 208.01999pt.
+(pdftex.def)             Requested size: 441.0pt x 143.56133pt.
 
 
 Package natbib Warning: Citation `drake2015' on page 2 undefined on input line 
@@ -1889,22 +1889,21 @@ Package natbib Warning: Citation `drake2015' on page 2 undefined on input line
 Package natbib Warning: Citation `drake2015' on page 2 undefined on input line 
 8.
 
-[2
-
- <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/affectedneuron.jpg>]
-<figures/motorneuroner.png, id=63, 372.79276pt x 485.4135pt>
+<figures/motorneuroner.png, id=52, 372.79276pt x 485.4135pt>
 File: figures/motorneuroner.png Graphic file (type png)
 
 <use figures/motorneuroner.png>
 Package pdftex.def Info: figures/motorneuroner.png used on input line 18.
 (pdftex.def)             Requested size: 176.39731pt x 229.6924pt.
+ [2
 
-<figures/stadier.png, id=68, 611.28375pt x 180.675pt>
+ <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/affectedneuron.jpg>]
+<figures/stadier.png, id=69, 623.32875pt x 148.555pt>
 File: figures/stadier.png Graphic file (type png)
 
 <use figures/stadier.png>
 Package pdftex.def Info: figures/stadier.png used on input line 27.
-(pdftex.def)             Requested size: 352.80135pt x 104.27603pt.
+(pdftex.def)             Requested size: 352.80135pt x 84.08333pt.
 )
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Li
 vskvalitet.tex"
@@ -1926,30 +1925,38 @@ eringer: en overordnet
  []
 
 
-Overfull \hbox (9.20099pt too wide) in paragraph at lines 13--24
+Overfull \hbox (9.20099pt too wide) in paragraph at lines 13--25
  [][] 
  []
 
 
 Package natbib Warning: Citation `nuebert2004' on page 4 undefined on input lin
-e 28.
+e 30.
 
 )
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Nu
 vaerende_teknologier.tex" [4])
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Kn
-aeleddet.tex" [5] <figures/knae_anatomi.jpg, id=136, 872.25874pt x 469.755pt>
+aeleddet.tex" [5] <figures/knae_anatomi.jpg, id=137, 872.25874pt x 469.755pt>
 File: figures/knae_anatomi.jpg Graphic file (type jpg)
 
 <use figures/knae_anatomi.jpg>
-Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 10.
+Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 12.
 (pdftex.def)             Requested size: 198.44865pt x 106.87302pt.
 
-<figures/knaet.png, id=140, 434.5836pt x 233.1912pt>
+<figures/knaet.png, id=142, 530.98375pt x 404.51125pt>
 File: figures/knaet.png Graphic file (type png)
  <use figures/knaet.png>
-Package pdftex.def Info: figures/knaet.png used on input line 22.
-(pdftex.def)             Requested size: 441.0pt x 236.64206pt.
+Package pdftex.def Info: figures/knaet.png used on input line 24.
+(pdftex.def)             Requested size: 352.80135pt x 268.7744pt.
+
+
+Package natbib Warning: Citation `orthopedics2016' on page 6 undefined on input
+ line 25.
+
+
+Package natbib Warning: Citation `orthopedics2016' on page 6 undefined on input
+ line 25.
 
 [6 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/knae_anatomi.jpg>])
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/dProblemformulerin
@@ -1981,20 +1988,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F318400AD8107B8F0BEF0448CC18B36C;144.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 26147 strings out of 493921
- 457427 string characters out of 3144850
+ 26148 strings out of 493921
+ 457444 string characters out of 3144850
  767798 words of memory out of 3000000
- 28924 multiletter control sequences out of 15000+200000
+ 28925 multiletter control sequences out of 15000+200000
  26336 words of font info for 73 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
- 57i,11n,92p,1201b,942s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,92p,1209b,942s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Pro
@@ -2010,9 +2013,9 @@ eX 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/cm-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/cm-super/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (10 pages, 1355099 bytes).
+Output written on main.pdf (10 pages, 1067254 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
+ 250 PDF objects out of 1000 (max. 8388607)
  58 named destinations out of 1000 (max. 500000)
  50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
