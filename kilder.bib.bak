@@ -1,5 +1,5 @@
 % This file was created with JabRef 2.10.
-% Encoding: MacRoman
+% Encoding: UTF8
 
 
 @Manual{themusculardystrophyassociation2016,
@@ -26,8 +26,8 @@
 }
 
 @Book{brandt2010,
-  Title                    = {Grundbog om hj�lpemidler: til personer med funktionsneds�ttelse},
-  Author                   = {�. Brandt and L. Jensen},
+  Title                    = {Grundbog om hjælpemidler: til personer med funktionsnedsættelse},
+  Author                   = {Å. Brandt and L. Jensen},
   Publisher                = {Gyldendal Akademisk},
   Year                     = {2010},
   Volume                   = {1},
@@ -98,7 +98,7 @@ et. al.},
 }
 
 @Manual{regmidt2015,
-  Title                    = {Rygmarvsskadet lammet mand l�rer at g�},
+  Title                    = {Rygmarvsskadet lammet mand lærer at gå},
   Author                   = {Region Midtjylland},
   Year                     = {2015},
 
@@ -109,7 +109,7 @@ et. al.},
 
 @Book{miller2005,
   Title                    = {American Academy of Neurology: Amyotrophic Lateral Sclerosis},
-  Author                   = {R. G. Miller and D. F. Gelinas and P. O�Connor. et. al.},
+  Author                   = {R. G. Miller and D. F. Gelinas and P. O’Connor. et. al.},
   Publisher                = {Demos Medical Publishing},
   Year                     = {2005},
 
@@ -183,7 +183,7 @@ G. D. Borasio},
 }
 
 @Manual{rcfm2001,
-  Title                    = {ALS og vejrtr�kning: Hj�lpemidler og behandlingsmuligheder},
+  Title                    = {ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder},
   Author                   = {O. Gredal, et. al.},
   Organization             = {RehabiliteringsCenter for Muskelsvind},
   Year                     = {2001},
@@ -208,7 +208,7 @@ G. D. Borasio},
 @Manual{russell2015,
   Title                    = {Amytrofisk lateral sklerose},
   Author                   = {M. B. Russell and J. S. Andersen and N. Witting, et. al.},
-  Organization             = {L�geh�ndbogen},
+  Organization             = {Lægehåndbogen},
 
   Comment                  = {18-02-2016},
   Doi                      = {978-82-92002-25-4},
