@@ -1,12 +1,11 @@
 \section{EMG og accelerometer}
 
-EMG er en måling muskelaktiviteten gennem elektriske potentialer. Den ene elektrode pla
-ceres over enten rectus femoris eller vastus intermedius (sidder under rectus femoris) og den anden elektrode placeres over biceps femoris. Reference elektroden placeres ved??.. 
+EMG er en måling af muskelaktiviteten gennem elektriske potentialer. Den ene elektrode placeres over enten rectus femoris eller vastus intermedius (sidder under rectus femoris) og den anden elektrode placeres over biceps femoris. Reference elektroden placeres ved??.. 
 Muskelsensoren er designet til at kunne anvendes direkte med en miktrocontroller. Output signalet er derfor ikke et råt signal, men et forstærket, retificeret og smoothed signal, der vil fungere bedre med en ADC. 
 
 
 Accelerometeret måler accelerationskræfter, disse kan være statiske eller dynamiske. De statiske kræfter kan eksempelvis være tyngdekraften og de dynamiske kræfter kan skyldes bevægelse eller vibration. Accelerometeret kan placeres forskellige steder og måle forskellige planer (3 planer) 
-Den kan måle +- 3g. Output signaler er analoge og proportionelle med accelerationen. Støj kan reduceres ved at placere en 0.1 mikro f capacitor i nærheden, det er dog nødvendigt at tilføje mere, hvis der er 50 KHz støj, da det vil kunne resultere i fejl i accelerations målingen. Støjens tæthed vil forminskes i takt med at forsyningsspændingen forøges. 
+Den kan måle \pm 3g. Output signaler er analoge og proportionelle med accelerationen. Støj kan reduceres ved at placere en 0.1 mikro f capacitor i nærheden, det er dog nødvendigt at tilføje mere, hvis der er 50 KHz støj, da det vil kunne resultere i fejl i accelerations målingen. Støjens tæthed vil forminskes i takt med at forsyningsspændingen forøges. 
 
 
 Fase sensitiv demodulation teknikker er anvendt for at bestemme magnituden samt accelerationens retning. Demodulator outputtet er forstærket og bragt igennem en 32 k ohm modstand. – noget med det forebygger aliasing 
