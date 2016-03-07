@@ -1,26 +1,21 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Muskelsvindsfonden(2016{\natexlab{a}})]{hvadermuskelsvind2016}
-Muskelsvindsfonden.
-\newblock \emph{Hvad er muskelsvind?}
-\newblock Muskelsvindsfonden, 2016{\natexlab{a}}.
-\newblock URL
-  \url{http://muskelsvindfonden.dk/om-muskelsvind/hvad-er-muskelsvind/}.
-
-\bibitem[Muskelsvindsfonden(2016{\natexlab{b}})]{sygdomsbeskrivelser2016}
-Muskelsvindsfonden.
-\newblock \emph{Sygdomsbeskrivelser}.
-\newblock Muskelsvindsfonden, 2016{\natexlab{b}}.
-
 \bibitem[Russell et~al.()Russell, Andersen, and N.~Witting]{russell2015}
 M.~B. Russell, J.~S. Andersen, and et.~al. N.~Witting.
 \newblock \emph{Amytrofisk lateral sklerose}.
 \newblock Lægehåndbogen.
+
+\bibitem[Grehl et~al.(2011)Grehl, Ruppand, and P.~Buddle]{grehl2011}
+T.~Grehl, M.~Ruppand, and et.~al. P.~Buddle.
+\newblock \emph{Depression and QOL in patients with ALS: How do self-ratings
+  and ratings by relatives differ?}
+\newblock Springer Netherlands, 2011.
+\newblock \doi{1573-2649}.
 
 \bibitem[Morris(2015)]{morris2015}
 J.~Morris.
@@ -29,12 +24,6 @@ J.~Morris.
 \newblock \emph{The Neurodiagnostic Journal}, 2015.
 \newblock \doi{10.1080/21646821.2015.1075181}.
 
-\bibitem[Miller et~al.(2005)Miller, Gelinas, and et. al.]{miller2005}
-R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
-\newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
-\newblock Demos Medical Publishing, 2005.
-\newblock \doi{9781934559062}.
-
 \bibitem[of~Neurological~Disorders and Stroke(2016)]{nationalinstitute2016}
 National~Institute of~Neurological~Disorders and Stroke.
 \newblock \emph{Amyotrophic lateral sclerosis (ALS) Fact sheet}.
@@ -42,19 +31,18 @@ National~Institute of~Neurological~Disorders and Stroke.
 \newblock URL
   \url{nih.gov/disorders/amyotrophiclateralsclerosis/detail_ALS.htm}.
 
+\bibitem[Miller et~al.(2005)Miller, Gelinas, and et. al.]{miller2005}
+R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
+\newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
+\newblock Demos Medical Publishing, 2005.
+\newblock \doi{9781934559062}.
+
 \bibitem[Association(2016)]{themusculardystrophyassociation2016}
 The Muscular~Dystrophy Association.
 \newblock \emph{Amyotrophic lateral sclerosis - Stages of ALS}.
 \newblock The Muscular Dystrophy Association, 2016.
 \newblock URL
   \url{https://www.mda.org/disease/amyotrophic-lateral-sclerosis/signs-and-symptoms/stages-of-als}.
-
-\bibitem[Grehl et~al.(2011)Grehl, Ruppand, and P.~Buddle]{grehl2011}
-T.~Grehl, M.~Ruppand, and et.~al. P.~Buddle.
-\newblock \emph{Depression and QOL in patients with ALS: How do self-ratings
-  and ratings by relatives differ?}
-\newblock Springer Netherlands, 2011.
-\newblock \doi{1573-2649}.
 
 \bibitem[Neudert et~al.(2004)Neudert, Wasner, and Borasio]{neudert2004}
 C.~Neudert, M.~Wasner, and G.~D. Borasio.

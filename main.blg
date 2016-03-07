@@ -1,7 +1,56 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
+Warning--I didn't find a database entry for "universitet2013"
+Warning--I didn't find a database entry for "arathata2014"
+Warning--I didn't find a database entry for "henschke2012"
 Warning--I didn't find a database entry for "drake2015"
+Warning--I didn't find a database entry for "nuedert2004"
 Warning--I didn't find a database entry for "nuebert2004"
+Warning--I didn't find a database entry for "instforms2008"
+Warning--I didn't find a database entry for "orthopedics2016"
 Warning--empty year in russell2015
-(There were 3 warnings)
+You've used 19 entries,
+            2481 wiz_defined-function locations,
+            667 strings with 7887 characters,
+and the built_in function-call counts, 5728 in all, are:
+= -- 488
+> -- 275
+< -- 11
++ -- 116
+- -- 78
+* -- 374
+:= -- 983
+add.period$ -- 73
+call.type$ -- 19
+change.case$ -- 29
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 336
+empty$ -- 516
+format.name$ -- 101
+if$ -- 1192
+int.to.chr$ -- 1
+int.to.str$ -- 20
+missing$ -- 18
+newline$ -- 119
+num.names$ -- 57
+pop$ -- 151
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 196
+stack$ -- 0
+substring$ -- 38
+swap$ -- 44
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 121
+warning$ -- 1
+while$ -- 38
+width$ -- 0
+write$ -- 273
+(There were 9 warnings)
