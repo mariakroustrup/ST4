@@ -1,5 +1,5 @@
 \section{Pilotforsøg}
-I dette projekt udføres et pilotforsøg for identificere støj og andre uønskede signaler ved anvendelse af sensorer. Herudover skal pilotforsøget danne grundlag for optimering af kravspecifikationerne i de efterfølgende blokke. Det undersøges, hvilken muskelaktivitet der opnås ved en siddende squat, hvorved referencepunkt og den positive og negative elektrode skal placeres for bedst mulig opsamling af signaler. 
+I dette projekt udføres et pilotforsøg for identificere støj og andre uønskede signaler ved anvendelse af sensorer. Pilotforsøget danner grundlag for optimering af kravspecifikationerne i de forskellige blokke. Derudover undersøges det, hvor elektroderne skal placeres for at opnå det bedst mulige signal under udførelse af en statisk squat.
 
 \subsection{Formål}
 Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af dette opstilles følgende formål for de enkelte sensorer.  
@@ -9,7 +9,7 @@ Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af 
 \item Opsamling af signal fra rectus femoris og biceps femoris
 \begin{itemize}
 \item Identificere placeringen af elektroder
-\item Sammenligne muskelaktivitet oprejst og i en siddende squat stilling
+\item Sammenligne muskelaktivitet oprejst og i en statisk squat 
 \end{itemize}
 \item Identificere støj ved opsamling af signaler
 \end{enumerate}
@@ -17,12 +17,12 @@ Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af 
 
 \subsubsection{Accelerometer}
 \begin{enumerate}
-\item Identificere position af knæleddet siddende i en squat stilling
-\item Identificere støj ved opsamling af signaler.
+\item Identificere position af knæleddet siddende i en statisk squat
+\item Identificere støj ved opsamling af signaler
 \end{enumerate}
 
 
-\subsection{Materialer}
+\subsection{Materialer} \fxnote{Vi er lidt i tvivl om vi skal anvende vernier til opsamling af signaler, som vi gjorde på sidste semester, men så skal vi jo tage højde for offset på ADC'en også, så skal denne testet i vores pilotforsøg???} 
 \begin{itemize}
 \item EMG forstærker
 \item Elektroder
@@ -40,16 +40,23 @@ Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af 
 
 \subsection{Metode}
 \begin{itemize}
-For at identificere den bedste placering af elektroder optages EMG signaler fra forskellige placeringer på musklerne. 
-For at simulere den påvirkning som accelerometeret udsættes for og derved identificere den maksimale og minimale outputssignal roteres accelerometeret i en langsom rotation fra 0 $^{circ}$ til 90 $^{circ}$  til både højre og venstre.
+For at identificere den bedste placering af elektroder optages EMG signaler fra forskellige placeringer på de to muskler. 
+For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra 0 $^{circ}$ til 90 $^{circ}$  til både højre og venstre. Herudover måles accelerometeret påvirkning i henholdsvis 0 og 1 g-påvirkning, for identificere accelerometeres påvirkning og hvorledes dette stemmer overens med databladet. 
 For at identificere støj fra EMG forstærkeren optages aktivitet i musklerne i en siddende squat.
  
 \end{itemize}
 \subsection{Forsøgsopstilling}
-Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne midt på disse muskler markeres med tusch. Herefter fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. Den røde ledning påsættes rectus femoris/bicep femoris og den grønne ledning påsættes rectus femoris/bicep femoris. Den sorte ledning påsættes knæskallen og anvendes som referencepunkt. Accelerometeret påsættes siden af låret, så accelerometer måles i xyz-plan, hvorved der måles i den vertikale retning. Der skal sørges for at accelerometeret befinder sig i 0 g påvirkning ved starten af forsøgets udførelse. 
+Forsøgsopstilling er for den primære udførelse af forsøget. Nogle af processerne gentages for at kunne sammenligne de forskellige målinger, og derved få et bedre resultat.
+
+\subsubsection{EMG/EMG forstæker}
+Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Herefter fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. Den røde ledning påsættes rectus femoris/bicep femoris og den grønne ledning påsættes rectus femoris/bicep femoris. Den sorte ledning påsættes knæskallen og anvendes som referencepunkt.
+
+\subsubsection{Accelerometer}
+Accelerometeret påsættes siden af låret, så accelerometer måles i xyz-plan, hvorved der måles i den vertikale retning. Der sørges for,  at accelerometeret befinder sig i 0 g påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. 
 
 \textbf{Opstilling}
-\item Identificering af midten af musklerne rectus femoris og biceps femoris 
+\begin{itemize}
+\item Identificering af musklerne rectus femoris og biceps femoris 
 \item Placeringen af elektroderne markeres
 \ıtem Huden skrabes og desinficeres
 \item Elektroderne påsættes
@@ -59,13 +66,22 @@ Rectus femoris og biceps femoris identificeres, den ønskede placering af elektr
 \item Den røde/grønne ledning på biceps femoris
 \item Den sorte ledning/reference på knæskallen 
 \end{itemize} 
-\item Accelerometeret på sættes ved en 0 g påvirkning
+\item Accelerometeret på sættes knæskallen ved en 0 g påvirkning i x,y,z retning
+\end{itemize}
 
 
-\subsubsection{Fremgangsmåde}
+\subsection{Fremgangsmåde}
+Fremgangsmåden udføres XX antal gange, hvorved der på baggrund af målingerne foretages en gennemsnitsværdiberegning.
+
+\subsubsection{EMG/EMG forstærker}
+EMG måling: 30 sekunder i siddende squat og 30 sekunder oprejst.
+
+\subsubsection{Accelerometer}
 Påvirkning i 0 og 90 $^{circ}$.
 Påvirkning af rotation fra 0 til 90 $^{circ}$ til både højre og venstre.
 Optag 30 sekunder ved 0 og 90 $^{circ}$ .
 Optag rotation: baseline 10 sekunder, rotation 10 sekunder, baseline 10 sekunder
 
-EMG måling: 30 sekunder i siddende squat og 30 sekunder oprejst.
+
+
+
