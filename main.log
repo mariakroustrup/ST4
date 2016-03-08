@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  8 MAR 2016 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  8 MAR 2016 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1808,12 +1808,8 @@ Package babel Info: Redefining danish shorthand "~
 (./rapportAfsnit/bInitierende/Indledning.tex
 Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
 line 10.
-
-
-Package natbib Warning: Citation `arathata2014' on page 1 undefined on input li
-ne 10.
-
-) (./rapportAfsnit/bInitierende/initierende_spg.tex)
+)
+(./rapportAfsnit/bInitierende/initierende_spg.tex)
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "~
@@ -1832,7 +1828,7 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 24.
 
 (./rapportAfsnit/cProblemanalyse/ALS.tex
-<figures/affectedneuron.png, id=60, 772.38562pt x 195.73125pt>
+<figures/affectedneuron.png, id=61, 772.38562pt x 195.73125pt>
 File: figures/affectedneuron.png Graphic file (type png)
 
 <use figures/affectedneuron.png>
@@ -1844,7 +1840,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 8--8
 ient. Det første stadie illustrerer en normal
  []
 
-<figures/motorneuroner.png, id=66, 372.79276pt x 485.4135pt>
+<figures/motorneuroner.png, id=67, 372.79276pt x 485.4135pt>
 File: figures/motorneuroner.png Graphic file (type png)
 
 <use figures/motorneuroner.png>
@@ -1861,7 +1857,7 @@ Package babel Info: Redefining danish shorthand "~
  [2
 
  <./figures/affectedneuron.png>]
-<figures/stadier.png, id=84, 623.32875pt x 148.555pt>
+<figures/stadier.png, id=85, 623.32875pt x 148.555pt>
 File: figures/stadier.png Graphic file (type png)
 
 <use figures/stadier.png>
@@ -1882,19 +1878,10 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 6.
 [3 <./figures/motorneuroner.png> <./figures/stadier.png>]
-
-Package natbib Warning: Citation `nuedert2004' on page 4 undefined on input lin
-e 9.
-
-
 Underfull \hbox (badness 1642) in paragraph at lines 8--10
 []\T1/cmr/m/n/10.95 Der kan fremhæves to forskellige typer af livskvalitetsvurd
 eringer: en overordnet
  []
-
-
-Package natbib Warning: Citation `nuebert2004' on page 4 undefined on input lin
-e 29.
 
 ) (./rapportAfsnit/cProblemanalyse/Nuvaerende_teknologier.tex
 Package babel Info: Redefining danish shorthand "|
@@ -1920,14 +1907,14 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 6.
-[5] <figures/knae_anatomi.jpg, id=152, 872.25874pt x 469.755pt>
+[5] <figures/knae_anatomi.jpg, id=156, 872.25874pt x 469.755pt>
 File: figures/knae_anatomi.jpg Graphic file (type jpg)
 
 <use figures/knae_anatomi.jpg>
 Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 11.
 (pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
 
-<figures/knaet.png, id=157, 530.98375pt x 404.51125pt>
+<figures/knaet.png, id=161, 530.98375pt x 404.51125pt>
 File: figures/knaet.png Graphic file (type png)
  <use figures/knaet.png>
 Package pdftex.def Info: figures/knaet.png used on input line 23.
@@ -1973,7 +1960,7 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 32.
 
 (./rapportAfsnit/eProblemloesning/systembeskrivelse.tex
-<figures/blokdiagram.png, id=196, 936.49875pt x 201.75375pt>
+<figures/blokdiagram.png, id=200, 936.49875pt x 201.75375pt>
 File: figures/blokdiagram.png Graphic file (type png)
 
 <use figures/blokdiagram.png>
@@ -1996,25 +1983,12 @@ Underfull \hbox (badness 1603) in paragraph at lines 2--3
 erligere vil passere en
  []
 
-
-Package natbib Warning: Citation `advancertech2013' on page 10 undefined on inp
-ut line 6.
-
-<figures/sinussignal.png, id=213, 273.27094pt x 217.5628pt>
+<figures/sinussignal.png, id=218, 273.27094pt x 217.5628pt>
 File: figures/sinussignal.png Graphic file (type png)
 
 <use figures/sinussignal.png>
 Package pdftex.def Info: figures/sinussignal.png used on input line 10.
 (pdftex.def)             Requested size: 352.80135pt x 280.89952pt.
-
-
-Package natbib Warning: Citation `advancertech2013' on page 10 undefined on inp
-ut line 11.
-
-
-Package natbib Warning: Citation `advancertech2013' on page 10 undefined on inp
-ut line 11.
-
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining danish shorthand "~
@@ -2023,31 +1997,14 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 14.
-[10 <./figures/blokdiagram.png>]
-
-Package natbib Warning: Citation `advancertech2013' on page 11 undefined on inp
-ut line 15.
-
-
-Package natbib Warning: Citation `analogdevices2010' on page 11 undefined on in
-put line 24.
-
-) (./rapportAfsnit/eProblemloesning/loesningsstrategi.tex
-<figures/CY8CKIT-042.png, id=224, 552.26324pt x 283.65974pt>
+ [10 <./figures/blokdiagram.png>])
+(./rapportAfsnit/eProblemloesning/loesningsstrategi.tex
+<figures/CY8CKIT-042.png, id=234, 552.26324pt x 283.65974pt>
 File: figures/CY8CKIT-042.png Graphic file (type png)
 
 <use figures/CY8CKIT-042.png>
 Package pdftex.def Info: figures/CY8CKIT-042.png used on input line 8.
 (pdftex.def)             Requested size: 220.5pt x 113.25412pt.
-
-
-Package natbib Warning: Citation `cypresspsoc2015' on page 11 undefined on inpu
-t line 9.
-
-
-Package natbib Warning: Citation `cypresspsoc2015' on page 11 undefined on inpu
-t line 9.
-
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining danish shorthand "~
@@ -2056,32 +2013,15 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 12.
-[11 <./figures/sinussignal.png>]
-
-Package natbib Warning: Citation `cypressguide2014' on page 12 undefined on inp
-ut line 13.
-
-
-Package natbib Warning: Citation `cypressguide2014' on page 12 undefined on inp
-ut line 13.
-
-
+ [11 <./figures/sinussignal.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
 
-Package natbib Warning: Citation `cypressguide' on page 12 undefined on input l
-ine 16.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
-
-
-Package natbib Warning: Citation `cypressguide2014' on page 12 undefined on inp
-ut line 19.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 19--21
@@ -2131,19 +2071,25 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 104.
  [15
 
-])
-
-Package natbib Warning: There were undefined citations.
-
+]
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 205.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 205.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 205.
+ [16])
 
 AED: lastpage setting LastPage
 Package babel Info: Redefining danish shorthand "|
@@ -2154,7 +2100,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 49.
-[16]
+[17]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
@@ -2169,35 +2115,34 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 26258 strings out of 493117
- 456377 string characters out of 6135433
- 787486 words of memory out of 5000000
- 29194 multiletter control sequences out of 15000+600000
+ 26271 strings out of 493117
+ 456703 string characters out of 6135433
+ 788486 words of memory out of 5000000
+ 29201 multiletter control sequences out of 15000+600000
  26677 words of font info for 74 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  57i,12n,92p,10456b,989s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (16 pages, 2165365 bytes).
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (17 pages, 2162159 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
