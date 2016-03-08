@@ -1,9 +1,32 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Universitet(2015)]{universitet2013}
+Københavns Universitet.
+\newblock \emph{Ny viden om alvorlig muskelsygdom}.
+\newblock Københavns Universitet, 2015.
+\newblock URL
+  \url{http://sund.ku.dk/nyheder/nyheder2013/ny-viden-om-alvorlig-muskelsygdom/}.
+
+\bibitem[Muskelsvindsfonden(2016)]{hvadermuskelsvind2016}
+Muskelsvindsfonden.
+\newblock \emph{Hvad er muskelsvind?}
+\newblock Muskelsvindsfonden, 2016.
+\newblock URL
+  \url{http://muskelsvindfonden.dk/om-muskelsvind/hvad-er-muskelsvind/}.
+
+\bibitem[Henschke(2012)]{henschke2012}
+C.~Henschke.
+\newblock Provision and financing of assistive technology devices in germany: A
+  bureaucratic odyssey? the case of amyotrophic lateral sclerosis and duchenne
+  muscular dystrophy.
+\newblock \emph{Department of Health Care Management, Technische Universität
+  Berlin, Germany}, 2012.
+\newblock \doi{10.1016/j.healthpol.2012.01.013}.
 
 \bibitem[Russell et~al.()Russell, Andersen, and N.~Witting]{russell2015}
 M.~B. Russell, J.~S. Andersen, and et.~al. N.~Witting.
@@ -36,6 +59,12 @@ R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
 \newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
 \newblock Demos Medical Publishing, 2005.
 \newblock \doi{9781934559062}.
+
+\bibitem[Drake(2015)]{drake2015}
+M.~E. Drake.
+\newblock \emph{Amytrophic lateral sclerosis - neurological disorder}.
+\newblock Biotechnologic forums, 2015.
+\newblock URL \url{http://www.biotechnologyforums.com/thread-6946.html}.
 
 \bibitem[Association(2016)]{themusculardystrophyassociation2016}
 The Muscular~Dystrophy Association.
@@ -120,11 +149,22 @@ Region Midtjylland.
 \newblock URL
   \url{http://www.rm.dk/om-os/aktuelt/nyheder/nyhedsarkiv-2015/december/rygmarvsskadet-lammet-mand-larer-at-ga1/}.
 
+\bibitem[for Muskelsvind(2008)]{instforms2008}
+Institut for Muskelsvind.
+\newblock \emph{Muskelsvind}, 2008.
+\newblock URL
+  \url{http://www.aarhus.dk/~/media/Subsites/HandiInfo/Docs/Leksikon/Muskelsvind.pdf}.
+
 \bibitem[Martini et~al.(2012)Martini, Nath, and Bartholomew]{martini2012}
 F.~H. Martini, J.~L. Nath, and E.~F. Bartholomew.
 \newblock \emph{Fundamentals of Anatomi and Physiology}.
 \newblock Pearson, 2012.
 \newblock \doi{978-0-321-70933-2}.
+
+\bibitem[II()]{orthopedics2016}
+TIS~Orthopedics II.
+\newblock \emph{Typical Foot Function During Walking}, 2016 .
+\newblock URL \url{http://www.therapyedu.com/ortho2/ortho2-02.htm}.
 
 \bibitem[Schoenfeld(2010)]{schoenfeld2010}
 B.~J. Schoenfeld.
