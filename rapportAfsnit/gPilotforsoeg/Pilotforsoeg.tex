@@ -1,10 +1,10 @@
 \section{Pilotforsøg}
-I dette projekt udføres et pilotforsøg for identificere støj og andre uønskede signaler ved anvendelse af sensorer. Pilotforsøget danner grundlag for optimering af kravspecifikationerne i de forskellige blokke. Derudover undersøges det, hvor elektroderne skal placeres for at opnå det bedst mulige signal under udførelse af en statisk squat.
+I dette projekt udføres et pilotforsøg for identificere støj og andre uønskede signaler ved anvendelse af sensorer. Pilotforsøget danner grundlag for optimering af kravspecifikationerne i de enkelte blokke. Derudover undersøges det, hvor elektroderne skal placeres for at opnå det bedst mulige signal under udførelse af et statisk squat.
 
 \subsection{Formål}
-Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af dette opstilles følgende formål for de enkelte sensorer.  
+Der anvendes en EMG-forstærker og et accelerometer som sensorer. På baggrund af dette opstilles følgende formål for de enkelte sensorer.  
 
-\subsubsection{EMG/EMG forstærker}
+\subsubsection{EMG/EMG-forstærker}
 \begin{enumerate}
 \item Opsamling af signal fra rectus femoris og biceps femoris
 \begin{itemize}
@@ -22,15 +22,15 @@ Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af 
 \end{enumerate}
 
 
-\subsection{Materialer} \fxnote{Vi er lidt i tvivl om vi skal anvende vernier til opsamling af signaler, som vi gjorde på sidste semester, men så skal vi jo tage højde for offset på ADC'en også, så skal denne testet i vores pilotforsøg???} 
+\subsection{Materialer} 
 \begin{itemize}
-\item EMG forstærker
+\item EMG-forstærker
 \item Elektroder
 \item Desinfektionsservietter
 \item Skraber
 \item Tusch 
 
-\item Accelerometer
+\item Accelerometer ADXL335Z
 \item Tape
 \item Ledninger
 
@@ -40,21 +40,20 @@ Der anvendes EMG/EMG forstærker og accelerometer som sensorer. På baggrund af 
 
 \subsection{Metode}
 
-For at identificere den bedste placering af elektroder optages EMG signaler fra forskellige placeringer på de to muskler. 
-For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra 0 $^{\circ}$ til 90 $^{\circ}$  til både højre og venstre. Herudover måles accelerometeret påvirkning i henholdsvis 0 og 1 g-påvirkning, for identificere accelerometeres påvirkning og hvorledes dette stemmer overens med databladet. 
-For at identificere støj fra EMG forstærkeren optages aktivitet i musklerne i en siddende squat.
- 
+For at identificere den bedste placering af elektroder optages EMG-signaler fra forskellige placeringer på de to muskler. 
+For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra 0 $^{\circ}$ til 90 $^{\circ}$  til både højre og venstre. Herudover måles accelerometeret påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning og hvorledes dette stemmer overens med databladet. 
+For at identificere støj fra EMG-forstærkeren optages aktivitet i musklerne i en siddende squat.
 
 \subsection{Forsøgsopstilling}
 Forsøgsopstilling er for den primære udførelse af forsøget. Nogle af processerne gentages for at kunne sammenligne de forskellige målinger, og derved få et bedre resultat.
 
-\subsubsection{EMG/EMG forstæker}
-Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Herefter fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. Den røde ledning påsættes rectus femoris/bicep femoris og den grønne ledning påsættes rectus femoris/bicep femoris. Den sorte ledning påsættes knæskallen og anvendes som referencepunkt.
+\subsubsection{EMG/EMG-forstæker}
+Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Herefter fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. Den røde ledning påsættes rectus femoris/bicep femoris og den grønne ledning påsættes rectus femoris/bicep femoris. Den sorte ledning påsættes patella og anvendes som referencepunkt.
 
 \subsubsection{Accelerometer}
 Accelerometeret påsættes siden af låret, så accelerometer måles i xyz-plan, hvorved der måles i den vertikale retning. Der sørges for,  at accelerometeret befinder sig i 0 g påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. 
 
-\textbf{Opstilling}
+\subsubsection{Opstilling}
 \begin{itemize}
 \item Identificering af musklerne rectus femoris og biceps femoris 
 \item Placeringen af elektroderne markeres
@@ -64,16 +63,16 @@ Accelerometeret påsættes siden af låret, så accelerometer måles i xyz-plan,
 \begin{itemize}
 \item Den røde/grønne ledning på rectus femoris
 \item Den røde/grønne ledning på biceps femoris
-\item Den sorte ledning/reference på knæskallen 
+\item Den sorte ledning/reference på patella \fxnote{positiv/negativ/ground}
 \end{itemize} 
-\item Accelerometeret på sættes knæskallen ved en 0 g påvirkning i x,y,z retning
+\item Accelerometeret på sættes patella ved en 0 g påvirkning i x,y,z retning
 \end{itemize}
 
 
 \subsection{Fremgangsmåde}
 Fremgangsmåden udføres XX antal gange, hvorved der på baggrund af målingerne foretages en gennemsnitsværdiberegning.
 
-\subsubsection{EMG/EMG forstærker}
+\subsubsection{EMG/EMG-forstærker}
 EMG måling: 30 sekunder i siddende squat og 30 sekunder oprejst.
 
 \subsubsection{Accelerometer}
