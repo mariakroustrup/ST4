@@ -1,5 +1,5 @@
 \section{Systembeskrivelse}
-Der ønskes, som tidligere nævnt, at udvikle et system, der har til formål at aflaste musklerne omkring knæleddet under udførelse af en statisk squat-bevægelse ved brug af et exoskelet. Dette gøres for at aflaste patienterne med henblik på at kunne undgå kørestol i tidlige stadier af ALS. Systemet skal kunne opsamle signaler fra lårmusklerne; quadriceps og hamstring. Disse signaler skal behandles og omsættes til aktivitet i en prototype af et exoskelet, som skal udføre en tilsvarende bevægelse, men også have mulighed for forstærkning af signalet, så mindre muskelkraft også vil kunne udløse denne bevægelse.. Af denne grund skal systemet være i stand til at måle muskelaktivitet i quadriceps og hamstring samt den aktuelle vinkel i knæleddet. Derudover skal systemet være brugervenligt ved at være kompakt, mobilt og ikke generende over for brugeren.
+Der ønskes, som tidligere nævnt, at udvikle et system, der har til formål at aflaste musklerne omkring knæleddet under udførelse af en squat-øvelse ved brug af et exoskelet. Dette gøres for at aflaste patienterne med henblik på at kunne undgå kørestol i tidlige stadier af ALS. Systemet skal kunne opsamle signaler fra lårmusklerne; quadriceps og hamstring. Disse signaler skal behandles og omsættes til aktivitet i en prototype af et exoskelet, som skal udføre en tilsvarende bevægelse, men også have mulighed for forstærkning af signalet, så mindre muskelkraft også vil kunne udløse denne bevægelse.. Af denne grund skal systemet være i stand til at måle muskelaktivitet i quadriceps og hamstring samt den aktuelle vinkel i knæleddet. Derudover skal systemet være brugervenligt ved at være kompakt, mobilt og ikke generende over for brugeren.
 
 \subsection{Krav til systemet} 
 \begin{itemize}
@@ -12,7 +12,7 @@ Der ønskes, som tidligere nævnt, at udvikle et system, der har til formål at 
 \end{itemize}
 
 
-\subsection{Blokdiagram}\fxnote{ændr feedback til prototype, tilføj måske patienten}
+\subsection{Blokdiagram}
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{figures/blokdiagram.png}
@@ -20,6 +20,6 @@ Der ønskes, som tidligere nævnt, at udvikle et system, der har til formål at 
 \label{fig:blokdiagram}
 \end{figure}
 
-I dette projekt er der valgt at udarbejde en prototype, som har til formål at bøje knæleddet, når lårets muskler kontraherer. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG og accelerometer, til at opsamle biologiske signaler, For at registrere muskelaktivitet anvendes en EMG-sensor og en EMG-forstærker, der har til formål at forstærke den muskelaktivitet, der opsamles. Accelerometeret anvendes for at give systemet et input om, knæleddet vinkles  under udøvelsen af en statisk squat. Det opsamlede signal sendes herefter videre til den digitale del af systemet, hvilket er bestående af et Bluetooth Low Energy Pioneer kit (CY8CKIT-042-BLE), som opfanger de biologiske signaler og overfører dem trådløst til en CySmartUSB BLE Dongle sat i en computer, som kan kommunikere med prototypen af exoskelettet i LEGO Mindstorms. 
+I dette projekt er der valgt at udarbejde en prototype, som har til formål at bøje knæleddet, når lårets muskler kontraherer. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG og accelerometer, til at opsamle biologiske signaler, For at registrere muskelaktivitet anvendes en EMG-sensor og en EMG-forstærker, der har til formål at forstærke den muskelaktivitet, der opsamles. Accelerometeret anvendes for at give systemet et input om, knæleddet vinkles  under udførslen af en squat-øvelse. Det opsamlede signal sendes herefter videre til den digitale del af systemet, hvilket er bestående af et Bluetooth Low Energy Pioneer kit (CY8CKIT-042-BLE), som opfanger de biologiske signaler og overfører dem trådløst til en CySmartUSB BLE Dongle sat i en computer, som kan kommunikere med prototypen af exoskelettet i LEGO Mindstorms. 
 
 
