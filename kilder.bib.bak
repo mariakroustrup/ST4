@@ -48,6 +48,20 @@
   Timestamp                = {2016.02.29}
 }
 
+@Article{chowdhury2013,
+  Title                    = {Surface Electromyography Signal Processing and Classification techniques},
+  Author                   = {R. H. Chowdhury and 
+M. B. I. Reaz and 
+M. A . B . M. Ali 
+et al.},
+  Journal                  = {Department of Electrical, Electronic and Systems Engineering, Universiti Kebangsaan Malaysia,},
+  Year                     = {2013},
+
+  Doi                      = {10.3390/s120912431},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10}
+}
+
 @Manual{cypresspsoc2015,
   Title                    = {CY8CKIT-142 PSoC 4 BLE module},
   Author                   = {Cypress Semiconductor Corporation},
@@ -81,6 +95,18 @@
   Url                      = {http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL335.pdf}
 }
 
+@Manual{analogdevices2009,
+  Title                    = {EVAL-ADXL335Z},
+  Author                   = {Analog Devices},
+  Organization             = {Analog Devices},
+  Year                     = {2009},
+
+  Comment                  = {09-03-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10},
+  Url                      = {http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}
+}
+
 @Manual{drake2015,
   Title                    = {Amytrophic lateral sclerosis - neurological disorder},
   Author                   = {M. E. Drake},
@@ -103,6 +129,19 @@
   Timestamp                = {2016.02.29}
 }
 
+@Article{escamilla2001,
+  Title                    = {Knee biomechanics of the dynamic squat exercise},
+  Author                   = {R. F. Escamilla
+And
+M.l W. Krzyzewski},
+  Journal                  = {Medicine and Science in Sports and Exercise},
+  Year                     = {2001},
+
+  Doi                      = {0195-9131/01/3301-0127/$3.00/0},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10}
+}
+
 @Book{grehl2011,
   Title                    = {Depression and QOL in patients with ALS: How do self-ratings and ratings by relatives differ?},
   Author                   = {T. Grehl and M. Ruppand and P. Buddle, et. al.},
@@ -112,6 +151,17 @@
   Doi                      = {1573-2649},
   Owner                    = {signehk},
   Timestamp                = {2016.02.29}
+}
+
+@Book{gupta2013,
+  Title                    = {nside Bluetooth Low Energy},
+  Author                   = {N. Gupta},
+  Publisher                = {Artech House},
+  Year                     = {2013},
+
+  Doi                      = {9781608075799},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10}
 }
 
 @Article{hefferman2006,
@@ -162,6 +212,18 @@ et. al.},
   Doi                      = {10.1007/s11205-014-0621-y},
   Owner                    = {signehk},
   Timestamp                = {2016.02.29}
+}
+
+@Article{keenan2012,
+  Title                    = {Electromyography},
+  Author                   = {K. G Keenan and 
+R. M Enoka},
+  Journal                  = {Encyclopedia of exercise medicine in health and disease},
+  Year                     = {2012},
+
+  Doi                      = {10.1007/978-540-29807-6_298},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10}
 }
 
 @Book{martini2012,
@@ -374,5 +436,17 @@ Sciences},
   Doi                      = {10.1243/09544062JMES936},
   Owner                    = {signehk},
   Timestamp                = {2016.02.29}
+}
+
+@Book{morre2003,
+  Title                    = {Biomedical Technology and Devices Handbook},
+  Author                   = {G. Zouridakis and
+J. Morre},
+  Year                     = {2003},
+
+  Doi                      = {978-1-4398-7071-6},
+  Journal                  = {CRC Press},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.10}
 }
 
