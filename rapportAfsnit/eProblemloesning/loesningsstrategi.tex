@@ -1,25 +1,25 @@
 \section{Løsningsstrategi}
 %Intro til hvad der skal være hjernen i systemet.
 Til dette system benyttes komponenter fra Cypress's CY8CKIT-042-BLE udviklingssæt. 
-Af dette sæt er der udvalgt de nødvendige komponenter for, at der kan fortages analog til digital konvertering af signalerne, der er målt via de forskellige sensorer. Yderligere skal systemet være i stand til at trådløst kommunikere med andre enheder.   
+Ud fra dette sæt er der udvalgt de nødvendige komponenter, så der kan fortages analog til digital konvertering af de signaler, der måles via sensorerne i \autoref{sec:sensorer}. Yderligere skal systemet være i stand til at kommunikere trådløst med andre enheder.   
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/CY8CKIT-042.png}
-\caption{Her ses CY8CKIT-042 BLE Pioneer baseboard, samt CY8CKIT-142 PSoC 4 BLE modulet \citep{cypresspsoc2015}.}
+\caption{CY8CKIT-042 BLE Pioneer baseboard, samt CY8CKIT-142 PSoC 4 BLE modulet \citep{cypresspsoc2015}.}
 \label{fig:CY8CKIT-042}
 \end{figure}
 
-I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard, og et CY8CKIT-142 PSoC 4 BLE modul. Baseboardet er platformen hvorpå de diverse sensorer vil blive tilkoblet, og konvertere de analoge signaler til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et 3 V kanpcelle batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}. Der er mulighed for udvidelse af baseboardet, ved anvendelse af muduler fra cypress, samt arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
+I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard og et CY8CKIT-142 PSoC 4 BLE modul. Baseboardet er platformen, hvorpå sensorerne vil blive tilkoblet, og konvertere de analoge signaler til digitale signaler.\fxnote{menes der her, at sensorerne konverterer signalet, eller at det sker på baseboardet - uklart?} Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et $3~V$ knapcelle batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}. Der er mulighed for udvidelse af baseboardet, ved anvendelse af moduler fra Cypress, samt Arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
 \\
 
-For at opnå trådløs kommunikationsmuligheder benyttes CY8CKIT-142 PSoC 4 BLE, der et cypress BLE modul. Kommunikationstypen er bluetooth low energy (BLE) også kendt som bluetooth SMART, der har en operationsfrekvens på 2,4 GHz \citep{cypressguide}. 
+For at kunne kommunikere trådløst benyttes CY8CKIT-142 PSoC 4 BLE, der et Cypress BLE modul. Kommunikationstypen er Bluetooth Low Energy (BLE) også kendt som Bluetooth SMART \fxnote{relevans? + tilføj noget om, hvad BLE er}, der har en operationsfrekvens på $2,4~GHz$ \citep{cypressguide2014}. 
 \\
 
-Ud over de to mikrocontrollere til det endelige system, benyttes en BLE dongle, der giver mulighed for at en computer kan kommunikere trådløst med systemet. Dette tillader således trådløs test og debugging af det systemet. BLE donglen forsynes via USB porten på den givne computer med 5 V \citep{cypressguide2014}. 
+Ud over de to mikrocontrollere til det endelige system, benyttes en BLE-dongle, der giver mulighed for at en computer kan kommunikere trådløst med systemet. Dette tillader således trådløs test og debugging af systemet. BLE-donglen forsynes via USB-porten på den givne computer med $5~V$ \citep{cypressguide2014}. 
 \\
 
-Til at programmere og debugging mikrokontrollerne, benyttes det tilhørende cypress software, PSoC Creator 3.3. 
+Til at programmere og debugge mikrokontrollerne, benyttes det tilhørende Cypress software, PSoC Creator 3.3. 
 
 %Systemet vil består af et baseboard, hvortil signalet fra de forskellige sensorer vil blive tilsluttet. De anvendte sensorer i dette system kan læses i afsnit ??. Systemet har yderligere mulighed for at blive udvidet med arduinu shields og 6-pins Digilent Pmod udvidelses kort \citep{cypressguide2014}. Baseboardet kan forsynes via et 3 V kanpcelle batteri, eller via USB forbindelse. 
 

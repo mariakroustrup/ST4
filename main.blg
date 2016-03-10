@@ -3,50 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
-Warning--I didn't find a database entry for "arathata2014"
 Warning--I didn't find a database entry for "nuedert2004"
 Warning--I didn't find a database entry for "nuebert2004"
+Warning--I didn't find a database entry for "cypressguide"
 Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
-You've used 25 entries,
+You've used 30 entries,
             2481 wiz_defined-function locations,
-            688 strings with 8768 characters,
-and the built_in function-call counts, 7243 in all, are:
-= -- 632
-> -- 317
-< -- 17
-+ -- 140
-- -- 90
-* -- 455
-:= -- 1238
-add.period$ -- 95
-call.type$ -- 25
-change.case$ -- 36
-chr.to.int$ -- 25
-cite$ -- 27
-duplicate$ -- 434
-empty$ -- 659
-format.name$ -- 119
-if$ -- 1504
+            709 strings with 9429 characters,
+and the built_in function-call counts, 8479 in all, are:
+= -- 745
+> -- 352
+< -- 22
++ -- 160
+- -- 100
+* -- 520
+:= -- 1444
+add.period$ -- 111
+call.type$ -- 30
+change.case$ -- 42
+chr.to.int$ -- 30
+cite$ -- 32
+duplicate$ -- 516
+empty$ -- 779
+format.name$ -- 134
+if$ -- 1758
 int.to.chr$ -- 1
-int.to.str$ -- 26
-missing$ -- 19
-newline$ -- 153
-num.names$ -- 75
-pop$ -- 196
+int.to.str$ -- 31
+missing$ -- 20
+newline$ -- 179
+num.names$ -- 90
+pop$ -- 232
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 30
 quote$ -- 0
-skip$ -- 253
+skip$ -- 308
 stack$ -- 0
-substring$ -- 50
-swap$ -- 62
+substring$ -- 60
+swap$ -- 76
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 163
+type$ -- 198
 warning$ -- 2
-while$ -- 50
+while$ -- 60
 width$ -- 0
-write$ -- 353
+write$ -- 415
 (There were 5 warnings)

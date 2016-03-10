@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,12 @@ Københavns Universitet.
 \newblock Københavns Universitet, 2015.
 \newblock URL
   \url{http://sund.ku.dk/nyheder/nyheder2013/ny-viden-om-alvorlig-muskelsygdom/}.
+
+\bibitem[Arahata(2014)]{arahata2014}
+K.~Arahata.
+\newblock Muscular dystrophy.
+\newblock \emph{Neuropathology}, 2014.
+\newblock \doi{10.1046/j.1440-1789.2000.00321.x}.
 
 \bibitem[Muskelsvindsfonden(2016)]{hvadermuskelsvind2016}
 Muskelsvindsfonden.
@@ -172,5 +178,29 @@ B.~J. Schoenfeld.
   performance.
 \newblock \emph{Journal of Strength and Conditioning Research}, 2010.
 \newblock \doi{10.1519/JSC.0b013e3181bac2d7}.
+
+\bibitem[Technologies(2013)]{advancertech2013}
+Advancer Technologies.
+\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
+  Microcontroller Application}, 2013.
+\newblock URL
+  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+
+\bibitem[Devices(2010)]{analogdevices2010}
+Analog Devices.
+\newblock \emph{ADXL335}, 2010.
+\newblock URL
+  \url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL335.pdf}.
+
+\bibitem[Corporation(2015)]{cypresspsoc2015}
+Cypress~Semiconductor Corporation.
+\newblock \emph{CY8CKIT-142 PSoC 4 BLE module}, 2015.
+\newblock URL \url{http://www.cypress.com/file/140711/download}.
+
+\bibitem[Corporation(2014)]{cypressguide2014}
+Cypress~Semiconductor Corporation.
+\newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
+  2014.
+\newblock URL \url{http://www.cypress.com/file/229211/download}.
 
 \end{thebibliography}
