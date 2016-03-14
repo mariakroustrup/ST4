@@ -1,6 +1,5 @@
 \section{Pilotforsøg}
-I dette bilag beskrives, hvorledes pilotforsøget udføres.
-%TAGER VI TIL SIDST
+I dette bilag beskrives pilotforsøgets fremgangsmåde, samt hvilke resultater der opsamles under udførelsen heraf. 
 
 \subsection{Formål}
 Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes at kunne besvares. Disse parametre omfatter identificering af støj signaler, EMG-signalets frekvensområde samt elektrodernes placering. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
@@ -44,7 +43,7 @@ For at identificere den bedst mulige elektrodeplacering tages der udgangspunkt i
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/laarmuskler.png}
-\caption{BILLEDTEKST \citep{martini2012}.}
+\caption{Biceps femoris og rectus femoris \citep{martini2012}.}
 \label{fig:laarmuskler}
 \end{figure}
 
@@ -52,60 +51,53 @@ Elektroderne placeres medialt for både rectus femoris samt biceps femoris for s
 
 Da der ikke fremgår nogen muskel på den superiore mediale del af tibia, benyttes dette som referencepunkt for EMG-målingen, hvortil der forventes en stabil reference. 
 
- %Det skal beskrives hvad der tages udgangspunkt i for placering af elektroderne (anatomisk placering af muskel og hvor på musklen.) evt billede.. Referencepunkt??
+Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde, dog vil dette være under udførelsen af en squat-øvelse.  
 
-
-
-
-For at identificere støj fra EMG-forstærkeren fortages der baselinemålinger.
-%optages aktivitet i musklerne i en squat-øvelse. 
-
+%Evt. noget med gain..
 
 For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra 0$^{\circ}$ til 90$^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet. 
-% 'For at' i starten af hver sætning - væk!
 
 \subsection{Forsøgsopstilling}
 Forsøgsopstilling er for den primære udførelse af forsøget. Nogle af processerne gentages for at kunne sammenligne de forskellige målinger, og derved få et bedre resultat.
 % Omskriv..
 
 \subsubsection{EMG-forstæker}
-Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Herefter fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. Den røde ledning påsættes rectus femoris/bicep femoris og den grønne ledning påsættes rectus femoris/bicep femoris. Den sorte ledning påsættes patella og anvendes som referencepunkt.
-% Benyttes der en eller to emg forstærkere??? I givet fald skal det beskrives mere tydeligt.
+Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Der fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. 
+Til forsøget benyttes to EMG-forstærkere og dermed to elektrode sæt, bestående af en positiv-, negativ- samt en referenceelektrode. Det ene sæt påsættes rectus femoris og det andet på biceps femoris. Referenceelektroderne fra sættene placeres superiort medialt på tibia. 
 
 \subsubsection{Accelerometer}
 Accelerometeret placeres lateralt på låret, således accelerometeret måles i xyz-plan, hvorved der måles i den vertikale retning. Der sørges for, at accelerometeret befinder sig i 0 g-påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. 
+% Det at der måles vertikalt i xyz-planet fatter vi ikke!
 
 \subsubsection{Opstilling}
 \begin{itemize}
 \item Identificering af musklerne rectus femoris og biceps femoris 
-\item Elektrodernes placering markeres
-\item Huden skrabes og desinficeres
+%\item Elektrodernes placering markeres
+\item Huden prepereres
 \item Elektroderne påsættes
 \item Ledningerne påsættes elektroderne
-\begin{itemize}
-\item Den røde/grønne ledning på rectus femoris
-\item Den røde/grønne ledning på biceps femoris
-\item Den sorte ledning/reference på patella \fxnote{positiv/negativ/ground}
-
-\end{itemize} 
+	\begin{itemize}
+	\item Elektrodesæt 1: positiv og negativ på rectus femoris
+	\item Elektrodesæt 2: positiv og negativ på biceps femoris
+	\item Fælles reference på tibia
+	\end{itemize} 
 \item Accelerometeret påsættes patella ved en 0 g-påvirkning i xyz-retning
+% Hvor placeres accelerometeret??? Et sted står der lateralt på låret (afsnittes før, linje 70) og linje 85/herover, står noget andet.
 \end{itemize}
-% ikke patella
+
 
 \subsection{Fremgangsmåde}
 Fremgangsmåden udføres XX antal gange, hvorved der på baggrund af målingerne foretages en gennemsnitsværdiberegning.
-%Bruges til hvad?
+%Bruges til hvad? Er dette med henblik på at lave en standardafvigelse senere, eller???
 
-\subsubsection{EMG/EMG-forstærker}
+\subsubsection{EMG-forstærker}
 EMG-måling: 10-sekunders målinger trinvist under udførelse af en squat-øvelse. 
 
 
 \subsubsection{Accelerometer}
-Påvirkning i 0 og 90$^{\circ}$.
-Påvirkning af rotation fra 0 til 90$^{\circ}$ både til højre og venstre.
-Optag 30 sekunder ved 0 og 90$^{\circ}$ .
-Optag rotation: baseline 10 sekunder, rotation 10 sekunder, baseline 10 sekunder
-
-%sampling - optag
+Påvirkning i henholdsvis 0$^{\circ}$ og 90$^{\circ}$.
+Påvirkning af rotation fra $0-90^{\circ}$ både til højre og venstre.
+Samplingstid 30 sekunder ved henholdsvis 0$^{\circ}$ og 90$^{\circ}$ .
+Optag rotation: baseline 10 sekunder, rotation 10 sekunder, baseline 10 sekunder % Hvad er det for en rotation??/Hvordan rotation??? 
 
 
