@@ -2,8 +2,8 @@
 I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles under udførelsen heraf. 
 
 \subsection{Formål}
-Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes at kunne besvares. Disse parametre omfatter identificering af støj signaler, EMG-signalets frekvensområde samt elektrodernes placering. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
-Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af dette opstilles følgende formål for de enkelte sensorer.  
+Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret. Disse parametre omfatter identificering af støjsignaler, EMG-signalets frekvensområde samt elektrodernes placering. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
+Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af dette opstilles følgende for de enkelte sensorer.  
 
 \subsubsection{EMG-forstærker}
 \begin{enumerate}
@@ -14,7 +14,7 @@ Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af det
 \end{itemize}
 \item Identificering af støjsignaler
 \item Identificering af frekvensområde
-\item Identificering af gain til mikroprocesserens operationsspænding
+\item Identificering af gain til mikroprocesserens operationsspænding \fxxnote{Finde operationsspænding og angiv den her}
 \end{enumerate}
 
 \subsubsection{Accelerometer}
@@ -26,58 +26,53 @@ Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af det
 \subsection{Materialer} 
 \begin{itemize}
 \item EMG-forstærker
-\item Elektroder %Hvilke elektroder?
+\item Elektroder \fxnote{hvad for nogle elektroder snakker vi om, husk}
 \item Desinfektionsservietter
 \item Skraber
-\item Tusch 
 \item Accelerometer ADXL335Z
 \item Tape
-\item Ledninger %Hvilke ledninger?
+\item Ledninger \fxnote{Er der et navn for ledningen? såsom bananstik}
 \item Computer
-\item CY8CKIT-042-BLE
+\item CY8CKIT-042-BLE \fxnote{Opmærksom - er dette den eneste komponent?}
 \end{itemize}
 
 \subsection{Metode}
-For at identificere den bedst mulige elektrodeplacering tages der udgangspunkt i den anatomiske afbildning af låret, som ses af \autoref{fig:laarmuskler}.
+Til forsøget benyttes to EMG-forstærkere og dermed to elektrode sæt, bestående af en positiv-, negativ- samt en referenceelektrode.
+For at identificere den bedst mulige elektrodeplacering på musklerne tages der udgangspunkt i den anatomiske afbildning af låret, hvilket ses af \autoref{fig:laarmuskler}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/laarmuskler.png}
-\caption{Biceps femoris og rectus femoris \citep{martini2012}.}
+\caption{Låret set anteriot og posteriot. Placering af positiv (rød) samt negativ (grøn) elektroder ses på biceps femoris og rectus femoris \citep{martini2012}.}
 \label{fig:laarmuskler}
 \end{figure}
 
 Elektroderne placeres medialt for både rectus femoris samt biceps femoris for så vidt muligt, at elektroderne forbliver over musklen ved en kontraktion. 
 
-Da der ikke fremgår nogen muskel på den superiore mediale del af tibia, benyttes dette som referencepunkt for EMG-målingen, hvortil der forventes en stabil reference. 
+Da der ikke fremgår nogen muskel på den superiore mediale del af tibia, benyttes dette som referencepunkt for EMG-målingen, hvortil der forventes en stabil reference. Placeringen af reference elektroden ses af \autoref{fig:tibia}.
 
-Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde, dog vil dette være under udførelsen af en squat-øvelse.  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/tibia.png}
+\caption{Placering af referenceelektrode på tibia \citep{martini2012}.}
+\label{fig:tibia}
+\end{figure}
 
-%Evt. noget med gain..
+Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde. Dette vil foregå under udførelsen af en squat-øvelse.  
 
-For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet. 
+Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
+%Noget angående signal to noise ratio 
+
+For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet.
+
 
 \subsection{Forsøgsopstilling}
-Forsøgsopstilling er for den primære udførelse af forsøget. Nogle af processerne gentages for at kunne sammenligne de forskellige målinger, og derved få et bedre resultat.
-% Omskriv.. primære udførelse??
+Forsøgsopstillingen opstilles i tre dele, hvoraf der først testes med EMG-forstærker, dernæst med accelerometer og til sidst testes de samlet. 
 
 \subsubsection{EMG-forstærker}
-Rectus femoris og biceps femoris identificeres, den ønskede placering af elektroderne markeres med tusch. Der fjernes eventuelle hår og døde hudceller ved brug af skraber. Huden desinficeres herefter ved brug af desinficeringsservietter og elektroderne påsættes. 
-Til forsøget benyttes to EMG-forstærkere og dermed to elektrode sæt, bestående af en positiv-, negativ- samt en referenceelektrode. Det ene sæt påsættes rectus femoris og det andet på biceps femoris. Referenceelektroderne placeres superiort medialt på tibia. 
-% Markeres med tusch fjernes. 
-
-
-\subsubsection{Accelerometer}
-Accelerometeret placeres lateralt på låret, således accelerometeret måles i xyz-plan, hvorved der måles i den vertikale retning. Der sørges for, at accelerometeret befinder sig i 0 g-påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. 
-% Omskriv
-% Skal måle vinklen i forhold til knæets vinkel. Placering på ydersiden af låret. Èn af planerne x,y,z. (X eller Y) 
-% Kalibrering består af at offsettet trækkes fra. 
-
-\subsubsection{Opstilling}
 \begin{itemize}
 \item Identificering af musklerne rectus femoris og biceps femoris 
-%\item Elektrodernes placering markeres
-\item Huden prepereres
+\item Huden prepereres ved fjernelse af hår og døde hudceller samt desinficering 
 \item Elektroderne påsættes
 \item Ledningerne påsættes elektroderne
 	\begin{itemize}
@@ -85,26 +80,46 @@ Accelerometeret placeres lateralt på låret, således accelerometeret måles i 
 	\item Elektrodesæt 2: positiv og negativ på biceps femoris
 	\item Fælles reference på tibia
 	\end{itemize} 
-\item Accelerometeret påsættes patella ved en 0 g-påvirkning i xyz-retning
-% Hvor placeres accelerometeret??? Et sted står der lateralt på låret (afsnittes før, linje 70) og linje 85/herover, står noget andet. - Ydersiden af låret
 \end{itemize}
 
+\subsubsection{Accelerometer}
+%Der sørges for, at accelerometeret befinder sig i 0 g-påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. Dette gøres ved, at middelværdien for målingen trækkes fra, for således at fjerne offset.
+\begin{itemize}
+\item Accelerometeret placeres lateralt på låret
+\item Accelerometeret kobles til måling i y-aksen, således der måles i den vertikale retning
+\item Accelerometeret kalibreres
+\end{itemize}
 
 \subsection{Fremgangsmåde}
-Fremgangsmåden udføres XX antal gange, hvorved der på baggrund af målingerne foretages en gennemsnitsværdiberegning.
-%Bruges til hvad? Er dette med henblik på at lave en standardafvigelse senere, eller???
+ Forsøgspersonen placeres på et fast punkt fra, hvor følgende øvelser udføres. Forsøget udføres xx antal gange, hvoraf der ud fra målingerne foretages en gennemsnitværdiberegning i en senere frekvensanalyse.
 
 \subsubsection{EMG-forstærker}
-EMG-måling: 10-sekunders målinger trinvist under udførelse af en squat-øvelse. 
-
+\begin{itemize}
+\item 10 sekunders baseline måling ved forsøgspersonen står oprejst
+\item 10 sekunders måling ved en halv squat-øvelse
+	\begin{itemize}
+	\item 1 sekunds baseline oprejst
+	\item 8 sekunder nedadgående squat 
+	\item 1 sekunds baseline i squat-øvelsen
+	\end{itemize}
+\item 10 sekunders måling ved en fuld squat-øvelse
+	\begin{itemize}
+	\item 1 sekunds baseline oprejst
+	\item 4 sekunder nedadgående squat 
+	\item 4 sekunder opadgående squat
+	\item 1 sekunds baseline oprejst
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Accelerometer}
-Påvirkning i henholdsvis 0$^{\circ}$ og 90$^{\circ}$.
-Påvirkning af rotation fra $0-90^{\circ}$ både til højre og venstre.
-Samplingstid 30 sekunder ved henholdsvis 0$^{\circ}$ og 90$^{\circ}$.
-Optag rotation: baseline 10 sekunder, rotation 10 sekunder, baseline 10 sekunder % Hvad er det for en rotation??/Hvordan rotation??? 
-% Laves færdigt. 
-% forsøget samlet med EMG-forstærker sammen med Accelerometer. 
-% Accelerometeret fungerer som en stop klods. 
-
+\begin{itemize}
+\item 10 sekunders baseline måling i 0 g-påvirkning (0$^{\circ}$)
+\item 10 sekunders baseline måling i 1 g-påvirkning (90$^{\circ}$)
+\item 10 sekunders måling ved rotation fra $0-1$ g-påvirkning både til højre og venstre
+	\begin{itemize}
+	\item 1 sekunds baseline måling i 0 g-påvirkning (0$^{\circ}$
+	\item 8 sekunders rotation mod 1 g-påvirkning (90$^{\circ}$)
+	\item 1 sekunds baseline måling i 1 g-påvirkning (90$^{\circ}$)
+	\end{itemize}
+\end{itemize}
 
