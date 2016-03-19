@@ -1,0 +1,60 @@
+\subsection{Test af accelerometer}
+I dette projekt anvendes to accelerometer som sensorer til opsamling af signaler. For at kunne anvende et accelerometer er det vigtigt at kende forskellige tolerancer i forhold til deres datablade, hvorfor et forsøg udføres for at kunne tage højde for disse under videre forsøg.
+
+\subsubsection{Formål}
+Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$ og $90^{\circ}$, hvorudfra vinkler kan beregnes. Derudover identificeres støjsignaler i outputsignalet, bestemmelse af den maksimale og minimale output samt offsettet og sensitivitet, så dette kan tages højde ved i pilotforsøget \autoref{sec:pilotforsøg} og senere forsøg. 
+
+\begin{enumerate}
+\item Identificering af spænding ved $0^{\circ}$ og $90^{\circ}$
+\item Identificering af støj i outputsignaler for accelerometeret
+\item Identificering af maksimale og minimale output ved rotation
+\item Identificering af offset og sensitivitet for accelerometeret i forhold til databladet.
+\end{enumerate}
+
+\subsubsection{Materialer}
+\begin{itemize}
+\item Accelerometre ADXL$335$
+\item Tape
+\item Computer med MATLAB
+\item CY$8$CKIT-$042$-BLE
+\item Vinkel
+\item Vaterpas
+\item Breadboard
+\item $0.1$ \mikroF kondensator \fxnote{Skal vi anvende dette?}
+\item $\pm 5.5 V$ spændingsforsyning
+\end{itemize}
+
+\subsubsection{Metode}
+Alle målingerne foretages i en akse på accelerometeret, der er på baggrund af databladet over accelerometeret valgt at anvende y-aksen på det aksialeaccelerometer. 
+\begin{enumerate}
+\item Der foretages målinger ved $0$ g-påvirkning, hvilket svarer til en hældning på XX og ved $1$ g-påvirkning, hvilket svarer til en hældning på XX. 
+\item Støjsignaler i outputtet identificeres ved måling af baseline uden nogen g-påvirkningen, hvorefter det måles ved $1$ g-påvirkningen. 
+\item Den maksimale og minimale output måles ved at rotere accelerometeret fra $0^{\circ}$ og $90^{\circ}$.
+\item På baggrund af de forrige mål kan offsettet og sensitiviteten udregnes.
+\end{enumerate}
+
+\subsubsection{Forsøgsopstilling}
+Forsøgsopstillingen er den samme for alle formål og udføres 2 gange, da der anvendes to accelerometre.
+\begin{itemize}
+\item Accelerometeret sættes på vinklen med tape, så y-aksen vender opad. Herefter sættes det i vater ved brug af vaterpas
+\item Accelerometeret tilkobles breadboard
+\item Accelerometeret forbindes til computer
+\item ...\fxnote{der mangler lidt information}
+\end{itemize}
+
+\subsubsection{Fremgangsmåde}
+Der foretages  3 forskellige forsøg.
+\begin{itemize}
+\item Identificering af spænding ved $0^{\circ}$ og $90^{\circ}$ og støj signaler
+\begin{itemize}
+\item Baseline i 10 sekunder ved $0$ g-påvirkning svarende til en vinkel på $0^{\circ}$, hvorved accelerometeret placeres fladt på bordet
+\item Baseline i 10 sekunder ved $1$ g-påvirkning svarende til en vinkel på $90^{\circ}$, hvorved accelerometeret holdes oprejst.
+\end{itemize}
+\item Identificering af maksimale og minimale output 
+\begin{itemize}
+\item Rotation i 10 sekunder fra $0^{\circ}$ til $90^{\circ}$ til højre
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Behandling af data}
