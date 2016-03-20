@@ -1,15 +1,15 @@
 \section{Pilotforsøg}
-I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles under udførelsen heraf. 
+\fxnote{ACCELEROMETRE! VALG AF 2, Placering og massere af illustra!}
+I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles. 
 
 \subsection{Formål}
-Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret. Disse parametre omfatter identificering af støjsignaler, EMG-signalets frekvensområde samt elektrodernes placering. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
-Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af dette opstilles følgende for de enkelte sensorer.  
+Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
+Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af dette opstilles følgende formål:  
 
-\subsubsection{EMG-forstærker}
+\subsubsection{EMG-måling}
 \begin{enumerate}
 \item Opsamling af signal fra rectus femoris og biceps femoris
 \begin{itemize}
-\item Identificering af elektrodernes placering
 \item Sammenligning af muskelaktivitet oprejst og i en squat-øvelse 
 \end{itemize}
 \item Identificering af støjsignaler
@@ -17,28 +17,27 @@ Hertil anvendes elektroder og et accelerometer som sensorer. På baggrund af det
 \item Identificering af gain til mikroprocesserens operationsspænding \fxnote{Finde operationsspænding og angiv den her}
 \end{enumerate}
 
-\subsubsection{Accelerometer}
+\subsubsection{Accelerometre}
 \begin{enumerate}
-\item Identificering af knæleddets position siddende i en squat-øvelse
-\item Identificering af støjsignaler
+\item Identificering af knæleddets vinkel
 \end{enumerate}
 
 \subsection{Materialer} 
 \begin{itemize}
-\item EMG-forstærker
+\item To EMG-forstærkere
 \item Elektroder \fxnote{hvad for nogle elektroder snakker vi om, husk}
 \item Desinfektionsservietter
 \item Skraber
-\item Accelerometer ADXL335Z
+\item To accelerometre ADXL335Z
 \item Tape
-\item Ledninger \fxnote{Er der et navn for ledningen? såsom bananstik}
-\item Computer
+\item Computer med MATLAB
 \item CY8CKIT-042-BLE \fxnote{Opmærksom - er dette den eneste komponent?}
 \end{itemize}
 
 \subsection{Metode}
-Til forsøget benyttes to EMG-forstærkere og dermed to elektrode sæt, bestående af en positiv-, negativ- samt en referenceelektrode.
-For at identificere den bedst mulige elektrodeplacering på musklerne tages der udgangspunkt i den anatomiske afbildning af låret, hvilket ses af \autoref{fig:laarmuskler}.
+Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af en positiv-, negativ- samt en referenceelektrode. 
+For at identificere elektrodeplacering på musklerne tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
+Elektoderne placeres midt for linjen mellem ischial tuberosity og den laterale epifyse af tibia ved måling over biceps femoris. Ved måling af rectus femoris placeres elektroderne midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}. 
 
 \begin{figure}[H]
 \centering
@@ -47,62 +46,87 @@ For at identificere den bedst mulige elektrodeplacering på musklerne tages der 
 \label{fig:laarmuskler}
 \end{figure}
 
-Elektroderne placeres medialt for både rectus femoris samt biceps femoris for så vidt muligt, at elektroderne forbliver over musklen ved en kontraktion. 
-
-Da der ikke fremgår nogen muskel på den superiore mediale del af tibia, benyttes dette som referencepunkt for EMG-målingen, hvortil der forventes en stabil reference. Placeringen af reference elektroden ses af \autoref{fig:tibia}.
+Referenceelektroderne placeres, ligeledes efter Seniam's anvisninger, omkring anklen \citep{seniam2016}. Placeringen af reference elektroden ses af \autoref{fig:reference}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.2\textwidth]{figures/tibia.png}
-\caption{Placering af referenceelektrode på tibia \citep{martini2012}.}
-\label{fig:tibia}
+\includegraphics[width=0.2\textwidth]{figures/reference.png}
+\caption{Placering af referenceelektrode omkring anklen \citep{ankle2016}.}
+\label{fig:reference}
 \end{figure}
 
 Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde. Dette vil foregå under udførelsen af en squat-øvelse.  
 
+En squat-øvelse defineres, således den kan gengives på tværs af forsøgspersonerne.
+\begin{enumerate}
+\item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let til siderne
+\item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på 90$^{\circ}$ af knæet er opnået
+	\begin{itemize}
+	\item Ryggen holdes ret under squat-øvelsen 
+	\item Knæene må ikke gå ud over tåspidserne 
+	\end{itemize}
+\item Kroppen returneres til udgangspunksposition
+\end{enumerate}
+En illustration af squat-øvelsen ses af \autoref{fig:squat}
+En nedadgående squat-øvelse defineres som punkt $1-2$ i overstående, hertil forbliver forsøgspersonen i en siddende squat indtil den givene måling er gennemført.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/squat.png}
+\caption{Squat-øvelse \citep{squat2015}.}
+\label{fig:squat}
+\end{figure}
+
+
+
+
 Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
 %Noget angående signal to noise ratio 
 
-For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet.
+%For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet.
 
 
 \subsection{Forsøgsopstilling}
-Forsøgsopstillingen opstilles i tre dele, hvoraf der først testes med EMG-forstærker, dernæst med accelerometer og til sidst testes de samlet. 
+Forsøgsopstillingen opstilles, hvoraf EMG-forstærker samt accelerometrene anvendes. 
 
-\subsubsection{EMG-forstærker}
 \begin{itemize}
 \item Identificering af musklerne rectus femoris og biceps femoris 
 \item Huden prepereres ved fjernelse af hår og døde hudceller samt desinficering 
 \item Elektroderne påsættes
-\item Ledningerne påsættes elektroderne
 	\begin{itemize}
 	\item Elektrodesæt 1: positiv og negativ på rectus femoris
 	\item Elektrodesæt 2: positiv og negativ på biceps femoris
-	\item Fælles reference på tibia
+	\item Fælles reference på anklen
 	\end{itemize} 
-\end{itemize}
-
-\subsubsection{Accelerometer}
-%Der sørges for, at accelerometeret befinder sig i 0 g-påvirkning ved starten af forsøgets udførelse, hvorved accelerometeret er kaliberet. Dette gøres ved, at middelværdien for målingen trækkes fra, for således at fjerne offset.
-\begin{itemize}
-\item Accelerometeret placeres lateralt på låret
-\item Accelerometeret kobles til måling i y-aksen, således der måles i den vertikale retning
-\item Accelerometeret kalibreres
+\item Accelerometrene placeres 
+	\begin{itemize}
+	\item Accelerometer 1: midt på den laterale side af låret, parallelt med femur
+	\item Accelerometer 2: midt på den laterale side af underbenet, parallelt med tibia 
+	\end{itemize}
+\item Accelerometrene vælges til at måle i y-aksen
 \end{itemize}
 
 \subsection{Fremgangsmåde}
- Forsøgspersonen placeres på et fast punkt fra, hvor følgende øvelser udføres. Forsøget udføres xx antal gange, hvoraf der ud fra målingerne foretages en gennemsnitværdiberegning i en senere frekvensanalyse.
+Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres tre gange, hvoraf der ud fra målingerne foretages en senere databehandling. 
 
-\subsubsection{EMG-forstærker}
+\subsubsection{Pilotforsøg}
+\textbf{Baseline måling}
 \begin{itemize}
-\item 10 sekunders baseline måling ved forsøgspersonen står oprejst
-\item 10 sekunders måling ved en halv squat-øvelse
+\item 10 sekunders måling, hvor forsøgspersonen står oprejst
+\end{itemize}
+
+\textbf{1. måling}
+\begin{itemize}
+\item Måling i en nedadgående squat-øvelse
 	\begin{itemize}
 	\item 1 sekunds baseline oprejst
-	\item 8 sekunder nedadgående squat 
+	\item 4 sekunder nedadgående squat 
 	\item 1 sekunds baseline i squat-øvelsen
 	\end{itemize}
-\item 10 sekunders måling ved en fuld squat-øvelse
+\end{itemize}
+	
+\textbf{2. måling}
+\item Måling i en squat-øvelse
 	\begin{itemize}
 	\item 1 sekunds baseline oprejst
 	\item 4 sekunder nedadgående squat 
@@ -111,15 +135,15 @@ Forsøgsopstillingen opstilles i tre dele, hvoraf der først testes med EMG-fors
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Accelerometer}
-\begin{itemize}
-\item 10 sekunders baseline måling i 0 g-påvirkning (0$^{\circ}$)
-\item 10 sekunders baseline måling i 1 g-påvirkning (90$^{\circ}$)
-\item 10 sekunders måling ved rotation fra $0-1$ g-påvirkning både til højre og venstre
-	\begin{itemize}
-	\item 1 sekunds baseline måling i 0 g-påvirkning (0$^{\circ}$
-	\item 8 sekunders rotation mod 1 g-påvirkning (90$^{\circ}$)
-	\item 1 sekunds baseline måling i 1 g-påvirkning (90$^{\circ}$)
-	\end{itemize}
-\end{itemize}
+%\subsubsection{Accelerometer}
+%\begin{itemize}
+%\item 10 sekunders baseline måling i 0 g-påvirkning (0$^{\circ}$)
+%\item 10 sekunders baseline måling i 1 g-påvirkning (90$^{\circ}$)
+%\item 10 sekunders måling ved rotation fra $0-1$ g-påvirkning både til højre og venstre
+%	\begin{itemize}
+%	\item 1 sekunds baseline måling i 0 g-påvirkning (0$^{\circ}$
+%	\item 8 sekunders rotation mod 1 g-påvirkning (90$^{\circ}$)
+%	\item 1 sekunds baseline måling i 1 g-påvirkning (90$^{\circ}$)
+%	\end{itemize}
+%\end{itemize}
 
