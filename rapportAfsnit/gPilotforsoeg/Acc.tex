@@ -15,13 +15,11 @@ Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$
 \begin{itemize}
 \item Accelerometre ADXL$335$
 \item Tape
-\item Computer med MATLAB
-\item CY$8$CKIT-$042$-BLE
 \item Vinkel
 \item Vaterpas
 \item Breadboard
-\item $0.1~\mikroF$ kondensator \fxnote{Skal vi anvende dette?}
-\item $\pm 5.5~V$ spændingsforsyning \fxnote{Skal vi anvende dette?}
+\item Computer med MATLAB
+\item CY$8$CKIT-$042$-BLE
 \end{itemize}
 
 \subsubsection{Metode}
@@ -38,8 +36,8 @@ Forsøgsopstillingen er den samme for alle formål og udføres to gange, da der 
 \begin{itemize}
 \item Accelerometeret sættes på vinklen med tape, så y-aksen vender opad. Herefter indstilles det så det er i vater ved brug af et vaterpas.
 \item Accelerometeret tilkobles breadboard
-\item Accelerometeret forbindes til computer
-\item ...\fxnote{der mangler lidt information i forhold til opsamling af signalet}
+\item Accelerometeret forbindes til CY$8$CKIT-$042$-BLE
+\item CY$8$CKIT-$042$-BLE tilkobles en computer
 \end{itemize}
 
 \subsubsection{Fremgangsmåde}
@@ -47,12 +45,12 @@ Der foretages tre forskellige forsøg.
 \begin{itemize}
 \item Identificering af spænding ved $0^{\circ}$ og $90^{\circ}$ og støj signaler
 \begin{itemize}
-\item Baseline i 10 sekunder ved $0$ g-påvirkning svarende til en vinkel på $0^{\circ}$, hvorved accelerometeret placeres fladt på bordet
-\item Baseline i 10 sekunder ved $1$ g-påvirkning svarende til en vinkel på $90^{\circ}$, hvorved accelerometeret holdes oprejst.
+\item Baseline i $10$ sekunder ved $0$ g-påvirkning svarende til en vinkel på $0^{\circ}$, hvorved accelerometeret placeres fladt på bordet
+\item Baseline i $10$ sekunder ved $1$ g-påvirkning svarende til en vinkel på $90^{\circ}$, hvorved accelerometeret holdes oprejst.
 \end{itemize}
 \item Identificering af maksimale og minimale output 
 \begin{itemize}
-\item Rotation i 10 sekunder fra $0^{\circ}$ til $90^{\circ}$ til højre
+\item Rotation i $10$ sekunder fra $0^{\circ}$ til $90^{\circ}$ til højre
 \end{itemize}
 \end{itemize}
 
