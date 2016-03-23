@@ -1,9 +1,8 @@
 \section{Pilotforsøg}
-\fxnote{ACCELEROMETRE! VALG AF 2, Placering og massere af illustra!}
 I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles. 
 
 \subsection{Formål}
-Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde. Parametrene vil forsøges besvaret udfra målinger ved udførelse af en squat-øvelse.
+Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde. Parametrene vil forsøges besvaret ud fra målinger ved udførelse af en squat-øvelse.
 Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af dette opstilles følgende formål:  
 
 \subsubsection{EMG-måling}
@@ -30,12 +29,13 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 \item Skraber
 \item To accelerometre ADXL335Z
 \item Tape
+\item Breadboards
 \item Computer med MATLAB
 \item CY8CKIT-042-BLE \fxnote{Opmærksom - er dette den eneste komponent?}
 \end{itemize}
 
 \subsection{Metode}
-Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af en positiv-, negativ- samt en referenceelektrode. 
+Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af én positiv-, negativ- samt én referenceelektrode. 
 For at identificere elektrodeplacering på musklerne tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
 Elektoderne placeres midt for linjen mellem ischial tuberosity og den laterale epifyse af tibia ved måling over biceps femoris. Ved måling af rectus femoris placeres elektroderne midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}. 
 
@@ -51,9 +51,20 @@ Referenceelektroderne placeres, ligeledes efter Seniam's anvisninger, omkring an
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.2\textwidth]{figures/reference.png}
-\caption{Placering af referenceelektrode omkring anklen \citep{ankle2016}.}
+\caption{Placering af referenceelektroderne omkring anklen \citep{ankle2016}.}
 \label{fig:reference}
 \end{figure}
+
+Til forsøget benyttes endvidere to accelerometre, som måler i y-aksen. Disse benyttes for at kunne identificere vinklen af knæet under øvelsen. For så vidt muligt at kunne stabilisere accelerometrene under udførelsen af forsøget, placeres disse på breadboards. 
+Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerometer midt på den laterale side af låret, parallelt med femur. Det andet accelerometer placeres midt på den laterale side af underbenet, parallelt med tibia. Knæets vinkel i oprejst position måler 180$^{\circ}$, hvilket svarer til en 0 g-påvirkning. Vinklen af knæet ændres i takt med udførelse af en squat-øvelse, hvorved g-påvirkningen bevæger sig mod 1. Den samlede vinkel af knæet bestemmes ud fra de to accelerometres parametre. Udregningen for dette kan ses i \autoref{sec:test_acc}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{figures/accelerometervinkel.png}
+\caption{Placering af referenceelektroderne omkring anklen \citep{ankle2016}.}
+\label{fig:accelerometervinkel}
+\end{figure}
+
 
 Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde. Dette vil foregå under udførelsen af en squat-øvelse.  
 
