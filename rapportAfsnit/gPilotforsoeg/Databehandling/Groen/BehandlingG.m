@@ -8,8 +8,8 @@ T = 1/Fs;
 L = Fs*Samplelength;
 t = (0:L-1)*T;
 f = Fs*(0:(L/2))/L;     %Define the frequency domain f
-% get(0,'Factory');
-% set(0,'defaultfigurecolor',[1,1,1]);
+%get(0,'Factory');
+%set(0,'defaultfigurecolor',[1,1,1]);
 
 %% Loader data for acc
 % Plan opad
