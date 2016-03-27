@@ -16,6 +16,7 @@ f = Fs*(0:(L/2))/L;     %Define the frequency domain f
 PO_1 = load('PO_1')
 PO_2 = load('PO_2')
 PO_3 = load('PO_3')
+
 % Plan nedad
 PN_1 = load('PN_1')
 PN_2 = load('PN_2')
@@ -109,6 +110,11 @@ VVUoff = VVmean - VVafv
 EnGradPO = POafv/90
 EnGradPN = PNafv/90
 
+EnGradLO = LOafv/90
+EnGradLN = LNafv/90
+
+EnGradVH = VHafv/90
+EnGradVV = VVafv/90
 %% Finder 90 grader
 POGrader = (EnGradPO*90)
 PNGrader = (EnGradPN*90)
@@ -122,16 +128,16 @@ axis([0 30 1 2])
 title('Volt målt ved de forkellige målinger (1. måling)')
 xlabel('Tid i sekunder')
 ylabel('Spænding målt i volt')
-hold on
-plot(t, PN_1.data(1:L))
-hold on
-plot(t, LO_1.data(1:L))
-hold on
-plot(t, LN_1.data(1:L))
-hold on
-plot(t, VH_1.data(1:L))
-hold on
-plot(t, VV_1.data(1:L))
+% hold on
+% plot(t, PN_1.data(1:L))
+% hold on
+% plot(t, LO_1.data(1:L))
+% hold on
+% plot(t, LN_1.data(1:L))
+% hold on
+% plot(t, VH_1.data(1:L))
+% hold on
+% plot(t, VV_1.data(1:L))
 
 % Måling 2
 subplot(1,3,2)
@@ -141,15 +147,15 @@ title('Volt målt ved de forskellige målinger (2. måling)')
 xlabel('Tid i sekunder')
 ylabel('Spænding målt i volt')
 hold on
-plot(t, PN_2.data(1:L))
-hold on
-plot(t, LO_2.data(1:L))
-hold on
-plot(t, LN_2.data(1:L))
-hold on
-plot(t, VH_2.data(1:L))
-hold on
-plot(t, VV_2.data(1:L))
+% plot(t, PN_2.data(1:L))
+% hold on
+% plot(t, LO_2.data(1:L))
+% hold on
+% plot(t, LN_2.data(1:L))
+% hold on
+% plot(t, VH_2.data(1:L))
+% hold on
+% plot(t, VV_2.data(1:L))
 
 % Måling 3
 subplot(1,3,3)
@@ -158,18 +164,18 @@ axis([0 30 1 2])
 title('Volt målt ved de forskellige målinger (3. måling)')
 xlabel('Tid i sekunder')
 ylabel('Spænding målt i volt')
-hold on
-plot(t, PN_3.data(1:L))
-hold on
-plot(t, LO_3.data(1:L))
-hold on
-plot(t, LN_3.data(1:L))
-hold on
-plot(t, VH_3.data(1:L))
-hold on
-plot(t, VV_3.data(1:L))
+% hold on
+% plot(t, PN_3.data(1:L))
+% hold on
+% plot(t, LO_3.data(1:L))
+% hold on
+% plot(t, LN_3.data(1:L))
+% hold on
+% plot(t, VH_3.data(1:L))
+% hold on
+% plot(t, VV_3.data(1:L))
  
-%% FFT af måling 1 plan opad - dette kan også gøres ved de 2 andre målinger
+%% FFT af måling 1 plan opad 
 fftPO_1 = fft(PO_1.data(1:L));
 
 %Compute the two-sided spectrum P2. 
@@ -188,98 +194,116 @@ title('Frekvensspektrum for plan opad (1 måling)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
 
-%% FFT af måling 1 plan nedad  - dette kan også gøres ved de 2 andre målinger
-fftPN_1 = fft(PN_1.data(1:L));
+%% FFT af måling 2 plan opad
+fftPO_2 = fft(PO_2.data(1:L));
 
 %Compute the two-sided spectrum P2. 
 %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2PN_1 = abs(fftPN_1/L);
-P1PN_1 = P2PN_1(1:L/2+1);
-P1PN_1(2:end-1) = 2*P1PN_1(2:end-1);
+P2PO_2 = abs(fftPO_2/L);
+P1PO_2 = P2PO_2(1:L/2+1);
+P1PO_2(2:end-1) = 2*P1PO_2(2:end-1);
 
 %Plot the single-sided amplitude spectrum P1.
-figure
 subplot(3,1,2) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1PN_1)
+plot(f,P1PO_2)
 axis([-10 100 0 1])
-title('Frekvensspektrum for plan nedad (1 måling)') 
+title('Frekvensspektrum for plan nedad (2 måling)') 
 %title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
+
+%% FFT af måling 3 plan opad  
+fftPO_3 = fft(PO_3.data(1:L));
+
+%Compute the two-sided spectrum P2. 
+%Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
+P2PO_3 = abs(fftPO_3/L);
+P1PO_3 = P2PO_3(1:L/2+1);
+P1PO_3(2:end-1) = 2*P1PO_3(2:end-1);
+
+%Plot the single-sided amplitude spectrum P1.
+subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
+plot(f,P1PO_3)
+axis([-10 100 0 1])
+title('Frekvensspektrum for plan nedad (3 måling)') 
+%title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('Frekvens målt i Hz')
+ylabel('Spændingen målt i volt')
+
 %% FFT af måling 1 lodret opad  - dette kan også gøres ved de 2 andre målinger
-fftLO_1 = fft(LO_1.data(1:L));
+% fftLO_1 = fft(LO_1.data(1:L));
+% 
+% %Compute the two-sided spectrum P2. 
+% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
+% P2LO_1 = abs(fftLO_1/L);
+% P1LO_1 = P2LO_1(1:L/2+1);
+% P1LO_1(2:end-1) = 2*P1LO_1(2:end-1);
+% 
+% %Plot the single-sided amplitude spectrum P1.
+% figure
+% subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
+% plot(f,P1LO_1)
+% axis([-10 100 0 1])
+% title('Frekvensspektrum for loadret opad (1 måling)') 
+% %title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('Frekvens målt i Hz')
+% ylabel('Spændingen målt i volt')
 
-%Compute the two-sided spectrum P2. 
-%Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2LO_1 = abs(fftLO_1/L);
-P1LO_1 = P2LO_1(1:L/2+1);
-P1LO_1(2:end-1) = 2*P1LO_1(2:end-1);
-
-%Plot the single-sided amplitude spectrum P1.
-figure
-subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1LO_1)
-axis([-10 100 0 1])
-title('Frekvensspektrum for loadret opad (1 måling)') 
-%title('Single-Sided Amplitude Spectrum of X(t)')
-xlabel('Frekvens målt i Hz')
-ylabel('Spændingen målt i volt')
-
-%% FFT af måling 1 lodret nedad  - dette kan også gøres ved de 2 andre målinger
-fftLN_1 = fft(LN_1.data(1:L));
-
-%Compute the two-sided spectrum P2. 
-%Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2LN_1 = abs(fftLN_1/L);
-P1LN_1 = P2LN_1(1:L/2+1);
-P1LN_1(2:end-1) = 2*P1LN_1(2:end-1);
-
-%Plot the single-sided amplitude spectrum P1.
-figure
-subplot(3,1,1) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1LN_1)
-axis([-10 100 0 1])
-title('Frekvensspektrum for loadret nedad (1 måling)') 
-%title('Single-Sided Amplitude Spectrum of X(t)')
-xlabel('Frekvens målt i Hz')
-ylabel('Spændingen målt i volt')
-
-%% FFT af måling 1 vandret højre  - dette kan også gøres ved de 2 andre målinger
-fftVH_1 = fft(VH_1.data(1:L));
-
-%Compute the two-sided spectrum P2. 
-%Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2VH_1 = abs(fftVH_1/L);
-P1VH_1 = P2VH_1(1:L/2+1);
-P1VH_1(2:end-1) = 2*P1VH_1(2:end-1);
-
-%Plot the single-sided amplitude spectrum P1.
-figure
-subplot(3,1,2) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1VH_1)
-axis([-10 100 0 1])
-title('Frekvensspektrum for vandret højre (1 måling)') 
-%title('Single-Sided Amplitude Spectrum of X(t)')
-xlabel('Frekvens målt i Hz')
-ylabel('Spændingen målt i volt')
-
-%% FFT af måling 1 vandret venstre  - dette kan også gøres ved de 2 andre målinger
-fftVV_1 = fft(VV_1.data(1:L));
-
-%Compute the two-sided spectrum P2. 
-%Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2VV_1 = abs(fftVV_1/L);
-P1VV_1 = P2VV_1(1:L/2+1);
-P1VV_1(2:end-1) = 2*P1VV_1(2:end-1);
-
-%Plot the single-sided amplitude spectrum P1.
-figure
-subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1VV_1)
-axis([-10 100 0 1])
-title('Frekvensspektrum for vandret højre (1 måling)') 
-%title('Single-Sided Amplitude Spectrum of X(t)')
-xlabel('Frekvens målt i Hz')
-ylabel('Spændingen målt i volt')
-
-
+% %% FFT af måling 1 lodret nedad  - dette kan også gøres ved de 2 andre målinger
+% fftLN_1 = fft(LN_1.data(1:L));
+% 
+% %Compute the two-sided spectrum P2. 
+% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
+% P2LN_1 = abs(fftLN_1/L);
+% P1LN_1 = P2LN_1(1:L/2+1);
+% P1LN_1(2:end-1) = 2*P1LN_1(2:end-1);
+% 
+% %Plot the single-sided amplitude spectrum P1.
+% figure
+% subplot(3,1,1) %% Hvis det skal være i hver sin figur, så slet det her
+% plot(f,P1LN_1)
+% axis([-10 100 0 1])
+% title('Frekvensspektrum for loadret nedad (1 måling)') 
+% %title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('Frekvens målt i Hz')
+% ylabel('Spændingen målt i volt')
+% 
+% %% FFT af måling 1 vandret højre  - dette kan også gøres ved de 2 andre målinger
+% fftVH_1 = fft(VH_1.data(1:L));
+% 
+% %Compute the two-sided spectrum P2. 
+% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
+% P2VH_1 = abs(fftVH_1/L);
+% P1VH_1 = P2VH_1(1:L/2+1);
+% P1VH_1(2:end-1) = 2*P1VH_1(2:end-1);
+% 
+% %Plot the single-sided amplitude spectrum P1.
+% figure
+% subplot(3,1,2) %% Hvis det skal være i hver sin figur, så slet det her
+% plot(f,P1VH_1)
+% axis([-10 100 0 1])
+% title('Frekvensspektrum for vandret højre (1 måling)') 
+% %title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('Frekvens målt i Hz')
+% ylabel('Spændingen målt i volt')
+% 
+% %% FFT af måling 1 vandret venstre  - dette kan også gøres ved de 2 andre målinger
+% fftVV_1 = fft(VV_1.data(1:L));
+% 
+% %Compute the two-sided spectrum P2. 
+% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
+% P2VV_1 = abs(fftVV_1/L);
+% P1VV_1 = P2VV_1(1:L/2+1);
+% P1VV_1(2:end-1) = 2*P1VV_1(2:end-1);
+% 
+% %Plot the single-sided amplitude spectrum P1.
+% figure
+% subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
+% plot(f,P1VV_1)
+% axis([-10 100 0 1])
+% title('Frekvensspektrum for vandret højre (1 måling)') 
+% %title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('Frekvens målt i Hz')
+% ylabel('Spændingen målt i volt')
+% 
+% 
