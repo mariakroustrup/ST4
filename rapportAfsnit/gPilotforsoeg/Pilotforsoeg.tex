@@ -7,7 +7,7 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 
 \subsubsection{EMG-måling}
 \begin{enumerate}
-\item Opsamling af signal fra rectus femoris og biceps femoris
+\item Opsamling af signal fra rectus femoris % og biceps femoris
 \begin{itemize}
 \item Sammenligning af muskelaktivitet oprejst og i en squat-øvelse 
 \end{itemize}
@@ -23,35 +23,44 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 
 \subsection{Materialer} 
 \begin{itemize}
-\item To EMG-forstærkere
+\item EMG-forstærker
 \item Elektroder \fxnote{hvad for nogle elektroder snakker vi om, husk}
 \item Desinfektionsservietter
 \item Skraber
 \item To accelerometre ADXL335Z
 \item Tape
+\item Tusch
 \item Breadboards
-\item Computer med MATLAB
-\item CY8CKIT-042-BLE \fxnote{Opmærksom - er dette den eneste komponent?}
+\item Linial 
+\item Vinkelmåler
+\item Computer med Scopelogger og MATLAB
+\item Ni USB-6009
+\item USB-isolater USI-01
 \end{itemize}
 
 \subsection{Metode}
-Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af én positiv-, negativ- samt én referenceelektrode. 
-For at identificere elektrodeplacering på musklerne tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
-Elektoderne placeres midt for linjen mellem ischial tuberosity og den laterale epifyse af tibia ved måling over biceps femoris. Ved måling af rectus femoris placeres elektroderne midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}. 
+%Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af én positiv-, negativ- samt én referenceelektrode. 
+%For at identificere elektrodeplacering på musklerne tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
+%Elektoderne placeres midt for linjen mellem ischial tuberosity og den laterale epifyse af tibia ved måling over biceps femoris. Ved måling af rectus femoris placeres elektroderne midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}. 
+
+Til forsøget benyttes en EMG-forstærker, der måler en differensmåling over rectus femoris. Hertil anvendes én positiv-, negativ- samt én referenceelektrode. 
+For at identificere elektrodeplacering på musklen tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
+Elektoderne placeres midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}.
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/laarmuskler.png}
-\caption{Låret set anteriot og posteriot. Placering af positiv (rød) samt negativ (grøn) elektroder ses på biceps femoris og rectus femoris \citep{martini2012}.}
+\includegraphics[width=0.3\textwidth]{figures/laarmuskel.png}
+\caption{Låret set anteriot. Placering af positiv (rød) samt negativ (grøn) elektrode ses på rectus femoris \citep{martini2012}.}
 \label{fig:laarmuskler}
 \end{figure}
 
-Den fælles referenceelektrode placeres, ligeledes efter Seniam's anvisninger, omkring anklen \citep{seniam2016}. Placeringen af reference elektroden ses af \autoref{fig:reference}.
+Referenceelektroden placeres, ligeledes efter Seniam's anvisninger, omkring anklen \citep{seniam2016}. Placeringen af reference elektroden ses af \autoref{fig:reference}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/reference}
-\caption{Placering af den fælles referenceelektrode omkring anklen \citep{ankle2016}.}
+\caption{Placering af referenceelektrode omkring anklen \citep{ankle2016}.}
 \label{fig:reference}
 \end{figure}
 
@@ -61,7 +70,7 @@ Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerom
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/accelerometervinkel.png}
-\caption{Placering af referenceelektroderne omkring anklen \citep{ankle2016}.}
+\caption{Placering af accelerometrene.}
 \label{fig:accelerometervinkel}
 \end{figure}
 
@@ -100,13 +109,13 @@ Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signa
 Forsøgsopstillingen opstilles, hvoraf EMG-forstærker samt accelerometrene anvendes. 
 
 \begin{itemize}
-\item Identificering af musklerne rectus femoris og biceps femoris 
+\item Identificering af musklen rectus femoris %og biceps femoris 
 \item Huden prepereres ved fjernelse af hår og døde hudceller samt desinficering 
 \item Elektroderne påsættes
 	\begin{itemize}
-	\item Elektrodesæt 1: positiv og negativ på rectus femoris
-	\item Elektrodesæt 2: positiv og negativ på biceps femoris
-	\item Fælles reference på anklen
+	\item Positiv og negativ på rectus femoris
+	%\item Elektrodesæt 2: positiv og negativ på biceps femoris
+	\item Reference på anklen
 	\end{itemize} 
 \item Accelerometrene placeres 
 	\begin{itemize}
