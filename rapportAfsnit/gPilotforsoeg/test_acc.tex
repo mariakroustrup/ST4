@@ -2,13 +2,12 @@
 I dette projekt anvendes to accelerometer som sensorer til opsamling af signaler. For at kunne anvende et accelerometer er det vigtigt at kende forskellige tolerancer i forhold til deres datablade, hvorfor et forsøg udføres for at kunne tage højde for disse parametre.
 
 \subsubsection{Formål}
-Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$ og $90^{\circ}$, hvorudfra vinkler kan beregnes. Derudover identificeres støjsignaler i outputsignalet, bestemmelse af den maksimale og minimale output samt offsettet og sensitivitet, så dette kan tages højde for i pilotforsøget \autoref{sec:pilotforsøg} og senere forsøg. 
+Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$ og $90^{\circ}$, hvorudfra vinkler kan beregnes. Derudover identificeres støjsignaler i outputsignalet samt offsettet og sensitiviteten, så dette kan tages højde for i pilotforsøget \autoref{sec:pilotforsøg} og senere forsøg. 
 
 \begin{enumerate}
 \item Identificering af spænding ved $0^{\circ}$ og $90^{\circ}$
-\item Identificering af støj i outputsignaler for accelerometeret
-\item Identificering af maksimale og minimale output ved rotation fra  $0^{\circ}$ til $90^{\circ}$ til højre
-\item Identificering af offset og sensitivitet for accelerometeret
+\item Identificering af støj i outputsignaler for accelerometrene
+\item Identificering af offsettet og sensitiviteten for accelerometrene
 \end{enumerate}
 
 \subsubsection{Materialer}
@@ -18,41 +17,59 @@ Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$
 \item Vinkel
 \item Vaterpas
 \item Breadboard
-\item Computer med MATLAB
-\item CY$8$CKIT-$042$-BLE
+\item Computer med Scopelogger og MATLAB
+\item NI USB-6009
 \end{itemize}
 
 \subsubsection{Metode}
-Alle målingerne foretages i én akse på accelerometeret, der er på baggrund af databladet over accelerometeret valgt at anvende y-aksen på det treaksiale accelerometer. 
+Alle målingerne er foretaget i alle tre retninger. 
 \begin{enumerate}
 \item Der foretages målinger ved $0$ g-påvirkning, hvilket svarer til en hældning på $0^{\circ}$ og ved $1$ g-påvirkning, hvilket svarer til en hældning på $90^{\circ}$
 \item Støjsignaler i outputtet identificeres ved måling af baseline uden nogen g-påvirkningen, hvorefter det måles ved $1$ g-påvirkningen. 
-\item Den maksimale og minimale output måles ved at rotere accelerometeret fra $0^{\circ}$ og $90^{\circ}$
 \item På baggrund af de forrige mål kan offsettet og sensitiviteten udregnes
 \end{enumerate}
 
 \subsubsection{Forsøgsopstilling}
-Forsøgsopstillingen er den samme for alle formål og udføres to gange, da der anvendes to accelerometre.
+Forsøgsopstillingen udføres på samme måde for begge accelerometre.
 \begin{itemize}
-\item Accelerometeret sættes på vinklen med tape, så y-aksen vender opad. Herefter indstilles det så det er i vater
-\item Accelerometeret tilkobles breadboard
-\item Accelerometeret forbindes til CY$8$CKIT-$042$-BLE
-\item CY$8$CKIT-$042$-BLE tilkobles en computer
+\item Accelerometeret tilkobles breadboard og sættes fast med tape.
+\item Accelerometeret indstilles så det er vinkelret
+\begin{itemize}
+\item Accelerometeret placeres efter fremgangsmåden \autoref{acc_fremgangsmaade}
+\end{itemize}
+\item Accelerometeret tilkobles NI USB-6009
+\item NI USB-6009 tilkobles computer
 \end{itemize}
 
-\subsubsection{Fremgangsmåde}
-Der foretages tre forskellige målinger for hvert accelerometer.
+\subsubsection{Fremgangsmåde} \label{acc_fremgangsmaade}
+Der foretages 6 forskellige målinger for hvert accelerometer. Fremgangsmåden er illustreret på \autoref{fig:acc1} og \autoref{fig:acc2}
 \begin{itemize}
-\item Identificering af spænding ved $0^{\circ}$ og $90^{\circ}$ og støj signaler
-\begin{itemize}
-\item Baseline i $10$ sekunder ved $0$ g-påvirkning svarende til en vinkel på $0^{\circ}$, hvorved accelerometeret placeres fladt på bordet
-\item Baseline i $10$ sekunder ved $1$ g-påvirkning svarende til en vinkel på $90^{\circ}$, hvorved accelerometeret holdes oprejst
+\item Accelerometeret er plan på bordet opad
+\item Accelerometeret er plan på bordet nedad
+\item Accelerometeret er lodret opad
+\item Accelerometeret er lodret nedad
+\item Accelerometeret er vandret mod højre
+\item Accelerometeret er vandret mod venstre
 \end{itemize}
-\item Identificering af maksimale og minimale output 
-\begin{itemize}
-\item Rotation i $10$ sekunder fra $0^{\circ}$ til $90^{\circ}$ til højre
-\end{itemize}
-\end{itemize}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{acc1}
+  \caption{A subfigure}
+  \label{fig:acc1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{acc2}
+  \caption{A subfigure}
+  \label{fig:acc2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
+
 
 
 \subsection{Behandling af data}
