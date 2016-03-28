@@ -1,5 +1,5 @@
 clear
-% Dette er målinger for det røde accelerometer 
+% Dette er målinger for det grønne accelerometer 
 
 %% Konstanter
 Fs = 100;
@@ -182,7 +182,7 @@ DataLO_1 = (DataLO1(1:L) + DataLO2(1:L) + DataLO3(1:L))/3;
 DataLO1 = (LO_1.data (2,:));
 DataLO2 = (LO_2.data (2,:));
 DataLO3 = (LO_3.data (2,:));
-DataLO_2 = (DataLO1(1:L) + DataLO2(1:L) + DataLO3(1:L))/3;
+DataPO_2 = (DataLO1(1:L) + DataLO2(1:L) + DataLO3(1:L))/3;
 
 DataLO1 = (LO_1.data (3,:));
 DataLO2 = (LO_2.data (3,:));
@@ -225,39 +225,39 @@ ylabel('Spænding målt i volt')
 hold on 
 plot(t, DataLN_2(1:L))
 hold on
-plot(t, DataLN_3(1:L))
+plot(t, DataPLN_3(1:L))
 
 
 
-DataVV1 = (VV_1.data (1,:));
-DataVV2 = (VV_2.data (1,:));
-DataVV3 = (VV_3.data (1,:));
-DataVV_1 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3;
+DataVV1 = (VV_1.data (1,:))
+DataVV2 = (VV_2.data (1,:))
+DataVV3 = (VV_3.data (1,:))
+DataVV_1 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3
 
-DataVV1 = (VV_1.data (2,:));
-DataVV2 = (VV_2.data (2,:));
-DataVV3 = (VV_3.data (2,:));
-DataVV_2 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3;
+DataVV1 = (VV_1.data (2,:))
+DataVV2 = (VV_2.data (2,:))
+DataVV3 = (VV_3.data (2,:))
+DataVV_2 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3
 
-DataVV1 = (VV_1.data (3,:));
-DataVV2 = (VV_2.data (3,:));
-DataVV3 = (VV_3.data (3,:));
-DataVV_3 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3;
+DataVV1 = (VV_1.data (3,:))
+DataVV2 = (VV_2.data (3,:))
+DataVV3 = (VV_3.data (3,:))
+DataVV_3 = (DataVV1(1:L) + DataVV2(1:L) + DataVV3(1:L))/3
 
-DataVH1 = (VH_1.data (1,:));
-DataVH2 = (VH_2.data (1,:));
-DataVH3 = (VH_3.data (1,:));
-DataVH_1 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3;
+DataVH1 = (VH_1.data (1,:))
+DataVH2 = (VH_2.data (1,:))
+DataVH3 = (VH_3.data (1,:))
+DataVH_1 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3
 
-DataVH1 = (VH_1.data (2,:));
-DataVH2 = (VH_2.data (2,:));
-DataVH3 = (VH_3.data (2,:));
-DataVH_2 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3;
+DataVH1 = (VH_1.data (2,:))
+DataVH2 = (VH_2.data (2,:))
+DataVH3 = (VH_3.data (2,:))
+DataVH_2 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3
 
-DataVH1 = (VH_1.data (3,:));
-DataVH2 = (VH_2.data (3,:));
-DataVH3 = (VH_3.data (3,:));
-DataVH_3 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3;
+DataVH1 = (VH_1.data (3,:))
+DataVH2 = (VH_2.data (3,:))
+DataVH3 = (VH_3.data (3,:))
+DataVH_3 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3
 
 subplot(3,2,5)
 plot(t, DataVV_1(1:L))
