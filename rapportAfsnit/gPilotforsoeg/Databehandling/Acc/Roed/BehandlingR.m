@@ -40,85 +40,6 @@ VV_1 = load('VV_1')
 VV_2 = load('VV_2')
 VV_3 = load('VV_3')
 
-
-%% Finder mean af de forskellige målinger
-
-% mean plan opad
-PO_1mean = mean(PO_1.data(1:L))
-PO_2mean = mean(PO_2.data(1:L))
-PO_3mean = mean(PO_3.data(1:L))
-PO = [PO_1mean PO_2mean PO_3mean]
-POmean = mean(PO)
-% mean plan nedad
-PN_1mean = mean(PN_1.data(1:L))
-PN_2mean = mean(PN_2.data(1:L))
-PN_3mean = mean(PN_3.data(1:L))
-PN = [PN_1mean PN_2mean PN_3mean]
-PNmean = mean(PN)
-
-% mean lodret opad
-LO_1mean = mean(LO_1.data(1:L))
-LO_2mean = mean(LO_2.data(1:L))
-LO_3mean = mean(LO_3.data(1:L))
-LO = [LO_1mean LO_2mean LO_3mean]
-LOmean = mean(LO)
-% mean lodret nedad
-LN_1mean = mean(LN_1.data(1:L))
-LN_2mean = mean(LN_2.data(1:L))
-LN_3mean = mean(LN_3.data(1:L))
-LN = [LN_1mean LN_2mean LN_3mean]
-LNmean = mean(LN)
-
-% mean vandret mod højre
-VH_1mean = mean(VH_1.data(1:L))
-VH_2mean = mean(VH_2.data(1:L))
-VH_3mean = mean(VH_3.data(1:L))
-VH = [VH_1mean VH_2mean VH_3mean]
-VHmean = mean(VH)
-% mean vandret mod venstre
-VV_1mean = mean(VV_1.data(1:L))
-VV_2mean = mean(VV_2.data(1:L))
-VV_3mean = mean(VV_3.data(1:L))
-VV = [VV_1mean VV_2mean VV_3mean]
-VVmean = mean(VV)
-
-%% Finder afvigelse 
-POafv = ((POmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-PNafv = ((PNmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-% gennemsnit skal måske findes her ved brug af:
-%afv = [LOafv LNafv]
-%afvmean = mean(afv)
-LOafv = ((LOmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-LNafv = ((LNmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-
-VHafv = ((VHmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-VVafv = ((VVmean-1.7)/1.7)*100 % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
-
-%% Data uden offset
-% Plan:
-POUoff = POmean - POafv
-PNUoff = PNmean - PNafv
-
-% Lodret:
-LOUoff = LOmean - LOafv
-LNUoff = LNmean - LOafv
-
-% vandret:
-VHUoff = VHmean - VHafv
-VVUoff = VVmean - VVafv
-%% Finder værdien for enkelt grad:
-EnGradPO = POafv/90
-EnGradPN = PNafv/90
-
-EnGradLO = LOafv/90
-EnGradLN = LNafv/90
-
-EnGradVH = VHafv/90
-EnGradVV = VVafv/90
-%% Finder 90 grader
-POGrader = (EnGradPO*90)
-PNGrader = (EnGradPN*90)
-
 %% plot af tidsgrafer:
 DataPO1 = (PO_1.data (1,:));
 DataPO2 = (PO_2.data (1,:));
@@ -227,8 +148,6 @@ plot(t, DataLN_2(1:L))
 hold on
 plot(t, DataLN_3(1:L))
 
-
-
 DataVV1 = (VV_1.data (1,:));
 DataVV2 = (VV_2.data (1,:));
 DataVV3 = (VV_3.data (1,:));
@@ -281,47 +200,131 @@ hold on
 plot(t, DataVH_2(1:L))
 hold on
 plot(t, DataVH_3(1:L))
+%% Finder mean af de forskellige målinger
+% mean plan opad
+POmean1 = mean(DataPO_1)
+POmean2 = mean(DataPO_2)
+POmean3 = mean(DataPO_3)
+% mean plan nedad
+PNmean1 = mean(DataPN_1)
+PNmean2 = mean(DataPN_2)
+PNmean3 = mean(DataPN_3)
+
+% mean lodret opad
+LOmean1 = mean(DataLO_1)
+LOmean2 = mean(DataLO_2)
+LOmean3 = mean(DataLO_3)
+% mean lodret nedad
+LNmean1 = mean(DataLN_1)
+LNmean2 = mean(DataLN_2)
+LNmean3 = mean(DataLN_3)
+
+% mean vandret mod højre
+VHmean1 = mean(DataVH_1)
+VHmean2 = mean(DataVH_2)
+VHmean3 = mean(DataVH_3)
+% mean vandret mod venstre
+VVmean1 = mean(DataVV_1)
+VVmean2 = mean(DataVV_2)
+VVmean3 = mean(DataVV_3)
+
+%% Finder afvigelse 
+PO1afv = ((POmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+PO2afv = ((POmean2-1.7)/1.7)
+PO3afv = ((POmean3-1.7)/1.7)
+PN1afv = ((PNmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+PN2afv = ((PNmean2-1.7)/1.7)
+PN3afv = ((PNmean3-1.7)/1.7)
+
+LO1afv = ((LOmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+LO2afv = ((LOmean2-1.7)/1.7)
+LO3afv = ((LOmean3-1.7)/1.7)
+LN1afv = ((LNmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+LN2afv = ((LNmean2-1.7)/1.7)
+LN3afv = ((LNmean3-1.7)/1.7)
 
 
+VV1afv = ((VVmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+VV2afv = ((VVmean2-1.7)/1.7)
+VV3afv = ((VVmean3-1.7)/1.7)
+VH1afv = ((VHmean1-1.7)/1.7) % 1.7 er i forhold til databladet skal være det halve af spændingsforsyningen 3.4V/2
+VH2afv = ((VHmean2-1.7)/1.7)
+VH3afv = ((VHmean3-1.7)/1.7)
 
-%% plot af tidsgrafer:
-% figure
-% subplot(1,3,1)
-% plot(t, DataPO(1:L))
-% axis([0 10 1 2])
-% title('Gennemsnitlig volt målt ved plan op og ned')
-% xlabel('Tid i sekunder')
-% ylabel('Spænding målt i volt')
-% hold on
-% plot(t, DataPN(1:L))
-% 
-% subplot(1,3,2)
-% plot(t, DataLO(1:L))
-% axis([0 10 1 2])
-% title('Volt målt ved lodret op og ned')
-% xlabel('Tid i sekunder')
-% ylabel('Spænding målt i volt')
-% hold on
-% plot(t, DataLN(1:L))
-% hold on
-% 
-% subplot(1,3,3)
-% plot(t, VH_1.data(1:L))
-% axis([0 10 1 2])
-% title('Volt målt ved vandret mod højre og venstre')
-% % xlabel('Tid i sekunder')
-% % ylabel('Spænding målt i volt')
-% % hold on
-% % plot(t, VH_2.data(1:L))
-% % hold on
-% % plot(t, VH_3.data(1:L))
-% % hold on
-% % plot(t, VV_1.data(1:L))
-% % hold on
-% % plot(t, VV_2.data(1:L))
-% % hold on
-% % plot(t, VV_3.data(1:L))
- 
+%% Data uden offset
+% Plan:
+POUoff1 = POmean1-PO1afv
+POUoff2 = POmean2-PO2afv
+POUoff3 = POmean3-PO3afv
+PNUoff1 = PNmean1-PN1afv
+PNUoff2 = PNmean2-PN2afv
+PNUoff3 = PNmean3-PN3afv
+
+%lodret:
+LOUoff1 = LOmean1-LO1afv
+LOUoff2 = LOmean2-LO2afv
+LOUoff3 = LOmean3-LO3afv
+LNUoff1 = LNmean1-LN1afv
+LNUoff2 = LNmean2-LN2afv
+LNUoff3 = LNmean3-LN3afv
+
+%vandret:
+VVUoff1 = VVmean1-VV1afv
+VVUoff2 = VVmean2-VV2afv
+VVUoff3 = VVmean3-VV3afv
+VHUoff1 = VHmean1-VH1afv
+VHUoff2 = VHmean2-VH2afv
+VHUoff3 = VHmean3-VH3afv
+
+%% Finder værdien for enkelt grad:
+EnGradPO1 = PO1afv/90
+EnGradPO2 = PO2afv/90
+EnGradPO3 = PO3afv/90
+
+EnGradPN1 = PN1afv/90
+EnGradPN2 = PN2afv/90
+EnGradPN3 = PN3afv/90
+
+EnGradLO1 = LO1afv/90
+EnGradLO2 = LO2afv/90
+EnGradLO3 = LO3afv/90
+
+EnGradLN1 = LN1afv/90
+EnGradLN2 = LN2afv/90
+EnGradLN3 = LN3afv/90
+
+EnGradVV1 = VV1afv/90
+EnGradVV2 = VV2afv/90
+EnGradVV3 = VV3afv/90
+
+EnGradVH1 = VH1afv/90
+EnGradVH2 = VH2afv/90
+EnGradVH3 = VH3afv/90
+%% Finder 90 grader
+POGrader1 = (EnGradPO1*90)
+POGrader2 = (EnGradPO2*90)
+POGrader3 = (EnGradPO3*90)
+
+PNGrader1 = (EnGradPN1*90)
+PNGrader2 = (EnGradPN2*90)
+PNGrader3 = (EnGradPN3*90)
+
+LOGrader1 = (EnGradLO1*90)
+LOGrader2 = (EnGradLO2*90)
+LOGrader3 = (EnGradLO3*90)
+
+LNGrader1 = (EnGradLN1*90)
+LNGrader2 = (EnGradLN2*90)
+LNGrader3 = (EnGradLN3*90)
+
+VVGrader1 = (EnGradVV1*90)
+VVGrader2 = (EnGradVV2*90)
+VVGrader3 = (EnGradVV3*90)
+
+VHGrader1 = (EnGradVH1*90)
+VHGrader2 = (EnGradVH2*90)
+VHGrader3 = (EnGradVH3*90)
+
 %% FFT af måling 1 plan opad 
 fftPO_1 = fft(PO_1.data(1:L));
 
@@ -377,80 +380,3 @@ title('Frekvensspektrum for plan nedad (3 måling)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
 
-%% FFT af måling 1 lodret opad  - dette kan også gøres ved de 2 andre målinger
-% fftLO_1 = fft(LO_1.data(1:L));
-% 
-% %Compute the two-sided spectrum P2. 
-% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-% P2LO_1 = abs(fftLO_1/L);
-% P1LO_1 = P2LO_1(1:L/2+1);
-% P1LO_1(2:end-1) = 2*P1LO_1(2:end-1);
-% 
-% %Plot the single-sided amplitude spectrum P1.
-% figure
-% subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
-% plot(f,P1LO_1)
-% axis([-10 100 0 1])
-% title('Frekvensspektrum for loadret opad (1 måling)') 
-% %title('Single-Sided Amplitude Spectrum of X(t)')
-% xlabel('Frekvens målt i Hz')
-% ylabel('Spændingen målt i volt')
-
-% %% FFT af måling 1 lodret nedad  - dette kan også gøres ved de 2 andre målinger
-% fftLN_1 = fft(LN_1.data(1:L));
-% 
-% %Compute the two-sided spectrum P2. 
-% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-% P2LN_1 = abs(fftLN_1/L);
-% P1LN_1 = P2LN_1(1:L/2+1);
-% P1LN_1(2:end-1) = 2*P1LN_1(2:end-1);
-% 
-% %Plot the single-sided amplitude spectrum P1.
-% figure
-% subplot(3,1,1) %% Hvis det skal være i hver sin figur, så slet det her
-% plot(f,P1LN_1)
-% axis([-10 100 0 1])
-% title('Frekvensspektrum for loadret nedad (1 måling)') 
-% %title('Single-Sided Amplitude Spectrum of X(t)')
-% xlabel('Frekvens målt i Hz')
-% ylabel('Spændingen målt i volt')
-% 
-% %% FFT af måling 1 vandret højre  - dette kan også gøres ved de 2 andre målinger
-% fftVH_1 = fft(VH_1.data(1:L));
-% 
-% %Compute the two-sided spectrum P2. 
-% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-% P2VH_1 = abs(fftVH_1/L);
-% P1VH_1 = P2VH_1(1:L/2+1);
-% P1VH_1(2:end-1) = 2*P1VH_1(2:end-1);
-% 
-% %Plot the single-sided amplitude spectrum P1.
-% figure
-% subplot(3,1,2) %% Hvis det skal være i hver sin figur, så slet det her
-% plot(f,P1VH_1)
-% axis([-10 100 0 1])
-% title('Frekvensspektrum for vandret højre (1 måling)') 
-% %title('Single-Sided Amplitude Spectrum of X(t)')
-% xlabel('Frekvens målt i Hz')
-% ylabel('Spændingen målt i volt')
-% 
-% %% FFT af måling 1 vandret venstre  - dette kan også gøres ved de 2 andre målinger
-% fftVV_1 = fft(VV_1.data(1:L));
-% 
-% %Compute the two-sided spectrum P2. 
-% %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-% P2VV_1 = abs(fftVV_1/L);
-% P1VV_1 = P2VV_1(1:L/2+1);
-% P1VV_1(2:end-1) = 2*P1VV_1(2:end-1);
-% 
-% %Plot the single-sided amplitude spectrum P1.
-% figure
-% subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
-% plot(f,P1VV_1)
-% axis([-10 100 0 1])
-% title('Frekvensspektrum for vandret højre (1 måling)') 
-% %title('Single-Sided Amplitude Spectrum of X(t)')
-% xlabel('Frekvens målt i Hz')
-% ylabel('Spændingen målt i volt')
-% 
-% 
