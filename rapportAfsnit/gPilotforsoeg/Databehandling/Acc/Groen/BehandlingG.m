@@ -1,5 +1,5 @@
 clear
-% Dette er målinger for det røde accelerometer 
+% Dette er målinger for det grønne accelerometer 
 
 %% Konstanter
 Fs = 100;
