@@ -82,6 +82,7 @@ hold on
 plot(t, DataPO_2(1:L))
 hold on
 plot(t, DataPO_3(1:L))
+legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest'); 
 
 subplot(3,2,2)
 plot(t, DataPN_1(1:L))
@@ -93,7 +94,7 @@ hold on
 plot(t, DataPN_2(1:L))
 hold on
 plot(t, DataPN_3(1:L))
-
+legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
 DataLO1 = (LO_1.data (1,:));
 DataLO2 = (LO_2.data (1,:));
@@ -135,6 +136,7 @@ hold on
 plot(t, DataLO_2(1:L))
 hold on
 plot(t, DataLO_3(1:L))
+legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
 
 subplot(3,2,4)
@@ -147,6 +149,7 @@ hold on
 plot(t, DataLN_2(1:L))
 hold on
 plot(t, DataLN_3(1:L))
+legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
 DataVV1 = (VV_1.data (1,:));
 DataVV2 = (VV_2.data (1,:));
@@ -188,7 +191,7 @@ hold on
 plot(t, DataVV_2(1:L))
 hold on
 plot(t, DataVV_3(1:L))
-
+legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
 subplot(3,2,6)
 plot(t, DataVH_1(1:L))
@@ -200,6 +203,7 @@ hold on
 plot(t, DataVH_2(1:L))
 hold on
 plot(t, DataVH_3(1:L))
+legend(['x-akse'; 'y-akse'; 'z-akse'],'Location', 'southwest');
 %% Finder mean af de forskellige målinger
 % mean plan opad
 POmean1 = mean(DataPO_1)
