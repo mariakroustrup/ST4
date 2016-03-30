@@ -24,7 +24,8 @@ Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$
 
 \subsection{Metode}
 \begin{enumerate}
-\item Der foretages målinger i accelerometerets tre akser og i de seks positioner som accelerometeret bliver påvirket i \autoref{fig:acc_paavirkning}, på denne måde kan støj, offset og sensitiviteten beregnes. 
+\item Der foretages målinger i accelerometerets tre akser og i de seks positioner som accelerometeret, hvorved støj som accelerometeret påvirkes med kan identificeres.
+\item Ud fra de øvrige målinger kan offset og sensitiviteten beregnes ved at se på de akser hvor accelerometeret udsættes for 0 g-påvirkning  . 
 \item Spændingen ved $0^(\circ}$ og $90^{\circ}$ beregnes ved at måle påvirkningen af accelerometeret derefter dividere afvigelsen af denne med 90 for at finde for 1 grads g-påvirkning, hvorefter påvirkningen kan ganges med den ønskede vinkel. 
 \end{enumerate}
 
@@ -69,7 +70,7 @@ Der er foretaget en fourier transformations analyse (FFT) af de tre målinger fo
 \label{fig:FFT_acc}
 \end{figure}
 
-Ud fra de tre målinger foretaget i de forskellige positioner beregnes middelværdien af målingerne på de forskellige akser, herefter plottes disse i en graf, hvorved det er muligt at se hvilken akse der bliver påvirket mest under øvelsen. Målingerne fremgår på \autoref{fig:paavirkning}. 
+Ud fra de tre målinger foretaget i de forskellige positioner beregnes dengennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i en graf, hvorved det er muligt at se hvilken akse der bliver påvirket mest under øvelsen. Målingerne fremgår på \autoref{fig:paavirkning}. 
 
 \begin{figure}[H]
 \centering
@@ -78,8 +79,67 @@ Ud fra de tre målinger foretaget i de forskellige positioner beregnes middelvæ
 \label{fig:paavirkning}
 \end{figure}
 
-Herefter beregnes mean af målingerne for, at kunne beregne offsettet og sensitiviteten af målingerne.
+Der beregnes offset ud fra målingerne hvor accelerometeret påvirkes med 0 g. Der hvor accelerometeret er påvirket med 0 g er illustreret på \autoref{fig:acc_paavirkning}. Målingerne fremgår af \autoref{Tab:acc_offset}. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Offset} \\ \hline
+    \textbf{Lodret op} 		& X 		& $1,6793~V$ 	\\ \hline
+    \textbf{Lodret op} 		& Z 		& $1,6857~V$ 	 \\ \hline
+    \textbf{Lodret ned}		& X 		& $1,6750~V$ 	\\ \hline
+    \textbf{Lodret ned}		& Z 		& $1,6806~V$  	\\ \hline
+    \textbf{Vandret højre} 	& Y 		& $1,6760~V$    \\ \hline     
+    \textbf{Vandret højre} 	& Z 		& $1,6828~V$ 	\\ \hline
+    \textbf{Vandret venstre}	& Y 		& $1,6755~V$ 	\\ \hline
+    \textbf{Vandret venstre}	& Z 		& $1,6836~V$		\\ \hline
+    \textbf{Plan op} 		& X 		& $1,6773~V$		\\ \hline		
+    \textbf{Plan op} 		& Y 		& $1,6734~V$    \\ \hline
+    \textbf{Plan ned} 		& X 		& $1,6787~V$		\\ \hline
+    \textbf{Plan ned} 		& Y 		& $1,6755~V$		\\ \hline
+	\end{tabular}
+	\caption{Offsettet beregnet for de forskellige akser hvor accelerometeret udsættes for en 0 g-påvirkning}
+	\label{Tab:acc_offset}
+\end{table}
+
+Der beregnes sensitiviten ud fra forskellen mellem 0 og 1 g-påvirkningen af accelerometeret. Der hvor accelerometeret er påvirket med 1 g er illustreret på \autoref{fig:acc_paavirkning}. Målingerne fremgår af \autoref{Tab:acc_sensitiviteten}. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Sensitivitet} \\ \hline
+    \textbf{Lodret op} 		& Y		& $0,1232~V/g$ 	\\ \hline
+    \textbf{Lodret ned}		& Y 		& $-0,1079~V/g$ 	\\ \hline
+    \textbf{Vandret højre} 	& X 		& $0,1092~V/g$     \\ \hline     
+    \textbf{Vandret venstre}	& X 		& $-0,1164~V/g$ 	\\ \hline
+    \textbf{Plan op} 		& Z 		& $0,1130~V/gV$    	\\ \hline		
+    \textbf{Plan ned} 		& Z 		& $-0,1167~V/g$		\\ \hline
+	\end{tabular}
+	\caption{Sensitiviteten beregnet for de forskellige akser hvor accelerometeret udsættes for en 1 g-påvirkning}
+	\label{Tab:acc_offset}
+\end{table}
+
+Ud fra senstitivten beregnes spændingen ved $0^(\circ}$ og $90^{\circ}$ i negativ og positiv retning. For at beregne grader anvendes følgende ligning:
+
+\begin{equation}
+	V_{out} = V_{offset} + sensitiviteten \cdot \sin(vinklen) \\
+\end{equation}
 
 
+Beregningerne fremgår af \autoref{Tab:acc_grader}
 
+ \begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Spændingen ved 1 grad} & \textbf{Spændingen ved 90 grader} \\ \hline
+    \textbf{Positiv} 	& Y		& $1,7985~V$   	&	$12,7589~V$\\ \hline
+    \textbf{Negativ}		& Y		& $1,5692~V$  	&	$-8,0339~V$\\ \hline
+    \textbf{Positiv} 	& X 		& $1,7917~V$   	& 	$11,5105~V$ \\ \hline     
+    \textbf{Negativ}		& X 		& $1,5614~V$		&	$-8,7982~V$\\ \hline
+    \textbf{Positiv} 	& Z 		& $1,7924~V$   	& 	$11,8494~V$	\\ \hline		
+    \textbf{Negativ} 	& Z 		& $1,5629~V$		&	$-8,8190~V$ \\ \hline
+	\end{tabular}
+	\caption{Sensitiviteten beregnet for de forskellige akser hvor accelerometeret udsættes for en 1 g-påvirkning}
+	\label{Tab:acc_grader}
+\end{table}
 
