@@ -72,7 +72,7 @@ DataPN3 = (PN_3.data (3,:));
 DataPN_3 = (DataPN1(1:L) + DataPN2(1:L) + DataPN3(1:L))/3;
 
 figure
-subplot(3,2,1)
+subplot(3,2,5)
 plot(t, DataPO_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved plan op')
@@ -84,7 +84,7 @@ hold on
 plot(t, DataPO_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest'); 
 
-subplot(3,2,2)
+subplot(3,2,6)
 plot(t, DataPN_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved plan ned')
@@ -126,7 +126,7 @@ DataLN2 = (LN_2.data (3,:));
 DataLN3 = (LN_3.data (3,:));
 DataLN_3 = (DataLN1(1:L) + DataLN2(1:L) + DataLN3(1:L))/3;
 
-subplot(3,2,3)
+subplot(3,2,1)
 plot(t, DataLO_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved lodret op')
@@ -139,7 +139,7 @@ plot(t, DataLO_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
 
-subplot(3,2,4)
+subplot(3,2,2)
 plot(t, DataLN_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved lodret ned')
@@ -181,7 +181,7 @@ DataVH2 = (VH_2.data (3,:));
 DataVH3 = (VH_3.data (3,:));
 DataVH_3 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3;
 
-subplot(3,2,5)
+subplot(3,2,4)
 plot(t, DataVV_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved vandret mod venstre')
@@ -193,7 +193,7 @@ hold on
 plot(t, DataVV_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
 
-subplot(3,2,6)
+subplot(3,2,3)
 plot(t, DataVH_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig volt målt ved vandret mod højre')
@@ -280,6 +280,8 @@ VHUoff1 = VHmean1-VH1afv
 VHUoff2 = VHmean2-VH2afv
 VHUoff3 = VHmean3-VH3afv
 
+
+
 %% Finder værdien for enkelt grad:
 EnGradPO1 = PO1afv/90
 EnGradPO2 = PO2afv/90
@@ -330,56 +332,56 @@ VHGrader2 = (EnGradVH2*90)
 VHGrader3 = (EnGradVH3*90)
 
 %% FFT af måling 1 plan opad 
-fftPO_1 = fft(PO_1.data(1:L));
+fftVV_1 = fft(VV_1.data(1:L));
 
 %Compute the two-sided spectrum P2. 
 %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2PO_1 = abs(fftPO_1/L);
-P1PO_1 = P2PO_1(1:L/2+1);
-P1PO_1(2:end-1) = 2*P1PO_1(2:end-1);
+P2VV_1 = abs(fftVV_1/L);
+P1VV_1 = P2VV_1(1:L/2+1);
+P1VV_1(2:end-1) = 2*P1VV_1(2:end-1);
 
 %Plot the single-sided amplitude spectrum P1.
 figure
 subplot(3,1,1) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1PO_1)
-axis([-10 100 0 1])
-title('Frekvensspektrum for plan opad (1 måling)') 
+plot(f,P1VV_1)
+axis([-1 50 0 2])
+title('Frekvensspektrum for vandret mod venstre (1 måling)') 
 %title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
 
 %% FFT af måling 2 plan opad
-fftPO_2 = fft(PO_2.data(1:L));
+fftVV_2 = fft(VV_2.data(1:L));
 
 %Compute the two-sided spectrum P2. 
 %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2PO_2 = abs(fftPO_2/L);
-P1PO_2 = P2PO_2(1:L/2+1);
-P1PO_2(2:end-1) = 2*P1PO_2(2:end-1);
+P2VV_2 = abs(fftVV_2/L);
+P1VV_2 = P2VV_2(1:L/2+1);
+P1VV_2(2:end-1) = 2*P1VV_2(2:end-1);
 
 %Plot the single-sided amplitude spectrum P1.
 subplot(3,1,2) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1PO_2)
-axis([-10 100 0 1])
-title('Frekvensspektrum for plan nedad (2 måling)') 
+plot(f,P1VV_2)
+axis([-1 50 0 2])
+title('Frekvensspektrum for vandret mod vestre (2 måling)') 
 %title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
 
 %% FFT af måling 3 plan opad  
-fftPO_3 = fft(PO_3.data(1:L));
+fftVV_3 = fft(VV_3.data(1:L));
 
 %Compute the two-sided spectrum P2. 
 %Then compute the single-sided spectrum P1 based on P2 and the even-valued signal length L
-P2PO_3 = abs(fftPO_3/L);
-P1PO_3 = P2PO_3(1:L/2+1);
-P1PO_3(2:end-1) = 2*P1PO_3(2:end-1);
+P2VV_3 = abs(fftVV_3/L);
+P1VV_3 = P2VV_3(1:L/2+1);
+P1VV_3(2:end-1) = 2*P1VV_3(2:end-1);
 
 %Plot the single-sided amplitude spectrum P1.
 subplot(3,1,3) %% Hvis det skal være i hver sin figur, så slet det her
-plot(f,P1PO_3)
-axis([-10 100 0 1])
-title('Frekvensspektrum for plan nedad (3 måling)') 
+plot(f,P1VV_3)
+axis([-1 50 0 2])
+title('Frekvensspektrum for vandret mod venstre (3 måling)') 
 %title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('Frekvens målt i Hz')
 ylabel('Spændingen målt i volt')
