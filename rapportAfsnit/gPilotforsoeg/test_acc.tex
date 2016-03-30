@@ -119,11 +119,7 @@ Der beregnes sensitiviten ud fra forskellen mellem 0 og 1 g-påvirkningen af acc
 	\label{Tab:acc_offset}
 \end{table}
 
-Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negativ og positiv retning\fxnote{Er der nødvendig med 1 grad?}. Spændingen svarende til $0^{\circ}$ svarer til den målte offsetværdi som fremgår af \autoref{Tab:acc_offset}. Beregningerne af spændingen ved de valgte grader fremgår af \autoref{Tab:acc_grader} og er beregnet ud fra følgende ligning:
-
-\begin{equation}
-	V_{out} = V_{offset} + sensitiviteten \cdot \sin(vinklen) \\
-\end{equation}
+Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negativ og positiv retning\fxnote{Er der nødvendig med 1 grad?}. Spændingen svarende til $0^{\circ}$ svarer til den målte offsetværdi som fremgår af \autoref{Tab:acc_offset}. Beregningerne af spændingen ved de valgte grader fremgår af \autoref{Tab:acc_grader} og er beregnet ud ligning \autoref{equ:vinkler}.
 
  \begin{table}[H]
 	\centering
@@ -136,7 +132,7 @@ Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negat
     \textbf{Positiv} 	& Z 		& $1,7924~V$   	& 	$11,8494~V$	\\ \hline		
     \textbf{Negativ} 	& Z 		& $1,5629~V$		&	$-8,8190~V$ \\ \hline
 	\end{tabular}
-	\caption{Beregnet spænding ved henholdvis 1 og 90 grader i positiv og negativ retning}
+	\caption{Beregnet spænding ved henholdsvis 1 og 90 grader i positiv og negativ retning}
 	\label{Tab:acc_grader}
 \end{table}
 
