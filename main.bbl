@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -161,16 +161,22 @@ Institut for Muskelsvind.
 \newblock URL
   \url{http://www.aarhus.dk/~/media/Subsites/HandiInfo/Docs/Leksikon/Muskelsvind.pdf}.
 
+\bibitem[II()]{orthopedics2016}
+TIS~Orthopedics II.
+\newblock \emph{Typical Foot Function During Walking}, 2016 .
+\newblock URL \url{http://www.therapyedu.com/ortho2/ortho2-02.htm}.
+
 \bibitem[Martini et~al.(2012)Martini, Nath, and Bartholomew]{martini2012}
 F.~H. Martini, J.~L. Nath, and E.~F. Bartholomew.
 \newblock \emph{Fundamentals of Anatomi and Physiology}.
 \newblock Pearson, 2012.
 \newblock \doi{978-0-321-70933-2}.
 
-\bibitem[II()]{orthopedics2016}
-TIS~Orthopedics II.
-\newblock \emph{Typical Foot Function During Walking}, 2016 .
-\newblock URL \url{http://www.therapyedu.com/ortho2/ortho2-02.htm}.
+\bibitem[Escamilla and Krzyzewski(2001)]{escamilla2001}
+R.~F. Escamilla and M.l~W. Krzyzewski.
+\newblock Knee biomechanics of the dynamic squat exercise.
+\newblock \emph{Medicine and Science in Sports and Exercise}, 2001.
+\newblock \doi{0195-9131/01/3301-0127/$3.00/0}.
 
 \bibitem[Schoenfeld(2010)]{schoenfeld2010}
 B.~J. Schoenfeld.
@@ -186,12 +192,6 @@ Advancer Technologies.
 \newblock URL
   \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
 
-\bibitem[Devices(2010)]{analogdevices2010}
-Analog Devices.
-\newblock \emph{ADXL335}, 2010.
-\newblock URL
-  \url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL335.pdf}.
-
 \bibitem[Corporation(2015)]{cypresspsoc2015}
 Cypress~Semiconductor Corporation.
 \newblock \emph{CY8CKIT-142 PSoC 4 BLE module}, 2015.
@@ -202,5 +202,29 @@ Cypress~Semiconductor Corporation.
 \newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
   2014.
 \newblock URL \url{http://www.cypress.com/file/229211/download}.
+
+\bibitem[Gupta(2013)]{gupta2013}
+N.~Gupta.
+\newblock \emph{nside Bluetooth Low Energy}.
+\newblock Artech House, 2013.
+\newblock \doi{9781608075799}.
+
+\bibitem[Hermens et~al.(1999)Hermens, Freriks, and et~al.]{seniam2016}
+H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.
+\newblock \emph{SENIAM 8: European Recommendations for Surface
+  ElectromMyoGraphy}.
+\newblock Roessingh Research and Development, 1999.
+\newblock \doi{90-75452-15-2}.
+
+\bibitem[Foot(2016)]{ankle2016}
+PA~Foot.
+\newblock \emph{Ankle Fracture}, 2016.
+\newblock URL
+  \url{http://pafootdoctors.com/ankle-fractures-stress-fractures-broken-ankle/}.
+
+\bibitem[Labs(2015)]{squat2015}
+Workout Labs.
+\newblock \emph{Chair Squat}, 2015.
+\newblock URL \url{http://workoutlabs.com/exercise-guide/chair-squat/}.
 
 \end{thebibliography}
