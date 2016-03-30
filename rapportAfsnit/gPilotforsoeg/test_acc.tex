@@ -119,19 +119,16 @@ Der beregnes sensitiviten ud fra forskellen mellem 0 og 1 g-påvirkningen af acc
 	\label{Tab:acc_offset}
 \end{table}
 
-Ud fra senstitivten beregnes spændingen ved $0^(\circ}$ og $90^{\circ}$ i negativ og positiv retning. For at beregne grader anvendes følgende ligning:
+Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negativ og positiv retning\fxnote{Er der nødvendig med 1 grad?}. Spændingen svarende til $0^{\circ}$ svarer til den målte offsetværdi som fremgår af \autoref{Tab:acc_offset}. Beregningerne af spændingen ved de valgte grader fremgår af \autoref{Tab:acc_grader} og er beregnet ud fra følgende ligning:
 
 \begin{equation}
 	V_{out} = V_{offset} + sensitiviteten \cdot \sin(vinklen) \\
 \end{equation}
 
-
-Beregningerne fremgår af \autoref{Tab:acc_grader}
-
  \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|l|}
-	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Spændingen ved 1 grad} & \textbf{Spændingen ved 90 grader} \\ \hline
+	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Spændingen ved grad} & \textbf{Spændingen ved 90 grader} \\ \hline
     \textbf{Positiv} 	& Y		& $1,7985~V$   	&	$12,7589~V$\\ \hline
     \textbf{Negativ}		& Y		& $1,5692~V$  	&	$-8,0339~V$\\ \hline
     \textbf{Positiv} 	& X 		& $1,7917~V$   	& 	$11,5105~V$ \\ \hline     
@@ -139,7 +136,11 @@ Beregningerne fremgår af \autoref{Tab:acc_grader}
     \textbf{Positiv} 	& Z 		& $1,7924~V$   	& 	$11,8494~V$	\\ \hline		
     \textbf{Negativ} 	& Z 		& $1,5629~V$		&	$-8,8190~V$ \\ \hline
 	\end{tabular}
-	\caption{Sensitiviteten beregnet for de forskellige akser hvor accelerometeret udsættes for en 1 g-påvirkning}
+	\caption{Beregnet spænding ved henholdvis 1 og 90 grader i positiv og negativ retning}
 	\label{Tab:acc_grader}
 \end{table}
+
+
+
+
 
