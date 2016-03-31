@@ -1,9 +1,9 @@
 \section{Test af accelerometer} 
 \label{sec:test_acc}
-I dette projekt anvendes to accelerometer som sensorer til opsamling af signaler. For at kunne anvende et accelerometer er det vigtigt at kende forskellige tolerancer i forhold til deres datablade, hvorfor et forsøg udføres for at kunne tage højde for disse parametre.
+I dette projekt anvendes to accelerometre, som er beskrevet i \autoref{sec:acc}. Disse anvendes som sensorer til opsamling af acceleration, der giver et outputsignal svarende til en spænding. For at kunne anvende et accelerometer er det vigtigt at kende forskellige tolerancer i forhold til deres datablade, hvorfor et forsøg udføres for at kunne tage højde for disse parametre.
 
 \subsection{Formål}
-Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$ og $90^{\circ}$, hvorudfra vinkler kan beregnes. Derudover identificeres støjsignaler i outputsignalet samt offsettet og sensitiviteten, så dette kan tages højde for i pilotforsøget \autoref{sec:pilotforsoeg} og senere forsøg.
+Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$ og $90^{\circ}$, hvorudfra vinkler kan beregnes. Derudover identificeres støjsignaler i outputsignalet samt offsettet og sensitiviteten. Dette gøres for at teste accelerometrenes tolerancer, hvorved dette kan tages højde for i senere forsøg. 
 
 \begin{enumerate}
 \item Identificering af støj i outputsignaler for accelerometrene
@@ -24,16 +24,16 @@ Denne test har til formål at identificere spændingen i henholdsvis $0^{\circ}$
 
 \subsection{Metode}
 \begin{enumerate}
-\item Der foretages målinger i accelerometerets tre akser og i de seks positioner som accelerometeret, hvorved støj som accelerometeret påvirkes med kan identificeres.
-\item Ud fra de øvrige målinger kan offset og sensitiviteten beregnes ved at se på de akser hvor accelerometeret udsættes for 0 g-påvirkning  . 
-\item Spændingen ved $0^(\circ}$ og $90^{\circ}$ beregnes ved at måle påvirkningen af accelerometeret derefter dividere afvigelsen af denne med 90 for at finde for 1 grads g-påvirkning, hvorefter påvirkningen kan ganges med den ønskede vinkel. 
+\item Der foretages målinger i accelerometerets tre akser og i de seks positioner som accelerometeret, hvorved støj som accelerometeret påvirkes med kan identificeres
+\item Ud fra de øvrige målinger kan offset og sensitiviteten beregnes ved at se på de akser hvor accelerometeret udsættes for 0 g-påvirkning, hvilket svarer til at accelerometeret ikke udsættes for tyngdekraften, hvorved accelerometeret måles vinkelret på planet
+\item Ud fra målingerne ved 0 og 1 g-påvirkning kan spændingen ved $0^(\circ}$ og $90^{\circ}$ kan beregnes ved \autoref{equ:vinkler}
 \end{enumerate}
 
 \subsection{Forsøgsopstilling}
 Forsøgsopstillingen udføres på samme måde for begge accelerometre.
 \begin{itemize}
-\item Accelerometeret tilkobles breadboardet og sættes fast med tape.
-\item Accelerometeret indstilles så det er vinkelret
+\item Accelerometeret tilkobles breadboardet og sættes fast med tape
+\item Accelerometeret indstilles så det er i vater med et vaterpas
 \begin{itemize}
 \item Accelerometeret placeres efter fremgangsmåden for hver øvelse, som er illustreret i \autoref{sec:acc_fremgangsmaade}
 \end{itemize}
@@ -45,12 +45,12 @@ Forsøgsopstillingen udføres på samme måde for begge accelerometre.
 \label{sec:acc_fremgangsmaade}
 Der foretages seks forskellige positioner for hvert accelerometer. Hver position måles tre gange og samles i 10 sekunder ved 100 Hz, hvilket er det dobbelte af båndbredden for accelerometrene \citep{analogdevices2010}. De forskellige fremgangsmåder er illustreret på \autoref{fig:acc_paavirkning}. 
 \begin{itemize}
-\item Accelerometeret er lodret opad
-\item Accelerometeret er lodret nedad
-\item Accelerometeret er vandret mod højre
-\item Accelerometeret er vandret mod venstre
-\item Accelerometeret er plan på bordet opad
-\item Accelerometeret er plan på bordet nedad
+\item Accelerometeret stilles så det er lodret opad
+\item Accelerometeret stilles så det er lodret nedad
+\item Accelerometeret stilles så det er vandret mod højre
+\item Accelerometeret stilles så det er vandret mod venstre
+\item Accelerometeret ligges plan på bordet opad
+\item Accelerometeret ligges plan på bordet nedad
 \end{itemize}
 
 \begin{figure}[H]
@@ -70,7 +70,7 @@ Der er foretaget en fourier transformations analyse (FFT) af de tre målinger fo
 \label{fig:FFT_acc}
 \end{figure}
 
-Ud fra de tre målinger foretaget i de forskellige positioner beregnes dengennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i en graf, hvorved det er muligt at se hvilken akse der bliver påvirket mest under øvelsen. Målingerne fremgår på \autoref{fig:paavirkning}. 
+Ud fra de tre målinger foretaget i de forskellige positioner beregnes den gennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i en graf, hvorved det er muligt at se hvilken akse der bliver påvirket mest under øvelsen. Målingerne fremgår på \autoref{fig:paavirkning}. 
 
 \begin{figure}[H]
 \centering
