@@ -1,52 +1,6 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
-Warning--I didn't find a database entry for "nuedert2004"
-Warning--I didn't find a database entry for "nuebert2004"
-Warning--I didn't find a database entry for "cypressguide"
 Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
-You've used 30 entries,
-            2481 wiz_defined-function locations,
-            709 strings with 9429 characters,
-and the built_in function-call counts, 8479 in all, are:
-= -- 745
-> -- 352
-< -- 22
-+ -- 160
-- -- 100
-* -- 520
-:= -- 1444
-add.period$ -- 111
-call.type$ -- 30
-change.case$ -- 42
-chr.to.int$ -- 30
-cite$ -- 32
-duplicate$ -- 516
-empty$ -- 779
-format.name$ -- 134
-if$ -- 1758
-int.to.chr$ -- 1
-int.to.str$ -- 31
-missing$ -- 20
-newline$ -- 179
-num.names$ -- 90
-pop$ -- 232
-preamble$ -- 1
-purify$ -- 30
-quote$ -- 0
-skip$ -- 308
-stack$ -- 0
-substring$ -- 60
-swap$ -- 76
-text.length$ -- 1
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 198
-warning$ -- 2
-while$ -- 60
-width$ -- 0
-write$ -- 415
-(There were 5 warnings)
+(There were 2 warnings)

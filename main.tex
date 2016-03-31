@@ -13,7 +13,7 @@
 %|||||||												 ||||||||
 %||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 %||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-\iffalse
+%\iffalse
 %--------------------Introduktion--------------------------------
 \chapter{Indledning}\label{Indledning}
 \input{rapportAfsnit/bInitierende/Indledning}
@@ -22,7 +22,7 @@
 %-----------------------Problemanalyse---------------------------
 \chapter{Problemanalyse}
 \input{rapportAfsnit/cProblemanalyse/ALS}
-%\input{rapportAfsnit/cProblemanalyse/Foelger}
+%\input{rapportAfsnit/cProblemanalyse/Foelger} Denne skal ikke være med i master dokumentet. 
 \input{rapportAfsnit/cProblemanalyse/Livskvalitet}
 \input{rapportAfsnit/cProblemanalyse/Nuvaerende_teknologier} 
 \input{rapportAfsnit/cProblemanalyse/Knaeleddet}
@@ -33,10 +33,7 @@
 \input{rapportAfsnit/eProblemloesning/EMG_acc}
 \input{rapportAfsnit/eProblemloesning/loesningsstrategi}
 
-\fi
-\chapter{Bilag}
-\input{rapportAfsnit/gPilotforsoeg/Pilotforsoeg}
-\iffalse
+%\iffalse
 \begingroup
 \raggedright
 
@@ -44,5 +41,12 @@
 \bibliography{kilder}
 
 \endgroup
-\fi
+
+%-----------------------Billag-------------------------
+\appendix
+\chapter{Bilag}
+\input{rapportAfsnit/gPilotforsoeg/Pilotforsoeg}
+%\input{rapportAfsnit/gPilotforsoeg/test_acc}
+
+%\fi
 \end{document}
