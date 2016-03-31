@@ -21,6 +21,90 @@ a3    = Nedogop3.data(7,:);
 a3    = a3(1:length(tid));
 a3    = a3*1/gain;
 
+
+%% Accelerometer 1
+
+%Måling 1:
+b1 = Nedogop1.data(1,:);
+b1    = b1(1:length(tid));
+%b1    = b1*1/gain;
+b2 = Nedogop1.data(2,:);
+b2    = b2(1:length(tid));
+%b2    = b2*1/gain;
+b3 = Nedogop1.data(3,:);
+b3    = b3(1:length(tid));
+%b3    = b3*1/gain;
+b4 = Nedogop1.data(4,:);
+b4    = b4(1:length(tid));
+%b4    = b4*1/gain;
+b5 = Nedogop1.data(5,:);
+b5    = b5(1:length(tid));
+%b5    = b5*1/gain;
+b6 = Nedogop1.data(6,:);
+b6    = b6(1:length(tid));
+%b6    = b6*1/gain;
+
+% Måling 2:
+c1 = Nedogop2.data(1,:);
+c1    = c1(1:length(tid));
+c1    = c1*1/gain;
+c2 = Nedogop2.data(2,:);
+c2    = c2(1:length(tid));
+c2    = c2*1/gain;
+c3 = Nedogop2.data(3,:);
+c3    = c3(1:length(tid));
+c3    = c3*1/gain;
+c4 = Nedogop2.data(4,:);
+c4    = c4(1:length(tid));
+c4    = c4*1/gain;
+c5 = Nedogop2.data(5,:);
+c5    = c5(1:length(tid));
+c5    = c5*1/gain;
+c6 = Nedogop2.data(6,:);
+c6    = c6(1:length(tid));
+c6    = c6*1/gain;
+
+%Accelerometer 1
+d1 = Nedogop3.data(1,:);
+d1    = d1(1:length(tid));
+d1    = d1*1/gain;
+d2 = Nedogop3.data(2,:);
+d2    = d2(1:length(tid));
+d2    = d2*1/gain;
+d3 = Nedogop3.data(3,:);
+d3    = d3(1:length(tid));
+d3    = d3*1/gain;
+d4 = Nedogop3.data(4,:);
+d4    = d4(1:length(tid));
+d4    = d4*1/gain;
+d5 = Nedogop3.data(5,:);
+d5    = d5(1:length(tid));
+d5    = d5*1/gain;
+d6 = Nedogop3.data(6,:);
+d6    = d6(1:length(tid));
+d6    = d6*1/gain;
+%% plotter grafer af EMG og ACC 
+figure
+subplot(3,1,1)
+plot(tid, a1)
+axis([0 10 -1 2])
+title('Gennemsnitlig volt målt ved plan op')
+xlabel('Tid i sekunder')
+ylabel('Spænding målt i volt')
+hold on
+plot(tid, b1)
+hold on
+plot(tid, b2)
+hold on
+plot(tid, b3)
+hold on
+plot(tid, b4)
+hold on
+plot(tid, b5)
+hold on
+plot(tid, b6)
+legend(['1.accelerometerx-akse'; '1.accelerometery-akse'; '1.accelerometerz-akse'; '2.acclereromterx-akse'; '2.accelerometery-akse'; '2.accelerometerz-akse'], 'Location', 'southwest'); 
+
 %% Fourier transformation
 L  = samplelength*frekvens;
 f  = frekvens*(0:(L/2))/L;
