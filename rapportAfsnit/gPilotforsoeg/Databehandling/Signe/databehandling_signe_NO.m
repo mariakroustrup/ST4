@@ -10,18 +10,40 @@ a1    = Nedogop1.data(7,:);
 a1    = a1(1:length(tid));
 a1    = a1*1/gain;
 
+acc1_x   = Nedogop1.data(1,:);
+acc1_y   = Nedogop1.data(2,:);
+acc1_z   = Nedogop1.data(3,:);
+acc2_x   = Nedogop1.data(4,:);
+acc2_y   = Nedogop1.data(5,:);
+acc2_z   = Nedogop1.data(6,:);
+
 % Måling 2
 Nedogop2 = load('Nedogop2.mat');
 a2    = Nedogop2.data(7,:);
 a2    = a2(1:length(tid));
 a2    = a2*1/gain;
+
+acc1_x   = Nedogop2.data(1,:);
+acc1_y   = Nedogop2.data(2,:);
+acc1_z   = Nedogop2.data(3,:);
+acc2_x   = Nedogop2.data(4,:);
+acc2_y   = Nedogop2.data(5,:);
+acc2_z   = Nedogop2.data(6,:);
+
 % Måling 3
 Nedogop3 = load('Nedogop3.mat');
 a3    = Nedogop3.data(7,:);
 a3    = a3(1:length(tid));
 a3    = a3*1/gain;
 
-%% Fourier transformation
+acc1_x   = Nedogop3.data(1,:);
+acc1_y   = Nedogop3.data(2,:);
+acc1_z   = Nedogop3.data(3,:);
+acc2_x   = Nedogop3.data(4,:);
+acc2_y   = Nedogop3.data(5,:);
+acc2_z   = Nedogop3.data(6,:);
+
+%% EMG FFT
 L  = samplelength*frekvens;
 f  = frekvens*(0:(L/2))/L;
 
@@ -43,7 +65,9 @@ m3P2 = abs(m3Y/L);
 m3P1 = m3P2(1:L/2+1);
 m3P1(2:end-1) = 2*m3P1(2:end-1);
 
-%Plot
+%% Accelerometer FFT
+
+%% Plot
 figure
 % Måling 1
 subplot(2,3,1)
@@ -135,3 +159,4 @@ xlabel('Tid (s)')
 ylabel('Amplitude (V)')
 title('Filtreret EMG-signal') 
 %}
+%%
