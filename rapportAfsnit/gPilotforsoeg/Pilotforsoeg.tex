@@ -3,7 +3,7 @@
 I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles. 
 
 \subsection{Formål}
-Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret ud fra pilotforsøgets resultater. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde. Parametrene vil forsøges besvaret ud fra målinger ved udførelse af en squat-øvelse.
+Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret ud fra pilotforsøgets resultater. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde, da der ses variation i liiteraturen. Parametrene vil forsøges besvaret ud fra målinger ved udførelse af en squat-øvelse.
 Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af dette opstilles følgende formål:  
 
 \subsubsection{EMG-måling}
@@ -25,7 +25,7 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 \subsection{Materialer} 
 \begin{itemize}
 \item EMG-forstærker, Muscle Sensor V3
-\item Elektroder \fxnote{Patch??}
+\item Elektroder
 \item Desinfektionsservietter
 \item Skraber
 \item To accelerometre ADXL335Z
@@ -39,15 +39,14 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 \item USB-isolater USI-01
 \end{itemize}
 
-\subsection{Metode}
+\subsection{Forsøgsopstilling}
 %Til forsøget benyttes to EMG-forstærkere. Dette giver to sæt elektroder til differensmåling af henholdsvis rectus femoris og biceps femoris. Hvert sæt elektroder består af én positiv-, negativ- samt én referenceelektrode. 
 %For at identificere elektrodeplacering på musklerne tages der udgangspunkt i Seniam's anvisning for elektrodeplacering \citep{seniam2016}. 
 %Elektoderne placeres midt for linjen mellem ischial tuberosity og den laterale epifyse af tibia ved måling over biceps femoris. Ved måling af rectus femoris placeres elektroderne midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}. 
 
-Til forsøget benyttes en EMG-forstærker, der måler en differensmåling over rectus femoris. Hertil anvendes én positiv-, negativ- samt én referenceelektrode. 
+Til forsøget benyttes en EMG-forstærker, der måler en differensmåling over rectus femoris. Hertil anvendes én positiv-, negativ- samt én referenceelektrode. Forinden påsættelse af elektroder, prepereres huden for således at fjerne hår samt døde hudceller.
 For at identificere elektrodeplacering på musklen tages der udgangspunkt i SENIAM's anvisning for elektrodeplacering \citep{seniam2016}. 
 Elektoderne placeres midt for linjen mellem anterior spina iliaca superior og den superior del af patella \citep{seniam2016}. Placeringen af elektroderne illustreres af \autoref{fig:laarmuskler}.
-
 
 \begin{figure}[H]
 \centering
@@ -71,7 +70,7 @@ Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerom
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/accelerometervinkel.png}
-\caption{Placering af accelerometrene på låret samt underbenet. Disse placeringer er markeret med grå. \fxnote{Tvivl om billedet. Stiplede linje?? Hmm skal vi have alle akserne på? Skal vi fjerne den? Vi bruger vel alle tre akser nu???} }
+\caption{Placering af accelerometrene på låret samt underbenet. Disse placeringer er markeret med rød.}
 \label{fig:accelerometervinkel}
 \end{figure}
 
@@ -79,6 +78,7 @@ Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger
 En squat-øvelse defineres, således den kan gengives på tværs af forsøgspersonerne.\vspace{3mm}
 \begin{enumerate}
 \item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let til siderne
+\item Armene placeres over kors, som vist på \autoref{fig:squat}
 \item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på 90$^{\circ}$ af knæet er opnået
 	\begin{itemize}
 	\item Ryggen holdes ret under squat-øvelsen 
@@ -86,19 +86,12 @@ En squat-øvelse defineres, således den kan gengives på tværs af forsøgspers
 	\end{itemize}
 \item Kroppen returneres til udgangspunksposition
 \end{enumerate} \vspace{3mm}
-En illustration af squat-øvelsen ses af \autoref{fig:squat}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/squat.png}
-\caption{Squat-øvelse \citep{squat2015}.}
-\label{fig:squat}
-\end{figure}
+En illustration af squat-øvelsen ses af \autoref{fig:squat}.
 
 En nedadgående squat-øvelse defineres som punkt $1-2$ i overstående, hertil forbliver forsøgspersonen i en siddende squat indtil den givene måling er gennemført.
 
 For at præcisere øvelsen således alle forsøgspersoner så vidt muligt rammer den samme vinkel på 90$^{\circ}$ af knæet ved gentagende squat-øvelser, måles hver enkel forsøgsperson forinden forsøget udføres. Målingen foregår ved at placere forsøgspersonen på et givent sted med siden til en væg, hvorved en squat-øvelse til 90$^{\circ}$ udføres. De 90$^{\circ}$ måles med en vinkelmåler, hvortil der påsættes tape på væggen, som udgør underbenet samt lårets position.
-Ved udførelsen af forsøget irettesætter forsøgspersonen, med hjælp fra de øvrige deltagere, sig efter det påsatte tape på væggen, for således at genskabe squat-øvelsen med mindst mulig afvigelse.
+Ved udførelsen af forsøget irettesætter forsøgspersonen sig efter det påsatte tape på væggen, for således at genskabe squat-øvelsen med mindst mulig afvigelse. Under dette kontrollerer øvrige deltager forsøgspersonens position samt squat-bevægelse.
 
 Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
 %Noget angående signal to noise ratio 
@@ -106,8 +99,8 @@ Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signa
 %For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet.
 
 
-\subsection{Forsøgsopstilling}
-Forsøgsopstillingen opstilles, hvoraf EMG-forstærker samt accelerometrene anvendes. 
+\subsection{Oversigt af forsøgsopstilling}
+Forsøgsopstillingen ses nedenfor i punktform, for således at give bedre overblik herover. 
 
 \begin{itemize}
 \item Identificering af musklen rectus femoris %og biceps femoris 
