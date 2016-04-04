@@ -27,22 +27,22 @@ a3    = a3*1/gain;
 %Måling 1:
 b1 = Nedogop1.data(1,:);
 b1    = b1(1:length(tid));
-%b1    = b1*1/gain;
+b1    = b1-1.6715;
 b2 = Nedogop1.data(2,:);
 b2    = b2(1:length(tid));
-%b2    = b2*1/gain;
+b2    = b2-1.6646;
 b3 = Nedogop1.data(3,:);
 b3    = b3(1:length(tid));
-%b3    = b3*1/gain;
+b3    = b2-1.66805;
 b4 = Nedogop1.data(4,:);
 b4    = b4(1:length(tid));
-%b4    = b4*1/gain;
+b4    = b4-1.6768;
 b5 = Nedogop1.data(5,:);
 b5    = b5(1:length(tid));
-%b5    = b5*1/gain;
+b5    = b5-1.6637;
 b6 = Nedogop1.data(6,:);
 b6    = b6(1:length(tid));
-%b6    = b6*1/gain;
+b6    = b6-1.67025;
 
 % Måling 2:
 c1 = Nedogop2.data(1,:);
@@ -84,15 +84,16 @@ d6 = Nedogop3.data(6,:);
 d6    = d6(1:length(tid));
 d6    = d6*1/gain;
 %% plotter grafer af EMG og ACC 
+
 figure
 subplot(3,1,1)
-plot(tid, a1)
-axis([0 10 -1 2])
+plot(tid,a1)
+axis([0 10 -0.4 0.3])
 title('Gennemsnitlig volt målt ved plan op')
 xlabel('Tid i sekunder')
 ylabel('Spænding målt i volt')
 hold on
-plot(tid, b1)
+plot(tid,b1)
 hold on
 plot(tid, b2)
 hold on
@@ -104,6 +105,15 @@ plot(tid, b5)
 hold on
 plot(tid, b6)
 legend(['1.accelerometerx-akse'; '1.accelerometery-akse'; '1.accelerometerz-akse'; '2.acclereromterx-akse'; '2.accelerometery-akse'; '2.accelerometerz-akse'], 'Location', 'southwest'); 
+
+subplot(3,1,2)
+plot(tid,a1)
+axis([0 10 -0.00001 0.0006])
+title('Gennemsnitlig volt målt ved plan op')
+xlabel('Tid i sekunder')
+ylabel('Spænding målt i volt')
+legend(['EMG'])
+
 
 %% Fourier transformation
 L  = samplelength*frekvens;
@@ -183,7 +193,6 @@ m3Vmax = max(a3)
 m3Vmin = min(a3)
 
 %rms = rms(a(1:1000)) 
-
 
 %% Filtrering
 
