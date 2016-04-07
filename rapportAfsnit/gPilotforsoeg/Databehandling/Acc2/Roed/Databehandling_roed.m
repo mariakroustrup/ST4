@@ -157,5 +157,5 @@ scatter(grader, roedX, 'MarkerEdgeColor','b')
 scatter(grader, roedY1, 'MarkerEdgeColor','r')
 scatter(grader, roedZ, 'MarkerEdgeColor','y')
 legend('x-aksen', 'y-aksen', 'z-aksen', 'Location', 'west');
-set(gca,'fontsize',20)
+set(gca,'fontsize',20);
 
