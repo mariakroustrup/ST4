@@ -98,6 +98,7 @@ roedY180 = dataR180.data(2,:);
 roedY180 = mean(roedY180(1:length(tid)));
 
 roedY=[roedY0 roedY20 roedY40 roedY60 roedY80 roedY90 roedY100 roedY120 roedY140 roedY160 roedY180]
+roedY1=flip(roedY);
 
 %% Data for 'x' i x-akse målinger
 dataR0 = load('x_0_grader');
@@ -146,4 +147,15 @@ roedX180 = mean(roedX180(1:length(tid)));
 
 roedX=[roedX0 roedX20 roedX40 roedX60 roedX80 roedX90 roedX100 roedX120 roedX140 roedX160 roedX180]
 
+%% Grafer og linear reggresion! 
+hold on 
+title({'Accelerometer måling'})
+xlabel('Grader'); 
+ylabel('Spænding (v)')
+grader= [0 20 40 60 80 90 100 120 140 160 180];
+scatter(grader, roedX, 'MarkerEdgeColor','b')
+scatter(grader, roedY1, 'MarkerEdgeColor','r')
+scatter(grader, roedZ, 'MarkerEdgeColor','y')
+legend('x-aksen', 'y-aksen', 'z-aksen', 'Location', 'west');
+set(gca,'fontsize',20)
 
