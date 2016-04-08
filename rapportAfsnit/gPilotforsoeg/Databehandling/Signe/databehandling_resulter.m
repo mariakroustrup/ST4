@@ -21,6 +21,7 @@ title('');
 legend('Baseline', '2. måling')
 set(gca,'fontsize',20);
 
+%%
 
 
 

@@ -225,3 +225,20 @@ title('2. måling, 3 , accelerometer 2')
 legend(['x-akse';'y-akse';'z-akse'],'Location','Southwest')
 
 
+
+m1Y  = fft();
+m1P2 = abs(m1Y/L);
+m1P1 = m1P2(1:L/2+1);
+m1P1(2:end-1) = 2*m1P1(2:end-1);
+
+
+figure
+
+hold on
+plot(fft(Sdata(1,:)))
+plot(fft(Sdata(2,:)))
+plot(fft(Sdata(3,:)))
+title('2. måling, 1, accelerometer 1')
+legend(['x-akse';'y-akse';'z-akse'], 'Location', 'Northwest')
+
+

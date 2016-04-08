@@ -43,13 +43,6 @@ m3P2 = abs(m3Y/L);
 m3P1 = m3P2(1:L/2+1);
 m3P1(2:end-1) = 2*m3P1(2:end-1);
 
-figure
-plot(f,m1P1);
-axis([-10 100 0 0.0008]);
-xlabel('Frekvens (Hz)')
-ylabel('Størrelse')
-title({'Måling 1';'Frekvensanalyse'})
-
 
 %Plot
 figure
@@ -108,6 +101,14 @@ m3Vmin = min(a3)
 
 %rms = rms(a(1:1000)) 
 
+%% Resultater.
+figure
+plot(f,m1P1);
+axis([-10 100 0 0.0008]);
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+title('Frekvensanalyse')
+set(gca,'fontsize',20);
 
 %% Filtrering
 
