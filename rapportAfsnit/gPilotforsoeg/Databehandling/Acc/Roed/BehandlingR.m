@@ -72,29 +72,31 @@ DataPN3 = (PN_3.data (3,:));
 DataPN_3 = (DataPN1(1:L) + DataPN2(1:L) + DataPN3(1:L))/3;
 
 figure
-subplot(3,2,1)
+subplot(3,2,5)
 plot(t, DataPO_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved plan op')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved plan op')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on
 plot(t, DataPO_2(1:L))
 hold on
 plot(t, DataPO_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest'); 
+set(gca,'fontsize',20);
 
-subplot(3,2,2)
+subplot(3,2,6)
 plot(t, DataPN_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved plan ned')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved plan ned')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on
 plot(t, DataPN_2(1:L))
 hold on
 plot(t, DataPN_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+set(gca,'fontsize',20);
 
 DataLO1 = (LO_1.data (1,:));
 DataLO2 = (LO_2.data (1,:));
@@ -129,27 +131,29 @@ DataLN_3 = (DataLN1(1:L) + DataLN2(1:L) + DataLN3(1:L))/3;
 subplot(3,2,3)
 plot(t, DataLO_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved lodret op')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved lodret op')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on
 plot(t, DataLO_2(1:L))
 hold on
 plot(t, DataLO_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+set(gca,'fontsize',20);
 
 
 subplot(3,2,4)
 plot(t, DataLN_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved lodret ned')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved lodret ned')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on 
 plot(t, DataLN_2(1:L))
 hold on
 plot(t, DataLN_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+set(gca,'fontsize',20);
 
 DataVV1 = (VV_1.data (1,:));
 DataVV2 = (VV_2.data (1,:));
@@ -181,29 +185,31 @@ DataVH2 = (VH_2.data (3,:));
 DataVH3 = (VH_3.data (3,:));
 DataVH_3 = (DataVH1(1:L) + DataVH2(1:L) + DataVH3(1:L))/3;
 
-subplot(3,2,5)
+subplot(3,2,1)
 plot(t, DataVV_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved vandret mod venstre')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved vandret mod venstre')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on
 plot(t, DataVV_2(1:L))
 hold on
 plot(t, DataVV_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+set(gca,'fontsize',20);
 
-subplot(3,2,6)
+subplot(3,2,2)
 plot(t, DataVH_1(1:L))
 axis([0 10 1 2])
-title('Gennemsnitlig volt målt ved vandret mod højre')
-xlabel('Tid i sekunder')
-ylabel('Spænding målt i volt')
+title('Gennemsnitlig spænding målt ved vandret mod højre')
+xlabel('Tid (s)')
+ylabel('Spænding (V)')
 hold on 
 plot(t, DataVH_2(1:L))
 hold on
 plot(t, DataVH_3(1:L))
 legend(['x-akse'; 'y-akse'; 'z-akse'],'Location', 'southwest');
+set(gca,'fontsize',20);
 %% Finder mean af de forskellige målinger
 % mean plan opad
 POmean1 = mean(DataPO_1)
@@ -280,54 +286,57 @@ VHUoff1 = VHmean1-VH1afv
 VHUoff2 = VHmean2-VH2afv
 VHUoff3 = VHmean3-VH3afv
 
-%% Finder værdien for enkelt grad:
-EnGradPO1 = PO1afv/90
-EnGradPO2 = PO2afv/90
-EnGradPO3 = PO3afv/90
+%% TING DER IKKE BENYTTES MERE!!
 
-EnGradPN1 = PN1afv/90
-EnGradPN2 = PN2afv/90
-EnGradPN3 = PN3afv/90
+%%Finder værdien for enkelt grad:
+% EnGradPO1 = PO1afv/90
+% EnGradPO2 = PO2afv/90
+% EnGradPO3 = PO3afv/90
+% 
+% EnGradPN1 = PN1afv/90
+% EnGradPN2 = PN2afv/90
+% EnGradPN3 = PN3afv/90
+% 
+% EnGradLO1 = LO1afv/90
+% EnGradLO2 = LO2afv/90
+% EnGradLO3 = LO3afv/90
+% 
+% EnGradLN1 = LN1afv/90
+% EnGradLN2 = LN2afv/90
+% EnGradLN3 = LN3afv/90
+% 
+% EnGradVV1 = VV1afv/90
+% EnGradVV2 = VV2afv/90
+% EnGradVV3 = VV3afv/90
+% 
+% EnGradVH1 = VH1afv/90
+% EnGradVH2 = VH2afv/90
+% EnGradVH3 = VH3afv/90
 
-EnGradLO1 = LO1afv/90
-EnGradLO2 = LO2afv/90
-EnGradLO3 = LO3afv/90
-
-EnGradLN1 = LN1afv/90
-EnGradLN2 = LN2afv/90
-EnGradLN3 = LN3afv/90
-
-EnGradVV1 = VV1afv/90
-EnGradVV2 = VV2afv/90
-EnGradVV3 = VV3afv/90
-
-EnGradVH1 = VH1afv/90
-EnGradVH2 = VH2afv/90
-EnGradVH3 = VH3afv/90
 %% Finder 90 grader
-POGrader1 = (EnGradPO1*90)
-POGrader2 = (EnGradPO2*90)
-POGrader3 = (EnGradPO3*90)
-
-PNGrader1 = (EnGradPN1*90)
-PNGrader2 = (EnGradPN2*90)
-PNGrader3 = (EnGradPN3*90)
-
-LOGrader1 = (EnGradLO1*90)
-LOGrader2 = (EnGradLO2*90)
-LOGrader3 = (EnGradLO3*90)
-
-LNGrader1 = (EnGradLN1*90)
-LNGrader2 = (EnGradLN2*90)
-LNGrader3 = (EnGradLN3*90)
-
-VVGrader1 = (EnGradVV1*90)
-VVGrader2 = (EnGradVV2*90)
-VVGrader3 = (EnGradVV3*90)
-
-VHGrader1 = (EnGradVH1*90)
-VHGrader2 = (EnGradVH2*90)
-VHGrader3 = (EnGradVH3*90)
+% POGrader1 = (EnGradPO1*90)
+% POGrader2 = (EnGradPO2*90)
+% POGrader3 = (EnGradPO3*90)
+% 
+% PNGrader1 = (EnGradPN1*90)
+% PNGrader2 = (EnGradPN2*90)
+% PNGrader3 = (EnGradPN3*90)
+% 
+% LOGrader1 = (EnGradLO1*90)
+% LOGrader2 = (EnGradLO2*90)
+% LOGrader3 = (EnGradLO3*90)
+% 
+% LNGrader1 = (EnGradLN1*90)
+% LNGrader2 = (EnGradLN2*90)
+% LNGrader3 = (EnGradLN3*90)
+% 
+% VVGrader1 = (EnGradVV1*90)
+% VVGrader2 = (EnGradVV2*90)
+% VVGrader3 = (EnGradVV3*90)
+% 
+% VHGrader1 = (EnGradVH1*90)
+% VHGrader2 = (EnGradVH2*90)
+% VHGrader3 = (EnGradVH3*90)
 
 %% FFT af måling 1 plan opad 
 % fftPO_1 = fft(PO_1.data(1:L));

@@ -13,7 +13,12 @@ Ud fra dette sæt er der udvalgt de nødvendige komponenter, så der kan fortage
 I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard og et CY8CKIT-142 PSoC 4 BLE modul. Baseboardet er platformen, hvorpå sensorerne vil blive tilkoblet, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et $3~V$ knapcelle batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}. Der er mulighed for udvidelse af baseboardet, ved anvendelse af moduler fra Cypress, samt Arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
 \\
 
-For at kunne kommunikere trådløst benyttes CY8CKIT-142 PSoC 4 BLE, der et Cypress BLE modul. Kommunikationstypen er Bluetooth Low Energy (BLE) \citep{cypressguide2014}, der er en power-effektiv (dansk ord for power???) form for Bluetooth-teknologi. Bluetooth er en standard for kortdistance trådløs teknologi, som muliggør kommunikation mellem flere enheder gennem radiobølger. Dette betyder, at systemet benytter mindre batteri på Bluetooth-kommunikationen, end almindelig Bluetooth gør. Af denne grund kan benyttes små batterier, uden det bliver nødvendigt at skifte dem ofte \citep{gupta2013}. 
+
+\subsection{Analog til digital konvertering}
+
+
+\subsection{Trådløs kommunikation}
+For at kunne kommunikere trådløst benyttes CY8CKIT-142 PSoC 4 BLE, der et Cypress BLE modul. Kommunikationstypen er Bluetooth Low Energy (BLE) \citep{cypressguide2014}, der er en power-effektiv (dansk ord for power???) form for Bluetooth-teknologi. Bluetooth er en standard for kortdistance trådløs teknologi, som muliggør kommunikation mellem flere enheder gennem radiobølger. Dette betyder, at systemet benytter mindre batteri på Bluetooth-kommunikationen, end almindelig Bluetooth gør. Af denne grund kan der benyttes små batterier, uden det bliver nødvendigt at skifte dem ofte \citep{gupta2013}. 
 CY8CKIT-142 PSoC 4 BLE har en operationsfrekvens på $2,4~GHz$ \citep{cypressguide2014}. 
 \\
 
@@ -21,6 +26,8 @@ Ud over de to mikrocontrollere til det endelige system, benyttes en BLE-dongle, 
 \\
 
 Til at programmere og debugge mikrokontrollerne, benyttes det tilhørende Cypress software, PSoC Creator 3.3. 
+
+\fxnote{C programmering - programmering}
 
 %Systemet vil består af et baseboard, hvortil signalet fra de forskellige sensorer vil blive tilsluttet. De anvendte sensorer i dette system kan læses i afsnit ??. Systemet har yderligere mulighed for at blive udvidet med arduinu shields og 6-pins Digilent Pmod udvidelses kort \citep{cypressguide2014}. Baseboardet kan forsynes via et 3 V kanpcelle batteri, eller via USB forbindelse. 
 
