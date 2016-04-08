@@ -178,9 +178,23 @@ groenX180 = mean(groenX180);
 groenX = [groenX0 groenX20 groenX40 groenX60 groenX80 groenX90 groenX100 groenX120 groenX140 groenX160 groenX180];
 
 %% Grafer og linear reggresion! 
+figure('units','normalized','outerposition',[0 0 1 1])
 hold on 
-xlabel('Tid (s)');
+xlabel('Grader');
 ylabel('Spænding (v)')
-title({'Forsøgsperson 1:' ; 'Baseline måling, accelerometer på femur'})
-legend(['x-akse';'y-akse';'z-akse'],'Location','Northwest')
+
+% Vender x-akse data 
+% Start 
+    groenX = flip(groenX)
+% Slut 
+
+%scatter(grader,groenX)
+scatter(grader,groenX,'MarkerEdgeColor','b')
+scatter(grader,groenY,'MarkerEdgeColor','r')
+scatter(grader,groenZ,'MarkerEdgeColor','y')
+title({'Accelerometer måling:' ; 'ved forskellige grader'})
+legend(['x-akse';'y-akse';'z-akse'],'Location','west')
 set(gca,'fontsize',20)
+
+
+
