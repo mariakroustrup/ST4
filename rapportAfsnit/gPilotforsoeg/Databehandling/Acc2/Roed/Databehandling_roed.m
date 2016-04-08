@@ -150,8 +150,8 @@ roedX=[roedX0 roedX20 roedX40 roedX60 roedX80 roedX90 roedX100 roedX120 roedX140
 %% Grafer og linear reggresion! 
 hold on 
 title({'Accelerometer måling'})
-xlabel('Grader'); 
-ylabel('Spænding (v)')
+xlabel('Vinkel [{\circ}]'); 
+ylabel('Spænding [V]')
 grader= [0 20 40 60 80 90 100 120 140 160 180];
 scatter(grader, roedX, 'MarkerEdgeColor','b')
 scatter(grader, roedY1, 'MarkerEdgeColor','r')
