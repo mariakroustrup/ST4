@@ -391,4 +391,3 @@ xlabel('Tid (s)')
 ylabel('Amplitude (V)')
 title('Filtreret EMG-signal') 
 %}
-%%

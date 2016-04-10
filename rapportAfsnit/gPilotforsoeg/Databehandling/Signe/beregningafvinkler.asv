@@ -69,22 +69,21 @@ sensitivitet2 = paavirkning2-offsetg2
 %% Beregning af grader  - OBS  DETTE KAN DER MÅSKE FINDES EN SMARTERE MÅDE AT GØRE DET PÅ!!!!
 % Accelerometer 1:  
 
-acc1=zeros([1 90]);
+% 
+% n=0;
+% for i=1:size(Fs);
+%     n=n+1
+%     [idx, n]=offsetg1+(sensitivitet1* (1*i))
+% end
+% 
+
+xx=zeros([1 90]);
 for ii =1:90
-    acc1(ii)=offsetg1+(sensitivitet1*(1*ii))
+    xx(ii)=offsetg1+(sensitivitet1*(1*ii))
 end
 
-acc2=zeros([1 90]);
-for ii =1:90
-    acc2(ii)=offsetg2+(sensitivitet2*(1*ii))
-end
 
-subplot(2,1,1)
-plot(acc1)
-
-subplot(2,1,2)
-plot(acc2)
-   
+    
 % grad1_1 = offsetg1 + (sensitivitet1 * 1)
 % grad1_2 = offsetg1 + (sensitivitet1 * 2)
 % 

@@ -101,14 +101,6 @@ m3Vmin = min(a3)
 
 %rms = rms(a(1:1000)) 
 
-%% Resultater.
-figure
-plot(f,m1P1);
-axis([-10 100 0 0.0008]);
-xlabel('Frekvens (Hz)')
-ylabel('Størrelse')
-title('Frekvensanalyse')
-set(gca,'fontsize',20);
 
 %% Filtrering
 
