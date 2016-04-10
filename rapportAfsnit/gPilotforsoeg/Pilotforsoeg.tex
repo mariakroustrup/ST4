@@ -1,5 +1,4 @@
-\section{Pilotforsøg} 
-\label{sec:pilotforsoeg}
+\section{Pilotforsøg} \label{sec:pilotforsoeg}
 I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles. 
 
 \subsection{Formål}
@@ -162,23 +161,29 @@ Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres
 %\end{itemize}
 
 \section{Databehandling}
+I det præsenterede data tages der udgangspunkt i forsøgsperson 1.
 
 \textbf{EMG}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/baselineogemg.png}
-	\caption{EMG-målinger af baseline samt 2. måling for forsøgsperson 1.}
+	\caption{EMG-målinger af baseline og 2. måling.}
 	\label{fig:baselineogemg}
 \end{figure}
-Ud fra illustration set af \autoref{fig:baselineogemg}, ses en stigning muskelaktivitet under udførslen af 2. måling i forhold til baseline. Idet forsøgspersonen har været i nedadgående bevægelse, ses dette som stigningen i EMG-signalet. Ligeledes ses der ved opadgående bevægelse et fald i EMG-målingen.       
+Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses at begge målinger har et negativt offset mellem $0,5-0,6~V$. Ved 2. måling ses der en stigning ved $1,5~s$, og relateres til forsøgspersonens nedadgående bevægelse til $90^{\circ}$ flektion af knæet. Yderlere ses faldet i amplitude ved ca. $6~s$ som opdagående bevægelse til udgangspositionen. 
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/???.png}
-	\caption{fft}
-	\label{fig:navn}
+	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/emgfft.png}
+	\caption{Frekvensanalyse af EMG-måling for baseline og 2. måling.}
+	\label{fig:emgfft}
 \end{figure}
+Til at identificere støjsignaler, er der fortaget en frekvensanalyse af baseline målingerne. Dette ses af \autoref{fig:emgfft}, hvor der yderligere ses en frekvensanalyse af 2. måling for at identificere frekvensområdet for bevægelsen. 
+Der ses igen støjsignaler, udover en dc-komponent ved de $0~Hz$. Det er ikke muligt at se hvorvidt der er $50~Hz$ støj af signalet, da der er samplet med $100~Hz$, hvor til nyquist-frekvensen er $50~Hz$. Dertil viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
+Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til at EMG-forstærkeren anvendt i pilotforsøget, besidder et aktivt lavpasfilter til udgaltning, der har en cut frekvens på $1,94~Hz$ \fxmote{Skal der refereres til afsnittet om sensorer?? Synes at da at EMG-forstærkerens knækfrekvens skal præsenteres sammen med EMG-forstærkeren efter systembeskrivelsen! OBS!! knæk-frekvensen er også beskrevet i "opsummeringen" til sidst i pilotforsøget!!!} 
+
 
 
 \textbf{Accelerometer}
