@@ -171,7 +171,7 @@ I det præsenterede data tages der udgangspunkt i forsøgsperson 1.
 	\caption{EMG-målinger af baseline og 2. måling.}
 	\label{fig:baselineogemg}
 \end{figure}
-Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses at begge målinger har et negativt offset mellem $0,5-0,6~V$. Ved 2. måling ses der en stigning ved $1,5~s$, og relateres til forsøgspersonens nedadgående bevægelse til $90^{\circ}$ flektion af knæet. Yderlere ses faldet i amplitude ved ca. $6~s$ som opdagående bevægelse til udgangspositionen. 
+Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved 2. måling ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
 
 
 \begin{figure}[H]
@@ -180,9 +180,8 @@ Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsper
 	\caption{Frekvensanalyse af EMG-måling for baseline og 2. måling.}
 	\label{fig:emgfft}
 \end{figure}
-Til at identificere støjsignaler, er der fortaget en frekvensanalyse af baseline målingerne. Dette ses af \autoref{fig:emgfft}, hvor der yderligere ses en frekvensanalyse af 2. måling for at identificere frekvensområdet for bevægelsen. 
-Der ses igen støjsignaler, udover en dc-komponent ved de $0~Hz$. Det er ikke muligt at se hvorvidt der er $50~Hz$ støj af signalet, da der er samplet med $100~Hz$, hvor til nyquist-frekvensen er $50~Hz$. Dertil viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
-Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til at EMG-forstærkeren anvendt i pilotforsøget, besidder et aktivt lavpasfilter til udgaltning, der har en cut frekvens på $1,94~Hz$ \fxmote{Skal der refereres til afsnittet om sensorer?? Synes at da at EMG-forstærkerens knækfrekvens skal præsenteres sammen med EMG-forstærkeren efter systembeskrivelsen! OBS!! knæk-frekvensen er også beskrevet i "opsummeringen" til sidst i pilotforsøget!!!} 
+Der er foretaget en frekvensanalyse af baseline målingerne for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere ses en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. 
+Der ses ingen støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. Derudover er det ikke muligt at se, hvorvidt der er $50~Hz$ støj af signalet, da der er samplet med $100~Hz$, hvor nyquist-frekvensen er $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til, at EMG-forstærkeren anvendt i pilotforsøget, besidder et aktivt lavpasfilter til udgaltning, der har en cut frekvens på $1,94~Hz$ \fxmote{Skal der refereres til afsnittet om sensorer?? Synes at da at EMG-forstærkerens knækfrekvens skal præsenteres sammen med EMG-forstærkeren efter systembeskrivelsen! OBS!! knæk-frekvensen er også beskrevet i "opsummeringen" til sidst i pilotforsøget!!!} 
 
 
 
@@ -196,7 +195,7 @@ Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende r
 \end{figure}
 
 
-Det ønskes at se hvorledes målte spændinger fra acceleromeret, repræsenterer vinklen overknæet. Dette formås ud fra følgende former, hvor spændingensværiderne udregnes til et udtryk for vinkelen: 
+Det ønskes at se, hvorledes målte spændinger fra acceleromeret, repræsenterer vinklen over knæet. Dette formås ud fra følgende formler, hvor spændingensværdierne udregnes til et udtryk for vinklen: 
 
 
 Formler for omregning.
@@ -212,7 +211,7 @@ Resultaterne fra omregningen visualiseres og kan ses af \autoref{accvinkel}.
 
 
 \textbf{Relation mellem EMG og accelerometeret}
-For at bedre at se relationen mellem udslag i EMG samt for accelerometeret, vælges der at plotte begge målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
+For at kunne se relationen mellem udslag i EMG samt for accelerometere bedre, plottes begge disse målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/???.png}
