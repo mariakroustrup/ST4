@@ -191,30 +191,39 @@ Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende r
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/???.png}
-	\caption{fft}
+	\caption{Frekvensanalyse af baseline målinger for accelerometer}
 	\label{fig:navn}
 \end{figure}
 
 
+Det ønskes at se hvorledes målte spændinger fra acceleromeret, repræsenterer vinklen overknæet. Dette formås ud fra følgende former, hvor spændingensværiderne udregnes til et udtryk for vinkelen: 
+
+
+Formler for omregning.
+
+
+Resultaterne fra omregningen visualiseres og kan ses af \autoref{accvinkel}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/???.png}
 	\caption{Vinkel og acc}
-	\label{fig:navn}
+	\label{fig:accvinkel}
 \end{figure}
 
 
 \textbf{Relation mellem EMG og accelerometeret}
-
+For at bedre at se relationen mellem udslag i EMG samt for accelerometeret, vælges der at plotte begge målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/???.png}
 	\caption{Vinkel og acc}
-	\label{fig:navn}
+	\label{fig:emgogacc}
 \end{figure}
 
+
 \section{Opsummering af pilotforsøg}
-Af resultaterne fra databehandlingen ses det, hvilke parametre, der er nødvendige for optimeret drift af det endelige system. Ud fra frekvensanalysen af EMG-signalerne, ses ingen fremkomst af $50~Hz$ støj.\fxnote{Jeg ved ikke om vi kan antage dette, da frekvensanalysen reelt ikke viser 50 Hz.} Dette antages at skylde envalope kredsen i EMG-forstærkeren. Dette fungerer som et lavpasfilter, hvortil størrelsen af komponenterne i kredsen giver en knækfrekvens på ca. $2~Hz$. Denne udregning fremgår ligeledes af \autoref{eq:lavcutfre}. 
+Af resultaterne fra databehandlingen ses det, hvilke parametre, der er nødvendige for optimeret drift af det endelige system. Ud fra frekvensanalysen af EMG-signalerne, ses ingen fremkomst af $50~Hz$ støj.\fxnote{Jeg ved ikke om vi kan antage dette, da frekvensanalysen reelt ikke viser 50 Hz.} Dette antages at skylde envalope kredsen i EMG-forstærkeren. Dette fungerer som et lavpasfilter, hvortil størrelsen af komponenterne i kredsen giver en knækfrekvens på ca. $2~Hz$. Denne udregning fremgår ligeledes af \autoref{eq:lavcutfre}.
+ 
 \begin{equation}\label{eq:lavcutfre}
 f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi*1*10^{-6}F*80,6*10^3\Omega} = 1,94~Hz
 \end{equation} 
