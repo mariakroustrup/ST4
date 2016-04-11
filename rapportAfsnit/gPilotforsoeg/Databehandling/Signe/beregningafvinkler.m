@@ -70,14 +70,25 @@ sensitivitet2 = paavirkning2-offsetg2
 %% Beregning af grader  - OBS  DETTE KAN DER MÅSKE FINDES EN SMARTERE MÅDE AT GØRE DET PÅ!!!!
 % Accelerometer 1:  
 
+
 acc1=zeros([1 90]);
 for ii =1:90
-    acc1(ii)=offsetg1+(sensitivitet1*(1*ii))
+    acc1(ii)=offsetg1+(sensitivitet1*(1*ii));
 end
 
 acc2=zeros([1 90]);
 for ii =1:90
-    acc2(ii)=offsetg2+(sensitivitet2*(1*ii))
+    acc2(ii)=offsetg2+(sensitivitet2*(1*ii));
+end
+
+acc3=zeros([1 575]);
+for ii =1:575
+    acc3(ii)=offsetg1+(sensitivitet1*(1*ii));
+end
+
+acc4=zeros([1 575]);
+for ii =1:575
+    acc4(ii)=offsetg1+(sensitivitet1*(1*ii));
 end
 
 acc = offsetg2+(sensitivitet2*90) 
@@ -85,13 +96,13 @@ figure
 subplot(2,1,1);
 plot(acc1);
 title('Accelerometer 1')
-xlabel('Grader [\circ]')
+xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 
 subplot(2,1,2);
 plot(acc2);
 title('Accelerometer 2')
-xlabel('Grader [\circ]')
+xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 % grad1_1 = offsetg1 + (sensitivitet1 * 1)
 % grad1_2 = offsetg1 + (sensitivitet1 * 2)

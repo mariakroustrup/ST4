@@ -50,18 +50,32 @@ title('2. måling')
 set(gca,'fontsize',20);
 
 %% Plot accelerometer og EMG
-nedogop_acc1=Nedogop.data(1:3,:);
-nedogop_acc2=Nedogop.data(4:6,:);
+load('acc3')
+load('acc4')
 
-% 
+acc2f=flip(acc4);
 
-% figure
-% hold on 
-% plot(t, nedogop_emg([1:1150]))
-% xxs=plot(t, nedogop_acc1(1,[1:1150]), t, nedogop_acc1(2,[1:1150]), t, nedogop_acc1(3,[1:1150]))
-% % plot(t,nedogop_acc2(1,[1:1150]), t,nedogop_acc2(2,[1:1150]), t,nedogop_acc2(3,[1:1150]))
+acc= [acc3 acc2f] 
 
 figure % new figure
 hold on
-[hAx,hLine1,hLine2] = plotyy(t, nedogop_emg([1:1150]), t, nedogop_acc1(2,[1:1150]));
+[hAx,hLine1,hLine2] = plotyy(t(1:1150), nedogop_emg(1:1150), t(1:1150), acc(1:1150))
+set(hAx(1),'fontsize',20);
+set(hAx(2),'fontsize',20);
+
+set(hAx(1), 'XLim',[0 11.5])
+set(hAx(1),'XTick',[0:1:11])
+set(get(hAx(1),'Xlabel'),'string','Tid [s]')
+
+set(hAx(2), 'YLim',[-60 5])
+set(hAx(2),'YTick',[-60:5:5])
+set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]')
+
+set(hAx(1), 'YLim',[-0.6 0.4])
+set(hAx(1),'YTick',[-0.6:0.1:0.4])
+set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
+
+
+
+
 
