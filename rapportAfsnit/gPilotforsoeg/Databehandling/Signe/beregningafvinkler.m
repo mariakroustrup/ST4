@@ -29,6 +29,7 @@ Nedogop3afv = ((Nedogopmean3-1.7)/1.7)
 Offset1 = Nedogopmean1-Nedogop1afv
 Offset2 = Nedogopmean2-Nedogop2afv
 Offset3 = Nedogopmean3-Nedogop3afv
+
 % beregner gemmemsnit af offset - Da den skiller sig mest ud i 2, er dette
 % sensitiviteten
 offsetg1 = ((Offset1 + Offset3)/2)
@@ -43,9 +44,9 @@ Nedogopmean4 = mean(Nedogop4)
 Nedogopmean5 = mean(Nedogop5)
 Nedogopmean6 = mean(Nedogop6)
 
-Nedogop4afv = ((Nedogopmean4-(3.4/2))/(3.4/2))
-Nedogop5afv = ((Nedogopmean5-(3.4/2))/(3.4/2))
-Nedogop6afv = ((Nedogopmean6-(3.4/2)/(3.4/2)))
+Nedogop4afv = ((Nedogopmean4-3.4/2))/(3.4/2)
+Nedogop5afv = ((Nedogopmean5-3.4/2))/(3.4/2)
+Nedogop6afv = ((Nedogopmean6-3.4/2)/(3.4/2))
 
 Offset4 = Nedogopmean4-Nedogop4afv
 Offset5 = Nedogopmean5-Nedogop5afv
@@ -79,12 +80,19 @@ for ii =1:90
     acc2(ii)=offsetg2+(sensitivitet2*(1*ii))
 end
 
-subplot(2,1,1)
-plot(acc1)
+acc = offsetg2+(sensitivitet2*90) 
+figure
+subplot(2,1,1);
+plot(acc1);
+title('Accelerometer 1')
+xlabel('Grader [\circ]')
+ylabel('Spænding [V]')
 
-subplot(2,1,2)
-plot(acc2)
-   
+subplot(2,1,2);
+plot(acc2);
+title('Accelerometer 2')
+xlabel('Grader [\circ]')
+ylabel('Spænding [V]')
 % grad1_1 = offsetg1 + (sensitivitet1 * 1)
 % grad1_2 = offsetg1 + (sensitivitet1 * 2)
 % 

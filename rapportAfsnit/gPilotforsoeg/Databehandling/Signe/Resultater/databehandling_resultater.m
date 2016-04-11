@@ -1,7 +1,7 @@
 %%  Resultater
 % Plot af EMG baseline og EMG nedogop (Signe)
 Baseline_emg=load('Baseline1')
-Nedogop_emg=load('Nedogop1')
+Nedogop=load('Nedogop1')
 
 Fs=100;
 N=1150
@@ -9,7 +9,7 @@ t=(0:N-1)/Fs;
 
 %EMG målingerne vælges
 baseline=Baseline_emg.data(7,:);
-nedogop_emg=Nedogop_emg.data(7,:);
+nedogop_emg=Nedogop.data(7,:);
 
 figure
 hold on
@@ -50,7 +50,18 @@ title('2. måling')
 set(gca,'fontsize',20);
 
 %% Plot accelerometer og EMG
-figure
-hold on 
-plot(t, nedogop_emg([[1:1150]]))
+nedogop_acc1=Nedogop.data(1:3,:);
+nedogop_acc2=Nedogop.data(4:6,:);
+
+% 
+
+% figure
+% hold on 
+% plot(t, nedogop_emg([1:1150]))
+% xxs=plot(t, nedogop_acc1(1,[1:1150]), t, nedogop_acc1(2,[1:1150]), t, nedogop_acc1(3,[1:1150]))
+% % plot(t,nedogop_acc2(1,[1:1150]), t,nedogop_acc2(2,[1:1150]), t,nedogop_acc2(3,[1:1150]))
+
+figure % new figure
+hold on
+[hAx,hLine1,hLine2] = plotyy(t, nedogop_emg([1:1150]), t, nedogop_acc1(2,[1:1150]));
 
