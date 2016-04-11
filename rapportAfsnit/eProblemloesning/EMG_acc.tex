@@ -1,9 +1,15 @@
 \section{Sensorer} \label{sec:sensorer}
-I det tiltænkte system benyttes forskellige sensorer, hvorfra systemet skal agere. Herunder benyttes elektroder til opsamling af EMG-signaler, hvilket yderligere vil passere en EMG-forstærker, Muscle Sensor V3. Herudover vil accelerometeret ADXL335Z benyttes til måling af accerlerationskræfter.
+I det tiltænkte system benyttes forskellige sensorer, hvorfra systemet skal agere. Herunder benyttes elektroder til opsamling af EMG-signaler, hvilket yderligere vil passere en EMG-forstærker, Muscle Sensor V3. %Herudover vil accelerometeret ADXL335Z benyttes til måling af accerlerationskræfter.
 
 \subsection{Elektromyografi}
 Elektromyografi (EMG) er en måling af muskelaktivitet gennem elektriske potentialer. 
-EMG-forstærkeren er designet til at kunne anvendes direkte med en mikrocontroller. Signalets output er herved ikke et råt EMG-signal, men et forstærket, ensrettet samt udglattet signal \citep{advancertech2013}. Et illustration af de tre sinus signaler ses af \autoref{fig:sinussignal}.
+EMG-forstærkeren er designet til at kunne anvendes direkte med en mikrocontroller. Signalets output er herved ikke et råt EMG-signal, men et forstærket, ensrettet samt udglattet signal \citep{advancertech2013}. Udglatningen består af et aktivt lavpasfilter, hvor udregningen af knækfrekvensen ses i \autoref{eq:lavcutfre}. 
+
+\begin{equation}\label{eq:lavcutfre}
+f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi*1*10^{-6}F*80,6*10^3\Omega} = 1,94~Hz
+\end{equation}
+
+Et illustration af hvordan EMG-forstærkeren behandler et målt signal ses af \autoref{fig:sinussignal}.
 
 \begin{figure}[H]
 \centering
