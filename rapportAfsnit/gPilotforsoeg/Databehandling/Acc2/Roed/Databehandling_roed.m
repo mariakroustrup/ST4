@@ -50,7 +50,7 @@ dataR180 = load('z_180_grader');
 roedZ180 = dataR180.data(3,:);
 roedZ180 = mean(roedZ180(1:length(tid)));
 
-roedZ=[roedZ0 roedZ20 roedZ40 roedZ60 roedZ80 roedZ90 roedZ100 roedZ120 roedZ140 roedZ160 roedZ180]
+roedZ=[roedZ0 roedZ20 roedZ40 roedZ60 roedZ80 roedZ90 roedZ100 roedZ120 roedZ140 roedZ160 roedZ180];
     
 %% Data for 'y' i y-akse målinger
 dataR0 = load('y_0_grader');
@@ -97,7 +97,7 @@ dataR180 = load('y_180_grader');
 roedY180 = dataR180.data(2,:);
 roedY180 = mean(roedY180(1:length(tid)));
 
-roedY=[roedY0 roedY20 roedY40 roedY60 roedY80 roedY90 roedY100 roedY120 roedY140 roedY160 roedY180]
+roedY=[roedY0 roedY20 roedY40 roedY60 roedY80 roedY90 roedY100 roedY120 roedY140 roedY160 roedY180];
 roedY1=flip(roedY);
 
 %% Data for 'x' i x-akse målinger
@@ -145,17 +145,17 @@ dataR180 = load('x_180_grader');
 roedX180 = dataR180.data(1,:);
 roedX180 = mean(roedX180(1:length(tid)));
 
-roedX=[roedX0 roedX20 roedX40 roedX60 roedX80 roedX90 roedX100 roedX120 roedX140 roedX160 roedX180]
+roedX=[roedX0 roedX20 roedX40 roedX60 roedX80 roedX90 roedX100 roedX120 roedX140 roedX160 roedX180];
 
 %% Grafer og linear reggresion! 
 hold on 
-title({'Accelerometer måling'})
+title({'Accelerometer måling'});
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]')
+ylabel('Spænding [V]');
 grader= [0 20 40 60 80 90 100 120 140 160 180];
-scatter(grader, roedX, 'MarkerEdgeColor','b')
-scatter(grader, roedY1, 'MarkerEdgeColor','r')
-scatter(grader, roedZ, 'MarkerEdgeColor','y')
+scatter(grader, roedX, 'MarkerEdgeColor','b');
+scatter(grader, roedY1, 'MarkerEdgeColor','r');
+scatter(grader, roedZ, 'MarkerEdgeColor','y');
 legend('x-aksen', 'y-aksen', 'z-aksen', 'Location', 'west');
 set(gca,'fontsize',20);
 
