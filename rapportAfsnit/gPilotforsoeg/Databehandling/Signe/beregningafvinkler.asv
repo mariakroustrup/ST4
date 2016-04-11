@@ -76,9 +76,9 @@ for ii =1:1170
     acc1(ii)=Offset11(ii)+(Sensi1(ii)*(1*ii));
 end
 
-grader=zeros([1 90]);
-for ii =1:90
-    grader(ii)=-(Offset11(ii)-Nedogop2(ii))/Sensi1(ii);
+=zeros([1 1170]);
+for ii =1:1170
+    acc1(ii)=Offset11(ii)+(Sensi1(ii)*(1*ii));
 end
 
 
@@ -142,12 +142,6 @@ acc2=zeros([1 1170]);
 for ii =1:1170
     acc2(ii)=Offset22(ii)+(Sensi2(ii)*(1*ii));
 end
-
-% 
-for i= 1:1170 
-    degree(i) = calc_degree(voltage(i));
-end
-plot(
 
 %% Plots!
 figure
