@@ -6,22 +6,23 @@ tid  = [0 : +1/frekvens : samplelength-1/frekvens];
 grader = [0 20 40 60 80 90 100 120 140 160 180];
 
 %% Data for 'z' i z-akse målinger
-dataG0 = load('z_0_grader');
+
+dataG0 = load('z_0_grader.mat');
 groenZ0 = dataG0.data(3,:);
 groenZ0 = groenZ0(1:length(tid));
 groenZ0 = mean(groenZ0);
 
-dataG20 = load('z_20_grader');
+dataG20 = load('z_20_grader.mat');
 groenZ20 = dataG20.data(3,:);
 groenZ20 = groenZ20(1:length(tid));
 groenZ20 = mean(groenZ20);
 
-dataG40 = load('z_40_grader');
+dataG40 = load('z_40_grader.mat');
 groenZ40 = dataG40.data(3,:);
 groenZ40 = groenZ40(1:length(tid));
 groenZ40 = mean(groenZ40);
 
-dataG60 = load('z_60_grader');
+dataG60 = load('z_60_grader.mat');
 groenZ60 = dataG60.data(3,:);
 groenZ60 = groenZ60(1:length(tid));
 groenZ60 = mean(groenZ60);
@@ -185,7 +186,7 @@ ylabel('Spænding (v)')
 
 % Vender x-akse data 
 % Start 
-    groenX = flip(groenX)
+    groenX = flip(groenX);
 % Slut 
 
 %scatter(grader,groenX)
