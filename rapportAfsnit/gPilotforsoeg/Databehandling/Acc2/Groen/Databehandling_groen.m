@@ -186,7 +186,7 @@ ylabel('Spænding (v)')
 
 % Vender x-akse data 
 % Start 
-    groenX = flip(groenX)
+    groenX = flip(groenX);
 % Slut 
 
 %scatter(grader,groenX)

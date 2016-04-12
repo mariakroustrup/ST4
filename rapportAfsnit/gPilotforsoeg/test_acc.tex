@@ -70,7 +70,7 @@ Hver vinkel måles og samples for hvert accelerometer i hver akse i 10 sekunder 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/vinkeltest}
-\caption{Vinkeltester, som anvendes under forsøget til at holde accelerometeret i bestemte vinkler}
+\caption{Vinkeltester, som anvendes under forsøget til at holde accelerometeret i bestemte vinkler.}
 \label{fig:vinkeltest}
 \end{figure}
 
@@ -81,33 +81,44 @@ Der foretages målinger i seks forskellige positioner. Hver position måles tre 
 \item Accelerometeret stilles, så det er lodret nedad
 \item Accelerometeret stilles, så det er vandret mod højre
 \item Accelerometeret stilles, så det er vandret mod venstre
-\item Accelerometeret ligges plan på bordet opad
-\item Accelerometeret ligges plan på bordet nedad
+\item Accelerometeret ligges plan på bordet med toppen opad
+\item Accelerometeret ligges plan på bordet med toppen nedad
 \end{itemize}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/acc_paavirkning}
-\caption{Påvirkning af accelerometeret i forskellige positioner. Til venstre måles accelerometeret i lodret plan, til højre øverst vandret og til højre nederst i plan \citep{analogdevices2010}}
+\caption{Påvirkning af accelerometeret i forskellige positioner. Til venstre måles accelerometeret i lodret plan, til højre øverst vandret og til højre nederst i plan \citep{analogdevices2010}.}
 \label{fig:acc_paavirkning}
 \end{figure}
 
 \subsection{Resultater} 
 
-\subsubsection{Resultater for deltest 2}
+\subsubsection{Resultater for deltest 1}
+For deltest 1 udføres en lineær regression, hvor data fra målingerne af begge accelerometres output ved hver målt vinkel plottes som en funktion af vinklerne. Derefter udføres den lineære regression, og $R^2$-værdien findes, så det kan bestemmes, om punkterne er lineære. Plots, regressioner og $R^2$-værdier kan ses på \autoref{fig:acc_lineaerregression}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/lineaerregression}
+\caption{Lineær regression for hver akse på hvert accelerometer. Målingerne er plottet med blå prikker, og den lineære regression er illustreret med rød. $R^2$-værdien er noteret for hvert plot.}
+\label{fig:acc_lineaerregression}
+\end{figure}
+
+Ud fra \autoref{fig:acc_lineaerregression} kan det ses, at $R^2$-værdierne er mellem 0,9790 og 0,9812. Graferne ville have en perfekt lineær sammenhæng, hvis $R^2=1$. Det kan derfor siges, at der her ses en lineær tendens ud fra disse målinger, selvom punkterne på alle seks grafer viser en s-formet bølge omkring regressionslinjen, hvilket giver afvigelserne fra den perfekte lineære sammenhæng.
+
+\subsubsection{Resultater for deltest 2}
 De viste resultater heri er for det ene accelerometer\fxnote{resultaterne er fra det røde accelerometer}, da sensitiviten og offsettet ændrer sig hver gang, der udføres et forsøg. Det vil derfor ikke være muligt at fastsætte konstante værdier for sensitivitet og offset, hvorfor det centrale at udlede er metoden til at beregne værdierne, da udregningerne skal foretages ved hvert forsøg.
 
-Ud fra de tre målinger foretaget i de seks forskellige positioner beregnes den gennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i en graf. På denne måde bliver det muligt at se, hvilken akse der påvirkes mest under øvelsen. Målingerne fremgår af \autoref{fig:acc_paavirkning}. 
+Ud fra de tre målinger foretaget i de seks forskellige positioner beregnes den gennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i en graf. På denne måde bliver det muligt at se, hvilken akse der påvirkes mest under øvelsen. Målingerne fremgår af \autoref{fig:acc_paavirkning2}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/paavirkning}
-\caption{Påvirkningen af accelerometrets tre akser ved de seks forskellige positioner}
-\label{fig:acc_paavirkning}
+\caption{Påvirkningen af accelerometrets tre akser ved de seks forskellige positioner.}
+\label{fig:acc_paavirkning2}
 \end{figure}
 
-Offset beregnes ud fra de målinger, hvor accelerometeret påvirkes med 0 g. Den akse hvor accelerometeret påvirkes med 0 g i de seks positioner fremgår af \autoref{fig:acc_paavirkning}. Resultaterne fra målingerne fremgår af \autoref{Tab:acc_offset}. 
+Offset beregnes ud fra de målinger, hvor accelerometeret påvirkes med 0 g. Den akse hvor accelerometeret påvirkes med 0 g i alle seks forskellige positioner fremgår af \autoref{fig:acc_paavirkning}. Resultaterne fra målingerne fremgår af \autoref{tab:acc_offset}. 
 
 \begin{table}[H]
 	\centering
@@ -125,11 +136,12 @@ Offset beregnes ud fra de målinger, hvor accelerometeret påvirkes med 0 g. Den
     \textbf{Plan op} 		& Y 		& $1,6734~V$    \\ \hline
     \textbf{Plan ned} 		& X 		& $1,6787~V$		\\ \hline
     \textbf{Plan ned} 		& Y 		& $1,6755~V$		\\ \hline
-	\end{tabular}\label{Tab:acc_offset}
-	\caption{Offsettet beregnet for de forskellige akser, hvor accelerometeret udsættes for en 0 g-påvirkning}
+	\end{tabular}
+	\caption{Offsettet beregnet for de forskellige akser, hvor accelerometeret udsættes for en 0 g-påvirkning.}
+	\label{tab:acc_offset}
 \end{table}
 
-Sensitiviten beregnes ud fra forskellen mellem 0 og 1 g-påvirkningen af accelerometeret. Der hvor accelerometeret er påvirket med 1 g er illustreret på \autoref{fig:acc_paavirkning}. Målingerne fremgår af \autoref{Tab:acc_sensitivitet}. 
+Sensitiviten beregnes ud fra forskellen mellem 0 og 1 g-påvirkningen af accelerometeret. Der hvor accelerometeret er påvirket med 1 g er illustreret på \autoref{fig:acc_paavirkning}. Målingerne fremgår af \autoref{tab:acc_sensitivitet}. 
 
 \begin{table}[H]
 	\centering
@@ -142,16 +154,16 @@ Sensitiviten beregnes ud fra forskellen mellem 0 og 1 g-påvirkningen af acceler
     \textbf{Plan op} 		& Z 		& $0,1232~V/gV$    	\\ \hline		
     \textbf{Plan ned} 		& Z 		& $-0,1079~V/g$		\\ \hline
 	\end{tabular}
-	\label{Tab:acc_sensitivitet}
-	\caption{Sensitiviteten beregnet for de forskellige akser hvor accelerometeret udsættes for en 1 g-påvirkning}
+	\caption{Sensitiviteten beregnet for de forskellige akser hvor accelerometeret udsættes for en 1 g-påvirkning.}
+	\label{tab:acc_sensitivitet}
 \end{table}
 
-Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negativ og positiv retning\fxnote{Er der nødvendig med 1 grad?}. Spændingen svarende til $0^{\circ}$ svarer til den målte offsetværdi som fremgår af \autoref{Tab:acc_offset}. Beregningerne af spændingen ved de valgte grader fremgår af \autoref{Tab:acc_grader} og er beregnet ud fra ligning \autoref{equ:vinkler}.
+Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negativ og positiv retning\fxnote{Er der nødvendig med 1 grad?}. Spændingen svarende til $0^{\circ}$ svarer til den målte offsetværdi som fremgår af \autoref{tab:acc_offset}. Udregningerne af spænding ved de valgte grader fremgår af \autoref{tab:acc_grader} og er beregnet ud fra ligning \autoref{equ:vinkler}.
 
  \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|l|}
-	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Spændingen ved grad} & \textbf{Spændingen ved 90 grader} \\ \hline
+	\textbf{Målt retning} & \textbf{Målt akse} & \textbf{Spændingen ved $1^{\circ}$} & \textbf{Spændingen ved $90^{\circ}$} \\ \hline
     \textbf{Positiv} 	& Y		& $1,7985~V$   	&	$12,7589~V$\\ \hline
     \textbf{Negativ}		& Y		& $1,5692~V$  	&	$-8,0339~V$\\ \hline
     \textbf{Positiv} 	& X 		& $1,7917~V$   	& 	$11,5105~V$ \\ \hline     
@@ -159,8 +171,8 @@ Ud fra senstitivten beregnes spændingen ved $1^{\circ}$ og $90^{\circ}$ i negat
     \textbf{Positiv} 	& Z 		& $1,7924~V$   	& 	$11,8494~V$	\\ \hline		
     \textbf{Negativ} 	& Z 		& $1,5629~V$		&	$-8,8190~V$ \\ \hline
 	\end{tabular}
-	\caption{Beregnet spænding ved henholdsvis 1 og 90 grader i positiv og negativ retning}
-	\label{Tab:acc_grader}
+	\caption{Beregnet spænding ved henholdsvis $1^{\circ}$ og $90^{\circ}$ i positiv og negativ retning.}
+	\label{tab:acc_grader}
 \end{table}
 
 
