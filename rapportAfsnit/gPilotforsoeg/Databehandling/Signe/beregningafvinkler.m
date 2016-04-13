@@ -17,58 +17,72 @@ Nedogop1 = (Nedogop.data (1,:));
 Nedogop2 = (Nedogop.data (2,:));
 Nedogop3 = (Nedogop.data (3,:));
 
-% Beregner afvigelse
-Nedogop1_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop1_afv(ii)=(Nedogop1(ii)-1.7)/1.7;
-end
-
-Nedogop2_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop2_afv(ii)=(Nedogop2(ii)-1.7)/1.7;
-end
-
-Nedogop3_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop3_afv(ii)=(Nedogop3(ii)-1.7)/1.7;
-end
-
-% Beregner offset
-Offset1=zeros([1 1170]);
-for ii =1:1170
-    Offset1(ii)=Nedogop1(ii)-Nedogop1_afv(ii);
-end
-
-% Offset2=zeros([1 1170]);
+% % Beregner afvigelse
+% Nedogop1_afv=zeros([1 1170]);
 % for ii =1:1170
-%     Offset2(ii)=Nedogop2(ii)-Nedogop2_afv(ii);
+%     Nedogop1_afv(ii)=(Nedogop1(ii)-1.7)/1.7;
+% end
+% 
+% Nedogop2_afv=zeros([1 1170]);
+% for ii =1:1170
+%     Nedogop2_afv(ii)=(Nedogop2(ii)-1.7)/1.7;
+% end
+% 
+% Nedogop3_afv=zeros([1 1170]);
+% for ii =1:1170
+%     Nedogop3_afv(ii)=(Nedogop3(ii)-1.7)/1.7;
 % end
 
-Offset3=zeros([1 1170]);
-for ii =1:1170
-    Offset3(ii)=Nedogop3(ii)-Nedogop3_afv(ii);
-end
+% Beregner mean
+Nedogopmean1 = mean(Nedogop1)
+Nedogopmean2 = mean(Nedogop2)
+Nedogopmean3 = mean(Nedogop3)
+
+Nedogop1afv = ((Nedogopmean1-1.7)/1.7)
+Nedogop2afv = ((Nedogopmean2-1.7)/1.7)
+Nedogop3afv = ((Nedogopmean3-1.7)/1.7)
+
+Offset1 = Nedogopmean1-Nedogop1afv
+% Offset2 = Nedogopmean2-Nedogop2afv
+Offset3 = Nedogopmean3-Nedogop3afv
+
+Offset11= (Offset1+Offset3)/2
+
+% % Beregner offset
+% Offset1=zeros([1 1170]);
+% for ii =1:1170
+%     Offset1(ii)=Nedogop1(ii)-Nedogop1_afv(ii);
+% end
+% 
+% 
+% Offset3=zeros([1 1170]);
+% for ii =1:1170
+%     Offset3(ii)=Nedogop3(ii)-Nedogop3_afv(ii);
+% end
 
 % Gennemsnit af offset 
-Offset11=zeros([1 1170]);
-for ii =1:1170
-    Offset11(ii)=(Offset1(ii)+Offset3(ii))/2;
-end
+% Offset11=zeros([1 1170]);
+% for ii =1:1170
+%     Offset11(ii)=(Offset1(ii)+Offset3(ii))/2;
+% end
 
 
 % Beregner påvirkning i 1 g
  
-Paavirk1=zeros([1 1170]);
-for ii =1:1170
-    Paavirk1(ii)=Nedogop2(ii)-Nedogop2_afv(ii);
-end 
- 
+Paavirk1=Nedogopmean2-Nedogop2afv
 
-% Beregner sensitivitet
-Sensi1=zeros([1 1170]);
-for ii =1:1170
-    Sensi1(ii)=Paavirk1(ii)-Offset11(ii);
-end 
+Sensi1=Paavirk1-Offset11;
+% Paavirk1=zeros([1 1170]);
+% for ii =1:1170
+%     Paavirk1(ii)=Nedogop2(ii)-Nedogop2_afv(ii);
+% end 
+%  
+% 
+% % Beregner sensitivitet
+% Sensi1=zeros([1 1170]);
+% for ii =1:1170
+%     Sensi1(ii)=Paavirk1(ii)-Offset11;
+% end 
 
 % Beregner graderne
 acc1=zeros([1 1170]);
@@ -147,7 +161,7 @@ end
 for i= 1:1170 
     degree(i) = calc_degree(voltage(i));
 end
-plot(
+
 
 %% Plots!
 figure
