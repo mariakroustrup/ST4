@@ -250,7 +250,7 @@ xlabel('Frekvens [Hz]')
 xlim([-0.1 1])
 ylabel('Størrelse')
 ylim([-0.1 1])
-title({'Accelerometer 1 - x-aksen';'Frekvensanalyse'})
+%title({'Accelerometer 1 - x-aksen';'Frekvensanalyse'})
 set(gca,'fontsize',20);
 
 % subplot(2,3,2)
