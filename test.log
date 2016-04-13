@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  3 MAR 2016 14:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  13 APR 2016 16:00
 entering extended mode
 **test.tex
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.tex
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\preambleNy.tex
+("C:\Users\Linette Helena\Documents\GitHub\ST4\preambleNy.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
 Document Class: memoir 2011/03/06 v3.6j configurable book, report, article docu
 ment class
@@ -1753,7 +1753,7 @@ Package caption Info: rotating package is loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ))
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.aux)
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
@@ -1819,8 +1819,8 @@ Package hyperref Info: Link coloring ON on input line 2.
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
- (C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.out)
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.out)
+ ("C:\Users\Linette Helena\Documents\GitHub\ST4\test.out")
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.out")
 \@outlinefile=\write4
 LaTeX Info: Redefining \Ref on input line 2.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1845,316 +1845,222 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/bInitierende/Indled
-ning.tex
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/bInitierende/Indle
+dning.tex"
+
+Package natbib Warning: Citation `universitet2013' on page 1 undefined on input
+ line 10.
+
 Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
 line 10.
+
+Package natbib Warning: Citation `arahata2014' on page 1 undefined on input lin
+e 10.
 
 
 Package natbib Warning: Citation `hvadermuskelsvind2016' on page 1 undefined on
  input line 10.
 
 
-Package natbib Warning: Citation `sygdomsbeskrivelser2016' on page 1 undefined 
-on input line 10.
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 10--11
-\T1/cmr/m/n/10.95 I Danmark er omkring 3.000 mennesker diagnosticeret med en mu
-skelsvindssygdom.
- []
-
-
-Package natbib Warning: Citation `hvadermuskelsvind2016' on page 1 undefined on
- input line 14.
+Package natbib Warning: Citation `henschke2012' on page 1 undefined on input li
+ne 15.
 
 
 Package natbib Warning: Citation `russell2015' on page 1 undefined on input lin
-e 19.
+e 21.
+
+
+Package natbib Warning: Citation `grehl2011' on page 1 undefined on input line 
+21.
 
 
 Package natbib Warning: Citation `morris2015' on page 1 undefined on input line
- 19.
+ 21.
 
 )
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/bInitierende/initie
-rende_spg.tex) [1
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/bInitierende/initi
+erende_spg.tex") [1
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/ALS
-.tex
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/gpilotforsoeg/Pilo
+tforsoeg.tex"
 
-Package natbib Warning: Citation `miller2005' on page 2 undefined on input line
- 3.
-
-
-Package natbib Warning: Citation `nationalinstitute2016' on page 2 undefined on
- input line 3.
-
-<figures/affectedneuron.jpg, id=33, 319.1925pt x 301.125pt>
-File: figures/affectedneuron.jpg Graphic file (type jpg)
-
-<use figures/affectedneuron.jpg>
-Package pdftex.def Info: figures/affectedneuron.jpg used on input line 7.
-(pdftex.def)             Requested size: 220.5pt x 208.01999pt.
+Package natbib Warning: Citation `seniam2016' on page 2 undefined on input line
+ 47.
 
 
-Package natbib Warning: Citation `drake2015' on page 2 undefined on input line 
-8.
+Package natbib Warning: Citation `seniam2016' on page 2 undefined on input line
+ 48.
 
 
-Package natbib Warning: Citation `drake2015' on page 2 undefined on input line 
-8.
-
-
-Package natbib Warning: Citation `nationalinstitute2016' on page 2 undefined on
- input line 13.
-
-
-Package natbib Warning: Citation `miller2005' on page 2 undefined on input line
- 14.
+Underfull \hbox (badness 1137) in paragraph at lines 46--49
+\T1/cmr/m/n/10.95 Hertil anvendes én positiv-, negativ- samt én referenceelektr
+ode. Forinden påsættelse
+ []
 
 [2
 
- <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/affectedneuron.jpg>]
-<figures/motorneuroner.png, id=44, 372.79276pt x 485.4135pt>
-File: figures/motorneuroner.png Graphic file (type png)
+] <figures/laarmuskel.png, id=51, 329.73187pt x 514.92375pt>
+File: figures/laarmuskel.png Graphic file (type png)
 
-<use figures/motorneuroner.png>
-Package pdftex.def Info: figures/motorneuroner.png used on input line 18.
-(pdftex.def)             Requested size: 220.5pt x 287.11734pt.
-
-
-Package natbib Warning: Citation `miller2005' on page 3 undefined on input line
- 19.
+<use figures/laarmuskel.png>
+Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
+(pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
 
-Package natbib Warning: Citation `miller2005' on page 3 undefined on input line
- 19.
+Package natbib Warning: Citation `martini2012' on page 3 undefined on input lin
+e 53.
 
 
-Package natbib Warning: Citation `themusculardystrophyassociation2016' on page 
-3 undefined on input line 25.
+Package natbib Warning: Citation `martini2012' on page 3 undefined on input lin
+e 53.
 
 
-Package natbib Warning: Citation `grehl2011' on page 3 undefined on input line 
-26.
+Package natbib Warning: Citation `seniam2016' on page 3 undefined on input line
+ 57.
+
+<figures/reference.png, id=53, 325.215pt x 410.53375pt>
+File: figures/reference.png Graphic file (type png)
+
+<use figures/reference.png>
+Package pdftex.def Info: figures/reference.png used on input line 61.
+(pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
 
 
-Package natbib Warning: Citation `miller2005' on page 3 undefined on input line
- 26.
-
-)
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Foe
-lger.tex
-
-Package natbib Warning: Citation `themusculardystrophyassociation2016' on page 
-3 undefined on input line 3.
+Package natbib Warning: Citation `ankle2016' on page 3 undefined on input line 
+62.
 
 
-Package natbib Warning: Citation `themusculardystrophyassociation2016' on page 
-3 undefined on input line 3.
+Package natbib Warning: Citation `ankle2016' on page 3 undefined on input line 
+62.
 
 
-Package natbib Warning: Citation `tidy2015' on page 3 undefined on input line 3
+LaTeX Warning: Reference `sec:test_acc' on page 3 undefined on input line 67.
+
+[3 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/Us
+ers/Linette Helena/Documents/GitHub/ST4/figures/reference.png>]
+<figures/accelerometervinkel.png, id=68, 172.39406pt x 165.61874pt>
+File: figures/accelerometervinkel.png Graphic file (type png)
+
+<use figures/accelerometervinkel.png>
+Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
+
+(pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
+
+
+LaTeX Warning: Reference `fig:squat' on page 4 undefined on input line 80.
+
+
+LaTeX Warning: Reference `fig:squat' on page 4 undefined on input line 88.
+
+[4 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/accelerometervinkel.pn
+g>]
+<figures/Pilotforsoeg/baselineogemg.png, id=80, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
+
+<use figures/Pilotforsoeg/baselineogemg.png>
+Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
+ine 170.
+(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
+ [5]
+<figures/Pilotforsoeg/emgfft.png, id=92, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
+
+<use figures/Pilotforsoeg/emgfft.png>
+Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 179
 .
-
-[3 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/motorneuroner.png>])
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Liv
-skvalitet.tex
-
-Package natbib Warning: Citation `neudert2004' on page 4 undefined on input lin
-e 4.
+(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
 
 
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 4
+LaTeX Warning: Reference `sec:sensorer' on page 6 undefined on input line 185.
+
+<figures/Pilotforsoeg/accfft.png, id=94, 1445.4pt x 704.6325pt>
+File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
+
+<use figures/Pilotforsoeg/accfft.png>
+Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 192
 .
+(pdftex.def)             Requested size: 374.85269pt x 182.73781pt.
+ [6 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/baseline
+ogemg.png (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pil
+otforsoeg/emgfft.png (PNG copy)>]
 
+LaTeX Warning: Reference `sec:resul_linear' on page 7 undefined on input line 1
+98.
 
-Underfull \hbox (badness 1168) in paragraph at lines 4--5
-\T1/cmr/m/n/10.95 Livskvaliteten hos patienter med ALS undersøges for at vurder
-e, hvilken påvirkning
- []
+<figures/Pilotforsoeg/accvinkel.png, id=105, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
 
+<use figures/Pilotforsoeg/accvinkel.png>
+Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line 
+203.
+(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
 
-Package natbib Warning: Citation `pagnini2013' on page 4 undefined on input lin
-e 6.
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=108, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 9
-.
-
-
-Package natbib Warning: Citation `nuebert2004' on page 4 undefined on input lin
-e 9.
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 9
-.
-
-
-Package caption Warning: \label without proper \caption on input line 13.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `livskvalitet' on page 4 undefined on input line 9.
-
-
-Overfull \hbox (9.20099pt too wide) in paragraph at lines 14--24
- [][] 
- []
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 2
-4.
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 2
-4.
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 2
-8.
-
-
-Package natbib Warning: Citation `nuebert2004' on page 4 undefined on input lin
-e 28.
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 2
-8.
-
-
-Package natbib Warning: Citation `ilse2015' on page 4 undefined on input line 2
-8.
-
-
-Package natbib Warning: Citation `tramonti2012' on page 4 undefined on input li
-ne 28.
-
-[4])
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Nuv
-aerende_teknologier.tex
-
-Package natbib Warning: Citation `brandt2010' on page 5 undefined on input line
- 3.
-
-
-Package natbib Warning: Citation `brandt2010' on page 5 undefined on input line
- 6.
-
-
-Package natbib Warning: Citation `hefferman2006' on page 5 undefined on input l
-ine 8.
-
-
-Package natbib Warning: Citation `rcfm2001' on page 5 undefined on input line 8
-.
-
-
-Package natbib Warning: Citation `brandt2010' on page 5 undefined on input line
- 12.
-
-
-Package natbib Warning: Citation `erlen2003' on page 5 undefined on input line 
-12.
-
-
-Package natbib Warning: Citation `yang2008' on page 5 undefined on input line 1
-5.
-
-
-Package natbib Warning: Citation `bogue2015' on page 5 undefined on input line 
-15.
-
-
-Package natbib Warning: Citation `regmidt2015' on page 5 undefined on input lin
-e 17.
-
-)
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Kna
-eleddet.tex [5]
-
-Package natbib Warning: Citation `martini2012' on page 6 undefined on input lin
-e 6.
-
-<figures/knae_anatomi.jpg, id=73, 872.25874pt x 469.755pt>
-File: figures/knae_anatomi.jpg Graphic file (type jpg)
-
-<use figures/knae_anatomi.jpg>
-Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 10.
-(pdftex.def)             Requested size: 198.44865pt x 106.87302pt.
-
-
-Package natbib Warning: Citation `martini2012' on page 6 undefined on input lin
-e 18.
-
-<figures/knaet.png, id=76, 434.5836pt x 233.1912pt>
-File: figures/knaet.png Graphic file (type png)
- <use figures/knaet.png>
-Package pdftex.def Info: figures/knaet.png used on input line 22.
-(pdftex.def)             Requested size: 441.0pt x 236.64206pt.
-
-[6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knae_anatomi.jpg>]
-
-Package natbib Warning: Citation `schoenfeld2010' on page 7 undefined on input 
-line 29.
-
-)
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/dProblemformulering
-/Problemafgraensning.tex
-Underfull \hbox (badness 1281) in paragraph at lines 5--7
-[]\T1/cmr/m/n/10.95 Da ALS-patienter oplever progressivt muskelsvind, har dette
- indflydelse på deres
- []
-
-) (C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.bbl)
+<use figures/Pilotforsoeg/emg_vinkler_tid.png>
+Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
+ line 212.
+(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
+ [7 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.p
+ng (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforso
+eg/accvinkel.png (PNG copy)>])
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.bbl")
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[7 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
+[8 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/emg_vinkl
+er_tid.png (PNG copy)>]
 
-(C:\Users\passw\OneDrive\Documents\GitHub\ST4\test.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
+Package caption Warning: Unused \captionsetup[table] on input line 116.
+See the caption package documentation for explanation.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 21.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 21.
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 21.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 21.
 Package rerunfilecheck Info: File `test.out' has not changed.
 (rerunfilecheck)             Checksum: CF630A8FF13D3128BAABFA463AA11151;96.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 25.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 21.
  ) 
 Here is how much of TeX's memory you used:
- 26029 strings out of 493921
- 455143 string characters out of 3144876
+ 26034 strings out of 493921
+ 454433 string characters out of 3144850
  766790 words of memory out of 3000000
- 28837 multiletter control sequences out of 15000+200000
- 26022 words of font info for 72 fonts, out of 3000000 for 9000
+ 28840 multiletter control sequences out of 15000+200000
+ 26363 words of font info for 73 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
- 57i,11n,92p,1712b,765s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/cm-super/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/cm-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/cm-super/sfti1095.pfb>
-Output written on test.pdf (8 pages, 1274486 bytes).
+ 57i,12n,92p,814b,767s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
+C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/cm-super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/cm-super/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/cm-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/cm-super/sfti1095.pfb>
+Output written on test.pdf (8 pages, 1032912 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

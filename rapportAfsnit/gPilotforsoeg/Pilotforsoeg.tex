@@ -78,7 +78,7 @@ En squat-øvelse defineres, således den kan gengives på tværs af forsøgspers
 \begin{enumerate}
 \item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let til siderne
 \item Armene placeres over kors, som vist på \autoref{fig:squat}
-\item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på 90$^{\circ}$ af knæet er opnået
+\item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på maks 90$^{\circ}$ af knæet er opnået
 	\begin{itemize}
 	\item Ryggen holdes ret under squat-øvelsen 
 	\item Knæene må ikke gå ud over tåspidserne 
@@ -89,7 +89,7 @@ En illustration af squat-øvelsen ses af \autoref{fig:squat}.
 
 En nedadgående squat-øvelse defineres som punkt $1-2$ i overstående, hertil forbliver forsøgspersonen i en siddende squat indtil den givene måling er gennemført.
 
-For at præcisere øvelsen således alle forsøgspersoner så vidt muligt rammer den samme vinkel på 90$^{\circ}$ af knæet ved gentagende squat-øvelser, måles hver enkel forsøgsperson forinden forsøget udføres. Målingen foregår ved at placere forsøgspersonen på et givent sted med siden til en væg, hvorved en squat-øvelse til 90$^{\circ}$ udføres. De 90$^{\circ}$ måles med en vinkelmåler, hvortil der påsættes tape på væggen, som udgør underbenet samt lårets position.
+For at præcisere øvelsen således alle forsøgspersoner så vidt muligt rammer den samme vinkel på maks  90$^{\circ}$ af knæet ved gentagende squat-øvelser, måles hver enkel forsøgsperson forinden forsøget udføres. Målingen foregår ved at placere forsøgspersonen på et givent sted med siden til en væg, hvorved en squat-øvelse til maks 90$^{\circ}$ udføres. Vinklen måles med en vinkelmåler, hvortil der påsættes tape på væggen, som udgør underbenet samt lårets position.
 Ved udførelsen af forsøget irettesætter forsøgspersonen sig efter det påsatte tape på væggen, for således at genskabe squat-øvelsen med mindst mulig afvigelse. Under dette kontrollerer øvrige deltager forsøgspersonens position samt squat-bevægelse.
 
 Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
@@ -161,7 +161,7 @@ Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres
 %\end{itemize}
 
 \section{Databehandling}
-I det præsenterede data tages der udgangspunkt i forsøgsperson 1, og er som følge af at målingerne for forsøgsperson er påvirket af muskelrystelser. Til trods for muskelrystelserne ses der ligheder mellem målingerne for forsøgspersonerne. 
+I det præsenterede data tages der udgangspunkt i forsøgsperson 1. Dette er som følge af, at målingerne for forsøgsperson 2 er påvirket af muskelrystelser. Til trods for muskelrystelserne ses der ligheder mellem målingerne for forsøgspersonerne. 
 
 \subsubsection{Resultater for EMG-målinger}
 
@@ -171,7 +171,7 @@ I det præsenterede data tages der udgangspunkt i forsøgsperson 1, og er som f�
 	\caption{EMG-målinger af baseline og 2. måling.}
 	\label{fig:baselineogemg}
 \end{figure}
-Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved 2. måling ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
+Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved 2. måling ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til maks $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
 
 
 \begin{figure}[H]
@@ -180,8 +180,9 @@ Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsper
 	\caption{Frekvensanalyse af EMG-måling for baseline og 2. måling.}
 	\label{fig:emgfft}
 \end{figure}
-Der er foretaget en frekvensanalyse af baseline målingerne for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere ses en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. 
-Der ses ingen støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. Derudover er det ikke muligt at se, hvorvidt der er $50~Hz$ støj af signalet, da der er samplet med $100~Hz$, hvor nyquist-frekvensen er $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
+
+Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. 
+Der opserveres ingen støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. Derudover fremgår det ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
 
 
 \subsubsection{Resultater for accelerometer målinger}
@@ -189,41 +190,38 @@ Der ses ingen støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. Der
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/accfft.png}
-	\caption{Frekvensanalyse af baseline målinger for accelerometer}
+	\caption{Frekvensanalyse af baseline måling for accelerometer}
 	\label{fig:accfftx}
 \end{figure}
-Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i x-aksen. Ud fra dette er ses der ingen støjsignaler ud over en dc-komponent der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen ses der ingen $50~Hz$, hvortil årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
+Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i x-aksen. Ud fra dette ses ingen støjsignaler ud over en dc-komponent, der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen er der ingen $50~Hz$ støj, hvortil årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
 
-Spændingerne fra accelrometeret repræsentere vinklerne for femur og tibia i hver af tre akser. Denne spændingsværdi ønskes omregnet grader, for således at undersøge vinklen af knæet. Til at omregne spændingen til grader benyttes følgende formler:
+Spændingerne fra accelrometeret repræsenterer vinklerne for femur og tibia i y-aksen. Denne spændingsværdi ønskes omregnet til grader, for således at undersøge vinklen af knæet. Til at omregne spændingen fra begge acceleromtre til grader anvendes målingerne anvendt i \autoref{sec:resul_linear}. Disse resultater er anvendt i funktioner, hvortil lineær interpolation benyttes. EMG-spændingerne for 2. måling er hertil anvendt i funktionerne, således graderne for EMG-målingen findes.
+Resultaterne fra omregningen visualiseres af \autoref{fig:accvinkel}. 
 
-\begin{equation}
-
-\end{equation}
-
-
-Resultaterne fra omregningen visualiseres og kan ses af \autoref{accvinkel}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/blackbox}
-	\caption{Vinkel og acc}
+	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/accvinkel}
+	\caption{Vinkler fra accelerometrene under 2. måling}
 	\label{fig:accvinkel}
 \end{figure}
+Det fremgår af \autoref{fig:accvinkel}, at forsøgspersonen udfører en flektion af knæet under 2. måling til en grad på ca. $78^{\circ}$. 
 
-
-\textbf{Relation mellem EMG og accelerometeret}
-For at kunne se relationen mellem udslag i EMG samt for accelerometere bedre, plottes begge disse målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
+For at kunne se relationen mellem udslag i EMG samt for accelerometrene, plottes begge disse målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/Pilotforsoeg/blackbox}
-	\caption{Vinkel og acc}
+	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/emg_vinkler_tid}
+	\caption{EMG og vinkler fra acceleromtre under 2. måling}
 	\label{fig:emgogacc}
 \end{figure}
 
-\fxnote{OBS!!! Opsummeringen skal angiveligt omskrives!}
-\section{Opsummering af pilotforsøg}
-Af resultaterne fra databehandlingen ses det, hvilke parametre, der er nødvendige for optimeret drift af det endelige system. Ud fra frekvensanalysen af EMG-signalerne, ses ingen fremkomst af $50~Hz$ støj.\fxnote{Jeg ved ikke om vi kan antage dette, da frekvensanalysen reelt ikke viser 50 Hz.} Dette antages at skylde envalope kredsen i EMG-forstærkeren. Dette fungerer som et lavpasfilter, hvortil størrelsen af komponenterne i kredsen giver en knækfrekvens på ca. $2~Hz$. 
 
-Af frekvensanalysen fremkommer der dog en dc komponent, som følge af offsettet, der ses af EMG-målingerne. \fxnote{ønsker vi at fjerne det offset der fremgår i EMG-målingerne??} Dette giver anledning til, at implementere et højpasfilter, for således at dæmpe dc-komponenten. Dette skal dog være med visse forbehold, da frekvensanalysen yderligere viser, at signalerne er lavfrekvent. 
 
-Ved implementering af et højpasfilter, kan det ønskede signal dæmpes i for høj en grad, således signalet ikke vil være anvendeligt. 
- 
+
+%\fxnote{OBS!!! Opsummeringen skal angiveligt omskrives!}
+%\section{Opsummering af pilotforsøg}
+%Af resultaterne fra databehandlingen ses det, hvilke parametre, der er nødvendige for optimeret drift af det endelige system. Ud fra frekvensanalysen af EMG-signalerne, ses ingen fremkomst af $50~Hz$ støj.\fxnote{Jeg ved ikke om vi kan antage dette, da frekvensanalysen reelt ikke viser 50 Hz.} Dette antages at skylde envalope kredsen i EMG-forstærkeren. Dette fungerer som et lavpasfilter, hvortil størrelsen af komponenterne i kredsen giver en knækfrekvens på ca. $2~Hz$. 
+%
+%Af frekvensanalysen fremkommer der dog en dc komponent, som følge af offsettet, der ses af EMG-målingerne. \fxnote{ønsker vi at fjerne det offset der fremgår i EMG-målingerne??} Dette giver anledning til, at implementere et højpasfilter, for således at dæmpe dc-komponenten. Dette skal dog være med visse forbehold, da frekvensanalysen yderligere viser, at signalerne er lavfrekvent. 
+%
+%Ved implementering af et højpasfilter, kan det ønskede signal dæmpes i for høj en grad, således signalet ikke vil være anvendeligt. 
+% 

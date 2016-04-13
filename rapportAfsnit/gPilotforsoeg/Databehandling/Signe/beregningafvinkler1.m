@@ -146,26 +146,28 @@ end
 
 %% Plots!
 figure
-plot(tid,grader(1:1170));
+plot(t,grader(1:1000));
 xlabel('Tid [s]')
 ylabel('Vinkel [\circ]')
-set(gca,'XTick',[0:1:12])
+set(gca,'XTick',[0:1:10])
+ylim([0 90])
+set(gca,'YTick',[0:10:90])
 set(gca,'fontsize',20);
 
 % Emg og grader
 figure
 hold on
-[hAx,hLine1,hLine2] = plotyy(tid, Nedogop_emgo, tid, grader)
+[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000))
 set(hAx(1),'fontsize',20);
 set(hAx(2),'fontsize',20);
 legend('EMG','Vinkel')
 
-set(hAx(1), 'XLim',[0 12])
-set(hAx(1),'XTick',[0:1:12])
+set(hAx(1), 'XLim',[0 10])
+set(hAx(1),'XTick',[0:1:10])
 set(get(hAx(1),'Xlabel'),'string','Tid [s]')
 
 set(hAx(2), 'YLim',[0 90])
-set(hAx(2),'YTick',[0:5:90])
+set(hAx(2),'YTick',[0:10:90])
 set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]')
 
 set(hAx(1), 'YLim',[-0.1 1])
@@ -176,6 +178,10 @@ set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
 % Plot af emg med grader og spænding
 figure
 plot(grader, nedogop_emg)
+xlabel('Vinkel [\circ]')
+ylabel('Spænding [V]')
+xlim([0 90])
+set(gca,'XTick',[0:10:90])
 
 
 
