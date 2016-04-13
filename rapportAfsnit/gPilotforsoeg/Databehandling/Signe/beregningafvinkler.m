@@ -5,191 +5,120 @@ Samplelength = 10;
 T = 1/Fs;
 L = Fs*Samplelength;
 t = (0:L-1)*T;
-f = Fs*(0:(L/2))/L; 
 
 %% loader data
+load('nedogop_emg')
 Nedogop = load('Nedogop1');
 
-%% For beregning af offsetværdien:
+% Rød accelerometer
+load('roedY0.mat')
+load('roedY20.mat')
+load('roedY40.mat')
+load('roedY60.mat')
+load('roedY80.mat')
+load('roedY90.mat')
 
-% Accelerometer 1:
+% Grøn accelerometer
+load('groenY90.mat')
+load('groenY100.mat')
+load('groenY120.mat')
+load('groenY140.mat')
+load('groenY160.mat')
+load('groenY180.mat')
+
+%% Det røde accelerometer
+
+% Accelerometer 1: På nuværende tidspunkt benytter vi kun Nedogop2/Y-aksen
 Nedogop1 = (Nedogop.data (1,:));
 Nedogop2 = (Nedogop.data (2,:));
 Nedogop3 = (Nedogop.data (3,:));
 
-% % Beregner afvigelse
-% Nedogop1_afv=zeros([1 1170]);
-% for ii =1:1170
-%     Nedogop1_afv(ii)=(Nedogop1(ii)-1.7)/1.7;
-% end
-% 
-% Nedogop2_afv=zeros([1 1170]);
-% for ii =1:1170
-%     Nedogop2_afv(ii)=(Nedogop2(ii)-1.7)/1.7;
-% end
-% 
-% Nedogop3_afv=zeros([1 1170]);
-% for ii =1:1170
-%     Nedogop3_afv(ii)=(Nedogop3(ii)-1.7)/1.7;
-% end
+%Fjerner offset fra måling Y, samt gør værdierne negative
+Nedogop2_off=-abs(Nedogop2-Nedogop2(1));
 
-% Beregner mean
-Nedogopmean1 = mean(Nedogop1)
-Nedogopmean2 = mean(Nedogop2)
-Nedogopmean3 = mean(Nedogop3)
-
-Nedogop1afv = ((Nedogopmean1-1.7)/1.7)
-Nedogop2afv = ((Nedogopmean2-1.7)/1.7)
-Nedogop3afv = ((Nedogopmean3-1.7)/1.7)
-
-Offset1 = Nedogopmean1-Nedogop1afv
-% Offset2 = Nedogopmean2-Nedogop2afv
-Offset3 = Nedogopmean3-Nedogop3afv
-
-Offset11= (Offset1+Offset3)/2
-
-% % Beregner offset
-% Offset1=zeros([1 1170]);
-% for ii =1:1170
-%     Offset1(ii)=Nedogop1(ii)-Nedogop1_afv(ii);
-% end
-% 
-% 
-% Offset3=zeros([1 1170]);
-% for ii =1:1170
-%     Offset3(ii)=Nedogop3(ii)-Nedogop3_afv(ii);
-% end
-
-% Gennemsnit af offset 
-% Offset11=zeros([1 1170]);
-% for ii =1:1170
-%     Offset11(ii)=(Offset1(ii)+Offset3(ii))/2;
-% end
+% Fjerne offset fra roedY
+roedY0o=roedY0-roedY0;
+roedY20o=roedY0-roedY20;
+roedY40o=roedY0-roedY40;
+roedY60o=roedY0-roedY60;
+roedY80o=roedY0-roedY80;
+roedY90o=roedY0-roedY90;
 
 
-% Beregner påvirkning i 1 g
- 
-Paavirk1=Nedogopmean2-Nedogop2afv
-
-Sensi1=Paavirk1-Offset11;
-% Paavirk1=zeros([1 1170]);
-% for ii =1:1170
-%     Paavirk1(ii)=Nedogop2(ii)-Nedogop2_afv(ii);
-% end 
-%  
-% 
-% % Beregner sensitivitet
-% Sensi1=zeros([1 1170]);
-% for ii =1:1170
-%     Sensi1(ii)=Paavirk1(ii)-Offset11;
-% end 
-
-% Beregner graderne
-acc1=zeros([1 1170]);
-for ii =1:1170
-    acc1(ii)=Offset11(ii)+(Sensi1(ii)*(1*ii));
-end
-
-grader=zeros([1 90]);
-for ii =1:90
-    grader(ii)=-(Offset11(ii)-Nedogop2(ii))/Sensi1(ii);
-end
-
-
-%% Accelerometer 2
-
+%% Grøn accelerometer
 Nedogop4 = (Nedogop.data (4,:));
 Nedogop5 = (Nedogop.data (5,:));
 Nedogop6 = (Nedogop.data (6,:));
 
-% Beregner afvigelse
-Nedogop4_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop4_afv(ii)=(Nedogop4(ii)-1.7)/1.7;
+%Fjerner offset fra måling Y samt tager kun positive værdier
+Nedogop5_off=abs(Nedogop5-Nedogop5(1));
+
+% Fjerne offset fra groenY
+groenY90o=groenY180-groenY90;
+groenY100o=groenY180-groenY100;
+groenY120o=groenY180-groenY120;
+groenY140o=groenY180-groenY140;
+groenY160o=groenY180-groenY160;
+groenY180o=groenY180-groenY180;
+
+% Nedogop_emg offset
+Nedogop_emgo=nedogop_emg-nedogop_emg(1);
+
+%% Grader fra Lego for rød
+for ii= 1:1170 ;
+    degreer(ii) = funktionr(Nedogop2_off(ii));
 end
 
-Nedogop5_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop5_afv(ii)=(Nedogop5(ii)-1.7)/1.7;
+%% Grader fra Lego for grøn
+
+for ii= 1:1170 ;
+    degreeg(ii) = funktiong(Nedogop5_off(ii));
 end
 
-Nedogop6_afv=zeros([1 1170]);
-for ii =1:1170
-    Nedogop6_afv(ii)=(Nedogop6(ii)-1.7)/1.7;
-end
+%% De samlede grader
 
-% Beregner offset
+for ii=1:1170;
+    grader(ii)=degreeg(ii)+degreer(ii);
+end  
 
-Offset4=zeros([1 1170]);
-for ii =1:1170
-    Offset4(ii)=Nedogop4(ii)-Nedogop4_afv(ii);
-end
-
-Offset6=zeros([1 1170]);
-for ii =1:1170
-    Offset6(ii)=Nedogop6(ii)-Nedogop6_afv(ii);
-end
-
-% Gennemsnit af offset 
-Offset22=zeros([1 1170]);
-for ii =1:1170
-    Offset22(ii)=(Offset4(ii)+Offset6(ii))/2;
-end
-
-
-% Beregner påvirkning i 1 g
- 
-Paavirk2=zeros([1 1170]);
-for ii =1:1170
-    Paavirk2(ii)=Nedogop5(ii)-Nedogop5_afv(ii);
-end 
- 
-
-% Beregner sensitivitet
-Sensi2=zeros([1 1170]);
-for ii =1:1170
-    Sensi2(ii)=Paavirk2(ii)-Offset22(ii);
-end 
-
-% Beregner graderne
-acc2=zeros([1 1170]);
-for ii =1:1170
-    acc2(ii)=Offset22(ii)+(Sensi2(ii)*(1*ii));
-end
-
-% 
-for i= 1:1170 
-    degree(i) = calc_degree(voltage(i));
-end
-
-
-%% Plots!
+%% Plots
+% Plot af grader i forhold til tid
 figure
-subplot(2,1,1);
-plot(acc1, Nedogop2);
-title('Accelerometer 1')
+plot(t, grader(1:1000));
+xlabel('Tid [s]')
+ylabel('Vinkel [\circ]')
+set(gca,'XTick',[0:1:10])
+ylim([0 90])
+set(gca,'YTick',[0:10:90])
+set(gca,'fontsize',20);
 
-subplot(2,1,2);
-plot(acc2, Nedogop5);
-% ylim([1.3 1.5])
-xlim([0 150]);
-set(gca,'XTick',[0: 10: 150]);
-title('Accelerometer 2')
+% Plot af EMG og accelerometer med to y akser
+figure
+hold on
+[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000))
+set(hAx(1),'fontsize',20);
+set(hAx(2),'fontsize',20);
+legend('EMG','Vinkel')
 
+set(hAx(1), 'XLim',[0 10])
+set(hAx(1),'XTick',[0:1:10])
+set(get(hAx(1),'Xlabel'),'string','Tid [s]')
 
+set(hAx(2), 'YLim',[0 90])
+set(hAx(2),'YTick',[0:10:90])
+set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]')
+
+set(hAx(1), 'YLim',[-0.1 1])
+set(hAx(1),'YTick',[0:0.1:1])
+set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
+
+% Plot af EMG med grader og spænding
+figure
+plot(grader, nedogop_emg)
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
+xlim([0 90])
+set(gca,'XTick',[0:10:90])
 
 
- 
-% % acc3=zeros([1 575]);
-% % for ii =1:575
-% %     acc3(ii)=offsetg1+(sensitivitet1*(1*ii));
-% % end
-% % 
-% % acc4=zeros([1 575]);
-% % for ii =1:575
-% %     acc4(ii)=offsetg1+(sensitivitet1*(1*ii));
-% % end
-% 
 
