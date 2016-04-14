@@ -142,6 +142,17 @@ M.l W. Krzyzewski},
   Timestamp                = {2016.03.10}
 }
 
+@Manual{ankle2016,
+  Title                    = {Ankle Fracture},
+  Author                   = {PA Foot},
+  Year                     = {2016},
+
+  Comment                  = {20-03-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.29},
+  Url                      = {http://pafootdoctors.com/ankle-fractures-stress-fractures-broken-ankle/}
+}
+
 @Book{grehl2011,
   Title                    = {Depression and QOL in patients with ALS: How do self-ratings and ratings by relatives differ?},
   Author                   = {T. Grehl and M. Ruppand and P. Buddle, et. al.},
@@ -187,6 +198,17 @@ M.l W. Krzyzewski},
   Timestamp                = {2016.03.07}
 }
 
+@Book{seniam2016,
+  Title                    = {SENIAM 8: European Recommendations for Surface ElectromMyoGraphy},
+  Author                   = {H. J. Hermens and B. Freriks and R. Merletti et al.},
+  Publisher                = {Roessingh Research and Development},
+  Year                     = {1999},
+
+  Doi                      = {90-75452-15-2},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.29}
+}
+
 @Manual{orthopedics2016,
   Title                    = {Typical Foot Function During Walking},
   Author                   = {TIS Orthopedics II},
@@ -224,6 +246,17 @@ R. M Enoka},
   Doi                      = {10.1007/978-540-29807-6_298},
   Owner                    = {signehk},
   Timestamp                = {2016.03.10}
+}
+
+@Manual{squat2015,
+  Title                    = {Chair Squat},
+  Author                   = {Workout Labs},
+  Year                     = {2015},
+
+  Comment                  = {20-03-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.03.29},
+  Url                      = {http://workoutlabs.com/exercise-guide/chair-squat/}
 }
 
 @Book{martini2012,

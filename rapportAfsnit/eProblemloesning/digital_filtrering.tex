@@ -1,0 +1,10 @@
+\section{Digital filtrering}
+
+Der findes to former for digital filtrering; Infinite Impulse Response (IIR) og Finite Impulse Response (FIR). Der findes flere fordele og flere ulemper ved begge filtertyper, og nogle af disse nævnes i dette afsnit\citep{blandford2012}.
+
+FIR-filtre kan altid laves, så de har en lineær fase, og de er altid stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan så benyttes som digitalt filter \citep{blandford2012}. 
+
+I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og de kan være ustabile. Ud over dette har IIR-filtre stejlere sidelobes end et IIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev og elliptiske filtre \citep{blandford2012}. 
+\\
+
+Da der ønskes at frafiltrere lavfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR højpasfilter være fordelagtigt for at opnå en skarpere hældning i transitionsbåndet. Under pilotforsøget i \autoref{sec:pilotforsoeg} ...
