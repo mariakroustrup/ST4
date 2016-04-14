@@ -117,8 +117,8 @@ figure
 plot(grader, nedogop_emg)
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
-xlim([0 90])
-set(gca,'XTick',[0:10:90])
+xlim([0 180])
+set(gca,'XTick',[0:10:80])
 
 
 
