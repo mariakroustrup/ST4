@@ -24,9 +24,8 @@ Derudover skal systemet være brugervenligt ved at være kompakt, mobilt og ikke
 \label{fig:blokdiagram}
 \end{figure}
 
-I dette projekt er der valgt at udarbejde en prototype, som har til formål at bøje knæleddet, når rectus femoris kontraherer. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG-elekroder og accelerometre, til at opsamle biologiske signaler. 
+I dette projekt er der valgt at udarbejde en prototype, som har til formål at bevæge knæleddet, når rectus femoris kontraherer. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG-elekroder og accelerometre, til at opsamle biologiske signaler. 
 For at registrere muskelaktivitet anvendes elektroder og en EMG-forstærker, der har til formål at forstærke, filtrere og ensrette muskelsignalet, der opsamles. 
-Accelerometre anvendes for at give systemet et input om, knæleddets vinkling  under en squat-øvelse. 
+Der anvendes accelerometre som inputsignal. Inputsignalet omregnes til en vinkel svarende til knæleddets vinkel under en squat-øvelse. 
 Det opsamlede signal sendes herefter videre til den digitale del af systemet, hvilket er bestående af et Bluetooth Low Energy Pioneer kit (CY8CKIT-042-BLE), som opfanger de biologiske signaler og overfører dem trådløst til en CySmartUSB BLE Dongle sat i en computer, som kan kommunikere med prototypen af exoskelettet udarbejdet i LEGO Mindstorm \fxnote{tjek om dette er rigtigt}. 
-
 

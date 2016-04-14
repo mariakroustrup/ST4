@@ -1,5 +1,5 @@
 \subsection{Accelerometer} \label{sec:acc}
-Et accelerometer er en elektromekanisk enhed, som både kan måle statisk og dynamisk accerleration. Den statiske acceleration kan være tyngdekraften, hvortil det er muligt at bestemme orienteringen af accelerometeret i forhold til jorden. De dynamiske kræfter såsom bevægelse, stød og vibrationer, gør det muligt at analysere accelerometeres bevægelse samt hastighed. 
+Et accelerometer er en elektromekanisk enhed, som både kan måle statisk og dynamisk accerleration. Den statiske acceleration kan være tyngdekraften, hvor det er muligt at bestemme orienteringen af accelerometeret i forhold til jorden. De dynamiske kræfter såsom bevægelse, stød og vibrationer, gør det muligt at analysere accelerometeres bevægelse samt hastighed. 
 
 I dette projekt anvendes accelerometeret ADXL335Z, som har pin konfigurationen, som kan ses på \autoref{fig:acc_pin}. Accelerometeret er en 3-aksialt sensor, som har et arbejdsområde på minimum $\pm$ $3~g$, og et output som spænding. Det analoge output signal er proportionelle med accelerationen \citep{analogdevices2009}. 
 
@@ -12,9 +12,9 @@ I dette projekt anvendes accelerometeret ADXL335Z, som har pin konfigurationen, 
 \end{figure}
 
 \noindent
-Accelerometeret har en single-supply spændingsforsyning, som ligger mellem $1,8 - 3,6~V$, denne er reguleret til $XX~V$ via tilkobling af en regulator \fxnote{afhænger af hvad Jan sætter regulatoren til}. Offsettet er afhængig af spændingsforsyningen, men ligger ved $3,4~V$ på $1,7~V$, denne beregnes som det halve af spændingsforsyningen. Båndbredden og støjen varierer for akserne. For x og y-aksen ligger båndbredden mellem $0,5 - 1.600~Hz$ og støjen normalt på $150~\mu g/\sqrt{Hz}$ RMS, mens båndbredden for z-aksen ligger mellem $0,5 - 550~Hz$ og støjen normalt på $300~\mu g/\sqrt{Hz}$ RMS. \fxnote{Den spektrale effekttæthed måles i $\mu g/$ og dividere dette med kvadratroden for båndbredden for signalet $\sqrt{Hz}$, hvilket giver RMS af accelerationsstøjen ved en temperatur på $25^\circ$C} \citep{analogdevices2010}. 
+Accelerometeret har en single-supply spændingsforsyning, som ligger mellem $1,8 - 3,6~V$.  Offsettet er afhængig af spændingsforsyningen, da spændingsforsyningen ligger på $3,4~V$ bliver offsettet $1,7~V$, som det halve af spændingsforsyningen. Båndbredden og støjen varierer for akserne. For x og y-aksen ligger båndbredden mellem $0,5 - 1.600~Hz$ og støjen normalt på $150~\mu g/\sqrt{Hz}$ RMS, mens båndbredden for z-aksen ligger mellem $0,5 - 550~Hz$ og støjen normalt på $300~\mu g/\sqrt{Hz}$ RMS. \fxnote{Den spektrale effekttæthed måles i $\mu g/$ og dividere dette med kvadratroden for båndbredden for signalet $\sqrt{Hz}$, hvilket giver RMS af accelerationsstøjen ved en temperatur på $25^\circ$C} \citep{analogdevices2010}. 
 
-Da accelerometeret er ratiometrisk, hvilket vil sige at outputtet er direkte propotienelt med input, afhænger sensitiviteten ligesom offsettet af spændingsforsyningen. Ved $3.4~V$ spændingsforsyning, ligger forsyningen på $1.7~mV/g$ med en tolerance på $XX~\%$, hvor outputimpedansen er $XX~K\omega$ med en afvigelse på $XX~\%$ \citep{analogdevices2010}. 
+Da accelerometeret er ratiometrisk, hvilket vil sige at outputtet er direkte propotienelt med input, afhænger sensitiviteten ligesom offsettet af spændingsforsyningen. Ved $3V$ spændingsforsyning, ligger forsyningen på $300~mV/g$ med en tolerance på $\pm 9.1~\%$, hvor outputimpedansen er $-32~K\omega$ med en afvigelse på $\pm 15~\%$ \citep{analogdevices2010}. 
 
 \begin{figure}[H]
 \centering
@@ -24,7 +24,7 @@ Da accelerometeret er ratiometrisk, hvilket vil sige at outputtet er direkte pro
 \end{figure}
 
 \noindent
-Ved hældning af accelerometeret vil der ske en acceleration i forhold til tyngdekraften, afhængig af plan samt retning som det hældes i. Dette fremgår af \autoref{fig:acc}. Herved vil der ske en ændring i spændingen fra referencepunktet ved en hældning på $0^{\circ}$. Hvis accelerometeret eksempelvis befinder sig i den øverste situation på \autoref{fig:acc}, påvirkes x-aksen med $-1~g$. Denne sammenhæng og derved patientens hældning kan udtrykkes ved følgende ligning \citep{Cliford2005}
+Ved hældning af accelerometeret vil der ske en acceleration i forhold til tyngdekraften, afhængig af plan samt hældningens retning. Dette fremgår af \autoref{fig:acc}. Herved vil der ske en ændring i spændingen fra referencepunktet ved en hældning på $0^{\circ}$. Hvis accelerometeret eksempelvis befinder sig i den øverste situation på \autoref{fig:acc}, påvirkes x-aksen med $-1~g$. Denne sammenhæng og derved patientens hældning kan udtrykkes ved følgende ligning \citep{Cliford2005}
 
 \begin{equation} \label{equ:vinkler}
 	V_{out} = V_{offset} + sensitiviteten \cdot \sin(vinklen) \\
