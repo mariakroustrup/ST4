@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -178,6 +178,11 @@ R.~F. Escamilla and M.l~W. Krzyzewski.
 \newblock \emph{Medicine and Science in Sports and Exercise}, 2001.
 \newblock \doi{0195-9131/01/3301-0127/$3.00/0}.
 
+\bibitem[Labs(2015)]{squat2015}
+Workout Labs.
+\newblock \emph{Chair Squat}, 2015.
+\newblock URL \url{http://workoutlabs.com/exercise-guide/chair-squat/}.
+
 \bibitem[Schoenfeld(2010)]{schoenfeld2010}
 B.~J. Schoenfeld.
 \newblock Squatting kinematics and kinetics and their application to exercise
@@ -191,6 +196,39 @@ Advancer Technologies.
   Microcontroller Application}, 2013.
 \newblock URL
   \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+
+\bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
+R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
+\newblock Surface electromyography signal processing and classification
+  techniques.
+\newblock \emph{Department of Electrical, Electronic and Systems Engineering,
+  Universiti Kebangsaan Malaysia,}, 2013.
+\newblock \doi{10.3390/s120912431}.
+
+\bibitem[Keenan and Enoka(2012)]{keenan2012}
+K.~G Keenan and R.~M Enoka.
+\newblock Electromyography.
+\newblock \emph{Encyclopedia of exercise medicine in health and disease}, 2012.
+\newblock \doi{10.1007/978-540-29807-6_298}.
+
+\bibitem[Zouridakis and Morre(2003)]{morre2003}
+G.~Zouridakis and J.~Morre.
+\newblock \emph{Biomedical Technology and Devices Handbook}.
+\newblock 2003.
+\newblock \doi{978-1-4398-7071-6}.
+
+\bibitem[Devices(2009)]{analogdevices2009}
+Analog Devices.
+\newblock \emph{EVAL-ADXL335Z}.
+\newblock Analog Devices, 2009.
+\newblock URL
+  \url{http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}.
+
+\bibitem[Devices(2010)]{analogdevices2010}
+Analog Devices.
+\newblock \emph{ADXL335}, 2010.
+\newblock URL
+  \url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL335.pdf}.
 
 \bibitem[Corporation(2015)]{cypresspsoc2015}
 Cypress~Semiconductor Corporation.
@@ -221,10 +259,5 @@ PA~Foot.
 \newblock \emph{Ankle Fracture}, 2016.
 \newblock URL
   \url{http://pafootdoctors.com/ankle-fractures-stress-fractures-broken-ankle/}.
-
-\bibitem[Labs(2015)]{squat2015}
-Workout Labs.
-\newblock \emph{Chair Squat}, 2015.
-\newblock URL \url{http://workoutlabs.com/exercise-guide/chair-squat/}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  30 MAR 2016 10:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  14 APR 2016 10:52
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -1903,12 +1903,12 @@ eringer: en overordnet
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Nuv
 aerende_teknologier.tex [4])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Kna
-eleddet.tex [5] <figures/knaet.png, id=161, 530.98375pt x 404.51125pt>
+eleddet.tex [5] <figures/knaet.png, id=161, 484.81125pt x 307.90031pt>
 File: figures/knaet.png Graphic file (type png)
 
 <use figures/knaet.png>
 Package pdftex.def Info: figures/knaet.png used on input line 7.
-(pdftex.def)             Requested size: 352.80135pt x 268.7744pt.
+(pdftex.def)             Requested size: 352.80135pt x 224.07472pt.
 
 <figures/knae_anatomi.jpg, id=166, 872.25874pt x 469.755pt>
 File: figures/knae_anatomi.jpg Graphic file (type jpg)
@@ -1916,131 +1916,215 @@ File: figures/knae_anatomi.jpg Graphic file (type jpg)
 <use figures/knae_anatomi.jpg>
 Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 18.
 (pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
- [6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>])
+ [6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>] <figures/
+squat.png, id=185, 310.15875pt x 274.77657pt>
+File: figures/squat.png Graphic file (type png)
+
+<use figures/squat.png>
+Package pdftex.def Info: figures/squat.png used on input line 36.
+(pdftex.def)             Requested size: 220.5pt x 195.34427pt.
+ [7 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knae_anatomi.jpg>]
+
+Package natbib Warning: Citation `escamilla' on page 8 undefined on input line 
+43.
+
+)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/dProblemformulering
-/Problemafgraensning.tex [7 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figur
-es/knae_anatomi.jpg>]
+/Problemafgraensning.tex
 Underfull \hbox (badness 1281) in paragraph at lines 5--7
 []\T1/cmr/m/n/10.95 Da ALS-patienter oplever progressivt muskelsvind, har dette
  indflydelse på deres
  []
 
-) [8]
+) [8 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/squat.png>]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/sy
 stembeskrivelse.tex
-<figures/blokdiagram.png, id=210, 888.31876pt x 170.6375pt>
+<figures/blokdiagram.png, id=214, 1157.32375pt x 221.82875pt>
 File: figures/blokdiagram.png Graphic file (type png)
 
 <use figures/blokdiagram.png>
-Package pdftex.def Info: figures/blokdiagram.png used on input line 18.
-(pdftex.def)             Requested size: 441.0pt x 84.71187pt.
+Package pdftex.def Info: figures/blokdiagram.png used on input line 22.
+(pdftex.def)             Requested size: 441.0pt x 84.52596pt.
  [9
 
  <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/blokdiagram.png>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/EM
-G_acc.tex <figures/sinussignal.png, id=227, 273.27094pt x 217.5628pt>
+G_acc.tex <figures/sinussignal.png, id=232, 273.27094pt x 217.5628pt>
 File: figures/sinussignal.png Graphic file (type png)
 
 <use figures/sinussignal.png>
 Package pdftex.def Info: figures/sinussignal.png used on input line 10.
 (pdftex.def)             Requested size: 352.80135pt x 280.89952pt.
+ [10])
+(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/EM
+G_karakteristik.tex)
+(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/ac
+c.tex [11 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/sinussignal.png
+>] <figures/acc_pin.png, id=271, 320.19624pt x 237.88875pt>
+File: figures/acc_pin.png Graphic file (type png)
+
+<use figures/acc_pin.png>
+Package pdftex.def Info: figures/acc_pin.png used on input line 9.
+(pdftex.def)             Requested size: 264.60269pt x 196.58731pt.
+ <figures/acc.png, id=278, 316.18124pt x 256.96pt>
+File: figures/acc.png Graphic file (type png)
+
+<use figures/acc.png>
+Package pdftex.def Info: figures/acc.png used on input line 21.
+(pdftex.def)             Requested size: 352.80135pt x 286.74243pt.
+ [12 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/acc_pin.png>]
+
+Package natbib Warning: Citation `Cliford2005' on page 13 undefined on input li
+ne 27.
+
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/lo
-esningsstrategi.tex [10 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/s
-inussignal.png>] <figures/CY8CKIT-042.png, id=242, 552.26324pt x 283.65974pt>
+esningsstrategi.tex
+<figures/CY8CKIT-042.png, id=298, 552.26324pt x 283.65974pt>
 File: figures/CY8CKIT-042.png Graphic file (type png)
 
 <use figures/CY8CKIT-042.png>
 Package pdftex.def Info: figures/CY8CKIT-042.png used on input line 8.
 (pdftex.def)             Requested size: 220.5pt x 113.25412pt.
-
+ [13 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/acc.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
+Package natbib Warning: Citation `ADC2014' on page 14 undefined on input line 1
+8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
-) (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.bbl [11 <C:/Users/passw/On
-eDrive/Documents/GitHub/ST4/figures/CY8CKIT-042.png>]
+) (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.bbl [14 <C:/Users/passw/On
+eDrive/Documents/GitHub/ST4/figures/CY8CKIT-042.png>] [15]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [12
+) [16
 
-] [13])
-[14]
+] [17])
+[18]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/Pilot
-forsoeg.tex [15
+forsoeg.tex
+Underfull \hbox (badness 1137) in paragraph at lines 46--49
+\T1/cmr/m/n/10.95 Hertil anvendes én positiv-, negativ- samt én referenceelektr
+ode. Forinden påsættelse
+ []
 
-] <figures/laarmuskel.png, id=325, 329.73187pt x 514.92375pt>
+[19
+
+] <figures/laarmuskel.png, id=393, 329.73187pt x 514.92375pt>
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
-Package pdftex.def Info: figures/laarmuskel.png used on input line 54.
+Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
-<figures/reference.png, id=330, 325.215pt x 410.53375pt>
+<figures/reference.png, id=398, 325.215pt x 410.53375pt>
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
-Package pdftex.def Info: figures/reference.png used on input line 63.
+Package pdftex.def Info: figures/reference.png used on input line 61.
 (pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
 
 
-LaTeX Warning: Reference `sec:test_acc' on page 16 undefined on input line 69.
+LaTeX Warning: Reference `sec:test_acc' on page 20 undefined on input line 67.
 
-[16 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/U
+[20 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/U
 sers/passw/OneDrive/Documents/GitHub/ST4/figures/reference.png>]
-<figures/accelerometervinkel.png, id=343, 172.39406pt x 165.61874pt>
+<figures/accelerometervinkel.png, id=412, 172.39406pt x 165.61874pt>
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
-Package pdftex.def Info: figures/accelerometervinkel.png used on input line 73.
+Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
 
 (pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
+ [21 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometervinkel.
+png>]
+<figures/Pilotforsoeg/baselineogemg.png, id=425, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
-<figures/squat.png, id=345, 310.15875pt x 274.77657pt>
-File: figures/squat.png Graphic file (type png)
- <use figures/squat.png>
-Package pdftex.def Info: figures/squat.png used on input line 93.
-(pdftex.def)             Requested size: 220.5pt x 195.34427pt.
+<use figures/Pilotforsoeg/baselineogemg.png>
+Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
+ine 170.
+(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
+ [22]
+<figures/Pilotforsoeg/emgfft.png, id=436, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
-[17 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometervinkel.p
-ng>] [18 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/squat.png>]
+<use figures/Pilotforsoeg/emgfft.png>
+Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 179
+.
+(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
 
-LaTeX Warning: Reference `NirushaFrekvensanalyse' on page 19 undefined on input
- line 177.
+<figures/Pilotforsoeg/accfft.png, id=439, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
-) 
+<use figures/Pilotforsoeg/accfft.png>
+Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 192
+.
+(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
+ [23 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
+eogemg.png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pi
+lotforsoeg/emgfft.png (PNG copy)>]
+
+LaTeX Warning: Reference `sec:resul_linear' on page 24 undefined on input line 
+198.
+
+<figures/Pilotforsoeg/accvinkel.png, id=450, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
+
+<use figures/Pilotforsoeg/accvinkel.png>
+Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line 
+203.
+(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
+
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=453, 1028.34187pt x 490.08093pt>
+File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
+
+<use figures/Pilotforsoeg/emg_vinkler_tid.png>
+Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
+ line 212.
+(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
+ [24 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.
+png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotfors
+oeg/accvinkel.png (PNG copy)>])
+
+Package natbib Warning: There were undefined citations.
+
+
 AED: lastpage setting LastPage
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+[25 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/emg_vink
+ler_tid.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
  (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 445681D91B1D0C3A549619EFF4A3FF97;237.
+(rerunfilecheck)             Checksum: DDCE39F7B4F79594ADFCC66AF7C31E09;237.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 26322 strings out of 493921
- 461472 string characters out of 3144876
+ 26416 strings out of 493921
+ 463891 string characters out of 3144876
  769798 words of memory out of 3000000
- 29013 multiletter control sequences out of 15000+200000
+ 29072 multiletter control sequences out of 15000+200000
  26677 words of font info for 74 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
  57i,12n,92p,1196b,972s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2048,26 +2132,30 @@ Here is how much of TeX's memory you used:
 C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/cm-super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/cm-super/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/cm-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/cm-super/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm
--super/sftt1095.pfb>
-Output written on main.pdf (19 pages, 2749285 bytes).
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/cm-super/sfbx1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/cm-super/sfbx1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/cm-super/sfbx1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/cm-super/sfrm0600.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/cm-super/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/cm-super/sfrm0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-
+super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-sup
+er/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/
+sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sft
+i1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt10
+95.pfb>
+Output written on main.pdf (25 pages, 3077697 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 573 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
