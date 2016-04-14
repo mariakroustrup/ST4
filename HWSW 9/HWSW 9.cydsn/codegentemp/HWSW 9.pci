@@ -1,0 +1,15 @@
+# HWSW 9
+# 2016-04-04 09:11:25Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "\UART:tx(0)\" iocell 7 1
+set_io "\UART:rx(0)\" iocell 7 0
+set_io "\ADC:ExtVref(0)\" iocell 1 7
+set_io "X(0)" iocell 2 0
+set_io "Y(0)" iocell 2 1
+set_io "Z(0)" iocell 2 2
+set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0
