@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  14 APR 2016 10:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  14 APR 2016 13:38
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -1960,13 +1960,13 @@ Package pdftex.def Info: figures/sinussignal.png used on input line 10.
 G_karakteristik.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/ac
 c.tex [11 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/sinussignal.png
->] <figures/acc_pin.png, id=271, 320.19624pt x 237.88875pt>
+>] <figures/acc_pin.png, id=272, 320.19624pt x 237.88875pt>
 File: figures/acc_pin.png Graphic file (type png)
 
 <use figures/acc_pin.png>
 Package pdftex.def Info: figures/acc_pin.png used on input line 9.
 (pdftex.def)             Requested size: 264.60269pt x 196.58731pt.
- <figures/acc.png, id=278, 316.18124pt x 256.96pt>
+ <figures/acc.png, id=279, 316.18124pt x 256.96pt>
 File: figures/acc.png Graphic file (type png)
 
 <use figures/acc.png>
@@ -1980,7 +1980,7 @@ ne 27.
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/lo
 esningsstrategi.tex
-<figures/CY8CKIT-042.png, id=298, 552.26324pt x 283.65974pt>
+<figures/CY8CKIT-042.png, id=299, 552.26324pt x 283.65974pt>
 File: figures/CY8CKIT-042.png Graphic file (type png)
 
 <use figures/CY8CKIT-042.png>
@@ -2024,26 +2024,22 @@ ode. Forinden påsættelse
 
 [19
 
-] <figures/laarmuskel.png, id=393, 329.73187pt x 514.92375pt>
+] <figures/laarmuskel.png, id=394, 329.73187pt x 514.92375pt>
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
 Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
-<figures/reference.png, id=398, 325.215pt x 410.53375pt>
+<figures/reference.png, id=399, 325.215pt x 410.53375pt>
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
 Package pdftex.def Info: figures/reference.png used on input line 61.
 (pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
-
-
-LaTeX Warning: Reference `sec:test_acc' on page 20 undefined on input line 67.
-
-[20 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/U
-sers/passw/OneDrive/Documents/GitHub/ST4/figures/reference.png>]
-<figures/accelerometervinkel.png, id=412, 172.39406pt x 165.61874pt>
+ [20 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/
+Users/passw/OneDrive/Documents/GitHub/ST4/figures/reference.png>]
+<figures/accelerometervinkel.png, id=414, 172.39406pt x 165.61874pt>
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
@@ -2052,7 +2048,7 @@ Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
 (pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
  [21 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometervinkel.
 png>]
-<figures/Pilotforsoeg/baselineogemg.png, id=425, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/baselineogemg.png, id=428, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/baselineogemg.png>
@@ -2060,7 +2056,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
 ine 170.
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
  [22]
-<figures/Pilotforsoeg/emgfft.png, id=436, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/emgfft.png, id=439, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emgfft.png>
@@ -2068,7 +2064,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 179
 .
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
 
-<figures/Pilotforsoeg/accfft.png, id=439, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accfft.png, id=442, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accfft.png>
@@ -2078,11 +2074,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 192
  [23 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
 eogemg.png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pi
 lotforsoeg/emgfft.png (PNG copy)>]
-
-LaTeX Warning: Reference `sec:resul_linear' on page 24 undefined on input line 
-198.
-
-<figures/Pilotforsoeg/accvinkel.png, id=450, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accvinkel.png, id=454, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accvinkel.png>
@@ -2090,7 +2082,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line
 203.
 (pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
 
-<figures/Pilotforsoeg/emg_vinkler_tid.png, id=453, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=457, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler_tid.png>
@@ -2100,13 +2092,46 @@ Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
  [24 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.
 png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotfors
 oeg/accvinkel.png (PNG copy)>])
+(C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/test_
+acc.tex [25 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/
+emg_vinkler_tid.png (PNG copy)>]
+<figures/vinkeltest.jpg, id=492, 752.8125pt x 1339.0025pt>
+File: figures/vinkeltest.jpg Graphic file (type jpg)
+
+<use figures/vinkeltest.jpg>
+Package pdftex.def Info: figures/vinkeltest.jpg used on input line 72.
+(pdftex.def)             Requested size: 132.30135pt x 235.30966pt.
+ [26]
+<figures/acc_paavirkning.png, id=506, 782.17218pt x 423.08063pt>
+File: figures/acc_paavirkning.png Graphic file (type png)
+
+<use figures/acc_paavirkning.png>
+Package pdftex.def Info: figures/acc_paavirkning.png used on input line 90.
+(pdftex.def)             Requested size: 220.5pt x 119.26872pt.
+ [27 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/vinkeltest.jpg> <C:/
+Users/passw/OneDrive/Documents/GitHub/ST4/figures/acc_paavirkning.png>]
+<figures/lineaerregression.png, id=517, 1011.78pt x 648.4225pt>
+File: figures/lineaerregression.png Graphic file (type png)
+
+<use figures/lineaerregression.png>
+Package pdftex.def Info: figures/lineaerregression.png used on input line 102.
+(pdftex.def)             Requested size: 441.0pt x 282.62547pt.
+
+<figures/paavirkning.png, id=521, 1400.23125pt x 725.71124pt>
+File: figures/paavirkning.png Graphic file (type png)
+
+<use figures/paavirkning.png>
+Package pdftex.def Info: figures/paavirkning.png used on input line 116.
+(pdftex.def)             Requested size: 441.0pt x 228.55595pt.
+ [28 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/lineaerregression.pn
+g (PNG copy)>] [29 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/paavir
+kning.png (PNG copy)>])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[25 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/emg_vink
-ler_tid.png (PNG copy)>]
+[30]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
  (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.aux)
@@ -2114,17 +2139,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DDCE39F7B4F79594ADFCC66AF7C31E09;237.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 26416 strings out of 493921
- 463891 string characters out of 3144876
+ 26484 strings out of 493921
+ 465296 string characters out of 3144876
  769798 words of memory out of 3000000
- 29072 multiletter control sequences out of 15000+200000
+ 29100 multiletter control sequences out of 15000+200000
  26677 words of font info for 74 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
  57i,12n,92p,1196b,972s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2153,9 +2174,9 @@ er/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/
 sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sft
 i1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt10
 95.pfb>
-Output written on main.pdf (25 pages, 3077697 bytes).
+Output written on main.pdf (30 pages, 3345264 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 664 PDF objects out of 1000 (max. 8388607)
+ 175 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

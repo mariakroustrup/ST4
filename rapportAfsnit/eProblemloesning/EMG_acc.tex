@@ -12,16 +12,13 @@ Et illustration af hvordan EMG-forstærkeren behandler et målt signal ses af \a
 \label{fig:sinussignal}
 \end{figure}
 
-
-
- udregningen af knækfrekvensen ses i \autoref{eq:lavcutfre}. 
+Med udgangspunkt i \autoref{fig:sinussignal} ses signalet som sinus kurven. Hertil passerer det højpasfilteret der dæmper dc støjen og dermed offsettet i signalet. Dette ses som signalet sinuskurven der svinger omkring 0, og er nøvendig for at ensretningen viker efter hensigten. Dernæst ensrettes signalet, således at de negative værdier inverteres, og at der kun er svingninger i positiv retning. Dernæst fortages et envalope af signalet, og ses som det udglattede signalet, hvortil der er beregnet en knækfrekvens på $1,94~Hz$, ud fra \autoref{eq:lavcutfre}. 
 
 \begin{equation}\label{eq:lavcutfre}
 f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi*1*10^{-6}F*80,6*10^3\Omega} = 1,94~Hz
 \end{equation}
 
-
-Muskelsensoren V3 har en minimum spændingsforsyning på $\pm$ 3 V samt en maksimal spændingsforsyning på $\pm$ 30 V. Herudover er der mulighed for at justere gain fra 0,002 gange - 20,700 gange \citep{advancertech2013}.
+EMG-forstærkeren har en minimum spændingsforsyning på $\pm 3~V$ samt en maksimal spændingsforsyning på $\pm 30~V$. Herudover er der mulighed for at justere gain fra 0,002 gange - 20,700 gange \citep{advancertech2013}. 
 
 
 
