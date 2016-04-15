@@ -244,12 +244,12 @@ m3Vmin = min(a3)
 
 figure('name','ACC måling 1','numbertitle','off')
 %subplot(2,3,1)
-plot(f,m1P1acc1_x);
-axis([0 60 0 2]);
+semilogx(f,m1P1acc1_x);
+% axis([0 60 0 2]);
 xlabel('Frekvens [Hz]')
-xlim([-0.1 1])
+xlim([10^-1 10^2])
 ylabel('Størrelse')
-ylim([-0.1 1])
+ylim([0 1.4*10^-3])
 %title({'Accelerometer 1 - x-aksen';'Frekvensanalyse'})
 set(gca,'fontsize',20);
 

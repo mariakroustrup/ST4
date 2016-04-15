@@ -45,6 +45,7 @@ xlim([10^-1 10^2])
 title('Baseline måling')
 set(gca,'fontsize',20);
 
+
 % Nedogop
 subplot(2,1,2)
 semilogx(f, m1P1_nedogop_emg.m1P1)
