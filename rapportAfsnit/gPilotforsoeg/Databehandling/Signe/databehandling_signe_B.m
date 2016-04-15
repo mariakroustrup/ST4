@@ -252,6 +252,7 @@ ylabel('Størrelse')
 ylim([0 1.4*10^-3])
 %title({'Accelerometer 1 - x-aksen';'Frekvensanalyse'})
 set(gca,'fontsize',20);
+box off
 
 % subplot(2,3,2)
 % plot(f,m1P1acc1_y);

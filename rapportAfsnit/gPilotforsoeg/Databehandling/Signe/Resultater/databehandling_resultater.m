@@ -24,6 +24,7 @@ xlabel('Tid [s]');
 ylabel('Spænding [V]');
 legend('Baseline', '2. måling')
 set(gca,'fontsize',20);
+box off
 
 %% Plot af frekvensanalyse (Basline - Signe)
 %load fft af baseline og nedogop.  Gemt variabel fra 'databehandling_signe_B'
@@ -44,6 +45,7 @@ ylabel('Størrelse')
 xlim([10^-1 10^2])
 title('Baseline måling')
 set(gca,'fontsize',20);
+box off
 
 
 % Nedogop
@@ -57,7 +59,7 @@ ylim([0 3*10^-4])
 ylabel('Størrelse')
 title('2. måling')
 set(gca,'fontsize',20);
-
+box off
 
 
 

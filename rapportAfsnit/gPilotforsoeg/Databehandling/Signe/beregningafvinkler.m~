@@ -91,7 +91,6 @@ set(gca,'XTick',[0:1:10])
 ylim([0 90])
 set(gca,'YTick',[0:10:90])
 set(gca,'fontsize',20);
-box off 
 
 % Plot af EMG og accelerometer med to y akser
 figure
@@ -112,34 +111,15 @@ set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]')
 set(hAx(1), 'YLim',[-0.1 1])
 set(hAx(1),'YTick',[0:0.1:1])
 set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
-box off
 
-Nedogop2 = Nedogop_emgo(1:585)
-Nedogop3 = Nedogop_emgo(586:1170)
-
+nedogop_emg =
 % Plot af EMG med grader og spænding
 figure
-plot(grader(grader/2), Nedogop2, 'r')
-hold on 
-plot(grader(1:90), Nedogop3, 'g')
+plot(grader, nedogop_emg)
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 xlim([0 180])
-%set(gca,'XTick',[0:10:180])
+set(gca,'XTick',[0:10:80])
 
-set(gca, 'XTick',[90, 120, 150, 180])
-set(gca, 'XTicklabel', [90, 60, 30, 0])
-box off
-
-
-figure
-plot(grader, Nedogopo)
-hold on 
-plot(grader(1:90), Nedogop3, 'g')
-xlabel('Vinkel [\circ]')
-ylabel('Spænding [V]')
-xlim([0 180])
-set(gca,'XTick',[0:10:180])
-box off
 
 

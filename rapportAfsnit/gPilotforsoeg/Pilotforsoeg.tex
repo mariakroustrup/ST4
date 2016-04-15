@@ -167,12 +167,14 @@ Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsper
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/emgfft.png}
-	\caption{Frekvensanalyse med semilogaritmisk skala på X-aksen af EMG-måling for baseline og 2. måling. Bemærk at der ikke er samme værdier op af Y-aksen}
+	\caption{Frekvensanalyse med semilogaritmisk skala på X-aksen af EMG-måling for baseline og 2. måling. Bemærk at der ikke er samme skalaer op af Y-aksen for de to grafer. Der ses derfor mere støj på 2. måling end baseline målingen.}
 	\label{fig:emgfft}
 \end{figure}
 
-Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. For begge grafer er der foretaget en semilogaritmisk skala på X-aksen, hvilket gør at der er samme værdier op af Y-aksen. Det ses ud fra målingerne at der er mere støj på 2. måling end baseline målingen. Ud fra målingerne at signalet er meget lavfrekven 
-Der opserveres støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. Derudover fremgår det ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent, $0-2~Hz$. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
+Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. For begge grafer er der foretaget en semilogaritmisk skala på X-aksen, hvilket resulterer i forskellige skalaer op af Y-aksen. Det ses ud fra målingerne et højere støjniveau på 2. måling end baseline målingen, dette støjniveau er dog relativt lav. 
+Der observeres en DC-komponent ved $0~Hz$, hvilket svarer til det offset der er på signalet. 
+Det fremgår ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er Nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
+Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent $0.4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
 
 
 \subsubsection{Resultater for accelerometer målinger} \label{sec:acc_fft}
@@ -180,12 +182,12 @@ Der opserveres støjsignaler på signalet, udover en dc-komponent ved $0~Hz$. De
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/accfft.png}
-	\caption{Frekvensanalyse af baseline måling for accelerometer}
+	\caption{Frekvensanalyse af baseline måling for accelerometeret, hvor X-aksen er en semilogaritmisk skala}
 	\label{fig:accfftx}
 \end{figure}
-Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i X-aksen. Ud fra dette ses ingen støjsignaler ud over en dc-komponent, der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen er der ingen $50~Hz$ støj, hvortil årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
+Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i X-aksen. Ud fra dette ses yderligere støjsignaler end DC-komponent, der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen er der ingen $50~Hz$ støj, hvor årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
 
-Spændingerne fra accelrometeret repræsenterer vinklerne for femur og tibia i Y-aksen. Denne spændingsværdi ønskes omregnet til grader, for således at undersøge vinklen af knæet. Til at omregne spændingen fra begge acceleromtre til grader anvendes målingerne anvendt i \autoref{sec:resul_linear}. Disse resultater er anvendt i funktioner, hvortil lineær interpolation benyttes. EMG-spændingerne for 2. måling er hertil anvendt i funktionerne, således graderne for EMG-målingen findes.
+Spændingerne fra accelrometeret repræsenterer vinklerne for femur og tibia i Y-aksen. Denne spændingsværdi ønskes omregnet til grader, for således at undersøge vinklen af knæet. Til at omregne spændingen fra begge acceleromtre til grader anvendes målingerne anvendt i \autoref{sec:resul_linear}. Disse resultater er anvendt i funktioner, hvor lineær interpolation benyttes. EMG-spændingerne for 2. måling er hertil anvendt i funktionerne, således graderne for EMG-målingen findes.
 Resultaterne fra omregningen visualiseres af \autoref{fig:accvinkel}. 
 
 \begin{figure}[H]
