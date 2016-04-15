@@ -119,7 +119,7 @@ Nedogop3 = Nedogop_emgo(586:1170)
 
 % Plot af EMG med grader og spænding
 figure
-plot(grader(grader/2), Nedogop2, 'r')
+%plot(grader(grader/2), Nedogop2, 'r')
 hold on 
 plot(grader(1:90), Nedogop3, 'g')
 xlabel('Vinkel [\circ]')
