@@ -34,22 +34,25 @@ m1P1_nedogop_emg=load('m1P1_nedogop')
 % subplot af fft af Baseline og Nedogop
 figure
 subplot(2,1,1)
-plot(f, m1P1_baseline_emg.m1P1);
-axis([-10 100 0 0.0008]);
-xlim([-0.5 12])
-ylim([-0.00005 0.0004])
+semilogx(f, m1P1_baseline_emg.m1P1)
+% plot(f, m1P1_baseline_emg.m1P1);
+%axis([-10 100 0 0.0008]);
+% xlim([-0.5 12])
+% ylim([-0.00005 0.0004])
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
+xlim([10^-1 10^2])
 title('Baseline måling')
 set(gca,'fontsize',20);
 
 % Nedogop
 subplot(2,1,2)
-plot(f, m1P1_nedogop_emg.m1P1);
-axis([-10 100 0 0.0008]);
+semilogx(f, m1P1_nedogop_emg.m1P1)
+% plot(f, m1P1_nedogop_emg.m1P1);
+% axis([-10 100 0 0.0008]);
 xlabel('Frekvens (Hz)')
-xlim([-0.5 12])
-ylim([-0.00005 0.0004])
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
 ylabel('Størrelse')
 title('2. måling')
 set(gca,'fontsize',20);
