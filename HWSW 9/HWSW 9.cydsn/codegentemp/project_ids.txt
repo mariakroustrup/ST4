@@ -1,6 +1,0 @@
-C:\Users\passw\OneDrive\Documents\PSoC\HWSW 9\HWSW 9.cydsn\HWSW 9.cyprj|0a641429-ea66-4ed4-b49c-a316557cc130
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|480ee493-e698-4b6a-949f-1776540f0866
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|941aabbe-3171-42e8-8aa4-0de1d990c429
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|94ca81fd-9c63-4baf-8d25-747d4c4bdce6
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|55247d9f-62a1-49a2-8234-fefc6f6e1a37
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|553e2dfe-eeb1-4b52-9d2d-9a5d1ee1f991
