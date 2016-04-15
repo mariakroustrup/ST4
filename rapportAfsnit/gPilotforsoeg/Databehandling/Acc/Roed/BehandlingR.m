@@ -84,6 +84,7 @@ hold on
 plot(t, DataPO_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest'); 
 set(gca,'fontsize',20);
+box off
 
 subplot(3,2,6)
 plot(t, DataPN_1(1:L))
@@ -97,7 +98,7 @@ hold on
 plot(t, DataPN_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
-
+box off 
 DataLO1 = (LO_1.data (1,:));
 DataLO2 = (LO_2.data (1,:));
 DataLO3 = (LO_3.data (1,:));
@@ -140,7 +141,7 @@ hold on
 plot(t, DataLO_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
-
+box off
 
 subplot(3,2,4)
 plot(t, DataLN_1(1:L))
@@ -154,6 +155,7 @@ hold on
 plot(t, DataLN_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
+box off
 
 DataVV1 = (VV_1.data (1,:));
 DataVV2 = (VV_2.data (1,:));
@@ -197,9 +199,11 @@ hold on
 plot(t, DataVV_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
+box off
 
 subplot(3,2,2)
 plot(t, DataVH_1(1:L))
+box off
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved vandret mod højre')
 xlabel('Tid [s]')
@@ -210,6 +214,7 @@ hold on
 plot(t, DataVH_3(1:L))
 legend(['X-akse'; 'Y-akse'; 'Z-akse'],'Location', 'southwest');
 set(gca,'fontsize',20);
+box off
 %% Finder mean af de forskellige målinger
 % mean plan opad
 POmean1 = mean(DataPO_1)

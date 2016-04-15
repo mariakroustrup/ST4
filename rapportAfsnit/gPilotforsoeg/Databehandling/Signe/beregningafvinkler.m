@@ -81,6 +81,10 @@ for ii=1:1170;
     grader(ii)=degreeg(ii)+degreer(ii);
 end  
 
+%% Halvdelen af grader
+for ii=1:585;
+    grader1(ii)=degreeg(ii)+degreer(ii);
+end
 %% Plots
 % Plot af grader i forhold til tid
 figure
@@ -92,6 +96,7 @@ ylim([0 90])
 set(gca,'YTick',[0:10:90])
 set(gca,'fontsize',20);
 box off 
+
 
 % Plot af EMG og accelerometer med to y akser
 figure
@@ -114,32 +119,30 @@ set(hAx(1),'YTick',[0:0.1:1])
 set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
 box off
 
-Nedogop2 = Nedogop_emgo(1:585)
-Nedogop3 = Nedogop_emgo(586:1170)
+Nedogop2 = Nedogop_emgo
+Nedogop3 = Nedogop_emgo
 
 % Plot af EMG med grader og spænding
 figure
-plot(grader(grader/2), Nedogop2, 'r')
+plot(grader, Nedogop2, 'r')
 hold on 
-plot(grader(1:90), Nedogop3, 'g')
+plot(grader, Nedogop3, 'g')
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 xlim([0 180])
 %set(gca,'XTick',[0:10:180])
 
-set(gca, 'XTick',[90, 120, 150, 180])
-set(gca, 'XTicklabel', [90, 60, 30, 0])
-box off
+% set(gca, 'XTick',[90, 120, 150, 180])
+% set(gca, 'XTicklabel', [90, 60, 30, 0])
+% box off
 
-
-figure
-plot(grader, Nedogopo)
-hold on 
-plot(grader(1:90), Nedogop3, 'g')
-xlabel('Vinkel [\circ]')
-ylabel('Spænding [V]')
-xlim([0 180])
-set(gca,'XTick',[0:10:180])
-box off
+% 
+% figure
+% plot(grader, Nedogop_emgo)
+% xlabel('Vinkel [\circ]')
+% ylabel('Spænding [V]')
+% xlim([0 180])
+% set(gca,'XTick',[0:10:180])
+% box off
 
 
