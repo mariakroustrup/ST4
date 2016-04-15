@@ -1,6 +1,3 @@
-% For at dette script kan køres, så skal de script under det grønne og røde
-% mapper køres. databehandling_groen og databehandling_roed
-
 function [fitresult, gof] = createFits(grader, groenX, groenY, groenZ, roedX, roedY1, roedZ);
 %CREATEFITS(GRADER,GROENX,GROENY,GROENZ,ROEDX,ROEDY1,ROEDZ)
 %  Create fits.
@@ -100,9 +97,7 @@ plot( fitresult{1}, xData1, yData1 );
 text(100,1.8,'R^2 = 0,9804','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på tibia:'; 'X-akse'});
+title('Accelerometer på tibia: X-akse');
 set(gca,'fontsize',20);
 legend off
 box off
@@ -113,9 +108,7 @@ plot( fitresult{2}, xData2, yData2 );
 text(100,1.8,'R^2 = 0,9800','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på tibia:'; 'Y-akse'});
+title('Accelerometer på tibia: Y-akse');
 set(gca,'fontsize',20);
 legend off
 box off
@@ -126,9 +119,7 @@ plot( fitresult{3}, xData3, yData3 );
 text(100,1.8,'R^2 = 0,9812','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på tibia:'; 'Z-akse'});
+title('Accelerometer på tibia: Z-akse');
 set(gca,'fontsize',20);
 legend off
 box off
@@ -139,9 +130,8 @@ plot( fitresult{4}, xData4, yData4 );
 text(100,1.8,'R^2 = 0,9806','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på femur:';'X-akse'});
+ylim([1.2 2])
+title('Accelerometer på femur: X-akse');
 set(gca,'fontsize',20);
 legend off
 box off
@@ -152,9 +142,8 @@ plot( fitresult{5}, xData5, yData5 );
 text(100,1.8,'R^2 = 0,9790','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på femur:';'Y-akse'});
+ylim([1.2 2])
+title('Accelerometer på femur: Y-akse');
 set(gca,'fontsize',20);
 legend off
 box off
@@ -165,9 +154,9 @@ plot( fitresult{6}, xData6, yData6 );
 text(100,1.8,'R^2 = 0,9791','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
 ylabel('Spænding [V]');
-ylim([1.2 2.01])
-set(gca, 'XTick', [0:50:200])
-title({'Accelerometer på femur:';'Z-akse'});
+ylim([1.2 2])
+%set(gca, 'YTick', [1:0.2:2])
+title('Accelerometer på femur: Z-akse');
 set(gca,'fontsize',20);
 legend off
 box off
