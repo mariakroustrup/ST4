@@ -76,26 +76,26 @@ subplot(3,2,5)
 plot(t, DataPO_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved plan op')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on
 plot(t, DataPO_2(1:L))
 hold on
 plot(t, DataPO_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest'); 
+legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest'); 
 set(gca,'fontsize',20);
 
 subplot(3,2,6)
 plot(t, DataPN_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved plan ned')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on
 plot(t, DataPN_2(1:L))
 hold on
 plot(t, DataPN_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 
 DataLO1 = (LO_1.data (1,:));
@@ -132,13 +132,13 @@ subplot(3,2,3)
 plot(t, DataLO_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved lodret op')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on
 plot(t, DataLO_2(1:L))
 hold on
 plot(t, DataLO_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 
 
@@ -146,13 +146,13 @@ subplot(3,2,4)
 plot(t, DataLN_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved lodret ned')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on 
 plot(t, DataLN_2(1:L))
 hold on
 plot(t, DataLN_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 
 DataVV1 = (VV_1.data (1,:));
@@ -189,26 +189,26 @@ subplot(3,2,1)
 plot(t, DataVV_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved vandret mod venstre')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on
 plot(t, DataVV_2(1:L))
 hold on
 plot(t, DataVV_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'], 'Location', 'southwest');
+legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 
 subplot(3,2,2)
 plot(t, DataVH_1(1:L))
 axis([0 10 1 2])
 title('Gennemsnitlig spænding målt ved vandret mod højre')
-xlabel('Tid (s)')
-ylabel('Spænding (V)')
+xlabel('Tid [s]')
+ylabel('Spænding [V]')
 hold on 
 plot(t, DataVH_2(1:L))
 hold on
 plot(t, DataVH_3(1:L))
-legend(['x-akse'; 'y-akse'; 'z-akse'],'Location', 'southwest');
+legend(['X-akse'; 'Y-akse'; 'Z-akse'],'Location', 'southwest');
 set(gca,'fontsize',20);
 %% Finder mean af de forskellige målinger
 % mean plan opad
