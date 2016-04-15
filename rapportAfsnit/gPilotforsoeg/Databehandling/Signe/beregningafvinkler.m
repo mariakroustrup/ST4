@@ -82,7 +82,7 @@ for ii=1:1170;
 end  
 
 %% Halvdelen af grader
-for ii=1:585;
+for ii=1:529;
     grader1(ii)=degreeg(ii)+degreer(ii);
 end
 %% Plots
@@ -119,24 +119,29 @@ set(hAx(1),'YTick',[0:0.1:1])
 set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
 box off
 
-Nedogop2 = Nedogop_emgo
-Nedogop3 = Nedogop_emgo
-
+Nedogop2 = Nedogop_emgo(1:529)
+Nedogop2s = smooth(Nedogop2)
+Nedogop3f = flip(Nedogop3(530:1058))
+Nedogop3s = smooth(Nedogop3f)
 % Plot af EMG med grader og spænding
 figure
-plot(grader, Nedogop2, 'r')
+plot(grader1, Nedogop2s, 'r')
 hold on 
-plot(grader, Nedogop3, 'g')
+plot(grader1, Nedogop3s, 'g')
+legend('Fleksion af knæet','Ekstension af knæet')
+% legend(['Ned i squat', 'Udgangsposition'], 'Location', 'northwest'); 
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
-xlim([0 180])
-%set(gca,'XTick',[0:10:180])
+xlim([0 80])
+hold on
+set(gca,'fontsize',20);
+box off
 
+%set(gca,'XTick',[0:10:180])
 % set(gca, 'XTick',[90, 120, 150, 180])
 % set(gca, 'XTicklabel', [90, 60, 30, 0])
-% box off
 
-% 
+
 % figure
 % plot(grader, Nedogop_emgo)
 % xlabel('Vinkel [\circ]')
@@ -145,4 +150,4 @@ xlim([0 180])
 % set(gca,'XTick',[0:10:180])
 % box off
 
-
+1.3637
