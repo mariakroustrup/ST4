@@ -67,25 +67,25 @@ Nedogop_emgo=nedogop_emg-nedogop_emg(1);
 %% Grader fra Lego for rød
 for ii= 1:1170 ;
     degreer(ii) = funktionr(Nedogop2_off(ii));
-end
+end;
 
 %% Grader fra Lego for grøn
 
 for ii= 1:1170 ;
     degreeg(ii) = funktiong(Nedogop5_off(ii));
-end
+end;
 
 %% De samlede grader
 
 for ii=1:1170;
     grader(ii)=degreeg(ii)+degreer(ii);
-end  
+end  ;
 
 %% Halvdelen af graderne
 
 for ii=1:529;
     grader1(ii)=degreeg(ii)+degreer(ii);
-end 
+end ;
 
 %% Plots
 % Plot af grader i forhold til tid
@@ -102,39 +102,39 @@ box off
 % Plot af EMG og accelerometer med to y akser
 figure
 hold on
-[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000))
+[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000));
 set(hAx(1),'fontsize',20);
 set(hAx(2),'fontsize',20);
-legend('EMG','Vinkel')
+legend('EMG','Vinkel');
 
-set(hAx(1), 'XLim',[0 10])
-set(hAx(1),'XTick',[0:1:10])
-set(get(hAx(1),'Xlabel'),'string','Tid [s]')
+set(hAx(1), 'XLim',[0 10]);
+set(hAx(1),'XTick',[0:1:10]);
+set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
-set(hAx(2), 'YLim',[0 90])
-set(hAx(2),'YTick',[0:10:90])
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]')
+set(hAx(2), 'YLim',[0 90]);
+set(hAx(2),'YTick',[0:10:90]);
+set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
 
-set(hAx(1), 'YLim',[-0.1 1])
-set(hAx(1),'YTick',[0:0.1:1])
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]')
+set(hAx(1), 'YLim',[-0.1 1]);
+set(hAx(1),'YTick',[0:0.1:1]);
+set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
 box off
 
 %% Deler vores data op
-Nedogop2 = Nedogop_emgo(1:529)
-Nedogop3 = Nedogop_emgo(530:1058)
+Nedogop2 = Nedogop_emgo(1:529);
+Nedogop3 = Nedogop_emgo(530:1058);
 
-Nedogop2s = smooth(Nedogop2)
+Nedogop2s = smooth(Nedogop2);
 
-Nedogop3f = flip(Nedogop3) 
-Nedogop3s = smooth(Nedogop3f)
+Nedogop3f = flip(Nedogop3);
+Nedogop3s = smooth(Nedogop3f);
 
 %% Plot af EMG med grader og spænding
 
 figure
-plot(grader1, Nedogop2s, 'r')
+plot(grader1, Nedogop2s, 'r');
 hold on 
-plot(grader1, Nedogop3s, 'g')
+plot(grader1, Nedogop3s, 'g');
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
