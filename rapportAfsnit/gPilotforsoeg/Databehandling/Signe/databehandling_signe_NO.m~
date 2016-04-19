@@ -29,7 +29,7 @@ Nedogop2 = load('Nedogop2.mat');
 a2    = Nedogop2.data(7,:);
 a2    = a2(1:length(tid));
 a2    = a2*1/gain;
-a2_off    = a2-a2(1);
+a2_off    = a3-a3(1);
 
 a2acc1_x   = Nedogop2.data(1,:);
 a2acc1_x   = a2acc1_x(1:length(tid));
@@ -88,7 +88,7 @@ m2P1(2:end-1) = 2*m2P1(2:end-1);
 
 m2Y_off  = fft(a2_off);
 m2P2_off = abs(m2Y_off/L);
-m2P1_off = m2P2_off(1:L/2+1);
+m2P2_off = m2P2_off(1:L/2+1);
 m2P1_off(2:end-1) = 2*m2P1_off(2:end-1);
 
 % Måling 3
@@ -199,7 +199,7 @@ m3P1acc2_z = m3P2acc2_z(1:L/2+1);
 m3P1acc2_z(2:end-1) = 2*m3P1acc2_z(2:end-1);
 
 %% Plot EMG
-figure('name','Ikke-offsetjusteret','numbertitle','off')
+figure
 % Måling 1
 subplot(2,3,1)
 plot(f,m1P1);
@@ -242,51 +242,71 @@ xlabel('Tid (s)')
 ylabel('Amplitude (V)')
 title({'Måling 3';'EMG-signal'})
 
-% Offsetjusteret
+% Offset
 
-figure('name','Offsetjusteret','numbertitle','off')
-% Måling 1
+figure
 subplot(2,3,1)
-plot(f,m1P1_off);
-%semilogx(f,m1P1_off);
-axis([-10 100 0 0.0008]);
+semilogx(f,m1P1)
 xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
 ylabel('Størrelse')
-title({'Måling 1';'Frekvensanalyse'})
-subplot(2,3,4)
-plot(tid,a1_off);
-axis([0 10 -0.001 0.002]);
-xlabel('Tid (s)')
-ylabel('Amplitude (V)')
-title({'Måling 1';'EMG-signal'})
+title('1. måling - med offset')
+set(gca,'fontsize',20);
+box off
 
-% Måling 2
-subplot(2,3,2)
-plot(f,m2P1_off);
-axis([-10 100 0 0.0008]);
-xlabel('Frekvens (Hz)')
-ylabel('Størrelse')
-title({'Måling 2';'Frekvensanalyse'})
-subplot(2,3,5)
-plot(tid,a2_off);
-axis([0 10 -0.001 0.002]);
-xlabel('Tid (s)')
-ylabel('Amplitude (V)')
-title({'Måling 2';'EMG-signal'})
-
-% Måling 3
+figure
 subplot(2,3,3)
-plot(f,m3P1_off);
-axis([-10 100 0 0.0008]);
+semilogx(f,m1P1_off)
 xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
 ylabel('Størrelse')
-title({'Måling 3';'Frekvensanalyse'})
+title('1. måling - uden offset')
+set(gca,'fontsize',20);
+box off
+
+subplot(2,3,2)
+semilogx(f,m2P1)
+xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
+ylabel('Størrelse')
+title('2. måling - med offset')
+set(gca,'fontsize',20);
+box off
+
+figure
+subplot(2,3,4)
+semilogx(f,m2P1_off)
+xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
+ylabel('Størrelse')
+title('2. måling - uden offset')
+set(gca,'fontsize',20);
+box off
+
+subplot(2,3,3)
+semilogx(f,m3P1)
+xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
+ylabel('Størrelse')
+title('3. måling - med offset')
+set(gca,'fontsize',20);
+box off
+
+figure
 subplot(2,3,6)
-plot(tid,a3_off);
-axis([0 10 -0.001 0.002]);
-xlabel('Tid (s)')
-ylabel('Amplitude (V)')
-title({'Måling 3';'EMG-signal'})
+semilogx(f,m3P1_off)
+xlabel('Frekvens (Hz)')
+xlim([10^-1 10^2])
+ylim([0 3*10^-4])
+ylabel('Størrelse')
+title('3. måling - uden offset')
+set(gca,'fontsize',20);
+box off
 
 m1Vmax = max(a1);
 m1Vmin = min(a1);
@@ -420,14 +440,7 @@ axis([0 60 0 2]);
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 title({'Accelerometer 2 - z-aksen';'Frekvensanalyse'})
-%%
-figure
-plot(f,m1P1_off);
-%semilogx(f,m1P1_off);
-axis([-10 100 0 0.0008]);
-xlabel('Frekvens (Hz)')
-ylabel('Størrelse')
-title({'Måling 1';'Frekvensanalyse'})
+
 %% Filtrering
 
 % Definer parameter til filter

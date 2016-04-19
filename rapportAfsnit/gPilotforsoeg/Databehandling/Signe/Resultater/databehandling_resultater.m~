@@ -14,25 +14,11 @@ f  = Fs*(0:(L/2))/L;
 baseline=Baseline_emg.data(7,:);
 nedogop_emg=Nedogop.data(7,:);
 
-baseline_off = baseline-baseline(1);
-nedogop_emg_off = nedogop_emg-nedogop_emg(1);
-
 %Plot af Baseline med nedogop
 figure('name','Ikke-offsetjusteret','numbertitle','off')
 hold on
 plot(t, baseline(1:1150), 'g');
 plot(t, nedogop_emg([1:1150]), 'b');
-xlim([0 10]);
-xlabel('Tid [s]');
-ylabel('Spænding [V]');
-legend('Baseline', '2. måling')
-set(gca,'fontsize',20);
-box off
-
-figure('name','Offsetjusteret','numbertitle','off')
-hold on
-plot(t, baseline_off(1:1150), 'g');
-plot(t, nedogop_emg_off([1:1150]), 'b');
 xlim([0 10]);
 xlabel('Tid [s]');
 ylabel('Spænding [V]');

@@ -9,6 +9,7 @@ Baseline1 = load('Baseline1.mat');
 a1    = Baseline1.data(7,:);
 a1    = a1(1:length(tid));
 a1    = a1*1/gain;
+a1_off    = a1-a1(1);
 
 a1acc1_x   = Baseline1.data(1,:);
 a1acc1_x   = a1acc1_x(1:length(tid));
@@ -28,6 +29,7 @@ Baseline2 = load('Baseline2.mat');
 a2    = Baseline2.data(7,:);
 a2    = a2(1:length(tid));
 a2    = a2*1/gain;
+a2_off    = a2-a2(1);
 
 a2acc1_x   = Baseline2.data(1,:);
 a2acc1_x   = a2acc1_x(1:length(tid));
@@ -47,6 +49,7 @@ Baseline3 = load('Baseline3.mat');
 a3    = Baseline3.data(7,:);
 a3    = a3(1:length(tid));
 a3    = a3*1/gain;
+a3_off    = a3-a3(1);
 
 a3acc1_x   = Baseline3.data(1,:);
 a3acc1_x   = a3acc1_x(1:length(tid));
@@ -71,11 +74,21 @@ m1P2 = abs(m1Y/L);
 m1P1 = m1P2(1:L/2+1);
 m1P1(2:end-1) = 2*m1P1(2:end-1);
 
+m1Y_off  = fft(a1_off);
+m1P2_off = abs(m1Y_off/L);
+m1P1_off = m1P2_off(1:L/2+1);
+m1P1_off(2:end-1) = 2*m1P1_off(2:end-1);
+
 % Måling 2
 m2Y  = fft(a2);
 m2P2 = abs(m2Y/L);
 m2P1 = m2P2(1:L/2+1);
 m2P1(2:end-1) = 2*m2P1(2:end-1);
+
+m2Y_off  = fft(a2_off);
+m2P2_off = abs(m2Y_off/L);
+m2P1_off = m2P2_off(1:L/2+1);
+m2P1_off(2:end-1) = 2*m2P1_off(2:end-1);
 
 % Måling 3
 m3Y  = fft(a3);
@@ -83,6 +96,10 @@ m3P2 = abs(m3Y/L);
 m3P1 = m3P2(1:L/2+1);
 m3P1(2:end-1) = 2*m3P1(2:end-1);
 
+m3Y_off  = fft(a3_off);
+m3P2_off = abs(m3Y_off/L);
+m3P1_off = m3P2_off(1:L/2+1);
+m3P1_off(2:end-1) = 2*m3P1_off(2:end-1);
 
 %% Frekvensanalyse af accelerometer 
 % Måling 1
@@ -182,7 +199,8 @@ m3P1acc2_z(2:end-1) = 2*m3P1acc2_z(2:end-1);
 
 
 %% Plot af frekvensanalyse for EMG
-figure
+
+figure('name','Ikke-offsetjusteret','numbertitle','off')
 % Måling 1
 subplot(2,3,1)
 plot(f,m1P1);
@@ -225,16 +243,58 @@ xlabel('Tid (s)')
 ylabel('Amplitude (V)')
 title({'Måling 3';'EMG-signal'})
 
+figure('name','Offsetjusteret','numbertitle','off')
+% Måling 1
+subplot(2,3,1)
+plot(f,m1P1_off);
+%semilogx(f,m1P1_off);
+axis([-10 100 0 0.0008]);
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+title({'Måling 1';'Frekvensanalyse'})
+subplot(2,3,4)
+plot(tid,a1_off);
+axis([0 10 -0.001 0.002]);
+xlabel('Tid (s)')
+ylabel('Amplitude (V)')
+title({'Måling 1';'EMG-signal'})
 
+% Måling 2
+subplot(2,3,2)
+plot(f,m2P1_off);
+axis([-10 100 0 0.0008]);
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+title({'Måling 2';'Frekvensanalyse'})
+subplot(2,3,5)
+plot(tid,a2_off);
+axis([0 10 -0.001 0.002]);
+xlabel('Tid (s)')
+ylabel('Amplitude (V)')
+title({'Måling 2';'EMG-signal'})
 
-m1Vmax = max(a1)
-m1Vmin = min(a1)
+% Måling 3
+subplot(2,3,3)
+plot(f,m3P1_off);
+axis([-10 100 0 0.0008]);
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+title({'Måling 3';'Frekvensanalyse'})
+subplot(2,3,6)
+plot(tid,a3_off);
+axis([0 10 -0.001 0.002]);
+xlabel('Tid (s)')
+ylabel('Amplitude (V)')
+title({'Måling 3';'EMG-signal'})
 
-m2Vmax = max(a2)
-m2Vmin = min(a2)
+m1Vmax = max(a1);
+m1Vmin = min(a1);
 
-m3Vmax = max(a3)
-m3Vmin = min(a3)
+m2Vmax = max(a2);
+m2Vmin = min(a2);
+
+m3Vmax = max(a3);
+m3Vmin = min(a3);
 
 %rms = rms(a(1:1000)) 
 
