@@ -49,7 +49,7 @@ m1P1_nedogop_emg=load('m1P1_nedogop');
 % subplot af fft af Baseline og Nedogop
 figure('name','Ikke-offsetjusteret','numbertitle','off')
 subplot(2,1,1)
-semilogx(f, m1P1_baseline_emg.m1P1)
+semilogy(f, m1P1_baseline_emg.m1P1)
 % plot(f, m1P1_baseline_emg.m1P1);
 %axis([-10 100 0 0.0008]);
 % xlim([-0.5 12])
@@ -63,7 +63,7 @@ box off
 
 % Nedogop
 subplot(2,1,2)
-semilogx(f, m1P1_nedogop_emg.m1P1)
+semilogy(f, m1P1_nedogop_emg.m1P1)
 % plot(f, m1P1_nedogop_emg.m1P1);
 % axis([-10 100 0 0.0008]);
 xlabel('Frekvens (Hz)')
@@ -80,7 +80,7 @@ m1P1_nedogop_emg_off=load('m1P1_nedogop_off');
 
 figure('name','Offsetjusteret','numbertitle','off')
 subplot(2,1,1)
-semilogx(f, m1P1_baseline_emg_off.m1P1_off)
+semilogy(f, m1P1_baseline_emg_off.m1P1_off)
 % plot(f, m1P1_baseline_emg.m1P1);
 %axis([-10 100 0 0.0008]);
 % xlim([-0.5 12])
@@ -88,21 +88,26 @@ semilogx(f, m1P1_baseline_emg_off.m1P1_off)
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 xlim([10^-1 10^2])
+ylim([0 10e-4])
+set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
 title('Baseline måling')
 set(gca,'fontsize',20);
 box off
+grid on
 
 % Nedogop
 subplot(2,1,2)
-semilogx(f, m1P1_nedogop_emg_off.m1P1_off)
+semilogy(f, m1P1_nedogop_emg_off.m1P1_off)
 % plot(f, m1P1_nedogop_emg.m1P1);
 % axis([-10 100 0 0.0008]);
 xlabel('Frekvens (Hz)')
 xlim([10^-1 10^2])
-ylim([0 3*10^-4])
+ylim([0 10e-4])
+set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
 ylabel('Størrelse')
 title('2. måling')
 set(gca,'fontsize',20);
 box off
+grid on
 
 
