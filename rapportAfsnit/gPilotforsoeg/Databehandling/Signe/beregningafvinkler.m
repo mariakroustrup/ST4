@@ -124,10 +124,10 @@ box off
 Nedogop2 = Nedogop_emgo(1:529);
 Nedogop3 = Nedogop_emgo(530:1058);
 
-Nedogop2s = smooth(Nedogop2);
+Nedogop2s = smooth(Nedogop2,20);
 
 Nedogop3f = flip(Nedogop3);
-Nedogop3s = smooth(Nedogop3f);
+Nedogop3s = smooth(Nedogop3f,20);
 
 %% Plot af EMG med grader og spænding
 
@@ -135,6 +135,60 @@ figure
 plot(grader1, Nedogop2s, 'r');
 hold on 
 plot(grader1, Nedogop3s, 'g');
+title ('20')
+xlabel('Vinkel [\circ]')
+ylabel('Spænding [V]')
+legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
+xlim([0 80])
+ylim([0 0.8])
+set(gca,'fontsize',20);
+box off
+ 
+Nedogop21s = smooth(Nedogop2,30);
+
+Nedogop3f = flip(Nedogop3);
+Nedogop31s = smooth(Nedogop3f,30);
+figure
+plot(grader1, Nedogop21s, 'r');
+hold on 
+plot(grader1, Nedogop31s, 'g');
+title ('30')
+xlabel('Vinkel [\circ]')
+ylabel('Spænding [V]')
+legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
+xlim([0 80])
+ylim([0 0.8])
+set(gca,'fontsize',20);
+box off
+
+Nedogop22s = smooth(Nedogop2,40);
+
+Nedogop3f = flip(Nedogop3);
+Nedogop32s = smooth(Nedogop3f,40);
+
+figure
+plot(grader1, Nedogop22s, 'r');
+hold on 
+plot(grader1, Nedogop32s, 'g');
+title ('40')
+xlabel('Vinkel [\circ]')
+ylabel('Spænding [V]')
+legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
+xlim([0 80])
+ylim([0 0.8])
+set(gca,'fontsize',20);
+box off
+
+Nedogop23s = smooth(Nedogop2,100000000);
+
+Nedogop3f = flip(Nedogop3);
+Nedogop33s = smooth(Nedogop3f,100000000);
+
+figure
+plot(grader1, Nedogop23s, 'r');
+hold on 
+plot(grader1, Nedogop33s, 'g');
+title ('100000000')
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
