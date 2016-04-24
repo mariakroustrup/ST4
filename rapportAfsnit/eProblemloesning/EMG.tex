@@ -9,7 +9,7 @@
 %Ligeledes kan der ved EMG-målinger fremkomme elektrisk støjpåvirkning fra omkringliggende muskler i forhold til området, der måles på. Dette betegnes som crosstalk \citep{keenan2012}. 
 
 \subsection{Elektromyografi}
-Til behandling af EMG-signalet, anvendes Muscle Sensor V3, der fremover refereres som 'EMG-forstærker'. Denne komponent måler en differens af de elektriske potentialer der måles gennem elektroderne. EMG-forstærkeren overholder de opstillede krav, og kan anvendes direkte med mikrokontrolleren. EMG-forstærkeren består af en intrumenteringsforstærker, et passivt højpasfilter, en full-wave rectifier, et aktivt lavpass filter og en justerbar forstærker \citep{advancertech2013}. 
+Til behandling af EMG-signalet, anvendes Muscle Sensor V3 fra Advancer Technologies, der fremover vil refereres til som 'EMG-forstærker'. Denne komponent måler en differens mellem de elektriske potentialer, der måles gennem elektroderne. EMG-forstærkeren overholder de opstillede krav, og kan anvendes direkte med mikrokontrolleren. EMG-forstærkeren består af en intrumenteringsforstærker, et passivt højpasfilter, en full-wave rectifier, et aktivt lavpasfilter og en justerbar forstærker \citep{advancertech2013}. 
 
 En illustration af, hvordan EMG-forstærkeren behandler et inputsignal fremgår af \autoref{fig:sinussignal}.
 \begin{figure}[H]
@@ -19,27 +19,10 @@ En illustration af, hvordan EMG-forstærkeren behandler et inputsignal fremgår 
 \label{fig:sinussignal}
 \end{figure}
 
-Med udgangspunkt i \autoref{fig:sinussignal} ses signalet som sinuskurven. Hertil passerer det højpasfilteret der dæmper DC støjen og dermed offsettet i signalet. Dette ses som signalet sinuskurven der svinger omkring 0, og er nødvendig for at ensretningen viker efter hensigten. Dernæst ensrettes signalet, således de negative værdier inverteres, og at der kun er svingninger i positiv retning. Herefter fortages et envalope, hvilket ses som det udglattede signal, hvortil der er beregnet en knækfrekvens på $1,94~Hz$, ud fra \autoref{eq:lavcutfre}. 
-
+\noindent
+Med udgangspunkt i \autoref{fig:sinussignal} opfattes sinuskurven som muskelsignalet. Dette passerer forforstærkeren \fxnote{Her stod tidligere lavpasfilter. Er det rigtigt og har jeg misforstået noget? For der foregår vel ingen lavpasfiltrering heri?}, der dæmper DC-støjen og dermed offsettet i signalet. Dette betyder, at muskelsignalet svinger omkring tids-aksen, hvilket er nødvendigt for at få ensretningen til at virke efter hensigten. Dernæst helbølgeensrettes signalet på midterste graf, ved at invertere signalets negative værdier, så signalet udelukkende består af positive værdier samtidigt med at beholde hele dets originale energi. Herefter envelopefiltreres signalet, hvilket ses som det udglattede signal på nederste graf. Til denne filtrering er der beregnet en knækfrekvens på $1,94~Hz$ ud fra \autoref{eq:lavcutfre}. $C$ og $R$ kan i databladet for EMG-forstærkeren aflæses til at være henholdsvis $1 \cdot 10^{-6}~F$ og $80,6 \dot 10^3~\Omega$ \citep{advancertech2013}. 
 \begin{equation}\label{eq:lavcutfre}
-f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi \dot 1 \dot 10^{-6}F \dot 80,6 \dot 10^3\Omega} = 1,94~Hz
+f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi \cdot 1 \cdot 10^{-6}~F \cdot 80,6 \dot 10^3~\Omega} = 1,94~Hz
 \end{equation}
 
-EMG-forstærkeren har en minimum spændingsforsyning på $\pm 3~V$ samt en maksimal spændingsforsyning på $\pm 30~V$. Herudover er der mulighed for at justere gain med en faktor fra 0,002 til 20,700. \citep{advancertech2013}. 
-
-
-
-
-
-%Synes ikke det passer ind her? Er det ikke meningen dette skal være mere overordnet, og så specificerer vi os senere til hvordan vi vil måle, sådan til vores forsøg?
-%Den ene elektrode placeres over enten rectus femoris eller vastus intermedius (sidder under rectus femoris) og den anden elektrode placeres over biceps femoris. Reference elektroden placeres ved??.. 
-
-
-%Støj kan reduceres ved at placere en 0.1 mikro f capacitor i nærheden, det er dog nødvendigt at tilføje mere, hvis der er 50 KHz støj, da det vil kunne resultere i fejl i accelerations målingen. Støjens tæthed vil forminskes i takt med at forsyningsspændingen forøges.
-%Fase sensitiv demodulation teknikker er anvendt for at bestemme magnituden samt accelerationens retning. Demodulator outputtet er forstærket og bragt igennem en 32 k ohm modstand. – noget med det forebygger aliasing 
-%  - Jeg ser dette som 'ligegyldigt' nu, da det handler om kondensator og støj. Kan ikke se hvorfor det skal bruges (endnu) måske skal det bruges efter vi har lavet pilotforsøg, hvis der viser sig meget støj
-
-
-
-
-
+EMG-forstærkeren har en minimum spændingsforsyning på $\pm 3~V$ samt en maksimal spændingsforsyning på $\pm 30~V$. Herudover er der mulighed for at justere modstanden heri fra $0,1~\Omega$ til $100~k\Omega$, hvilket giver et justerbart gain fra 0,002 til 20.700 gange. \citep{advancertech2013}. 
