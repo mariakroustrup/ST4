@@ -179,16 +179,18 @@ ylim([0 0.8])
 set(gca,'fontsize',20);
 box off
 
-Nedogop23s = smooth(Nedogop2,100000000);
+%%
 
-Nedogop3f = flip(Nedogop3);
-Nedogop33s = smooth(Nedogop3f,100000000);
+Nedogop23s = smooth(Nedogop2(1:5:529),10);
+
+Nedogop3f = flip(Nedogop3(1:5:529));
+Nedogop33s = smooth(Nedogop3f,10);
 
 figure
-plot(grader1, Nedogop23s, 'r');
+plot(grader1(1:5:529), Nedogop23s, 'r');
 hold on 
-plot(grader1, Nedogop33s, 'g');
-title ('100000000')
+plot(grader1(1:5:529), Nedogop33s, 'g');
+title ('Down')
 xlabel('Vinkel [\circ]')
 ylabel('Spænding [V]')
 legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')

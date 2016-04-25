@@ -7,7 +7,8 @@ tid  = [0 : +1/frekvens : samplelength-1/frekvens];
 % Måling 1
 Nedogop1 = load('Nedogop1.mat');
 a1    = Nedogop1.data(7,:);
-a1    = a1(1:length(tid));
+%a1    = a1(1:length(tid)); % Dette er den rigtige 
+a1    = a1(150:900);         % Dette er en temp for at lave fft af selve bevægelsen.
 a1    = a1*1/gain;
 a1_off    = a1-a1(1);
 
@@ -208,7 +209,7 @@ xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 title({'Måling 1';'Frekvensanalyse'})
 subplot(2,3,4)
-plot(tid,a1);
+%plot(tid,a1);
 axis([0 10 -0.001 0.002]);
 xlabel('Tid (s)')
 ylabel('Amplitude (V)')
@@ -254,7 +255,7 @@ xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 title({'Måling 1';'Frekvensanalyse'})
 subplot(2,3,4)
-plot(tid,a1_off);
+%plot(tid,a1_off);
 axis([0 10 -0.001 0.002]);
 xlabel('Tid (s)')
 ylabel('Amplitude (V)')

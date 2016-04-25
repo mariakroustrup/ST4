@@ -159,3 +159,50 @@ title('2. måling')
 set(gca,'fontsize',20);
 box off
 grid on
+
+%%
+figure('name','Offsetjusteret','numbertitle','off')
+subplot(1,3,2)
+plot(f, m1P1_baseline_emg_off.m1P1_off)
+% plot(f, m1P1_baseline_emg.m1P1);
+%axis([-10 100 0 0.0008]);
+% xlim([-0.5 12])
+% ylim([-0.00005 0.0004])
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+xlim([0 50])
+ylim([0 10e-2])
+%set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
+title('Baseline måling')
+set(gca,'fontsize',20);
+box off
+grid on
+
+% Nedogop
+subplot(1,3,3)
+plot(f, m1P1_nedogop_emg_off.m1P1_off)
+% plot(f, m1P1_nedogop_emg.m1P1);
+% axis([-10 100 0 0.0008]);
+xlabel('Frekvens (Hz)')
+xlim([0 50])
+ylim([0 10e-2])
+%set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
+ylabel('Størrelse')
+title('2. måling')
+set(gca,'fontsize',20);
+box off
+grid on
+
+%figure('name','Ikke-offsetjusteret','numbertitle','off')
+% Måling 1
+subplot(1,3,1)
+plot(f, m1P1_off)
+xlim([0 50])
+ylim([0 10e-2])
+%set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
+xlabel('Frekvens (Hz)')
+ylabel('Størrelse')
+title('Frekvensanalyse - Siddende Baseline')
+set(gca,'fontsize',20);
+box off
+grid on
