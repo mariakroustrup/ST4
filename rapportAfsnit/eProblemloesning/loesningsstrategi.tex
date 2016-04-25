@@ -1,7 +1,8 @@
 \section{Løsningsstrategi}
 %Intro til hvad der skal være hjernen i systemet.
 Til dette system benyttes komponenter fra Cypress's CY8CKIT-042-BLE udviklingskit. 
-Ud fra dette sæt er der udvalgt de nødvendige komponenter, så der kan fortages analog til digital konvertering af de signaler, der måles via sensorerne i \autoref{sec:sensorer}. Yderligere skal systemet være i stand til at kommunikere trådløst med andre enheder.   
+Ud fra dette sæt er der udvalgt de nødvendige komponenter, så der kan fortages analog til digital konvertering af de signaler, der måles via sensorerne i \autoref{sec:sensorer}. Yderligere skal systemet være i stand til at kommunikere trådløst med andre enheder, hvilket er muligt ved anvendelse af Bluetooth Low Energy (BLE).
+
 
 \begin{figure}[H]
 \centering
@@ -10,7 +11,8 @@ Ud fra dette sæt er der udvalgt de nødvendige komponenter, så der kan fortage
 \label{fig:CY8CKIT-042}
 \end{figure}
 
-I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard og et CY8CKIT-142 PSoC 4 BLE modul. Baseboardet er platformen, hvorpå sensorerne vil blive tilkoblet, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et $3~V$ knapcelle batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}. Der er mulighed for udvidelse af baseboardet, ved anvendelse af moduler fra Cypress, samt Arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
+I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard og et CY8CKIT-142 PSoC 4 BLE modul, hvilket har en operationsfrekvens på  $2,4~GHz$. Baseboardet er platformen, hvorpå sensorerne vil blive tilkoblet, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et $3~V$ knapcelle batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}.
+Der er mulighed for udvidelse af baseboardet, ved anvendelse af moduler fra Cypress, samt Arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
 \\
 
 
