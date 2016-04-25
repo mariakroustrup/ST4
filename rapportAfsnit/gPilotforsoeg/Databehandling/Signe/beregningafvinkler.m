@@ -181,18 +181,18 @@ box off
 
 %%
 
-Nedogop23s = smooth(Nedogop2(1:5:529),10);
+Nedogop23s = smooth(Nedogop2(1:5:end),10);
 
-Nedogop3f = flip(Nedogop3(1:5:529));
-Nedogop33s = smooth(Nedogop3f,10);
+Nedogop3f = flip(Nedogop3);
+Nedogop33s = smooth(Nedogop3f(1:5:end),10);
 
 figure
 plot(grader1(1:5:529), Nedogop23s, 'r');
 hold on 
 plot(grader1(1:5:529), Nedogop33s, 'g');
-title ('Down')
+title ('')
 xlabel('Vinkel [\circ]')
-ylabel('Spænding [V]')
+ylabel('EMG [V]')
 legend('Fleksion af knæet', 'Ekstension af knæet', 'Location','northwest')
 xlim([0 80])
 ylim([0 0.8])

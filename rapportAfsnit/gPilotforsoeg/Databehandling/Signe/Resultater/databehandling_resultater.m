@@ -90,7 +90,7 @@ ylabel('Størrelse')
 xlim([0 50])
 ylim([0 10e-4])
 set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
-title('Baseline måling')
+title('Stående Baseline')
 set(gca,'fontsize',20);
 box off
 grid on
@@ -105,7 +105,7 @@ xlim([0 50])
 ylim([0 10e-4])
 set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
 ylabel('Størrelse')
-title('2. måling')
+title('Squat-øvelsen')
 set(gca,'fontsize',20);
 box off
 grid on
@@ -119,7 +119,7 @@ ylim([0 10e-4])
 set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
-title('Frekvensanalyse - Siddende Baseline')
+title('Siddende Baseline')
 set(gca,'fontsize',20);
 box off
 grid on
