@@ -127,7 +127,7 @@ Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres
 \item 10 sekunders måling, hvor forsøgspersonen står oprejst
 \end{itemize}
 	
-\textbf{1. måling}
+\textbf{Squat-øvelse}
 \begin{itemize}
 \item Måling i en squat-øvelse
 	\begin{itemize}
@@ -161,20 +161,20 @@ I det præsenterede data tages der udgangspunkt i forsøgsperson 1. Dette er som
 	\caption{EMG-målinger af baseline og 2. måling.}
 	\label{fig:baselineogemg}
 \end{figure}
-Ud fra \autoref{fig:baselineogemg}, ses baseline samt 2. måling for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved 2. måling ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til maks $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
+Ud fra \autoref{fig:baselineogemg}, ses baseline samt squat-øvelse for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved squat-øvelsen ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til maks $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/emgfft.png}
-	\caption{Frekvensanalyse med semilogaritmisk skala på X-aksen af EMG-måling for baseline og 2. måling. Bemærk at der ikke er samme skalaer op af Y-aksen for de to grafer. Der ses derfor mere støj på 2. måling end baseline målingen.}
+	\caption{Frekvensanalyse med semilogaritmisk skala på X-aksen af EMG-måling for baseline og ved squat-øvelse. Bemærk at der ikke er samme skalaer op af Y-aksen for de to grafer. Der ses derfor mere støj på 2. måling end baseline målingen.}
 	\label{fig:emgfft}
 \end{figure}
 
-Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2. måling for identificering af frekvensområdet for bevægelsen. For begge grafer er der foretaget en semilogaritmisk skala på X-aksen, hvilket resulterer i forskellige skalaer op af Y-aksen. Det ses ud fra målingerne et højere støjniveau på 2. måling end baseline målingen, dette støjniveau er dog relativt lav. 
+Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2squat-øvelsen for identificering af frekvensområdet for bevægelsen. For begge grafer er der foretaget en semilogaritmisk skala på X-aksen, hvilket resulterer i forskellige skalaer op af Y-aksen. Det ses ud fra målingerne et højere støjniveau på squat-øvelsen end baseline målingen, dette støjniveau er dog relativt lav. 
 Der observeres en DC-komponent ved $0~Hz$, hvilket svarer til det offset der er på signalet. 
 Det fremgår ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er Nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
-Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende relativt lavfrekvent $0.4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
+Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som værende relativt lavfrekvent $0.4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
 
 
 \subsubsection{Resultater for accelerometer målinger} \label{sec:acc_fft}
@@ -187,7 +187,7 @@ Af frekvensanalysen for 2. måling identificeres frekvensområdet som værende r
 \end{figure}
 Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i X-aksen. Ud fra dette ses yderligere støjsignaler end DC-komponent, der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen er der ingen $50~Hz$ støj, hvor årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
 
-Spændingerne fra accelrometeret repræsenterer vinklerne for femur og tibia i Y-aksen. Denne spændingsværdi ønskes omregnet til grader, for således at undersøge vinklen af knæet. Til at omregne spændingen fra begge acceleromtre til grader anvendes målingerne anvendt i \autoref{sec:resul_linear}. Disse resultater er anvendt i funktioner, hvor lineær interpolation benyttes. EMG-spændingerne for 2. måling er hertil anvendt i funktionerne, således graderne for EMG-målingen findes.
+Spændingerne fra accelrometeret repræsenterer vinklerne for femur og tibia i Y-aksen. Denne spændingsværdi ønskes omregnet til grader, for således at undersøge vinklen af knæet. Til at omregne spændingen fra begge acceleromtre til grader anvendes målingerne anvendt i \autoref{sec:resul_linear}. Disse resultater er anvendt i funktioner, hvor lineær interpolation benyttes. EMG-spændingerne for squat-øvelsen er hertil anvendt i funktionerne, således graderne for EMG-målingen findes.
 Resultaterne fra omregningen visualiseres af \autoref{fig:accvinkel}. 
 
 \begin{figure}[H]
@@ -196,13 +196,13 @@ Resultaterne fra omregningen visualiseres af \autoref{fig:accvinkel}.
 	\caption{Vinkler fra accelerometrene under 2. måling}
 	\label{fig:accvinkel}
 \end{figure}
-Det fremgår af \autoref{fig:accvinkel}, at forsøgspersonen udfører en fleksion af knæet under 2. måling når ned til en grad på ca. $78^{\circ}$. 
+Det fremgår af \autoref{fig:accvinkel}, at forsøgspersonen udfører en fleksion af knæet under squat-øvelsen når ned til en grad på ca. $78^{\circ}$. 
 
 For at kunne se relationen mellem udslag i EMG samt for accelerometrene, plottes begge disse målinger på samme graf. Dette ses af \autoref{fig:emgogacc}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/emg_vinkler_tid}
-	\caption{EMG signal og vinkler fra acceleromtre under 2. måling}
+	\caption{EMG signal og vinkler fra acceleromtre under squat-øvelsen}
 	\label{fig:emgogacc}
 \end{figure}
 

@@ -492,6 +492,18 @@ Sciences},
   Url                      = {http://sund.ku.dk/nyheder/nyheder2013/ny-viden-om-alvorlig-muskelsygdom/}
 }
 
+@Book{webster1998,
+  Title                    = {Medical Instrumentation Application and Design},
+  Author                   = {J. G. Webster and J. W. Clark},
+  Publisher                = {John Wiles And Sons Ltd.},
+  Year                     = {1998},
+  Volume                   = {3},
+
+  Doi                      = {0471153680},
+  Owner                    = {signehk},
+  Timestamp                = {2016.04.24}
+}
+
 @Article{yang2008,
   Title                    = {A review of exoskeleton-type systems and their key technologies},
   Author                   = {C. J. Yang and J. F. Zhang and Y. Chen, et. al.},
