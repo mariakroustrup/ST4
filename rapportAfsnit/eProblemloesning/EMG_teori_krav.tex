@@ -1,3 +1,4 @@
+\subsection{Emg}
 EMG er en målemetode, som måler elektrisk aktivitet genereret af musklerne \citep{chowdhury2013}. 
 En EMG-måling dækker over et samlet antal potentialer fra måleområdet, idet der aktiveres mange muskelfibre \citep{keenan2012}. \fxnote{Ved ikke, om der skal skrives noget om, at muskelfiberne inaverers af motorneuroner, og at mængden af muskelfibre pr. motorneuron afhænger af musklen og dens funktion = det ville være godt, inddrag lidt ALS}
 
@@ -7,3 +8,12 @@ Ved generel anvendelse af EMG-målinger, benyttes frekvensområdet ved $10-500~H
 
 Denne metode kan påvirkes af flere artefakter, som bevægelsespåvirkning og støjpåvirkning fra elnettet ($50~Hz$) \citep{keenan2012}.
 Ligeledes kan der ved EMG-målinger fremkomme elektrisk støjpåvirkning fra omkringliggende muskler i forhold til området, der måles på. Dette betegnes som crosstalk \citep{keenan2012}. 
+
+\textbf{Krav:}
+\begin{itemize}
+\item Skal opsamle signaler fra rectus femoris
+\item Skal opsamle muskelsignaler i frekvensområdet mellem $10-500~Hz$
+\item Skal forsynes med en spænding på $\pm5.5~V$ 
+\item Skal have et justerbart gain, der ikke kan forstærke over ADC'en arbejdsområde på XX.
+\item EMG signalet skal være en energirepræsentation.
+\end{itemize}
