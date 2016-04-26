@@ -4,46 +4,60 @@
 
 \subsubsection{Opsamling af signaler - EMG}
 \begin{itemize}
-\item Skal kunne opsamle signaler fra rectus femoris
-\item Skal have et frekvensområde mellem $XX-YY~Hz$
-\item Skal kunne forsynes med en spænding på $\pm3.5~V$ 
-\item Skal have et gain på XX
-\item Skal have et positivt output
+\item Skal opsamle signaler fra rectus femoris
+\item Skal opsamle muskelsignaler i frekvensområdet mellem $10-500~Hz$
+\item Skal forsynes med en spænding på $\pm5.5~V$ 
+\item Skal have et justerbart gain, der ikke kan forstærke over ADC'en arbejdsområde på XX.
+\item EMG signalet skal være en energirepræsentation.
 \end{itemize}
 
 \subsubsection{Opsamling af signaler - Accelerometer}
 \begin{itemize}
-\item Skal være triaksialt \fxnote{eller 1 akse??}
-\item Skal kunne forsynes med en spænding på $XX~V$
-\item Skal kunne måle accelerationer i $\pm~3~g$
-\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
+\item Skal måle på minimum én akse
+\item Skal forsynes med en spænding på $3,3~V$
+\item Skal måle accelerationer i $\pm1~g$
+%\item Skal give output i form af spænding (analog)
 \end{itemize}
 
 \subsubsection{Opsamling af signaler - Spændingsforsyning}
-\begin{itemize}
-\item Skal levere en forsyning mellem $XX-YY~V$
-\item Skal kunne forsyne EMG forstærker samt accelerometre 
-\item Skal være batteridrevet
+\begin{itemize} 
+\item Skal kunne forsyne EMG forstærker
+%\item Skal forsyne mikrokontrolleren
+\item Accelerometeret skal forsynes af mikrokontrolleren
+\item Skal være batteridrevet 
 \end{itemize}
 
 \subsection{Krav til den digitale del af systemet}
 
 \subsubsection{ADC}
 \begin{itemize}
-\item Skal have en samplingsfrekvens på $100~Hz$
-\item Skal kunne modtage en spændingsforsyning på  $XX~V$
-\item Skal have en tolerence på $XX~\%$
+\item Skal kunne have en samplingsfrekvens på $100~Hz$
+\item Skal sample minimum tre inputs 
+%\item Skal have en opløsning på minimum 10 bit
+%\item Skal modtage en spændingsforsyning på $XX~V$
+%\item Skal have en tolerence på $XX~\%$ (kvatificeringsfejl?)
 \end{itemize}
 
-\subsubsection{Trådløs kommunikation}
+\subsubsection{Filter: accelerometer}
 \begin{itemize}
-\item Skal kommunikere mellem mikrocontrolleren og NXT'en 
-\item Skal max have en forsinkelse på XX
+\item Signalet skal være 
+\item Skal have en knækfrekvens på $XX~Hz$
+\item Skal have et stopbånd på $XX~Hz$
+\item Skal have en minimumsdæmpning på $XX~dB$
+\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
 \end{itemize}
 
-\subsubsection{Filter}
+\subsubsection{Filter: EMG}
 \begin{itemize}
 \item Skal have en knækfrekvens på $XX~Hz$
 \item Skal have et stopbånd på $XX~Hz$
 \item Skal have en minimumsdæmpning på $XX~dB$
+\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
+\end{itemize}
+
+
+\subsubsection{Trådløs kommunikation}
+\begin{itemize}
+\item Mikrocontrolleren skal kommunikere trådløst med NXT'en 
+\item Skal maksimalt have en forsinkelse på 100 ms
 \end{itemize}
