@@ -90,7 +90,7 @@ ylabel('Størrelse')
 xlim([0 50])
 ylim([0 10e-4])
 set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
-title('Stående Baseline')
+title('Stående baseline')
 set(gca,'fontsize',20);
 box off
 grid on
@@ -119,7 +119,7 @@ ylim([0 10e-4])
 set(gca,'ytick',[0,0.001, 0.01, 1]*10e-4)
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
-title('Siddende Baseline')
+title('Siddende baseline')
 set(gca,'fontsize',20);
 box off
 grid on
