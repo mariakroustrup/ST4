@@ -66,6 +66,7 @@ title('Baseline måling')
 set(gca,'fontsize',20);
 box off
 
+
 % Nedogop
 subplot(2,1,2)
 semilogy(f, m1P1_nedogop_emg.m1P1)

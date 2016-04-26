@@ -2,7 +2,7 @@
 I dette bilag beskrives pilotforsøgets fremgangsmåde samt, hvilke resultater, der opsamles. 
 
 \subsection{Formål}
-Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret ud fra pilotforsøgets resultater. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde, da der ses variation i liiteraturen. Parametrene vil forsøges besvaret ud fra målinger ved udførelse af en squat-øvelse.
+Dette pilotforsøg har til formål at kunne præcisere samt optimere kravspecifikationerne i de enkelte blokke, hvorved uklare parametre forventes besvaret ud fra pilotforsøgets resultater. Disse parametre omfatter identificering af støjsignaler samt EMG-signalets frekvensområde, da der ses variation i litteraturen. Parametrene vil forsøges besvaret ud fra målinger ved udførelse af en squat-øvelse.
 Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af dette opstilles følgende formål:  
 
 \subsubsection{EMG-måling}
@@ -15,7 +15,7 @@ Hertil anvendes elektroder og to accelerometre som sensorer. På baggrund af det
 %\item Identificering af gain til mikroprocesserens operationsspænding \fxnote{Finde operationsspænding og angiv den her}
 \end{enumerate}
 
-\subsubsection{Accelerometer-måling}
+\subsubsection{Accelerometer måling}
 \begin{enumerate}
 \item Identificering af støjsignaler 
 \item Identificering af knæleddets vinkel
@@ -63,7 +63,7 @@ Referenceelektroden placeres, ligeledes efter SENIAM's anvisninger, omkring ankl
 \label{fig:reference}
 \end{figure}
 
-Til forsøget benyttes endvidere to accelerometre, som måler i X-, Y- samt Z-aksen. Disse benyttes for at kunne identificere vinklen af knæet under øvelsen. For så vidt muligt at kunne stabilisere accelerometrene under udførelsen af forsøget, placeres disse på breadboards. 
+Til forsøget benyttes endvidere to accelerometre, som måler i X-, Y- samt Z-aksen. Disse benyttes for at kunne identificere vinklen af knæet under øvelsen. For så vidt muligt at stabilisere accelerometrene under udførelsen af forsøget, placeres disse på breadboards. 
 Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerometer midt på den laterale side af låret, parallelt med femur. Det andet accelerometer placeres midt på den laterale side af underbenet, parallelt med tibia. Disse breadboards påsættes benet ved brug af tape. Knæets vinkel i oprejst position måler 180$^{\circ}$, hvilket svarer til en 0 g-påvirkning. Vinklen af knæet ændres i takt med udførelse af en squat-øvelse, hvorved g-påvirkningen bevæger sig mod 1. Den samlede vinkel af knæet bestemmes ud fra de to accelerometres parametre. Udregningen for dette kan ses i \autoref{sec:test_acc}.
 
 \begin{figure}[H]
@@ -76,27 +76,26 @@ Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerom
 Til identificering af støj fra EMG-forstærkeren fortages der baselinemålinger, som senere analyseres via en frekvensanalyse. Det samme gør sig gældende for identificeringen af EMG-signalets frekvensområde. Dette vil foregå under udførelsen af en squat-øvelse.
 En squat-øvelse defineres, således den kan gengives på tværs af forsøgspersonerne.\vspace{3mm}
 \begin{enumerate}
-\item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let til siderne
+\item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let ud til siderne
 \item Armene placeres over kors, som vist på \autoref{fig:squat}
 \item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på maksimalt 90$^{\circ}$ af knæet er opnået.
 	\begin{itemize}
 	\item Ryggen holdes ret under squat-øvelsen 
 	\item Knæene må ikke gå ud over tåspidserne 
 	\end{itemize}
-\item Kroppen returneres til udgangspunksposition
+\item Kroppen returneres til udgangspunktsposition
 \end{enumerate} \vspace{3mm}
 En illustration af squat-øvelsen ses af \autoref{fig:squat}.
 
 En nedadgående squat-øvelse defineres som punkt $1-2$ i overstående, hertil forbliver forsøgspersonen i en siddende squat indtil den givene måling er gennemført.
 
-For at præcisere øvelsen således alle forsøgspersoner så vidt muligt rammer den samme vinkel på maks  90$^{\circ}$ af knæet ved gentagende squat-øvelser, måles hver enkel forsøgsperson forinden forsøget udføres. Målingen foregår ved at placere forsøgspersonen på et givent sted med siden til en væg, hvorved en squat-øvelse til maks 90$^{\circ}$ udføres. Vinklen måles med en vinkelmåler, hvortil der påsættes tape på væggen, som udgør underbenet samt lårets position.
+For at præcisere øvelsen således alle forsøgspersoner så vidt muligt rammer den samme vinkel på maks  90$^{\circ}$ af knæet ved gentagende squat-øvelser, måles hver enkel forsøgsperson forinden forsøget udføres. Målingen foregår ved at placere forsøgspersonen på et givent sted med siden til en væg, hvorved en squat-øvelse til maksimum 90$^{\circ}$ udføres. Vinklen måles med en vinkelmåler, hvortil der påsættes tape på væggen, som udgør underbenet samt lårets position.
 Ved udførelsen af forsøget irettesætter forsøgspersonen sig efter det påsatte tape på væggen, for således at genskabe squat-øvelsen med mindst mulig afvigelse. Under dette kontrollerer øvrige deltager forsøgspersonens position samt squat-bevægelse.
 
-Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
+%Da mikrokontrolleren benytter en operationsspænding på $XX~V$ ønskes en signalamplitude under operationsspændingen, da dette vil bidrage til en mindre støjpåvirkning. 
 %Noget angående signal to noise ratio 
 
 %For at simulere den påvirkning som accelerometeret udsættes for og derved identificere det maksimale og minimale outputsignal roteres accelerometeret i en langsom rotation fra $0 - 90^{\circ}$ både til højre og venstre. Herudover måles accelerometerets påvirkning i henholdsvis 0 og 1 g-påvirkning for at identificere accelerometeres påvirkning samt, hvorvidt dette stemmer overens med databladet.
-
 
 \subsection{Oversigt af forsøgsopstilling}
 Forsøgsopstillingen ses nedenfor i punktform, for således at give bedre overblik herover. 
@@ -119,22 +118,30 @@ Forsøgsopstillingen ses nedenfor i punktform, for således at give bedre overbl
 \end{itemize}
 
 \subsection{Fremgangsmåde}
-Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres tre gange, hvoraf der ud fra målingerne foretages en senere databehandling. 
+Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne gentages tre gange, hvoraf der ud fra målingerne foretages en senere databehandling. 
 
 \subsubsection{Pilotforsøg}
-\textbf{Baseline måling}
+
+\textbf{Siddende baselinemåling}
+\begin{itemize}
+\item 10 sekunders måling, hvor forsøgspersonen sidder afslappet på et bord med benene hængende frit 
+\end{itemize}
+\vspace{3mm}
+\noindent
+\textbf{Stående baselinemåling}
 \begin{itemize}
 \item 10 sekunders måling, hvor forsøgspersonen står oprejst
 \end{itemize}
-	
+\vspace{3mm}
+\noindent	
 \textbf{Squat-øvelse}
 \begin{itemize}
 \item Måling i en squat-øvelse
 	\begin{itemize}
-	\item 1 sekunds baseline oprejst
+	\item 1 sekunds stående baseline oprejst
 	\item 4 sekunder nedadgående squat 
 	\item 4 sekunder opadgående squat
-	\item 1 sekunds baseline oprejst
+	\item 1 sekunds stående baseline oprejst
 	\end{itemize}
 \end{itemize}
 
@@ -151,30 +158,30 @@ Forsøgspersonen placeres på et fast punkt under forsøget. Øvelserne udføres
 %\end{itemize}
 
 \section{Databehandling}
-I det præsenterede data tages der udgangspunkt i forsøgsperson 1. Dette er som følge af, at der i EMG målingerne for forsøgsperson 2 ses et udsving i EMG der ligner rystelser, som kan være grundet rystende ben. Til trods for disse muskelrystelser ses der ligheder mellem målingerne for forsøgspersonerne. 
+I det præsenterede data tages der udgangspunkt i forsøgsperson 1. Dette er som følge af, at der i EMG-målingerne for forsøgsperson 2 ses et udsving i EMG-signalet, der ligner rystelser, hvilket er grundet rystende ben. Til trods for disse muskelrystelser ses der ligheder mellem målingerne for forsøgspersonerne. 
 
 \subsubsection{Resultater for EMG-målinger}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/baselineogemg.png}
-	\caption{EMG-målinger af baseline og 2. måling.}
+	\caption{EMG-målinger af siddende baseline, stående baseline og squat-øvelse.}
 	\label{fig:baselineogemg}
 \end{figure}
-Ud fra \autoref{fig:baselineogemg}, ses baseline samt squat-øvelse for forsøgsperson 1. Hertil ses et negativt offset for begge målinger mellem $0,5-0,6~V$. Ved squat-øvelsen ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til maks $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
+Ud fra \autoref{fig:baselineogemg}, ses baseline samt squat-øvelse for forsøgsperson 1. Ved squat-øvelsen ses en stigning ved $1,5~s$, hvilket relateres til forsøgspersonens nedadgående bevægelse til maks $90^{\circ}$ flektion af knæet under squat-øvelsen. Yderligere ses et fald i amplitude ved ca. $6~s$, der relateres til en opdagående bevægelse til øvelsens udgangsposition. 
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/emgfft.png}
-	\caption{Frekvensanalyse med semilogaritmisk skala på X-aksen af EMG-måling for baseline og ved squat-øvelse. Bemærk at der ikke er samme skalaer op af Y-aksen for de to grafer. Der ses derfor mere støj på 2. måling end baseline målingen.}
+	\caption{Frekvensanalyse med semilogaritmisk skala på Y-aksen af EMG-måling for siddende baseline, stående baseline og ved squat-øvelse.}
 	\label{fig:emgfft}
 \end{figure}
 
-Der er foretaget en frekvensanalyse af baseline måling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af 2squat-øvelsen for identificering af frekvensområdet for bevægelsen. For begge grafer er der foretaget en semilogaritmisk skala på X-aksen, hvilket resulterer i forskellige skalaer op af Y-aksen. Det ses ud fra målingerne et højere støjniveau på squat-øvelsen end baseline målingen, dette støjniveau er dog relativt lav. 
-Der observeres en DC-komponent ved $0~Hz$, hvilket svarer til det offset der er på signalet. 
+Der er foretaget en frekvensanalyse af siddende og stående baselinemåling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af squat-øvelsen for identificering af frekvensområdet for bevægelsen. For graferne er der foretaget en semilogaritmisk skala på Y-aksen, for således at tydeliggøre de lavfrekvente signaler. Det ses ud fra målingerne et højere støjniveau på squat-øvelsen end baselinemålingerne, dette støjniveau er dog relativt lav. 
+Der observeres en DC-komponent ved $0~Hz$, hvilket svarer til det offset, der er på signalet. 
 Det fremgår ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er Nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
-Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som værende relativt lavfrekvent $0.4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
+Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som værende relativt lavfrekvent $0,4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
 
 
 \subsubsection{Resultater for accelerometer målinger} \label{sec:acc_fft}
@@ -182,7 +189,7 @@ Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som væren
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/Pilotforsoeg/accfft.png}
-	\caption{Frekvensanalyse af baseline måling for accelerometeret, hvor X-aksen er en semilogaritmisk skala}
+	\caption{Frekvensanalyse af baselinemåling for accelerometeret, hvor Y-aksen er en semilogaritmisk skala}
 	\label{fig:accfftx}
 \end{figure}
 Af \autoref{fig:accfftx} ses frekvensanalysen for accelerometeret i X-aksen. Ud fra dette ses yderligere støjsignaler end DC-komponent, der er dæmpet ved $0,1~Hz$. Grundet sampligsfrekvensen er der ingen $50~Hz$ støj, hvor årsagen er beskrevet under frekvensanalysen for EMG-målingen. 
@@ -193,7 +200,7 @@ Resultaterne fra omregningen visualiseres af \autoref{fig:accvinkel}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/accvinkel}
-	\caption{Vinkler fra accelerometrene under 2. måling}
+	\caption{Vinkler fra accelerometrene under squat-øvelsen}
 	\label{fig:accvinkel}
 \end{figure}
 Det fremgår af \autoref{fig:accvinkel}, at forsøgspersonen udfører en fleksion af knæet under squat-øvelsen når ned til en grad på ca. $78^{\circ}$. 
@@ -202,7 +209,7 @@ For at kunne se relationen mellem udslag i EMG samt for accelerometrene, plottes
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/emg_vinkler_tid}
-	\caption{EMG signal og vinkler fra acceleromtre under squat-øvelsen}
+	\caption{EMG-signal og vinkler fra acceleromtre under squat-øvelsen}
 	\label{fig:emgogacc}
 \end{figure}
 
@@ -216,7 +223,7 @@ For at se sammenhængen mellem muskelaktivitet og de forskellige vinkler, plotte
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/emg_vinkler}
-	\caption{EMG målingen vist i forhold til vinkler}
+	\caption{EMG-målingen vist i forhold til vinkler}
 	\label{fig:emgogvinkel}
 \end{figure}
 

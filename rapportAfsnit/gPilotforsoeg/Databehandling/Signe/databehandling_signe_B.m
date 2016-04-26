@@ -320,6 +320,8 @@ ylabel('Størrelse')
 %ylim([0 1.4*10^-3])
 set(gca,'fontsize',20);
 box off
+set(gca,'ytick',[0,0.001, 0.01, 1]*10e-2)
+grid on
 
 
 % subplot(2,3,2)
