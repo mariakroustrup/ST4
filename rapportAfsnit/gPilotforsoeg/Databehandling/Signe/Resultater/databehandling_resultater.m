@@ -1,7 +1,9 @@
 %%  Resultater
 % Plot af EMG baseline og EMG nedogop (Signe)
-Baseline_emg=load('Baseline1');
+Baseline_siddende_emg=load('SidBaseline1');
+Baseline_staaende_emg=load('Baseline1');
 Nedogop=load('Nedogop1');
+
 
 Fs=100;
 N=1150;
@@ -11,27 +13,30 @@ L  = samplelength*Fs;
 f  = Fs*(0:(L/2))/L;
 
 %EMG målingerne vælges
-baseline=Baseline_emg.data(7,:);
+baseline_siddende=Baseline_siddende_emg.data(1,:);
+baseline_staaende=Baseline_staaende_emg.data(7,:);
 nedogop_emg=Nedogop.data(7,:);
 
-baseline_off = baseline-baseline(1);
+baseline_siddende_off = baseline_siddende-baseline_siddende(1);
+baseline_staaende_off = baseline_staaende-baseline_staaende(1);
 nedogop_emg_off = nedogop_emg-nedogop_emg(1);
 
 %Plot af Baseline med nedogop
 figure('name','Ikke-offsetjusteret','numbertitle','off')
 hold on
-plot(t, baseline(1:1150), 'g');
-plot(t, nedogop_emg([1:1150]), 'b');
+plot(t, baseline_siddende_off(1:1150), 'r');
+plot(t, baseline_staaende_off(1:1150), 'g');
+plot(t, nedogop_emg_off([1:1150]), 'b');
 xlim([0 10]);
 xlabel('Tid [s]');
 ylabel('Spænding [V]');
-legend('Baseline', '2. måling')
+legend('Siddende baseline', 'Stående baseline', 'Squat-øvelse')
 set(gca,'fontsize',20);
 box off
 
 figure('name','Offsetjusteret','numbertitle','off')
 hold on
-plot(t, baseline_off(1:1150), 'g');
+plot(t, baseline_staaende_off(1:1150), 'g');
 plot(t, nedogop_emg_off([1:1150]), 'b');
 xlim([0 10]);
 xlabel('Tid [s]');
