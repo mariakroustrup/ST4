@@ -1,8 +1,8 @@
 \section{Flowdigram}
-I dette afsnit fremgår implementeringen af blokkene fra systemet \autoref{sec:blokdiagram}. Dette er vist i flowdiagram, der visualiserer opbygningen og sammenhængen mellem blokkene. Flowdiagram er opdelt efter et overordnet, som beskriver hele processen, mens det initialiserende samt EMG-algoritmen er uddybet i et andet. Udover den visualiserende del vil det blive uddybet hvilke funktioner de enkelte figurer indeholder. Beskrivelsen af de forskellige figurer er beskrevet i \autoref{sec:forord}. 
+I dette afsnit fremgår implementeringen af systemets blokke \autoref{sec:blokdiagram}. Flowdiagrammer er anvendt for at visualisere opbygningen og sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet, som beskriver hele processen og et initialiserende samt et, der viser EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer er beskrevet i \autoref{sec:forord}. 
 
-\subsection{Overordnet flowchart}	
-Det analoge signal som optages af de implemterende sensorer skal konverteres fra analogt til digital, hvorved det efterfølgende kan implementeres i softwaren, det overordnet flowchart fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt, som igang sætter de efterfølgende funktioner. Dette sætter et timer interrupt i gang som skal tælle inden for XX interval. Herefter sker der en intialisering af systemet.
+\subsection{Overordnet flowdiagram}	
+Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt, som igangsætter de efterfølgende funktioner. Dette igangsætter et timer interrupt, der tæller inden for XX interval. Herefter sker der en intialisering af systemet.
 
 \begin{figure}[H]
 \centering
@@ -11,8 +11,8 @@ Det analoge signal som optages af de implemterende sensorer skal konverteres fra
 \label{fig:overordnet_flow}
 
 
-\subsection{Initialiserende flowchart}
-I intialiseringens processen sker opsætningen af ADC'en, hvor efter det er muligt at se om der er et analogt input. Ved et analogt input sker en A/D-konvertering, hvor det analoge bliver gjort digital. For at kunne behandle dataen og kommunikere trådløst foretages en setup, hvor BLE tilkobes og signalet offsetjusteres. Hvis der intet analogt input vil systemet gå i low power mode. Efter setup skal systemet tage en beslutningen om hvorvidt inputtet befinder sig inden for en spænding svarende til 0 - 90 graders vinkel, hvis dette er tilfældet vil signalet foretage en EMG-algortime. Hvis inputtet ikke svarer til beslutningen vil en rød LED lyse og intialiserings processen vil foretages igen. 
+\subsection{Initialiserende flowdiagram}
+I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sker opsætningen af ADC'en, hvorefter det er muligt at se, hvorvidt kravet for det analoge input opfyldes. Ved et analogt input sker en A/D-konvertering, hvor det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobes og signalet offsetjusteres. Hvis kravet for det analoge input ikke opfyldes, vil systemet gå i low power mode. Efter setup skal det vurderes, hvorvidt inputtet befinder sig inden for en spænding svarende til 0 - 90 graders vinkel, hvis dette er tilfældet vil signalet starte EMG-algortimen. Hvis inputtet signalet ikke tilstrækkeligt, vil en rød LED lyse og intialiseringsprocessen vil starte på ny. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/implementering/initialiserende_flow.png}
@@ -21,7 +21,7 @@ I intialiseringens processen sker opsætningen af ADC'en, hvor efter det er muli
 \end{figure}
 
 \subsection{EMG-algoritme}
-Hvis inputtet svarer til en spændingen mellem 0-90 grader, vurderes om muskelaktiviteten er faldende eller stigende. Hvis der ingen muskelaktivitet er vurderes det igen om muskelaktiviteten er stigende eller faldende, hvis der stadig ingen muskelaktivitet er efter 30 sekunder afsluttes EMG-algoritmen. Hvis muskelaktiviteten er stigende vil vinklen være større, hvilket slutter EMG-algoritmen og sender et input videre til BLE, hvor ved der sker en fleksion af knæleddet. Hvis muskelaktiviteten er faldende vil viklen blive mindre, hvilket slutter EMG-algoritmen og sender et input videre til BLE, hvor ved der sker en ekstension af knæleddet. 
+EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. Hvis inputtet svarer til en spændingen mellem 0-90 grader vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. Hvis der ingen muskelaktivitet er, påbegyndes en loop, hvor der igen vurderes om muskelaktiviteten er stigende eller faldende. Hvis der efter 30 sekunder fortsat ingen muskelaktivitet er, afsluttes EMG-algoritmen. Hvis muskelaktiviteten er stigende, vil vinklen blive større, og herved slutter EMG-algoritmen og sender et input videre til BLE, hvorved en fleksion af knæleddet påbegyndes. Hvis muskelaktiviteten er faldende vil viklen blive mindre, hvilket ligeledes slutter EMG-algoritmen og sender et input videre til BLE, hvorved en ektension af knæleddet påbegyndes. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/implementering/EMG_algo.png}
