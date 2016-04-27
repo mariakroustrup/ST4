@@ -1,10 +1,31 @@
-\section{Implementering}
+\section{Flowdigram}
+I dette afsnit fremgår implementeringen af blokkene fra systemet \autoref{sec:blokdiagram}. Dette er vist i flowdiagram, der visualiserer opbygningen og sammenhængen mellem blokkene. Flowdiagram er opdelt efter et overordnet, som beskriver hele processen, mens det initialiserende samt EMG-algoritmen er uddybet i et andet. Udover den visualiserende del vil det blive uddybet hvilke funktioner de enkelte figurer indeholder. Beskrivelsen af de forskellige figurer er beskrevet i \autoref{sec:forord}. 
+
+\subsection{Overordnet flowchart}	
+Det analoge signal som optages af de implemterende sensorer skal konverteres fra analogt til digital, hvorved det efterfølgende kan implementeres i softwaren, det overordnet flowchart fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt, som igang sætter de efterfølgende funktioner. Dette sætter et timer interrupt i gang som skal tælle inden for XX interval. Herefter sker der en intialisering af systemet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/implementering/overordnet_flow.png}
+\caption{Overordnet flowdigram som viser opbyggelsen af det samlede system}
+\label{fig:overordnet_flow}
 
 
-\section{Overordnet flowchart}
-
-
-\subsection{Initerende flowchart}
-
+\subsection{Initialiserende flowchart}
+I intialiseringens processen sker opsætningen af ADC'en, hvor efter det er muligt at se om der er et analogt input. Ved et analogt input sker en A/D-konvertering, hvor det analoge bliver gjort digital. For at kunne behandle dataen og kommunikere trådløst foretages en setup, hvor BLE tilkobes og signalet offsetjusteres. Efter offsetjuseringen sker der 
+Hvis der intet analogt input vil systemet gå i low power mode. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/implementering/initialiserende_flow.png}
+\caption{..}
+\label{fig:initialiserende_flow}
+\end{figure}
 
 \subsection{EMG-algoritme}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/implementering/EMG_algo.png}
+\caption{..}
+\label{fig:Emg_algo}
+\end{figure}
