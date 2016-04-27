@@ -12,20 +12,20 @@ Det analoge signal som optages af de implemterende sensorer skal konverteres fra
 
 
 \subsection{Initialiserende flowchart}
-I intialiseringens processen sker opsætningen af ADC'en, hvor efter det er muligt at se om der er et analogt input. Ved et analogt input sker en A/D-konvertering, hvor det analoge bliver gjort digital. For at kunne behandle dataen og kommunikere trådløst foretages en setup, hvor BLE tilkobes og signalet offsetjusteres. Efter offsetjuseringen sker der 
-Hvis der intet analogt input vil systemet gå i low power mode. 
+I intialiseringens processen sker opsætningen af ADC'en, hvor efter det er muligt at se om der er et analogt input. Ved et analogt input sker en A/D-konvertering, hvor det analoge bliver gjort digital. For at kunne behandle dataen og kommunikere trådløst foretages en setup, hvor BLE tilkobes og signalet offsetjusteres. Hvis der intet analogt input vil systemet gå i low power mode. Efter setup skal systemet tage en beslutningen om hvorvidt inputtet befinder sig inden for en spænding svarende til 0 - 90 graders vinkel, hvis dette er tilfældet vil signalet foretage en EMG-algortime. Hvis inputtet ikke svarer til beslutningen vil en rød LED lyse og intialiserings processen vil foretages igen. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/implementering/initialiserende_flow.png}
-\caption{..}
+\caption{Initialiserende flowdigram som viser opbyggelsen af den intialiserende del af systemet}
 \label{fig:initialiserende_flow}
 \end{figure}
 
 \subsection{EMG-algoritme}
-
+Hvis inputtet svarer til en spændingen mellem 0-90 grader, vurderes om muskelaktiviteten er faldende eller stigende. Hvis der ingen muskelaktivitet er vurderes det igen om muskelaktiviteten er stigende eller faldende, hvis der stadig ingen muskelaktivitet er efter 30 sekunder afsluttes EMG-algoritmen. Hvis muskelaktiviteten er stigende vil vinklen være større, hvilket slutter EMG-algoritmen og sender et input videre til BLE, hvor ved der sker en fleksion af knæleddet. Hvis muskelaktiviteten er faldende vil viklen blive mindre, hvilket slutter EMG-algoritmen og sender et input videre til BLE, hvor ved der sker en ekstension af knæleddet. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/implementering/EMG_algo.png}
-\caption{..}
+\caption{EMG-algoritmen viser opbyggelsen af EMG-algortimens del af systemet}
 \label{fig:Emg_algo}
 \end{figure}
+
