@@ -1,0 +1,2860 @@
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.RX_interrupt,"ax",%progbits
+  18              		.align	2
+  19              		.global	RX_interrupt
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	RX_interrupt, %function
+  23              	RX_interrupt:
+  24              	.LFB41:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * UART echo with interrupt
+   4:.\main.c      ****  *
+   5:.\main.c      ****  * ========================================
+   6:.\main.c      **** */
+   7:.\main.c      **** #include <project.h>
+   8:.\main.c      **** #include <stdlib.h>
+   9:.\main.c      **** #define LOWBYTE 0                                   // Used to toggle between HIGH byte and LOW byt
+  10:.\main.c      **** #define HIGHBYTE 1                                  // Used to toggle between HIGH byte and LOW byt
+  11:.\main.c      **** #define FALSE 0
+  12:.\main.c      **** #define TRUE 1
+  13:.\main.c      **** #define LENGTH 5
+  14:.\main.c      **** 
+  15:.\main.c      **** #define ARRAY_SIZE 3
+  16:.\main.c      **** #define FILTER_LENGTH 32
+  17:.\main.c      **** #define FILTER_LENGTH2 30
+  18:.\main.c      **** 
+  19:.\main.c      **** #define StartMeasuring Measure_When_Low_Write(0);   // Used to start the Timer
+  20:.\main.c      **** #define StopMeasuring Measure_When_Low_Write(1);    // Used to stop the Timer and capture the time 
+  21:.\main.c      **** //#define TRANSMIT_TIME
+  22:.\main.c      **** //#define ALGO2
+  23:.\main.c      **** 
+  24:.\main.c      **** int x[FILTER_LENGTH+1] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+  25:.\main.c      **** int y[2] = {0,0};
+  26:.\main.c      **** 
+  27:.\main.c      **** //double b[FILTER_LENGTH+1] = {0.991824212000533,  -3.967296848002132,   5.950945272003199, -3.9672
+  28:.\main.c      **** //double a[FILTER_LENGTH+1] = {1.000000000000000,  -3.983581258658521,   5.950878429266698, -3.9510
+  29:.\main.c      **** 
+  30:.\main.c      **** int b[FILTER_LENGTH+1] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, -32, 0, 0, 0, 0, 0, 0, 
+  31:.\main.c      **** int a[2] = {1 -1};
+  32:.\main.c      **** 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 2
+
+
+  33:.\main.c      **** double x3[FILTER_LENGTH2+1] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+  34:.\main.c      **** double y3 = 0;
+  35:.\main.c      **** double b3[FILTER_LENGTH2+1] = {0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.03,0.0
+  36:.\main.c      **** 
+  37:.\main.c      **** char current_byte = LOWBYTE;                        // Receive LOW byte first as default
+  38:.\main.c      **** int16 value_in,value_out[2]={0,0},i=0,j=0,oldest,newest,diff,signed_data,old;
+  39:.\main.c      **** int16 data_array[LENGTH] = {0};
+  40:.\main.c      **** uint16 counter = 0, pointer, squared,moving_sum,unsigned_data,avg_new;                             
+  41:.\main.c      **** char FirstCall = TRUE;
+  42:.\main.c      **** 
+  43:.\main.c      **** signed int floor_and_convert(double y)
+  44:.\main.c      **** {
+  45:.\main.c      ****    if (y > 0)
+  46:.\main.c      ****       return (signed int) (y+0.5);
+  47:.\main.c      ****    else
+  48:.\main.c      ****       return (signed int) (y-0.5);
+  49:.\main.c      **** }
+  50:.\main.c      **** 
+  51:.\main.c      **** 
+  52:.\main.c      **** signed int high_pass_filter(int data)
+  53:.\main.c      **** {
+  54:.\main.c      ****    x[0] = data;          // Read received sample and perform type casts
+  55:.\main.c      ****    
+  56:.\main.c      ****    y[0] = b[0]*x[0];
+  57:.\main.c      ****    
+  58:.\main.c      ****    for(i = 1;i <= FILTER_LENGTH;i++)                 // Run IIR filter for each received sample
+  59:.\main.c      ****    {
+  60:.\main.c      ****       y[0] += b[i]*x[i];
+  61:.\main.c      ****    } 
+  62:.\main.c      ****    y[0] -= a[1]*y[1];
+  63:.\main.c      ****    
+  64:.\main.c      ****    
+  65:.\main.c      ****    for(i = FILTER_LENGTH-1;i >= 0;i--)               // Roll x array in order to hold old sample in
+  66:.\main.c      ****    {
+  67:.\main.c      ****       x[i+1] = x[i];
+  68:.\main.c      ****    }
+  69:.\main.c      ****    y[0] = (y[0]>>5);
+  70:.\main.c      **** 
+  71:.\main.c      ****    y[1] = y[0];
+  72:.\main.c      ****    
+  73:.\main.c      ****    return (y[0]);                   // Perform type casts and return sample
+  74:.\main.c      **** }
+  75:.\main.c      **** 
+  76:.\main.c      **** signed int differentiator(signed int new)
+  77:.\main.c      **** {
+  78:.\main.c      ****    diff = (new - old);
+  79:.\main.c      ****    old = new;
+  80:.\main.c      ****    return diff;
+  81:.\main.c      **** }
+  82:.\main.c      **** 
+  83:.\main.c      **** 
+  84:.\main.c      **** unsigned int square(signed int data)
+  85:.\main.c      **** {
+  86:.\main.c      ****    return data*data;
+  87:.\main.c      **** }
+  88:.\main.c      **** 
+  89:.\main.c      **** unsigned int mavg_filter(unsigned int data)
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 3
+
+
+  90:.\main.c      **** {
+  91:.\main.c      ****    x3[0] =  (double) data;      // Read received sample and perform type casts
+  92:.\main.c      ****    
+  93:.\main.c      ****    y3 = 0;
+  94:.\main.c      ****    for(i = 0;i <= FILTER_LENGTH2;i++)           // Run FIR filter for each received sample
+  95:.\main.c      ****    {
+  96:.\main.c      ****       y3 += b3[i]*x3[i];
+  97:.\main.c      ****    } 
+  98:.\main.c      ****    
+  99:.\main.c      ****    for(i = FILTER_LENGTH2-1;i >= 0;i--)         // Roll x array in order to hold old sample inputs
+ 100:.\main.c      ****    {
+ 101:.\main.c      ****       x3[i+1] = x3[i];
+ 102:.\main.c      ****    }
+ 103:.\main.c      ****       
+ 104:.\main.c      ****    return (unsigned int) y3;                    // Perform type casts and return sample
+ 105:.\main.c      **** }
+ 106:.\main.c      **** 
+ 107:.\main.c      **** CY_ISR(RX_interrupt)
+ 108:.\main.c      **** {
+  26              		.loc 1 108 0
+  27              		.cfi_startproc
+  28 0000 30B5     		push	{r4, r5, lr}
+  29              		.cfi_def_cfa_offset 12
+  30              		.cfi_offset 4, -12
+  31              		.cfi_offset 5, -8
+  32              		.cfi_offset 14, -4
+  33 0002 83B0     		sub	sp, sp, #12
+  34              		.cfi_def_cfa_offset 24
+ 109:.\main.c      ****     char str[4];
+ 110:.\main.c      ****     uint8 ch = UART_UartGetChar();
+  35              		.loc 1 110 0
+  36 0004 FFF7FEFF 		bl	UART_UartGetChar
+  37              	.LVL0:
+  38 0008 C0B2     		uxtb	r0, r0
+  39              	.LVL1:
+ 111:.\main.c      ****     UART_ClearRxInterruptSource(UART_GetRxInterruptSource());
+  40              		.loc 1 111 0
+  41 000a 234B     		ldr	r3, .L6
+  42 000c 1A68     		ldr	r2, [r3]
+  43 000e 1A60     		str	r2, [r3]
+ 112:.\main.c      ****     
+ 113:.\main.c      ****     if(current_byte == LOWBYTE)                     // Receive LOW byte first
+  44              		.loc 1 113 0
+  45 0010 224B     		ldr	r3, .L6+4
+  46 0012 1B78     		ldrb	r3, [r3]
+  47 0014 002B     		cmp	r3, #0
+  48 0016 05D1     		bne	.L2
+ 114:.\main.c      ****     {
+ 115:.\main.c      ****         
+ 116:.\main.c      ****         
+ 117:.\main.c      ****         value_in = ch;                                 // Save UCA0RXBUF in the LOW byte of "value"
+  49              		.loc 1 117 0
+  50 0018 214B     		ldr	r3, .L6+8
+  51 001a 1880     		strh	r0, [r3]
+ 118:.\main.c      ****         current_byte = HIGHBYTE;                    // Prepare to receive HIGH byte on next interru
+  52              		.loc 1 118 0
+  53 001c 0122     		mov	r2, #1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 4
+
+
+  54 001e 1F4B     		ldr	r3, .L6+4
+  55 0020 1A70     		strb	r2, [r3]
+  56 0022 37E0     		b	.L1
+  57              	.L2:
+ 119:.\main.c      ****         return;                                     // Return from interrupt
+ 120:.\main.c      ****     }
+ 121:.\main.c      ****     if(current_byte == HIGHBYTE)                    // Recieve HIGH byte
+  58              		.loc 1 121 0
+  59 0024 012B     		cmp	r3, #1
+  60 0026 35D1     		bne	.L1
+ 122:.\main.c      ****     {
+ 123:.\main.c      ****         
+ 124:.\main.c      ****         value_in += (ch<<8);                           // Save UCA0RXBUF in the HIGH byte of "value
+  61              		.loc 1 124 0
+  62 0028 1D4D     		ldr	r5, .L6+8
+  63 002a 0002     		lsl	r0, r0, #8
+  64              	.LVL2:
+  65 002c 2B88     		ldrh	r3, [r5]
+  66 002e C018     		add	r0, r0, r3
+  67 0030 2880     		strh	r0, [r5]
+ 125:.\main.c      ****         current_byte = LOWBYTE;                     // Prepare to receive LOW byte on next interrup
+  68              		.loc 1 125 0
+  69 0032 1A4C     		ldr	r4, .L6+4
+  70 0034 0023     		mov	r3, #0
+  71 0036 2370     		strb	r3, [r4]
+ 126:.\main.c      ****                 
+ 127:.\main.c      ****         StartMeasuring
+  72              		.loc 1 127 0
+  73 0038 0020     		mov	r0, #0
+  74 003a FFF7FEFF 		bl	Measure_When_Low_Write
+  75              	.LVL3:
+ 128:.\main.c      ****         #ifdef ALGO2
+ 129:.\main.c      ****         data_array[pointer] = value_in;
+ 130:.\main.c      ****         pointer += 1;
+ 131:.\main.c      ****         if (pointer == LENGTH)
+ 132:.\main.c      ****         {
+ 133:.\main.c      ****             pointer = 0;
+ 134:.\main.c      ****             oldest = 0;
+ 135:.\main.c      ****             newest = LENGTH-1;
+ 136:.\main.c      ****             FirstCall = FALSE;
+ 137:.\main.c      ****         }
+ 138:.\main.c      ****         else
+ 139:.\main.c      ****         {
+ 140:.\main.c      ****             oldest = pointer;
+ 141:.\main.c      ****             newest = pointer - 1;
+ 142:.\main.c      ****         }
+ 143:.\main.c      ****         if (FirstCall)
+ 144:.\main.c      ****         {
+ 145:.\main.c      ****             diff = 0;
+ 146:.\main.c      ****         }
+ 147:.\main.c      ****         else      
+ 148:.\main.c      ****         {
+ 149:.\main.c      ****             diff = (signed int) (data_array[newest] - data_array[oldest])>>3;
+ 150:.\main.c      ****         }
+ 151:.\main.c      ****         squared = diff*diff;
+ 152:.\main.c      ****         
+ 153:.\main.c      ****         moving_sum = moving_sum + (squared>>4) - (moving_sum>>3);
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 5
+
+
+ 154:.\main.c      ****         
+ 155:.\main.c      ****         value_out[1] = value_out[0];
+ 156:.\main.c      ****         value_out[0] = moving_sum;
+ 157:.\main.c      ****         #else
+ 158:.\main.c      ****            // signed_data = high_pass_filter(value_in);           // Applay High Pass filter on raw
+ 159:.\main.c      ****             //signed_data = differentiator(signed_data);          // Applay differentiator
+ 160:.\main.c      ****             //unsigned_data = square(signed_data/2);              // Applay square function
+ 161:.\main.c      ****             //avg_new = mavg_filter(unsigned_data);               // Applay moving average function
+ 162:.\main.c      ****             
+ 163:.\main.c      ****             value_out[1] = value_out[0];
+  76              		.loc 1 163 0
+  77 003e A388     		ldrh	r3, [r4, #4]
+  78 0040 E380     		strh	r3, [r4, #6]
+ 164:.\main.c      ****             value_out[0] = value_in;
+  79              		.loc 1 164 0
+  80 0042 2B88     		ldrh	r3, [r5]
+  81 0044 A380     		strh	r3, [r4, #4]
+ 165:.\main.c      ****         #endif
+ 166:.\main.c      ****         StopMeasuring
+  82              		.loc 1 166 0
+  83 0046 0120     		mov	r0, #1
+  84 0048 FFF7FEFF 		bl	Measure_When_Low_Write
+  85              	.LVL4:
+ 167:.\main.c      ****         
+ 168:.\main.c      ****         
+ 169:.\main.c      ****         if ((value_out[0] >= 225) && (value_out[1] < 225))      // Applay simple thresholding
+  86              		.loc 1 169 0
+  87 004c 0422     		mov	r2, #4
+  88 004e A35E     		ldrsh	r3, [r4, r2]
+  89 0050 E02B     		cmp	r3, #224
+  90 0052 16DD     		ble	.L5
+  91              		.loc 1 169 0 is_stmt 0 discriminator 1
+  92 0054 114B     		ldr	r3, .L6+4
+  93 0056 0622     		mov	r2, #6
+  94 0058 9B5E     		ldrsh	r3, [r3, r2]
+  95 005a E02B     		cmp	r3, #224
+  96 005c 11DC     		bgt	.L5
+ 170:.\main.c      ****         {
+ 171:.\main.c      ****             j = j + 1;
+  97              		.loc 1 171 0 is_stmt 1
+  98 005e 0F4B     		ldr	r3, .L6+4
+  99 0060 1889     		ldrh	r0, [r3, #8]
+ 100 0062 0130     		add	r0, r0, #1
+ 101 0064 80B2     		uxth	r0, r0
+ 102 0066 1881     		strh	r0, [r3, #8]
+ 172:.\main.c      ****             UART_BLE_UartPutString(itoa(j,str,10));             // Notify BLE_Peripheral
+ 103              		.loc 1 172 0
+ 104 0068 00B2     		sxth	r0, r0
+ 105 006a 01A9     		add	r1, sp, #4
+ 106 006c 0A22     		mov	r2, #10
+ 107 006e FFF7FEFF 		bl	itoa
+ 108              	.LVL5:
+ 109 0072 FFF7FEFF 		bl	UART_BLE_UartPutString
+ 110              	.LVL6:
+ 173:.\main.c      ****             UART_BLE_UartPutChar(10);    
+ 111              		.loc 1 173 0
+ 112 0076 0A20     		mov	r0, #10
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 6
+
+
+ 113 0078 FFF7FEFF 		bl	UART_BLE_SpiUartWriteTxData
+ 114              	.LVL7:
+ 174:.\main.c      ****             UART_BLE_UartPutChar(13);  
+ 115              		.loc 1 174 0
+ 116 007c 0D20     		mov	r0, #13
+ 117 007e FFF7FEFF 		bl	UART_BLE_SpiUartWriteTxData
+ 118              	.LVL8:
+ 119              	.L5:
+ 175:.\main.c      ****         }
+ 176:.\main.c      ****         
+ 177:.\main.c      ****         #ifdef TRANSMIT_TIME
+ 178:.\main.c      ****         UART_UartPutChar(counter);                    // Send back lowbyte of value
+ 179:.\main.c      ****         UART_UartPutChar((counter>>8));               // Send back highbyte of value
+ 180:.\main.c      ****         #else
+ 181:.\main.c      ****         UART_UartPutChar(value_out[0]);
+ 120              		.loc 1 181 0
+ 121 0082 064C     		ldr	r4, .L6+4
+ 122 0084 0423     		mov	r3, #4
+ 123 0086 E05E     		ldrsh	r0, [r4, r3]
+ 124 0088 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 125              	.LVL9:
+ 182:.\main.c      ****         UART_UartPutChar(value_out[0]>>8);
+ 126              		.loc 1 182 0
+ 127 008c 0520     		mov	r0, #5
+ 128 008e 2056     		ldrsb	r0, [r4, r0]
+ 129 0090 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 130              	.LVL10:
+ 131              	.L1:
+ 183:.\main.c      ****         #endif
+ 184:.\main.c      ****         
+ 185:.\main.c      ****     
+ 186:.\main.c      ****     }
+ 187:.\main.c      **** }
+ 132              		.loc 1 187 0
+ 133 0094 03B0     		add	sp, sp, #12
+ 134              		@ sp needed
+ 135 0096 30BD     		pop	{r4, r5, pc}
+ 136              	.L7:
+ 137              		.align	2
+ 138              	.L6:
+ 139 0098 C00F2740 		.word	1076301760
+ 140 009c 00000000 		.word	.LANCHOR0
+ 141 00a0 00000000 		.word	value_in
+ 142              		.cfi_endproc
+ 143              	.LFE41:
+ 144              		.size	RX_interrupt, .-RX_interrupt
+ 145              		.section	.text.BLE_RX_interrupt,"ax",%progbits
+ 146              		.align	2
+ 147              		.global	BLE_RX_interrupt
+ 148              		.code	16
+ 149              		.thumb_func
+ 150              		.type	BLE_RX_interrupt, %function
+ 151              	BLE_RX_interrupt:
+ 152              	.LFB42:
+ 188:.\main.c      **** 
+ 189:.\main.c      **** CY_ISR(BLE_RX_interrupt)
+ 190:.\main.c      **** {
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 7
+
+
+ 153              		.loc 1 190 0
+ 154              		.cfi_startproc
+ 155 0000 08B5     		push	{r3, lr}
+ 156              		.cfi_def_cfa_offset 8
+ 157              		.cfi_offset 3, -8
+ 158              		.cfi_offset 14, -4
+ 191:.\main.c      ****     uint8 ch = UART_BLE_UartGetChar();
+ 159              		.loc 1 191 0
+ 160 0002 FFF7FEFF 		bl	UART_BLE_UartGetChar
+ 161              	.LVL11:
+ 192:.\main.c      ****     UART_BLE_ClearRxInterruptSource(UART_BLE_GetRxInterruptSource());
+ 162              		.loc 1 192 0
+ 163 0006 044B     		ldr	r3, .L9
+ 164 0008 1A68     		ldr	r2, [r3]
+ 165 000a 1A60     		str	r2, [r3]
+ 193:.\main.c      ****     UART_UartPutChar(ch);
+ 166              		.loc 1 193 0
+ 167 000c FF23     		mov	r3, #255
+ 168 000e 1840     		and	r0, r3
+ 169              	.LVL12:
+ 170 0010 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 171              	.LVL13:
+ 194:.\main.c      **** }
+ 172              		.loc 1 194 0
+ 173              		@ sp needed
+ 174 0014 08BD     		pop	{r3, pc}
+ 175              	.L10:
+ 176 0016 C046     		.align	2
+ 177              	.L9:
+ 178 0018 C00F2540 		.word	1076170688
+ 179              		.cfi_endproc
+ 180              	.LFE42:
+ 181              		.size	BLE_RX_interrupt, .-BLE_RX_interrupt
+ 182              		.section	.text.Timer_interrupt,"ax",%progbits
+ 183              		.align	2
+ 184              		.global	Timer_interrupt
+ 185              		.code	16
+ 186              		.thumb_func
+ 187              		.type	Timer_interrupt, %function
+ 188              	Timer_interrupt:
+ 189              	.LFB43:
+ 195:.\main.c      **** 
+ 196:.\main.c      **** CY_ISR(Timer_interrupt)
+ 197:.\main.c      **** {
+ 190              		.loc 1 197 0
+ 191              		.cfi_startproc
+ 192 0000 08B5     		push	{r3, lr}
+ 193              		.cfi_def_cfa_offset 8
+ 194              		.cfi_offset 3, -8
+ 195              		.cfi_offset 14, -4
+ 198:.\main.c      ****     counter = Timer_ReadCapture();   
+ 196              		.loc 1 198 0
+ 197 0002 FFF7FEFF 		bl	Timer_ReadCapture
+ 198              	.LVL14:
+ 199 0006 014B     		ldr	r3, .L12
+ 200 0008 5881     		strh	r0, [r3, #10]
+ 199:.\main.c      **** }
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 8
+
+
+ 201              		.loc 1 199 0
+ 202              		@ sp needed
+ 203 000a 08BD     		pop	{r3, pc}
+ 204              	.L13:
+ 205              		.align	2
+ 206              	.L12:
+ 207 000c 00000000 		.word	.LANCHOR0
+ 208              		.cfi_endproc
+ 209              	.LFE43:
+ 210              		.size	Timer_interrupt, .-Timer_interrupt
+ 211              		.global	__aeabi_dcmpgt
+ 212              		.global	__aeabi_dadd
+ 213              		.global	__aeabi_d2iz
+ 214              		.global	__aeabi_dsub
+ 215              		.section	.text.floor_and_convert,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	floor_and_convert
+ 218              		.code	16
+ 219              		.thumb_func
+ 220              		.type	floor_and_convert, %function
+ 221              	floor_and_convert:
+ 222              	.LFB36:
+  44:.\main.c      ****    if (y > 0)
+ 223              		.loc 1 44 0
+ 224              		.cfi_startproc
+ 225              	.LVL15:
+ 226 0000 38B5     		push	{r3, r4, r5, lr}
+ 227              		.cfi_def_cfa_offset 16
+ 228              		.cfi_offset 3, -16
+ 229              		.cfi_offset 4, -12
+ 230              		.cfi_offset 5, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 041C     		mov	r4, r0
+ 233 0004 0D1C     		mov	r5, r1
+  45:.\main.c      ****       return (signed int) (y+0.5);
+ 234              		.loc 1 45 0
+ 235 0006 0022     		mov	r2, #0
+ 236 0008 0023     		mov	r3, #0
+ 237 000a FFF7FEFF 		bl	__aeabi_dcmpgt
+ 238              	.LVL16:
+ 239 000e 0028     		cmp	r0, #0
+ 240 0010 08D0     		beq	.L19
+  46:.\main.c      ****    else
+ 241              		.loc 1 46 0
+ 242 0012 201C     		mov	r0, r4
+ 243 0014 291C     		mov	r1, r5
+ 244 0016 0022     		mov	r2, #0
+ 245 0018 074B     		ldr	r3, .L20
+ 246 001a FFF7FEFF 		bl	__aeabi_dadd
+ 247              	.LVL17:
+ 248 001e FFF7FEFF 		bl	__aeabi_d2iz
+ 249              	.LVL18:
+ 250 0022 07E0     		b	.L17
+ 251              	.L19:
+  48:.\main.c      **** }
+ 252              		.loc 1 48 0
+ 253 0024 201C     		mov	r0, r4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 9
+
+
+ 254 0026 291C     		mov	r1, r5
+ 255 0028 0022     		mov	r2, #0
+ 256 002a 034B     		ldr	r3, .L20
+ 257 002c FFF7FEFF 		bl	__aeabi_dsub
+ 258              	.LVL19:
+ 259 0030 FFF7FEFF 		bl	__aeabi_d2iz
+ 260              	.LVL20:
+ 261              	.L17:
+  49:.\main.c      **** 
+ 262              		.loc 1 49 0
+ 263              		@ sp needed
+ 264 0034 38BD     		pop	{r3, r4, r5, pc}
+ 265              	.L21:
+ 266 0036 C046     		.align	2
+ 267              	.L20:
+ 268 0038 0000E03F 		.word	1071644672
+ 269              		.cfi_endproc
+ 270              	.LFE36:
+ 271              		.size	floor_and_convert, .-floor_and_convert
+ 272              		.section	.text.high_pass_filter,"ax",%progbits
+ 273              		.align	2
+ 274              		.global	high_pass_filter
+ 275              		.code	16
+ 276              		.thumb_func
+ 277              		.type	high_pass_filter, %function
+ 278              	high_pass_filter:
+ 279              	.LFB37:
+  53:.\main.c      ****    x[0] = data;          // Read received sample and perform type casts
+ 280              		.loc 1 53 0
+ 281              		.cfi_startproc
+ 282              	.LVL21:
+ 283 0000 30B5     		push	{r4, r5, lr}
+ 284              		.cfi_def_cfa_offset 12
+ 285              		.cfi_offset 4, -12
+ 286              		.cfi_offset 5, -8
+ 287              		.cfi_offset 14, -4
+  54:.\main.c      ****    
+ 288              		.loc 1 54 0
+ 289 0002 1F4B     		ldr	r3, .L27
+ 290 0004 D860     		str	r0, [r3, #12]
+  56:.\main.c      ****    
+ 291              		.loc 1 56 0
+ 292 0006 1F4B     		ldr	r3, .L27+4
+ 293 0008 1B68     		ldr	r3, [r3]
+ 294 000a 5843     		mul	r0, r3
+ 295              	.LVL22:
+ 296 000c 1E4B     		ldr	r3, .L27+8
+ 297 000e 1861     		str	r0, [r3, #16]
+  58:.\main.c      ****    {
+ 298              		.loc 1 58 0
+ 299 0010 0122     		mov	r2, #1
+ 300 0012 1A83     		strh	r2, [r3, #24]
+ 301 0014 0EE0     		b	.L23
+ 302              	.L24:
+  60:.\main.c      ****    } 
+ 303              		.loc 1 60 0 discriminator 3
+ 304 0016 13B2     		sxth	r3, r2
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 10
+
+
+ 305 0018 9B00     		lsl	r3, r3, #2
+ 306 001a 1A49     		ldr	r1, .L27+4
+ 307 001c 5958     		ldr	r1, [r3, r1]
+ 308 001e 1848     		ldr	r0, .L27
+ 309 0020 C318     		add	r3, r0, r3
+ 310 0022 DB68     		ldr	r3, [r3, #12]
+ 311 0024 4B43     		mul	r3, r1
+ 312 0026 1849     		ldr	r1, .L27+8
+ 313 0028 0869     		ldr	r0, [r1, #16]
+ 314 002a 8446     		mov	ip, r0
+ 315 002c 6344     		add	r3, r3, ip
+ 316 002e 0B61     		str	r3, [r1, #16]
+  58:.\main.c      ****    {
+ 317              		.loc 1 58 0 discriminator 3
+ 318 0030 0132     		add	r2, r2, #1
+ 319 0032 0A83     		strh	r2, [r1, #24]
+ 320              	.L23:
+  58:.\main.c      ****    {
+ 321              		.loc 1 58 0 is_stmt 0 discriminator 1
+ 322 0034 144B     		ldr	r3, .L27+8
+ 323 0036 1A8B     		ldrh	r2, [r3, #24]
+ 324 0038 13B2     		sxth	r3, r2
+ 325 003a 202B     		cmp	r3, #32
+ 326 003c EBDD     		ble	.L24
+  62:.\main.c      ****    
+ 327              		.loc 1 62 0 is_stmt 1
+ 328 003e 124B     		ldr	r3, .L27+8
+ 329 0040 5869     		ldr	r0, [r3, #20]
+ 330 0042 1A6A     		ldr	r2, [r3, #32]
+ 331 0044 5043     		mul	r0, r2
+ 332 0046 1A69     		ldr	r2, [r3, #16]
+ 333 0048 101A     		sub	r0, r2, r0
+ 334 004a 1861     		str	r0, [r3, #16]
+  65:.\main.c      ****    {
+ 335              		.loc 1 65 0
+ 336 004c 1F22     		mov	r2, #31
+ 337 004e 1A83     		strh	r2, [r3, #24]
+ 338 0050 0BE0     		b	.L25
+ 339              	.LVL23:
+ 340              	.L26:
+  67:.\main.c      ****    }
+ 341              		.loc 1 67 0 discriminator 3
+ 342 0052 13B2     		sxth	r3, r2
+ 343 0054 591C     		add	r1, r3, #1
+ 344 0056 0A4C     		ldr	r4, .L27
+ 345 0058 9B00     		lsl	r3, r3, #2
+ 346 005a E318     		add	r3, r4, r3
+ 347 005c DD68     		ldr	r5, [r3, #12]
+ 348 005e 8B00     		lsl	r3, r1, #2
+ 349 0060 E318     		add	r3, r4, r3
+ 350 0062 DD60     		str	r5, [r3, #12]
+  65:.\main.c      ****    {
+ 351              		.loc 1 65 0 discriminator 3
+ 352 0064 013A     		sub	r2, r2, #1
+ 353 0066 084B     		ldr	r3, .L27+8
+ 354 0068 1A83     		strh	r2, [r3, #24]
+ 355              	.L25:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 11
+
+
+  65:.\main.c      ****    {
+ 356              		.loc 1 65 0 is_stmt 0 discriminator 1
+ 357 006a 074B     		ldr	r3, .L27+8
+ 358 006c 1A8B     		ldrh	r2, [r3, #24]
+ 359 006e 13B2     		sxth	r3, r2
+ 360 0070 002B     		cmp	r3, #0
+ 361 0072 EEDA     		bge	.L26
+  69:.\main.c      **** 
+ 362              		.loc 1 69 0 is_stmt 1
+ 363 0074 4011     		asr	r0, r0, #5
+ 364 0076 044B     		ldr	r3, .L27+8
+ 365 0078 1861     		str	r0, [r3, #16]
+  71:.\main.c      ****    
+ 366              		.loc 1 71 0
+ 367 007a 5861     		str	r0, [r3, #20]
+  74:.\main.c      **** 
+ 368              		.loc 1 74 0
+ 369              		@ sp needed
+ 370 007c 30BD     		pop	{r4, r5, pc}
+ 371              	.L28:
+ 372 007e C046     		.align	2
+ 373              	.L27:
+ 374 0080 00000000 		.word	.LANCHOR0
+ 375 0084 00000000 		.word	.LANCHOR1
+ 376 0088 80000000 		.word	.LANCHOR2
+ 377              		.cfi_endproc
+ 378              	.LFE37:
+ 379              		.size	high_pass_filter, .-high_pass_filter
+ 380              		.section	.text.differentiator,"ax",%progbits
+ 381              		.align	2
+ 382              		.global	differentiator
+ 383              		.code	16
+ 384              		.thumb_func
+ 385              		.type	differentiator, %function
+ 386              	differentiator:
+ 387              	.LFB38:
+  77:.\main.c      ****    diff = (new - old);
+ 388              		.loc 1 77 0
+ 389              		.cfi_startproc
+ 390              	.LVL24:
+  78:.\main.c      ****    old = new;
+ 391              		.loc 1 78 0
+ 392 0000 044A     		ldr	r2, .L30
+ 393 0002 1388     		ldrh	r3, [r2]
+ 394 0004 C31A     		sub	r3, r0, r3
+ 395 0006 9BB2     		uxth	r3, r3
+ 396 0008 0349     		ldr	r1, .L30+4
+ 397 000a 0B80     		strh	r3, [r1]
+  79:.\main.c      ****    return diff;
+ 398              		.loc 1 79 0
+ 399 000c 1080     		strh	r0, [r2]
+  80:.\main.c      **** }
+ 400              		.loc 1 80 0
+ 401 000e 18B2     		sxth	r0, r3
+ 402              	.LVL25:
+  81:.\main.c      **** 
+ 403              		.loc 1 81 0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 12
+
+
+ 404              		@ sp needed
+ 405 0010 7047     		bx	lr
+ 406              	.L31:
+ 407 0012 C046     		.align	2
+ 408              	.L30:
+ 409 0014 00000000 		.word	old
+ 410 0018 00000000 		.word	diff
+ 411              		.cfi_endproc
+ 412              	.LFE38:
+ 413              		.size	differentiator, .-differentiator
+ 414              		.section	.text.square,"ax",%progbits
+ 415              		.align	2
+ 416              		.global	square
+ 417              		.code	16
+ 418              		.thumb_func
+ 419              		.type	square, %function
+ 420              	square:
+ 421              	.LFB39:
+  85:.\main.c      ****    return data*data;
+ 422              		.loc 1 85 0
+ 423              		.cfi_startproc
+ 424              	.LVL26:
+  86:.\main.c      **** }
+ 425              		.loc 1 86 0
+ 426 0000 4043     		mul	r0, r0
+ 427              	.LVL27:
+  87:.\main.c      **** 
+ 428              		.loc 1 87 0
+ 429              		@ sp needed
+ 430 0002 7047     		bx	lr
+ 431              		.cfi_endproc
+ 432              	.LFE39:
+ 433              		.size	square, .-square
+ 434              		.global	__aeabi_ui2d
+ 435              		.global	__aeabi_dmul
+ 436              		.global	__aeabi_d2uiz
+ 437              		.section	.text.mavg_filter,"ax",%progbits
+ 438              		.align	2
+ 439              		.global	mavg_filter
+ 440              		.code	16
+ 441              		.thumb_func
+ 442              		.type	mavg_filter, %function
+ 443              	mavg_filter:
+ 444              	.LFB40:
+  90:.\main.c      ****    x3[0] =  (double) data;      // Read received sample and perform type casts
+ 445              		.loc 1 90 0
+ 446              		.cfi_startproc
+ 447              	.LVL28:
+ 448 0000 70B5     		push	{r4, r5, r6, lr}
+ 449              		.cfi_def_cfa_offset 16
+ 450              		.cfi_offset 4, -16
+ 451              		.cfi_offset 5, -12
+ 452              		.cfi_offset 6, -8
+ 453              		.cfi_offset 14, -4
+  91:.\main.c      ****    
+ 454              		.loc 1 91 0
+ 455 0002 FFF7FEFF 		bl	__aeabi_ui2d
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 13
+
+
+ 456              	.LVL29:
+ 457 0006 204B     		ldr	r3, .L38
+ 458 0008 9862     		str	r0, [r3, #40]
+ 459 000a D962     		str	r1, [r3, #44]
+  93:.\main.c      ****    for(i = 0;i <= FILTER_LENGTH2;i++)           // Run FIR filter for each received sample
+ 460              		.loc 1 93 0
+ 461 000c 0020     		mov	r0, #0
+ 462 000e 0021     		mov	r1, #0
+ 463 0010 1E4A     		ldr	r2, .L38+4
+ 464 0012 1062     		str	r0, [r2, #32]
+ 465 0014 5162     		str	r1, [r2, #36]
+  94:.\main.c      ****    {
+ 466              		.loc 1 94 0
+ 467 0016 0022     		mov	r2, #0
+ 468 0018 1A83     		strh	r2, [r3, #24]
+ 469 001a 14E0     		b	.L34
+ 470              	.L35:
+  96:.\main.c      ****    } 
+ 471              		.loc 1 96 0 discriminator 3
+ 472 001c 23B2     		sxth	r3, r4
+ 473 001e DB00     		lsl	r3, r3, #3
+ 474 0020 1B4A     		ldr	r2, .L38+8
+ 475 0022 D218     		add	r2, r2, r3
+ 476 0024 9068     		ldr	r0, [r2, #8]
+ 477 0026 D168     		ldr	r1, [r2, #12]
+ 478 0028 174D     		ldr	r5, .L38
+ 479 002a EB18     		add	r3, r5, r3
+ 480 002c 9A6A     		ldr	r2, [r3, #40]
+ 481 002e DB6A     		ldr	r3, [r3, #44]
+ 482 0030 FFF7FEFF 		bl	__aeabi_dmul
+ 483              	.LVL30:
+ 484 0034 154E     		ldr	r6, .L38+4
+ 485 0036 326A     		ldr	r2, [r6, #32]
+ 486 0038 736A     		ldr	r3, [r6, #36]
+ 487 003a FFF7FEFF 		bl	__aeabi_dadd
+ 488              	.LVL31:
+ 489 003e 3062     		str	r0, [r6, #32]
+ 490 0040 7162     		str	r1, [r6, #36]
+  94:.\main.c      ****    {
+ 491              		.loc 1 94 0 discriminator 3
+ 492 0042 0134     		add	r4, r4, #1
+ 493 0044 2C83     		strh	r4, [r5, #24]
+ 494              	.L34:
+  94:.\main.c      ****    {
+ 495              		.loc 1 94 0 is_stmt 0 discriminator 1
+ 496 0046 104B     		ldr	r3, .L38
+ 497 0048 1C8B     		ldrh	r4, [r3, #24]
+ 498 004a 23B2     		sxth	r3, r4
+ 499 004c 1E2B     		cmp	r3, #30
+ 500 004e E5DD     		ble	.L35
+  99:.\main.c      ****    {
+ 501              		.loc 1 99 0 is_stmt 1
+ 502 0050 1D22     		mov	r2, #29
+ 503 0052 0D4B     		ldr	r3, .L38
+ 504 0054 1A83     		strh	r2, [r3, #24]
+ 505 0056 0CE0     		b	.L36
+ 506              	.L37:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 14
+
+
+ 101:.\main.c      ****    }
+ 507              		.loc 1 101 0 discriminator 3
+ 508 0058 13B2     		sxth	r3, r2
+ 509 005a 5C1C     		add	r4, r3, #1
+ 510 005c 0A4D     		ldr	r5, .L38
+ 511 005e DB00     		lsl	r3, r3, #3
+ 512 0060 EB18     		add	r3, r5, r3
+ 513 0062 986A     		ldr	r0, [r3, #40]
+ 514 0064 D96A     		ldr	r1, [r3, #44]
+ 515 0066 E300     		lsl	r3, r4, #3
+ 516 0068 EB18     		add	r3, r5, r3
+ 517 006a 9862     		str	r0, [r3, #40]
+ 518 006c D962     		str	r1, [r3, #44]
+  99:.\main.c      ****    {
+ 519              		.loc 1 99 0 discriminator 3
+ 520 006e 013A     		sub	r2, r2, #1
+ 521 0070 2A83     		strh	r2, [r5, #24]
+ 522              	.L36:
+  99:.\main.c      ****    {
+ 523              		.loc 1 99 0 is_stmt 0 discriminator 1
+ 524 0072 054B     		ldr	r3, .L38
+ 525 0074 1A8B     		ldrh	r2, [r3, #24]
+ 526 0076 13B2     		sxth	r3, r2
+ 527 0078 002B     		cmp	r3, #0
+ 528 007a EDDA     		bge	.L37
+ 104:.\main.c      **** }
+ 529              		.loc 1 104 0 is_stmt 1
+ 530 007c 034B     		ldr	r3, .L38+4
+ 531 007e 186A     		ldr	r0, [r3, #32]
+ 532 0080 596A     		ldr	r1, [r3, #36]
+ 533 0082 FFF7FEFF 		bl	__aeabi_d2uiz
+ 534              	.LVL32:
+ 105:.\main.c      **** 
+ 535              		.loc 1 105 0
+ 536              		@ sp needed
+ 537 0086 70BD     		pop	{r4, r5, r6, pc}
+ 538              	.L39:
+ 539              		.align	2
+ 540              	.L38:
+ 541 0088 80000000 		.word	.LANCHOR2
+ 542 008c 80010000 		.word	.LANCHOR3
+ 543 0090 80000000 		.word	.LANCHOR4
+ 544              		.cfi_endproc
+ 545              	.LFE40:
+ 546              		.size	mavg_filter, .-mavg_filter
+ 547              		.section	.text.main,"ax",%progbits
+ 548              		.align	2
+ 549              		.global	main
+ 550              		.code	16
+ 551              		.thumb_func
+ 552              		.type	main, %function
+ 553              	main:
+ 554              	.LFB44:
+ 200:.\main.c      **** 
+ 201:.\main.c      **** 
+ 202:.\main.c      **** int main()
+ 203:.\main.c      **** {
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 15
+
+
+ 555              		.loc 1 203 0
+ 556              		.cfi_startproc
+ 557 0000 08B5     		push	{r3, lr}
+ 558              		.cfi_def_cfa_offset 8
+ 559              		.cfi_offset 3, -8
+ 560              		.cfi_offset 14, -4
+ 204:.\main.c      ****  
+ 205:.\main.c      ****     CyGlobalIntEnable;                          /* Enable global interrupts */
+ 561              		.loc 1 205 0
+ 562              	@ 205 ".\main.c" 1
+ 563 0002 62B6     		CPSIE   i
+ 564              	@ 0 "" 2
+ 206:.\main.c      ****     Timer_ISR_StartEx(Timer_interrupt);         /* Set interrupt address */
+ 565              		.loc 1 206 0
+ 566              		.code	16
+ 567 0004 0A48     		ldr	r0, .L41
+ 568 0006 FFF7FEFF 		bl	Timer_ISR_StartEx
+ 569              	.LVL33:
+ 207:.\main.c      ****     UART_RX_ISR_StartEx(RX_interrupt);          /* Set interrupt address */
+ 570              		.loc 1 207 0
+ 571 000a 0A48     		ldr	r0, .L41+4
+ 572 000c FFF7FEFF 		bl	UART_RX_ISR_StartEx
+ 573              	.LVL34:
+ 208:.\main.c      ****     UART_BLE_RX_ISR_StartEx(BLE_RX_interrupt);  /* Set interrupt address */
+ 574              		.loc 1 208 0
+ 575 0010 0948     		ldr	r0, .L41+8
+ 576 0012 FFF7FEFF 		bl	UART_BLE_RX_ISR_StartEx
+ 577              	.LVL35:
+ 209:.\main.c      ****     UART_Start();                               /* Start UART */
+ 578              		.loc 1 209 0
+ 579 0016 FFF7FEFF 		bl	UART_Start
+ 580              	.LVL36:
+ 210:.\main.c      ****     UART_BLE_Start();                           /* Start UART_BLE */
+ 581              		.loc 1 210 0
+ 582 001a FFF7FEFF 		bl	UART_BLE_Start
+ 583              	.LVL37:
+ 211:.\main.c      ****     Timer_Start();                              /* Start Timer */
+ 584              		.loc 1 211 0
+ 585 001e FFF7FEFF 		bl	Timer_Start
+ 586              	.LVL38:
+ 212:.\main.c      ****     Timer_ISR_Enable();                         /* Enable Timer interrupt service routine*/
+ 587              		.loc 1 212 0
+ 588 0022 FFF7FEFF 		bl	Timer_ISR_Enable
+ 589              	.LVL39:
+ 213:.\main.c      ****     CySysPmSleep();                             /* Enter Sleep mode */
+ 590              		.loc 1 213 0
+ 591 0026 FFF7FEFF 		bl	CySysPmSleep
+ 592              	.LVL40:
+ 214:.\main.c      ****     return 0;
+ 215:.\main.c      **** }
+ 593              		.loc 1 215 0
+ 594 002a 0020     		mov	r0, #0
+ 595              		@ sp needed
+ 596 002c 08BD     		pop	{r3, pc}
+ 597              	.L42:
+ 598 002e C046     		.align	2
+ 599              	.L41:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 16
+
+
+ 600 0030 00000000 		.word	Timer_interrupt
+ 601 0034 00000000 		.word	RX_interrupt
+ 602 0038 00000000 		.word	BLE_RX_interrupt
+ 603              		.cfi_endproc
+ 604              	.LFE44:
+ 605              		.size	main, .-main
+ 606              		.global	FirstCall
+ 607              		.comm	avg_new,2,2
+ 608              		.comm	unsigned_data,2,2
+ 609              		.comm	moving_sum,2,2
+ 610              		.comm	squared,2,2
+ 611              		.comm	pointer,2,2
+ 612              		.global	counter
+ 613              		.global	data_array
+ 614              		.comm	old,2,2
+ 615              		.comm	signed_data,2,2
+ 616              		.comm	diff,2,2
+ 617              		.comm	newest,2,2
+ 618              		.comm	oldest,2,2
+ 619              		.global	j
+ 620              		.global	i
+ 621              		.global	value_out
+ 622              		.comm	value_in,2,2
+ 623              		.global	current_byte
+ 624              		.global	b3
+ 625              		.global	y3
+ 626              		.global	x3
+ 627              		.global	a
+ 628              		.global	b
+ 629              		.global	y
+ 630              		.global	x
+ 631              		.data
+ 632              		.align	3
+ 633              		.set	.LANCHOR1,. + 0
+ 634              		.set	.LANCHOR4,. + 128
+ 635              		.type	b, %object
+ 636              		.size	b, 132
+ 637              	b:
+ 638 0000 FFFFFFFF 		.word	-1
+ 639 0004 00000000 		.word	0
+ 640 0008 00000000 		.word	0
+ 641 000c 00000000 		.word	0
+ 642 0010 00000000 		.word	0
+ 643 0014 00000000 		.word	0
+ 644 0018 00000000 		.word	0
+ 645 001c 00000000 		.word	0
+ 646 0020 00000000 		.word	0
+ 647 0024 00000000 		.word	0
+ 648 0028 00000000 		.word	0
+ 649 002c 00000000 		.word	0
+ 650 0030 00000000 		.word	0
+ 651 0034 00000000 		.word	0
+ 652 0038 00000000 		.word	0
+ 653 003c 20000000 		.word	32
+ 654 0040 E0FFFFFF 		.word	-32
+ 655 0044 00000000 		.word	0
+ 656 0048 00000000 		.word	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 17
+
+
+ 657 004c 00000000 		.word	0
+ 658 0050 00000000 		.word	0
+ 659 0054 00000000 		.word	0
+ 660 0058 00000000 		.word	0
+ 661 005c 00000000 		.word	0
+ 662 0060 00000000 		.word	0
+ 663 0064 00000000 		.word	0
+ 664 0068 00000000 		.word	0
+ 665 006c 00000000 		.word	0
+ 666 0070 00000000 		.word	0
+ 667 0074 00000000 		.word	0
+ 668 0078 00000000 		.word	0
+ 669 007c 00000000 		.word	0
+ 670 0080 01000000 		.word	1
+ 671 0084 00000000 		.space	4
+ 672              		.type	b3, %object
+ 673              		.size	b3, 248
+ 674              	b3:
+ 675 0088 B81E85EB 		.word	-343597384
+ 676 008c 51B89E3F 		.word	1067366481
+ 677 0090 B81E85EB 		.word	-343597384
+ 678 0094 51B89E3F 		.word	1067366481
+ 679 0098 B81E85EB 		.word	-343597384
+ 680 009c 51B89E3F 		.word	1067366481
+ 681 00a0 B81E85EB 		.word	-343597384
+ 682 00a4 51B89E3F 		.word	1067366481
+ 683 00a8 B81E85EB 		.word	-343597384
+ 684 00ac 51B89E3F 		.word	1067366481
+ 685 00b0 B81E85EB 		.word	-343597384
+ 686 00b4 51B89E3F 		.word	1067366481
+ 687 00b8 B81E85EB 		.word	-343597384
+ 688 00bc 51B89E3F 		.word	1067366481
+ 689 00c0 B81E85EB 		.word	-343597384
+ 690 00c4 51B89E3F 		.word	1067366481
+ 691 00c8 B81E85EB 		.word	-343597384
+ 692 00cc 51B89E3F 		.word	1067366481
+ 693 00d0 B81E85EB 		.word	-343597384
+ 694 00d4 51B89E3F 		.word	1067366481
+ 695 00d8 B81E85EB 		.word	-343597384
+ 696 00dc 51B89E3F 		.word	1067366481
+ 697 00e0 B81E85EB 		.word	-343597384
+ 698 00e4 51B89E3F 		.word	1067366481
+ 699 00e8 B81E85EB 		.word	-343597384
+ 700 00ec 51B89E3F 		.word	1067366481
+ 701 00f0 B81E85EB 		.word	-343597384
+ 702 00f4 51B89E3F 		.word	1067366481
+ 703 00f8 B81E85EB 		.word	-343597384
+ 704 00fc 51B89E3F 		.word	1067366481
+ 705 0100 B81E85EB 		.word	-343597384
+ 706 0104 51B89E3F 		.word	1067366481
+ 707 0108 B81E85EB 		.word	-343597384
+ 708 010c 51B89E3F 		.word	1067366481
+ 709 0110 B81E85EB 		.word	-343597384
+ 710 0114 51B89E3F 		.word	1067366481
+ 711 0118 B81E85EB 		.word	-343597384
+ 712 011c 51B89E3F 		.word	1067366481
+ 713 0120 B81E85EB 		.word	-343597384
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 18
+
+
+ 714 0124 51B89E3F 		.word	1067366481
+ 715 0128 B81E85EB 		.word	-343597384
+ 716 012c 51B89E3F 		.word	1067366481
+ 717 0130 B81E85EB 		.word	-343597384
+ 718 0134 51B89E3F 		.word	1067366481
+ 719 0138 B81E85EB 		.word	-343597384
+ 720 013c 51B89E3F 		.word	1067366481
+ 721 0140 B81E85EB 		.word	-343597384
+ 722 0144 51B89E3F 		.word	1067366481
+ 723 0148 B81E85EB 		.word	-343597384
+ 724 014c 51B89E3F 		.word	1067366481
+ 725 0150 B81E85EB 		.word	-343597384
+ 726 0154 51B89E3F 		.word	1067366481
+ 727 0158 B81E85EB 		.word	-343597384
+ 728 015c 51B89E3F 		.word	1067366481
+ 729 0160 B81E85EB 		.word	-343597384
+ 730 0164 51B89E3F 		.word	1067366481
+ 731 0168 B81E85EB 		.word	-343597384
+ 732 016c 51B89E3F 		.word	1067366481
+ 733 0170 B81E85EB 		.word	-343597384
+ 734 0174 51B89E3F 		.word	1067366481
+ 735 0178 B81E85EB 		.word	-343597384
+ 736 017c 51B89E3F 		.word	1067366481
+ 737              		.type	FirstCall, %object
+ 738              		.size	FirstCall, 1
+ 739              	FirstCall:
+ 740 0180 01       		.byte	1
+ 741 0181 00000000 		.bss
+ 741      000000
+ 742              		.align	3
+ 743              		.set	.LANCHOR0,. + 0
+ 744              		.set	.LANCHOR2,. + 128
+ 745              		.set	.LANCHOR3,. + 384
+ 746              		.type	current_byte, %object
+ 747              		.size	current_byte, 1
+ 748              	current_byte:
+ 749 0000 00       		.space	1
+ 750 0001 000000   		.space	3
+ 751              		.type	value_out, %object
+ 752              		.size	value_out, 4
+ 753              	value_out:
+ 754 0004 00000000 		.space	4
+ 755              		.type	j, %object
+ 756              		.size	j, 2
+ 757              	j:
+ 758 0008 0000     		.space	2
+ 759              		.type	counter, %object
+ 760              		.size	counter, 2
+ 761              	counter:
+ 762 000a 0000     		.space	2
+ 763              		.type	x, %object
+ 764              		.size	x, 132
+ 765              	x:
+ 766 000c 00000000 		.space	132
+ 766      00000000 
+ 766      00000000 
+ 766      00000000 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 19
+
+
+ 766      00000000 
+ 767              		.type	y, %object
+ 768              		.size	y, 8
+ 769              	y:
+ 770 0090 00000000 		.space	8
+ 770      00000000 
+ 771              		.type	i, %object
+ 772              		.size	i, 2
+ 773              	i:
+ 774 0098 0000     		.space	2
+ 775 009a 0000     		.space	2
+ 776              		.type	a, %object
+ 777              		.size	a, 8
+ 778              	a:
+ 779 009c 00000000 		.space	8
+ 779      00000000 
+ 780 00a4 00000000 		.space	4
+ 781              		.type	x3, %object
+ 782              		.size	x3, 248
+ 783              	x3:
+ 784 00a8 00000000 		.space	248
+ 784      00000000 
+ 784      00000000 
+ 784      00000000 
+ 784      00000000 
+ 785              		.type	y3, %object
+ 786              		.size	y3, 8
+ 787              	y3:
+ 788 01a0 00000000 		.space	8
+ 788      00000000 
+ 789              		.type	data_array, %object
+ 790              		.size	data_array, 10
+ 791              	data_array:
+ 792 01a8 00000000 		.space	10
+ 792      00000000 
+ 792      0000
+ 793 01b2 00000000 		.text
+ 793      0000
+ 794              	.Letext0:
+ 795              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 796              		.file 3 "Generated_Source\\PSoC4/Measure_When_Low.h"
+ 797              		.file 4 "Generated_Source\\PSoC4/UART_BLE_SPI_UART.h"
+ 798              		.file 5 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 799              		.file 6 "Generated_Source\\PSoC4/Timer.h"
+ 800              		.file 7 "Generated_Source\\PSoC4/Timer_ISR.h"
+ 801              		.file 8 "Generated_Source\\PSoC4/UART_RX_ISR.h"
+ 802              		.file 9 "Generated_Source\\PSoC4/UART_BLE_RX_ISR.h"
+ 803              		.file 10 "Generated_Source\\PSoC4/UART.h"
+ 804              		.file 11 "Generated_Source\\PSoC4/UART_BLE.h"
+ 805              		.file 12 "Generated_Source\\PSoC4/cyPm.h"
+ 806              		.file 13 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9
+ 807              		.section	.debug_info,"",%progbits
+ 808              	.Ldebug_info0:
+ 809 0000 37060000 		.4byte	0x637
+ 810 0004 0400     		.2byte	0x4
+ 811 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 812 000a 04       		.byte	0x4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 20
+
+
+ 813 000b 01       		.uleb128 0x1
+ 814 000c 1D010000 		.4byte	.LASF60
+ 815 0010 01       		.byte	0x1
+ 816 0011 3D030000 		.4byte	.LASF61
+ 817 0015 62000000 		.4byte	.LASF62
+ 818 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 819 001d 00000000 		.4byte	0
+ 820 0021 00000000 		.4byte	.Ldebug_line0
+ 821 0025 02       		.uleb128 0x2
+ 822 0026 08       		.byte	0x8
+ 823 0027 04       		.byte	0x4
+ 824 0028 05030000 		.4byte	.LASF0
+ 825 002c 02       		.uleb128 0x2
+ 826 002d 01       		.byte	0x1
+ 827 002e 06       		.byte	0x6
+ 828 002f 0D020000 		.4byte	.LASF1
+ 829 0033 02       		.uleb128 0x2
+ 830 0034 01       		.byte	0x1
+ 831 0035 08       		.byte	0x8
+ 832 0036 BC010000 		.4byte	.LASF2
+ 833 003a 02       		.uleb128 0x2
+ 834 003b 02       		.byte	0x2
+ 835 003c 05       		.byte	0x5
+ 836 003d 0C000000 		.4byte	.LASF3
+ 837 0041 02       		.uleb128 0x2
+ 838 0042 02       		.byte	0x2
+ 839 0043 07       		.byte	0x7
+ 840 0044 74020000 		.4byte	.LASF4
+ 841 0048 02       		.uleb128 0x2
+ 842 0049 04       		.byte	0x4
+ 843 004a 05       		.byte	0x5
+ 844 004b DE000000 		.4byte	.LASF5
+ 845 004f 02       		.uleb128 0x2
+ 846 0050 04       		.byte	0x4
+ 847 0051 07       		.byte	0x7
+ 848 0052 F3020000 		.4byte	.LASF6
+ 849 0056 02       		.uleb128 0x2
+ 850 0057 08       		.byte	0x8
+ 851 0058 05       		.byte	0x5
+ 852 0059 C6000000 		.4byte	.LASF7
+ 853 005d 02       		.uleb128 0x2
+ 854 005e 08       		.byte	0x8
+ 855 005f 07       		.byte	0x7
+ 856 0060 19020000 		.4byte	.LASF8
+ 857 0064 03       		.uleb128 0x3
+ 858 0065 04       		.byte	0x4
+ 859 0066 05       		.byte	0x5
+ 860 0067 696E7400 		.ascii	"int\000"
+ 861 006b 02       		.uleb128 0x2
+ 862 006c 04       		.byte	0x4
+ 863 006d 07       		.byte	0x7
+ 864 006e 30020000 		.4byte	.LASF9
+ 865 0072 04       		.uleb128 0x4
+ 866 0073 AC000000 		.4byte	.LASF10
+ 867 0077 02       		.byte	0x2
+ 868 0078 3801     		.2byte	0x138
+ 869 007a 33000000 		.4byte	0x33
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 21
+
+
+ 870 007e 04       		.uleb128 0x4
+ 871 007f 8F000000 		.4byte	.LASF11
+ 872 0083 02       		.byte	0x2
+ 873 0084 3901     		.2byte	0x139
+ 874 0086 41000000 		.4byte	0x41
+ 875 008a 04       		.uleb128 0x4
+ 876 008b EC020000 		.4byte	.LASF12
+ 877 008f 02       		.byte	0x2
+ 878 0090 3A01     		.2byte	0x13a
+ 879 0092 4F000000 		.4byte	0x4f
+ 880 0096 04       		.uleb128 0x4
+ 881 0097 96000000 		.4byte	.LASF13
+ 882 009b 02       		.byte	0x2
+ 883 009c 3C01     		.2byte	0x13c
+ 884 009e 3A000000 		.4byte	0x3a
+ 885 00a2 02       		.uleb128 0x2
+ 886 00a3 04       		.byte	0x4
+ 887 00a4 04       		.byte	0x4
+ 888 00a5 B9000000 		.4byte	.LASF14
+ 889 00a9 04       		.uleb128 0x4
+ 890 00aa 1F000000 		.4byte	.LASF15
+ 891 00ae 02       		.byte	0x2
+ 892 00af 4901     		.2byte	0x149
+ 893 00b1 B5000000 		.4byte	0xb5
+ 894 00b5 02       		.uleb128 0x2
+ 895 00b6 01       		.byte	0x1
+ 896 00b7 08       		.byte	0x8
+ 897 00b8 87020000 		.4byte	.LASF16
+ 898 00bc 04       		.uleb128 0x4
+ 899 00bd 6E020000 		.4byte	.LASF17
+ 900 00c1 02       		.byte	0x2
+ 901 00c2 E401     		.2byte	0x1e4
+ 902 00c4 C8000000 		.4byte	0xc8
+ 903 00c8 05       		.uleb128 0x5
+ 904 00c9 8A000000 		.4byte	0x8a
+ 905 00cd 04       		.uleb128 0x4
+ 906 00ce CF010000 		.4byte	.LASF18
+ 907 00d2 02       		.byte	0x2
+ 908 00d3 F401     		.2byte	0x1f4
+ 909 00d5 D9000000 		.4byte	0xd9
+ 910 00d9 06       		.uleb128 0x6
+ 911 00da 04       		.byte	0x4
+ 912 00db DF000000 		.4byte	0xdf
+ 913 00df 07       		.uleb128 0x7
+ 914 00e0 02       		.uleb128 0x2
+ 915 00e1 04       		.byte	0x4
+ 916 00e2 07       		.byte	0x7
+ 917 00e3 16000000 		.4byte	.LASF19
+ 918 00e7 06       		.uleb128 0x6
+ 919 00e8 04       		.byte	0x4
+ 920 00e9 B5000000 		.4byte	0xb5
+ 921 00ed 08       		.uleb128 0x8
+ 922 00ee 03010000 		.4byte	.LASF20
+ 923 00f2 01       		.byte	0x1
+ 924 00f3 6B       		.byte	0x6b
+ 925 00f4 00000000 		.4byte	.LFB41
+ 926 00f8 A4000000 		.4byte	.LFE41-.LFB41
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 22
+
+
+ 927 00fc 01       		.uleb128 0x1
+ 928 00fd 9C       		.byte	0x9c
+ 929 00fe A8010000 		.4byte	0x1a8
+ 930 0102 09       		.uleb128 0x9
+ 931 0103 73747200 		.ascii	"str\000"
+ 932 0107 01       		.byte	0x1
+ 933 0108 6D       		.byte	0x6d
+ 934 0109 A8010000 		.4byte	0x1a8
+ 935 010d 02       		.uleb128 0x2
+ 936 010e 91       		.byte	0x91
+ 937 010f 6C       		.sleb128 -20
+ 938 0110 0A       		.uleb128 0xa
+ 939 0111 636800   		.ascii	"ch\000"
+ 940 0114 01       		.byte	0x1
+ 941 0115 6E       		.byte	0x6e
+ 942 0116 72000000 		.4byte	0x72
+ 943 011a 00000000 		.4byte	.LLST0
+ 944 011e 0B       		.uleb128 0xb
+ 945 011f 08000000 		.4byte	.LVL0
+ 946 0123 4E050000 		.4byte	0x54e
+ 947 0127 0C       		.uleb128 0xc
+ 948 0128 3E000000 		.4byte	.LVL3
+ 949 012c 5A050000 		.4byte	0x55a
+ 950 0130 3A010000 		.4byte	0x13a
+ 951 0134 0D       		.uleb128 0xd
+ 952 0135 01       		.uleb128 0x1
+ 953 0136 50       		.byte	0x50
+ 954 0137 01       		.uleb128 0x1
+ 955 0138 30       		.byte	0x30
+ 956 0139 00       		.byte	0
+ 957 013a 0C       		.uleb128 0xc
+ 958 013b 4C000000 		.4byte	.LVL4
+ 959 013f 5A050000 		.4byte	0x55a
+ 960 0143 4D010000 		.4byte	0x14d
+ 961 0147 0D       		.uleb128 0xd
+ 962 0148 01       		.uleb128 0x1
+ 963 0149 50       		.byte	0x50
+ 964 014a 01       		.uleb128 0x1
+ 965 014b 31       		.byte	0x31
+ 966 014c 00       		.byte	0
+ 967 014d 0C       		.uleb128 0xc
+ 968 014e 72000000 		.4byte	.LVL5
+ 969 0152 6B050000 		.4byte	0x56b
+ 970 0156 66010000 		.4byte	0x166
+ 971 015a 0D       		.uleb128 0xd
+ 972 015b 01       		.uleb128 0x1
+ 973 015c 52       		.byte	0x52
+ 974 015d 01       		.uleb128 0x1
+ 975 015e 3A       		.byte	0x3a
+ 976 015f 0D       		.uleb128 0xd
+ 977 0160 01       		.uleb128 0x1
+ 978 0161 51       		.byte	0x51
+ 979 0162 02       		.uleb128 0x2
+ 980 0163 91       		.byte	0x91
+ 981 0164 6C       		.sleb128 -20
+ 982 0165 00       		.byte	0
+ 983 0166 0B       		.uleb128 0xb
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 23
+
+
+ 984 0167 76000000 		.4byte	.LVL6
+ 985 016b 8A050000 		.4byte	0x58a
+ 986 016f 0C       		.uleb128 0xc
+ 987 0170 7C000000 		.4byte	.LVL7
+ 988 0174 A7050000 		.4byte	0x5a7
+ 989 0178 82010000 		.4byte	0x182
+ 990 017c 0D       		.uleb128 0xd
+ 991 017d 01       		.uleb128 0x1
+ 992 017e 50       		.byte	0x50
+ 993 017f 01       		.uleb128 0x1
+ 994 0180 3A       		.byte	0x3a
+ 995 0181 00       		.byte	0
+ 996 0182 0C       		.uleb128 0xc
+ 997 0183 82000000 		.4byte	.LVL8
+ 998 0187 A7050000 		.4byte	0x5a7
+ 999 018b 95010000 		.4byte	0x195
+ 1000 018f 0D       		.uleb128 0xd
+ 1001 0190 01       		.uleb128 0x1
+ 1002 0191 50       		.byte	0x50
+ 1003 0192 01       		.uleb128 0x1
+ 1004 0193 3D       		.byte	0x3d
+ 1005 0194 00       		.byte	0
+ 1006 0195 0B       		.uleb128 0xb
+ 1007 0196 8C000000 		.4byte	.LVL9
+ 1008 019a B9050000 		.4byte	0x5b9
+ 1009 019e 0B       		.uleb128 0xb
+ 1010 019f 94000000 		.4byte	.LVL10
+ 1011 01a3 B9050000 		.4byte	0x5b9
+ 1012 01a7 00       		.byte	0
+ 1013 01a8 0E       		.uleb128 0xe
+ 1014 01a9 B5000000 		.4byte	0xb5
+ 1015 01ad B8010000 		.4byte	0x1b8
+ 1016 01b1 0F       		.uleb128 0xf
+ 1017 01b2 E0000000 		.4byte	0xe0
+ 1018 01b6 03       		.byte	0x3
+ 1019 01b7 00       		.byte	0
+ 1020 01b8 08       		.uleb128 0x8
+ 1021 01b9 4E030000 		.4byte	.LASF21
+ 1022 01bd 01       		.byte	0x1
+ 1023 01be BD       		.byte	0xbd
+ 1024 01bf 00000000 		.4byte	.LFB42
+ 1025 01c3 1C000000 		.4byte	.LFE42-.LFB42
+ 1026 01c7 01       		.uleb128 0x1
+ 1027 01c8 9C       		.byte	0x9c
+ 1028 01c9 EE010000 		.4byte	0x1ee
+ 1029 01cd 0A       		.uleb128 0xa
+ 1030 01ce 636800   		.ascii	"ch\000"
+ 1031 01d1 01       		.byte	0x1
+ 1032 01d2 BF       		.byte	0xbf
+ 1033 01d3 72000000 		.4byte	0x72
+ 1034 01d7 13000000 		.4byte	.LLST1
+ 1035 01db 0B       		.uleb128 0xb
+ 1036 01dc 06000000 		.4byte	.LVL11
+ 1037 01e0 CB050000 		.4byte	0x5cb
+ 1038 01e4 0B       		.uleb128 0xb
+ 1039 01e5 14000000 		.4byte	.LVL13
+ 1040 01e9 B9050000 		.4byte	0x5b9
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 24
+
+
+ 1041 01ed 00       		.byte	0
+ 1042 01ee 08       		.uleb128 0x8
+ 1043 01ef 9C000000 		.4byte	.LASF22
+ 1044 01f3 01       		.byte	0x1
+ 1045 01f4 C4       		.byte	0xc4
+ 1046 01f5 00000000 		.4byte	.LFB43
+ 1047 01f9 10000000 		.4byte	.LFE43-.LFB43
+ 1048 01fd 01       		.uleb128 0x1
+ 1049 01fe 9C       		.byte	0x9c
+ 1050 01ff 0D020000 		.4byte	0x20d
+ 1051 0203 0B       		.uleb128 0xb
+ 1052 0204 06000000 		.4byte	.LVL14
+ 1053 0208 D7050000 		.4byte	0x5d7
+ 1054 020c 00       		.byte	0
+ 1055 020d 10       		.uleb128 0x10
+ 1056 020e FB010000 		.4byte	.LASF23
+ 1057 0212 01       		.byte	0x1
+ 1058 0213 2B       		.byte	0x2b
+ 1059 0214 64000000 		.4byte	0x64
+ 1060 0218 00000000 		.4byte	.LFB36
+ 1061 021c 3C000000 		.4byte	.LFE36-.LFB36
+ 1062 0220 01       		.uleb128 0x1
+ 1063 0221 9C       		.byte	0x9c
+ 1064 0222 34020000 		.4byte	0x234
+ 1065 0226 11       		.uleb128 0x11
+ 1066 0227 7900     		.ascii	"y\000"
+ 1067 0229 01       		.byte	0x1
+ 1068 022a 2B       		.byte	0x2b
+ 1069 022b 25000000 		.4byte	0x25
+ 1070 022f 26000000 		.4byte	.LLST2
+ 1071 0233 00       		.byte	0
+ 1072 0234 12       		.uleb128 0x12
+ 1073 0235 33000000 		.4byte	.LASF24
+ 1074 0239 01       		.byte	0x1
+ 1075 023a 34       		.byte	0x34
+ 1076 023b 64000000 		.4byte	0x64
+ 1077 023f 00000000 		.4byte	.LFB37
+ 1078 0243 8C000000 		.4byte	.LFE37-.LFB37
+ 1079 0247 01       		.uleb128 0x1
+ 1080 0248 9C       		.byte	0x9c
+ 1081 0249 5D020000 		.4byte	0x25d
+ 1082 024d 13       		.uleb128 0x13
+ 1083 024e E7020000 		.4byte	.LASF25
+ 1084 0252 01       		.byte	0x1
+ 1085 0253 34       		.byte	0x34
+ 1086 0254 64000000 		.4byte	0x64
+ 1087 0258 4E000000 		.4byte	.LLST3
+ 1088 025c 00       		.byte	0
+ 1089 025d 12       		.uleb128 0x12
+ 1090 025e 3D020000 		.4byte	.LASF26
+ 1091 0262 01       		.byte	0x1
+ 1092 0263 4C       		.byte	0x4c
+ 1093 0264 64000000 		.4byte	0x64
+ 1094 0268 00000000 		.4byte	.LFB38
+ 1095 026c 1C000000 		.4byte	.LFE38-.LFB38
+ 1096 0270 01       		.uleb128 0x1
+ 1097 0271 9C       		.byte	0x9c
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 25
+
+
+ 1098 0272 86020000 		.4byte	0x286
+ 1099 0276 11       		.uleb128 0x11
+ 1100 0277 6E657700 		.ascii	"new\000"
+ 1101 027b 01       		.byte	0x1
+ 1102 027c 4C       		.byte	0x4c
+ 1103 027d 64000000 		.4byte	0x64
+ 1104 0281 7E000000 		.4byte	.LLST4
+ 1105 0285 00       		.byte	0
+ 1106 0286 12       		.uleb128 0x12
+ 1107 0287 05000000 		.4byte	.LASF27
+ 1108 028b 01       		.byte	0x1
+ 1109 028c 54       		.byte	0x54
+ 1110 028d 6B000000 		.4byte	0x6b
+ 1111 0291 00000000 		.4byte	.LFB39
+ 1112 0295 04000000 		.4byte	.LFE39-.LFB39
+ 1113 0299 01       		.uleb128 0x1
+ 1114 029a 9C       		.byte	0x9c
+ 1115 029b AF020000 		.4byte	0x2af
+ 1116 029f 13       		.uleb128 0x13
+ 1117 02a0 E7020000 		.4byte	.LASF25
+ 1118 02a4 01       		.byte	0x1
+ 1119 02a5 54       		.byte	0x54
+ 1120 02a6 64000000 		.4byte	0x64
+ 1121 02aa 9F000000 		.4byte	.LLST5
+ 1122 02ae 00       		.byte	0
+ 1123 02af 10       		.uleb128 0x10
+ 1124 02b0 71030000 		.4byte	.LASF28
+ 1125 02b4 01       		.byte	0x1
+ 1126 02b5 59       		.byte	0x59
+ 1127 02b6 6B000000 		.4byte	0x6b
+ 1128 02ba 00000000 		.4byte	.LFB40
+ 1129 02be 94000000 		.4byte	.LFE40-.LFB40
+ 1130 02c2 01       		.uleb128 0x1
+ 1131 02c3 9C       		.byte	0x9c
+ 1132 02c4 D8020000 		.4byte	0x2d8
+ 1133 02c8 13       		.uleb128 0x13
+ 1134 02c9 E7020000 		.4byte	.LASF25
+ 1135 02cd 01       		.byte	0x1
+ 1136 02ce 59       		.byte	0x59
+ 1137 02cf 6B000000 		.4byte	0x6b
+ 1138 02d3 C0000000 		.4byte	.LLST6
+ 1139 02d7 00       		.byte	0
+ 1140 02d8 14       		.uleb128 0x14
+ 1141 02d9 A3020000 		.4byte	.LASF29
+ 1142 02dd 01       		.byte	0x1
+ 1143 02de CA       		.byte	0xca
+ 1144 02df 64000000 		.4byte	0x64
+ 1145 02e3 00000000 		.4byte	.LFB44
+ 1146 02e7 3C000000 		.4byte	.LFE44-.LFB44
+ 1147 02eb 01       		.uleb128 0x1
+ 1148 02ec 9C       		.byte	0x9c
+ 1149 02ed 64030000 		.4byte	0x364
+ 1150 02f1 0C       		.uleb128 0xc
+ 1151 02f2 0A000000 		.4byte	.LVL33
+ 1152 02f6 E3050000 		.4byte	0x5e3
+ 1153 02fa 08030000 		.4byte	0x308
+ 1154 02fe 0D       		.uleb128 0xd
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 26
+
+
+ 1155 02ff 01       		.uleb128 0x1
+ 1156 0300 50       		.byte	0x50
+ 1157 0301 05       		.uleb128 0x5
+ 1158 0302 03       		.byte	0x3
+ 1159 0303 00000000 		.4byte	Timer_interrupt
+ 1160 0307 00       		.byte	0
+ 1161 0308 0C       		.uleb128 0xc
+ 1162 0309 10000000 		.4byte	.LVL34
+ 1163 030d F4050000 		.4byte	0x5f4
+ 1164 0311 1F030000 		.4byte	0x31f
+ 1165 0315 0D       		.uleb128 0xd
+ 1166 0316 01       		.uleb128 0x1
+ 1167 0317 50       		.byte	0x50
+ 1168 0318 05       		.uleb128 0x5
+ 1169 0319 03       		.byte	0x3
+ 1170 031a 00000000 		.4byte	RX_interrupt
+ 1171 031e 00       		.byte	0
+ 1172 031f 0C       		.uleb128 0xc
+ 1173 0320 16000000 		.4byte	.LVL35
+ 1174 0324 05060000 		.4byte	0x605
+ 1175 0328 36030000 		.4byte	0x336
+ 1176 032c 0D       		.uleb128 0xd
+ 1177 032d 01       		.uleb128 0x1
+ 1178 032e 50       		.byte	0x50
+ 1179 032f 05       		.uleb128 0x5
+ 1180 0330 03       		.byte	0x3
+ 1181 0331 00000000 		.4byte	BLE_RX_interrupt
+ 1182 0335 00       		.byte	0
+ 1183 0336 0B       		.uleb128 0xb
+ 1184 0337 1A000000 		.4byte	.LVL36
+ 1185 033b 16060000 		.4byte	0x616
+ 1186 033f 0B       		.uleb128 0xb
+ 1187 0340 1E000000 		.4byte	.LVL37
+ 1188 0344 1D060000 		.4byte	0x61d
+ 1189 0348 0B       		.uleb128 0xb
+ 1190 0349 22000000 		.4byte	.LVL38
+ 1191 034d 24060000 		.4byte	0x624
+ 1192 0351 0B       		.uleb128 0xb
+ 1193 0352 26000000 		.4byte	.LVL39
+ 1194 0356 2C060000 		.4byte	0x62c
+ 1195 035a 0B       		.uleb128 0xb
+ 1196 035b 2A000000 		.4byte	.LVL40
+ 1197 035f 33060000 		.4byte	0x633
+ 1198 0363 00       		.byte	0
+ 1199 0364 0E       		.uleb128 0xe
+ 1200 0365 64000000 		.4byte	0x64
+ 1201 0369 74030000 		.4byte	0x374
+ 1202 036d 0F       		.uleb128 0xf
+ 1203 036e E0000000 		.4byte	0xe0
+ 1204 0372 20       		.byte	0x20
+ 1205 0373 00       		.byte	0
+ 1206 0374 15       		.uleb128 0x15
+ 1207 0375 7800     		.ascii	"x\000"
+ 1208 0377 01       		.byte	0x1
+ 1209 0378 18       		.byte	0x18
+ 1210 0379 64030000 		.4byte	0x364
+ 1211 037d 05       		.uleb128 0x5
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 27
+
+
+ 1212 037e 03       		.byte	0x3
+ 1213 037f 00000000 		.4byte	x
+ 1214 0383 0E       		.uleb128 0xe
+ 1215 0384 64000000 		.4byte	0x64
+ 1216 0388 93030000 		.4byte	0x393
+ 1217 038c 0F       		.uleb128 0xf
+ 1218 038d E0000000 		.4byte	0xe0
+ 1219 0391 01       		.byte	0x1
+ 1220 0392 00       		.byte	0
+ 1221 0393 15       		.uleb128 0x15
+ 1222 0394 7900     		.ascii	"y\000"
+ 1223 0396 01       		.byte	0x1
+ 1224 0397 19       		.byte	0x19
+ 1225 0398 83030000 		.4byte	0x383
+ 1226 039c 05       		.uleb128 0x5
+ 1227 039d 03       		.byte	0x3
+ 1228 039e 00000000 		.4byte	y
+ 1229 03a2 15       		.uleb128 0x15
+ 1230 03a3 6200     		.ascii	"b\000"
+ 1231 03a5 01       		.byte	0x1
+ 1232 03a6 1E       		.byte	0x1e
+ 1233 03a7 64030000 		.4byte	0x364
+ 1234 03ab 05       		.uleb128 0x5
+ 1235 03ac 03       		.byte	0x3
+ 1236 03ad 00000000 		.4byte	b
+ 1237 03b1 15       		.uleb128 0x15
+ 1238 03b2 6100     		.ascii	"a\000"
+ 1239 03b4 01       		.byte	0x1
+ 1240 03b5 1F       		.byte	0x1f
+ 1241 03b6 83030000 		.4byte	0x383
+ 1242 03ba 05       		.uleb128 0x5
+ 1243 03bb 03       		.byte	0x3
+ 1244 03bc 00000000 		.4byte	a
+ 1245 03c0 0E       		.uleb128 0xe
+ 1246 03c1 25000000 		.4byte	0x25
+ 1247 03c5 D0030000 		.4byte	0x3d0
+ 1248 03c9 0F       		.uleb128 0xf
+ 1249 03ca E0000000 		.4byte	0xe0
+ 1250 03ce 1E       		.byte	0x1e
+ 1251 03cf 00       		.byte	0
+ 1252 03d0 15       		.uleb128 0x15
+ 1253 03d1 783300   		.ascii	"x3\000"
+ 1254 03d4 01       		.byte	0x1
+ 1255 03d5 21       		.byte	0x21
+ 1256 03d6 C0030000 		.4byte	0x3c0
+ 1257 03da 05       		.uleb128 0x5
+ 1258 03db 03       		.byte	0x3
+ 1259 03dc 00000000 		.4byte	x3
+ 1260 03e0 15       		.uleb128 0x15
+ 1261 03e1 793300   		.ascii	"y3\000"
+ 1262 03e4 01       		.byte	0x1
+ 1263 03e5 22       		.byte	0x22
+ 1264 03e6 25000000 		.4byte	0x25
+ 1265 03ea 05       		.uleb128 0x5
+ 1266 03eb 03       		.byte	0x3
+ 1267 03ec 00000000 		.4byte	y3
+ 1268 03f0 15       		.uleb128 0x15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 28
+
+
+ 1269 03f1 623300   		.ascii	"b3\000"
+ 1270 03f4 01       		.byte	0x1
+ 1271 03f5 23       		.byte	0x23
+ 1272 03f6 C0030000 		.4byte	0x3c0
+ 1273 03fa 05       		.uleb128 0x5
+ 1274 03fb 03       		.byte	0x3
+ 1275 03fc 00000000 		.4byte	b3
+ 1276 0400 16       		.uleb128 0x16
+ 1277 0401 10010000 		.4byte	.LASF30
+ 1278 0405 01       		.byte	0x1
+ 1279 0406 25       		.byte	0x25
+ 1280 0407 B5000000 		.4byte	0xb5
+ 1281 040b 05       		.uleb128 0x5
+ 1282 040c 03       		.byte	0x3
+ 1283 040d 00000000 		.4byte	current_byte
+ 1284 0411 16       		.uleb128 0x16
+ 1285 0412 34030000 		.4byte	.LASF31
+ 1286 0416 01       		.byte	0x1
+ 1287 0417 26       		.byte	0x26
+ 1288 0418 96000000 		.4byte	0x96
+ 1289 041c 05       		.uleb128 0x5
+ 1290 041d 03       		.byte	0x3
+ 1291 041e 00000000 		.4byte	value_in
+ 1292 0422 0E       		.uleb128 0xe
+ 1293 0423 96000000 		.4byte	0x96
+ 1294 0427 32040000 		.4byte	0x432
+ 1295 042b 0F       		.uleb128 0xf
+ 1296 042c E0000000 		.4byte	0xe0
+ 1297 0430 01       		.byte	0x1
+ 1298 0431 00       		.byte	0
+ 1299 0432 16       		.uleb128 0x16
+ 1300 0433 7D030000 		.4byte	.LASF32
+ 1301 0437 01       		.byte	0x1
+ 1302 0438 26       		.byte	0x26
+ 1303 0439 22040000 		.4byte	0x422
+ 1304 043d 05       		.uleb128 0x5
+ 1305 043e 03       		.byte	0x3
+ 1306 043f 00000000 		.4byte	value_out
+ 1307 0443 15       		.uleb128 0x15
+ 1308 0444 6900     		.ascii	"i\000"
+ 1309 0446 01       		.byte	0x1
+ 1310 0447 26       		.byte	0x26
+ 1311 0448 96000000 		.4byte	0x96
+ 1312 044c 05       		.uleb128 0x5
+ 1313 044d 03       		.byte	0x3
+ 1314 044e 00000000 		.4byte	i
+ 1315 0452 15       		.uleb128 0x15
+ 1316 0453 6A00     		.ascii	"j\000"
+ 1317 0455 01       		.byte	0x1
+ 1318 0456 26       		.byte	0x26
+ 1319 0457 96000000 		.4byte	0x96
+ 1320 045b 05       		.uleb128 0x5
+ 1321 045c 03       		.byte	0x3
+ 1322 045d 00000000 		.4byte	j
+ 1323 0461 16       		.uleb128 0x16
+ 1324 0462 BF000000 		.4byte	.LASF33
+ 1325 0466 01       		.byte	0x1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 29
+
+
+ 1326 0467 26       		.byte	0x26
+ 1327 0468 96000000 		.4byte	0x96
+ 1328 046c 05       		.uleb128 0x5
+ 1329 046d 03       		.byte	0x3
+ 1330 046e 00000000 		.4byte	oldest
+ 1331 0472 16       		.uleb128 0x16
+ 1332 0473 B2000000 		.4byte	.LASF34
+ 1333 0477 01       		.byte	0x1
+ 1334 0478 26       		.byte	0x26
+ 1335 0479 96000000 		.4byte	0x96
+ 1336 047d 05       		.uleb128 0x5
+ 1337 047e 03       		.byte	0x3
+ 1338 047f 00000000 		.4byte	newest
+ 1339 0483 16       		.uleb128 0x16
+ 1340 0484 00000000 		.4byte	.LASF35
+ 1341 0488 01       		.byte	0x1
+ 1342 0489 26       		.byte	0x26
+ 1343 048a 96000000 		.4byte	0x96
+ 1344 048e 05       		.uleb128 0x5
+ 1345 048f 03       		.byte	0x3
+ 1346 0490 00000000 		.4byte	diff
+ 1347 0494 16       		.uleb128 0x16
+ 1348 0495 56000000 		.4byte	.LASF36
+ 1349 0499 01       		.byte	0x1
+ 1350 049a 26       		.byte	0x26
+ 1351 049b 96000000 		.4byte	0x96
+ 1352 049f 05       		.uleb128 0x5
+ 1353 04a0 03       		.byte	0x3
+ 1354 04a1 00000000 		.4byte	signed_data
+ 1355 04a5 15       		.uleb128 0x15
+ 1356 04a6 6F6C6400 		.ascii	"old\000"
+ 1357 04aa 01       		.byte	0x1
+ 1358 04ab 26       		.byte	0x26
+ 1359 04ac 96000000 		.4byte	0x96
+ 1360 04b0 05       		.uleb128 0x5
+ 1361 04b1 03       		.byte	0x3
+ 1362 04b2 00000000 		.4byte	old
+ 1363 04b6 0E       		.uleb128 0xe
+ 1364 04b7 96000000 		.4byte	0x96
+ 1365 04bb C6040000 		.4byte	0x4c6
+ 1366 04bf 0F       		.uleb128 0xf
+ 1367 04c0 E0000000 		.4byte	0xe0
+ 1368 04c4 04       		.byte	0x4
+ 1369 04c5 00       		.byte	0
+ 1370 04c6 16       		.uleb128 0x16
+ 1371 04c7 AE030000 		.4byte	.LASF37
+ 1372 04cb 01       		.byte	0x1
+ 1373 04cc 27       		.byte	0x27
+ 1374 04cd B6040000 		.4byte	0x4b6
+ 1375 04d1 05       		.uleb128 0x5
+ 1376 04d2 03       		.byte	0x3
+ 1377 04d3 00000000 		.4byte	data_array
+ 1378 04d7 16       		.uleb128 0x16
+ 1379 04d8 DC010000 		.4byte	.LASF38
+ 1380 04dc 01       		.byte	0x1
+ 1381 04dd 28       		.byte	0x28
+ 1382 04de 7E000000 		.4byte	0x7e
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 30
+
+
+ 1383 04e2 05       		.uleb128 0x5
+ 1384 04e3 03       		.byte	0x3
+ 1385 04e4 00000000 		.4byte	counter
+ 1386 04e8 16       		.uleb128 0x16
+ 1387 04e9 46030000 		.4byte	.LASF39
+ 1388 04ed 01       		.byte	0x1
+ 1389 04ee 28       		.byte	0x28
+ 1390 04ef 7E000000 		.4byte	0x7e
+ 1391 04f3 05       		.uleb128 0x5
+ 1392 04f4 03       		.byte	0x3
+ 1393 04f5 00000000 		.4byte	pointer
+ 1394 04f9 16       		.uleb128 0x16
+ 1395 04fa B9030000 		.4byte	.LASF40
+ 1396 04fe 01       		.byte	0x1
+ 1397 04ff 28       		.byte	0x28
+ 1398 0500 7E000000 		.4byte	0x7e
+ 1399 0504 05       		.uleb128 0x5
+ 1400 0505 03       		.byte	0x3
+ 1401 0506 00000000 		.4byte	squared
+ 1402 050a 16       		.uleb128 0x16
+ 1403 050b E7000000 		.4byte	.LASF41
+ 1404 050f 01       		.byte	0x1
+ 1405 0510 28       		.byte	0x28
+ 1406 0511 7E000000 		.4byte	0x7e
+ 1407 0515 05       		.uleb128 0x5
+ 1408 0516 03       		.byte	0x3
+ 1409 0517 00000000 		.4byte	moving_sum
+ 1410 051b 16       		.uleb128 0x16
+ 1411 051c 25000000 		.4byte	.LASF42
+ 1412 0520 01       		.byte	0x1
+ 1413 0521 28       		.byte	0x28
+ 1414 0522 7E000000 		.4byte	0x7e
+ 1415 0526 05       		.uleb128 0x5
+ 1416 0527 03       		.byte	0x3
+ 1417 0528 00000000 		.4byte	unsigned_data
+ 1418 052c 16       		.uleb128 0x16
+ 1419 052d 0C030000 		.4byte	.LASF43
+ 1420 0531 01       		.byte	0x1
+ 1421 0532 28       		.byte	0x28
+ 1422 0533 7E000000 		.4byte	0x7e
+ 1423 0537 05       		.uleb128 0x5
+ 1424 0538 03       		.byte	0x3
+ 1425 0539 00000000 		.4byte	avg_new
+ 1426 053d 16       		.uleb128 0x16
+ 1427 053e D4000000 		.4byte	.LASF44
+ 1428 0542 01       		.byte	0x1
+ 1429 0543 29       		.byte	0x29
+ 1430 0544 B5000000 		.4byte	0xb5
+ 1431 0548 05       		.uleb128 0x5
+ 1432 0549 03       		.byte	0x3
+ 1433 054a 00000000 		.4byte	FirstCall
+ 1434 054e 17       		.uleb128 0x17
+ 1435 054f AB010000 		.4byte	.LASF49
+ 1436 0553 05       		.byte	0x5
+ 1437 0554 6A01     		.2byte	0x16a
+ 1438 0556 8A000000 		.4byte	0x8a
+ 1439 055a 18       		.uleb128 0x18
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 31
+
+
+ 1440 055b E4010000 		.4byte	.LASF45
+ 1441 055f 03       		.byte	0x3
+ 1442 0560 27       		.byte	0x27
+ 1443 0561 6B050000 		.4byte	0x56b
+ 1444 0565 19       		.uleb128 0x19
+ 1445 0566 72000000 		.4byte	0x72
+ 1446 056a 00       		.byte	0
+ 1447 056b 1A       		.uleb128 0x1a
+ 1448 056c CA010000 		.4byte	.LASF63
+ 1449 0570 0D       		.byte	0xd
+ 1450 0571 B7       		.byte	0xb7
+ 1451 0572 E7000000 		.4byte	0xe7
+ 1452 0576 8A050000 		.4byte	0x58a
+ 1453 057a 19       		.uleb128 0x19
+ 1454 057b 64000000 		.4byte	0x64
+ 1455 057f 19       		.uleb128 0x19
+ 1456 0580 E7000000 		.4byte	0xe7
+ 1457 0584 19       		.uleb128 0x19
+ 1458 0585 64000000 		.4byte	0x64
+ 1459 0589 00       		.byte	0
+ 1460 058a 1B       		.uleb128 0x1b
+ 1461 058b 8C020000 		.4byte	.LASF46
+ 1462 058f 04       		.byte	0x4
+ 1463 0590 7701     		.2byte	0x177
+ 1464 0592 9C050000 		.4byte	0x59c
+ 1465 0596 19       		.uleb128 0x19
+ 1466 0597 9C050000 		.4byte	0x59c
+ 1467 059b 00       		.byte	0
+ 1468 059c 06       		.uleb128 0x6
+ 1469 059d 04       		.byte	0x4
+ 1470 059e A2050000 		.4byte	0x5a2
+ 1471 05a2 1C       		.uleb128 0x1c
+ 1472 05a3 A9000000 		.4byte	0xa9
+ 1473 05a7 1B       		.uleb128 0x1b
+ 1474 05a8 CB020000 		.4byte	.LASF47
+ 1475 05ac 04       		.byte	0x4
+ 1476 05ad 8C01     		.2byte	0x18c
+ 1477 05af B9050000 		.4byte	0x5b9
+ 1478 05b3 19       		.uleb128 0x19
+ 1479 05b4 8A000000 		.4byte	0x8a
+ 1480 05b8 00       		.byte	0
+ 1481 05b9 1B       		.uleb128 0x1b
+ 1482 05ba 96030000 		.4byte	.LASF48
+ 1483 05be 05       		.byte	0x5
+ 1484 05bf 8C01     		.2byte	0x18c
+ 1485 05c1 CB050000 		.4byte	0x5cb
+ 1486 05c5 19       		.uleb128 0x19
+ 1487 05c6 8A000000 		.4byte	0x8a
+ 1488 05ca 00       		.byte	0
+ 1489 05cb 17       		.uleb128 0x17
+ 1490 05cc 4C020000 		.4byte	.LASF50
+ 1491 05d0 04       		.byte	0x4
+ 1492 05d1 6A01     		.2byte	0x16a
+ 1493 05d3 8A000000 		.4byte	0x8a
+ 1494 05d7 17       		.uleb128 0x17
+ 1495 05d8 5F030000 		.4byte	.LASF51
+ 1496 05dc 06       		.byte	0x6
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 32
+
+
+ 1497 05dd 4D01     		.2byte	0x14d
+ 1498 05df 8A000000 		.4byte	0x8a
+ 1499 05e3 18       		.uleb128 0x18
+ 1500 05e4 44000000 		.4byte	.LASF52
+ 1501 05e8 07       		.byte	0x7
+ 1502 05e9 18       		.byte	0x18
+ 1503 05ea F4050000 		.4byte	0x5f4
+ 1504 05ee 19       		.uleb128 0x19
+ 1505 05ef CD000000 		.4byte	0xcd
+ 1506 05f3 00       		.byte	0
+ 1507 05f4 18       		.uleb128 0x18
+ 1508 05f5 14030000 		.4byte	.LASF53
+ 1509 05f9 08       		.byte	0x8
+ 1510 05fa 18       		.byte	0x18
+ 1511 05fb 05060000 		.4byte	0x605
+ 1512 05ff 19       		.uleb128 0x19
+ 1513 0600 CD000000 		.4byte	0xcd
+ 1514 0604 00       		.byte	0
+ 1515 0605 18       		.uleb128 0x18
+ 1516 0606 B3020000 		.4byte	.LASF54
+ 1517 060a 09       		.byte	0x9
+ 1518 060b 18       		.byte	0x18
+ 1519 060c 16060000 		.4byte	0x616
+ 1520 0610 19       		.uleb128 0x19
+ 1521 0611 CD000000 		.4byte	0xcd
+ 1522 0615 00       		.byte	0
+ 1523 0616 1D       		.uleb128 0x1d
+ 1524 0617 A8020000 		.4byte	.LASF55
+ 1525 061b 0A       		.byte	0xa
+ 1526 061c 68       		.byte	0x68
+ 1527 061d 1D       		.uleb128 0x1d
+ 1528 061e 87030000 		.4byte	.LASF56
+ 1529 0622 0B       		.byte	0xb
+ 1530 0623 68       		.byte	0x68
+ 1531 0624 1E       		.uleb128 0x1e
+ 1532 0625 28030000 		.4byte	.LASF57
+ 1533 0629 06       		.byte	0x6
+ 1534 062a 3201     		.2byte	0x132
+ 1535 062c 1D       		.uleb128 0x1d
+ 1536 062d F2000000 		.4byte	.LASF58
+ 1537 0631 07       		.byte	0x7
+ 1538 0632 23       		.byte	0x23
+ 1539 0633 1D       		.uleb128 0x1d
+ 1540 0634 61020000 		.4byte	.LASF59
+ 1541 0638 0C       		.byte	0xc
+ 1542 0639 1D       		.byte	0x1d
+ 1543 063a 00       		.byte	0
+ 1544              		.section	.debug_abbrev,"",%progbits
+ 1545              	.Ldebug_abbrev0:
+ 1546 0000 01       		.uleb128 0x1
+ 1547 0001 11       		.uleb128 0x11
+ 1548 0002 01       		.byte	0x1
+ 1549 0003 25       		.uleb128 0x25
+ 1550 0004 0E       		.uleb128 0xe
+ 1551 0005 13       		.uleb128 0x13
+ 1552 0006 0B       		.uleb128 0xb
+ 1553 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 33
+
+
+ 1554 0008 0E       		.uleb128 0xe
+ 1555 0009 1B       		.uleb128 0x1b
+ 1556 000a 0E       		.uleb128 0xe
+ 1557 000b 55       		.uleb128 0x55
+ 1558 000c 17       		.uleb128 0x17
+ 1559 000d 11       		.uleb128 0x11
+ 1560 000e 01       		.uleb128 0x1
+ 1561 000f 10       		.uleb128 0x10
+ 1562 0010 17       		.uleb128 0x17
+ 1563 0011 00       		.byte	0
+ 1564 0012 00       		.byte	0
+ 1565 0013 02       		.uleb128 0x2
+ 1566 0014 24       		.uleb128 0x24
+ 1567 0015 00       		.byte	0
+ 1568 0016 0B       		.uleb128 0xb
+ 1569 0017 0B       		.uleb128 0xb
+ 1570 0018 3E       		.uleb128 0x3e
+ 1571 0019 0B       		.uleb128 0xb
+ 1572 001a 03       		.uleb128 0x3
+ 1573 001b 0E       		.uleb128 0xe
+ 1574 001c 00       		.byte	0
+ 1575 001d 00       		.byte	0
+ 1576 001e 03       		.uleb128 0x3
+ 1577 001f 24       		.uleb128 0x24
+ 1578 0020 00       		.byte	0
+ 1579 0021 0B       		.uleb128 0xb
+ 1580 0022 0B       		.uleb128 0xb
+ 1581 0023 3E       		.uleb128 0x3e
+ 1582 0024 0B       		.uleb128 0xb
+ 1583 0025 03       		.uleb128 0x3
+ 1584 0026 08       		.uleb128 0x8
+ 1585 0027 00       		.byte	0
+ 1586 0028 00       		.byte	0
+ 1587 0029 04       		.uleb128 0x4
+ 1588 002a 16       		.uleb128 0x16
+ 1589 002b 00       		.byte	0
+ 1590 002c 03       		.uleb128 0x3
+ 1591 002d 0E       		.uleb128 0xe
+ 1592 002e 3A       		.uleb128 0x3a
+ 1593 002f 0B       		.uleb128 0xb
+ 1594 0030 3B       		.uleb128 0x3b
+ 1595 0031 05       		.uleb128 0x5
+ 1596 0032 49       		.uleb128 0x49
+ 1597 0033 13       		.uleb128 0x13
+ 1598 0034 00       		.byte	0
+ 1599 0035 00       		.byte	0
+ 1600 0036 05       		.uleb128 0x5
+ 1601 0037 35       		.uleb128 0x35
+ 1602 0038 00       		.byte	0
+ 1603 0039 49       		.uleb128 0x49
+ 1604 003a 13       		.uleb128 0x13
+ 1605 003b 00       		.byte	0
+ 1606 003c 00       		.byte	0
+ 1607 003d 06       		.uleb128 0x6
+ 1608 003e 0F       		.uleb128 0xf
+ 1609 003f 00       		.byte	0
+ 1610 0040 0B       		.uleb128 0xb
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 34
+
+
+ 1611 0041 0B       		.uleb128 0xb
+ 1612 0042 49       		.uleb128 0x49
+ 1613 0043 13       		.uleb128 0x13
+ 1614 0044 00       		.byte	0
+ 1615 0045 00       		.byte	0
+ 1616 0046 07       		.uleb128 0x7
+ 1617 0047 15       		.uleb128 0x15
+ 1618 0048 00       		.byte	0
+ 1619 0049 27       		.uleb128 0x27
+ 1620 004a 19       		.uleb128 0x19
+ 1621 004b 00       		.byte	0
+ 1622 004c 00       		.byte	0
+ 1623 004d 08       		.uleb128 0x8
+ 1624 004e 2E       		.uleb128 0x2e
+ 1625 004f 01       		.byte	0x1
+ 1626 0050 3F       		.uleb128 0x3f
+ 1627 0051 19       		.uleb128 0x19
+ 1628 0052 03       		.uleb128 0x3
+ 1629 0053 0E       		.uleb128 0xe
+ 1630 0054 3A       		.uleb128 0x3a
+ 1631 0055 0B       		.uleb128 0xb
+ 1632 0056 3B       		.uleb128 0x3b
+ 1633 0057 0B       		.uleb128 0xb
+ 1634 0058 27       		.uleb128 0x27
+ 1635 0059 19       		.uleb128 0x19
+ 1636 005a 11       		.uleb128 0x11
+ 1637 005b 01       		.uleb128 0x1
+ 1638 005c 12       		.uleb128 0x12
+ 1639 005d 06       		.uleb128 0x6
+ 1640 005e 40       		.uleb128 0x40
+ 1641 005f 18       		.uleb128 0x18
+ 1642 0060 9742     		.uleb128 0x2117
+ 1643 0062 19       		.uleb128 0x19
+ 1644 0063 01       		.uleb128 0x1
+ 1645 0064 13       		.uleb128 0x13
+ 1646 0065 00       		.byte	0
+ 1647 0066 00       		.byte	0
+ 1648 0067 09       		.uleb128 0x9
+ 1649 0068 34       		.uleb128 0x34
+ 1650 0069 00       		.byte	0
+ 1651 006a 03       		.uleb128 0x3
+ 1652 006b 08       		.uleb128 0x8
+ 1653 006c 3A       		.uleb128 0x3a
+ 1654 006d 0B       		.uleb128 0xb
+ 1655 006e 3B       		.uleb128 0x3b
+ 1656 006f 0B       		.uleb128 0xb
+ 1657 0070 49       		.uleb128 0x49
+ 1658 0071 13       		.uleb128 0x13
+ 1659 0072 02       		.uleb128 0x2
+ 1660 0073 18       		.uleb128 0x18
+ 1661 0074 00       		.byte	0
+ 1662 0075 00       		.byte	0
+ 1663 0076 0A       		.uleb128 0xa
+ 1664 0077 34       		.uleb128 0x34
+ 1665 0078 00       		.byte	0
+ 1666 0079 03       		.uleb128 0x3
+ 1667 007a 08       		.uleb128 0x8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 35
+
+
+ 1668 007b 3A       		.uleb128 0x3a
+ 1669 007c 0B       		.uleb128 0xb
+ 1670 007d 3B       		.uleb128 0x3b
+ 1671 007e 0B       		.uleb128 0xb
+ 1672 007f 49       		.uleb128 0x49
+ 1673 0080 13       		.uleb128 0x13
+ 1674 0081 02       		.uleb128 0x2
+ 1675 0082 17       		.uleb128 0x17
+ 1676 0083 00       		.byte	0
+ 1677 0084 00       		.byte	0
+ 1678 0085 0B       		.uleb128 0xb
+ 1679 0086 898201   		.uleb128 0x4109
+ 1680 0089 00       		.byte	0
+ 1681 008a 11       		.uleb128 0x11
+ 1682 008b 01       		.uleb128 0x1
+ 1683 008c 31       		.uleb128 0x31
+ 1684 008d 13       		.uleb128 0x13
+ 1685 008e 00       		.byte	0
+ 1686 008f 00       		.byte	0
+ 1687 0090 0C       		.uleb128 0xc
+ 1688 0091 898201   		.uleb128 0x4109
+ 1689 0094 01       		.byte	0x1
+ 1690 0095 11       		.uleb128 0x11
+ 1691 0096 01       		.uleb128 0x1
+ 1692 0097 31       		.uleb128 0x31
+ 1693 0098 13       		.uleb128 0x13
+ 1694 0099 01       		.uleb128 0x1
+ 1695 009a 13       		.uleb128 0x13
+ 1696 009b 00       		.byte	0
+ 1697 009c 00       		.byte	0
+ 1698 009d 0D       		.uleb128 0xd
+ 1699 009e 8A8201   		.uleb128 0x410a
+ 1700 00a1 00       		.byte	0
+ 1701 00a2 02       		.uleb128 0x2
+ 1702 00a3 18       		.uleb128 0x18
+ 1703 00a4 9142     		.uleb128 0x2111
+ 1704 00a6 18       		.uleb128 0x18
+ 1705 00a7 00       		.byte	0
+ 1706 00a8 00       		.byte	0
+ 1707 00a9 0E       		.uleb128 0xe
+ 1708 00aa 01       		.uleb128 0x1
+ 1709 00ab 01       		.byte	0x1
+ 1710 00ac 49       		.uleb128 0x49
+ 1711 00ad 13       		.uleb128 0x13
+ 1712 00ae 01       		.uleb128 0x1
+ 1713 00af 13       		.uleb128 0x13
+ 1714 00b0 00       		.byte	0
+ 1715 00b1 00       		.byte	0
+ 1716 00b2 0F       		.uleb128 0xf
+ 1717 00b3 21       		.uleb128 0x21
+ 1718 00b4 00       		.byte	0
+ 1719 00b5 49       		.uleb128 0x49
+ 1720 00b6 13       		.uleb128 0x13
+ 1721 00b7 2F       		.uleb128 0x2f
+ 1722 00b8 0B       		.uleb128 0xb
+ 1723 00b9 00       		.byte	0
+ 1724 00ba 00       		.byte	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 36
+
+
+ 1725 00bb 10       		.uleb128 0x10
+ 1726 00bc 2E       		.uleb128 0x2e
+ 1727 00bd 01       		.byte	0x1
+ 1728 00be 3F       		.uleb128 0x3f
+ 1729 00bf 19       		.uleb128 0x19
+ 1730 00c0 03       		.uleb128 0x3
+ 1731 00c1 0E       		.uleb128 0xe
+ 1732 00c2 3A       		.uleb128 0x3a
+ 1733 00c3 0B       		.uleb128 0xb
+ 1734 00c4 3B       		.uleb128 0x3b
+ 1735 00c5 0B       		.uleb128 0xb
+ 1736 00c6 27       		.uleb128 0x27
+ 1737 00c7 19       		.uleb128 0x19
+ 1738 00c8 49       		.uleb128 0x49
+ 1739 00c9 13       		.uleb128 0x13
+ 1740 00ca 11       		.uleb128 0x11
+ 1741 00cb 01       		.uleb128 0x1
+ 1742 00cc 12       		.uleb128 0x12
+ 1743 00cd 06       		.uleb128 0x6
+ 1744 00ce 40       		.uleb128 0x40
+ 1745 00cf 18       		.uleb128 0x18
+ 1746 00d0 9642     		.uleb128 0x2116
+ 1747 00d2 19       		.uleb128 0x19
+ 1748 00d3 01       		.uleb128 0x1
+ 1749 00d4 13       		.uleb128 0x13
+ 1750 00d5 00       		.byte	0
+ 1751 00d6 00       		.byte	0
+ 1752 00d7 11       		.uleb128 0x11
+ 1753 00d8 05       		.uleb128 0x5
+ 1754 00d9 00       		.byte	0
+ 1755 00da 03       		.uleb128 0x3
+ 1756 00db 08       		.uleb128 0x8
+ 1757 00dc 3A       		.uleb128 0x3a
+ 1758 00dd 0B       		.uleb128 0xb
+ 1759 00de 3B       		.uleb128 0x3b
+ 1760 00df 0B       		.uleb128 0xb
+ 1761 00e0 49       		.uleb128 0x49
+ 1762 00e1 13       		.uleb128 0x13
+ 1763 00e2 02       		.uleb128 0x2
+ 1764 00e3 17       		.uleb128 0x17
+ 1765 00e4 00       		.byte	0
+ 1766 00e5 00       		.byte	0
+ 1767 00e6 12       		.uleb128 0x12
+ 1768 00e7 2E       		.uleb128 0x2e
+ 1769 00e8 01       		.byte	0x1
+ 1770 00e9 3F       		.uleb128 0x3f
+ 1771 00ea 19       		.uleb128 0x19
+ 1772 00eb 03       		.uleb128 0x3
+ 1773 00ec 0E       		.uleb128 0xe
+ 1774 00ed 3A       		.uleb128 0x3a
+ 1775 00ee 0B       		.uleb128 0xb
+ 1776 00ef 3B       		.uleb128 0x3b
+ 1777 00f0 0B       		.uleb128 0xb
+ 1778 00f1 27       		.uleb128 0x27
+ 1779 00f2 19       		.uleb128 0x19
+ 1780 00f3 49       		.uleb128 0x49
+ 1781 00f4 13       		.uleb128 0x13
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 37
+
+
+ 1782 00f5 11       		.uleb128 0x11
+ 1783 00f6 01       		.uleb128 0x1
+ 1784 00f7 12       		.uleb128 0x12
+ 1785 00f8 06       		.uleb128 0x6
+ 1786 00f9 40       		.uleb128 0x40
+ 1787 00fa 18       		.uleb128 0x18
+ 1788 00fb 9742     		.uleb128 0x2117
+ 1789 00fd 19       		.uleb128 0x19
+ 1790 00fe 01       		.uleb128 0x1
+ 1791 00ff 13       		.uleb128 0x13
+ 1792 0100 00       		.byte	0
+ 1793 0101 00       		.byte	0
+ 1794 0102 13       		.uleb128 0x13
+ 1795 0103 05       		.uleb128 0x5
+ 1796 0104 00       		.byte	0
+ 1797 0105 03       		.uleb128 0x3
+ 1798 0106 0E       		.uleb128 0xe
+ 1799 0107 3A       		.uleb128 0x3a
+ 1800 0108 0B       		.uleb128 0xb
+ 1801 0109 3B       		.uleb128 0x3b
+ 1802 010a 0B       		.uleb128 0xb
+ 1803 010b 49       		.uleb128 0x49
+ 1804 010c 13       		.uleb128 0x13
+ 1805 010d 02       		.uleb128 0x2
+ 1806 010e 17       		.uleb128 0x17
+ 1807 010f 00       		.byte	0
+ 1808 0110 00       		.byte	0
+ 1809 0111 14       		.uleb128 0x14
+ 1810 0112 2E       		.uleb128 0x2e
+ 1811 0113 01       		.byte	0x1
+ 1812 0114 3F       		.uleb128 0x3f
+ 1813 0115 19       		.uleb128 0x19
+ 1814 0116 03       		.uleb128 0x3
+ 1815 0117 0E       		.uleb128 0xe
+ 1816 0118 3A       		.uleb128 0x3a
+ 1817 0119 0B       		.uleb128 0xb
+ 1818 011a 3B       		.uleb128 0x3b
+ 1819 011b 0B       		.uleb128 0xb
+ 1820 011c 49       		.uleb128 0x49
+ 1821 011d 13       		.uleb128 0x13
+ 1822 011e 11       		.uleb128 0x11
+ 1823 011f 01       		.uleb128 0x1
+ 1824 0120 12       		.uleb128 0x12
+ 1825 0121 06       		.uleb128 0x6
+ 1826 0122 40       		.uleb128 0x40
+ 1827 0123 18       		.uleb128 0x18
+ 1828 0124 9742     		.uleb128 0x2117
+ 1829 0126 19       		.uleb128 0x19
+ 1830 0127 01       		.uleb128 0x1
+ 1831 0128 13       		.uleb128 0x13
+ 1832 0129 00       		.byte	0
+ 1833 012a 00       		.byte	0
+ 1834 012b 15       		.uleb128 0x15
+ 1835 012c 34       		.uleb128 0x34
+ 1836 012d 00       		.byte	0
+ 1837 012e 03       		.uleb128 0x3
+ 1838 012f 08       		.uleb128 0x8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 38
+
+
+ 1839 0130 3A       		.uleb128 0x3a
+ 1840 0131 0B       		.uleb128 0xb
+ 1841 0132 3B       		.uleb128 0x3b
+ 1842 0133 0B       		.uleb128 0xb
+ 1843 0134 49       		.uleb128 0x49
+ 1844 0135 13       		.uleb128 0x13
+ 1845 0136 3F       		.uleb128 0x3f
+ 1846 0137 19       		.uleb128 0x19
+ 1847 0138 02       		.uleb128 0x2
+ 1848 0139 18       		.uleb128 0x18
+ 1849 013a 00       		.byte	0
+ 1850 013b 00       		.byte	0
+ 1851 013c 16       		.uleb128 0x16
+ 1852 013d 34       		.uleb128 0x34
+ 1853 013e 00       		.byte	0
+ 1854 013f 03       		.uleb128 0x3
+ 1855 0140 0E       		.uleb128 0xe
+ 1856 0141 3A       		.uleb128 0x3a
+ 1857 0142 0B       		.uleb128 0xb
+ 1858 0143 3B       		.uleb128 0x3b
+ 1859 0144 0B       		.uleb128 0xb
+ 1860 0145 49       		.uleb128 0x49
+ 1861 0146 13       		.uleb128 0x13
+ 1862 0147 3F       		.uleb128 0x3f
+ 1863 0148 19       		.uleb128 0x19
+ 1864 0149 02       		.uleb128 0x2
+ 1865 014a 18       		.uleb128 0x18
+ 1866 014b 00       		.byte	0
+ 1867 014c 00       		.byte	0
+ 1868 014d 17       		.uleb128 0x17
+ 1869 014e 2E       		.uleb128 0x2e
+ 1870 014f 00       		.byte	0
+ 1871 0150 3F       		.uleb128 0x3f
+ 1872 0151 19       		.uleb128 0x19
+ 1873 0152 03       		.uleb128 0x3
+ 1874 0153 0E       		.uleb128 0xe
+ 1875 0154 3A       		.uleb128 0x3a
+ 1876 0155 0B       		.uleb128 0xb
+ 1877 0156 3B       		.uleb128 0x3b
+ 1878 0157 05       		.uleb128 0x5
+ 1879 0158 27       		.uleb128 0x27
+ 1880 0159 19       		.uleb128 0x19
+ 1881 015a 49       		.uleb128 0x49
+ 1882 015b 13       		.uleb128 0x13
+ 1883 015c 3C       		.uleb128 0x3c
+ 1884 015d 19       		.uleb128 0x19
+ 1885 015e 00       		.byte	0
+ 1886 015f 00       		.byte	0
+ 1887 0160 18       		.uleb128 0x18
+ 1888 0161 2E       		.uleb128 0x2e
+ 1889 0162 01       		.byte	0x1
+ 1890 0163 3F       		.uleb128 0x3f
+ 1891 0164 19       		.uleb128 0x19
+ 1892 0165 03       		.uleb128 0x3
+ 1893 0166 0E       		.uleb128 0xe
+ 1894 0167 3A       		.uleb128 0x3a
+ 1895 0168 0B       		.uleb128 0xb
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 39
+
+
+ 1896 0169 3B       		.uleb128 0x3b
+ 1897 016a 0B       		.uleb128 0xb
+ 1898 016b 27       		.uleb128 0x27
+ 1899 016c 19       		.uleb128 0x19
+ 1900 016d 3C       		.uleb128 0x3c
+ 1901 016e 19       		.uleb128 0x19
+ 1902 016f 01       		.uleb128 0x1
+ 1903 0170 13       		.uleb128 0x13
+ 1904 0171 00       		.byte	0
+ 1905 0172 00       		.byte	0
+ 1906 0173 19       		.uleb128 0x19
+ 1907 0174 05       		.uleb128 0x5
+ 1908 0175 00       		.byte	0
+ 1909 0176 49       		.uleb128 0x49
+ 1910 0177 13       		.uleb128 0x13
+ 1911 0178 00       		.byte	0
+ 1912 0179 00       		.byte	0
+ 1913 017a 1A       		.uleb128 0x1a
+ 1914 017b 2E       		.uleb128 0x2e
+ 1915 017c 01       		.byte	0x1
+ 1916 017d 3F       		.uleb128 0x3f
+ 1917 017e 19       		.uleb128 0x19
+ 1918 017f 03       		.uleb128 0x3
+ 1919 0180 0E       		.uleb128 0xe
+ 1920 0181 3A       		.uleb128 0x3a
+ 1921 0182 0B       		.uleb128 0xb
+ 1922 0183 3B       		.uleb128 0x3b
+ 1923 0184 0B       		.uleb128 0xb
+ 1924 0185 27       		.uleb128 0x27
+ 1925 0186 19       		.uleb128 0x19
+ 1926 0187 49       		.uleb128 0x49
+ 1927 0188 13       		.uleb128 0x13
+ 1928 0189 3C       		.uleb128 0x3c
+ 1929 018a 19       		.uleb128 0x19
+ 1930 018b 01       		.uleb128 0x1
+ 1931 018c 13       		.uleb128 0x13
+ 1932 018d 00       		.byte	0
+ 1933 018e 00       		.byte	0
+ 1934 018f 1B       		.uleb128 0x1b
+ 1935 0190 2E       		.uleb128 0x2e
+ 1936 0191 01       		.byte	0x1
+ 1937 0192 3F       		.uleb128 0x3f
+ 1938 0193 19       		.uleb128 0x19
+ 1939 0194 03       		.uleb128 0x3
+ 1940 0195 0E       		.uleb128 0xe
+ 1941 0196 3A       		.uleb128 0x3a
+ 1942 0197 0B       		.uleb128 0xb
+ 1943 0198 3B       		.uleb128 0x3b
+ 1944 0199 05       		.uleb128 0x5
+ 1945 019a 27       		.uleb128 0x27
+ 1946 019b 19       		.uleb128 0x19
+ 1947 019c 3C       		.uleb128 0x3c
+ 1948 019d 19       		.uleb128 0x19
+ 1949 019e 01       		.uleb128 0x1
+ 1950 019f 13       		.uleb128 0x13
+ 1951 01a0 00       		.byte	0
+ 1952 01a1 00       		.byte	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 40
+
+
+ 1953 01a2 1C       		.uleb128 0x1c
+ 1954 01a3 26       		.uleb128 0x26
+ 1955 01a4 00       		.byte	0
+ 1956 01a5 49       		.uleb128 0x49
+ 1957 01a6 13       		.uleb128 0x13
+ 1958 01a7 00       		.byte	0
+ 1959 01a8 00       		.byte	0
+ 1960 01a9 1D       		.uleb128 0x1d
+ 1961 01aa 2E       		.uleb128 0x2e
+ 1962 01ab 00       		.byte	0
+ 1963 01ac 3F       		.uleb128 0x3f
+ 1964 01ad 19       		.uleb128 0x19
+ 1965 01ae 03       		.uleb128 0x3
+ 1966 01af 0E       		.uleb128 0xe
+ 1967 01b0 3A       		.uleb128 0x3a
+ 1968 01b1 0B       		.uleb128 0xb
+ 1969 01b2 3B       		.uleb128 0x3b
+ 1970 01b3 0B       		.uleb128 0xb
+ 1971 01b4 27       		.uleb128 0x27
+ 1972 01b5 19       		.uleb128 0x19
+ 1973 01b6 3C       		.uleb128 0x3c
+ 1974 01b7 19       		.uleb128 0x19
+ 1975 01b8 00       		.byte	0
+ 1976 01b9 00       		.byte	0
+ 1977 01ba 1E       		.uleb128 0x1e
+ 1978 01bb 2E       		.uleb128 0x2e
+ 1979 01bc 00       		.byte	0
+ 1980 01bd 3F       		.uleb128 0x3f
+ 1981 01be 19       		.uleb128 0x19
+ 1982 01bf 03       		.uleb128 0x3
+ 1983 01c0 0E       		.uleb128 0xe
+ 1984 01c1 3A       		.uleb128 0x3a
+ 1985 01c2 0B       		.uleb128 0xb
+ 1986 01c3 3B       		.uleb128 0x3b
+ 1987 01c4 05       		.uleb128 0x5
+ 1988 01c5 27       		.uleb128 0x27
+ 1989 01c6 19       		.uleb128 0x19
+ 1990 01c7 3C       		.uleb128 0x3c
+ 1991 01c8 19       		.uleb128 0x19
+ 1992 01c9 00       		.byte	0
+ 1993 01ca 00       		.byte	0
+ 1994 01cb 00       		.byte	0
+ 1995              		.section	.debug_loc,"",%progbits
+ 1996              	.Ldebug_loc0:
+ 1997              	.LLST0:
+ 1998 0000 0A000000 		.4byte	.LVL1
+ 1999 0004 2C000000 		.4byte	.LVL2
+ 2000 0008 0100     		.2byte	0x1
+ 2001 000a 50       		.byte	0x50
+ 2002 000b 00000000 		.4byte	0
+ 2003 000f 00000000 		.4byte	0
+ 2004              	.LLST1:
+ 2005 0013 06000000 		.4byte	.LVL11
+ 2006 0017 10000000 		.4byte	.LVL12
+ 2007 001b 0100     		.2byte	0x1
+ 2008 001d 50       		.byte	0x50
+ 2009 001e 00000000 		.4byte	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 41
+
+
+ 2010 0022 00000000 		.4byte	0
+ 2011              	.LLST2:
+ 2012 0026 00000000 		.4byte	.LVL15
+ 2013 002a 0D000000 		.4byte	.LVL16-1
+ 2014 002e 0600     		.2byte	0x6
+ 2015 0030 50       		.byte	0x50
+ 2016 0031 93       		.byte	0x93
+ 2017 0032 04       		.uleb128 0x4
+ 2018 0033 51       		.byte	0x51
+ 2019 0034 93       		.byte	0x93
+ 2020 0035 04       		.uleb128 0x4
+ 2021 0036 0D000000 		.4byte	.LVL16-1
+ 2022 003a 3C000000 		.4byte	.LFE36
+ 2023 003e 0600     		.2byte	0x6
+ 2024 0040 F3       		.byte	0xf3
+ 2025 0041 03       		.uleb128 0x3
+ 2026 0042 F5       		.byte	0xf5
+ 2027 0043 00       		.uleb128 0
+ 2028 0044 25       		.uleb128 0x25
+ 2029 0045 9F       		.byte	0x9f
+ 2030 0046 00000000 		.4byte	0
+ 2031 004a 00000000 		.4byte	0
+ 2032              	.LLST3:
+ 2033 004e 00000000 		.4byte	.LVL21
+ 2034 0052 0C000000 		.4byte	.LVL22
+ 2035 0056 0100     		.2byte	0x1
+ 2036 0058 50       		.byte	0x50
+ 2037 0059 0C000000 		.4byte	.LVL22
+ 2038 005d 52000000 		.4byte	.LVL23
+ 2039 0061 0500     		.2byte	0x5
+ 2040 0063 03       		.byte	0x3
+ 2041 0064 00000000 		.4byte	x
+ 2042 0068 52000000 		.4byte	.LVL23
+ 2043 006c 8C000000 		.4byte	.LFE37
+ 2044 0070 0400     		.2byte	0x4
+ 2045 0072 F3       		.byte	0xf3
+ 2046 0073 01       		.uleb128 0x1
+ 2047 0074 50       		.byte	0x50
+ 2048 0075 9F       		.byte	0x9f
+ 2049 0076 00000000 		.4byte	0
+ 2050 007a 00000000 		.4byte	0
+ 2051              	.LLST4:
+ 2052 007e 00000000 		.4byte	.LVL24
+ 2053 0082 10000000 		.4byte	.LVL25
+ 2054 0086 0100     		.2byte	0x1
+ 2055 0088 50       		.byte	0x50
+ 2056 0089 10000000 		.4byte	.LVL25
+ 2057 008d 1C000000 		.4byte	.LFE38
+ 2058 0091 0400     		.2byte	0x4
+ 2059 0093 F3       		.byte	0xf3
+ 2060 0094 01       		.uleb128 0x1
+ 2061 0095 50       		.byte	0x50
+ 2062 0096 9F       		.byte	0x9f
+ 2063 0097 00000000 		.4byte	0
+ 2064 009b 00000000 		.4byte	0
+ 2065              	.LLST5:
+ 2066 009f 00000000 		.4byte	.LVL26
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 42
+
+
+ 2067 00a3 02000000 		.4byte	.LVL27
+ 2068 00a7 0100     		.2byte	0x1
+ 2069 00a9 50       		.byte	0x50
+ 2070 00aa 02000000 		.4byte	.LVL27
+ 2071 00ae 04000000 		.4byte	.LFE39
+ 2072 00b2 0400     		.2byte	0x4
+ 2073 00b4 F3       		.byte	0xf3
+ 2074 00b5 01       		.uleb128 0x1
+ 2075 00b6 50       		.byte	0x50
+ 2076 00b7 9F       		.byte	0x9f
+ 2077 00b8 00000000 		.4byte	0
+ 2078 00bc 00000000 		.4byte	0
+ 2079              	.LLST6:
+ 2080 00c0 00000000 		.4byte	.LVL28
+ 2081 00c4 05000000 		.4byte	.LVL29-1
+ 2082 00c8 0100     		.2byte	0x1
+ 2083 00ca 50       		.byte	0x50
+ 2084 00cb 05000000 		.4byte	.LVL29-1
+ 2085 00cf 94000000 		.4byte	.LFE40
+ 2086 00d3 0400     		.2byte	0x4
+ 2087 00d5 F3       		.byte	0xf3
+ 2088 00d6 01       		.uleb128 0x1
+ 2089 00d7 50       		.byte	0x50
+ 2090 00d8 9F       		.byte	0x9f
+ 2091 00d9 00000000 		.4byte	0
+ 2092 00dd 00000000 		.4byte	0
+ 2093              		.section	.debug_aranges,"",%progbits
+ 2094 0000 5C000000 		.4byte	0x5c
+ 2095 0004 0200     		.2byte	0x2
+ 2096 0006 00000000 		.4byte	.Ldebug_info0
+ 2097 000a 04       		.byte	0x4
+ 2098 000b 00       		.byte	0
+ 2099 000c 0000     		.2byte	0
+ 2100 000e 0000     		.2byte	0
+ 2101 0010 00000000 		.4byte	.LFB41
+ 2102 0014 A4000000 		.4byte	.LFE41-.LFB41
+ 2103 0018 00000000 		.4byte	.LFB42
+ 2104 001c 1C000000 		.4byte	.LFE42-.LFB42
+ 2105 0020 00000000 		.4byte	.LFB43
+ 2106 0024 10000000 		.4byte	.LFE43-.LFB43
+ 2107 0028 00000000 		.4byte	.LFB36
+ 2108 002c 3C000000 		.4byte	.LFE36-.LFB36
+ 2109 0030 00000000 		.4byte	.LFB37
+ 2110 0034 8C000000 		.4byte	.LFE37-.LFB37
+ 2111 0038 00000000 		.4byte	.LFB38
+ 2112 003c 1C000000 		.4byte	.LFE38-.LFB38
+ 2113 0040 00000000 		.4byte	.LFB39
+ 2114 0044 04000000 		.4byte	.LFE39-.LFB39
+ 2115 0048 00000000 		.4byte	.LFB40
+ 2116 004c 94000000 		.4byte	.LFE40-.LFB40
+ 2117 0050 00000000 		.4byte	.LFB44
+ 2118 0054 3C000000 		.4byte	.LFE44-.LFB44
+ 2119 0058 00000000 		.4byte	0
+ 2120 005c 00000000 		.4byte	0
+ 2121              		.section	.debug_ranges,"",%progbits
+ 2122              	.Ldebug_ranges0:
+ 2123 0000 00000000 		.4byte	.LFB41
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 43
+
+
+ 2124 0004 A4000000 		.4byte	.LFE41
+ 2125 0008 00000000 		.4byte	.LFB42
+ 2126 000c 1C000000 		.4byte	.LFE42
+ 2127 0010 00000000 		.4byte	.LFB43
+ 2128 0014 10000000 		.4byte	.LFE43
+ 2129 0018 00000000 		.4byte	.LFB36
+ 2130 001c 3C000000 		.4byte	.LFE36
+ 2131 0020 00000000 		.4byte	.LFB37
+ 2132 0024 8C000000 		.4byte	.LFE37
+ 2133 0028 00000000 		.4byte	.LFB38
+ 2134 002c 1C000000 		.4byte	.LFE38
+ 2135 0030 00000000 		.4byte	.LFB39
+ 2136 0034 04000000 		.4byte	.LFE39
+ 2137 0038 00000000 		.4byte	.LFB40
+ 2138 003c 94000000 		.4byte	.LFE40
+ 2139 0040 00000000 		.4byte	.LFB44
+ 2140 0044 3C000000 		.4byte	.LFE44
+ 2141 0048 00000000 		.4byte	0
+ 2142 004c 00000000 		.4byte	0
+ 2143              		.section	.debug_line,"",%progbits
+ 2144              	.Ldebug_line0:
+ 2145 0000 77020000 		.section	.debug_str,"MS",%progbits,1
+ 2145      02005901 
+ 2145      00000201 
+ 2145      FB0E0D00 
+ 2145      01010101 
+ 2146              	.LASF35:
+ 2147 0000 64696666 		.ascii	"diff\000"
+ 2147      00
+ 2148              	.LASF27:
+ 2149 0005 73717561 		.ascii	"square\000"
+ 2149      726500
+ 2150              	.LASF3:
+ 2151 000c 73686F72 		.ascii	"short int\000"
+ 2151      7420696E 
+ 2151      7400
+ 2152              	.LASF19:
+ 2153 0016 73697A65 		.ascii	"sizetype\000"
+ 2153      74797065 
+ 2153      00
+ 2154              	.LASF15:
+ 2155 001f 63686172 		.ascii	"char8\000"
+ 2155      3800
+ 2156              	.LASF42:
+ 2157 0025 756E7369 		.ascii	"unsigned_data\000"
+ 2157      676E6564 
+ 2157      5F646174 
+ 2157      6100
+ 2158              	.LASF24:
+ 2159 0033 68696768 		.ascii	"high_pass_filter\000"
+ 2159      5F706173 
+ 2159      735F6669 
+ 2159      6C746572 
+ 2159      00
+ 2160              	.LASF52:
+ 2161 0044 54696D65 		.ascii	"Timer_ISR_StartEx\000"
+ 2161      725F4953 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 44
+
+
+ 2161      525F5374 
+ 2161      61727445 
+ 2161      7800
+ 2162              	.LASF36:
+ 2163 0056 7369676E 		.ascii	"signed_data\000"
+ 2163      65645F64 
+ 2163      61746100 
+ 2164              	.LASF62:
+ 2165 0062 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Desktop\\heltNY.cydsn\000"
+ 2165      73657273 
+ 2165      5C4C696E 
+ 2165      65747465 
+ 2165      2048656C 
+ 2166              	.LASF11:
+ 2167 008f 75696E74 		.ascii	"uint16\000"
+ 2167      313600
+ 2168              	.LASF13:
+ 2169 0096 696E7431 		.ascii	"int16\000"
+ 2169      3600
+ 2170              	.LASF22:
+ 2171 009c 54696D65 		.ascii	"Timer_interrupt\000"
+ 2171      725F696E 
+ 2171      74657272 
+ 2171      75707400 
+ 2172              	.LASF10:
+ 2173 00ac 75696E74 		.ascii	"uint8\000"
+ 2173      3800
+ 2174              	.LASF34:
+ 2175 00b2 6E657765 		.ascii	"newest\000"
+ 2175      737400
+ 2176              	.LASF14:
+ 2177 00b9 666C6F61 		.ascii	"float\000"
+ 2177      7400
+ 2178              	.LASF33:
+ 2179 00bf 6F6C6465 		.ascii	"oldest\000"
+ 2179      737400
+ 2180              	.LASF7:
+ 2181 00c6 6C6F6E67 		.ascii	"long long int\000"
+ 2181      206C6F6E 
+ 2181      6720696E 
+ 2181      7400
+ 2182              	.LASF44:
+ 2183 00d4 46697273 		.ascii	"FirstCall\000"
+ 2183      7443616C 
+ 2183      6C00
+ 2184              	.LASF5:
+ 2185 00de 6C6F6E67 		.ascii	"long int\000"
+ 2185      20696E74 
+ 2185      00
+ 2186              	.LASF41:
+ 2187 00e7 6D6F7669 		.ascii	"moving_sum\000"
+ 2187      6E675F73 
+ 2187      756D00
+ 2188              	.LASF58:
+ 2189 00f2 54696D65 		.ascii	"Timer_ISR_Enable\000"
+ 2189      725F4953 
+ 2189      525F456E 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 45
+
+
+ 2189      61626C65 
+ 2189      00
+ 2190              	.LASF20:
+ 2191 0103 52585F69 		.ascii	"RX_interrupt\000"
+ 2191      6E746572 
+ 2191      72757074 
+ 2191      00
+ 2192              	.LASF30:
+ 2193 0110 63757272 		.ascii	"current_byte\000"
+ 2193      656E745F 
+ 2193      62797465 
+ 2193      00
+ 2194              	.LASF60:
+ 2195 011d 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2195      4320342E 
+ 2195      392E3320 
+ 2195      32303135 
+ 2195      30333033 
+ 2196 0150 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2196      20726576 
+ 2196      6973696F 
+ 2196      6E203232 
+ 2196      31323230 
+ 2197 0183 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2197      66756E63 
+ 2197      74696F6E 
+ 2197      2D736563 
+ 2197      74696F6E 
+ 2198              	.LASF49:
+ 2199 01ab 55415254 		.ascii	"UART_UartGetChar\000"
+ 2199      5F556172 
+ 2199      74476574 
+ 2199      43686172 
+ 2199      00
+ 2200              	.LASF2:
+ 2201 01bc 756E7369 		.ascii	"unsigned char\000"
+ 2201      676E6564 
+ 2201      20636861 
+ 2201      7200
+ 2202              	.LASF63:
+ 2203 01ca 69746F61 		.ascii	"itoa\000"
+ 2203      00
+ 2204              	.LASF18:
+ 2205 01cf 63796973 		.ascii	"cyisraddress\000"
+ 2205      72616464 
+ 2205      72657373 
+ 2205      00
+ 2206              	.LASF38:
+ 2207 01dc 636F756E 		.ascii	"counter\000"
+ 2207      74657200 
+ 2208              	.LASF45:
+ 2209 01e4 4D656173 		.ascii	"Measure_When_Low_Write\000"
+ 2209      7572655F 
+ 2209      5768656E 
+ 2209      5F4C6F77 
+ 2209      5F577269 
+ 2210              	.LASF23:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 46
+
+
+ 2211 01fb 666C6F6F 		.ascii	"floor_and_convert\000"
+ 2211      725F616E 
+ 2211      645F636F 
+ 2211      6E766572 
+ 2211      7400
+ 2212              	.LASF1:
+ 2213 020d 7369676E 		.ascii	"signed char\000"
+ 2213      65642063 
+ 2213      68617200 
+ 2214              	.LASF8:
+ 2215 0219 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2215      206C6F6E 
+ 2215      6720756E 
+ 2215      7369676E 
+ 2215      65642069 
+ 2216              	.LASF9:
+ 2217 0230 756E7369 		.ascii	"unsigned int\000"
+ 2217      676E6564 
+ 2217      20696E74 
+ 2217      00
+ 2218              	.LASF26:
+ 2219 023d 64696666 		.ascii	"differentiator\000"
+ 2219      6572656E 
+ 2219      74696174 
+ 2219      6F7200
+ 2220              	.LASF50:
+ 2221 024c 55415254 		.ascii	"UART_BLE_UartGetChar\000"
+ 2221      5F424C45 
+ 2221      5F556172 
+ 2221      74476574 
+ 2221      43686172 
+ 2222              	.LASF59:
+ 2223 0261 43795379 		.ascii	"CySysPmSleep\000"
+ 2223      73506D53 
+ 2223      6C656570 
+ 2223      00
+ 2224              	.LASF17:
+ 2225 026e 72656733 		.ascii	"reg32\000"
+ 2225      3200
+ 2226              	.LASF4:
+ 2227 0274 73686F72 		.ascii	"short unsigned int\000"
+ 2227      7420756E 
+ 2227      7369676E 
+ 2227      65642069 
+ 2227      6E7400
+ 2228              	.LASF16:
+ 2229 0287 63686172 		.ascii	"char\000"
+ 2229      00
+ 2230              	.LASF46:
+ 2231 028c 55415254 		.ascii	"UART_BLE_UartPutString\000"
+ 2231      5F424C45 
+ 2231      5F556172 
+ 2231      74507574 
+ 2231      53747269 
+ 2232              	.LASF29:
+ 2233 02a3 6D61696E 		.ascii	"main\000"
+ 2233      00
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 47
+
+
+ 2234              	.LASF55:
+ 2235 02a8 55415254 		.ascii	"UART_Start\000"
+ 2235      5F537461 
+ 2235      727400
+ 2236              	.LASF54:
+ 2237 02b3 55415254 		.ascii	"UART_BLE_RX_ISR_StartEx\000"
+ 2237      5F424C45 
+ 2237      5F52585F 
+ 2237      4953525F 
+ 2237      53746172 
+ 2238              	.LASF47:
+ 2239 02cb 55415254 		.ascii	"UART_BLE_SpiUartWriteTxData\000"
+ 2239      5F424C45 
+ 2239      5F537069 
+ 2239      55617274 
+ 2239      57726974 
+ 2240              	.LASF25:
+ 2241 02e7 64617461 		.ascii	"data\000"
+ 2241      00
+ 2242              	.LASF12:
+ 2243 02ec 75696E74 		.ascii	"uint32\000"
+ 2243      333200
+ 2244              	.LASF6:
+ 2245 02f3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2245      20756E73 
+ 2245      69676E65 
+ 2245      6420696E 
+ 2245      7400
+ 2246              	.LASF0:
+ 2247 0305 646F7562 		.ascii	"double\000"
+ 2247      6C6500
+ 2248              	.LASF43:
+ 2249 030c 6176675F 		.ascii	"avg_new\000"
+ 2249      6E657700 
+ 2250              	.LASF53:
+ 2251 0314 55415254 		.ascii	"UART_RX_ISR_StartEx\000"
+ 2251      5F52585F 
+ 2251      4953525F 
+ 2251      53746172 
+ 2251      74457800 
+ 2252              	.LASF57:
+ 2253 0328 54696D65 		.ascii	"Timer_Start\000"
+ 2253      725F5374 
+ 2253      61727400 
+ 2254              	.LASF31:
+ 2255 0334 76616C75 		.ascii	"value_in\000"
+ 2255      655F696E 
+ 2255      00
+ 2256              	.LASF61:
+ 2257 033d 2E5C6D61 		.ascii	".\\main.c\000"
+ 2257      696E2E63 
+ 2257      00
+ 2258              	.LASF39:
+ 2259 0346 706F696E 		.ascii	"pointer\000"
+ 2259      74657200 
+ 2260              	.LASF21:
+ 2261 034e 424C455F 		.ascii	"BLE_RX_interrupt\000"
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccHV4T25.s 			page 48
+
+
+ 2261      52585F69 
+ 2261      6E746572 
+ 2261      72757074 
+ 2261      00
+ 2262              	.LASF51:
+ 2263 035f 54696D65 		.ascii	"Timer_ReadCapture\000"
+ 2263      725F5265 
+ 2263      61644361 
+ 2263      70747572 
+ 2263      6500
+ 2264              	.LASF28:
+ 2265 0371 6D617667 		.ascii	"mavg_filter\000"
+ 2265      5F66696C 
+ 2265      74657200 
+ 2266              	.LASF32:
+ 2267 037d 76616C75 		.ascii	"value_out\000"
+ 2267      655F6F75 
+ 2267      7400
+ 2268              	.LASF56:
+ 2269 0387 55415254 		.ascii	"UART_BLE_Start\000"
+ 2269      5F424C45 
+ 2269      5F537461 
+ 2269      727400
+ 2270              	.LASF48:
+ 2271 0396 55415254 		.ascii	"UART_SpiUartWriteTxData\000"
+ 2271      5F537069 
+ 2271      55617274 
+ 2271      57726974 
+ 2271      65547844 
+ 2272              	.LASF37:
+ 2273 03ae 64617461 		.ascii	"data_array\000"
+ 2273      5F617272 
+ 2273      617900
+ 2274              	.LASF40:
+ 2275 03b9 73717561 		.ascii	"squared\000"
+ 2275      72656400 
+ 2276              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
