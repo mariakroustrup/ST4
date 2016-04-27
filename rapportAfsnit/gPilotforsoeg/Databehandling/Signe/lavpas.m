@@ -1,4 +1,5 @@
 %% Filterkonfigurationer
+frekvens = 100;
 
 % 1. mulighed
 Wn = [15]/frekvens/2;
