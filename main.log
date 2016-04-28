@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  28 APR 2016 13:19
+=======
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  28 APR 2016 12:59
+>>>>>>> origin/master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1809,6 +1813,7 @@ Package babel Info: Redefining danish shorthand "~
 Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
 line 10.
 )
+<<<<<<< HEAD
 (./rapportAfsnit/bInitierende/initierende_spg.tex)
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 23.
@@ -1829,6 +1834,15 @@ Package babel Info: Redefining danish shorthand "~
 
 (./rapportAfsnit/cProblemanalyse/ALS.tex
 <figures/affectedneuron.png, id=75, 772.38562pt x 195.73125pt>
+=======
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/bInitierende/initi
+erende_spg.tex") [1
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/AL
+S.tex" <figures/affectedneuron.png, id=66, 772.38562pt x 195.73125pt>
+>>>>>>> origin/master
 File: figures/affectedneuron.png Graphic file (type png)
 
 <use figures/affectedneuron.png>
@@ -1840,7 +1854,11 @@ Underfull \hbox (badness 1331) in paragraph at lines 8--8
 ient. Det første stadie illustrerer en normal
  []
 
+<<<<<<< HEAD
 <figures/motorneuroner.png, id=81, 372.79276pt x 485.4135pt>
+=======
+<figures/motorneuroner.png, id=72, 372.79276pt x 485.4135pt>
+>>>>>>> origin/master
 File: figures/motorneuroner.png Graphic file (type png)
 
 <use figures/motorneuroner.png>
@@ -1856,8 +1874,13 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 22.
  [2
 
+<<<<<<< HEAD
  <./figures/affectedneuron.png>]
 <figures/stadier.png, id=99, 623.32875pt x 148.555pt>
+=======
+ <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/affectedneuron.png>]
+<figures/stadier.png, id=90, 623.32875pt x 148.555pt>
+>>>>>>> origin/master
 File: figures/stadier.png Graphic file (type png)
 
 <use figures/stadier.png>
@@ -1883,6 +1906,7 @@ Underfull \hbox (badness 1642) in paragraph at lines 8--10
 eringer: en overordnet
  []
 
+<<<<<<< HEAD
 ) (./rapportAfsnit/cProblemanalyse/Nuvaerende_teknologier.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 7.
@@ -1904,17 +1928,29 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
  [5]
 <figures/knaet.png, id=171, 484.81125pt x 307.90031pt>
+=======
+)
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Nu
+vaerende_teknologier.tex" [4])
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Kn
+aeleddet.tex" [5] <figures/knaet.png, id=161, 484.81125pt x 307.90031pt>
+>>>>>>> origin/master
 File: figures/knaet.png Graphic file (type png)
  <use figures/knaet.png>
 Package pdftex.def Info: figures/knaet.png used on input line 7.
 (pdftex.def)             Requested size: 352.80135pt x 224.07472pt.
 
+<<<<<<< HEAD
 <figures/knae_anatomi.jpg, id=176, 872.25874pt x 469.755pt>
+=======
+<figures/knae_anatomi.jpg, id=166, 872.25874pt x 469.755pt>
+>>>>>>> origin/master
 File: figures/knae_anatomi.jpg Graphic file (type jpg)
 
 <use figures/knae_anatomi.jpg>
 Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 18.
 (pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining danish shorthand "~
@@ -1925,6 +1961,10 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 22.
  [6 <./figures/knaet.png>]
 <figures/squat.png, id=195, 310.15875pt x 274.77657pt>
+=======
+ [6 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/knaet.png>] <figures/
+squat.png, id=185, 310.15875pt x 274.77657pt>
+>>>>>>> origin/master
 File: figures/squat.png Graphic file (type png)
  <use figures/squat.png>
 Package pdftex.def Info: figures/squat.png used on input line 36.
@@ -1949,6 +1989,7 @@ Underfull \hbox (badness 1281) in paragraph at lines 5--7
  indflydelse på deres
  []
 
+<<<<<<< HEAD
 )
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 31.
@@ -1966,6 +2007,12 @@ Package babel Info: Redefining danish shorthand "~
 
 (./rapportAfsnit/eProblemloesning/systembeskrivelse.tex
 <figures/blokdiagram.png, id=224, 1157.32375pt x 221.82875pt>
+=======
+) [8 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/squat.png>]
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/s
+ystembeskrivelse.tex"
+<figures/blokdiagram.png, id=214, 1157.32375pt x 221.82875pt>
+>>>>>>> origin/master
 File: figures/blokdiagram.png Graphic file (type png)
 
 <use figures/blokdiagram.png>
@@ -1981,9 +2028,16 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 31.
  [9
 
+<<<<<<< HEAD
  <./figures/blokdiagram.png>])
 (./rapportAfsnit/eProblemloesning/loesningsstrategi.tex
 <figures/CY8CKIT-042.png, id=241, 552.26324pt x 283.65974pt>
+=======
+ <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/blokdiagram.png>])
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/l
+oesningsstrategi.tex"
+<figures/CY8CKIT-042.png, id=231, 552.26324pt x 283.65974pt>
+>>>>>>> origin/master
 File: figures/CY8CKIT-042.png Graphic file (type png)
 
 <use figures/CY8CKIT-042.png>
@@ -1994,6 +2048,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
+<<<<<<< HEAD
 )
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 37.
@@ -2012,10 +2067,20 @@ Package babel Info: Redefining danish shorthand "~
 (./rapportAfsnit/eProblemloesning/opsamling.tex)
 (./rapportAfsnit/eProblemloesning/EMG_teori_krav.tex)
 (./rapportAfsnit/eProblemloesning/acc_teori_krav.tex
+=======
+) [10 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/CY8CKIT-042.png>]
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/o
+psamling.tex")
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/E
+MG_teori_krav.tex")
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/a
+cc_teori_krav.tex"
+>>>>>>> origin/master
 
 Package natbib Warning: Citation `bernmarka2002' on page 11 undefined on input 
 line 2.
 
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining danish shorthand "~
@@ -2027,12 +2092,23 @@ Package babel Info: Redefining danish shorthand "~
 [11
 
 ]) (./rapportAfsnit/eProblemloesning/spaendingsforsyning.tex
+=======
+[11
+
+])
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/s
+paendingsforsyning.tex"
+>>>>>>> origin/master
 Underfull \hbox (badness 2165) in paragraph at lines 2--5
 \T1/cmr/m/n/10.95 med en konstant spænding. Den anvendte spændingsforsyning er 
 en færdigudviklet
  []
 
+<<<<<<< HEAD
 <figures/spaendingsforsyning.jpeg, id=281, 881.2925pt x 351.3125pt>
+=======
+<figures/spaendingsforsyning.jpeg, id=271, 881.2925pt x 351.3125pt>
+>>>>>>> origin/master
 File: figures/spaendingsforsyning.jpeg Graphic file (type jpg)
 
 <use figures/spaendingsforsyning.jpeg>
@@ -2048,6 +2124,7 @@ ne 4.
 
 LaTeX Warning: Reference `ADC_kon' on page 12 undefined on input line 4.
 
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining danish shorthand "~
@@ -2058,6 +2135,10 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 5.
 [12 <./figures/spaendingsforsyning.jpeg>]
 <figures/problemloesning/adc.png, id=293, 329.5512pt x 159.4758pt>
+=======
+[12 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/spaendingsforsyning.j
+peg>] <figures/problemloesning/adc.png, id=283, 329.5512pt x 159.4758pt>
+>>>>>>> origin/master
 File: figures/problemloesning/adc.png Graphic file (type png)
 
 <use figures/problemloesning/adc.png>
@@ -2084,6 +2165,7 @@ ne 23.
 Package natbib Warning: Citation `wolf2004' on page 13 undefined on input line 
 23.
 
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 33.
 Package babel Info: Redefining danish shorthand "~
@@ -2156,6 +2238,12 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 22.
 [14 <./figures/filtre.png>])
 (./rapportAfsnit/eProblemloesning/traadloes_kommunikation.tex
+=======
+[13 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/problemloesning/adc.p
+ng>])
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/t
+raadloes_kommunikation.tex"
+>>>>>>> origin/master
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
@@ -2165,6 +2253,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
+<<<<<<< HEAD
 )
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 48.
@@ -2181,6 +2270,12 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 48.
  (./rapportAfsnit/eProblemloesning/Implemetering/EMG.tex
 <figures/sinussignal.png, id=340, 273.27094pt x 217.5628pt>
+=======
+) [14]
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
+mplemetering/EMG.tex"
+<figures/sinussignal.png, id=314, 273.27094pt x 217.5628pt>
+>>>>>>> origin/master
 File: figures/sinussignal.png Graphic file (type png)
 
 <use figures/sinussignal.png>
@@ -2210,14 +2305,22 @@ Underfull \hbox (badness 1533) in paragraph at lines 4--5
  en 3-aksialt sensor, som har et
  []
 
+<<<<<<< HEAD
 <figures/acc_pin.png, id=359, 320.19624pt x 237.88875pt>
+=======
+<figures/acc_pin.png, id=334, 320.19624pt x 237.88875pt>
+>>>>>>> origin/master
 File: figures/acc_pin.png Graphic file (type png)
 
 <use figures/acc_pin.png>
 Package pdftex.def Info: figures/acc_pin.png used on input line 8.
 (pdftex.def)             Requested size: 264.60269pt x 196.58731pt.
 
+<<<<<<< HEAD
 <figures/acc_paavirkning.png, id=365, 782.17218pt x 423.08063pt>
+=======
+<figures/acc_paavirkning.png, id=340, 782.17218pt x 423.08063pt>
+>>>>>>> origin/master
 File: figures/acc_paavirkning.png Graphic file (type png)
 
 <use figures/acc_paavirkning.png>
@@ -2251,6 +2354,7 @@ ine 34.
 Package natbib Warning: Citation `ADC2014' on page 18 undefined on input line 2
 .
 
+<<<<<<< HEAD
 ) (./rapportAfsnit/eProblemloesning/Implemetering/flowchart.tex
 
 LaTeX Warning: Reference `sec:blokdiagram' on page 18 undefined on input line 2
@@ -2269,6 +2373,24 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 6.
 [18 <./figures/acc_paavirkning.png>]
 <figures/implementering/overordnet_flow.png, id=398, 449.68pt x 694.595pt>
+=======
+)
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
+mplemetering/flowchart.tex"
+
+LaTeX Warning: Reference `sec:blokdiagram' on page 17 undefined on input line 2
+.
+
+
+LaTeX Warning: Reference `sec:forord' on page 17 undefined on input line 2.
+
+
+LaTeX Warning: Reference `fig:overordnet_flow' on page 17 undefined on input li
+ne 5.
+
+[17 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/acc_paavirkning.png>]
+<figures/implementering/overordnet_flow.png, id=372, 449.68pt x 694.595pt>
+>>>>>>> origin/master
 File: figures/implementering/overordnet_flow.png Graphic file (type png)
 
 <use figures/implementering/overordnet_flow.png>
@@ -2276,11 +2398,21 @@ Package pdftex.def Info: figures/implementering/overordnet_flow.png used on inp
 ut line 9.
 (pdftex.def)             Requested size: 264.60269pt x 408.73703pt.
 
+<<<<<<< HEAD
 <figures/implementering/initialiserende_flow.png, id=400, 666.49pt x 324.21124p
+=======
+
+LaTeX Warning: Reference `fig:initialiserende_flow' on page 18 undefined on inp
+ut line 15.
+
+
+<figures/implementering/initialiserende_flow.png, id=373, 666.49pt x 324.21124p
+>>>>>>> origin/master
 t>
 File: figures/implementering/initialiserende_flow.png Graphic file (type png)
  <use figures/implementering/initialiserende_flow.png>
 Package pdftex.def Info: figures/implementering/initialiserende_flow.png used o
+<<<<<<< HEAD
 n input line 19.
 (pdftex.def)             Requested size: 264.60269pt x 128.71751pt.
 Package babel Info: Redefining danish shorthand "|
@@ -2293,10 +2425,20 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 22.
  [19 <./figures/implementering/overordnet_flow.png>]
 <figures/implementering/EMG_algo.png, id=412, 536.0025pt x 534.99875pt>
+=======
+n input line 18.
+(pdftex.def)             Requested size: 264.60269pt x 128.71751pt.
+
+
+LaTeX Warning: Reference `fig:Emg_algo' on page 18 undefined on input line 24.
+
+<figures/implementering/EMG_algo.png, id=374, 536.0025pt x 534.99875pt>
+>>>>>>> origin/master
 File: figures/implementering/EMG_algo.png Graphic file (type png)
 
 <use figures/implementering/EMG_algo.png>
 Package pdftex.def Info: figures/implementering/EMG_algo.png used on input line
+<<<<<<< HEAD
  28.
 (pdftex.def)             Requested size: 264.60269pt x 264.10274pt.
 ) (./main.bbl
@@ -2314,10 +2456,17 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
+=======
+ 27.
+(pdftex.def)             Requested size: 264.60269pt x 264.10274pt.
+)
+("C:\Users\Linette Helena\Documents\GitHub\ST4\main.bbl"
+>>>>>>> origin/master
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+<<<<<<< HEAD
 )
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 104.
@@ -2370,18 +2519,37 @@ Package babel Info: Redefining danish shorthand "~
 [24
 
 ] <figures/laarmuskel.png, id=481, 329.73187pt x 514.92375pt>
+=======
+))
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/Pilo
+tforsoeg.tex"
+
+LaTeX Warning: Reference `fig:laarmuskler' on page 18 undefined on input line 4
+8.
+
+<figures/laarmuskel.png, id=393, 329.73187pt x 514.92375pt>
+>>>>>>> origin/master
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
 Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
+<<<<<<< HEAD
 <figures/reference.png, id=486, 325.215pt x 410.53375pt>
+=======
+
+LaTeX Warning: Reference `fig:reference' on page 18 undefined on input line 57.
+
+
+<figures/reference.png, id=397, 325.215pt x 410.53375pt>
+>>>>>>> origin/master
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
 Package pdftex.def Info: figures/reference.png used on input line 61.
 (pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining danish shorthand "~
@@ -2392,12 +2560,24 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 68.
  [25 <./figures/laarmuskel.png> <./figures/reference.png>] <figures/acceleromet
 ervinkel.png, id=505, 172.39406pt x 165.61874pt>
+=======
+
+
+LaTeX Warning: Reference `fig:accelerometervinkel' on page 18 undefined on inpu
+t line 67.
+
+
+LaTeX Warning: Reference `sec:test_acc' on page 18 undefined on input line 67.
+
+<figures/accelerometervinkel.png, id=400, 172.39406pt x 165.61874pt>
+>>>>>>> origin/master
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
 Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
 
 (pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "~
@@ -2408,12 +2588,17 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 100.
  [26 <./figures/accelerometervinkel.png>]
 <figures/Pilotforsoeg/baselineogemg.png, id=520, 1028.34187pt x 490.08093pt>
+=======
+
+<figures/Pilotforsoeg/baselineogemg.png, id=403, 1028.34187pt x 490.08093pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/baselineogemg.png>
 Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
 ine 167.
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining danish shorthand "~
@@ -2424,12 +2609,21 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 171.
  [27]
 <figures/Pilotforsoeg/emgfft.png, id=532, 1445.4pt x 704.6325pt>
+=======
+
+
+LaTeX Warning: Reference `fig:baselineogemg' on page 18 undefined on input line
+ 171.
+
+<figures/Pilotforsoeg/emgfft.png, id=404, 1445.4pt x 704.6325pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emgfft.png>
 Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 176
 .
 (pdftex.def)             Requested size: 374.85269pt x 182.73781pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 185.
 Package babel Info: Redefining danish shorthand "~
@@ -2441,6 +2635,13 @@ Package babel Info: Redefining danish shorthand "~
  [28 <./figures/Pilotforsoeg/baselineogemg.png (PNG copy)> <./figures/Pilotfors
 oeg/emgfft.png (PNG copy)>]
 <figures/Pilotforsoeg/accfft.png, id=544, 1028.34187pt x 490.08093pt>
+=======
+
+
+LaTeX Warning: Reference `fig:emgfft' on page 18 undefined on input line 181.
+
+<figures/Pilotforsoeg/accfft.png, id=406, 1028.34187pt x 490.08093pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accfft.png>
@@ -2448,13 +2649,29 @@ Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 191
 .
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
 
+<<<<<<< HEAD
 <figures/Pilotforsoeg/accvinkel.png, id=548, 562.1pt x 421.575pt>
+=======
+
+LaTeX Warning: Reference `fig:accfftx' on page 18 undefined on input line 195.
+
+
+LaTeX Warning: Reference `sec:resul_linear' on page 18 undefined on input line 
+197.
+
+
+LaTeX Warning: Reference `fig:accvinkel' on page 18 undefined on input line 198
+.
+
+<figures/Pilotforsoeg/accvinkel.png, id=407, 562.1pt x 421.575pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accvinkel.png>
 Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line 
 202.
 (pdftex.def)             Requested size: 352.80135pt x 264.60301pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 206.
 Package babel Info: Redefining danish shorthand "~
@@ -2465,6 +2682,18 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 206.
  [29 <./figures/Pilotforsoeg/accfft.png (PNG copy)>]
 <figures/Pilotforsoeg/emg_vinkler_tid.png, id=559, 562.1pt x 421.575pt>
+=======
+
+
+LaTeX Warning: Reference `fig:accvinkel' on page 18 undefined on input line 206
+.
+
+
+LaTeX Warning: Reference `fig:emgogacc' on page 18 undefined on input line 208.
+
+
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=408, 562.1pt x 421.575pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler_tid.png>
@@ -2472,11 +2701,8 @@ Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
  line 211.
 (pdftex.def)             Requested size: 352.80135pt x 264.60301pt.
 
-Underfull \hbox (badness 1048) in paragraph at lines 217--218
-\T1/cmr/m/n/10.95 mellem vinklerne og mængden af muskelaktivitet. Ved fleksion 
-bliver vinkelen større
- []
 
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 218.
 Package babel Info: Redefining danish shorthand "~
@@ -2488,6 +2714,12 @@ Package babel Info: Redefining danish shorthand "~
 [30 <./figures/Pilotforsoeg/accvinkel.png (PNG copy)> <./figures/Pilotforsoeg/e
 mg_vinkler_tid.png (PNG copy)>]
 <figures/Pilotforsoeg/emg_vinkler.png, id=569, 1445.4pt x 704.6325pt>
+=======
+LaTeX Warning: Reference `fig:emgogvinkel' on page 18 undefined on input line 2
+17.
+
+<figures/Pilotforsoeg/emg_vinkler.png, id=409, 1445.4pt x 704.6325pt>
+>>>>>>> origin/master
 File: figures/Pilotforsoeg/emg_vinkler.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler.png>
@@ -2495,6 +2727,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler.png used on input lin
 e 225.
 (pdftex.def)             Requested size: 352.80135pt x 171.986pt.
 )
+<<<<<<< HEAD
 (./rapportAfsnit/gPilotforsoeg/test_acc.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 33.
@@ -2506,11 +2739,36 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 33.
  [31 <./figures/Pilotforsoeg/emg_vinkler.png (PNG copy)>]
 <figures/vinkeltest.jpg, id=588, 752.8125pt x 1339.0025pt>
+=======
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/test
+_acc.tex"
+
+LaTeX Warning: Reference `fig:vinkeltest' on page 18 undefined on input line 22
+.
+
+
+LaTeX Warning: Reference `sec:acc_formaal' on page 18 undefined on input line 2
+9.
+
+
+LaTeX Warning: Reference `sec:acc_fft' on page 18 undefined on input line 29.
+
+
+LaTeX Warning: Reference `fig:vinkeltest' on page 18 undefined on input line 43
+.
+
+
+LaTeX Warning: Reference `sec:vinkel_fremgangsmaade' on page 18 undefined on in
+put line 45.
+
+<figures/vinkeltest.jpg, id=411, 752.8125pt x 1339.0025pt>
+>>>>>>> origin/master
 File: figures/vinkeltest.jpg Graphic file (type jpg)
 
 <use figures/vinkeltest.jpg>
 Package pdftex.def Info: figures/vinkeltest.jpg used on input line 53.
 (pdftex.def)             Requested size: 132.30135pt x 235.30966pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining danish shorthand "~
@@ -2521,11 +2779,28 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 73.
  [32 <./figures/vinkeltest.jpg>]
 <figures/lineaerregression.png, id=605, 1434.86063pt x 704.6325pt>
+=======
+
+
+LaTeX Warning: Reference `sec:acc_fremgangsmaade' on page 18 undefined on input
+ line 63.
+
+
+LaTeX Warning: Reference `fig:vinkeltest' on page 18 undefined on input line 72
+.
+
+
+LaTeX Warning: Reference `fig:acc_lineaerregression' on page 18 undefined on in
+put line 94.
+
+<figures/lineaerregression.png, id=414, 1434.86063pt x 704.6325pt>
+>>>>>>> origin/master
 File: figures/lineaerregression.png Graphic file (type png)
 
 <use figures/lineaerregression.png>
 Package pdftex.def Info: figures/lineaerregression.png used on input line 98.
 (pdftex.def)             Requested size: 441.0pt x 216.563pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 102.
 Package babel Info: Redefining danish shorthand "~
@@ -2536,11 +2811,24 @@ Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 102.
  [33]
 <figures/paavirkning.png, id=620, 1400.23125pt x 725.71124pt>
+=======
+
+
+LaTeX Warning: Reference `fig:acc_lineaerregression' on page 18 undefined on in
+put line 103.
+
+
+LaTeX Warning: Reference `fig:acc_paavirkning2' on page 18 undefined on input l
+ine 108.
+
+<figures/paavirkning.png, id=416, 1400.23125pt x 725.71124pt>
+>>>>>>> origin/master
 File: figures/paavirkning.png Graphic file (type png)
 
 <use figures/paavirkning.png>
 Package pdftex.def Info: figures/paavirkning.png used on input line 112.
 (pdftex.def)             Requested size: 441.0pt x 228.55595pt.
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 116.
 Package babel Info: Redefining danish shorthand "~
@@ -2550,11 +2838,20 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 116.
  [34 <./figures/lineaerregression.png (PNG copy)>])
+=======
+
+
+LaTeX Warning: Reference `tab:acc_offset' on page 18 undefined on input line 11
+7.
+
+)
+>>>>>>> origin/master
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
+<<<<<<< HEAD
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining danish shorthand "~
@@ -2573,6 +2870,28 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+=======
+
+! LaTeX Error: \begin{figure} on input line 7 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+("C:\Users\Linette Helena\Documents\GitHub\ST4\main.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: DF8AFE35F0D1073D36A2197406B08B0D;247.
+>>>>>>> origin/master
 
 
 Package rerunfilecheck Warning: File `main.out' has changed.
@@ -2589,8 +2908,49 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
- ) 
+! You can't use `\end' in internal vertical mode.
+\enddocument ...es \z@ \Call@AtVeryVeryEnd \@@end 
+                                                  
+l.70 \end{document}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{figure} on input line 7 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.70 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> main.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  26616 strings out of 493117
  465080 string characters out of 6135433
  788486 words of memory out of 5000000
@@ -2666,3 +3026,13 @@ PDF statistics:
  211 named destinations out of 1000 (max. 500000)
  202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+=======
+ 26505 strings out of 493921
+ 468284 string characters out of 3144850
+ 819798 words of memory out of 3000000
+ 29145 multiletter control sequences out of 15000+200000
+ 26677 words of font info for 74 fonts, out of 3000000 for 9000
+ 843 hyphenation exceptions out of 8191
+ 57i,13n,92p,1196b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
+>>>>>>> origin/master
