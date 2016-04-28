@@ -9,28 +9,66 @@ I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og de kan væ
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{figures/filtre}
-\caption{De fire filtertyper; Butterworth, Cehbyshev 1 \& 2 og elliptisk \citep{wikipedia2016}}
+\caption{De fire filtertyper; Butterworth, Chebyshev 1 \& 2 og elliptisk \citep{wikipedia2016}}
 \label{fig:filtre}
 \end{figure}
 
+\noindent
 Et Butterworth filter er karakteriseret ved ikke at have nogle rippels i hverken pasbåndet eller stopbåndet. Hertil er der, uanset filterorden, en dæmpning på 3 dB ved knækfrekvensen \citep{nilsson2015}.
 Et Chebyshev filter har i modsætning til Butterworth et kortere transitionsbånd, som følge af en stejlere dæmpning, dog forekommer der ved et Chebyshev filter enten rippels i pasbåndet eller i stopbåndet. Ved et type 1 Chebyshev filter ses rippels i pasbåndet samt en monotont variation i stopbåndet. For type 2 Chebyshev ses der derimod rippels i stopbåndet og en monotont variation i pasbåndet \citep{nilsson2015}. 
 Ved det elliptiske filter ses en endnu stejlere dæmpning og dermed et kortere transitionsbånd end ved Butterworth samt Chebyshev filtre. Ved dette filter ses der dog både rippels i pasbånd og stopbånd \citep{nilsson2015}. 
 
+\vspace{3mm}
+\noindent
+\textbf{TILFØJ her teori til MAVG-filter}
 
-Da der ønskes at frafiltrere lavfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR højpasfilter være fordelagtigt for at opnå en skarpere hældning i transitionsbåndet. Herudover vil implementering af et FIR-filter kræve for meget af PSoC'en. Under pilotforsøget i \autoref{sec:pilotforsoeg} ... \fxnote{Dette afsnit skal ændres i forhold til hvilket filter vi anvende til henholdsvis accelerometer og EMG}
+\subsubsection{Filtrering af EMG-signal}
+Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kræve for meget af PSoC'en. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men det skal stadig følge muskelsignalet, så det ikke bliver uhensigtmæssigt svært at aktivere exoskelettet.  
+Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbånd. 
 
-\subsubsection{Filter: accelerometer}
+Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \ref{fig:lp_knaek}, hvor $15~Hz$, $20~Hz$ og $25~Hz$ er repræsenteret. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_knaek}
+\caption{De blå grafer viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med knækfrekvenser på hhv. 15, 20 og $25~Hz$.}
+\label{fig:lp_knaek}
+\end{figure} 
+
+\noindent
+Ud fra \ref{fig:lp_knaek} vælges en knækfrekvens på $20~Hz$, da denne følger signalet samtidigt med at udglatte spikes, der vil kunne forstyrre signalet til exoskelettet, hvilket de to andre knækfrekvenser ikke formår at gøre.
+
+Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden der vil være mest optimal til filteret. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_orden}
+\caption{De blå grafer viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med filterordner på hhv. 1, 2 og 3.}
+\label{fig:lp_orden}
+\end{figure} 
+
+\noindent
+Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til være tilstrækkelig. Der ses ingen større forskel i outputsignalet fra filteret, hvis filterordenen hæves yderligere. Dertil vurderes det, at en filterorden på 1 ikke er tilstrækkelig, da dette filters outputsignal afviger for meget fra inputsignalet. 
+
+\vspace{3mm}
+
+\textbf{Krav:}
 \begin{itemize}
-\item Signalet skal være 
-\item Skal have en knækfrekvens på $XX~Hz$
-\item Skal have et stopbånd på $XX~Hz$
-\item Skal have en minimumsdæmpning på $XX~dB$
-\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
+\item Skal stabiliseres signalets amplitude
+\item Skal udformes som et Butterworth lavpasfilter
+\item Skal have en knækfrekvens på $20~Hz$
+\item Skal have en filterorden på 2
 \end{itemize}
 
-\subsubsection{Filter: EMG}
+
+\subsubsection{Filtrering af accelerometer-signaler}
+
+\textbf{TILFØJ her baggrund for valg af krav til MAVG-filter}
+\vspace{3mm}
+
+\textbf{Krav:}
 \begin{itemize}
+\item Signalet skal være 
 \item Skal have en knækfrekvens på $XX~Hz$
 \item Skal have et stopbånd på $XX~Hz$
 \item Skal have en minimumsdæmpning på $XX~dB$

@@ -2,8 +2,8 @@
 frekvens = 100;
 
 % 1. mulighed
-Wn = [15]/frekvens/2;
-n = 2;
+Wn = [10]/frekvens/2;
+n = 1;
 
 [b,a]  = butter(n, Wn,'low');
 
@@ -17,8 +17,8 @@ n1 = 2;
 
 a_filt1 = filtfilt(b1,a1,nedogop_emg_off);
 
-Wn2 = [25]/frekvens/2;
-n2 = 2;
+Wn2 = [20]/frekvens/2;
+n2 = 3;
 
 [b2,a2]  = butter(n2, Wn2,'low');
 
@@ -53,11 +53,11 @@ hold on
 plot(t, nedogop_emg_off([1:1150]));
 plot(t, a_filt(1:1150));
 xlim([0 10]);
-xlabel('Tid [s]');
+%xlabel('Tid [s]');
 ylabel('Spænding [V]');
-legend('Ufiltreret', 'Filtreret')
+%legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('15 Hz knækfrekvens')
+title('Filterorden 1')
 box off
 
 subplot(1,3,2)
@@ -66,10 +66,10 @@ plot(t, nedogop_emg_off([1:1150]));
 plot(t, a_filt1(1:1150));
 xlim([0 10]);
 xlabel('Tid [s]');
-ylabel('Spænding [V]');
-legend('Ufiltreret', 'Filtreret')
+%ylabel('Spænding [V]');
+%legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('20 Hz knækfrekvens')
+title('Filterorden 2')
 box off
 
 subplot(1,3,3)
@@ -77,11 +77,11 @@ hold on
 plot(t, nedogop_emg_off([1:1150]));
 plot(t, a_filt2(1:1150));
 xlim([0 10]);
-xlabel('Tid [s]');
-ylabel('Spænding [V]');
-legend('Ufiltreret', 'Filtreret')
+%xlabel('Tid [s]');
+%ylabel('Spænding [V]');
+%legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('25 Hz knækfrekvens')
+title('Filterorden 3')
 box off
 
 
