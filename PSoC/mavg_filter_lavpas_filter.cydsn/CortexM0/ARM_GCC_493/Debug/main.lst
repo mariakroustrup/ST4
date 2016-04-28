@@ -1,0 +1,2688 @@
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.BLE_RX_interrupt,"ax",%progbits
+  18              		.align	2
+  19              		.global	BLE_RX_interrupt
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	BLE_RX_interrupt, %function
+  23              	BLE_RX_interrupt:
+  24              	.LFB40:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * UART echo with interrupt
+   4:.\main.c      ****  *
+   5:.\main.c      ****  * ========================================
+   6:.\main.c      **** */
+   7:.\main.c      **** #include <project.h>
+   8:.\main.c      **** #include <stdlib.h>
+   9:.\main.c      **** #define LOWBYTE 0                                   // Used to toggle between HIGH byte and LOW byt
+  10:.\main.c      **** #define HIGHBYTE 1                                  // Used to toggle between HIGH byte and LOW byt
+  11:.\main.c      **** #define FALSE 0
+  12:.\main.c      **** #define TRUE 1
+  13:.\main.c      **** #define LENGTH 5
+  14:.\main.c      **** 
+  15:.\main.c      **** #define ARRAY_SIZE 3
+  16:.\main.c      **** #define FILTER_LENGTH_mavg 19
+  17:.\main.c      **** #define FILTER_LENGTH_low 2
+  18:.\main.c      **** 
+  19:.\main.c      **** 
+  20:.\main.c      **** #define StartMeasuring Measure_When_Low_Write(0);   // Used to start the Timer
+  21:.\main.c      **** #define StopMeasuring Measure_When_Low_Write(1);    // Used to stop the Timer and capture the time 
+  22:.\main.c      **** 
+  23:.\main.c      **** int y[2] = {0,0};
+  24:.\main.c      **** //double y = 0;
+  25:.\main.c      **** 
+  26:.\main.c      **** double x_mavg[FILTER_LENGTH_mavg+1] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+  27:.\main.c      **** double y_mavg = 0;
+  28:.\main.c      **** double b_mavg[FILTER_LENGTH_mavg+1] = {0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,
+  29:.\main.c      **** 
+  30:.\main.c      **** double x_low[FILTER_LENGTH_low+1] = {0, 0, 0};
+  31:.\main.c      **** double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
+  32:.\main.c      **** double b_low[FILTER_LENGTH_low+1] = {0.0201, 0.0402, 0.0201};
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 2
+
+
+  33:.\main.c      **** double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.5610, 0.6414};
+  34:.\main.c      **** 
+  35:.\main.c      **** 
+  36:.\main.c      **** char current_byte = LOWBYTE;                        // Receive LOW byte first as default
+  37:.\main.c      **** int16 value_in,value_out[2]={0,0},i=0,j=0,oldest,newest,diff,signed_data,old, low_pass_new, avg_new
+  38:.\main.c      **** //int16 data_array[LENGTH] = {0};
+  39:.\main.c      **** //uint16 counter = 0, pointer, squared,moving_sum,unsigned_data,avg_new; // Variable for captured t
+  40:.\main.c      **** uint16 counter = 0, pointer, unsigned_data;  
+  41:.\main.c      **** char FirstCall = TRUE;
+  42:.\main.c      **** 
+  43:.\main.c      **** signed int floor_and_convert(double y)
+  44:.\main.c      **** {
+  45:.\main.c      ****    if (y > 0)
+  46:.\main.c      ****       return (signed int) (y+0.5);
+  47:.\main.c      ****    else
+  48:.\main.c      ****       return (signed int) (y-0.5);
+  49:.\main.c      **** }
+  50:.\main.c      **** 
+  51:.\main.c      **** int low_pass_filter(int data)
+  52:.\main.c      **** {
+  53:.\main.c      ****    int i;
+  54:.\main.c      ****    x_low[0] =  (double) data;
+  55:.\main.c      ****    
+  56:.\main.c      ****    y_low[0] = 0;
+  57:.\main.c      ****   
+  58:.\main.c      ****    for(i = 0;i <= FILTER_LENGTH_low;i++)                 // Run IIR filter for each received sample
+  59:.\main.c      ****    {
+  60:.\main.c      ****       y_low[0] += b_low[i]*x_low[i];
+  61:.\main.c      ****    } 
+  62:.\main.c      ****    
+  63:.\main.c      ****    for(i =1;i <= FILTER_LENGTH_low;i++)               // Roll x array in order to hold old sample i
+  64:.\main.c      ****    {
+  65:.\main.c      ****       y_low[0] -= a_low[i]*y_low[i];
+  66:.\main.c      ****    }
+  67:.\main.c      **** 
+  68:.\main.c      ****    for(i = FILTER_LENGTH_low-1;i >= 0;i--)
+  69:.\main.c      ****     {
+  70:.\main.c      ****        x_low[i+1]=x_low[i];
+  71:.\main.c      ****        y_low[i+1]=y_low[i];
+  72:.\main.c      ****     }
+  73:.\main.c      **** 
+  74:.\main.c      ****     return floor_and_convert(y_low[0]);
+  75:.\main.c      **** }
+  76:.\main.c      **** 
+  77:.\main.c      **** signed int mavg_filter(signed int data)
+  78:.\main.c      **** {
+  79:.\main.c      ****    x_mavg[0] =  (double) data;      // Read received sample and perform type casts
+  80:.\main.c      ****    
+  81:.\main.c      ****    y_mavg = 0;
+  82:.\main.c      ****    for(i = 0;i <= FILTER_LENGTH_mavg;i++)           // Run FIR filter for each received sample
+  83:.\main.c      ****    {
+  84:.\main.c      ****       y_mavg += b_mavg[i]*x_mavg[i];
+  85:.\main.c      ****    } 
+  86:.\main.c      ****    
+  87:.\main.c      ****    for(i = FILTER_LENGTH_mavg-1;i >= 0;i--)         // Roll x array in order to hold old sample inp
+  88:.\main.c      ****    {
+  89:.\main.c      ****       x_mavg[i+1] = x_mavg[i];
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 3
+
+
+  90:.\main.c      ****    }
+  91:.\main.c      ****       
+  92:.\main.c      ****    return (unsigned int) y_mavg;                    // Perform type casts and return sample
+  93:.\main.c      **** }
+  94:.\main.c      **** 
+  95:.\main.c      **** CY_ISR(RX_interrupt)
+  96:.\main.c      **** {
+  97:.\main.c      ****     char str[4];
+  98:.\main.c      ****     uint8 ch = UART_UartGetChar();
+  99:.\main.c      ****     UART_ClearRxInterruptSource(UART_GetRxInterruptSource());
+ 100:.\main.c      ****     
+ 101:.\main.c      ****     if(current_byte == LOWBYTE)                     // Receive LOW byte first
+ 102:.\main.c      ****     {
+ 103:.\main.c      ****         
+ 104:.\main.c      ****         
+ 105:.\main.c      ****         value_in = ch;                                 // Save UCA0RXBUF in the LOW byte of "value"
+ 106:.\main.c      ****         current_byte = HIGHBYTE;                    // Prepare to receive HIGH byte on next interru
+ 107:.\main.c      ****         return;                                     // Return from interrupt
+ 108:.\main.c      ****     }
+ 109:.\main.c      ****     
+ 110:.\main.c      ****     if(current_byte == HIGHBYTE)                    // Recieve HIGH byte
+ 111:.\main.c      ****     {
+ 112:.\main.c      ****         value_in += (ch<<8);                           // Save UCA0RXBUF in the HIGH byte of "value
+ 113:.\main.c      ****         current_byte = LOWBYTE;                     // Prepare to receive LOW byte on next interrup
+ 114:.\main.c      ****                 
+ 115:.\main.c      ****         StartMeasuring
+ 116:.\main.c      ****            avg_new = mavg_filter(value_in);               // Applay moving average function
+ 117:.\main.c      ****            //low_pass_new = low_pass_filter(value_in);
+ 118:.\main.c      ****            value_out[1] = value_out[0];
+ 119:.\main.c      ****            //value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
+ 120:.\main.c      ****            value_out[0] = avg_new; 
+ 121:.\main.c      ****         
+ 122:.\main.c      ****         StopMeasuring
+ 123:.\main.c      ****         
+ 124:.\main.c      ****         
+ 125:.\main.c      ****         if ((value_out[0] >= 225) && (value_out[1] < 225))      // Applay simple thresholding
+ 126:.\main.c      ****         {
+ 127:.\main.c      ****             j = j + 1;
+ 128:.\main.c      ****             UART_BLE_UartPutString(itoa(j,str,10));             // Notify BLE_Peripheral
+ 129:.\main.c      ****             UART_BLE_UartPutChar(10);    
+ 130:.\main.c      ****             UART_BLE_UartPutChar(13);  
+ 131:.\main.c      ****         }
+ 132:.\main.c      ****        
+ 133:.\main.c      ****        
+ 134:.\main.c      ****         UART_UartPutChar(avg_new);
+ 135:.\main.c      ****         UART_UartPutChar(avg_new>>8);  
+ 136:.\main.c      **** //        UART_UartPutChar(low_pass_new);
+ 137:.\main.c      **** //        UART_UartPutChar(low_pass_new>>8); 
+ 138:.\main.c      ****     }
+ 139:.\main.c      **** }
+ 140:.\main.c      **** 
+ 141:.\main.c      **** CY_ISR(BLE_RX_interrupt)
+ 142:.\main.c      **** {
+  26              		.loc 1 142 0
+  27              		.cfi_startproc
+  28 0000 08B5     		push	{r3, lr}
+  29              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 4
+
+
+  30              		.cfi_offset 3, -8
+  31              		.cfi_offset 14, -4
+ 143:.\main.c      ****     uint8 ch = UART_BLE_UartGetChar();
+  32              		.loc 1 143 0
+  33 0002 FFF7FEFF 		bl	UART_BLE_UartGetChar
+  34              	.LVL0:
+ 144:.\main.c      ****     UART_BLE_ClearRxInterruptSource(UART_BLE_GetRxInterruptSource());
+  35              		.loc 1 144 0
+  36 0006 044B     		ldr	r3, .L2
+  37 0008 1A68     		ldr	r2, [r3]
+  38 000a 1A60     		str	r2, [r3]
+ 145:.\main.c      ****     UART_UartPutChar(ch);
+  39              		.loc 1 145 0
+  40 000c FF23     		mov	r3, #255
+  41 000e 1840     		and	r0, r3
+  42              	.LVL1:
+  43 0010 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+  44              	.LVL2:
+ 146:.\main.c      **** }
+  45              		.loc 1 146 0
+  46              		@ sp needed
+  47 0014 08BD     		pop	{r3, pc}
+  48              	.L3:
+  49 0016 C046     		.align	2
+  50              	.L2:
+  51 0018 C00F2540 		.word	1076170688
+  52              		.cfi_endproc
+  53              	.LFE40:
+  54              		.size	BLE_RX_interrupt, .-BLE_RX_interrupt
+  55              		.section	.text.Timer_interrupt,"ax",%progbits
+  56              		.align	2
+  57              		.global	Timer_interrupt
+  58              		.code	16
+  59              		.thumb_func
+  60              		.type	Timer_interrupt, %function
+  61              	Timer_interrupt:
+  62              	.LFB41:
+ 147:.\main.c      **** 
+ 148:.\main.c      **** CY_ISR(Timer_interrupt)
+ 149:.\main.c      **** {
+  63              		.loc 1 149 0
+  64              		.cfi_startproc
+  65 0000 08B5     		push	{r3, lr}
+  66              		.cfi_def_cfa_offset 8
+  67              		.cfi_offset 3, -8
+  68              		.cfi_offset 14, -4
+ 150:.\main.c      ****     counter = Timer_ReadCapture();   
+  69              		.loc 1 150 0
+  70 0002 FFF7FEFF 		bl	Timer_ReadCapture
+  71              	.LVL3:
+  72 0006 014B     		ldr	r3, .L5
+  73 0008 1880     		strh	r0, [r3]
+ 151:.\main.c      **** }
+  74              		.loc 1 151 0
+  75              		@ sp needed
+  76 000a 08BD     		pop	{r3, pc}
+  77              	.L6:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 5
+
+
+  78              		.align	2
+  79              	.L5:
+  80 000c 00000000 		.word	.LANCHOR0
+  81              		.cfi_endproc
+  82              	.LFE41:
+  83              		.size	Timer_interrupt, .-Timer_interrupt
+  84              		.global	__aeabi_dcmpgt
+  85              		.global	__aeabi_dadd
+  86              		.global	__aeabi_d2iz
+  87              		.global	__aeabi_dsub
+  88              		.section	.text.floor_and_convert,"ax",%progbits
+  89              		.align	2
+  90              		.global	floor_and_convert
+  91              		.code	16
+  92              		.thumb_func
+  93              		.type	floor_and_convert, %function
+  94              	floor_and_convert:
+  95              	.LFB36:
+  44:.\main.c      ****    if (y > 0)
+  96              		.loc 1 44 0
+  97              		.cfi_startproc
+  98              	.LVL4:
+  99 0000 38B5     		push	{r3, r4, r5, lr}
+ 100              		.cfi_def_cfa_offset 16
+ 101              		.cfi_offset 3, -16
+ 102              		.cfi_offset 4, -12
+ 103              		.cfi_offset 5, -8
+ 104              		.cfi_offset 14, -4
+ 105 0002 041C     		mov	r4, r0
+ 106 0004 0D1C     		mov	r5, r1
+  45:.\main.c      ****       return (signed int) (y+0.5);
+ 107              		.loc 1 45 0
+ 108 0006 0022     		mov	r2, #0
+ 109 0008 0023     		mov	r3, #0
+ 110 000a FFF7FEFF 		bl	__aeabi_dcmpgt
+ 111              	.LVL5:
+ 112 000e 0028     		cmp	r0, #0
+ 113 0010 08D0     		beq	.L12
+  46:.\main.c      ****    else
+ 114              		.loc 1 46 0
+ 115 0012 201C     		mov	r0, r4
+ 116 0014 291C     		mov	r1, r5
+ 117 0016 0022     		mov	r2, #0
+ 118 0018 074B     		ldr	r3, .L13
+ 119 001a FFF7FEFF 		bl	__aeabi_dadd
+ 120              	.LVL6:
+ 121 001e FFF7FEFF 		bl	__aeabi_d2iz
+ 122              	.LVL7:
+ 123 0022 07E0     		b	.L10
+ 124              	.L12:
+  48:.\main.c      **** }
+ 125              		.loc 1 48 0
+ 126 0024 201C     		mov	r0, r4
+ 127 0026 291C     		mov	r1, r5
+ 128 0028 0022     		mov	r2, #0
+ 129 002a 034B     		ldr	r3, .L13
+ 130 002c FFF7FEFF 		bl	__aeabi_dsub
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 6
+
+
+ 131              	.LVL8:
+ 132 0030 FFF7FEFF 		bl	__aeabi_d2iz
+ 133              	.LVL9:
+ 134              	.L10:
+  49:.\main.c      **** 
+ 135              		.loc 1 49 0
+ 136              		@ sp needed
+ 137 0034 38BD     		pop	{r3, r4, r5, pc}
+ 138              	.L14:
+ 139 0036 C046     		.align	2
+ 140              	.L13:
+ 141 0038 0000E03F 		.word	1071644672
+ 142              		.cfi_endproc
+ 143              	.LFE36:
+ 144              		.size	floor_and_convert, .-floor_and_convert
+ 145              		.global	__aeabi_i2d
+ 146              		.global	__aeabi_dmul
+ 147              		.section	.text.low_pass_filter,"ax",%progbits
+ 148              		.align	2
+ 149              		.global	low_pass_filter
+ 150              		.code	16
+ 151              		.thumb_func
+ 152              		.type	low_pass_filter, %function
+ 153              	low_pass_filter:
+ 154              	.LFB37:
+  52:.\main.c      ****    int i;
+ 155              		.loc 1 52 0
+ 156              		.cfi_startproc
+ 157              	.LVL10:
+ 158 0000 38B5     		push	{r3, r4, r5, lr}
+ 159              		.cfi_def_cfa_offset 16
+ 160              		.cfi_offset 3, -16
+ 161              		.cfi_offset 4, -12
+ 162              		.cfi_offset 5, -8
+ 163              		.cfi_offset 14, -4
+  54:.\main.c      ****    
+ 164              		.loc 1 54 0
+ 165 0002 FFF7FEFF 		bl	__aeabi_i2d
+ 166              	.LVL11:
+ 167 0006 284B     		ldr	r3, .L22
+ 168 0008 9860     		str	r0, [r3, #8]
+ 169 000a D960     		str	r1, [r3, #12]
+  56:.\main.c      ****   
+ 170              		.loc 1 56 0
+ 171 000c 0020     		mov	r0, #0
+ 172 000e 0021     		mov	r1, #0
+ 173 0010 1862     		str	r0, [r3, #32]
+ 174 0012 5962     		str	r1, [r3, #36]
+ 175              	.LVL12:
+  58:.\main.c      ****    {
+ 176              		.loc 1 58 0
+ 177 0014 0024     		mov	r4, #0
+ 178 0016 13E0     		b	.L16
+ 179              	.LVL13:
+ 180              	.L17:
+  60:.\main.c      ****    } 
+ 181              		.loc 1 60 0 discriminator 3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 7
+
+
+ 182 0018 E300     		lsl	r3, r4, #3
+ 183 001a 244A     		ldr	r2, .L22+4
+ 184 001c D218     		add	r2, r2, r3
+ 185 001e 1068     		ldr	r0, [r2]
+ 186 0020 5168     		ldr	r1, [r2, #4]
+ 187 0022 214D     		ldr	r5, .L22
+ 188 0024 EB18     		add	r3, r5, r3
+ 189 0026 9A68     		ldr	r2, [r3, #8]
+ 190 0028 DB68     		ldr	r3, [r3, #12]
+ 191 002a FFF7FEFF 		bl	__aeabi_dmul
+ 192              	.LVL14:
+ 193 002e 021C     		mov	r2, r0
+ 194 0030 0B1C     		mov	r3, r1
+ 195 0032 286A     		ldr	r0, [r5, #32]
+ 196 0034 696A     		ldr	r1, [r5, #36]
+ 197 0036 FFF7FEFF 		bl	__aeabi_dadd
+ 198              	.LVL15:
+ 199 003a 2862     		str	r0, [r5, #32]
+ 200 003c 6962     		str	r1, [r5, #36]
+  58:.\main.c      ****    {
+ 201              		.loc 1 58 0 discriminator 3
+ 202 003e 0134     		add	r4, r4, #1
+ 203              	.LVL16:
+ 204              	.L16:
+  58:.\main.c      ****    {
+ 205              		.loc 1 58 0 is_stmt 0 discriminator 1
+ 206 0040 022C     		cmp	r4, #2
+ 207 0042 E9DD     		ble	.L17
+ 208 0044 0124     		mov	r4, #1
+ 209              	.LVL17:
+ 210 0046 13E0     		b	.L18
+ 211              	.LVL18:
+ 212              	.L19:
+  65:.\main.c      ****    }
+ 213              		.loc 1 65 0 is_stmt 1 discriminator 3
+ 214 0048 E300     		lsl	r3, r4, #3
+ 215 004a 184A     		ldr	r2, .L22+4
+ 216 004c D218     		add	r2, r2, r3
+ 217 004e 9069     		ldr	r0, [r2, #24]
+ 218 0050 D169     		ldr	r1, [r2, #28]
+ 219 0052 154D     		ldr	r5, .L22
+ 220 0054 EB18     		add	r3, r5, r3
+ 221 0056 1A6A     		ldr	r2, [r3, #32]
+ 222 0058 5B6A     		ldr	r3, [r3, #36]
+ 223 005a FFF7FEFF 		bl	__aeabi_dmul
+ 224              	.LVL19:
+ 225 005e 021C     		mov	r2, r0
+ 226 0060 0B1C     		mov	r3, r1
+ 227 0062 286A     		ldr	r0, [r5, #32]
+ 228 0064 696A     		ldr	r1, [r5, #36]
+ 229 0066 FFF7FEFF 		bl	__aeabi_dsub
+ 230              	.LVL20:
+ 231 006a 2862     		str	r0, [r5, #32]
+ 232 006c 6962     		str	r1, [r5, #36]
+  63:.\main.c      ****    {
+ 233              		.loc 1 63 0 discriminator 3
+ 234 006e 0134     		add	r4, r4, #1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 8
+
+
+ 235              	.LVL21:
+ 236              	.L18:
+  63:.\main.c      ****    {
+ 237              		.loc 1 63 0 is_stmt 0 discriminator 1
+ 238 0070 022C     		cmp	r4, #2
+ 239 0072 E9DD     		ble	.L19
+ 240 0074 0122     		mov	r2, #1
+ 241 0076 0EE0     		b	.L20
+ 242              	.LVL22:
+ 243              	.L21:
+  70:.\main.c      ****        y_low[i+1]=y_low[i];
+ 244              		.loc 1 70 0 is_stmt 1 discriminator 3
+ 245 0078 531C     		add	r3, r2, #1
+ 246 007a 0B48     		ldr	r0, .L22
+ 247 007c D100     		lsl	r1, r2, #3
+ 248 007e 4118     		add	r1, r0, r1
+ 249 0080 DB00     		lsl	r3, r3, #3
+ 250 0082 C318     		add	r3, r0, r3
+ 251 0084 8C68     		ldr	r4, [r1, #8]
+ 252 0086 CD68     		ldr	r5, [r1, #12]
+ 253 0088 9C60     		str	r4, [r3, #8]
+ 254 008a DD60     		str	r5, [r3, #12]
+  71:.\main.c      ****     }
+ 255              		.loc 1 71 0 discriminator 3
+ 256 008c 086A     		ldr	r0, [r1, #32]
+ 257 008e 496A     		ldr	r1, [r1, #36]
+ 258 0090 1862     		str	r0, [r3, #32]
+ 259 0092 5962     		str	r1, [r3, #36]
+  68:.\main.c      ****     {
+ 260              		.loc 1 68 0 discriminator 3
+ 261 0094 013A     		sub	r2, r2, #1
+ 262              	.LVL23:
+ 263              	.L20:
+  68:.\main.c      ****     {
+ 264              		.loc 1 68 0 is_stmt 0 discriminator 1
+ 265 0096 002A     		cmp	r2, #0
+ 266 0098 EEDA     		bge	.L21
+  74:.\main.c      **** }
+ 267              		.loc 1 74 0 is_stmt 1
+ 268 009a 034B     		ldr	r3, .L22
+ 269 009c 186A     		ldr	r0, [r3, #32]
+ 270 009e 596A     		ldr	r1, [r3, #36]
+ 271 00a0 FFF7FEFF 		bl	floor_and_convert
+ 272              	.LVL24:
+  75:.\main.c      **** 
+ 273              		.loc 1 75 0
+ 274              		@ sp needed
+ 275 00a4 38BD     		pop	{r3, r4, r5, pc}
+ 276              	.L23:
+ 277 00a6 C046     		.align	2
+ 278              	.L22:
+ 279 00a8 00000000 		.word	.LANCHOR0
+ 280 00ac 00000000 		.word	.LANCHOR1
+ 281              		.cfi_endproc
+ 282              	.LFE37:
+ 283              		.size	low_pass_filter, .-low_pass_filter
+ 284              		.global	__aeabi_d2uiz
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 9
+
+
+ 285              		.section	.text.mavg_filter,"ax",%progbits
+ 286              		.align	2
+ 287              		.global	mavg_filter
+ 288              		.code	16
+ 289              		.thumb_func
+ 290              		.type	mavg_filter, %function
+ 291              	mavg_filter:
+ 292              	.LFB38:
+  78:.\main.c      ****    x_mavg[0] =  (double) data;      // Read received sample and perform type casts
+ 293              		.loc 1 78 0
+ 294              		.cfi_startproc
+ 295              	.LVL25:
+ 296 0000 38B5     		push	{r3, r4, r5, lr}
+ 297              		.cfi_def_cfa_offset 16
+ 298              		.cfi_offset 3, -16
+ 299              		.cfi_offset 4, -12
+ 300              		.cfi_offset 5, -8
+ 301              		.cfi_offset 14, -4
+  79:.\main.c      ****    
+ 302              		.loc 1 79 0
+ 303 0002 FFF7FEFF 		bl	__aeabi_i2d
+ 304              	.LVL26:
+ 305 0006 234B     		ldr	r3, .L29
+ 306 0008 9863     		str	r0, [r3, #56]
+ 307 000a D963     		str	r1, [r3, #60]
+  81:.\main.c      ****    for(i = 0;i <= FILTER_LENGTH_mavg;i++)           // Run FIR filter for each received sample
+ 308              		.loc 1 81 0
+ 309 000c 224B     		ldr	r3, .L29+4
+ 310 000e 0020     		mov	r0, #0
+ 311 0010 0021     		mov	r1, #0
+ 312 0012 9865     		str	r0, [r3, #88]
+ 313 0014 D965     		str	r1, [r3, #92]
+  82:.\main.c      ****    {
+ 314              		.loc 1 82 0
+ 315 0016 0021     		mov	r1, #0
+ 316 0018 6022     		mov	r2, #96
+ 317 001a 9952     		strh	r1, [r3, r2]
+ 318 001c 15E0     		b	.L25
+ 319              	.L26:
+  84:.\main.c      ****    } 
+ 320              		.loc 1 84 0 discriminator 3
+ 321 001e 23B2     		sxth	r3, r4
+ 322 0020 DB00     		lsl	r3, r3, #3
+ 323 0022 1E4A     		ldr	r2, .L29+8
+ 324 0024 D218     		add	r2, r2, r3
+ 325 0026 106B     		ldr	r0, [r2, #48]
+ 326 0028 516B     		ldr	r1, [r2, #52]
+ 327 002a 1A4A     		ldr	r2, .L29
+ 328 002c D318     		add	r3, r2, r3
+ 329 002e 9A6B     		ldr	r2, [r3, #56]
+ 330 0030 DB6B     		ldr	r3, [r3, #60]
+ 331 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 332              	.LVL27:
+ 333 0036 184D     		ldr	r5, .L29+4
+ 334 0038 AA6D     		ldr	r2, [r5, #88]
+ 335 003a EB6D     		ldr	r3, [r5, #92]
+ 336 003c FFF7FEFF 		bl	__aeabi_dadd
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 10
+
+
+ 337              	.LVL28:
+ 338 0040 A865     		str	r0, [r5, #88]
+ 339 0042 E965     		str	r1, [r5, #92]
+  82:.\main.c      ****    {
+ 340              		.loc 1 82 0 discriminator 3
+ 341 0044 0134     		add	r4, r4, #1
+ 342 0046 6023     		mov	r3, #96
+ 343 0048 EC52     		strh	r4, [r5, r3]
+ 344              	.L25:
+  82:.\main.c      ****    {
+ 345              		.loc 1 82 0 is_stmt 0 discriminator 1
+ 346 004a 6023     		mov	r3, #96
+ 347 004c 124A     		ldr	r2, .L29+4
+ 348 004e D45A     		ldrh	r4, [r2, r3]
+ 349 0050 23B2     		sxth	r3, r4
+ 350 0052 132B     		cmp	r3, #19
+ 351 0054 E3DD     		ble	.L26
+  87:.\main.c      ****    {
+ 352              		.loc 1 87 0 is_stmt 1
+ 353 0056 1221     		mov	r1, #18
+ 354 0058 6023     		mov	r3, #96
+ 355 005a D152     		strh	r1, [r2, r3]
+ 356 005c 0EE0     		b	.L27
+ 357              	.L28:
+  89:.\main.c      ****    }
+ 358              		.loc 1 89 0 discriminator 3
+ 359 005e 13B2     		sxth	r3, r2
+ 360 0060 5C1C     		add	r4, r3, #1
+ 361 0062 0C4D     		ldr	r5, .L29
+ 362 0064 DB00     		lsl	r3, r3, #3
+ 363 0066 EB18     		add	r3, r5, r3
+ 364 0068 986B     		ldr	r0, [r3, #56]
+ 365 006a D96B     		ldr	r1, [r3, #60]
+ 366 006c E300     		lsl	r3, r4, #3
+ 367 006e EB18     		add	r3, r5, r3
+ 368 0070 9863     		str	r0, [r3, #56]
+ 369 0072 D963     		str	r1, [r3, #60]
+  87:.\main.c      ****    {
+ 370              		.loc 1 87 0 discriminator 3
+ 371 0074 013A     		sub	r2, r2, #1
+ 372 0076 6023     		mov	r3, #96
+ 373 0078 0749     		ldr	r1, .L29+4
+ 374 007a CA52     		strh	r2, [r1, r3]
+ 375              	.L27:
+  87:.\main.c      ****    {
+ 376              		.loc 1 87 0 is_stmt 0 discriminator 1
+ 377 007c 6023     		mov	r3, #96
+ 378 007e 064A     		ldr	r2, .L29+4
+ 379 0080 D25A     		ldrh	r2, [r2, r3]
+ 380 0082 13B2     		sxth	r3, r2
+ 381 0084 002B     		cmp	r3, #0
+ 382 0086 EADA     		bge	.L28
+  92:.\main.c      **** }
+ 383              		.loc 1 92 0 is_stmt 1
+ 384 0088 034B     		ldr	r3, .L29+4
+ 385 008a 986D     		ldr	r0, [r3, #88]
+ 386 008c D96D     		ldr	r1, [r3, #92]
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 11
+
+
+ 387 008e FFF7FEFF 		bl	__aeabi_d2uiz
+ 388              	.LVL29:
+  93:.\main.c      **** 
+ 389              		.loc 1 93 0
+ 390              		@ sp needed
+ 391 0092 38BD     		pop	{r3, r4, r5, pc}
+ 392              	.L30:
+ 393              		.align	2
+ 394              	.L29:
+ 395 0094 00000000 		.word	.LANCHOR0
+ 396 0098 80000000 		.word	.LANCHOR2
+ 397 009c 00000000 		.word	.LANCHOR1
+ 398              		.cfi_endproc
+ 399              	.LFE38:
+ 400              		.size	mavg_filter, .-mavg_filter
+ 401              		.section	.text.RX_interrupt,"ax",%progbits
+ 402              		.align	2
+ 403              		.global	RX_interrupt
+ 404              		.code	16
+ 405              		.thumb_func
+ 406              		.type	RX_interrupt, %function
+ 407              	RX_interrupt:
+ 408              	.LFB39:
+  96:.\main.c      ****     char str[4];
+ 409              		.loc 1 96 0
+ 410              		.cfi_startproc
+ 411 0000 30B5     		push	{r4, r5, lr}
+ 412              		.cfi_def_cfa_offset 12
+ 413              		.cfi_offset 4, -12
+ 414              		.cfi_offset 5, -8
+ 415              		.cfi_offset 14, -4
+ 416 0002 83B0     		sub	sp, sp, #12
+ 417              		.cfi_def_cfa_offset 24
+  98:.\main.c      ****     UART_ClearRxInterruptSource(UART_GetRxInterruptSource());
+ 418              		.loc 1 98 0
+ 419 0004 FFF7FEFF 		bl	UART_UartGetChar
+ 420              	.LVL30:
+ 421 0008 C0B2     		uxtb	r0, r0
+ 422              	.LVL31:
+  99:.\main.c      ****     
+ 423              		.loc 1 99 0
+ 424 000a 294B     		ldr	r3, .L36
+ 425 000c 1A68     		ldr	r2, [r3]
+ 426 000e 1A60     		str	r2, [r3]
+ 101:.\main.c      ****     {
+ 427              		.loc 1 101 0
+ 428 0010 6223     		mov	r3, #98
+ 429 0012 284A     		ldr	r2, .L36+4
+ 430 0014 D35C     		ldrb	r3, [r2, r3]
+ 431 0016 002B     		cmp	r3, #0
+ 432 0018 05D1     		bne	.L32
+ 105:.\main.c      ****         current_byte = HIGHBYTE;                    // Prepare to receive HIGH byte on next interru
+ 433              		.loc 1 105 0
+ 434 001a 274B     		ldr	r3, .L36+8
+ 435 001c 1880     		strh	r0, [r3]
+ 106:.\main.c      ****         return;                                     // Return from interrupt
+ 436              		.loc 1 106 0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 12
+
+
+ 437 001e 0121     		mov	r1, #1
+ 438 0020 6223     		mov	r3, #98
+ 439 0022 D154     		strb	r1, [r2, r3]
+ 440 0024 42E0     		b	.L31
+ 441              	.L32:
+ 110:.\main.c      ****     {
+ 442              		.loc 1 110 0
+ 443 0026 012B     		cmp	r3, #1
+ 444 0028 40D1     		bne	.L31
+ 112:.\main.c      ****         current_byte = LOWBYTE;                     // Prepare to receive LOW byte on next interrup
+ 445              		.loc 1 112 0
+ 446 002a 234D     		ldr	r5, .L36+8
+ 447 002c 0002     		lsl	r0, r0, #8
+ 448              	.LVL32:
+ 449 002e 2B88     		ldrh	r3, [r5]
+ 450 0030 C018     		add	r0, r0, r3
+ 451 0032 2880     		strh	r0, [r5]
+ 113:.\main.c      ****                 
+ 452              		.loc 1 113 0
+ 453 0034 1F4C     		ldr	r4, .L36+4
+ 454 0036 0022     		mov	r2, #0
+ 455 0038 6223     		mov	r3, #98
+ 456 003a E254     		strb	r2, [r4, r3]
+ 115:.\main.c      ****            avg_new = mavg_filter(value_in);               // Applay moving average function
+ 457              		.loc 1 115 0
+ 458 003c 0020     		mov	r0, #0
+ 459 003e FFF7FEFF 		bl	Measure_When_Low_Write
+ 460              	.LVL33:
+ 116:.\main.c      ****            //low_pass_new = low_pass_filter(value_in);
+ 461              		.loc 1 116 0
+ 462 0042 0023     		mov	r3, #0
+ 463 0044 E85E     		ldrsh	r0, [r5, r3]
+ 464 0046 FFF7FEFF 		bl	mavg_filter
+ 465              	.LVL34:
+ 466 004a 80B2     		uxth	r0, r0
+ 467 004c 1B4B     		ldr	r3, .L36+12
+ 468 004e 1880     		strh	r0, [r3]
+ 118:.\main.c      ****            //value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
+ 469              		.loc 1 118 0
+ 470 0050 6425     		mov	r5, #100
+ 471 0052 625B     		ldrh	r2, [r4, r5]
+ 472 0054 231C     		mov	r3, r4
+ 473 0056 6433     		add	r3, r3, #100
+ 474 0058 5A80     		strh	r2, [r3, #2]
+ 120:.\main.c      ****         
+ 475              		.loc 1 120 0
+ 476 005a 6053     		strh	r0, [r4, r5]
+ 122:.\main.c      ****         
+ 477              		.loc 1 122 0
+ 478 005c 0120     		mov	r0, #1
+ 479 005e FFF7FEFF 		bl	Measure_When_Low_Write
+ 480              	.LVL35:
+ 125:.\main.c      ****         {
+ 481              		.loc 1 125 0
+ 482 0062 635F     		ldrsh	r3, [r4, r5]
+ 483 0064 E02B     		cmp	r3, #224
+ 484 0066 18DD     		ble	.L35
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 13
+
+
+ 125:.\main.c      ****         {
+ 485              		.loc 1 125 0 is_stmt 0 discriminator 1
+ 486 0068 124B     		ldr	r3, .L36+4
+ 487 006a 6433     		add	r3, r3, #100
+ 488 006c 0222     		mov	r2, #2
+ 489 006e 9B5E     		ldrsh	r3, [r3, r2]
+ 490 0070 E02B     		cmp	r3, #224
+ 491 0072 12DC     		bgt	.L35
+ 127:.\main.c      ****             UART_BLE_UartPutString(itoa(j,str,10));             // Notify BLE_Peripheral
+ 492              		.loc 1 127 0 is_stmt 1
+ 493 0074 0F4A     		ldr	r2, .L36+4
+ 494 0076 6823     		mov	r3, #104
+ 495 0078 D05A     		ldrh	r0, [r2, r3]
+ 496 007a 0130     		add	r0, r0, #1
+ 497 007c 80B2     		uxth	r0, r0
+ 498 007e D052     		strh	r0, [r2, r3]
+ 128:.\main.c      ****             UART_BLE_UartPutChar(10);    
+ 499              		.loc 1 128 0
+ 500 0080 00B2     		sxth	r0, r0
+ 501 0082 01A9     		add	r1, sp, #4
+ 502 0084 0A22     		mov	r2, #10
+ 503 0086 FFF7FEFF 		bl	itoa
+ 504              	.LVL36:
+ 505 008a FFF7FEFF 		bl	UART_BLE_UartPutString
+ 506              	.LVL37:
+ 129:.\main.c      ****             UART_BLE_UartPutChar(13);  
+ 507              		.loc 1 129 0
+ 508 008e 0A20     		mov	r0, #10
+ 509 0090 FFF7FEFF 		bl	UART_BLE_SpiUartWriteTxData
+ 510              	.LVL38:
+ 130:.\main.c      ****         }
+ 511              		.loc 1 130 0
+ 512 0094 0D20     		mov	r0, #13
+ 513 0096 FFF7FEFF 		bl	UART_BLE_SpiUartWriteTxData
+ 514              	.LVL39:
+ 515              	.L35:
+ 134:.\main.c      ****         UART_UartPutChar(avg_new>>8);  
+ 516              		.loc 1 134 0
+ 517 009a 084C     		ldr	r4, .L36+12
+ 518 009c 0023     		mov	r3, #0
+ 519 009e E05E     		ldrsh	r0, [r4, r3]
+ 520 00a0 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 521              	.LVL40:
+ 135:.\main.c      **** //        UART_UartPutChar(low_pass_new);
+ 522              		.loc 1 135 0
+ 523 00a4 0120     		mov	r0, #1
+ 524 00a6 2056     		ldrsb	r0, [r4, r0]
+ 525 00a8 FFF7FEFF 		bl	UART_SpiUartWriteTxData
+ 526              	.LVL41:
+ 527              	.L31:
+ 139:.\main.c      **** 
+ 528              		.loc 1 139 0
+ 529 00ac 03B0     		add	sp, sp, #12
+ 530              		@ sp needed
+ 531 00ae 30BD     		pop	{r4, r5, pc}
+ 532              	.L37:
+ 533              		.align	2
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 14
+
+
+ 534              	.L36:
+ 535 00b0 C00F2740 		.word	1076301760
+ 536 00b4 80000000 		.word	.LANCHOR2
+ 537 00b8 00000000 		.word	value_in
+ 538 00bc 00000000 		.word	avg_new
+ 539              		.cfi_endproc
+ 540              	.LFE39:
+ 541              		.size	RX_interrupt, .-RX_interrupt
+ 542              		.section	.text.main,"ax",%progbits
+ 543              		.align	2
+ 544              		.global	main
+ 545              		.code	16
+ 546              		.thumb_func
+ 547              		.type	main, %function
+ 548              	main:
+ 549              	.LFB42:
+ 152:.\main.c      **** 
+ 153:.\main.c      **** 
+ 154:.\main.c      **** int main()
+ 155:.\main.c      **** {
+ 550              		.loc 1 155 0
+ 551              		.cfi_startproc
+ 552 0000 08B5     		push	{r3, lr}
+ 553              		.cfi_def_cfa_offset 8
+ 554              		.cfi_offset 3, -8
+ 555              		.cfi_offset 14, -4
+ 156:.\main.c      ****  
+ 157:.\main.c      ****     CyGlobalIntEnable;                          /* Enable global interrupts */
+ 556              		.loc 1 157 0
+ 557              	@ 157 ".\main.c" 1
+ 558 0002 62B6     		CPSIE   i
+ 559              	@ 0 "" 2
+ 158:.\main.c      ****     Timer_ISR_StartEx(Timer_interrupt);         /* Set interrupt address */
+ 560              		.loc 1 158 0
+ 561              		.code	16
+ 562 0004 0A48     		ldr	r0, .L39
+ 563 0006 FFF7FEFF 		bl	Timer_ISR_StartEx
+ 564              	.LVL42:
+ 159:.\main.c      ****     UART_RX_ISR_StartEx(RX_interrupt);          /* Set interrupt address */
+ 565              		.loc 1 159 0
+ 566 000a 0A48     		ldr	r0, .L39+4
+ 567 000c FFF7FEFF 		bl	UART_RX_ISR_StartEx
+ 568              	.LVL43:
+ 160:.\main.c      ****     UART_BLE_RX_ISR_StartEx(BLE_RX_interrupt);  /* Set interrupt address */
+ 569              		.loc 1 160 0
+ 570 0010 0948     		ldr	r0, .L39+8
+ 571 0012 FFF7FEFF 		bl	UART_BLE_RX_ISR_StartEx
+ 572              	.LVL44:
+ 161:.\main.c      ****     UART_Start();                               /* Start UART */
+ 573              		.loc 1 161 0
+ 574 0016 FFF7FEFF 		bl	UART_Start
+ 575              	.LVL45:
+ 162:.\main.c      ****     UART_BLE_Start();                           /* Start UART_BLE */
+ 576              		.loc 1 162 0
+ 577 001a FFF7FEFF 		bl	UART_BLE_Start
+ 578              	.LVL46:
+ 163:.\main.c      ****     Timer_Start();                              /* Start Timer */
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 15
+
+
+ 579              		.loc 1 163 0
+ 580 001e FFF7FEFF 		bl	Timer_Start
+ 581              	.LVL47:
+ 164:.\main.c      ****     Timer_ISR_Enable();                         /* Enable Timer interrupt service routine*/
+ 582              		.loc 1 164 0
+ 583 0022 FFF7FEFF 		bl	Timer_ISR_Enable
+ 584              	.LVL48:
+ 165:.\main.c      ****     CySysPmSleep();                             /* Enter Sleep mode */
+ 585              		.loc 1 165 0
+ 586 0026 FFF7FEFF 		bl	CySysPmSleep
+ 587              	.LVL49:
+ 166:.\main.c      ****     return 0;
+ 167:.\main.c      **** }
+ 588              		.loc 1 167 0
+ 589 002a 0020     		mov	r0, #0
+ 590              		@ sp needed
+ 591 002c 08BD     		pop	{r3, pc}
+ 592              	.L40:
+ 593 002e C046     		.align	2
+ 594              	.L39:
+ 595 0030 00000000 		.word	Timer_interrupt
+ 596 0034 00000000 		.word	RX_interrupt
+ 597 0038 00000000 		.word	BLE_RX_interrupt
+ 598              		.cfi_endproc
+ 599              	.LFE42:
+ 600              		.size	main, .-main
+ 601              		.global	FirstCall
+ 602              		.comm	unsigned_data,2,2
+ 603              		.comm	pointer,2,2
+ 604              		.global	counter
+ 605              		.comm	avg_new,2,2
+ 606              		.comm	low_pass_new,2,2
+ 607              		.comm	old,2,2
+ 608              		.comm	signed_data,2,2
+ 609              		.comm	diff,2,2
+ 610              		.comm	newest,2,2
+ 611              		.comm	oldest,2,2
+ 612              		.global	j
+ 613              		.global	i
+ 614              		.global	value_out
+ 615              		.comm	value_in,2,2
+ 616              		.global	current_byte
+ 617              		.global	a_low
+ 618              		.global	b_low
+ 619              		.global	y_low
+ 620              		.global	x_low
+ 621              		.global	b_mavg
+ 622              		.global	y_mavg
+ 623              		.global	x_mavg
+ 624              		.global	y
+ 625              		.data
+ 626              		.align	3
+ 627              		.set	.LANCHOR1,. + 0
+ 628              		.type	b_low, %object
+ 629              		.size	b_low, 24
+ 630              	b_low:
+ 631 0000 BE30992A 		.word	714682558
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 16
+
+
+ 632 0004 1895943F 		.word	1066702104
+ 633 0008 BE30992A 		.word	714682558
+ 634 000c 1895A43F 		.word	1067750680
+ 635 0010 BE30992A 		.word	714682558
+ 636 0014 1895943F 		.word	1066702104
+ 637              		.type	a_low, %object
+ 638              		.size	a_low, 24
+ 639              	a_low:
+ 640 0018 00000000 		.word	0
+ 641 001c 0000F03F 		.word	1072693248
+ 642 0020 60E5D022 		.word	584115552
+ 643 0024 DBF9F8BF 		.word	-1074202149
+ 644 0028 D8F0F44A 		.word	1257566424
+ 645 002c 5986E43F 		.word	1071941209
+ 646              		.type	b_mavg, %object
+ 647              		.size	b_mavg, 160
+ 648              	b_mavg:
+ 649 0030 9A999999 		.word	-1717986918
+ 650 0034 9999A93F 		.word	1068079513
+ 651 0038 9A999999 		.word	-1717986918
+ 652 003c 9999A93F 		.word	1068079513
+ 653 0040 9A999999 		.word	-1717986918
+ 654 0044 9999A93F 		.word	1068079513
+ 655 0048 9A999999 		.word	-1717986918
+ 656 004c 9999A93F 		.word	1068079513
+ 657 0050 9A999999 		.word	-1717986918
+ 658 0054 9999A93F 		.word	1068079513
+ 659 0058 9A999999 		.word	-1717986918
+ 660 005c 9999A93F 		.word	1068079513
+ 661 0060 9A999999 		.word	-1717986918
+ 662 0064 9999A93F 		.word	1068079513
+ 663 0068 9A999999 		.word	-1717986918
+ 664 006c 9999A93F 		.word	1068079513
+ 665 0070 9A999999 		.word	-1717986918
+ 666 0074 9999A93F 		.word	1068079513
+ 667 0078 9A999999 		.word	-1717986918
+ 668 007c 9999A93F 		.word	1068079513
+ 669 0080 9A999999 		.word	-1717986918
+ 670 0084 9999A93F 		.word	1068079513
+ 671 0088 9A999999 		.word	-1717986918
+ 672 008c 9999A93F 		.word	1068079513
+ 673 0090 9A999999 		.word	-1717986918
+ 674 0094 9999A93F 		.word	1068079513
+ 675 0098 9A999999 		.word	-1717986918
+ 676 009c 9999A93F 		.word	1068079513
+ 677 00a0 9A999999 		.word	-1717986918
+ 678 00a4 9999A93F 		.word	1068079513
+ 679 00a8 9A999999 		.word	-1717986918
+ 680 00ac 9999A93F 		.word	1068079513
+ 681 00b0 9A999999 		.word	-1717986918
+ 682 00b4 9999A93F 		.word	1068079513
+ 683 00b8 9A999999 		.word	-1717986918
+ 684 00bc 9999A93F 		.word	1068079513
+ 685 00c0 9A999999 		.word	-1717986918
+ 686 00c4 9999A93F 		.word	1068079513
+ 687 00c8 9A999999 		.word	-1717986918
+ 688 00cc 9999A93F 		.word	1068079513
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 17
+
+
+ 689              		.type	FirstCall, %object
+ 690              		.size	FirstCall, 1
+ 691              	FirstCall:
+ 692 00d0 01       		.byte	1
+ 693 00d1 00000000 		.bss
+ 693      000000
+ 694              		.align	3
+ 695              		.set	.LANCHOR0,. + 0
+ 696              		.set	.LANCHOR2,. + 128
+ 697              		.type	counter, %object
+ 698              		.size	counter, 2
+ 699              	counter:
+ 700 0000 0000     		.space	2
+ 701 0002 00000000 		.space	6
+ 701      0000
+ 702              		.type	x_low, %object
+ 703              		.size	x_low, 24
+ 704              	x_low:
+ 705 0008 00000000 		.space	24
+ 705      00000000 
+ 705      00000000 
+ 705      00000000 
+ 705      00000000 
+ 706              		.type	y_low, %object
+ 707              		.size	y_low, 24
+ 708              	y_low:
+ 709 0020 00000000 		.space	24
+ 709      00000000 
+ 709      00000000 
+ 709      00000000 
+ 709      00000000 
+ 710              		.type	x_mavg, %object
+ 711              		.size	x_mavg, 160
+ 712              	x_mavg:
+ 713 0038 00000000 		.space	160
+ 713      00000000 
+ 713      00000000 
+ 713      00000000 
+ 713      00000000 
+ 714              		.type	y_mavg, %object
+ 715              		.size	y_mavg, 8
+ 716              	y_mavg:
+ 717 00d8 00000000 		.space	8
+ 717      00000000 
+ 718              		.type	i, %object
+ 719              		.size	i, 2
+ 720              	i:
+ 721 00e0 0000     		.space	2
+ 722              		.type	current_byte, %object
+ 723              		.size	current_byte, 1
+ 724              	current_byte:
+ 725 00e2 00       		.space	1
+ 726 00e3 00       		.space	1
+ 727              		.type	value_out, %object
+ 728              		.size	value_out, 4
+ 729              	value_out:
+ 730 00e4 00000000 		.space	4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 18
+
+
+ 731              		.type	j, %object
+ 732              		.size	j, 2
+ 733              	j:
+ 734 00e8 0000     		.space	2
+ 735 00ea 0000     		.space	2
+ 736              		.type	y, %object
+ 737              		.size	y, 8
+ 738              	y:
+ 739 00ec 00000000 		.space	8
+ 739      00000000 
+ 740 00f4 00000000 		.text
+ 741              	.Letext0:
+ 742              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 743              		.file 3 "Generated_Source\\PSoC4/UART_BLE_SPI_UART.h"
+ 744              		.file 4 "Generated_Source\\PSoC4/Timer.h"
+ 745              		.file 5 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 746              		.file 6 "Generated_Source\\PSoC4/Measure_When_Low.h"
+ 747              		.file 7 "Generated_Source\\PSoC4/Timer_ISR.h"
+ 748              		.file 8 "Generated_Source\\PSoC4/UART_RX_ISR.h"
+ 749              		.file 9 "Generated_Source\\PSoC4/UART_BLE_RX_ISR.h"
+ 750              		.file 10 "Generated_Source\\PSoC4/UART.h"
+ 751              		.file 11 "Generated_Source\\PSoC4/UART_BLE.h"
+ 752              		.file 12 "Generated_Source\\PSoC4/cyPm.h"
+ 753              		.file 13 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9
+ 754              		.section	.debug_info,"",%progbits
+ 755              	.Ldebug_info0:
+ 756 0000 EC050000 		.4byte	0x5ec
+ 757 0004 0400     		.2byte	0x4
+ 758 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 759 000a 04       		.byte	0x4
+ 760 000b 01       		.uleb128 0x1
+ 761 000c 17010000 		.4byte	.LASF63
+ 762 0010 01       		.byte	0x1
+ 763 0011 52030000 		.4byte	.LASF64
+ 764 0015 67000000 		.4byte	.LASF65
+ 765 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 766 001d 00000000 		.4byte	0
+ 767 0021 00000000 		.4byte	.Ldebug_line0
+ 768 0025 02       		.uleb128 0x2
+ 769 0026 08       		.byte	0x8
+ 770 0027 04       		.byte	0x4
+ 771 0028 14030000 		.4byte	.LASF0
+ 772 002c 02       		.uleb128 0x2
+ 773 002d 01       		.byte	0x1
+ 774 002e 06       		.byte	0x6
+ 775 002f 14020000 		.4byte	.LASF1
+ 776 0033 02       		.uleb128 0x2
+ 777 0034 01       		.byte	0x1
+ 778 0035 08       		.byte	0x8
+ 779 0036 C3010000 		.4byte	.LASF2
+ 780 003a 02       		.uleb128 0x2
+ 781 003b 02       		.byte	0x2
+ 782 003c 05       		.byte	0x5
+ 783 003d 15000000 		.4byte	.LASF3
+ 784 0041 02       		.uleb128 0x2
+ 785 0042 02       		.byte	0x2
+ 786 0043 07       		.byte	0x7
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 19
+
+
+ 787 0044 7C020000 		.4byte	.LASF4
+ 788 0048 02       		.uleb128 0x2
+ 789 0049 04       		.byte	0x4
+ 790 004a 05       		.byte	0x5
+ 791 004b D9000000 		.4byte	.LASF5
+ 792 004f 02       		.uleb128 0x2
+ 793 0050 04       		.byte	0x4
+ 794 0051 07       		.byte	0x7
+ 795 0052 02030000 		.4byte	.LASF6
+ 796 0056 02       		.uleb128 0x2
+ 797 0057 08       		.byte	0x8
+ 798 0058 05       		.byte	0x5
+ 799 0059 C1000000 		.4byte	.LASF7
+ 800 005d 02       		.uleb128 0x2
+ 801 005e 08       		.byte	0x8
+ 802 005f 07       		.byte	0x7
+ 803 0060 20020000 		.4byte	.LASF8
+ 804 0064 03       		.uleb128 0x3
+ 805 0065 04       		.byte	0x4
+ 806 0066 05       		.byte	0x5
+ 807 0067 696E7400 		.ascii	"int\000"
+ 808 006b 02       		.uleb128 0x2
+ 809 006c 04       		.byte	0x4
+ 810 006d 07       		.byte	0x7
+ 811 006e 37020000 		.4byte	.LASF9
+ 812 0072 04       		.uleb128 0x4
+ 813 0073 A1000000 		.4byte	.LASF10
+ 814 0077 02       		.byte	0x2
+ 815 0078 3801     		.2byte	0x138
+ 816 007a 33000000 		.4byte	0x33
+ 817 007e 04       		.uleb128 0x4
+ 818 007f 60000000 		.4byte	.LASF11
+ 819 0083 02       		.byte	0x2
+ 820 0084 3901     		.2byte	0x139
+ 821 0086 41000000 		.4byte	0x41
+ 822 008a 04       		.uleb128 0x4
+ 823 008b FB020000 		.4byte	.LASF12
+ 824 008f 02       		.byte	0x2
+ 825 0090 3A01     		.2byte	0x13a
+ 826 0092 4F000000 		.4byte	0x4f
+ 827 0096 04       		.uleb128 0x4
+ 828 0097 94000000 		.4byte	.LASF13
+ 829 009b 02       		.byte	0x2
+ 830 009c 3C01     		.2byte	0x13c
+ 831 009e 3A000000 		.4byte	0x3a
+ 832 00a2 02       		.uleb128 0x2
+ 833 00a3 04       		.byte	0x4
+ 834 00a4 04       		.byte	0x4
+ 835 00a5 B4000000 		.4byte	.LASF14
+ 836 00a9 04       		.uleb128 0x4
+ 837 00aa 28000000 		.4byte	.LASF15
+ 838 00ae 02       		.byte	0x2
+ 839 00af 4901     		.2byte	0x149
+ 840 00b1 B5000000 		.4byte	0xb5
+ 841 00b5 02       		.uleb128 0x2
+ 842 00b6 01       		.byte	0x1
+ 843 00b7 08       		.byte	0x8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 20
+
+
+ 844 00b8 8F020000 		.4byte	.LASF16
+ 845 00bc 04       		.uleb128 0x4
+ 846 00bd 76020000 		.4byte	.LASF17
+ 847 00c1 02       		.byte	0x2
+ 848 00c2 E401     		.2byte	0x1e4
+ 849 00c4 C8000000 		.4byte	0xc8
+ 850 00c8 05       		.uleb128 0x5
+ 851 00c9 8A000000 		.4byte	0x8a
+ 852 00cd 04       		.uleb128 0x4
+ 853 00ce D6010000 		.4byte	.LASF18
+ 854 00d2 02       		.byte	0x2
+ 855 00d3 F401     		.2byte	0x1f4
+ 856 00d5 D9000000 		.4byte	0xd9
+ 857 00d9 06       		.uleb128 0x6
+ 858 00da 04       		.byte	0x4
+ 859 00db DF000000 		.4byte	0xdf
+ 860 00df 07       		.uleb128 0x7
+ 861 00e0 02       		.uleb128 0x2
+ 862 00e1 04       		.byte	0x4
+ 863 00e2 07       		.byte	0x7
+ 864 00e3 1F000000 		.4byte	.LASF19
+ 865 00e7 06       		.uleb128 0x6
+ 866 00e8 04       		.byte	0x4
+ 867 00e9 B5000000 		.4byte	0xb5
+ 868 00ed 08       		.uleb128 0x8
+ 869 00ee 63030000 		.4byte	.LASF20
+ 870 00f2 01       		.byte	0x1
+ 871 00f3 8D       		.byte	0x8d
+ 872 00f4 00000000 		.4byte	.LFB40
+ 873 00f8 1C000000 		.4byte	.LFE40-.LFB40
+ 874 00fc 01       		.uleb128 0x1
+ 875 00fd 9C       		.byte	0x9c
+ 876 00fe 23010000 		.4byte	0x123
+ 877 0102 09       		.uleb128 0x9
+ 878 0103 636800   		.ascii	"ch\000"
+ 879 0106 01       		.byte	0x1
+ 880 0107 8F       		.byte	0x8f
+ 881 0108 72000000 		.4byte	0x72
+ 882 010c 00000000 		.4byte	.LLST0
+ 883 0110 0A       		.uleb128 0xa
+ 884 0111 06000000 		.4byte	.LVL0
+ 885 0115 03050000 		.4byte	0x503
+ 886 0119 0A       		.uleb128 0xa
+ 887 011a 14000000 		.4byte	.LVL2
+ 888 011e 0F050000 		.4byte	0x50f
+ 889 0122 00       		.byte	0
+ 890 0123 08       		.uleb128 0x8
+ 891 0124 00000000 		.4byte	.LASF21
+ 892 0128 01       		.byte	0x1
+ 893 0129 94       		.byte	0x94
+ 894 012a 00000000 		.4byte	.LFB41
+ 895 012e 10000000 		.4byte	.LFE41-.LFB41
+ 896 0132 01       		.uleb128 0x1
+ 897 0133 9C       		.byte	0x9c
+ 898 0134 42010000 		.4byte	0x142
+ 899 0138 0A       		.uleb128 0xa
+ 900 0139 06000000 		.4byte	.LVL3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 21
+
+
+ 901 013d 21050000 		.4byte	0x521
+ 902 0141 00       		.byte	0
+ 903 0142 0B       		.uleb128 0xb
+ 904 0143 02020000 		.4byte	.LASF22
+ 905 0147 01       		.byte	0x1
+ 906 0148 2B       		.byte	0x2b
+ 907 0149 64000000 		.4byte	0x64
+ 908 014d 00000000 		.4byte	.LFB36
+ 909 0151 3C000000 		.4byte	.LFE36-.LFB36
+ 910 0155 01       		.uleb128 0x1
+ 911 0156 9C       		.byte	0x9c
+ 912 0157 69010000 		.4byte	0x169
+ 913 015b 0C       		.uleb128 0xc
+ 914 015c 7900     		.ascii	"y\000"
+ 915 015e 01       		.byte	0x1
+ 916 015f 2B       		.byte	0x2b
+ 917 0160 25000000 		.4byte	0x25
+ 918 0164 13000000 		.4byte	.LLST1
+ 919 0168 00       		.byte	0
+ 920 0169 0B       		.uleb128 0xb
+ 921 016a 66020000 		.4byte	.LASF23
+ 922 016e 01       		.byte	0x1
+ 923 016f 33       		.byte	0x33
+ 924 0170 64000000 		.4byte	0x64
+ 925 0174 00000000 		.4byte	.LFB37
+ 926 0178 B0000000 		.4byte	.LFE37-.LFB37
+ 927 017c 01       		.uleb128 0x1
+ 928 017d 9C       		.byte	0x9c
+ 929 017e A8010000 		.4byte	0x1a8
+ 930 0182 0D       		.uleb128 0xd
+ 931 0183 EF020000 		.4byte	.LASF24
+ 932 0187 01       		.byte	0x1
+ 933 0188 33       		.byte	0x33
+ 934 0189 64000000 		.4byte	0x64
+ 935 018d 3B000000 		.4byte	.LLST2
+ 936 0191 09       		.uleb128 0x9
+ 937 0192 6900     		.ascii	"i\000"
+ 938 0194 01       		.byte	0x1
+ 939 0195 35       		.byte	0x35
+ 940 0196 64000000 		.4byte	0x64
+ 941 019a 5C000000 		.4byte	.LLST3
+ 942 019e 0A       		.uleb128 0xa
+ 943 019f A4000000 		.4byte	.LVL24
+ 944 01a3 42010000 		.4byte	0x142
+ 945 01a7 00       		.byte	0
+ 946 01a8 0B       		.uleb128 0xb
+ 947 01a9 8C030000 		.4byte	.LASF25
+ 948 01ad 01       		.byte	0x1
+ 949 01ae 4D       		.byte	0x4d
+ 950 01af 64000000 		.4byte	0x64
+ 951 01b3 00000000 		.4byte	.LFB38
+ 952 01b7 A0000000 		.4byte	.LFE38-.LFB38
+ 953 01bb 01       		.uleb128 0x1
+ 954 01bc 9C       		.byte	0x9c
+ 955 01bd D1010000 		.4byte	0x1d1
+ 956 01c1 0D       		.uleb128 0xd
+ 957 01c2 EF020000 		.4byte	.LASF24
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 22
+
+
+ 958 01c6 01       		.byte	0x1
+ 959 01c7 4D       		.byte	0x4d
+ 960 01c8 64000000 		.4byte	0x64
+ 961 01cc 91000000 		.4byte	.LLST4
+ 962 01d0 00       		.byte	0
+ 963 01d1 08       		.uleb128 0x8
+ 964 01d2 FD000000 		.4byte	.LASF26
+ 965 01d6 01       		.byte	0x1
+ 966 01d7 5F       		.byte	0x5f
+ 967 01d8 00000000 		.4byte	.LFB39
+ 968 01dc C0000000 		.4byte	.LFE39-.LFB39
+ 969 01e0 01       		.uleb128 0x1
+ 970 01e1 9C       		.byte	0x9c
+ 971 01e2 95020000 		.4byte	0x295
+ 972 01e6 0E       		.uleb128 0xe
+ 973 01e7 73747200 		.ascii	"str\000"
+ 974 01eb 01       		.byte	0x1
+ 975 01ec 61       		.byte	0x61
+ 976 01ed 95020000 		.4byte	0x295
+ 977 01f1 02       		.uleb128 0x2
+ 978 01f2 91       		.byte	0x91
+ 979 01f3 6C       		.sleb128 -20
+ 980 01f4 09       		.uleb128 0x9
+ 981 01f5 636800   		.ascii	"ch\000"
+ 982 01f8 01       		.byte	0x1
+ 983 01f9 62       		.byte	0x62
+ 984 01fa 72000000 		.4byte	0x72
+ 985 01fe B2000000 		.4byte	.LLST5
+ 986 0202 0A       		.uleb128 0xa
+ 987 0203 08000000 		.4byte	.LVL30
+ 988 0207 2D050000 		.4byte	0x52d
+ 989 020b 0F       		.uleb128 0xf
+ 990 020c 42000000 		.4byte	.LVL33
+ 991 0210 39050000 		.4byte	0x539
+ 992 0214 1E020000 		.4byte	0x21e
+ 993 0218 10       		.uleb128 0x10
+ 994 0219 01       		.uleb128 0x1
+ 995 021a 50       		.byte	0x50
+ 996 021b 01       		.uleb128 0x1
+ 997 021c 30       		.byte	0x30
+ 998 021d 00       		.byte	0
+ 999 021e 0A       		.uleb128 0xa
+ 1000 021f 4A000000 		.4byte	.LVL34
+ 1001 0223 A8010000 		.4byte	0x1a8
+ 1002 0227 0F       		.uleb128 0xf
+ 1003 0228 62000000 		.4byte	.LVL35
+ 1004 022c 39050000 		.4byte	0x539
+ 1005 0230 3A020000 		.4byte	0x23a
+ 1006 0234 10       		.uleb128 0x10
+ 1007 0235 01       		.uleb128 0x1
+ 1008 0236 50       		.byte	0x50
+ 1009 0237 01       		.uleb128 0x1
+ 1010 0238 31       		.byte	0x31
+ 1011 0239 00       		.byte	0
+ 1012 023a 0F       		.uleb128 0xf
+ 1013 023b 8A000000 		.4byte	.LVL36
+ 1014 023f 4A050000 		.4byte	0x54a
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 23
+
+
+ 1015 0243 53020000 		.4byte	0x253
+ 1016 0247 10       		.uleb128 0x10
+ 1017 0248 01       		.uleb128 0x1
+ 1018 0249 52       		.byte	0x52
+ 1019 024a 01       		.uleb128 0x1
+ 1020 024b 3A       		.byte	0x3a
+ 1021 024c 10       		.uleb128 0x10
+ 1022 024d 01       		.uleb128 0x1
+ 1023 024e 51       		.byte	0x51
+ 1024 024f 02       		.uleb128 0x2
+ 1025 0250 91       		.byte	0x91
+ 1026 0251 6C       		.sleb128 -20
+ 1027 0252 00       		.byte	0
+ 1028 0253 0A       		.uleb128 0xa
+ 1029 0254 8E000000 		.4byte	.LVL37
+ 1030 0258 69050000 		.4byte	0x569
+ 1031 025c 0F       		.uleb128 0xf
+ 1032 025d 94000000 		.4byte	.LVL38
+ 1033 0261 86050000 		.4byte	0x586
+ 1034 0265 6F020000 		.4byte	0x26f
+ 1035 0269 10       		.uleb128 0x10
+ 1036 026a 01       		.uleb128 0x1
+ 1037 026b 50       		.byte	0x50
+ 1038 026c 01       		.uleb128 0x1
+ 1039 026d 3A       		.byte	0x3a
+ 1040 026e 00       		.byte	0
+ 1041 026f 0F       		.uleb128 0xf
+ 1042 0270 9A000000 		.4byte	.LVL39
+ 1043 0274 86050000 		.4byte	0x586
+ 1044 0278 82020000 		.4byte	0x282
+ 1045 027c 10       		.uleb128 0x10
+ 1046 027d 01       		.uleb128 0x1
+ 1047 027e 50       		.byte	0x50
+ 1048 027f 01       		.uleb128 0x1
+ 1049 0280 3D       		.byte	0x3d
+ 1050 0281 00       		.byte	0
+ 1051 0282 0A       		.uleb128 0xa
+ 1052 0283 A4000000 		.4byte	.LVL40
+ 1053 0287 0F050000 		.4byte	0x50f
+ 1054 028b 0A       		.uleb128 0xa
+ 1055 028c AC000000 		.4byte	.LVL41
+ 1056 0290 0F050000 		.4byte	0x50f
+ 1057 0294 00       		.byte	0
+ 1058 0295 11       		.uleb128 0x11
+ 1059 0296 B5000000 		.4byte	0xb5
+ 1060 029a A5020000 		.4byte	0x2a5
+ 1061 029e 12       		.uleb128 0x12
+ 1062 029f E0000000 		.4byte	0xe0
+ 1063 02a3 03       		.byte	0x3
+ 1064 02a4 00       		.byte	0
+ 1065 02a5 13       		.uleb128 0x13
+ 1066 02a6 AB020000 		.4byte	.LASF27
+ 1067 02aa 01       		.byte	0x1
+ 1068 02ab 9A       		.byte	0x9a
+ 1069 02ac 64000000 		.4byte	0x64
+ 1070 02b0 00000000 		.4byte	.LFB42
+ 1071 02b4 3C000000 		.4byte	.LFE42-.LFB42
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 24
+
+
+ 1072 02b8 01       		.uleb128 0x1
+ 1073 02b9 9C       		.byte	0x9c
+ 1074 02ba 31030000 		.4byte	0x331
+ 1075 02be 0F       		.uleb128 0xf
+ 1076 02bf 0A000000 		.4byte	.LVL42
+ 1077 02c3 98050000 		.4byte	0x598
+ 1078 02c7 D5020000 		.4byte	0x2d5
+ 1079 02cb 10       		.uleb128 0x10
+ 1080 02cc 01       		.uleb128 0x1
+ 1081 02cd 50       		.byte	0x50
+ 1082 02ce 05       		.uleb128 0x5
+ 1083 02cf 03       		.byte	0x3
+ 1084 02d0 00000000 		.4byte	Timer_interrupt
+ 1085 02d4 00       		.byte	0
+ 1086 02d5 0F       		.uleb128 0xf
+ 1087 02d6 10000000 		.4byte	.LVL43
+ 1088 02da A9050000 		.4byte	0x5a9
+ 1089 02de EC020000 		.4byte	0x2ec
+ 1090 02e2 10       		.uleb128 0x10
+ 1091 02e3 01       		.uleb128 0x1
+ 1092 02e4 50       		.byte	0x50
+ 1093 02e5 05       		.uleb128 0x5
+ 1094 02e6 03       		.byte	0x3
+ 1095 02e7 00000000 		.4byte	RX_interrupt
+ 1096 02eb 00       		.byte	0
+ 1097 02ec 0F       		.uleb128 0xf
+ 1098 02ed 16000000 		.4byte	.LVL44
+ 1099 02f1 BA050000 		.4byte	0x5ba
+ 1100 02f5 03030000 		.4byte	0x303
+ 1101 02f9 10       		.uleb128 0x10
+ 1102 02fa 01       		.uleb128 0x1
+ 1103 02fb 50       		.byte	0x50
+ 1104 02fc 05       		.uleb128 0x5
+ 1105 02fd 03       		.byte	0x3
+ 1106 02fe 00000000 		.4byte	BLE_RX_interrupt
+ 1107 0302 00       		.byte	0
+ 1108 0303 0A       		.uleb128 0xa
+ 1109 0304 1A000000 		.4byte	.LVL45
+ 1110 0308 CB050000 		.4byte	0x5cb
+ 1111 030c 0A       		.uleb128 0xa
+ 1112 030d 1E000000 		.4byte	.LVL46
+ 1113 0311 D2050000 		.4byte	0x5d2
+ 1114 0315 0A       		.uleb128 0xa
+ 1115 0316 22000000 		.4byte	.LVL47
+ 1116 031a D9050000 		.4byte	0x5d9
+ 1117 031e 0A       		.uleb128 0xa
+ 1118 031f 26000000 		.4byte	.LVL48
+ 1119 0323 E1050000 		.4byte	0x5e1
+ 1120 0327 0A       		.uleb128 0xa
+ 1121 0328 2A000000 		.4byte	.LVL49
+ 1122 032c E8050000 		.4byte	0x5e8
+ 1123 0330 00       		.byte	0
+ 1124 0331 11       		.uleb128 0x11
+ 1125 0332 64000000 		.4byte	0x64
+ 1126 0336 41030000 		.4byte	0x341
+ 1127 033a 12       		.uleb128 0x12
+ 1128 033b E0000000 		.4byte	0xe0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 25
+
+
+ 1129 033f 01       		.byte	0x1
+ 1130 0340 00       		.byte	0
+ 1131 0341 14       		.uleb128 0x14
+ 1132 0342 7900     		.ascii	"y\000"
+ 1133 0344 01       		.byte	0x1
+ 1134 0345 17       		.byte	0x17
+ 1135 0346 31030000 		.4byte	0x331
+ 1136 034a 05       		.uleb128 0x5
+ 1137 034b 03       		.byte	0x3
+ 1138 034c 00000000 		.4byte	y
+ 1139 0350 11       		.uleb128 0x11
+ 1140 0351 25000000 		.4byte	0x25
+ 1141 0355 60030000 		.4byte	0x360
+ 1142 0359 12       		.uleb128 0x12
+ 1143 035a E0000000 		.4byte	0xe0
+ 1144 035e 13       		.byte	0x13
+ 1145 035f 00       		.byte	0
+ 1146 0360 15       		.uleb128 0x15
+ 1147 0361 9A000000 		.4byte	.LASF28
+ 1148 0365 01       		.byte	0x1
+ 1149 0366 1A       		.byte	0x1a
+ 1150 0367 50030000 		.4byte	0x350
+ 1151 036b 05       		.uleb128 0x5
+ 1152 036c 03       		.byte	0x3
+ 1153 036d 00000000 		.4byte	x_mavg
+ 1154 0371 15       		.uleb128 0x15
+ 1155 0372 F4020000 		.4byte	.LASF29
+ 1156 0376 01       		.byte	0x1
+ 1157 0377 1B       		.byte	0x1b
+ 1158 0378 25000000 		.4byte	0x25
+ 1159 037c 05       		.uleb128 0x5
+ 1160 037d 03       		.byte	0x3
+ 1161 037e 00000000 		.4byte	y_mavg
+ 1162 0382 15       		.uleb128 0x15
+ 1163 0383 98030000 		.4byte	.LASF30
+ 1164 0387 01       		.byte	0x1
+ 1165 0388 1C       		.byte	0x1c
+ 1166 0389 50030000 		.4byte	0x350
+ 1167 038d 05       		.uleb128 0x5
+ 1168 038e 03       		.byte	0x3
+ 1169 038f 00000000 		.4byte	b_mavg
+ 1170 0393 11       		.uleb128 0x11
+ 1171 0394 25000000 		.4byte	0x25
+ 1172 0398 A3030000 		.4byte	0x3a3
+ 1173 039c 12       		.uleb128 0x12
+ 1174 039d E0000000 		.4byte	0xe0
+ 1175 03a1 02       		.byte	0x2
+ 1176 03a2 00       		.byte	0
+ 1177 03a3 15       		.uleb128 0x15
+ 1178 03a4 86030000 		.4byte	.LASF31
+ 1179 03a8 01       		.byte	0x1
+ 1180 03a9 1E       		.byte	0x1e
+ 1181 03aa 93030000 		.4byte	0x393
+ 1182 03ae 05       		.uleb128 0x5
+ 1183 03af 03       		.byte	0x3
+ 1184 03b0 00000000 		.4byte	x_low
+ 1185 03b4 15       		.uleb128 0x15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 26
+
+
+ 1186 03b5 5A000000 		.4byte	.LASF32
+ 1187 03b9 01       		.byte	0x1
+ 1188 03ba 1F       		.byte	0x1f
+ 1189 03bb 93030000 		.4byte	0x393
+ 1190 03bf 05       		.uleb128 0x5
+ 1191 03c0 03       		.byte	0x3
+ 1192 03c1 00000000 		.4byte	y_low
+ 1193 03c5 15       		.uleb128 0x15
+ 1194 03c6 1B030000 		.4byte	.LASF33
+ 1195 03ca 01       		.byte	0x1
+ 1196 03cb 20       		.byte	0x20
+ 1197 03cc 93030000 		.4byte	0x393
+ 1198 03d0 05       		.uleb128 0x5
+ 1199 03d1 03       		.byte	0x3
+ 1200 03d2 00000000 		.4byte	b_low
+ 1201 03d6 15       		.uleb128 0x15
+ 1202 03d7 A7000000 		.4byte	.LASF34
+ 1203 03db 01       		.byte	0x1
+ 1204 03dc 21       		.byte	0x21
+ 1205 03dd 93030000 		.4byte	0x393
+ 1206 03e1 05       		.uleb128 0x5
+ 1207 03e2 03       		.byte	0x3
+ 1208 03e3 00000000 		.4byte	a_low
+ 1209 03e7 15       		.uleb128 0x15
+ 1210 03e8 0A010000 		.4byte	.LASF35
+ 1211 03ec 01       		.byte	0x1
+ 1212 03ed 24       		.byte	0x24
+ 1213 03ee B5000000 		.4byte	0xb5
+ 1214 03f2 05       		.uleb128 0x5
+ 1215 03f3 03       		.byte	0x3
+ 1216 03f4 00000000 		.4byte	current_byte
+ 1217 03f8 15       		.uleb128 0x15
+ 1218 03f9 49030000 		.4byte	.LASF36
+ 1219 03fd 01       		.byte	0x1
+ 1220 03fe 25       		.byte	0x25
+ 1221 03ff 96000000 		.4byte	0x96
+ 1222 0403 05       		.uleb128 0x5
+ 1223 0404 03       		.byte	0x3
+ 1224 0405 00000000 		.4byte	value_in
+ 1225 0409 11       		.uleb128 0x11
+ 1226 040a 96000000 		.4byte	0x96
+ 1227 040e 19040000 		.4byte	0x419
+ 1228 0412 12       		.uleb128 0x12
+ 1229 0413 E0000000 		.4byte	0xe0
+ 1230 0417 01       		.byte	0x1
+ 1231 0418 00       		.byte	0
+ 1232 0419 15       		.uleb128 0x15
+ 1233 041a E2000000 		.4byte	.LASF37
+ 1234 041e 01       		.byte	0x1
+ 1235 041f 25       		.byte	0x25
+ 1236 0420 09040000 		.4byte	0x409
+ 1237 0424 05       		.uleb128 0x5
+ 1238 0425 03       		.byte	0x3
+ 1239 0426 00000000 		.4byte	value_out
+ 1240 042a 14       		.uleb128 0x14
+ 1241 042b 6900     		.ascii	"i\000"
+ 1242 042d 01       		.byte	0x1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 27
+
+
+ 1243 042e 25       		.byte	0x25
+ 1244 042f 96000000 		.4byte	0x96
+ 1245 0433 05       		.uleb128 0x5
+ 1246 0434 03       		.byte	0x3
+ 1247 0435 00000000 		.4byte	i
+ 1248 0439 14       		.uleb128 0x14
+ 1249 043a 6A00     		.ascii	"j\000"
+ 1250 043c 01       		.byte	0x1
+ 1251 043d 25       		.byte	0x25
+ 1252 043e 96000000 		.4byte	0x96
+ 1253 0442 05       		.uleb128 0x5
+ 1254 0443 03       		.byte	0x3
+ 1255 0444 00000000 		.4byte	j
+ 1256 0448 15       		.uleb128 0x15
+ 1257 0449 BA000000 		.4byte	.LASF38
+ 1258 044d 01       		.byte	0x1
+ 1259 044e 25       		.byte	0x25
+ 1260 044f 96000000 		.4byte	0x96
+ 1261 0453 05       		.uleb128 0x5
+ 1262 0454 03       		.byte	0x3
+ 1263 0455 00000000 		.4byte	oldest
+ 1264 0459 15       		.uleb128 0x15
+ 1265 045a AD000000 		.4byte	.LASF39
+ 1266 045e 01       		.byte	0x1
+ 1267 045f 25       		.byte	0x25
+ 1268 0460 96000000 		.4byte	0x96
+ 1269 0464 05       		.uleb128 0x5
+ 1270 0465 03       		.byte	0x3
+ 1271 0466 00000000 		.4byte	newest
+ 1272 046a 15       		.uleb128 0x15
+ 1273 046b 10000000 		.4byte	.LASF40
+ 1274 046f 01       		.byte	0x1
+ 1275 0470 25       		.byte	0x25
+ 1276 0471 96000000 		.4byte	0x96
+ 1277 0475 05       		.uleb128 0x5
+ 1278 0476 03       		.byte	0x3
+ 1279 0477 00000000 		.4byte	diff
+ 1280 047b 15       		.uleb128 0x15
+ 1281 047c 4E000000 		.4byte	.LASF41
+ 1282 0480 01       		.byte	0x1
+ 1283 0481 25       		.byte	0x25
+ 1284 0482 96000000 		.4byte	0x96
+ 1285 0486 05       		.uleb128 0x5
+ 1286 0487 03       		.byte	0x3
+ 1287 0488 00000000 		.4byte	signed_data
+ 1288 048c 14       		.uleb128 0x14
+ 1289 048d 6F6C6400 		.ascii	"old\000"
+ 1290 0491 01       		.byte	0x1
+ 1291 0492 25       		.byte	0x25
+ 1292 0493 96000000 		.4byte	0x96
+ 1293 0497 05       		.uleb128 0x5
+ 1294 0498 03       		.byte	0x3
+ 1295 0499 00000000 		.4byte	old
+ 1296 049d 15       		.uleb128 0x15
+ 1297 049e B6010000 		.4byte	.LASF42
+ 1298 04a2 01       		.byte	0x1
+ 1299 04a3 25       		.byte	0x25
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 28
+
+
+ 1300 04a4 96000000 		.4byte	0x96
+ 1301 04a8 05       		.uleb128 0x5
+ 1302 04a9 03       		.byte	0x3
+ 1303 04aa 00000000 		.4byte	low_pass_new
+ 1304 04ae 15       		.uleb128 0x15
+ 1305 04af 21030000 		.4byte	.LASF43
+ 1306 04b3 01       		.byte	0x1
+ 1307 04b4 25       		.byte	0x25
+ 1308 04b5 96000000 		.4byte	0x96
+ 1309 04b9 05       		.uleb128 0x5
+ 1310 04ba 03       		.byte	0x3
+ 1311 04bb 00000000 		.4byte	avg_new
+ 1312 04bf 15       		.uleb128 0x15
+ 1313 04c0 E3010000 		.4byte	.LASF44
+ 1314 04c4 01       		.byte	0x1
+ 1315 04c5 28       		.byte	0x28
+ 1316 04c6 7E000000 		.4byte	0x7e
+ 1317 04ca 05       		.uleb128 0x5
+ 1318 04cb 03       		.byte	0x3
+ 1319 04cc 00000000 		.4byte	counter
+ 1320 04d0 15       		.uleb128 0x15
+ 1321 04d1 5B030000 		.4byte	.LASF45
+ 1322 04d5 01       		.byte	0x1
+ 1323 04d6 28       		.byte	0x28
+ 1324 04d7 7E000000 		.4byte	0x7e
+ 1325 04db 05       		.uleb128 0x5
+ 1326 04dc 03       		.byte	0x3
+ 1327 04dd 00000000 		.4byte	pointer
+ 1328 04e1 15       		.uleb128 0x15
+ 1329 04e2 2E000000 		.4byte	.LASF46
+ 1330 04e6 01       		.byte	0x1
+ 1331 04e7 28       		.byte	0x28
+ 1332 04e8 7E000000 		.4byte	0x7e
+ 1333 04ec 05       		.uleb128 0x5
+ 1334 04ed 03       		.byte	0x3
+ 1335 04ee 00000000 		.4byte	unsigned_data
+ 1336 04f2 15       		.uleb128 0x15
+ 1337 04f3 CF000000 		.4byte	.LASF47
+ 1338 04f7 01       		.byte	0x1
+ 1339 04f8 29       		.byte	0x29
+ 1340 04f9 B5000000 		.4byte	0xb5
+ 1341 04fd 05       		.uleb128 0x5
+ 1342 04fe 03       		.byte	0x3
+ 1343 04ff 00000000 		.4byte	FirstCall
+ 1344 0503 16       		.uleb128 0x16
+ 1345 0504 44020000 		.4byte	.LASF48
+ 1346 0508 03       		.byte	0x3
+ 1347 0509 6A01     		.2byte	0x16a
+ 1348 050b 8A000000 		.4byte	0x8a
+ 1349 050f 17       		.uleb128 0x17
+ 1350 0510 AE030000 		.4byte	.LASF51
+ 1351 0514 05       		.byte	0x5
+ 1352 0515 8C01     		.2byte	0x18c
+ 1353 0517 21050000 		.4byte	0x521
+ 1354 051b 18       		.uleb128 0x18
+ 1355 051c 8A000000 		.4byte	0x8a
+ 1356 0520 00       		.byte	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 29
+
+
+ 1357 0521 16       		.uleb128 0x16
+ 1358 0522 74030000 		.4byte	.LASF49
+ 1359 0526 04       		.byte	0x4
+ 1360 0527 4D01     		.2byte	0x14d
+ 1361 0529 8A000000 		.4byte	0x8a
+ 1362 052d 16       		.uleb128 0x16
+ 1363 052e A5010000 		.4byte	.LASF50
+ 1364 0532 05       		.byte	0x5
+ 1365 0533 6A01     		.2byte	0x16a
+ 1366 0535 8A000000 		.4byte	0x8a
+ 1367 0539 19       		.uleb128 0x19
+ 1368 053a EB010000 		.4byte	.LASF52
+ 1369 053e 06       		.byte	0x6
+ 1370 053f 27       		.byte	0x27
+ 1371 0540 4A050000 		.4byte	0x54a
+ 1372 0544 18       		.uleb128 0x18
+ 1373 0545 72000000 		.4byte	0x72
+ 1374 0549 00       		.byte	0
+ 1375 054a 1A       		.uleb128 0x1a
+ 1376 054b D1010000 		.4byte	.LASF66
+ 1377 054f 0D       		.byte	0xd
+ 1378 0550 B7       		.byte	0xb7
+ 1379 0551 E7000000 		.4byte	0xe7
+ 1380 0555 69050000 		.4byte	0x569
+ 1381 0559 18       		.uleb128 0x18
+ 1382 055a 64000000 		.4byte	0x64
+ 1383 055e 18       		.uleb128 0x18
+ 1384 055f E7000000 		.4byte	0xe7
+ 1385 0563 18       		.uleb128 0x18
+ 1386 0564 64000000 		.4byte	0x64
+ 1387 0568 00       		.byte	0
+ 1388 0569 17       		.uleb128 0x17
+ 1389 056a 94020000 		.4byte	.LASF53
+ 1390 056e 03       		.byte	0x3
+ 1391 056f 7701     		.2byte	0x177
+ 1392 0571 7B050000 		.4byte	0x57b
+ 1393 0575 18       		.uleb128 0x18
+ 1394 0576 7B050000 		.4byte	0x57b
+ 1395 057a 00       		.byte	0
+ 1396 057b 06       		.uleb128 0x6
+ 1397 057c 04       		.byte	0x4
+ 1398 057d 81050000 		.4byte	0x581
+ 1399 0581 1B       		.uleb128 0x1b
+ 1400 0582 A9000000 		.4byte	0xa9
+ 1401 0586 17       		.uleb128 0x17
+ 1402 0587 D3020000 		.4byte	.LASF54
+ 1403 058b 03       		.byte	0x3
+ 1404 058c 8C01     		.2byte	0x18c
+ 1405 058e 98050000 		.4byte	0x598
+ 1406 0592 18       		.uleb128 0x18
+ 1407 0593 8A000000 		.4byte	0x8a
+ 1408 0597 00       		.byte	0
+ 1409 0598 19       		.uleb128 0x19
+ 1410 0599 3C000000 		.4byte	.LASF55
+ 1411 059d 07       		.byte	0x7
+ 1412 059e 18       		.byte	0x18
+ 1413 059f A9050000 		.4byte	0x5a9
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 30
+
+
+ 1414 05a3 18       		.uleb128 0x18
+ 1415 05a4 CD000000 		.4byte	0xcd
+ 1416 05a8 00       		.byte	0
+ 1417 05a9 19       		.uleb128 0x19
+ 1418 05aa 29030000 		.4byte	.LASF56
+ 1419 05ae 08       		.byte	0x8
+ 1420 05af 18       		.byte	0x18
+ 1421 05b0 BA050000 		.4byte	0x5ba
+ 1422 05b4 18       		.uleb128 0x18
+ 1423 05b5 CD000000 		.4byte	0xcd
+ 1424 05b9 00       		.byte	0
+ 1425 05ba 19       		.uleb128 0x19
+ 1426 05bb BB020000 		.4byte	.LASF57
+ 1427 05bf 09       		.byte	0x9
+ 1428 05c0 18       		.byte	0x18
+ 1429 05c1 CB050000 		.4byte	0x5cb
+ 1430 05c5 18       		.uleb128 0x18
+ 1431 05c6 CD000000 		.4byte	0xcd
+ 1432 05ca 00       		.byte	0
+ 1433 05cb 1C       		.uleb128 0x1c
+ 1434 05cc B0020000 		.4byte	.LASF58
+ 1435 05d0 0A       		.byte	0xa
+ 1436 05d1 68       		.byte	0x68
+ 1437 05d2 1C       		.uleb128 0x1c
+ 1438 05d3 9F030000 		.4byte	.LASF59
+ 1439 05d7 0B       		.byte	0xb
+ 1440 05d8 68       		.byte	0x68
+ 1441 05d9 1D       		.uleb128 0x1d
+ 1442 05da 3D030000 		.4byte	.LASF60
+ 1443 05de 04       		.byte	0x4
+ 1444 05df 3201     		.2byte	0x132
+ 1445 05e1 1C       		.uleb128 0x1c
+ 1446 05e2 EC000000 		.4byte	.LASF61
+ 1447 05e6 07       		.byte	0x7
+ 1448 05e7 23       		.byte	0x23
+ 1449 05e8 1C       		.uleb128 0x1c
+ 1450 05e9 59020000 		.4byte	.LASF62
+ 1451 05ed 0C       		.byte	0xc
+ 1452 05ee 1D       		.byte	0x1d
+ 1453 05ef 00       		.byte	0
+ 1454              		.section	.debug_abbrev,"",%progbits
+ 1455              	.Ldebug_abbrev0:
+ 1456 0000 01       		.uleb128 0x1
+ 1457 0001 11       		.uleb128 0x11
+ 1458 0002 01       		.byte	0x1
+ 1459 0003 25       		.uleb128 0x25
+ 1460 0004 0E       		.uleb128 0xe
+ 1461 0005 13       		.uleb128 0x13
+ 1462 0006 0B       		.uleb128 0xb
+ 1463 0007 03       		.uleb128 0x3
+ 1464 0008 0E       		.uleb128 0xe
+ 1465 0009 1B       		.uleb128 0x1b
+ 1466 000a 0E       		.uleb128 0xe
+ 1467 000b 55       		.uleb128 0x55
+ 1468 000c 17       		.uleb128 0x17
+ 1469 000d 11       		.uleb128 0x11
+ 1470 000e 01       		.uleb128 0x1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 31
+
+
+ 1471 000f 10       		.uleb128 0x10
+ 1472 0010 17       		.uleb128 0x17
+ 1473 0011 00       		.byte	0
+ 1474 0012 00       		.byte	0
+ 1475 0013 02       		.uleb128 0x2
+ 1476 0014 24       		.uleb128 0x24
+ 1477 0015 00       		.byte	0
+ 1478 0016 0B       		.uleb128 0xb
+ 1479 0017 0B       		.uleb128 0xb
+ 1480 0018 3E       		.uleb128 0x3e
+ 1481 0019 0B       		.uleb128 0xb
+ 1482 001a 03       		.uleb128 0x3
+ 1483 001b 0E       		.uleb128 0xe
+ 1484 001c 00       		.byte	0
+ 1485 001d 00       		.byte	0
+ 1486 001e 03       		.uleb128 0x3
+ 1487 001f 24       		.uleb128 0x24
+ 1488 0020 00       		.byte	0
+ 1489 0021 0B       		.uleb128 0xb
+ 1490 0022 0B       		.uleb128 0xb
+ 1491 0023 3E       		.uleb128 0x3e
+ 1492 0024 0B       		.uleb128 0xb
+ 1493 0025 03       		.uleb128 0x3
+ 1494 0026 08       		.uleb128 0x8
+ 1495 0027 00       		.byte	0
+ 1496 0028 00       		.byte	0
+ 1497 0029 04       		.uleb128 0x4
+ 1498 002a 16       		.uleb128 0x16
+ 1499 002b 00       		.byte	0
+ 1500 002c 03       		.uleb128 0x3
+ 1501 002d 0E       		.uleb128 0xe
+ 1502 002e 3A       		.uleb128 0x3a
+ 1503 002f 0B       		.uleb128 0xb
+ 1504 0030 3B       		.uleb128 0x3b
+ 1505 0031 05       		.uleb128 0x5
+ 1506 0032 49       		.uleb128 0x49
+ 1507 0033 13       		.uleb128 0x13
+ 1508 0034 00       		.byte	0
+ 1509 0035 00       		.byte	0
+ 1510 0036 05       		.uleb128 0x5
+ 1511 0037 35       		.uleb128 0x35
+ 1512 0038 00       		.byte	0
+ 1513 0039 49       		.uleb128 0x49
+ 1514 003a 13       		.uleb128 0x13
+ 1515 003b 00       		.byte	0
+ 1516 003c 00       		.byte	0
+ 1517 003d 06       		.uleb128 0x6
+ 1518 003e 0F       		.uleb128 0xf
+ 1519 003f 00       		.byte	0
+ 1520 0040 0B       		.uleb128 0xb
+ 1521 0041 0B       		.uleb128 0xb
+ 1522 0042 49       		.uleb128 0x49
+ 1523 0043 13       		.uleb128 0x13
+ 1524 0044 00       		.byte	0
+ 1525 0045 00       		.byte	0
+ 1526 0046 07       		.uleb128 0x7
+ 1527 0047 15       		.uleb128 0x15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 32
+
+
+ 1528 0048 00       		.byte	0
+ 1529 0049 27       		.uleb128 0x27
+ 1530 004a 19       		.uleb128 0x19
+ 1531 004b 00       		.byte	0
+ 1532 004c 00       		.byte	0
+ 1533 004d 08       		.uleb128 0x8
+ 1534 004e 2E       		.uleb128 0x2e
+ 1535 004f 01       		.byte	0x1
+ 1536 0050 3F       		.uleb128 0x3f
+ 1537 0051 19       		.uleb128 0x19
+ 1538 0052 03       		.uleb128 0x3
+ 1539 0053 0E       		.uleb128 0xe
+ 1540 0054 3A       		.uleb128 0x3a
+ 1541 0055 0B       		.uleb128 0xb
+ 1542 0056 3B       		.uleb128 0x3b
+ 1543 0057 0B       		.uleb128 0xb
+ 1544 0058 27       		.uleb128 0x27
+ 1545 0059 19       		.uleb128 0x19
+ 1546 005a 11       		.uleb128 0x11
+ 1547 005b 01       		.uleb128 0x1
+ 1548 005c 12       		.uleb128 0x12
+ 1549 005d 06       		.uleb128 0x6
+ 1550 005e 40       		.uleb128 0x40
+ 1551 005f 18       		.uleb128 0x18
+ 1552 0060 9742     		.uleb128 0x2117
+ 1553 0062 19       		.uleb128 0x19
+ 1554 0063 01       		.uleb128 0x1
+ 1555 0064 13       		.uleb128 0x13
+ 1556 0065 00       		.byte	0
+ 1557 0066 00       		.byte	0
+ 1558 0067 09       		.uleb128 0x9
+ 1559 0068 34       		.uleb128 0x34
+ 1560 0069 00       		.byte	0
+ 1561 006a 03       		.uleb128 0x3
+ 1562 006b 08       		.uleb128 0x8
+ 1563 006c 3A       		.uleb128 0x3a
+ 1564 006d 0B       		.uleb128 0xb
+ 1565 006e 3B       		.uleb128 0x3b
+ 1566 006f 0B       		.uleb128 0xb
+ 1567 0070 49       		.uleb128 0x49
+ 1568 0071 13       		.uleb128 0x13
+ 1569 0072 02       		.uleb128 0x2
+ 1570 0073 17       		.uleb128 0x17
+ 1571 0074 00       		.byte	0
+ 1572 0075 00       		.byte	0
+ 1573 0076 0A       		.uleb128 0xa
+ 1574 0077 898201   		.uleb128 0x4109
+ 1575 007a 00       		.byte	0
+ 1576 007b 11       		.uleb128 0x11
+ 1577 007c 01       		.uleb128 0x1
+ 1578 007d 31       		.uleb128 0x31
+ 1579 007e 13       		.uleb128 0x13
+ 1580 007f 00       		.byte	0
+ 1581 0080 00       		.byte	0
+ 1582 0081 0B       		.uleb128 0xb
+ 1583 0082 2E       		.uleb128 0x2e
+ 1584 0083 01       		.byte	0x1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 33
+
+
+ 1585 0084 3F       		.uleb128 0x3f
+ 1586 0085 19       		.uleb128 0x19
+ 1587 0086 03       		.uleb128 0x3
+ 1588 0087 0E       		.uleb128 0xe
+ 1589 0088 3A       		.uleb128 0x3a
+ 1590 0089 0B       		.uleb128 0xb
+ 1591 008a 3B       		.uleb128 0x3b
+ 1592 008b 0B       		.uleb128 0xb
+ 1593 008c 27       		.uleb128 0x27
+ 1594 008d 19       		.uleb128 0x19
+ 1595 008e 49       		.uleb128 0x49
+ 1596 008f 13       		.uleb128 0x13
+ 1597 0090 11       		.uleb128 0x11
+ 1598 0091 01       		.uleb128 0x1
+ 1599 0092 12       		.uleb128 0x12
+ 1600 0093 06       		.uleb128 0x6
+ 1601 0094 40       		.uleb128 0x40
+ 1602 0095 18       		.uleb128 0x18
+ 1603 0096 9642     		.uleb128 0x2116
+ 1604 0098 19       		.uleb128 0x19
+ 1605 0099 01       		.uleb128 0x1
+ 1606 009a 13       		.uleb128 0x13
+ 1607 009b 00       		.byte	0
+ 1608 009c 00       		.byte	0
+ 1609 009d 0C       		.uleb128 0xc
+ 1610 009e 05       		.uleb128 0x5
+ 1611 009f 00       		.byte	0
+ 1612 00a0 03       		.uleb128 0x3
+ 1613 00a1 08       		.uleb128 0x8
+ 1614 00a2 3A       		.uleb128 0x3a
+ 1615 00a3 0B       		.uleb128 0xb
+ 1616 00a4 3B       		.uleb128 0x3b
+ 1617 00a5 0B       		.uleb128 0xb
+ 1618 00a6 49       		.uleb128 0x49
+ 1619 00a7 13       		.uleb128 0x13
+ 1620 00a8 02       		.uleb128 0x2
+ 1621 00a9 17       		.uleb128 0x17
+ 1622 00aa 00       		.byte	0
+ 1623 00ab 00       		.byte	0
+ 1624 00ac 0D       		.uleb128 0xd
+ 1625 00ad 05       		.uleb128 0x5
+ 1626 00ae 00       		.byte	0
+ 1627 00af 03       		.uleb128 0x3
+ 1628 00b0 0E       		.uleb128 0xe
+ 1629 00b1 3A       		.uleb128 0x3a
+ 1630 00b2 0B       		.uleb128 0xb
+ 1631 00b3 3B       		.uleb128 0x3b
+ 1632 00b4 0B       		.uleb128 0xb
+ 1633 00b5 49       		.uleb128 0x49
+ 1634 00b6 13       		.uleb128 0x13
+ 1635 00b7 02       		.uleb128 0x2
+ 1636 00b8 17       		.uleb128 0x17
+ 1637 00b9 00       		.byte	0
+ 1638 00ba 00       		.byte	0
+ 1639 00bb 0E       		.uleb128 0xe
+ 1640 00bc 34       		.uleb128 0x34
+ 1641 00bd 00       		.byte	0
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 34
+
+
+ 1642 00be 03       		.uleb128 0x3
+ 1643 00bf 08       		.uleb128 0x8
+ 1644 00c0 3A       		.uleb128 0x3a
+ 1645 00c1 0B       		.uleb128 0xb
+ 1646 00c2 3B       		.uleb128 0x3b
+ 1647 00c3 0B       		.uleb128 0xb
+ 1648 00c4 49       		.uleb128 0x49
+ 1649 00c5 13       		.uleb128 0x13
+ 1650 00c6 02       		.uleb128 0x2
+ 1651 00c7 18       		.uleb128 0x18
+ 1652 00c8 00       		.byte	0
+ 1653 00c9 00       		.byte	0
+ 1654 00ca 0F       		.uleb128 0xf
+ 1655 00cb 898201   		.uleb128 0x4109
+ 1656 00ce 01       		.byte	0x1
+ 1657 00cf 11       		.uleb128 0x11
+ 1658 00d0 01       		.uleb128 0x1
+ 1659 00d1 31       		.uleb128 0x31
+ 1660 00d2 13       		.uleb128 0x13
+ 1661 00d3 01       		.uleb128 0x1
+ 1662 00d4 13       		.uleb128 0x13
+ 1663 00d5 00       		.byte	0
+ 1664 00d6 00       		.byte	0
+ 1665 00d7 10       		.uleb128 0x10
+ 1666 00d8 8A8201   		.uleb128 0x410a
+ 1667 00db 00       		.byte	0
+ 1668 00dc 02       		.uleb128 0x2
+ 1669 00dd 18       		.uleb128 0x18
+ 1670 00de 9142     		.uleb128 0x2111
+ 1671 00e0 18       		.uleb128 0x18
+ 1672 00e1 00       		.byte	0
+ 1673 00e2 00       		.byte	0
+ 1674 00e3 11       		.uleb128 0x11
+ 1675 00e4 01       		.uleb128 0x1
+ 1676 00e5 01       		.byte	0x1
+ 1677 00e6 49       		.uleb128 0x49
+ 1678 00e7 13       		.uleb128 0x13
+ 1679 00e8 01       		.uleb128 0x1
+ 1680 00e9 13       		.uleb128 0x13
+ 1681 00ea 00       		.byte	0
+ 1682 00eb 00       		.byte	0
+ 1683 00ec 12       		.uleb128 0x12
+ 1684 00ed 21       		.uleb128 0x21
+ 1685 00ee 00       		.byte	0
+ 1686 00ef 49       		.uleb128 0x49
+ 1687 00f0 13       		.uleb128 0x13
+ 1688 00f1 2F       		.uleb128 0x2f
+ 1689 00f2 0B       		.uleb128 0xb
+ 1690 00f3 00       		.byte	0
+ 1691 00f4 00       		.byte	0
+ 1692 00f5 13       		.uleb128 0x13
+ 1693 00f6 2E       		.uleb128 0x2e
+ 1694 00f7 01       		.byte	0x1
+ 1695 00f8 3F       		.uleb128 0x3f
+ 1696 00f9 19       		.uleb128 0x19
+ 1697 00fa 03       		.uleb128 0x3
+ 1698 00fb 0E       		.uleb128 0xe
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 35
+
+
+ 1699 00fc 3A       		.uleb128 0x3a
+ 1700 00fd 0B       		.uleb128 0xb
+ 1701 00fe 3B       		.uleb128 0x3b
+ 1702 00ff 0B       		.uleb128 0xb
+ 1703 0100 49       		.uleb128 0x49
+ 1704 0101 13       		.uleb128 0x13
+ 1705 0102 11       		.uleb128 0x11
+ 1706 0103 01       		.uleb128 0x1
+ 1707 0104 12       		.uleb128 0x12
+ 1708 0105 06       		.uleb128 0x6
+ 1709 0106 40       		.uleb128 0x40
+ 1710 0107 18       		.uleb128 0x18
+ 1711 0108 9742     		.uleb128 0x2117
+ 1712 010a 19       		.uleb128 0x19
+ 1713 010b 01       		.uleb128 0x1
+ 1714 010c 13       		.uleb128 0x13
+ 1715 010d 00       		.byte	0
+ 1716 010e 00       		.byte	0
+ 1717 010f 14       		.uleb128 0x14
+ 1718 0110 34       		.uleb128 0x34
+ 1719 0111 00       		.byte	0
+ 1720 0112 03       		.uleb128 0x3
+ 1721 0113 08       		.uleb128 0x8
+ 1722 0114 3A       		.uleb128 0x3a
+ 1723 0115 0B       		.uleb128 0xb
+ 1724 0116 3B       		.uleb128 0x3b
+ 1725 0117 0B       		.uleb128 0xb
+ 1726 0118 49       		.uleb128 0x49
+ 1727 0119 13       		.uleb128 0x13
+ 1728 011a 3F       		.uleb128 0x3f
+ 1729 011b 19       		.uleb128 0x19
+ 1730 011c 02       		.uleb128 0x2
+ 1731 011d 18       		.uleb128 0x18
+ 1732 011e 00       		.byte	0
+ 1733 011f 00       		.byte	0
+ 1734 0120 15       		.uleb128 0x15
+ 1735 0121 34       		.uleb128 0x34
+ 1736 0122 00       		.byte	0
+ 1737 0123 03       		.uleb128 0x3
+ 1738 0124 0E       		.uleb128 0xe
+ 1739 0125 3A       		.uleb128 0x3a
+ 1740 0126 0B       		.uleb128 0xb
+ 1741 0127 3B       		.uleb128 0x3b
+ 1742 0128 0B       		.uleb128 0xb
+ 1743 0129 49       		.uleb128 0x49
+ 1744 012a 13       		.uleb128 0x13
+ 1745 012b 3F       		.uleb128 0x3f
+ 1746 012c 19       		.uleb128 0x19
+ 1747 012d 02       		.uleb128 0x2
+ 1748 012e 18       		.uleb128 0x18
+ 1749 012f 00       		.byte	0
+ 1750 0130 00       		.byte	0
+ 1751 0131 16       		.uleb128 0x16
+ 1752 0132 2E       		.uleb128 0x2e
+ 1753 0133 00       		.byte	0
+ 1754 0134 3F       		.uleb128 0x3f
+ 1755 0135 19       		.uleb128 0x19
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 36
+
+
+ 1756 0136 03       		.uleb128 0x3
+ 1757 0137 0E       		.uleb128 0xe
+ 1758 0138 3A       		.uleb128 0x3a
+ 1759 0139 0B       		.uleb128 0xb
+ 1760 013a 3B       		.uleb128 0x3b
+ 1761 013b 05       		.uleb128 0x5
+ 1762 013c 27       		.uleb128 0x27
+ 1763 013d 19       		.uleb128 0x19
+ 1764 013e 49       		.uleb128 0x49
+ 1765 013f 13       		.uleb128 0x13
+ 1766 0140 3C       		.uleb128 0x3c
+ 1767 0141 19       		.uleb128 0x19
+ 1768 0142 00       		.byte	0
+ 1769 0143 00       		.byte	0
+ 1770 0144 17       		.uleb128 0x17
+ 1771 0145 2E       		.uleb128 0x2e
+ 1772 0146 01       		.byte	0x1
+ 1773 0147 3F       		.uleb128 0x3f
+ 1774 0148 19       		.uleb128 0x19
+ 1775 0149 03       		.uleb128 0x3
+ 1776 014a 0E       		.uleb128 0xe
+ 1777 014b 3A       		.uleb128 0x3a
+ 1778 014c 0B       		.uleb128 0xb
+ 1779 014d 3B       		.uleb128 0x3b
+ 1780 014e 05       		.uleb128 0x5
+ 1781 014f 27       		.uleb128 0x27
+ 1782 0150 19       		.uleb128 0x19
+ 1783 0151 3C       		.uleb128 0x3c
+ 1784 0152 19       		.uleb128 0x19
+ 1785 0153 01       		.uleb128 0x1
+ 1786 0154 13       		.uleb128 0x13
+ 1787 0155 00       		.byte	0
+ 1788 0156 00       		.byte	0
+ 1789 0157 18       		.uleb128 0x18
+ 1790 0158 05       		.uleb128 0x5
+ 1791 0159 00       		.byte	0
+ 1792 015a 49       		.uleb128 0x49
+ 1793 015b 13       		.uleb128 0x13
+ 1794 015c 00       		.byte	0
+ 1795 015d 00       		.byte	0
+ 1796 015e 19       		.uleb128 0x19
+ 1797 015f 2E       		.uleb128 0x2e
+ 1798 0160 01       		.byte	0x1
+ 1799 0161 3F       		.uleb128 0x3f
+ 1800 0162 19       		.uleb128 0x19
+ 1801 0163 03       		.uleb128 0x3
+ 1802 0164 0E       		.uleb128 0xe
+ 1803 0165 3A       		.uleb128 0x3a
+ 1804 0166 0B       		.uleb128 0xb
+ 1805 0167 3B       		.uleb128 0x3b
+ 1806 0168 0B       		.uleb128 0xb
+ 1807 0169 27       		.uleb128 0x27
+ 1808 016a 19       		.uleb128 0x19
+ 1809 016b 3C       		.uleb128 0x3c
+ 1810 016c 19       		.uleb128 0x19
+ 1811 016d 01       		.uleb128 0x1
+ 1812 016e 13       		.uleb128 0x13
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 37
+
+
+ 1813 016f 00       		.byte	0
+ 1814 0170 00       		.byte	0
+ 1815 0171 1A       		.uleb128 0x1a
+ 1816 0172 2E       		.uleb128 0x2e
+ 1817 0173 01       		.byte	0x1
+ 1818 0174 3F       		.uleb128 0x3f
+ 1819 0175 19       		.uleb128 0x19
+ 1820 0176 03       		.uleb128 0x3
+ 1821 0177 0E       		.uleb128 0xe
+ 1822 0178 3A       		.uleb128 0x3a
+ 1823 0179 0B       		.uleb128 0xb
+ 1824 017a 3B       		.uleb128 0x3b
+ 1825 017b 0B       		.uleb128 0xb
+ 1826 017c 27       		.uleb128 0x27
+ 1827 017d 19       		.uleb128 0x19
+ 1828 017e 49       		.uleb128 0x49
+ 1829 017f 13       		.uleb128 0x13
+ 1830 0180 3C       		.uleb128 0x3c
+ 1831 0181 19       		.uleb128 0x19
+ 1832 0182 01       		.uleb128 0x1
+ 1833 0183 13       		.uleb128 0x13
+ 1834 0184 00       		.byte	0
+ 1835 0185 00       		.byte	0
+ 1836 0186 1B       		.uleb128 0x1b
+ 1837 0187 26       		.uleb128 0x26
+ 1838 0188 00       		.byte	0
+ 1839 0189 49       		.uleb128 0x49
+ 1840 018a 13       		.uleb128 0x13
+ 1841 018b 00       		.byte	0
+ 1842 018c 00       		.byte	0
+ 1843 018d 1C       		.uleb128 0x1c
+ 1844 018e 2E       		.uleb128 0x2e
+ 1845 018f 00       		.byte	0
+ 1846 0190 3F       		.uleb128 0x3f
+ 1847 0191 19       		.uleb128 0x19
+ 1848 0192 03       		.uleb128 0x3
+ 1849 0193 0E       		.uleb128 0xe
+ 1850 0194 3A       		.uleb128 0x3a
+ 1851 0195 0B       		.uleb128 0xb
+ 1852 0196 3B       		.uleb128 0x3b
+ 1853 0197 0B       		.uleb128 0xb
+ 1854 0198 27       		.uleb128 0x27
+ 1855 0199 19       		.uleb128 0x19
+ 1856 019a 3C       		.uleb128 0x3c
+ 1857 019b 19       		.uleb128 0x19
+ 1858 019c 00       		.byte	0
+ 1859 019d 00       		.byte	0
+ 1860 019e 1D       		.uleb128 0x1d
+ 1861 019f 2E       		.uleb128 0x2e
+ 1862 01a0 00       		.byte	0
+ 1863 01a1 3F       		.uleb128 0x3f
+ 1864 01a2 19       		.uleb128 0x19
+ 1865 01a3 03       		.uleb128 0x3
+ 1866 01a4 0E       		.uleb128 0xe
+ 1867 01a5 3A       		.uleb128 0x3a
+ 1868 01a6 0B       		.uleb128 0xb
+ 1869 01a7 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 38
+
+
+ 1870 01a8 05       		.uleb128 0x5
+ 1871 01a9 27       		.uleb128 0x27
+ 1872 01aa 19       		.uleb128 0x19
+ 1873 01ab 3C       		.uleb128 0x3c
+ 1874 01ac 19       		.uleb128 0x19
+ 1875 01ad 00       		.byte	0
+ 1876 01ae 00       		.byte	0
+ 1877 01af 00       		.byte	0
+ 1878              		.section	.debug_loc,"",%progbits
+ 1879              	.Ldebug_loc0:
+ 1880              	.LLST0:
+ 1881 0000 06000000 		.4byte	.LVL0
+ 1882 0004 10000000 		.4byte	.LVL1
+ 1883 0008 0100     		.2byte	0x1
+ 1884 000a 50       		.byte	0x50
+ 1885 000b 00000000 		.4byte	0
+ 1886 000f 00000000 		.4byte	0
+ 1887              	.LLST1:
+ 1888 0013 00000000 		.4byte	.LVL4
+ 1889 0017 0D000000 		.4byte	.LVL5-1
+ 1890 001b 0600     		.2byte	0x6
+ 1891 001d 50       		.byte	0x50
+ 1892 001e 93       		.byte	0x93
+ 1893 001f 04       		.uleb128 0x4
+ 1894 0020 51       		.byte	0x51
+ 1895 0021 93       		.byte	0x93
+ 1896 0022 04       		.uleb128 0x4
+ 1897 0023 0D000000 		.4byte	.LVL5-1
+ 1898 0027 3C000000 		.4byte	.LFE36
+ 1899 002b 0600     		.2byte	0x6
+ 1900 002d F3       		.byte	0xf3
+ 1901 002e 03       		.uleb128 0x3
+ 1902 002f F5       		.byte	0xf5
+ 1903 0030 00       		.uleb128 0
+ 1904 0031 25       		.uleb128 0x25
+ 1905 0032 9F       		.byte	0x9f
+ 1906 0033 00000000 		.4byte	0
+ 1907 0037 00000000 		.4byte	0
+ 1908              	.LLST2:
+ 1909 003b 00000000 		.4byte	.LVL10
+ 1910 003f 05000000 		.4byte	.LVL11-1
+ 1911 0043 0100     		.2byte	0x1
+ 1912 0045 50       		.byte	0x50
+ 1913 0046 05000000 		.4byte	.LVL11-1
+ 1914 004a B0000000 		.4byte	.LFE37
+ 1915 004e 0400     		.2byte	0x4
+ 1916 0050 F3       		.byte	0xf3
+ 1917 0051 01       		.uleb128 0x1
+ 1918 0052 50       		.byte	0x50
+ 1919 0053 9F       		.byte	0x9f
+ 1920 0054 00000000 		.4byte	0
+ 1921 0058 00000000 		.4byte	0
+ 1922              	.LLST3:
+ 1923 005c 14000000 		.4byte	.LVL12
+ 1924 0060 18000000 		.4byte	.LVL13
+ 1925 0064 0200     		.2byte	0x2
+ 1926 0066 30       		.byte	0x30
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 39
+
+
+ 1927 0067 9F       		.byte	0x9f
+ 1928 0068 18000000 		.4byte	.LVL13
+ 1929 006c 46000000 		.4byte	.LVL17
+ 1930 0070 0100     		.2byte	0x1
+ 1931 0072 54       		.byte	0x54
+ 1932 0073 48000000 		.4byte	.LVL18
+ 1933 0077 78000000 		.4byte	.LVL22
+ 1934 007b 0100     		.2byte	0x1
+ 1935 007d 54       		.byte	0x54
+ 1936 007e 78000000 		.4byte	.LVL22
+ 1937 0082 A3000000 		.4byte	.LVL24-1
+ 1938 0086 0100     		.2byte	0x1
+ 1939 0088 52       		.byte	0x52
+ 1940 0089 00000000 		.4byte	0
+ 1941 008d 00000000 		.4byte	0
+ 1942              	.LLST4:
+ 1943 0091 00000000 		.4byte	.LVL25
+ 1944 0095 05000000 		.4byte	.LVL26-1
+ 1945 0099 0100     		.2byte	0x1
+ 1946 009b 50       		.byte	0x50
+ 1947 009c 05000000 		.4byte	.LVL26-1
+ 1948 00a0 A0000000 		.4byte	.LFE38
+ 1949 00a4 0400     		.2byte	0x4
+ 1950 00a6 F3       		.byte	0xf3
+ 1951 00a7 01       		.uleb128 0x1
+ 1952 00a8 50       		.byte	0x50
+ 1953 00a9 9F       		.byte	0x9f
+ 1954 00aa 00000000 		.4byte	0
+ 1955 00ae 00000000 		.4byte	0
+ 1956              	.LLST5:
+ 1957 00b2 0A000000 		.4byte	.LVL31
+ 1958 00b6 2E000000 		.4byte	.LVL32
+ 1959 00ba 0100     		.2byte	0x1
+ 1960 00bc 50       		.byte	0x50
+ 1961 00bd 00000000 		.4byte	0
+ 1962 00c1 00000000 		.4byte	0
+ 1963              		.section	.debug_aranges,"",%progbits
+ 1964 0000 4C000000 		.4byte	0x4c
+ 1965 0004 0200     		.2byte	0x2
+ 1966 0006 00000000 		.4byte	.Ldebug_info0
+ 1967 000a 04       		.byte	0x4
+ 1968 000b 00       		.byte	0
+ 1969 000c 0000     		.2byte	0
+ 1970 000e 0000     		.2byte	0
+ 1971 0010 00000000 		.4byte	.LFB40
+ 1972 0014 1C000000 		.4byte	.LFE40-.LFB40
+ 1973 0018 00000000 		.4byte	.LFB41
+ 1974 001c 10000000 		.4byte	.LFE41-.LFB41
+ 1975 0020 00000000 		.4byte	.LFB36
+ 1976 0024 3C000000 		.4byte	.LFE36-.LFB36
+ 1977 0028 00000000 		.4byte	.LFB37
+ 1978 002c B0000000 		.4byte	.LFE37-.LFB37
+ 1979 0030 00000000 		.4byte	.LFB38
+ 1980 0034 A0000000 		.4byte	.LFE38-.LFB38
+ 1981 0038 00000000 		.4byte	.LFB39
+ 1982 003c C0000000 		.4byte	.LFE39-.LFB39
+ 1983 0040 00000000 		.4byte	.LFB42
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 40
+
+
+ 1984 0044 3C000000 		.4byte	.LFE42-.LFB42
+ 1985 0048 00000000 		.4byte	0
+ 1986 004c 00000000 		.4byte	0
+ 1987              		.section	.debug_ranges,"",%progbits
+ 1988              	.Ldebug_ranges0:
+ 1989 0000 00000000 		.4byte	.LFB40
+ 1990 0004 1C000000 		.4byte	.LFE40
+ 1991 0008 00000000 		.4byte	.LFB41
+ 1992 000c 10000000 		.4byte	.LFE41
+ 1993 0010 00000000 		.4byte	.LFB36
+ 1994 0014 3C000000 		.4byte	.LFE36
+ 1995 0018 00000000 		.4byte	.LFB37
+ 1996 001c B0000000 		.4byte	.LFE37
+ 1997 0020 00000000 		.4byte	.LFB38
+ 1998 0024 A0000000 		.4byte	.LFE38
+ 1999 0028 00000000 		.4byte	.LFB39
+ 2000 002c C0000000 		.4byte	.LFE39
+ 2001 0030 00000000 		.4byte	.LFB42
+ 2002 0034 3C000000 		.4byte	.LFE42
+ 2003 0038 00000000 		.4byte	0
+ 2004 003c 00000000 		.4byte	0
+ 2005              		.section	.debug_line,"",%progbits
+ 2006              	.Ldebug_line0:
+ 2007 0000 65020000 		.section	.debug_str,"MS",%progbits,1
+ 2007      02005901 
+ 2007      00000201 
+ 2007      FB0E0D00 
+ 2007      01010101 
+ 2008              	.LASF21:
+ 2009 0000 54696D65 		.ascii	"Timer_interrupt\000"
+ 2009      725F696E 
+ 2009      74657272 
+ 2009      75707400 
+ 2010              	.LASF40:
+ 2011 0010 64696666 		.ascii	"diff\000"
+ 2011      00
+ 2012              	.LASF3:
+ 2013 0015 73686F72 		.ascii	"short int\000"
+ 2013      7420696E 
+ 2013      7400
+ 2014              	.LASF19:
+ 2015 001f 73697A65 		.ascii	"sizetype\000"
+ 2015      74797065 
+ 2015      00
+ 2016              	.LASF15:
+ 2017 0028 63686172 		.ascii	"char8\000"
+ 2017      3800
+ 2018              	.LASF46:
+ 2019 002e 756E7369 		.ascii	"unsigned_data\000"
+ 2019      676E6564 
+ 2019      5F646174 
+ 2019      6100
+ 2020              	.LASF55:
+ 2021 003c 54696D65 		.ascii	"Timer_ISR_StartEx\000"
+ 2021      725F4953 
+ 2021      525F5374 
+ 2021      61727445 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 41
+
+
+ 2021      7800
+ 2022              	.LASF41:
+ 2023 004e 7369676E 		.ascii	"signed_data\000"
+ 2023      65645F64 
+ 2023      61746100 
+ 2024              	.LASF32:
+ 2025 005a 795F6C6F 		.ascii	"y_low\000"
+ 2025      7700
+ 2026              	.LASF11:
+ 2027 0060 75696E74 		.ascii	"uint16\000"
+ 2027      313600
+ 2028              	.LASF65:
+ 2029 0067 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Desktop\\filter.cydsn\000"
+ 2029      73657273 
+ 2029      5C4C696E 
+ 2029      65747465 
+ 2029      2048656C 
+ 2030              	.LASF13:
+ 2031 0094 696E7431 		.ascii	"int16\000"
+ 2031      3600
+ 2032              	.LASF28:
+ 2033 009a 785F6D61 		.ascii	"x_mavg\000"
+ 2033      766700
+ 2034              	.LASF10:
+ 2035 00a1 75696E74 		.ascii	"uint8\000"
+ 2035      3800
+ 2036              	.LASF34:
+ 2037 00a7 615F6C6F 		.ascii	"a_low\000"
+ 2037      7700
+ 2038              	.LASF39:
+ 2039 00ad 6E657765 		.ascii	"newest\000"
+ 2039      737400
+ 2040              	.LASF14:
+ 2041 00b4 666C6F61 		.ascii	"float\000"
+ 2041      7400
+ 2042              	.LASF38:
+ 2043 00ba 6F6C6465 		.ascii	"oldest\000"
+ 2043      737400
+ 2044              	.LASF7:
+ 2045 00c1 6C6F6E67 		.ascii	"long long int\000"
+ 2045      206C6F6E 
+ 2045      6720696E 
+ 2045      7400
+ 2046              	.LASF47:
+ 2047 00cf 46697273 		.ascii	"FirstCall\000"
+ 2047      7443616C 
+ 2047      6C00
+ 2048              	.LASF5:
+ 2049 00d9 6C6F6E67 		.ascii	"long int\000"
+ 2049      20696E74 
+ 2049      00
+ 2050              	.LASF37:
+ 2051 00e2 76616C75 		.ascii	"value_out\000"
+ 2051      655F6F75 
+ 2051      7400
+ 2052              	.LASF61:
+ 2053 00ec 54696D65 		.ascii	"Timer_ISR_Enable\000"
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 42
+
+
+ 2053      725F4953 
+ 2053      525F456E 
+ 2053      61626C65 
+ 2053      00
+ 2054              	.LASF26:
+ 2055 00fd 52585F69 		.ascii	"RX_interrupt\000"
+ 2055      6E746572 
+ 2055      72757074 
+ 2055      00
+ 2056              	.LASF35:
+ 2057 010a 63757272 		.ascii	"current_byte\000"
+ 2057      656E745F 
+ 2057      62797465 
+ 2057      00
+ 2058              	.LASF63:
+ 2059 0117 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2059      4320342E 
+ 2059      392E3320 
+ 2059      32303135 
+ 2059      30333033 
+ 2060 014a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2060      20726576 
+ 2060      6973696F 
+ 2060      6E203232 
+ 2060      31323230 
+ 2061 017d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2061      66756E63 
+ 2061      74696F6E 
+ 2061      2D736563 
+ 2061      74696F6E 
+ 2062              	.LASF50:
+ 2063 01a5 55415254 		.ascii	"UART_UartGetChar\000"
+ 2063      5F556172 
+ 2063      74476574 
+ 2063      43686172 
+ 2063      00
+ 2064              	.LASF42:
+ 2065 01b6 6C6F775F 		.ascii	"low_pass_new\000"
+ 2065      70617373 
+ 2065      5F6E6577 
+ 2065      00
+ 2066              	.LASF2:
+ 2067 01c3 756E7369 		.ascii	"unsigned char\000"
+ 2067      676E6564 
+ 2067      20636861 
+ 2067      7200
+ 2068              	.LASF66:
+ 2069 01d1 69746F61 		.ascii	"itoa\000"
+ 2069      00
+ 2070              	.LASF18:
+ 2071 01d6 63796973 		.ascii	"cyisraddress\000"
+ 2071      72616464 
+ 2071      72657373 
+ 2071      00
+ 2072              	.LASF44:
+ 2073 01e3 636F756E 		.ascii	"counter\000"
+ 2073      74657200 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 43
+
+
+ 2074              	.LASF52:
+ 2075 01eb 4D656173 		.ascii	"Measure_When_Low_Write\000"
+ 2075      7572655F 
+ 2075      5768656E 
+ 2075      5F4C6F77 
+ 2075      5F577269 
+ 2076              	.LASF22:
+ 2077 0202 666C6F6F 		.ascii	"floor_and_convert\000"
+ 2077      725F616E 
+ 2077      645F636F 
+ 2077      6E766572 
+ 2077      7400
+ 2078              	.LASF1:
+ 2079 0214 7369676E 		.ascii	"signed char\000"
+ 2079      65642063 
+ 2079      68617200 
+ 2080              	.LASF8:
+ 2081 0220 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2081      206C6F6E 
+ 2081      6720756E 
+ 2081      7369676E 
+ 2081      65642069 
+ 2082              	.LASF9:
+ 2083 0237 756E7369 		.ascii	"unsigned int\000"
+ 2083      676E6564 
+ 2083      20696E74 
+ 2083      00
+ 2084              	.LASF48:
+ 2085 0244 55415254 		.ascii	"UART_BLE_UartGetChar\000"
+ 2085      5F424C45 
+ 2085      5F556172 
+ 2085      74476574 
+ 2085      43686172 
+ 2086              	.LASF62:
+ 2087 0259 43795379 		.ascii	"CySysPmSleep\000"
+ 2087      73506D53 
+ 2087      6C656570 
+ 2087      00
+ 2088              	.LASF23:
+ 2089 0266 6C6F775F 		.ascii	"low_pass_filter\000"
+ 2089      70617373 
+ 2089      5F66696C 
+ 2089      74657200 
+ 2090              	.LASF17:
+ 2091 0276 72656733 		.ascii	"reg32\000"
+ 2091      3200
+ 2092              	.LASF4:
+ 2093 027c 73686F72 		.ascii	"short unsigned int\000"
+ 2093      7420756E 
+ 2093      7369676E 
+ 2093      65642069 
+ 2093      6E7400
+ 2094              	.LASF16:
+ 2095 028f 63686172 		.ascii	"char\000"
+ 2095      00
+ 2096              	.LASF53:
+ 2097 0294 55415254 		.ascii	"UART_BLE_UartPutString\000"
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 44
+
+
+ 2097      5F424C45 
+ 2097      5F556172 
+ 2097      74507574 
+ 2097      53747269 
+ 2098              	.LASF27:
+ 2099 02ab 6D61696E 		.ascii	"main\000"
+ 2099      00
+ 2100              	.LASF58:
+ 2101 02b0 55415254 		.ascii	"UART_Start\000"
+ 2101      5F537461 
+ 2101      727400
+ 2102              	.LASF57:
+ 2103 02bb 55415254 		.ascii	"UART_BLE_RX_ISR_StartEx\000"
+ 2103      5F424C45 
+ 2103      5F52585F 
+ 2103      4953525F 
+ 2103      53746172 
+ 2104              	.LASF54:
+ 2105 02d3 55415254 		.ascii	"UART_BLE_SpiUartWriteTxData\000"
+ 2105      5F424C45 
+ 2105      5F537069 
+ 2105      55617274 
+ 2105      57726974 
+ 2106              	.LASF24:
+ 2107 02ef 64617461 		.ascii	"data\000"
+ 2107      00
+ 2108              	.LASF29:
+ 2109 02f4 795F6D61 		.ascii	"y_mavg\000"
+ 2109      766700
+ 2110              	.LASF12:
+ 2111 02fb 75696E74 		.ascii	"uint32\000"
+ 2111      333200
+ 2112              	.LASF6:
+ 2113 0302 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2113      20756E73 
+ 2113      69676E65 
+ 2113      6420696E 
+ 2113      7400
+ 2114              	.LASF0:
+ 2115 0314 646F7562 		.ascii	"double\000"
+ 2115      6C6500
+ 2116              	.LASF33:
+ 2117 031b 625F6C6F 		.ascii	"b_low\000"
+ 2117      7700
+ 2118              	.LASF43:
+ 2119 0321 6176675F 		.ascii	"avg_new\000"
+ 2119      6E657700 
+ 2120              	.LASF56:
+ 2121 0329 55415254 		.ascii	"UART_RX_ISR_StartEx\000"
+ 2121      5F52585F 
+ 2121      4953525F 
+ 2121      53746172 
+ 2121      74457800 
+ 2122              	.LASF60:
+ 2123 033d 54696D65 		.ascii	"Timer_Start\000"
+ 2123      725F5374 
+ 2123      61727400 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccjEb2EF.s 			page 45
+
+
+ 2124              	.LASF36:
+ 2125 0349 76616C75 		.ascii	"value_in\000"
+ 2125      655F696E 
+ 2125      00
+ 2126              	.LASF64:
+ 2127 0352 2E5C6D61 		.ascii	".\\main.c\000"
+ 2127      696E2E63 
+ 2127      00
+ 2128              	.LASF45:
+ 2129 035b 706F696E 		.ascii	"pointer\000"
+ 2129      74657200 
+ 2130              	.LASF20:
+ 2131 0363 424C455F 		.ascii	"BLE_RX_interrupt\000"
+ 2131      52585F69 
+ 2131      6E746572 
+ 2131      72757074 
+ 2131      00
+ 2132              	.LASF49:
+ 2133 0374 54696D65 		.ascii	"Timer_ReadCapture\000"
+ 2133      725F5265 
+ 2133      61644361 
+ 2133      70747572 
+ 2133      6500
+ 2134              	.LASF31:
+ 2135 0386 785F6C6F 		.ascii	"x_low\000"
+ 2135      7700
+ 2136              	.LASF25:
+ 2137 038c 6D617667 		.ascii	"mavg_filter\000"
+ 2137      5F66696C 
+ 2137      74657200 
+ 2138              	.LASF30:
+ 2139 0398 625F6D61 		.ascii	"b_mavg\000"
+ 2139      766700
+ 2140              	.LASF59:
+ 2141 039f 55415254 		.ascii	"UART_BLE_Start\000"
+ 2141      5F424C45 
+ 2141      5F537461 
+ 2141      727400
+ 2142              	.LASF51:
+ 2143 03ae 55415254 		.ascii	"UART_SpiUartWriteTxData\000"
+ 2143      5F537069 
+ 2143      55617274 
+ 2143      57726974 
+ 2143      65547844 
+ 2144              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
