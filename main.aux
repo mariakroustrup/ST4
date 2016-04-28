@@ -1,7 +1,7 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand*{\memsetcounter}[2]{}
-\catcode`"\active
+\catcode `"\active 
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
 \global\let\oldcontentsline\contentsline
@@ -17,6 +17,7 @@
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{universitet2013}
 \citation{arahata2014}
 \citation{hvadermuskelsvind2016}
@@ -137,6 +138,7 @@
 \citation{morre2003,keenan2012}
 \citation{keenan2012}
 \citation{keenan2012}
+\citation{bernmarka2002}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{toc}{\contentsline {chapter}{\chapternumberline {4}Teori og design}{11}{chapter.4}}
@@ -165,6 +167,24 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces ADC-konvertering fra analogt til digitalt\relax }}{13}{figure.caption.13}}
 \newlabel{fig:ADC_kon}{{4.2}{13}{ADC-konvertering fra analogt til digitalt\relax }{figure.caption.13}{}}
 \newlabel{equ:LSB}{{4.1}{13}{Teori}{equation.4.5.1}{}}
+\citation{blandford2012}
+\citation{blandford2012}
+\citation{blandford2012}
+\citation{wikipedia2016}
+\citation{wikipedia2016}
+\citation{nilsson2015}
+\citation{nilsson2015}
+\citation{nilsson2015}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Digital filtrering}{14}{section.4.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces De fire filtertyper; Butterworth, Cehbyshev 1 \& 2 og elliptisk \citep  {wikipedia2016}\relax }}{14}{figure.caption.14}}
+\newlabel{fig:filtre}{{4.3}{14}{De fire filtertyper; Butterworth, Cehbyshev 1 \& 2 og elliptisk \citep {wikipedia2016}\relax }{figure.caption.14}{}}
+\citation{cypressguide2014}
+\citation{gupta2013}
+\citation{cypressguide2014}
+\@writefile{lox}{\contentsline {fixme}{Note: Dette afsnit skal \IeC {\ae }ndres i forhold til hvilket filter vi anvende til henholdsvis accelerometer og EMG}{15}{figure.caption.14}}
+\@writefile{toc}{\contentsline {subsubsection}{Filter: accelerometer}{15}{section*.15}}
+\@writefile{toc}{\contentsline {subsubsection}{Filter: EMG}{15}{section*.16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{15}{subsection.4.6.1}}
 \citation{advancertech2013}
 \citation{advancertech2013}
 \citation{advancertech2013}
@@ -172,11 +192,11 @@
 \citation{advancertech2013}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Implemetering}{15}{chapter.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.2}Elektromyografi}{15}{subsection.5.0.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Tre sinussignaler. Henholdsvis et r\IeC {\r a}t, ensrettet og ensrettet samt udglattet. \citep  {advancertech2013}.\relax }}{15}{figure.caption.14}}
-\newlabel{fig:sinussignal}{{5.1}{15}{Tre sinussignaler. Henholdsvis et råt, ensrettet og ensrettet samt udglattet. \citep {advancertech2013}.\relax }{figure.caption.14}{}}
-\newlabel{eq:lavcutfre}{{5.1}{15}{Elektromyografi}{equation.5.0.1}{}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Implemetering}{16}{chapter.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.2}Elektromyografi}{16}{subsection.5.0.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Tre sinussignaler. Henholdsvis et r\IeC {\r a}t, ensrettet og ensrettet samt udglattet. \citep  {advancertech2013}.\relax }}{16}{figure.caption.17}}
+\newlabel{fig:sinussignal}{{5.1}{16}{Tre sinussignaler. Henholdsvis et råt, ensrettet og ensrettet samt udglattet. \citep {advancertech2013}.\relax }{figure.caption.17}{}}
+\newlabel{eq:lavcutfre}{{5.1}{16}{Elektromyografi}{equation.5.0.1}{}}
 \citation{analogdevices2009}
 \citation{analogdevices2009}
 \citation{analogdevices2009}
@@ -184,22 +204,30 @@
 \citation{analogdevices2010}
 \citation{analogdevices2010}
 \citation{analogdevices2010}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.3}Accelerometer}{16}{subsection.5.0.3}}
-\newlabel{sec:acc}{{5.0.3}{16}{Accelerometer}{subsection.5.0.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Pin konfiguration af accelerometer ADXL335 \citep  {analogdevices2009}\relax }}{16}{figure.caption.15}}
-\newlabel{fig:acc_pin}{{5.2}{16}{Pin konfiguration af accelerometer ADXL335 \citep {analogdevices2009}\relax }{figure.caption.15}{}}
-\@writefile{lox}{\contentsline {fixme}{Note: Den spektrale effektt\IeC {\ae }thed m\IeC {\r a}les i $\mu g/$. Hvis dette divideres med kvadratroden af b\IeC {\r a}ndbredden af signalet $\sqrt  {Hz}$, f\IeC {\r a}s RMS af accelerationsst\IeC {\o }jen ved en temperatur p\IeC {\r a} $25^\circ $C}{16}{figure.caption.15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.3}Accelerometer}{17}{subsection.5.0.3}}
+\newlabel{sec:acc}{{5.0.3}{17}{Accelerometer}{subsection.5.0.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Pin konfiguration af accelerometer ADXL335 \citep  {analogdevices2009}\relax }}{17}{figure.caption.18}}
+\newlabel{fig:acc_pin}{{5.2}{17}{Pin konfiguration af accelerometer ADXL335 \citep {analogdevices2009}\relax }{figure.caption.18}{}}
+\@writefile{lox}{\contentsline {fixme}{Note: Den spektrale effektt\IeC {\ae }thed m\IeC {\r a}les i $\mu g/$. Hvis dette divideres med kvadratroden af b\IeC {\r a}ndbredden af signalet $\sqrt  {Hz}$, f\IeC {\r a}s RMS af accelerationsst\IeC {\o }jen ved en temperatur p\IeC {\r a} $25^\circ $C}{17}{figure.caption.18}}
 \citation{clifford2005}
 \citation{clifford2005}
 \citation{ADC2014}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces P\IeC {\r a}virkning af accelerometeret i forskellige positioner. Til venstre m\IeC {\r a}les accelerometeret lodret, til h\IeC {\o }jre \IeC {\o }verst vandret og til h\IeC {\o }jre nederst i plan \citep  {analogdevices2010}.\relax }}{18}{figure.caption.19}}
+\newlabel{fig:acc}{{5.3}{18}{Påvirkning af accelerometeret i forskellige positioner. Til venstre måles accelerometeret lodret, til højre øverst vandret og til højre nederst i plan \citep {analogdevices2010}.\relax }{figure.caption.19}{}}
+\newlabel{equ:vinkler}{{5.2}{18}{Accelerometer}{equation.5.0.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.4}Analog til digital konvertering}{18}{subsection.5.0.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Flowdigram}{18}{section.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Overordnet flowdiagram}{19}{subsection.5.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Overordnet flowdigram som viser opbyggelsen af det samlede system\relax }}{19}{figure.caption.20}}
+\newlabel{fig:overordnet_flow}{{5.4}{19}{Overordnet flowdigram som viser opbyggelsen af det samlede system\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Initialiserende flowdiagram}{19}{subsection.5.1.2}}
 \bibstyle{unsrtnat}
 \bibdata{kilder}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces P\IeC {\r a}virkning af accelerometeret i forskellige positioner. Til venstre m\IeC {\r a}les accelerometeret lodret, til h\IeC {\o }jre \IeC {\o }verst vandret og til h\IeC {\o }jre nederst i plan \citep  {analogdevices2010}.\relax }}{17}{figure.caption.16}}
-\newlabel{fig:acc}{{5.3}{17}{Påvirkning af accelerometeret i forskellige positioner. Til venstre måles accelerometeret lodret, til højre øverst vandret og til højre nederst i plan \citep {analogdevices2010}.\relax }{figure.caption.16}{}}
-\newlabel{equ:vinkler}{{5.2}{17}{Accelerometer}{equation.5.0.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.0.4}Analog til digital konvertering}{17}{subsection.5.0.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Implementering}{17}{section.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}\IeC {\textbullet }}{17}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Initialiserende flowdigram som viser opbyggelsen af den intialiserende del af systemet\relax }}{20}{figure.caption.21}}
+\newlabel{fig:initialiserende_flow}{{5.5}{20}{Initialiserende flowdigram som viser opbyggelsen af den intialiserende del af systemet\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}EMG-algoritme}{20}{subsection.5.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces EMG-algoritmen viser opbyggelsen af EMG-algortimens del af systemet\relax }}{20}{figure.caption.22}}
+\newlabel{fig:Emg_algo}{{5.6}{20}{EMG-algoritmen viser opbyggelsen af EMG-algortimens del af systemet\relax }{figure.caption.22}{}}
 \bibcite{universitet2013}{{1}{2015}{{Universitet}}{{}}}
 \bibcite{arahata2014}{{2}{2014}{{Arahata}}{{}}}
 \bibcite{hvadermuskelsvind2016}{{3}{2016}{{Muskelsvindsfonden}}{{}}}
@@ -214,7 +242,7 @@
 \bibcite{neudert2004}{{12}{2004}{{Neudert et~al.}}{{Neudert, Wasner, and Borasio}}}
 \bibcite{ilse2015}{{13}{2015}{{Ilse et~al.}}{{Ilse, Prell, and M.~Walther}}}
 \bibcite{pagnini2013}{{14}{2013}{{Pagnini}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Litteratur}{18}{section*.18}}
+\@writefile{toc}{\contentsline {chapter}{Litteratur}{21}{section*.24}}
 \bibcite{tramonti2012}{{15}{2012}{{Tramonti. et~al.}}{{Tramonti., Bongioanni., and C.~Fanciullacci}}}
 \bibcite{brandt2010}{{16}{2010}{{Brandt and Jensen}}{{}}}
 \bibcite{hefferman2006}{{17}{2006}{{Heffernan et~al.}}{{Heffernan, Jenkinson, and T.~Holmes}}}
@@ -244,74 +272,74 @@
 \citation{seniam2016}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {appendix}{\chapternumberline {A}Bilag}{21}{appendix.A}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Pilotfors\IeC {\o }g}{21}{section.A.1}}
-\newlabel{sec:pilotforsoeg}{{A.1}{21}{Pilotforsøg}{section.A.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Form\IeC {\r a}l}{21}{subsection.A.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{21}{section*.19}}
-\@writefile{toc}{\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{21}{section*.20}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Materialer}{21}{subsection.A.1.2}}
+\@writefile{toc}{\contentsline {appendix}{\chapternumberline {A}Bilag}{24}{appendix.A}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Pilotfors\IeC {\o }g}{24}{section.A.1}}
+\newlabel{sec:pilotforsoeg}{{A.1}{24}{Pilotforsøg}{section.A.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Form\IeC {\r a}l}{24}{subsection.A.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{24}{section*.25}}
+\@writefile{toc}{\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{24}{section*.26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Materialer}{24}{subsection.A.1.2}}
 \citation{martini2012}
 \citation{martini2012}
 \citation{seniam2016}
 \citation{ankle2016}
 \citation{ankle2016}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.3}Fors\IeC {\o }gsopstilling}{22}{subsection.A.1.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces L\IeC {\r a}ret set anteriot. Placering af positiv (r\IeC {\o }d) samt negativ (gr\IeC {\o }n) elektrode ses p\IeC {\r a} rectus femoris \citep  {martini2012}.\relax }}{22}{figure.caption.21}}
-\newlabel{fig:laarmuskler}{{A.1}{22}{Låret set anteriot. Placering af positiv (rød) samt negativ (grøn) elektrode ses på rectus femoris \citep {martini2012}.\relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Placering af referenceelektrode omkring anklen \citep  {ankle2016}.\relax }}{22}{figure.caption.22}}
-\newlabel{fig:reference}{{A.2}{22}{Placering af referenceelektrode omkring anklen \citep {ankle2016}.\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Placering af accelerometrene p\IeC {\r a} l\IeC {\r a}ret samt underbenet. Disse placeringer er markeret med r\IeC {\o }d. Personen til venstre st\IeC {\r a}r i oprejst position, hvilket svarer til at kn\IeC {\ae }ets vinkel er 180 $^{\circ }$. Personen til h\IeC {\o }jre sidder i en squat-\IeC {\o }velse, hvilket svarer til kn\IeC {\ae }ets vinkel som maksimalt er 90 $^{\circ }$.\relax }}{23}{figure.caption.23}}
-\newlabel{fig:accelerometervinkel}{{A.3}{23}{Placering af accelerometrene på låret samt underbenet. Disse placeringer er markeret med rød. Personen til venstre står i oprejst position, hvilket svarer til at knæets vinkel er 180 $^{\circ }$. Personen til højre sidder i en squat-øvelse, hvilket svarer til knæets vinkel som maksimalt er 90 $^{\circ }$.\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.4}Oversigt af fors\IeC {\o }gsopstilling}{24}{subsection.A.1.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.5}Fremgangsm\IeC {\r a}de}{24}{subsection.A.1.5}}
-\@writefile{toc}{\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{24}{section*.24}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Databehandling}{24}{section.A.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{25}{section*.25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces EMG-m\IeC {\r a}linger af siddende baseline, st\IeC {\r a}ende baseline og squat-\IeC {\o }velse.\relax }}{25}{figure.caption.26}}
-\newlabel{fig:baselineogemg}{{A.4}{25}{EMG-målinger af siddende baseline, stående baseline og squat-øvelse.\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Frekvensanalyse med semilogaritmisk skala p\IeC {\r a} Y-aksen af EMG-m\IeC {\r a}ling for siddende baseline, st\IeC {\r a}ende baseline og ved squat-\IeC {\o }velse.\relax }}{25}{figure.caption.27}}
-\newlabel{fig:emgfft}{{A.5}{25}{Frekvensanalyse med semilogaritmisk skala på Y-aksen af EMG-måling for siddende baseline, stående baseline og ved squat-øvelse.\relax }{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{26}{section*.28}}
-\newlabel{sec:acc_fft}{{A.2}{26}{Resultater for accelerometer målinger}{section*.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.6}{\ignorespaces Frekvensanalyse af baselinem\IeC {\r a}ling for accelerometeret, hvor Y-aksen er en semilogaritmisk skala\relax }}{26}{figure.caption.29}}
-\newlabel{fig:accfftx}{{A.6}{26}{Frekvensanalyse af baselinemåling for accelerometeret, hvor Y-aksen er en semilogaritmisk skala\relax }{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.7}{\ignorespaces Vinkler fra accelerometrene under squat-\IeC {\o }velsen\relax }}{27}{figure.caption.30}}
-\newlabel{fig:accvinkel}{{A.7}{27}{Vinkler fra accelerometrene under squat-øvelsen\relax }{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.8}{\ignorespaces EMG-signal og vinkler fra acceleromtre under squat-\IeC {\o }velsen\relax }}{27}{figure.caption.31}}
-\newlabel{fig:emgogacc}{{A.8}{27}{EMG-signal og vinkler fra acceleromtre under squat-øvelsen\relax }{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.9}{\ignorespaces EMG-m\IeC {\r a}lingen vist i forhold til vinkler\relax }}{28}{figure.caption.32}}
-\newlabel{fig:emgogvinkel}{{A.9}{28}{EMG-målingen vist i forhold til vinkler\relax }{figure.caption.32}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Test af accelerometer}{28}{section.A.3}}
-\newlabel{sec:test_acc}{{A.3}{28}{Test af accelerometer}{section.A.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.1}Form\IeC {\r a}l}{28}{subsection.A.3.1}}
-\newlabel{sec:acc_formaal}{{A.3.1}{28}{Formål}{subsection.A.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.2}Materialer}{28}{subsection.A.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.3}Metode}{28}{subsection.A.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.3}Fors\IeC {\o }gsopstilling}{25}{subsection.A.1.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces L\IeC {\r a}ret set anteriot. Placering af positiv (r\IeC {\o }d) samt negativ (gr\IeC {\o }n) elektrode ses p\IeC {\r a} rectus femoris \citep  {martini2012}.\relax }}{25}{figure.caption.27}}
+\newlabel{fig:laarmuskler}{{A.1}{25}{Låret set anteriot. Placering af positiv (rød) samt negativ (grøn) elektrode ses på rectus femoris \citep {martini2012}.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Placering af referenceelektrode omkring anklen \citep  {ankle2016}.\relax }}{25}{figure.caption.28}}
+\newlabel{fig:reference}{{A.2}{25}{Placering af referenceelektrode omkring anklen \citep {ankle2016}.\relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Placering af accelerometrene p\IeC {\r a} l\IeC {\r a}ret samt underbenet. Disse placeringer er markeret med r\IeC {\o }d. Personen til venstre st\IeC {\r a}r i oprejst position, hvilket svarer til at kn\IeC {\ae }ets vinkel er 180 $^{\circ }$. Personen til h\IeC {\o }jre sidder i en squat-\IeC {\o }velse, hvilket svarer til kn\IeC {\ae }ets vinkel som maksimalt er 90 $^{\circ }$.\relax }}{26}{figure.caption.29}}
+\newlabel{fig:accelerometervinkel}{{A.3}{26}{Placering af accelerometrene på låret samt underbenet. Disse placeringer er markeret med rød. Personen til venstre står i oprejst position, hvilket svarer til at knæets vinkel er 180 $^{\circ }$. Personen til højre sidder i en squat-øvelse, hvilket svarer til knæets vinkel som maksimalt er 90 $^{\circ }$.\relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.4}Oversigt af fors\IeC {\o }gsopstilling}{27}{subsection.A.1.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.5}Fremgangsm\IeC {\r a}de}{27}{subsection.A.1.5}}
+\@writefile{toc}{\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{27}{section*.30}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Databehandling}{27}{section.A.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{28}{section*.31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces EMG-m\IeC {\r a}linger af siddende baseline, st\IeC {\r a}ende baseline og squat-\IeC {\o }velse.\relax }}{28}{figure.caption.32}}
+\newlabel{fig:baselineogemg}{{A.4}{28}{EMG-målinger af siddende baseline, stående baseline og squat-øvelse.\relax }{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Frekvensanalyse med semilogaritmisk skala p\IeC {\r a} Y-aksen af EMG-m\IeC {\r a}ling for siddende baseline, st\IeC {\r a}ende baseline og ved squat-\IeC {\o }velse.\relax }}{28}{figure.caption.33}}
+\newlabel{fig:emgfft}{{A.5}{28}{Frekvensanalyse med semilogaritmisk skala på Y-aksen af EMG-måling for siddende baseline, stående baseline og ved squat-øvelse.\relax }{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{29}{section*.34}}
+\newlabel{sec:acc_fft}{{A.2}{29}{Resultater for accelerometer målinger}{section*.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.6}{\ignorespaces Frekvensanalyse af baselinem\IeC {\r a}ling for accelerometeret, hvor Y-aksen er en semilogaritmisk skala\relax }}{29}{figure.caption.35}}
+\newlabel{fig:accfftx}{{A.6}{29}{Frekvensanalyse af baselinemåling for accelerometeret, hvor Y-aksen er en semilogaritmisk skala\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.7}{\ignorespaces Vinkler fra accelerometrene under squat-\IeC {\o }velsen\relax }}{30}{figure.caption.36}}
+\newlabel{fig:accvinkel}{{A.7}{30}{Vinkler fra accelerometrene under squat-øvelsen\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.8}{\ignorespaces EMG-signal og vinkler fra acceleromtre under squat-\IeC {\o }velsen\relax }}{30}{figure.caption.37}}
+\newlabel{fig:emgogacc}{{A.8}{30}{EMG-signal og vinkler fra acceleromtre under squat-øvelsen\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.9}{\ignorespaces EMG-m\IeC {\r a}lingen vist i forhold til vinkler\relax }}{31}{figure.caption.38}}
+\newlabel{fig:emgogvinkel}{{A.9}{31}{EMG-målingen vist i forhold til vinkler\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Test af accelerometer}{31}{section.A.3}}
+\newlabel{sec:test_acc}{{A.3}{31}{Test af accelerometer}{section.A.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.1}Form\IeC {\r a}l}{31}{subsection.A.3.1}}
+\newlabel{sec:acc_formaal}{{A.3.1}{31}{Formål}{subsection.A.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.2}Materialer}{31}{subsection.A.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.3}Metode}{31}{subsection.A.3.3}}
 \citation{analogdevices2010}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.4}Fors\IeC {\o }gsopstilling}{29}{subsection.A.3.4}}
-\@writefile{toc}{\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{29}{section*.33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.10}{\ignorespaces Vinkeltester, som anvendes under fors\IeC {\o }get til at holde accelerometeret i bestemte vinkler.\relax }}{29}{figure.caption.34}}
-\newlabel{fig:vinkeltest}{{A.10}{29}{Vinkeltester, som anvendes under forsøget til at holde accelerometeret i bestemte vinkler.\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{29}{section*.35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.5}Fremgangsm\IeC {\r a}de}{30}{subsection.A.3.5}}
-\@writefile{toc}{\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{30}{section*.36}}
-\newlabel{sec:vinkel_fremgangsmaade}{{A.3.5}{30}{Fremgangsmåde for deltest 1}{section*.36}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{30}{section*.37}}
-\newlabel{sec:acc_fremgangsmaade}{{A.3.5}{30}{Fremgangsmåde for deltest 2}{section*.37}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.6}Resultater}{30}{subsection.A.3.6}}
-\@writefile{toc}{\contentsline {subsubsection}{Resultater for deltest 1}{30}{section*.38}}
-\newlabel{sec:resul_linear}{{A.3.6}{30}{Resultater for deltest 1}{section*.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.11}{\ignorespaces Line\IeC {\ae }r regression for hver akse p\IeC {\r a} hvert accelerometer. M\IeC {\r a}lingerne er plottet med bl\IeC {\r a} prikker, og den line\IeC {\ae }re regression er illustreret med r\IeC {\o }d. $R^2$-v\IeC {\ae }rdien er angivet for hvert plot.\relax }}{31}{figure.caption.39}}
-\newlabel{fig:acc_lineaerregression}{{A.11}{31}{Lineær regression for hver akse på hvert accelerometer. Målingerne er plottet med blå prikker, og den lineære regression er illustreret med rød. $R^2$-værdien er angivet for hvert plot.\relax }{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Resultater for deltest 2}{31}{section*.40}}
-\@writefile{lox}{\contentsline {fixme}{Note: resultaterne er fra det r\IeC {\o }de accelerometer}{31}{section*.40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.12}{\ignorespaces P\IeC {\r a}virkningen af accelerometrets tre akser ved de seks forskellige positioner.\relax }}{32}{figure.caption.41}}
-\newlabel{fig:acc_paavirkning2}{{A.12}{32}{Påvirkningen af accelerometrets tre akser ved de seks forskellige positioner.\relax }{figure.caption.41}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Offsettet for accelerometeret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometeret uds\IeC {\ae }ttes for en 0 g-p\IeC {\r a}virkning.\relax }}{32}{table.caption.42}}
-\newlabel{tab:acc_offset}{{A.1}{32}{Offsettet for accelerometeret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometeret udsættes for en 0 g-påvirkning.\relax }{table.caption.42}{}}
-\newlabel{LastPage}{{}{32}{}{page.32}{}}
-\xdef\lastpage@lastpage{32}
-\xdef\lastpage@lastpageHy{32}
-\memsetcounter{lastsheet}{32}
-\memsetcounter{lastpage}{32}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.4}Fors\IeC {\o }gsopstilling}{32}{subsection.A.3.4}}
+\@writefile{toc}{\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{32}{section*.39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.10}{\ignorespaces Vinkeltester, som anvendes under fors\IeC {\o }get til at holde accelerometeret i bestemte vinkler.\relax }}{32}{figure.caption.40}}
+\newlabel{fig:vinkeltest}{{A.10}{32}{Vinkeltester, som anvendes under forsøget til at holde accelerometeret i bestemte vinkler.\relax }{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{32}{section*.41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.5}Fremgangsm\IeC {\r a}de}{33}{subsection.A.3.5}}
+\@writefile{toc}{\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{33}{section*.42}}
+\newlabel{sec:vinkel_fremgangsmaade}{{A.3.5}{33}{Fremgangsmåde for deltest 1}{section*.42}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{33}{section*.43}}
+\newlabel{sec:acc_fremgangsmaade}{{A.3.5}{33}{Fremgangsmåde for deltest 2}{section*.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3.6}Resultater}{33}{subsection.A.3.6}}
+\@writefile{toc}{\contentsline {subsubsection}{Resultater for deltest 1}{33}{section*.44}}
+\newlabel{sec:resul_linear}{{A.3.6}{33}{Resultater for deltest 1}{section*.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.11}{\ignorespaces Line\IeC {\ae }r regression for hver akse p\IeC {\r a} hvert accelerometer. M\IeC {\r a}lingerne er plottet med bl\IeC {\r a} prikker, og den line\IeC {\ae }re regression er illustreret med r\IeC {\o }d. $R^2$-v\IeC {\ae }rdien er angivet for hvert plot.\relax }}{34}{figure.caption.45}}
+\newlabel{fig:acc_lineaerregression}{{A.11}{34}{Lineær regression for hver akse på hvert accelerometer. Målingerne er plottet med blå prikker, og den lineære regression er illustreret med rød. $R^2$-værdien er angivet for hvert plot.\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Resultater for deltest 2}{34}{section*.46}}
+\@writefile{lox}{\contentsline {fixme}{Note: resultaterne er fra det r\IeC {\o }de accelerometer}{34}{section*.46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.12}{\ignorespaces P\IeC {\r a}virkningen af accelerometrets tre akser ved de seks forskellige positioner.\relax }}{35}{figure.caption.47}}
+\newlabel{fig:acc_paavirkning2}{{A.12}{35}{Påvirkningen af accelerometrets tre akser ved de seks forskellige positioner.\relax }{figure.caption.47}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Offsettet for accelerometeret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometeret uds\IeC {\ae }ttes for en 0 g-p\IeC {\r a}virkning.\relax }}{35}{table.caption.48}}
+\newlabel{tab:acc_offset}{{A.1}{35}{Offsettet for accelerometeret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometeret udsættes for en 0 g-påvirkning.\relax }{table.caption.48}{}}
+\newlabel{LastPage}{{}{35}{}{page.35}{}}
+\xdef\lastpage@lastpage{35}
+\xdef\lastpage@lastpageHy{35}
+\memsetcounter{lastsheet}{35}
+\memsetcounter{lastpage}{35}
