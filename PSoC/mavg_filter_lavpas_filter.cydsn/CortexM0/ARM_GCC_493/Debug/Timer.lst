@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
   30:.\Generated_Source\PSoC4/Timer.c **** *
   31:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
   32:.\Generated_Source\PSoC4/Timer.c **** *  None
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 2
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Timer.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
   87:.\Generated_Source\PSoC4/Timer.c **** 
   88:.\Generated_Source\PSoC4/Timer.c ****     #if (Timer__PWM_SEL == Timer_CONFIG)
   89:.\Generated_Source\PSoC4/Timer.c ****         Timer_CONTROL_REG = Timer_CTRL_PWM_BASE_CONFIG;
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/Timer.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  144:.\Generated_Source\PSoC4/Timer.c **** 
  145:.\Generated_Source\PSoC4/Timer.c ****         /* Set other values from customizer */
  146:.\Generated_Source\PSoC4/Timer.c ****         Timer_WritePeriod(Timer_PWM_PERIOD_VALUE );
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/Timer.c ****         Timer_WriteCompare(Timer_PWM_COMPARE_VALUE);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
   43              	.LVL1:
  184:.\Generated_Source\PSoC4/Timer.c **** 
  185:.\Generated_Source\PSoC4/Timer.c ****     /* Start Timer or PWM if start input is absent */
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 5
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 5
 
 
  186:.\Generated_Source\PSoC4/Timer.c ****     #if (Timer__PWM_SEL == Timer_CONFIG)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  222:.\Generated_Source\PSoC4/Timer.c **** * Global variables:
  223:.\Generated_Source\PSoC4/Timer.c **** *  Timer_initVar: global variable is used to indicate initial
  224:.\Generated_Source\PSoC4/Timer.c **** *  configuration of this component.  The variable is initialized to zero and set
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 6
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 6
 
 
  225:.\Generated_Source\PSoC4/Timer.c **** *  to 1 the first time Timer_Start() is called. This allows
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  264:.\Generated_Source\PSoC4/Timer.c ****     CyExitCriticalSection(enableInterrupts);
   77              		.loc 1 264 0
   78 0010 FFF7FEFF 		bl	CyExitCriticalSection
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 7
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 7
 
 
   79              	.LVL3:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  103              		.cfi_offset 4, -8
  104              		.cfi_offset 14, -4
  105 0002 041C     		mov	r4, r0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 8
 
 
  295:.\Generated_Source\PSoC4/Timer.c ****     uint8 enableInterrupts;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  313:.\Generated_Source\PSoC4/Timer.c **** *
  314:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
  315:.\Generated_Source\PSoC4/Timer.c **** *  qdMode: Quadrature Decoder mode
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 9
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 9
 
 
  316:.\Generated_Source\PSoC4/Timer.c **** *   Values:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  175              		.cfi_endproc
  176              	.LFE6:
  177              		.size	Timer_SetQDMode, .-Timer_SetQDMode
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 10
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 10
 
 
  178              		.section	.text.Timer_SetPrescaler,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  199 000a 1968     		ldr	r1, [r3]
  200 000c 054A     		ldr	r2, .L14+4
  201 000e 0A40     		and	r2, r1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 11
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 11
 
 
  202 0010 1A60     		str	r2, [r3]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  396:.\Generated_Source\PSoC4/Timer.c **** {
  230              		.loc 1 396 0
  231              		.cfi_startproc
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 12
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 12
 
 
  232              	.LVL16:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  276              	.LFB9:
  407:.\Generated_Source\PSoC4/Timer.c **** 
  408:.\Generated_Source\PSoC4/Timer.c **** 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 13
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 13
 
 
  409:.\Generated_Source\PSoC4/Timer.c **** /*******************************************************************************
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  287              		@ sp needed
  288 0008 7047     		bx	lr
  289              	.L21:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 14
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 14
 
 
  290 000a C046     		.align	2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  310              		.cfi_offset 14, -4
  311 0002 041C     		mov	r4, r0
  487:.\Generated_Source\PSoC4/Timer.c ****     uint8 enableInterrupts;
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 15
 
 
  488:.\Generated_Source\PSoC4/Timer.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  504:.\Generated_Source\PSoC4/Timer.c **** *  Writes the register that controls whether the PWM kill signal (stop input)
  505:.\Generated_Source\PSoC4/Timer.c **** *  causes the PWM counter to stop.  By default the kill operation does not stop
  506:.\Generated_Source\PSoC4/Timer.c **** *  the counter.  This functionality is only applicable to the three PWM modes.
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 16
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 16
 
 
  507:.\Generated_Source\PSoC4/Timer.c **** *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  380 0022 10BD     		pop	{r4, pc}
  381              	.L27:
  382              		.align	2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 17
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 17
 
 
  383              	.L26:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  409 000a 1968     		ldr	r1, [r3]
  410 000c 064A     		ldr	r2, .L29+4
  411 000e 0A40     		and	r2, r1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 18
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 18
 
 
  412 0010 1A60     		str	r2, [r3]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  583:.\Generated_Source\PSoC4/Timer.c **** *
  584:.\Generated_Source\PSoC4/Timer.c **** *******************************************************************************/
  585:.\Generated_Source\PSoC4/Timer.c **** void Timer_SetPWMInvert(uint32 mask)
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 19
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 19
 
 
  586:.\Generated_Source\PSoC4/Timer.c **** {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  596:.\Generated_Source\PSoC4/Timer.c **** 
  597:.\Generated_Source\PSoC4/Timer.c **** 
  598:.\Generated_Source\PSoC4/Timer.c **** 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 20
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 20
 
 
  599:.\Generated_Source\PSoC4/Timer.c **** /*******************************************************************************
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  626:.\Generated_Source\PSoC4/Timer.c **** *  Reads the current counter value.
  627:.\Generated_Source\PSoC4/Timer.c **** *
  628:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 21
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 21
 
 
  629:.\Generated_Source\PSoC4/Timer.c **** *  None
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  658:.\Generated_Source\PSoC4/Timer.c **** *                                         and period
  659:.\Generated_Source\PSoC4/Timer.c **** *
  660:.\Generated_Source\PSoC4/Timer.c **** * Return:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 22
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 22
 
 
  661:.\Generated_Source\PSoC4/Timer.c **** *  None
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  578              		.thumb_func
  579              		.type	Timer_WritePeriod, %function
  580              	Timer_WritePeriod:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 23
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 23
 
 
  581              	.LFB17:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  701:.\Generated_Source\PSoC4/Timer.c **** ********************************************************************************
  702:.\Generated_Source\PSoC4/Timer.c **** *
  703:.\Generated_Source\PSoC4/Timer.c **** * Summary:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 24
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 24
 
 
  704:.\Generated_Source\PSoC4/Timer.c **** *  Reads the 16 bit period register.
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  733:.\Generated_Source\PSoC4/Timer.c **** *     - 1 - Enable swap
  734:.\Generated_Source\PSoC4/Timer.c **** *
  735:.\Generated_Source\PSoC4/Timer.c **** * Return:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 25
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 25
 
 
  736:.\Generated_Source\PSoC4/Timer.c **** *  None
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  674              		.thumb_func
  675              		.type	Timer_WritePeriodBuf, %function
  676              	Timer_WritePeriodBuf:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 26
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 26
 
 
  677              	.LFB20:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  776:.\Generated_Source\PSoC4/Timer.c **** * Summary:
  777:.\Generated_Source\PSoC4/Timer.c **** *  Reads the 16 bit period buf register.
  778:.\Generated_Source\PSoC4/Timer.c **** *
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 27
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 27
 
 
  779:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  808:.\Generated_Source\PSoC4/Timer.c **** * Return:
  809:.\Generated_Source\PSoC4/Timer.c **** *  None
  810:.\Generated_Source\PSoC4/Timer.c **** *
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 28
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 28
 
 
  811:.\Generated_Source\PSoC4/Timer.c **** *******************************************************************************/
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  771              		.code	16
  772              		.thumb_func
  773              		.type	Timer_WriteCompare, %function
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 29
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 29
 
 
  774              	Timer_WriteCompare:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  873:.\Generated_Source\PSoC4/Timer.c ****     Timer_COMP_CAP_REG = (compare & Timer_16BIT_MASK);
  779              		.loc 1 873 0
  780 0000 0004     		lsl	r0, r0, #16
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 30
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 30
 
 
  781              	.LVL57:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  904:.\Generated_Source\PSoC4/Timer.c ****         uint32 regVal;
  905:.\Generated_Source\PSoC4/Timer.c ****     #endif /* (Timer_CY_TCPWM_4000) */
  906:.\Generated_Source\PSoC4/Timer.c **** 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 31
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 31
 
 
  907:.\Generated_Source\PSoC4/Timer.c ****     #if (Timer_CY_TCPWM_4000)
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  938:.\Generated_Source\PSoC4/Timer.c **** *
  939:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
  940:.\Generated_Source\PSoC4/Timer.c **** *  compareBuf: Compare value
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 32
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 32
 
 
  941:.\Generated_Source\PSoC4/Timer.c **** *
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  845              	.LFE25:
  846              		.size	Timer_WriteCompareBuf, .-Timer_WriteCompareBuf
  847              		.section	.text.Timer_ReadCompareBuf,"ax",%progbits
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 33
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 33
 
 
  848              		.align	2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
 1023:.\Generated_Source\PSoC4/Timer.c **** 
 1024:.\Generated_Source\PSoC4/Timer.c ****         return (regVal & Timer_16BIT_MASK);
 1025:.\Generated_Source\PSoC4/Timer.c ****     #else
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 34
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 34
 
 
 1026:.\Generated_Source\PSoC4/Timer.c ****         return (Timer_COMP_CAP_BUF_REG & Timer_16BIT_MASK);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  887              		.loc 1 1049 0
  888              		@ sp needed
  889 0008 7047     		bx	lr
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 35
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 35
 
 
  890              	.L75:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  923              		.align	2
  924              		.global	Timer_SetCaptureMode
  925              		.code	16
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 36
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 36
 
 
  926              		.thumb_func
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  949 0014 1443     		orr	r4, r2
  950              	.LVL62:
  951 0016 1C60     		str	r4, [r3]
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 37
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 37
 
 
 1102:.\Generated_Source\PSoC4/Timer.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  979              		.cfi_offset 14, -4
  980 0002 041C     		mov	r4, r0
 1129:.\Generated_Source\PSoC4/Timer.c ****     uint8 enableInterrupts;
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 38
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 38
 
 
 1130:.\Generated_Source\PSoC4/Timer.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
 1148:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
 1149:.\Generated_Source\PSoC4/Timer.c **** *  triggerMode: Enumerated trigger mode value
 1150:.\Generated_Source\PSoC4/Timer.c **** *   Values:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 39
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 39
 
 
 1151:.\Generated_Source\PSoC4/Timer.c **** *     - Timer_TRIG_LEVEL     - Level
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1051              		.cfi_endproc
  1052              	.LFE31:
  1053              		.size	Timer_SetStartMode, .-Timer_SetStartMode
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 40
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 40
 
 
  1054              		.section	.text.Timer_SetStopMode,"ax",%progbits
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1079              		.loc 1 1199 0
  1080 0012 1A68     		ldr	r2, [r3]
  1081 0014 A401     		lsl	r4, r4, #6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 41
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 41
 
 
  1082              	.LVL74:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1109 0000 10B5     		push	{r4, lr}
  1110              		.cfi_def_cfa_offset 8
  1111              		.cfi_offset 4, -8
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 42
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 42
 
 
  1112              		.cfi_offset 14, -4
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
 1243:.\Generated_Source\PSoC4/Timer.c **** *  Triggers the designated command to occur on the designated TCPWM instances.
 1244:.\Generated_Source\PSoC4/Timer.c **** *  The mask can be used to apply this command simultaneously to more than one
 1245:.\Generated_Source\PSoC4/Timer.c **** *  instance.  This allows multiple TCPWM instances to be synchronized.
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 43
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 43
 
 
 1246:.\Generated_Source\PSoC4/Timer.c **** *
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1175 0014 38BD     		pop	{r3, r4, r5, pc}
  1176              	.L96:
  1177 0016 C046     		.align	2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 44
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 44
 
 
  1178              	.L95:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1207              		.align	2
  1208              	.L98:
  1209 0010 04012040 		.word	1075839236
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 45
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 45
 
 
  1210              		.cfi_endproc
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1240              		.code	16
  1241              		.thumb_func
  1242              		.type	Timer_Init, %function
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 46
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 46
 
 
  1243              	Timer_Init:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1290              		.type	Timer_Start, %function
  1291              	Timer_Start:
  1292              	.LFB3:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 47
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 47
 
 
  231:.\Generated_Source\PSoC4/Timer.c ****     if (0u == Timer_initVar)
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
 1331:.\Generated_Source\PSoC4/Timer.c **** *
 1332:.\Generated_Source\PSoC4/Timer.c **** * Parameters:
 1333:.\Generated_Source\PSoC4/Timer.c **** *   None
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 48
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 48
 
 
 1334:.\Generated_Source\PSoC4/Timer.c **** *
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
 1365:.\Generated_Source\PSoC4/Timer.c **** uint32 Timer_GetInterruptSource(void)
 1366:.\Generated_Source\PSoC4/Timer.c **** {
  1356              		.loc 1 1366 0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 49
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 49
 
 
  1357              		.cfi_startproc
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1386              		@ sp needed
  1387 0004 7047     		bx	lr
  1388              	.L118:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 50
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 50
 
 
  1389 0006 C046     		.align	2
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1420              		.bss
  1421              		.set	.LANCHOR0,. + 0
  1422              		.type	Timer_initVar, %object
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 51
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 51
 
 
  1423              		.size	Timer_initVar, 1
@@ -3015,10 +3015,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1434 0006 00000000 		.4byte	.Ldebug_abbrev0
  1435 000a 04       		.byte	0x4
  1436 000b 01       		.uleb128 0x1
- 1437 000c 55030000 		.4byte	.LASF76
+ 1437 000c 96030000 		.4byte	.LASF76
  1438 0010 01       		.byte	0x1
  1439 0011 D1010000 		.4byte	.LASF77
- 1440 0015 D3040000 		.4byte	.LASF78
+ 1440 0015 44030000 		.4byte	.LASF78
  1441 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1442 001d 00000000 		.4byte	0
  1443 0021 00000000 		.4byte	.Ldebug_line0
@@ -3029,11 +3029,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1448 002c 02       		.uleb128 0x2
  1449 002d 01       		.byte	0x1
  1450 002e 08       		.byte	0x8
- 1451 002f 3F040000 		.4byte	.LASF1
+ 1451 002f 80040000 		.4byte	.LASF1
  1452 0033 02       		.uleb128 0x2
  1453 0034 02       		.byte	0x2
  1454 0035 05       		.byte	0x5
- 1455 0036 5E040000 		.4byte	.LASF2
+ 1455 0036 9F040000 		.4byte	.LASF2
  1456 003a 02       		.uleb128 0x2
  1457 003b 02       		.byte	0x2
  1458 003c 07       		.byte	0x7
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1477 005e 04       		.byte	0x4
  1478 005f 05       		.byte	0x5
  1479 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 52
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 52
 
 
  1480 0064 02       		.uleb128 0x2
@@ -3078,7 +3078,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1494 0083 02       		.uleb128 0x2
  1495 0084 04       		.byte	0x4
  1496 0085 04       		.byte	0x4
- 1497 0086 E3030000 		.4byte	.LASF11
+ 1497 0086 24040000 		.4byte	.LASF11
  1498 008a 02       		.uleb128 0x2
  1499 008b 08       		.byte	0x8
  1500 008c 04       		.byte	0x4
@@ -3086,9 +3086,9 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1502 0091 02       		.uleb128 0x2
  1503 0092 01       		.byte	0x1
  1504 0093 08       		.byte	0x8
- 1505 0094 A9040000 		.4byte	.LASF13
+ 1505 0094 EA040000 		.4byte	.LASF13
  1506 0098 04       		.uleb128 0x4
- 1507 0099 D3020000 		.4byte	.LASF14
+ 1507 0099 C2020000 		.4byte	.LASF14
  1508 009d 02       		.byte	0x2
  1509 009e E401     		.2byte	0x1e4
  1510 00a0 A4000000 		.4byte	0xa4
@@ -3097,7 +3097,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1513 00a9 02       		.uleb128 0x2
  1514 00aa 04       		.byte	0x4
  1515 00ab 07       		.byte	0x7
- 1516 00ac EE020000 		.4byte	.LASF15
+ 1516 00ac DD020000 		.4byte	.LASF15
  1517 00b0 06       		.uleb128 0x6
  1518 00b1 2E020000 		.4byte	.LASF16
  1519 00b5 01       		.byte	0x1
@@ -3108,7 +3108,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1524 00c0 9C       		.byte	0x9c
  1525 00c1 E7000000 		.4byte	0xe7
  1526 00c5 07       		.uleb128 0x7
- 1527 00c6 0B050000 		.4byte	.LASF18
+ 1527 00c6 30050000 		.4byte	.LASF18
  1528 00ca 01       		.byte	0x1
  1529 00cb B3       		.byte	0xb3
  1530 00cc 6B000000 		.4byte	0x6b
@@ -3118,13 +3118,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1534 00d9 C4080000 		.4byte	0x8c4
  1535 00dd 08       		.uleb128 0x8
  1536 00de 14000000 		.4byte	.LVL1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 53
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 53
 
 
  1537 00e2 CF080000 		.4byte	0x8cf
  1538 00e6 00       		.byte	0
  1539 00e7 09       		.uleb128 0x9
- 1540 00e8 9B020000 		.4byte	.LASF17
+ 1540 00e8 8A020000 		.4byte	.LASF17
  1541 00ec 01       		.byte	0x1
  1542 00ed 0001     		.2byte	0x100
  1543 00ef 00000000 		.4byte	.LFB4
@@ -3133,7 +3133,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1546 00f8 9C       		.byte	0x9c
  1547 00f9 20010000 		.4byte	0x120
  1548 00fd 0A       		.uleb128 0xa
- 1549 00fe 0B050000 		.4byte	.LASF18
+ 1549 00fe 30050000 		.4byte	.LASF18
  1550 0102 01       		.byte	0x1
  1551 0103 0201     		.2byte	0x102
  1552 0105 6B000000 		.4byte	0x6b
@@ -3155,13 +3155,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1568 0131 9C       		.byte	0x9c
  1569 0132 69010000 		.4byte	0x169
  1570 0136 0B       		.uleb128 0xb
- 1571 0137 AE040000 		.4byte	.LASF21
+ 1571 0137 EF040000 		.4byte	.LASF21
  1572 013b 01       		.byte	0x1
  1573 013c 2501     		.2byte	0x125
  1574 013e 77000000 		.4byte	0x77
  1575 0142 26000000 		.4byte	.LLST2
  1576 0146 0A       		.uleb128 0xa
- 1577 0147 0B050000 		.4byte	.LASF18
+ 1577 0147 30050000 		.4byte	.LASF18
  1578 014b 01       		.byte	0x1
  1579 014c 2701     		.2byte	0x127
  1580 014e 6B000000 		.4byte	0x6b
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1591 016e 01       		.byte	0x1
  1592 016f 4601     		.2byte	0x146
  1593 0171 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 54
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 54
 
 
  1594 0175 28000000 		.4byte	.LFE6-.LFB6
@@ -3192,7 +3192,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1602 0187 77000000 		.4byte	0x77
  1603 018b 65000000 		.4byte	.LLST4
  1604 018f 0A       		.uleb128 0xa
- 1605 0190 0B050000 		.4byte	.LASF18
+ 1605 0190 30050000 		.4byte	.LASF18
  1606 0194 01       		.byte	0x1
  1607 0195 4801     		.2byte	0x148
  1608 0197 6B000000 		.4byte	0x6b
@@ -3205,7 +3205,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1615 01ad CF080000 		.4byte	0x8cf
  1616 01b1 00       		.byte	0
  1617 01b2 09       		.uleb128 0x9
- 1618 01b3 76040000 		.4byte	.LASF23
+ 1618 01b3 B7040000 		.4byte	.LASF23
  1619 01b7 01       		.byte	0x1
  1620 01b8 6B01     		.2byte	0x16b
  1621 01ba 00000000 		.4byte	.LFB7
@@ -3214,13 +3214,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1624 01c3 9C       		.byte	0x9c
  1625 01c4 FB010000 		.4byte	0x1fb
  1626 01c8 0B       		.uleb128 0xb
- 1627 01c9 E9030000 		.4byte	.LASF24
+ 1627 01c9 2A040000 		.4byte	.LASF24
  1628 01cd 01       		.byte	0x1
  1629 01ce 6B01     		.2byte	0x16b
  1630 01d0 77000000 		.4byte	0x77
  1631 01d4 A4000000 		.4byte	.LLST6
  1632 01d8 0A       		.uleb128 0xa
- 1633 01d9 0B050000 		.4byte	.LASF18
+ 1633 01d9 30050000 		.4byte	.LASF18
  1634 01dd 01       		.byte	0x1
  1635 01de 6D01     		.2byte	0x16d
  1636 01e0 6B000000 		.4byte	0x6b
@@ -3233,25 +3233,25 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1643 01f6 CF080000 		.4byte	0x8cf
  1644 01fa 00       		.byte	0
  1645 01fb 09       		.uleb128 0x9
- 1646 01fc 31050000 		.4byte	.LASF25
+ 1646 01fc 56050000 		.4byte	.LASF25
  1647 0200 01       		.byte	0x1
  1648 0201 8B01     		.2byte	0x18b
  1649 0203 00000000 		.4byte	.LFB8
  1650 0207 2C000000 		.4byte	.LFE8-.LFB8
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 55
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 55
 
 
  1651 020b 01       		.uleb128 0x1
  1652 020c 9C       		.byte	0x9c
  1653 020d 44020000 		.4byte	0x244
  1654 0211 0B       		.uleb128 0xb
- 1655 0212 A6020000 		.4byte	.LASF26
+ 1655 0212 95020000 		.4byte	.LASF26
  1656 0216 01       		.byte	0x1
  1657 0217 8B01     		.2byte	0x18b
  1658 0219 77000000 		.4byte	0x77
  1659 021d E3000000 		.4byte	.LLST8
  1660 0221 0A       		.uleb128 0xa
- 1661 0222 0B050000 		.4byte	.LASF18
+ 1661 0222 30050000 		.4byte	.LASF18
  1662 0226 01       		.byte	0x1
  1663 0227 8D01     		.2byte	0x18d
  1664 0229 6B000000 		.4byte	0x6b
@@ -3264,7 +3264,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1671 023f CF080000 		.4byte	0x8cf
  1672 0243 00       		.byte	0
  1673 0244 09       		.uleb128 0x9
- 1674 0245 6C050000 		.4byte	.LASF27
+ 1674 0245 91050000 		.4byte	.LASF27
  1675 0249 01       		.byte	0x1
  1676 024a C101     		.2byte	0x1c1
  1677 024c 00000000 		.4byte	.LFB9
@@ -3289,16 +3289,16 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1696 027c 9C       		.byte	0x9c
  1697 027d B4020000 		.4byte	0x2b4
  1698 0281 0B       		.uleb128 0xb
- 1699 0282 0C030000 		.4byte	.LASF30
+ 1699 0282 FB020000 		.4byte	.LASF30
  1700 0286 01       		.byte	0x1
  1701 0287 E501     		.2byte	0x1e5
  1702 0289 77000000 		.4byte	0x77
  1703 028d 43010000 		.4byte	.LLST11
  1704 0291 0A       		.uleb128 0xa
- 1705 0292 0B050000 		.4byte	.LASF18
+ 1705 0292 30050000 		.4byte	.LASF18
  1706 0296 01       		.byte	0x1
  1707 0297 E701     		.2byte	0x1e7
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 56
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 56
 
 
  1708 0299 6B000000 		.4byte	0x6b
@@ -3320,13 +3320,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1724 02c5 9C       		.byte	0x9c
  1725 02c6 FD020000 		.4byte	0x2fd
  1726 02ca 0B       		.uleb128 0xb
- 1727 02cb 4D040000 		.4byte	.LASF32
+ 1727 02cb 8E040000 		.4byte	.LASF32
  1728 02cf 01       		.byte	0x1
  1729 02d0 0702     		.2byte	0x207
  1730 02d2 77000000 		.4byte	0x77
  1731 02d6 82010000 		.4byte	.LLST13
  1732 02da 0A       		.uleb128 0xa
- 1733 02db 0B050000 		.4byte	.LASF18
+ 1733 02db 30050000 		.4byte	.LASF18
  1734 02df 01       		.byte	0x1
  1735 02e0 0902     		.2byte	0x209
  1736 02e2 6B000000 		.4byte	0x6b
@@ -3354,11 +3354,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1758 031b 77000000 		.4byte	0x77
  1759 031f C1010000 		.4byte	.LLST15
  1760 0323 0A       		.uleb128 0xa
- 1761 0324 0B050000 		.4byte	.LASF18
+ 1761 0324 30050000 		.4byte	.LASF18
  1762 0328 01       		.byte	0x1
  1763 0329 2A02     		.2byte	0x22a
  1764 032b 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 57
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 57
 
 
  1765 032f ED010000 		.4byte	.LLST16
@@ -3370,7 +3370,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1771 0341 CF080000 		.4byte	0x8cf
  1772 0345 00       		.byte	0
  1773 0346 09       		.uleb128 0x9
- 1774 0347 1B030000 		.4byte	.LASF35
+ 1774 0347 0A030000 		.4byte	.LASF35
  1775 034b 01       		.byte	0x1
  1776 034c 4902     		.2byte	0x249
  1777 034e 00000000 		.4byte	.LFB13
@@ -3385,7 +3385,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1786 0364 77000000 		.4byte	0x77
  1787 0368 00020000 		.4byte	.LLST17
  1788 036c 0A       		.uleb128 0xa
- 1789 036d 0B050000 		.4byte	.LASF18
+ 1789 036d 30050000 		.4byte	.LASF18
  1790 0371 01       		.byte	0x1
  1791 0372 4B02     		.2byte	0x24b
  1792 0374 6B000000 		.4byte	0x6b
@@ -3414,11 +3414,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1815 03b1 3F020000 		.4byte	.LLST19
  1816 03b5 00       		.byte	0
  1817 03b6 0C       		.uleb128 0xc
- 1818 03b7 89020000 		.4byte	.LASF43
+ 1818 03b7 78020000 		.4byte	.LASF43
  1819 03bb 01       		.byte	0x1
  1820 03bc 7B02     		.2byte	0x27b
  1821 03be 77000000 		.4byte	0x77
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 58
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 58
 
 
  1822 03c2 00000000 		.4byte	.LFB15
@@ -3426,7 +3426,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1824 03ca 01       		.uleb128 0x1
  1825 03cb 9C       		.byte	0x9c
  1826 03cc 09       		.uleb128 0x9
- 1827 03cd 94040000 		.4byte	.LASF39
+ 1827 03cd D5040000 		.4byte	.LASF39
  1828 03d1 01       		.byte	0x1
  1829 03d2 9802     		.2byte	0x298
  1830 03d4 00000000 		.4byte	.LFB16
@@ -3435,13 +3435,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1833 03dd 9C       		.byte	0x9c
  1834 03de 15040000 		.4byte	0x415
  1835 03e2 0B       		.uleb128 0xb
- 1836 03e3 C7040000 		.4byte	.LASF40
+ 1836 03e3 08050000 		.4byte	.LASF40
  1837 03e7 01       		.byte	0x1
  1838 03e8 9802     		.2byte	0x298
  1839 03ea 77000000 		.4byte	0x77
  1840 03ee 60020000 		.4byte	.LLST20
  1841 03f2 0A       		.uleb128 0xa
- 1842 03f3 0B050000 		.4byte	.LASF18
+ 1842 03f3 30050000 		.4byte	.LASF18
  1843 03f7 01       		.byte	0x1
  1844 03f8 9A02     		.2byte	0x29a
  1845 03fa 6B000000 		.4byte	0x6b
@@ -3470,7 +3470,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1868 0437 9F020000 		.4byte	.LLST22
  1869 043b 00       		.byte	0
  1870 043c 0C       		.uleb128 0xc
- 1871 043d 78020000 		.4byte	.LASF44
+ 1871 043d 14050000 		.4byte	.LASF44
  1872 0441 01       		.byte	0x1
  1873 0442 C902     		.2byte	0x2c9
  1874 0444 77000000 		.4byte	0x77
@@ -3478,11 +3478,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1876 044c 10000000 		.4byte	.LFE18-.LFB18
  1877 0450 01       		.uleb128 0x1
  1878 0451 9C       		.byte	0x9c
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 59
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 59
 
 
  1879 0452 09       		.uleb128 0x9
- 1880 0453 D9020000 		.4byte	.LASF45
+ 1880 0453 C8020000 		.4byte	.LASF45
  1881 0457 01       		.byte	0x1
  1882 0458 E302     		.2byte	0x2e3
  1883 045a 00000000 		.4byte	.LFB19
@@ -3491,13 +3491,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1886 0463 9C       		.byte	0x9c
  1887 0464 9B040000 		.4byte	0x49b
  1888 0468 0B       		.uleb128 0xb
- 1889 0469 57050000 		.4byte	.LASF46
+ 1889 0469 7C050000 		.4byte	.LASF46
  1890 046d 01       		.byte	0x1
  1891 046e E302     		.2byte	0x2e3
  1892 0470 77000000 		.4byte	0x77
  1893 0474 C0020000 		.4byte	.LLST23
  1894 0478 0A       		.uleb128 0xa
- 1895 0479 0B050000 		.4byte	.LASF18
+ 1895 0479 30050000 		.4byte	.LASF18
  1896 047d 01       		.byte	0x1
  1897 047e E502     		.2byte	0x2e5
  1898 0480 6B000000 		.4byte	0x6b
@@ -3510,7 +3510,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1905 0496 CF080000 		.4byte	0x8cf
  1906 049a 00       		.byte	0
  1907 049b 09       		.uleb128 0x9
- 1908 049c F7020000 		.4byte	.LASF47
+ 1908 049c E6020000 		.4byte	.LASF47
  1909 04a0 01       		.byte	0x1
  1910 04a1 FE02     		.2byte	0x2fe
  1911 04a3 00000000 		.4byte	.LFB20
@@ -3519,14 +3519,14 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1914 04ac 9C       		.byte	0x9c
  1915 04ad C2040000 		.4byte	0x4c2
  1916 04b1 0B       		.uleb128 0xb
- 1917 04b2 62050000 		.4byte	.LASF48
+ 1917 04b2 87050000 		.4byte	.LASF48
  1918 04b6 01       		.byte	0x1
  1919 04b7 FE02     		.2byte	0x2fe
  1920 04b9 77000000 		.4byte	0x77
  1921 04bd FF020000 		.4byte	.LLST25
  1922 04c1 00       		.byte	0
  1923 04c2 0C       		.uleb128 0xc
- 1924 04c3 2E030000 		.4byte	.LASF49
+ 1924 04c3 1D030000 		.4byte	.LASF49
  1925 04c7 01       		.byte	0x1
  1926 04c8 1203     		.2byte	0x312
  1927 04ca 77000000 		.4byte	0x77
@@ -3535,10 +3535,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1930 04d6 01       		.uleb128 0x1
  1931 04d7 9C       		.byte	0x9c
  1932 04d8 09       		.uleb128 0x9
- 1933 04d9 05040000 		.4byte	.LASF50
+ 1933 04d9 46040000 		.4byte	.LASF50
  1934 04dd 01       		.byte	0x1
  1935 04de 2C03     		.2byte	0x32c
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 60
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 60
 
 
  1936 04e0 00000000 		.4byte	.LFB22
@@ -3547,13 +3547,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1939 04e9 9C       		.byte	0x9c
  1940 04ea 21050000 		.4byte	0x521
  1941 04ee 0B       		.uleb128 0xb
- 1942 04ef 57050000 		.4byte	.LASF46
+ 1942 04ef 7C050000 		.4byte	.LASF46
  1943 04f3 01       		.byte	0x1
  1944 04f4 2C03     		.2byte	0x32c
  1945 04f6 77000000 		.4byte	0x77
  1946 04fa 20030000 		.4byte	.LLST26
  1947 04fe 0A       		.uleb128 0xa
- 1948 04ff 0B050000 		.4byte	.LASF18
+ 1948 04ff 30050000 		.4byte	.LASF18
  1949 0503 01       		.byte	0x1
  1950 0504 2E03     		.2byte	0x32e
  1951 0506 6B000000 		.4byte	0x6b
@@ -3598,19 +3598,19 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  1990 056a 10000000 		.4byte	.LFE25-.LFB25
  1991 056e 01       		.uleb128 0x1
  1992 056f 9C       		.byte	0x9c
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 61
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 61
 
 
  1993 0570 85050000 		.4byte	0x585
  1994 0574 0B       		.uleb128 0xb
- 1995 0575 00050000 		.4byte	.LASF55
+ 1995 0575 25050000 		.4byte	.LASF55
  1996 0579 01       		.byte	0x1
  1997 057a BA03     		.2byte	0x3ba
  1998 057c 77000000 		.4byte	0x77
  1999 0580 80030000 		.4byte	.LLST29
  2000 0584 00       		.byte	0
  2001 0585 0C       		.uleb128 0xc
- 2002 0586 7D050000 		.4byte	.LASF56
+ 2002 0586 A2050000 		.4byte	.LASF56
  2003 058a 01       		.byte	0x1
  2004 058b E803     		.2byte	0x3e8
  2005 058d 77000000 		.4byte	0x77
@@ -3628,7 +3628,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2017 05af 01       		.uleb128 0x1
  2018 05b0 9C       		.byte	0x9c
  2019 05b1 0C       		.uleb128 0xc
- 2020 05b2 19040000 		.4byte	.LASF58
+ 2020 05b2 5A040000 		.4byte	.LASF58
  2021 05b6 01       		.byte	0x1
  2022 05b7 2B04     		.2byte	0x42b
  2023 05b9 77000000 		.4byte	0x77
@@ -3637,7 +3637,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2026 05c5 01       		.uleb128 0x1
  2027 05c6 9C       		.byte	0x9c
  2028 05c7 09       		.uleb128 0x9
- 2029 05c8 1C050000 		.4byte	.LASF59
+ 2029 05c8 41050000 		.4byte	.LASF59
  2030 05cc 01       		.byte	0x1
  2031 05cd 4604     		.2byte	0x446
  2032 05cf 00000000 		.4byte	.LFB29
@@ -3652,13 +3652,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2041 05e5 77000000 		.4byte	0x77
  2042 05e9 A1030000 		.4byte	.LLST30
  2043 05ed 0A       		.uleb128 0xa
- 2044 05ee 0B050000 		.4byte	.LASF18
+ 2044 05ee 30050000 		.4byte	.LASF18
  2045 05f2 01       		.byte	0x1
  2046 05f3 4804     		.2byte	0x448
  2047 05f5 6B000000 		.4byte	0x6b
  2048 05f9 CD030000 		.4byte	.LLST31
  2049 05fd 08       		.uleb128 0x8
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 62
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 62
 
 
  2050 05fe 08000000 		.4byte	.LVL61
@@ -3668,7 +3668,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2054 060b CF080000 		.4byte	0x8cf
  2055 060f 00       		.byte	0
  2056 0610 09       		.uleb128 0x9
- 2057 0611 B3040000 		.4byte	.LASF61
+ 2057 0611 F4040000 		.4byte	.LASF61
  2058 0615 01       		.byte	0x1
  2059 0616 6704     		.2byte	0x467
  2060 0618 00000000 		.4byte	.LFB30
@@ -3683,7 +3683,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2069 062e 77000000 		.4byte	0x77
  2070 0632 E0030000 		.4byte	.LLST32
  2071 0636 0A       		.uleb128 0xa
- 2072 0637 0B050000 		.4byte	.LASF18
+ 2072 0637 30050000 		.4byte	.LASF18
  2073 063b 01       		.byte	0x1
  2074 063c 6904     		.2byte	0x469
  2075 063e 6B000000 		.4byte	0x6b
@@ -3696,7 +3696,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2082 0654 CF080000 		.4byte	0x8cf
  2083 0658 00       		.byte	0
  2084 0659 09       		.uleb128 0x9
- 2085 065a 42030000 		.4byte	.LASF62
+ 2085 065a 31030000 		.4byte	.LASF62
  2086 065e 01       		.byte	0x1
  2087 065f 8804     		.2byte	0x488
  2088 0661 00000000 		.4byte	.LFB31
@@ -3711,14 +3711,14 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2097 0677 77000000 		.4byte	0x77
  2098 067b 1F040000 		.4byte	.LLST34
  2099 067f 0A       		.uleb128 0xa
- 2100 0680 0B050000 		.4byte	.LASF18
+ 2100 0680 30050000 		.4byte	.LASF18
  2101 0684 01       		.byte	0x1
  2102 0685 8A04     		.2byte	0x48a
  2103 0687 6B000000 		.4byte	0x6b
  2104 068b 4B040000 		.4byte	.LLST35
  2105 068f 08       		.uleb128 0x8
  2106 0690 08000000 		.4byte	.LVL69
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 63
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 63
 
 
  2107 0694 C4080000 		.4byte	0x8c4
@@ -3727,7 +3727,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2110 069d CF080000 		.4byte	0x8cf
  2111 06a1 00       		.byte	0
  2112 06a2 09       		.uleb128 0x9
- 2113 06a3 F3030000 		.4byte	.LASF63
+ 2113 06a3 34040000 		.4byte	.LASF63
  2114 06a7 01       		.byte	0x1
  2115 06a8 A804     		.2byte	0x4a8
  2116 06aa 00000000 		.4byte	.LFB32
@@ -3742,7 +3742,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2125 06c0 77000000 		.4byte	0x77
  2126 06c4 5E040000 		.4byte	.LLST36
  2127 06c8 0A       		.uleb128 0xa
- 2128 06c9 0B050000 		.4byte	.LASF18
+ 2128 06c9 30050000 		.4byte	.LASF18
  2129 06cd 01       		.byte	0x1
  2130 06ce AA04     		.2byte	0x4aa
  2131 06d0 6B000000 		.4byte	0x6b
@@ -3770,7 +3770,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2153 0709 77000000 		.4byte	0x77
  2154 070d 9D040000 		.4byte	.LLST38
  2155 0711 0A       		.uleb128 0xa
- 2156 0712 0B050000 		.4byte	.LASF18
+ 2156 0712 30050000 		.4byte	.LASF18
  2157 0716 01       		.byte	0x1
  2158 0717 CB04     		.2byte	0x4cb
  2159 0719 6B000000 		.4byte	0x6b
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2161 0721 08       		.uleb128 0x8
  2162 0722 08000000 		.4byte	.LVL77
  2163 0726 C4080000 		.4byte	0x8c4
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 64
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 64
 
 
  2164 072a 08       		.uleb128 0x8
@@ -3807,7 +3807,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2187 0762 77000000 		.4byte	0x77
  2188 0766 08050000 		.4byte	.LLST41
  2189 076a 0A       		.uleb128 0xa
- 2190 076b 0B050000 		.4byte	.LASF18
+ 2190 076b 30050000 		.4byte	.LASF18
  2191 076f 01       		.byte	0x1
  2192 0770 F304     		.2byte	0x4f3
  2193 0772 6B000000 		.4byte	0x6b
@@ -3820,7 +3820,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2200 0788 CF080000 		.4byte	0x8cf
  2201 078c 00       		.byte	0
  2202 078d 0C       		.uleb128 0xc
- 2203 078e 2E040000 		.4byte	.LASF67
+ 2203 078e 6F040000 		.4byte	.LASF67
  2204 0792 01       		.byte	0x1
  2205 0793 0E05     		.2byte	0x50e
  2206 0795 77000000 		.4byte	0x77
@@ -3838,10 +3838,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2218 07b4 9C       		.byte	0x9c
  2219 07b5 C8070000 		.4byte	0x7c8
  2220 07b9 0D       		.uleb128 0xd
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 65
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 65
 
 
- 2221 07ba 68040000 		.4byte	.LASF69
+ 2221 07ba A9040000 		.4byte	.LASF69
  2222 07be 01       		.byte	0x1
  2223 07bf 2705     		.2byte	0x527
  2224 07c1 77000000 		.4byte	0x77
@@ -3849,7 +3849,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2226 07c6 50       		.byte	0x50
  2227 07c7 00       		.byte	0
  2228 07c8 06       		.uleb128 0x6
- 2229 07c9 89040000 		.4byte	.LASF70
+ 2229 07c9 CA040000 		.4byte	.LASF70
  2230 07cd 01       		.byte	0x1
  2231 07ce 26       		.byte	0x26
  2232 07cf 00000000 		.4byte	.LFB1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2275 0825 9C       		.byte	0x9c
  2276 0826 3D080000 		.4byte	0x83d
  2277 082a 08       		.uleb128 0x8
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 66
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 66
 
 
  2278 082b 0E000000 		.4byte	.LVL89
@@ -3908,7 +3908,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2282 0838 B0000000 		.4byte	0xb0
  2283 083c 00       		.byte	0
  2284 083d 0C       		.uleb128 0xc
- 2285 083e B4020000 		.4byte	.LASF72
+ 2285 083e A3020000 		.4byte	.LASF72
  2286 0842 01       		.byte	0x1
  2287 0843 3E05     		.2byte	0x53e
  2288 0845 77000000 		.4byte	0x77
@@ -3926,7 +3926,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2300 0867 01       		.uleb128 0x1
  2301 0868 9C       		.byte	0x9c
  2302 0869 09       		.uleb128 0x9
- 2303 086a 42050000 		.4byte	.LASF74
+ 2303 086a 67050000 		.4byte	.LASF74
  2304 086e 01       		.byte	0x1
  2305 086f 6C05     		.2byte	0x56c
  2306 0871 00000000 		.4byte	.LFB39
@@ -3935,7 +3935,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2309 087a 9C       		.byte	0x9c
  2310 087b 8E080000 		.4byte	0x88e
  2311 087f 0D       		.uleb128 0xd
- 2312 0880 68040000 		.4byte	.LASF69
+ 2312 0880 A9040000 		.4byte	.LASF69
  2313 0884 01       		.byte	0x1
  2314 0885 6C05     		.2byte	0x56c
  2315 0887 77000000 		.4byte	0x77
@@ -3952,13 +3952,13 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2326 089f 9C       		.byte	0x9c
  2327 08a0 B3080000 		.4byte	0x8b3
  2328 08a4 0D       		.uleb128 0xd
- 2329 08a5 68040000 		.4byte	.LASF69
+ 2329 08a5 A9040000 		.4byte	.LASF69
  2330 08a9 01       		.byte	0x1
  2331 08aa 8305     		.2byte	0x583
  2332 08ac 77000000 		.4byte	0x77
  2333 08b0 01       		.uleb128 0x1
  2334 08b1 50       		.byte	0x50
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 67
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 67
 
 
  2335 08b2 00       		.byte	0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2389 001e 03       		.uleb128 0x3
  2390 001f 24       		.uleb128 0x24
  2391 0020 00       		.byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 68
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 68
 
 
  2392 0021 0B       		.uleb128 0xb
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2446 0058 34       		.uleb128 0x34
  2447 0059 00       		.byte	0
  2448 005a 03       		.uleb128 0x3
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 69
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 69
 
 
  2449 005b 0E       		.uleb128 0xe
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2503 0094 49       		.uleb128 0x49
  2504 0095 13       		.uleb128 0x13
  2505 0096 02       		.uleb128 0x2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 70
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 70
 
 
  2506 0097 17       		.uleb128 0x17
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2560 00ce 02       		.uleb128 0x2
  2561 00cf 18       		.uleb128 0x18
  2562 00d0 00       		.byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 71
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 71
 
 
  2563 00d1 00       		.byte	0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2617 010e 3A       		.uleb128 0x3a
  2618 010f 0B       		.uleb128 0xb
  2619 0110 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 72
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 72
 
 
  2620 0111 0B       		.uleb128 0xb
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2674 0030 50       		.byte	0x50
  2675 0031 07000000 		.4byte	.LVL5-1
  2676 0035 16000000 		.4byte	.LVL6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 73
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 73
 
 
  2677 0039 0100     		.2byte	0x1
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2731 00c2 0400     		.2byte	0x4
  2732 00c4 F3       		.byte	0xf3
  2733 00c5 01       		.uleb128 0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 74
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 74
 
 
  2734 00c6 50       		.byte	0x50
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2788 014d 50       		.byte	0x50
  2789 014e 07000000 		.4byte	.LVL23-1
  2790 0152 18000000 		.4byte	.LVL24
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 75
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 75
 
 
  2791 0156 0100     		.2byte	0x1
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2845 01df 0400     		.2byte	0x4
  2846 01e1 F3       		.byte	0xf3
  2847 01e2 01       		.uleb128 0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 76
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 76
 
 
  2848 01e3 50       		.byte	0x50
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2902 026a 50       		.byte	0x50
  2903 026b 07000000 		.4byte	.LVL41-1
  2904 026f 16000000 		.4byte	.LVL42
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 77
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 77
 
 
  2905 0273 0100     		.2byte	0x1
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  2959 02f6 50       		.byte	0x50
  2960 02f7 00000000 		.4byte	0
  2961 02fb 00000000 		.4byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 78
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 78
 
 
  2962              	.LLST25:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3016 0380 00000000 		.4byte	.LVL58
  3017 0384 02000000 		.4byte	.LVL59
  3018 0388 0100     		.2byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 79
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 79
 
 
  3019 038a 50       		.byte	0x50
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3073 040c 08000000 		.4byte	.LVL65
  3074 0410 1D000000 		.4byte	.LVL67-1
  3075 0414 0100     		.2byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 80
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 80
 
 
  3076 0416 50       		.byte	0x50
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3130 049d 00000000 		.4byte	.LVL76
  3131 04a1 07000000 		.4byte	.LVL77-1
  3132 04a5 0100     		.2byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 81
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 81
 
 
  3133 04a7 50       		.byte	0x50
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3187 052b 9F       		.byte	0x9f
  3188 052c 00000000 		.4byte	0
  3189 0530 00000000 		.4byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 82
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 82
 
 
  3190              	.LLST42:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3244 00ac 28000000 		.4byte	.LFE22-.LFB22
  3245 00b0 00000000 		.4byte	.LFB23
  3246 00b4 10000000 		.4byte	.LFE23-.LFB23
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 83
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 83
 
 
  3247 00b8 00000000 		.4byte	.LFB24
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3301 0030 00000000 		.4byte	.LFB9
  3302 0034 10000000 		.4byte	.LFE9
  3303 0038 00000000 		.4byte	.LFB10
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 84
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 84
 
 
  3304 003c 28000000 		.4byte	.LFE10
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3358 0114 34000000 		.4byte	.LFE1
  3359 0118 00000000 		.4byte	.LFB3
  3360 011c 20000000 		.4byte	.LFE3
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 85
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 85
 
 
  3361 0120 00000000 		.4byte	.LFB37
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3389 0078 54696D65 		.ascii	"Timer_SetMode\000"
  3389      725F5365 
  3389      744D6F64 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 86
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 86
 
 
  3389      6500
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3412              	.LASF57:
  3413 012a 54696D65 		.ascii	"Timer_ReadCapture\000"
  3413      725F5265 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 87
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 87
 
 
  3413      61644361 
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3437 01d1 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer.c\000"
  3437      6E657261 
  3437      7465645F 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 88
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 88
 
 
  3437      536F7572 
@@ -5268,238 +5268,243 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 1
  3455      69746543 
  3455      6F756E74 
  3455      657200
- 3456              	.LASF44:
- 3457 0278 54696D65 		.ascii	"Timer_ReadPeriod\000"
+ 3456              	.LASF43:
+ 3457 0278 54696D65 		.ascii	"Timer_ReadCounter\000"
  3457      725F5265 
- 3457      61645065 
- 3457      72696F64 
- 3457      00
- 3458              	.LASF43:
- 3459 0289 54696D65 		.ascii	"Timer_ReadCounter\000"
- 3459      725F5265 
- 3459      6164436F 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 89
+ 3457      6164436F 
+ 3457      756E7465 
+ 3457      7200
+ 3458              	.LASF17:
+ 3459 028a 54696D65 		.ascii	"Timer_Stop\000"
+ 3459      725F5374 
+ 3459      6F7000
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 89
 
 
- 3459      756E7465 
- 3459      7200
- 3460              	.LASF17:
- 3461 029b 54696D65 		.ascii	"Timer_Stop\000"
- 3461      725F5374 
- 3461      6F7000
- 3462              	.LASF26:
- 3463 02a6 6F6E6553 		.ascii	"oneShotEnable\000"
- 3463      686F7445 
- 3463      6E61626C 
- 3463      6500
- 3464              	.LASF72:
- 3465 02b4 54696D65 		.ascii	"Timer_GetInterruptSourceMasked\000"
- 3465      725F4765 
- 3465      74496E74 
- 3465      65727275 
- 3465      7074536F 
- 3466              	.LASF14:
- 3467 02d3 72656733 		.ascii	"reg32\000"
- 3467      3200
- 3468              	.LASF45:
- 3469 02d9 54696D65 		.ascii	"Timer_SetCompareSwap\000"
- 3469      725F5365 
- 3469      74436F6D 
- 3469      70617265 
- 3469      53776170 
- 3470              	.LASF15:
- 3471 02ee 73697A65 		.ascii	"sizetype\000"
- 3471      74797065 
- 3471      00
- 3472              	.LASF47:
- 3473 02f7 54696D65 		.ascii	"Timer_WritePeriodBuf\000"
- 3473      725F5772 
- 3473      69746550 
- 3473      6572696F 
- 3473      64427566 
- 3474              	.LASF30:
- 3475 030c 73796E63 		.ascii	"syncKillEnable\000"
- 3475      4B696C6C 
- 3475      456E6162 
- 3475      6C6500
- 3476              	.LASF35:
- 3477 031b 54696D65 		.ascii	"Timer_SetPWMInvert\000"
- 3477      725F5365 
- 3477      7450574D 
- 3477      496E7665 
- 3477      727400
- 3478              	.LASF49:
- 3479 032e 54696D65 		.ascii	"Timer_ReadPeriodBuf\000"
- 3479      725F5265 
- 3479      61645065 
- 3479      72696F64 
- 3479      42756600 
- 3480              	.LASF62:
- 3481 0342 54696D65 		.ascii	"Timer_SetStartMode\000"
- 3481      725F5365 
- 3481      74537461 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 90
+ 3460              	.LASF26:
+ 3461 0295 6F6E6553 		.ascii	"oneShotEnable\000"
+ 3461      686F7445 
+ 3461      6E61626C 
+ 3461      6500
+ 3462              	.LASF72:
+ 3463 02a3 54696D65 		.ascii	"Timer_GetInterruptSourceMasked\000"
+ 3463      725F4765 
+ 3463      74496E74 
+ 3463      65727275 
+ 3463      7074536F 
+ 3464              	.LASF14:
+ 3465 02c2 72656733 		.ascii	"reg32\000"
+ 3465      3200
+ 3466              	.LASF45:
+ 3467 02c8 54696D65 		.ascii	"Timer_SetCompareSwap\000"
+ 3467      725F5365 
+ 3467      74436F6D 
+ 3467      70617265 
+ 3467      53776170 
+ 3468              	.LASF15:
+ 3469 02dd 73697A65 		.ascii	"sizetype\000"
+ 3469      74797065 
+ 3469      00
+ 3470              	.LASF47:
+ 3471 02e6 54696D65 		.ascii	"Timer_WritePeriodBuf\000"
+ 3471      725F5772 
+ 3471      69746550 
+ 3471      6572696F 
+ 3471      64427566 
+ 3472              	.LASF30:
+ 3473 02fb 73796E63 		.ascii	"syncKillEnable\000"
+ 3473      4B696C6C 
+ 3473      456E6162 
+ 3473      6C6500
+ 3474              	.LASF35:
+ 3475 030a 54696D65 		.ascii	"Timer_SetPWMInvert\000"
+ 3475      725F5365 
+ 3475      7450574D 
+ 3475      496E7665 
+ 3475      727400
+ 3476              	.LASF49:
+ 3477 031d 54696D65 		.ascii	"Timer_ReadPeriodBuf\000"
+ 3477      725F5265 
+ 3477      61645065 
+ 3477      72696F64 
+ 3477      42756600 
+ 3478              	.LASF62:
+ 3479 0331 54696D65 		.ascii	"Timer_SetStartMode\000"
+ 3479      725F5365 
+ 3479      74537461 
+ 3479      72744D6F 
+ 3479      646500
+ 3480              	.LASF78:
+ 3481 0344 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Documents\\GitHub\\ST4\\"
+ 3481      73657273 
+ 3481      5C4C696E 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 90
 
 
- 3481      72744D6F 
- 3481      646500
- 3482              	.LASF76:
- 3483 0355 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 3483      4320342E 
- 3483      392E3320 
- 3483      32303135 
- 3483      30333033 
- 3484 0388 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 3484      20726576 
- 3484      6973696F 
- 3484      6E203232 
- 3484      31323230 
- 3485 03bb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 3485      66756E63 
- 3485      74696F6E 
- 3485      2D736563 
- 3485      74696F6E 
- 3486              	.LASF11:
- 3487 03e3 666C6F61 		.ascii	"float\000"
- 3487      7400
- 3488              	.LASF24:
- 3489 03e9 70726573 		.ascii	"prescaler\000"
- 3489      63616C65 
- 3489      7200
- 3490              	.LASF63:
- 3491 03f3 54696D65 		.ascii	"Timer_SetStopMode\000"
- 3491      725F5365 
- 3491      7453746F 
- 3491      704D6F64 
- 3491      6500
- 3492              	.LASF50:
- 3493 0405 54696D65 		.ascii	"Timer_SetPeriodSwap\000"
- 3493      725F5365 
- 3493      74506572 
- 3493      696F6453 
- 3493      77617000 
- 3494              	.LASF58:
- 3495 0419 54696D65 		.ascii	"Timer_ReadCaptureBuf\000"
- 3495      725F5265 
- 3495      61644361 
- 3495      70747572 
- 3495      65427566 
- 3496              	.LASF67:
- 3497 042e 54696D65 		.ascii	"Timer_ReadStatus\000"
- 3497      725F5265 
- 3497      61645374 
- 3497      61747573 
- 3497      00
- 3498              	.LASF1:
- 3499 043f 756E7369 		.ascii	"unsigned char\000"
- 3499      676E6564 
- 3499      20636861 
- 3499      7200
- 3500              	.LASF32:
- 3501 044d 73746F70 		.ascii	"stopOnKillEnable\000"
- 3501      4F6E4B69 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 91
+ 3481      65747465 
+ 3481      2048656C 
+ 3482 0371 50536F43 		.ascii	"PSoC\\mavg_filter_lavpas_filter.cydsn\000"
+ 3482      5C6D6176 
+ 3482      675F6669 
+ 3482      6C746572 
+ 3482      5F6C6176 
+ 3483              	.LASF76:
+ 3484 0396 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 3484      4320342E 
+ 3484      392E3320 
+ 3484      32303135 
+ 3484      30333033 
+ 3485 03c9 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 3485      20726576 
+ 3485      6973696F 
+ 3485      6E203232 
+ 3485      31323230 
+ 3486 03fc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3486      66756E63 
+ 3486      74696F6E 
+ 3486      2D736563 
+ 3486      74696F6E 
+ 3487              	.LASF11:
+ 3488 0424 666C6F61 		.ascii	"float\000"
+ 3488      7400
+ 3489              	.LASF24:
+ 3490 042a 70726573 		.ascii	"prescaler\000"
+ 3490      63616C65 
+ 3490      7200
+ 3491              	.LASF63:
+ 3492 0434 54696D65 		.ascii	"Timer_SetStopMode\000"
+ 3492      725F5365 
+ 3492      7453746F 
+ 3492      704D6F64 
+ 3492      6500
+ 3493              	.LASF50:
+ 3494 0446 54696D65 		.ascii	"Timer_SetPeriodSwap\000"
+ 3494      725F5365 
+ 3494      74506572 
+ 3494      696F6453 
+ 3494      77617000 
+ 3495              	.LASF58:
+ 3496 045a 54696D65 		.ascii	"Timer_ReadCaptureBuf\000"
+ 3496      725F5265 
+ 3496      61644361 
+ 3496      70747572 
+ 3496      65427566 
+ 3497              	.LASF67:
+ 3498 046f 54696D65 		.ascii	"Timer_ReadStatus\000"
+ 3498      725F5265 
+ 3498      61645374 
+ 3498      61747573 
+ 3498      00
+ 3499              	.LASF1:
+ 3500 0480 756E7369 		.ascii	"unsigned char\000"
+ 3500      676E6564 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 91
 
 
- 3501      6C6C456E 
- 3501      61626C65 
- 3501      00
- 3502              	.LASF2:
- 3503 045e 73686F72 		.ascii	"short int\000"
- 3503      7420696E 
- 3503      7400
- 3504              	.LASF69:
- 3505 0468 696E7465 		.ascii	"interruptMask\000"
- 3505      72727570 
- 3505      744D6173 
- 3505      6B00
- 3506              	.LASF23:
- 3507 0476 54696D65 		.ascii	"Timer_SetPrescaler\000"
- 3507      725F5365 
- 3507      74507265 
- 3507      7363616C 
- 3507      657200
- 3508              	.LASF70:
- 3509 0489 54696D65 		.ascii	"Timer_Init\000"
- 3509      725F496E 
- 3509      697400
- 3510              	.LASF39:
- 3511 0494 54696D65 		.ascii	"Timer_SetCounterMode\000"
- 3511      725F5365 
- 3511      74436F75 
- 3511      6E746572 
- 3511      4D6F6465 
- 3512              	.LASF13:
- 3513 04a9 63686172 		.ascii	"char\000"
- 3513      00
- 3514              	.LASF21:
- 3515 04ae 6D6F6465 		.ascii	"mode\000"
- 3515      00
- 3516              	.LASF61:
- 3517 04b3 54696D65 		.ascii	"Timer_SetReloadMode\000"
- 3517      725F5365 
- 3517      7452656C 
- 3517      6F61644D 
- 3517      6F646500 
- 3518              	.LASF40:
- 3519 04c7 636F756E 		.ascii	"counterMode\000"
- 3519      7465724D 
- 3519      6F646500 
- 3520              	.LASF78:
- 3521 04d3 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Desktop\\filter.cydsn\000"
- 3521      73657273 
- 3521      5C4C696E 
- 3521      65747465 
- 3521      2048656C 
- 3522              	.LASF55:
- 3523 0500 636F6D70 		.ascii	"compareBuf\000"
- 3523      61726542 
- 3523      756600
- 3524              	.LASF18:
- 3525 050b 656E6162 		.ascii	"enableInterrupts\000"
- 3525      6C65496E 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cctjcKck.s 			page 92
+ 3500      20636861 
+ 3500      7200
+ 3501              	.LASF32:
+ 3502 048e 73746F70 		.ascii	"stopOnKillEnable\000"
+ 3502      4F6E4B69 
+ 3502      6C6C456E 
+ 3502      61626C65 
+ 3502      00
+ 3503              	.LASF2:
+ 3504 049f 73686F72 		.ascii	"short int\000"
+ 3504      7420696E 
+ 3504      7400
+ 3505              	.LASF69:
+ 3506 04a9 696E7465 		.ascii	"interruptMask\000"
+ 3506      72727570 
+ 3506      744D6173 
+ 3506      6B00
+ 3507              	.LASF23:
+ 3508 04b7 54696D65 		.ascii	"Timer_SetPrescaler\000"
+ 3508      725F5365 
+ 3508      74507265 
+ 3508      7363616C 
+ 3508      657200
+ 3509              	.LASF70:
+ 3510 04ca 54696D65 		.ascii	"Timer_Init\000"
+ 3510      725F496E 
+ 3510      697400
+ 3511              	.LASF39:
+ 3512 04d5 54696D65 		.ascii	"Timer_SetCounterMode\000"
+ 3512      725F5365 
+ 3512      74436F75 
+ 3512      6E746572 
+ 3512      4D6F6465 
+ 3513              	.LASF13:
+ 3514 04ea 63686172 		.ascii	"char\000"
+ 3514      00
+ 3515              	.LASF21:
+ 3516 04ef 6D6F6465 		.ascii	"mode\000"
+ 3516      00
+ 3517              	.LASF61:
+ 3518 04f4 54696D65 		.ascii	"Timer_SetReloadMode\000"
+ 3518      725F5365 
+ 3518      7452656C 
+ 3518      6F61644D 
+ 3518      6F646500 
+ 3519              	.LASF40:
+ 3520 0508 636F756E 		.ascii	"counterMode\000"
+ 3520      7465724D 
+ 3520      6F646500 
+ 3521              	.LASF44:
+ 3522 0514 54696D65 		.ascii	"Timer_ReadPeriod\000"
+ 3522      725F5265 
+ 3522      61645065 
+ 3522      72696F64 
+ 3522      00
+ 3523              	.LASF55:
+ 3524 0525 636F6D70 		.ascii	"compareBuf\000"
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2qXhHb.s 			page 92
 
 
- 3525      74657272 
- 3525      75707473 
- 3525      00
- 3526              	.LASF59:
- 3527 051c 54696D65 		.ascii	"Timer_SetCaptureMode\000"
- 3527      725F5365 
- 3527      74436170 
- 3527      74757265 
- 3527      4D6F6465 
- 3528              	.LASF25:
- 3529 0531 54696D65 		.ascii	"Timer_SetOneShot\000"
- 3529      725F5365 
- 3529      744F6E65 
- 3529      53686F74 
- 3529      00
- 3530              	.LASF74:
- 3531 0542 54696D65 		.ascii	"Timer_ClearInterrupt\000"
- 3531      725F436C 
- 3531      65617249 
- 3531      6E746572 
- 3531      72757074 
- 3532              	.LASF46:
- 3533 0557 73776170 		.ascii	"swapEnable\000"
- 3533      456E6162 
- 3533      6C6500
- 3534              	.LASF48:
- 3535 0562 70657269 		.ascii	"periodBuf\000"
- 3535      6F644275 
- 3535      6600
- 3536              	.LASF27:
- 3537 056c 54696D65 		.ascii	"Timer_SetPWMMode\000"
- 3537      725F5365 
- 3537      7450574D 
- 3537      4D6F6465 
- 3537      00
- 3538              	.LASF56:
- 3539 057d 54696D65 		.ascii	"Timer_ReadCompareBuf\000"
- 3539      725F5265 
- 3539      6164436F 
- 3539      6D706172 
- 3539      65427566 
- 3540              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 3524      61726542 
+ 3524      756600
+ 3525              	.LASF18:
+ 3526 0530 656E6162 		.ascii	"enableInterrupts\000"
+ 3526      6C65496E 
+ 3526      74657272 
+ 3526      75707473 
+ 3526      00
+ 3527              	.LASF59:
+ 3528 0541 54696D65 		.ascii	"Timer_SetCaptureMode\000"
+ 3528      725F5365 
+ 3528      74436170 
+ 3528      74757265 
+ 3528      4D6F6465 
+ 3529              	.LASF25:
+ 3530 0556 54696D65 		.ascii	"Timer_SetOneShot\000"
+ 3530      725F5365 
+ 3530      744F6E65 
+ 3530      53686F74 
+ 3530      00
+ 3531              	.LASF74:
+ 3532 0567 54696D65 		.ascii	"Timer_ClearInterrupt\000"
+ 3532      725F436C 
+ 3532      65617249 
+ 3532      6E746572 
+ 3532      72757074 
+ 3533              	.LASF46:
+ 3534 057c 73776170 		.ascii	"swapEnable\000"
+ 3534      456E6162 
+ 3534      6C6500
+ 3535              	.LASF48:
+ 3536 0587 70657269 		.ascii	"periodBuf\000"
+ 3536      6F644275 
+ 3536      6600
+ 3537              	.LASF27:
+ 3538 0591 54696D65 		.ascii	"Timer_SetPWMMode\000"
+ 3538      725F5365 
+ 3538      7450574D 
+ 3538      4D6F6465 
+ 3538      00
+ 3539              	.LASF56:
+ 3540 05a2 54696D65 		.ascii	"Timer_ReadCompareBuf\000"
+ 3540      725F5265 
+ 3540      6164436F 
+ 3540      6D706172 
+ 3540      65427566 
+ 3541              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

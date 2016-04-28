@@ -1,0 +1,5 @@
+C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\mavg_filter_lavpas_filter.cydsn\mavg_filter_lavpas_filter.cyprj|b1bff2f9-e7db-43a4-972a-72b1deda43cb
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f9496df0-d575-4b74-8874-43bcd3add982
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|417cb961-0230-42ec-81d4-bf61045ca1a7
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|958eaa68-29bf-4eff-b3d4-5eb68b0f06e7
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f9d60d4c-32aa-4843-9f57-a7f9a38c19d2
