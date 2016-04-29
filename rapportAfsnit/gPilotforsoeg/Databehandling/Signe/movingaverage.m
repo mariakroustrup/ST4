@@ -1,45 +1,36 @@
+clear all
+
 dd =  load('Nedogop1.mat');
 x = dd.data(1,:);
 clear dd
-xx = 1/20;
 a = 1;
-b = [xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx];
-y = filter(b,a,x);
 t = 1:length(x)
 
+x1 = 1/10;
+b1 = [x1 x1 x1 x1 x1 x1 x1 x1 x1 x1];
+y1 = filter(b1,a,x);
+
+x2 = 1/15;
+b2 = [x2 x2 x2 x2 x2 x2 x2 x2 x2 x2 x2 x2 x2 x2 x2];
+y2 = filter(b2,a,x);
+
+x3 = 1/20;
+b3 = [x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3 x3];
+y3 = filter(b3,a,x);
+
 figure
-plot(t,x,t,y,'r')
+subplot(3,1,1)
+plot(t,x,t,y1,'r')
 ylim([1.4 1.65])
 grid on
 
-%%
-load count.dat
-a = 1;
-b = [1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17 1/17];
-
-x = count(:,1);
-y = filter(b,a,x);
-
-figure 
-t = 1:length(x);
-plot(t,x,'--',t,y,'-')
+subplot(3,1,2)
+plot(t,x,t,y2,'r')
+ylim([1.4 1.65])
 grid on
 
+subplot(3,1,3)
+plot(t,x,t,y3,'r')
+ylim([1.4 1.65])
+grid on
 
-
-%% dsa
-%Dette er et script for at forstå bin rectification/integration. Lavet af
-%Mads
-
-time = 0:0.01:1;
-frequency = 6;
-phase = 0;
-phase_in_rad = degtorad(phase);
-y = sin(2 * pi * frequency * time + phase_in_rad);
-plot(time, y) 
-xlabel('Time') 
-ylabel('Sine wave')
-y1=abs(y);
-hold on 
-%plot(time,y1)
-mean(y1)

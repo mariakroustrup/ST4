@@ -20,7 +20,7 @@ Ved det elliptiske filter ses en endnu stejlere dæmpning og dermed et kortere t
 
 \vspace{3mm}
 \noindent
-Et moving average filter er et simpelt lavpas FIR filter, der oftest anvendes til at smoothe et array af data, der er samplet. Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter kan betragtes som et vindue af en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Det midterste værdi i vinduet vil  erstattes med gennemsnitsværdien for de data, der er i vinduet. Den midsterste værdi i vinduen må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret, således alle gennemsnitsværdier er baseret på de originale data. Det er derfor vigtigt at huske på de beregnede gennemsnitværdier.  af \autoref{fig:maf} ses et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet for de 8 værdier i vinduet, hvorefter denne værdi erstatter væriden på den 4. plads i vinduet.\citep{atmel2002}
+Et moving average filter er et simpelt lavpas FIR filter, der oftest anvendes til at smoothe et array af data, der er samplet. Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter kan betragtes som et vindue af en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Det midterste værdi i vinduet vil erstattes med gennemsnitsværdien for de data, der er i vinduet. Den midsterste værdi i vinduen må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret, således alle gennemsnitsværdier er baseret på de originale data. Det er derfor vigtigt at huske på de beregnede gennemsnitværdier. Af \autoref{fig:maf} ses et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet for de 8 værdier i vinduet, hvorefter denne værdi erstatter væriden på den 4. plads i vinduet.\citep{atmel2002}
 
 \begin{figure} [H]
 \centering
@@ -36,7 +36,7 @@ y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \end{equation}
 
 \subsubsection{Filtrering af EMG-signal}
-Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kræve for meget af PSoC'en. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men det skal stadig følge muskelsignalet, så det ikke bliver uhensigtmæssigt svært at aktivere exoskelettet.  
+Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kræver for meget af PSoC'en. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men det skal stadig følge muskelsignalet, så det ikke bliver uhensigtmæssigt svært at aktivere exoskelettet.  
 Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbånd. 
 
 Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \ref{fig:lp_knaek}, hvor $15~Hz$, $20~Hz$ og $25~Hz$ er repræsenteret. 
@@ -75,7 +75,7 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 
 
 \subsubsection{Filtrering af accelerometer-signaler}
-
+Der vælges at anvende et moving average filter for accelerometer målinger, da der ses fra pilotforsøget i \autoref{sec:pilotforsoeg}  forsøgetda dette forventes at give en mere anvendelig repræsentation af vinklen for det givet accelerometer, e
 \textbf{TILFØJ her baggrund for valg af krav til MAVG-filter}
 \vspace{3mm}
 
