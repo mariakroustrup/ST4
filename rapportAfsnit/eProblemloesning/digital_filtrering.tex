@@ -74,15 +74,20 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 \end{itemize}
 
 \subsubsection{Filtrering af accelerometer-signaler}
-Der vælges at anvende et moving average filter for accelerometer målinger, da der ses fra pilotforsøget i \autoref{sec:pilotforsoeg}  forsøgetda dette forventes at give en mere anvendelig repræsentation af vinklen for det givet accelerometer, e
-\textbf{TILFØJ her baggrund for valg af krav til MAVG-filter}
+Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givede accelerometer. Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=1\textwidth]{figures/problemloesning/mavgfilter_matlab}
+\caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser et moving average filter med filterlængde på hhv. 10, 15 og 20.}
+\label{fig:mavgfilter}
+\end{figure}
+
 \vspace{3mm}
 
 \textbf{Krav:}
 \begin{itemize}
-\item Signalet skal være 
-\item Skal have en knækfrekvens på $XX~Hz$
-\item Skal have et stopbånd på $XX~Hz$
-\item Skal have en minimumsdæmpning på $XX~dB$
-\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
+\item Skal muliggøre en repræsentativ aflæsning af vinklerne. 
+\item Skal have en filterlængde på $10~Hz$
+\item Skal have en acceptabel forsinkelse
 \end{itemize}
