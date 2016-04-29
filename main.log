@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  29 APR 2016 09:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  29 APR 2016 09:23
 entering extended mode
 **main.tex
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\main.tex"
@@ -2067,13 +2067,90 @@ ne 18.
 Package natbib Warning: Citation `nilsson2015' on page 14 undefined on input li
 ne 19.
 
+
+Package natbib Warning: Citation `atmel2002' on page 14 undefined on input line
+ 23.
+
 [14 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/filtre.png>]
+
+! LaTeX Error: File `figures/maf' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 ...graphics[width=0.8\textwidth]{figures/maf}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: \caption outside float.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \caption
+             {GennemsnitsvÃ¦rdien beregnes for et vindue for et moving avera...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Too many }'s.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.30 \end{figure}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Extra \endgroup.
+\color@endgroup ->\endgraf \endgroup 
+                                     
+l.30 \end{figure}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+! Too many }'s.
+\color@endbox ->\color@endgroup \egroup 
+                                        
+l.30 \end{figure}
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.30 \end{figure}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
 <figures/problemloesning/lavpas_knaek.png, id=324, 1220.56pt x 354.32375pt>
 File: figures/problemloesning/lavpas_knaek.png Graphic file (type png)
 
 <use figures/problemloesning/lavpas_knaek.png>
 Package pdftex.def Info: figures/problemloesning/lavpas_knaek.png used on input
- line 33.
+ line 46.
 (pdftex.def)             Requested size: 441.0pt x 128.02141pt.
 
 <figures/problemloesning/lavpas_orden.png, id=326, 1163.34625pt x 323.2075pt>
@@ -2081,55 +2158,33 @@ File: figures/problemloesning/lavpas_orden.png Graphic file (type png)
 
 <use figures/problemloesning/lavpas_orden.png>
 Package pdftex.def Info: figures/problemloesning/lavpas_orden.png used on input
- line 45.
+ line 58.
 (pdftex.def)             Requested size: 441.0pt x 122.52422pt.
  [15 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/problemloesning/lavp
-as_knaek.png (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/
-problemloesning/lavpas_orden.png (PNG copy)>])
+as_knaek.png (PNG copy)>])
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/t
-raadloes_kommunikation.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
-
- []
-
-) [16]
+raadloes_kommunikation.tex" [16 <C:/Users/Linette Helena/Documents/GitHub/ST4/f
+igures/problemloesning/lavpas_orden.png (PNG copy)>]) [17]
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
 mplemetering/EMG.tex"
-<figures/sinussignal.png, id=348, 273.27094pt x 217.5628pt>
+<figures/sinussignal.png, id=357, 273.27094pt x 217.5628pt>
 File: figures/sinussignal.png Graphic file (type png)
 
 <use figures/sinussignal.png>
 Package pdftex.def Info: figures/sinussignal.png used on input line 19.
 (pdftex.def)             Requested size: 264.60269pt x 210.67712pt.
- [17
+ [18
 
  <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/sinussignal.png>])
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
-mplemetering/acc.tex"
-Underfull \hbox (badness 2277) in paragraph at lines 4--5
-\T1/cmr/m/n/10.95 I dette projekt anvendes accelerometeret ADXL335Z fra Analog 
-Devices, som har
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 4--5
-\T1/cmr/m/n/10.95 pinkonfigurationen på [][]figur 5.2[][][]. Accelerometeret er
- en 3-aksialt sensor, som har et
- []
-
-<figures/acc_pin.png, id=367, 320.19624pt x 237.88875pt>
+mplemetering/acc.tex" <figures/acc_pin.png, id=376, 320.19624pt x 237.88875pt>
 File: figures/acc_pin.png Graphic file (type png)
 
 <use figures/acc_pin.png>
 Package pdftex.def Info: figures/acc_pin.png used on input line 8.
 (pdftex.def)             Requested size: 264.60269pt x 196.58731pt.
 
-<figures/acc_paavirkning.png, id=373, 782.17218pt x 423.08063pt>
+<figures/acc_paavirkning.png, id=382, 782.17218pt x 423.08063pt>
 File: figures/acc_paavirkning.png Graphic file (type png)
 
 <use figures/acc_paavirkning.png>
@@ -2141,34 +2196,132 @@ Underfull \hbox (badness 1715) in paragraph at lines 22--22
 ret i forskellige positioner. Til venstre måles
  []
 
-[18 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/acc_pin.png>]
+[19 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/acc_pin.png>]
 
-Package natbib Warning: Citation `clifford2005' on page 19 undefined on input l
+Package natbib Warning: Citation `clifford2005' on page 20 undefined on input l
 ine 27.
 
 
-Package natbib Warning: Citation `clifford2005' on page 19 undefined on input l
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ...offset} + sensitivitet \cdot \sin(\phi) \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.30 ...offset} + sensitivitet \cdot \sin(\phi) \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ...offset} + sensitivitet \cdot \sin(\phi) \\
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra }, or forgotten $.
+\endmathdisplay@fleqn ...kip \@mathmargin \egroup 
+                                                  \ifnum \badness <\inf@bad ...
+l.31 \end{equation}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.31 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.31 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.31 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.31 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Package natbib Warning: Citation `clifford2005' on page 20 undefined on input l
 ine 34.
 
 )
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
 mplemetering/ADC.tex"
 
-Package natbib Warning: Citation `ADC2014' on page 19 undefined on input line 2
+Package natbib Warning: Citation `ADC2014' on page 20 undefined on input line 2
 .
 
 )
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/I
 mplemetering/flowchart.tex"
 
-LaTeX Warning: Reference `sec:blokdiagram' on page 19 undefined on input line 2
+LaTeX Warning: Reference `sec:blokdiagram' on page 20 undefined on input line 2
 .
 
 
-LaTeX Warning: Reference `sec:forord' on page 19 undefined on input line 2.
+LaTeX Warning: Reference `sec:forord' on page 20 undefined on input line 2.
 
-[19 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/acc_paavirkning.png>]
-<figures/implementering/overordnet_flow.png, id=405, 449.68pt x 694.595pt>
+[20 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/acc_paavirkning.png>]
+<figures/implementering/overordnet_flow.png, id=414, 449.68pt x 694.595pt>
 File: figures/implementering/overordnet_flow.png Graphic file (type png)
 
 <use figures/implementering/overordnet_flow.png>
@@ -2176,16 +2329,16 @@ Package pdftex.def Info: figures/implementering/overordnet_flow.png used on inp
 ut line 9.
 (pdftex.def)             Requested size: 264.60269pt x 408.73703pt.
 
-<figures/implementering/initialiserende_flow.png, id=407, 666.49pt x 324.21124p
+<figures/implementering/initialiserende_flow.png, id=416, 666.49pt x 324.21124p
 t>
 File: figures/implementering/initialiserende_flow.png Graphic file (type png)
  <use figures/implementering/initialiserende_flow.png>
 Package pdftex.def Info: figures/implementering/initialiserende_flow.png used o
 n input line 19.
 (pdftex.def)             Requested size: 264.60269pt x 128.71751pt.
- [20 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/implementering/overo
+ [21 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/implementering/overo
 rdnet_flow.png>]
-<figures/implementering/EMG_algo.png, id=419, 536.0025pt x 534.99875pt>
+<figures/implementering/EMG_algo.png, id=428, 536.0025pt x 534.99875pt>
 File: figures/implementering/EMG_algo.png Graphic file (type png)
 
 <use figures/implementering/EMG_algo.png>
@@ -2193,69 +2346,63 @@ Package pdftex.def Info: figures/implementering/EMG_algo.png used on input line
  28.
 (pdftex.def)             Requested size: 264.60269pt x 264.10274pt.
 )
-("C:\Users\Linette Helena\Documents\GitHub\ST4\main.bbl" [21 <C:/Users/Linette 
+("C:\Users\Linette Helena\Documents\GitHub\ST4\main.bbl" [22 <C:/Users/Linette 
 Helena/Documents/GitHub/ST4/figures/implementering/initialiserende_flow.png> <C
 :/Users/Linette Helena/Documents/GitHub/ST4/figures/implementering/EMG_algo.png
 >]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [22
+) [23
 
-] [23])
-[24]
+] [24])
+[25]
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/Pilo
-tforsoeg.tex"
-Underfull \hbox (badness 1137) in paragraph at lines 46--49
-\T1/cmr/m/n/10.95 Hertil anvendes én positiv-, negativ- samt én referenceelektr
-ode. Forinden påsættelse
- []
+tforsoeg.tex" [26
 
-[25
-
-] <figures/laarmuskel.png, id=486, 329.73187pt x 514.92375pt>
+] <figures/laarmuskel.png, id=495, 329.73187pt x 514.92375pt>
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
 Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
-<figures/reference.png, id=491, 325.215pt x 410.53375pt>
+<figures/reference.png, id=500, 325.215pt x 410.53375pt>
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
 Package pdftex.def Info: figures/reference.png used on input line 61.
 (pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
- [26 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/
+ [27 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/
 Users/Linette Helena/Documents/GitHub/ST4/figures/reference.png>]
-<figures/accelerometervinkel.png, id=507, 172.39406pt x 165.61874pt>
+<figures/accelerometervinkel.png, id=515, 172.39406pt x 165.61874pt>
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
 Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
 
 (pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
- [27 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/accelerometervinkel.
+ [28 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/accelerometervinkel.
 png>]
-<figures/Pilotforsoeg/baselineogemg.png, id=521, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/baselineogemg.png, id=530, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/baselineogemg.png>
 Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
 ine 167.
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
- [28]
-<figures/Pilotforsoeg/emgfft.png, id=532, 1445.4pt x 704.6325pt>
+ [29]
+<figures/Pilotforsoeg/emgfft.png, id=541, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emgfft.png>
 Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 176
 .
 (pdftex.def)             Requested size: 374.85269pt x 182.73781pt.
- [29 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
+ [30 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
 eogemg.png (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pi
 lotforsoeg/emgfft.png (PNG copy)>]
-<figures/Pilotforsoeg/accfft.png, id=543, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accfft.png, id=552, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accfft.png>
@@ -2263,32 +2410,26 @@ Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 191
 .
 (pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
 
-<figures/Pilotforsoeg/accvinkel.png, id=547, 562.1pt x 421.575pt>
+<figures/Pilotforsoeg/accvinkel.png, id=556, 562.1pt x 421.575pt>
 File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accvinkel.png>
 Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line 
 202.
 (pdftex.def)             Requested size: 352.80135pt x 264.60301pt.
- [30 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.
+ [31 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.
 png (PNG copy)>]
-<figures/Pilotforsoeg/emg_vinkler_tid.png, id=559, 562.1pt x 421.575pt>
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=569, 562.1pt x 421.575pt>
 File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler_tid.png>
 Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
  line 211.
 (pdftex.def)             Requested size: 352.80135pt x 264.60301pt.
-
-Underfull \hbox (badness 1048) in paragraph at lines 217--218
-\T1/cmr/m/n/10.95 mellem vinklerne og mængden af muskelaktivitet. Ved fleksion 
-bliver vinkelen større
- []
-
-[31 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/accvinke
-l.png (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotfo
-rsoeg/emg_vinkler_tid.png (PNG copy)>]
-<figures/Pilotforsoeg/emg_vinkler.png, id=568, 1445.4pt x 704.6325pt>
+ [32 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoeg/accvink
+el.png (PNG copy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotf
+orsoeg/emg_vinkler_tid.png (PNG copy)>] <figures/Pilotforsoeg/emg_vinkler.png, 
+id=577, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emg_vinkler.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler.png>
@@ -2297,36 +2438,36 @@ e 225.
 (pdftex.def)             Requested size: 352.80135pt x 171.986pt.
 )
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/test
-_acc.tex" [32 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoe
+_acc.tex" [33 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/Pilotforsoe
 g/emg_vinkler.png (PNG copy)>]
-<figures/vinkeltest.jpg, id=587, 752.8125pt x 1339.0025pt>
+<figures/vinkeltest.jpg, id=596, 752.8125pt x 1339.0025pt>
 File: figures/vinkeltest.jpg Graphic file (type jpg)
 
 <use figures/vinkeltest.jpg>
 Package pdftex.def Info: figures/vinkeltest.jpg used on input line 53.
 (pdftex.def)             Requested size: 132.30135pt x 235.30966pt.
- [33 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/vinkeltest.jpg>]
-<figures/lineaerregression.png, id=605, 1434.86063pt x 704.6325pt>
+ [34 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/vinkeltest.jpg>]
+<figures/lineaerregression.png, id=614, 1434.86063pt x 704.6325pt>
 File: figures/lineaerregression.png Graphic file (type png)
 
 <use figures/lineaerregression.png>
 Package pdftex.def Info: figures/lineaerregression.png used on input line 98.
 (pdftex.def)             Requested size: 441.0pt x 216.563pt.
- [34]
-<figures/paavirkning.png, id=617, 1400.23125pt x 725.71124pt>
+ [35]
+<figures/paavirkning.png, id=626, 1400.23125pt x 725.71124pt>
 File: figures/paavirkning.png Graphic file (type png)
 
 <use figures/paavirkning.png>
 Package pdftex.def Info: figures/paavirkning.png used on input line 112.
 (pdftex.def)             Requested size: 441.0pt x 228.55595pt.
- [35 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/lineaerregression.pn
+ [36 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/lineaerregression.pn
 g (PNG copy)>])
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-[36 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/paavirkning.png (PNG 
+[37 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/paavirkning.png (PNG 
 copy)>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
@@ -2339,24 +2480,19 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 26613 strings out of 493921
- 470127 string characters out of 3144850
+ 26625 strings out of 493921
+ 470197 string characters out of 3144850
  769798 words of memory out of 3000000
- 29166 multiletter control sequences out of 15000+200000
+ 29168 multiletter control sequences out of 15000+200000
  26677 words of font info for 74 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
- 57i,12n,92p,1196b,972s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{page.37} has been referenced but does not exist, 
-replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:
-/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/P
+ 57i,12n,92p,1196b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
+C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program F
@@ -2380,9 +2516,9 @@ per/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super
 sx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1
 095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095
 .pfb>
-Output written on main.pdf (36 pages, 3694259 bytes).
+Output written on main.pdf (37 pages, 3702770 bytes).
 PDF statistics:
- 751 PDF objects out of 1000 (max. 8388607)
- 200 named destinations out of 1000 (max. 500000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
  212 words of extra memory for PDF output out of 10000 (max. 10000000)
 
