@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -190,12 +190,16 @@ B.~J. Schoenfeld.
 \newblock \emph{Journal of Strength and Conditioning Research}, 2010.
 \newblock \doi{10.1519/JSC.0b013e3181bac2d7}.
 
-\bibitem[Technologies(2013)]{advancertech2013}
-Advancer Technologies.
-\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
-  Microcontroller Application}, 2013.
-\newblock URL
-  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+\bibitem[Corporation(2015)]{cypresspsoc2015}
+Cypress~Semiconductor Corporation.
+\newblock \emph{CY8CKIT-142 PSoC 4 BLE module}, 2015.
+\newblock URL \url{http://www.cypress.com/file/140711/download}.
+
+\bibitem[Corporation(2014{\natexlab{a}})]{cypressguide2014}
+Cypress~Semiconductor Corporation.
+\newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
+  2014{\natexlab{a}}.
+\newblock URL \url{http://www.cypress.com/file/229211/download}.
 
 \bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
 R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
@@ -211,11 +215,61 @@ K.~G Keenan and R.~M Enoka.
 \newblock \emph{Encyclopedia of exercise medicine in health and disease}, 2012.
 \newblock \doi{10.1007/978-540-29807-6_298}.
 
-\bibitem[Zouridakis and Morre(2003)]{morre2003}
-G.~Zouridakis and J.~Morre.
+\bibitem[Zouridakis and Moore(2003)]{morre2003}
+G.~Zouridakis and J.~Moore.
 \newblock \emph{Biomedical Technology and Devices Handbook}.
 \newblock 2003.
 \newblock \doi{978-1-4398-7071-6}.
+
+\bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
+E.~Bernmark and C.~Wiktorin.
+\newblock A triaxial accelerometer for measuring arm movements.
+\newblock \emph{Applied Ergonomics}, 33, 2002.
+\newblock \doi{10.1016/S0003-6870(02)00072-8}.
+
+\bibitem[Webster and Clark(1998)]{webster1998}
+J.~G. Webster and J.~W. Clark.
+\newblock \emph{Medical Instrumentation Application and Design}, volume~3.
+\newblock John Wiles And Sons Ltd., 1998.
+\newblock \doi{0471153680}.
+
+\bibitem[Wolf and Smith(2004)]{wolf2004}
+S.~Wolf and R.~F.~M. Smith.
+\newblock \emph{Student Reference Manual for Electronic Instrumentation
+  Laboratories}, volume~2.
+\newblock Prentice Hall, 2004.
+\newblock \doi{978-0130421821}.
+
+\bibitem[Parr and Blandford(2012)]{blandford2012}
+J.~Parr and D.~Blandford.
+\newblock \emph{Introduction to Digital Signal Processing}.
+\newblock Pearson Education, 2012.
+\newblock \doi{9780131394063}.
+
+\bibitem[Wikipedia(2016)]{wikipedia2016}
+Wikipedia.
+\newblock \emph{Filter signal processing}.
+\newblock Wikipedia, 2016.
+\newblock URL \url{https://en.wikipedia.org/wiki/Filter_(signal_processing)}.
+
+\bibitem[Nilsson and Riedel(2015)]{nilsson2015}
+J.~W. Nilsson and S.~A. Riedel.
+\newblock \emph{Electric Circuits}, volume~10.
+\newblock Pearson Education Limited, 2015.
+\newblock \doi{1-292-06054-9}.
+
+\bibitem[Gupta(2013)]{gupta2013}
+N.~Gupta.
+\newblock \emph{nside Bluetooth Low Energy}.
+\newblock Artech House, 2013.
+\newblock \doi{9781608075799}.
+
+\bibitem[Technologies(2013)]{advancertech2013}
+Advancer Technologies.
+\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
+  Microcontroller Application}, 2013.
+\newblock URL
+  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
 
 \bibitem[Devices(2009)]{analogdevices2009}
 Analog Devices.
@@ -230,22 +284,16 @@ Analog Devices.
 \newblock URL
   \url{http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL335.pdf}.
 
-\bibitem[Corporation(2015)]{cypresspsoc2015}
-Cypress~Semiconductor Corporation.
-\newblock \emph{CY8CKIT-142 PSoC 4 BLE module}, 2015.
-\newblock URL \url{http://www.cypress.com/file/140711/download}.
+\bibitem[Clifford and Gomez(2005)]{clifford2005}
+M.~Clifford and L.~Gomez.
+\newblock \emph{Measuring Tilt with Low-g Accelerometers}, 2005.
+\newblock URL \url{http://www.nxp.com/files/sensors/doc/app_note/AN3107.pdf}.
 
-\bibitem[Corporation(2014)]{cypressguide2014}
+\bibitem[Corporation(2014{\natexlab{b}})]{ADC2014}
 Cypress~Semiconductor Corporation.
-\newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
-  2014.
-\newblock URL \url{http://www.cypress.com/file/229211/download}.
-
-\bibitem[Gupta(2013)]{gupta2013}
-N.~Gupta.
-\newblock \emph{nside Bluetooth Low Energy}.
-\newblock Artech House, 2013.
-\newblock \doi{9781608075799}.
+\newblock \emph{PSoC 4 Sequencing Successive Approximation ADC},
+  2014{\natexlab{b}}.
+\newblock URL \url{http://www.cypress.com/file/135111/download}.
 
 \bibitem[Hermens et~al.(1999)Hermens, Freriks, and et~al.]{seniam2016}
 H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.
