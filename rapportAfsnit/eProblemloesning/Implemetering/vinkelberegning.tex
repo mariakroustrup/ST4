@@ -1,0 +1,33 @@
+\subsection{Beregning af vinkler på PSoC}
+I \autoref{sec:test_acc} fremgår det at der er linær sammenhæng mellem vinklerne over tid, hvorfor der kan udføres en lineær interpolation over dataen fra målinger af accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en hvilken som helst vinkel for en tilsvarende  spænding. De målte spændinger opdeles i 10 intervaller som fremgår i \autoref{tab:vinkelinterval}. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+				& \textit{Accelerometer placeret på låret} &		\\ \hline
+	\textbf{Interval} & \textbf{Målt spænding} & \textbf{Målt spænding} \\ \hline	
+    \textbf{0-20} 			& $0~V$							& $-0,1973~V$    \\ \hline
+    \textbf{20-40} 			& $-0,1973~V$					& $-0,0661~V$	\\ \hline
+    \textbf{40-60} 			& $-0,0661~V$					& $-0,1381~V$	\\ \hline
+    \textbf{60-80} 			& $-0,1381~V$					& $-0,2292~V$	\\ \hline
+    \textbf{80-90} 			& $-0,2292~V$					& $-0.2825~V$	\\ \hline
+    				& \textit{Accelerometer placeret på skinnebenet} &		\\ \hline
+    	\textbf{Interval} & \textbf{Målt spænding} & \textbf{Målt spænding} \\ \hline	
+    \textbf{90-80}			& $0.3142~V$ 					& $0,2291~V$	    \\ \hline
+    \textbf{80-60}			& $0,2291~V$						& $0,1388~V$	 	\\ \hline
+    \textbf{60-40}			& $0,1388~V$						& $0,0648~V$		\\ \hline
+    \textbf{40-20}			& $0,0648~V$						& $0,0177~V$		\\ \hline
+    \textbf{20-0}			& $0,0177~V$						& $0~V$			\\ \hline
+	\end{tabular}
+	\caption{Spændingen målt i vinklerne fra 0 til 90$^{circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første spænding svarer til start intervallet og den sidste til der hvor intervallet stopper.}
+	\label{tab:vinkelinterval}
+\end{table}
+
+Den målte spænding er kun vist med fire decimaler, men er oprindeligt med 15 decimaler. Spændingen er målt i vinklerne fra 0 til 90$^{circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første målte spænding er for startværdien i intervallet og den sidste spænding er slutværdien i intervallet.
+
+Ud fra de målte værdier i de forskellige intervallet er der opstillet i en funktion indehold ifelse-løkker, hvorved det er muligt at vurdere hvilket interval en given spænding befinder sig i. I hver enkelt løkke bliver der anvendt lineær polation, som har til opgave at finde en vinkel, der er svarende til en spænding som ligger mellem intervallet og returnere denne. 
+
+
+
+
+
