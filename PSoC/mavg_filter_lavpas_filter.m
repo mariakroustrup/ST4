@@ -8,7 +8,7 @@ data=data-data(1);
 
 L = length(data);
 
-Central_port = serial('COM3');  
+Central_port = serial('COM5');  
 
 set(Central_port,'baudrate',115200)
 
