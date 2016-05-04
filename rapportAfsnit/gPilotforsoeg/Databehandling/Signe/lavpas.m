@@ -2,7 +2,7 @@
 frekvens = 100;
 
 % 1. mulighed
-Wn = [10]/frekvens/2;
+Wn = [15]/frekvens/2;
 n = 1;
 
 [b,a]  = butter(n, Wn,'low');
@@ -17,7 +17,7 @@ n1 = 2;
 
 a_filt1 = filtfilt(b1,a1,nedogop_emg_off);
 
-Wn2 = [20]/frekvens/2;
+Wn2 = [25]/frekvens/2;
 n2 = 3;
 
 [b2,a2]  = butter(n2, Wn2,'low');
@@ -47,43 +47,51 @@ m2P1_off2 = m2P2_off2(1:L/2+1);
 m2P1_off2(2:end-1) = 2*m2P1_off2(2:end-1);
 
 %% Plots
-figure
+h = figure;
 subplot(1,3,1)
 hold on
-plot(t, nedogop_emg_off([1:1150]));
-plot(t, a_filt(1:1150));
+plot(t, nedogop_emg_off([1:1150]),'LineWidth',1.5);
+plot(t, a_filt(1:1150),'LineWidth',1.5);
 xlim([0 10]);
 %xlabel('Tid [s]');
 ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('Filterorden 1')
+title('15 Hz knækfrekvens')
 box off
 
 subplot(1,3,2)
 hold on
-plot(t, nedogop_emg_off([1:1150]));
-plot(t, a_filt1(1:1150));
+plot(t, nedogop_emg_off([1:1150]),'LineWidth',1.5);
+plot(t, a_filt1(1:1150),'LineWidth',1.5);
 xlim([0 10]);
 xlabel('Tid [s]');
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('Filterorden 2')
+title('20 Hz knækfrekvens')
 box off
 
 subplot(1,3,3)
 hold on
-plot(t, nedogop_emg_off([1:1150]));
-plot(t, a_filt2(1:1150));
+plot(t, nedogop_emg_off([1:1150]),'LineWidth',1.5);
+plot(t, a_filt2(1:1150),'LineWidth',1.5);
 xlim([0 10]);
 %xlabel('Tid [s]');
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('Filterorden 3')
+title('25 Hz knækfrekvens')
 box off
 
+heigth = 10;
+width = 35;
+
+set(h,'Units','centimeters');
+set(h,'Position',[1 1 width heigth]);
+pos = get(h,'Position');
+set(h,'PaperPositionMode','Auto','PaperUnits','centimeters','PaperSize',[pos(3), pos(4)])
+%print(h,'lavpas_knaek','-dpdf')
 
 
 figure

@@ -1,9 +1,9 @@
 \section{Digital filtrering}
 Der findes to former for digital filtrering; Infinite Impulse Response (IIR) og Finite Impulse Response (FIR). Der ses hertil både fordele og ulemper ved begge filtertyper \citep{blandford2012}.
 
-FIR-filtre kan altid laves, således de har en lineær fase, og de er altid stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan herved benyttes som digitalt filter \citep{blandford2012}. 
+FIR-filtre kan laves, således de har en lineær fase, og vil altid være stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan herved benyttes som et digitalt filter \citep{blandford2012}. 
 
-I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og de kan være ustabile. Ud over dette har IIR-filtre stejlere sidelobes end et IIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}. 
+I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. Udover dette har IIR-filtre stejlere sidelobes end et IIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}. 
 \\
 
 \begin{figure}[H]
@@ -20,7 +20,7 @@ Ved det elliptiske filter ses en endnu stejlere dæmpning og dermed et kortere t
 
 \vspace{3mm}
 \noindent
-Et moving average filter er et simpelt lavpas FIR filter, der oftest anvendes til at smoothe et array af data, der er samplet. Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter kan betragtes som et vindue af en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Det midterste værdi i vinduet vil erstattes med gennemsnitsværdien for de data, der er i vinduet. Den midsterste værdi i vinduen må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret, således alle gennemsnitsværdier er baseret på de originale data. Det er derfor vigtigt at huske på de beregnede gennemsnitværdier. Af \autoref{fig:maf} ses et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet for de 8 værdier i vinduet, hvorefter denne værdi erstatter væriden på den 4. plads i vinduet.\citep{atmel2002}
+Et moving average filter er et simpelt lavpas FIR-filter, der oftest anvendes til at udglatte et array af data, der er samplet. Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter kan betragtes som et vindue af en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Værdien af det midterste element i vinduet vil erstattes med gennemsnitsværdien for de data, der er i hele vinduet. Det midsterste element i vinduen må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret, således alle gennemsnitsværdier er baseret på de originale data. Det er derfor vigtigt at huske på de beregnede gennemsnitværdier. Det fremgår af \autoref{fig:maf} et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet af de 8 elementer i vinduet, hvorefter denne værdi erstatter værdien på den 4. plads i vinduet.\citep{atmel2002}
 
 \begin{figure} [H]
 \centering
@@ -36,15 +36,15 @@ y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \end{equation}
 
 \subsubsection{Filtrering af EMG-signal}
-Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kræver for meget af PSoC'en. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men det skal stadig følge muskelsignalet, så det ikke bliver uhensigtmæssigt svært at aktivere exoskelettet.  
-Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbånd. 
+Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en ALS-patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kræver for meget af PSoC'en. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men skal stadig følge muskelsignalet, så det ikke bliver uhensigtmæssigt at aktivere exoskelettet.  
+Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbåndet. 
 
 Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \ref{fig:lp_knaek}, hvor $15~Hz$, $20~Hz$ og $25~Hz$ er repræsenteret. 
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_knaek}
-\caption{De blå grafer viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med knækfrekvenser på hhv. 15, 20 og $25~Hz$.}
+\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_knaek.pdf}
+\caption{De blå linjer på graferne viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med knækfrekvenser på hhv. 15, 20 og $25~Hz$.}
 \label{fig:lp_knaek}
 \end{figure} 
 
@@ -55,8 +55,8 @@ Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_orden}
-\caption{De blå grafer viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med filterordner på hhv. 1, 2 og 3.}
+\includegraphics[width=1\textwidth]{figures/problemloesning/lavpas_orden.pdf}
+\caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpasfiltre med filterordner på hhv. 1, 2 og 3.}
 \label{fig:lp_orden}
 \end{figure} 
 
@@ -73,17 +73,21 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 \item Skal have en filterorden på 2
 \end{itemize}
 
-
 \subsubsection{Filtrering af accelerometer-signaler}
-Der vælges at anvende et moving average filter for accelerometer målinger, da der ses fra pilotforsøget i \autoref{sec:pilotforsoeg}  forsøgetda dette forventes at give en mere anvendelig repræsentation af vinklen for det givet accelerometer, e
-\textbf{TILFØJ her baggrund for valg af krav til MAVG-filter}
+Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givede accelerometer. Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=1\textwidth]{figures/problemloesning/mavgfilter_matlab}
+\caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser et moving average filter med filterlængde på hhv. 10, 15 og 20.}
+\label{fig:mavgfilter}
+\end{figure}
+
 \vspace{3mm}
 
 \textbf{Krav:}
 \begin{itemize}
-\item Signalet skal være 
-\item Skal have en knækfrekvens på $XX~Hz$
-\item Skal have et stopbånd på $XX~Hz$
-\item Skal have en minimumsdæmpning på $XX~dB$
-\item Skal anvende et filter med en knækfrekvens på $XX~Hz$
+\item Skal muliggøre en repræsentativ aflæsning af vinklerne. 
+\item Skal have en filterlængde på $10~Hz$
+\item Skal have en acceptabel forsinkelse
 \end{itemize}
