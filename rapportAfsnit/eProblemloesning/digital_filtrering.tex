@@ -1,4 +1,4 @@
-\section{Digital filtrering}
+\subsection{Digital filtrering}
 Der findes to former for digital filtrering; Infinite Impulse Response (IIR) og Finite Impulse Response (FIR). Der ses hertil både fordele og ulemper ved begge filtertyper \citep{blandford2012}.
 
 FIR-filtre kan laves, således de har en lineær fase, og vil altid være stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan herved benyttes som et digitalt filter \citep{blandford2012}. 
@@ -79,7 +79,7 @@ Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, 
 \begin{figure} [H]
 \centering
 \includegraphics[width=1\textwidth]{figures/problemloesning/mavgfilter_matlab} 
-\caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser et moving average filter med filterlængde på hhv. 10, 15 og 20 samples. \fxnote{hvorfor denne spikes}}
+\caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser et moving average filter med filterlængde på hhv. 10, 15 og 20 samples.}
 \label{fig:mavgfilter}
 \end{figure}
 
