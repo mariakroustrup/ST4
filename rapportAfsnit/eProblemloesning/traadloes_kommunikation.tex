@@ -3,12 +3,12 @@ For at kunne kommunikere trådløst benyttes Cypress BLE modul. Kommunikationsty
 \\
 \noindent
 
-Ud over de to mikrocontrollere til det endelige system, benyttes en BLE-dongle, der giver mulighed for at en computer kan kommunikere trådløst med systemet. Dette tillader således trådløs test og debugging af systemet. BLE-donglen forsynes via USB-porten på den givne computer med $5~V$ \citep{cypressguide2014}. Denne form for BLE-kommunikation anvendes for at kommuinkere med LEGO mindstorm NXT trådløst, som benyttes som exoskelet. 
+Ud over de to mikrocontrollere til det endelige system, benyttes en BLE-dongle, der giver mulighed for at en computer kan kommunikere trådløst med systemet. Dette tillader således trådløs test og debugging af systemet. BLE-donglen forsynes via USB-porten på den givne computer med $5~V$ \citep{cypressguide2014}. Denne form for BLE-kommunikation anvendes for at kommuinkere med LEGO mindstorm NXT trådløst, som benyttes som exoskelet. For at systemet senere skal kunne anvendes til ALS-patienter med gang skal der tages højde for en maksimal forsinkelse, for at systemet følger almindelig gang. Gangfunktionen for ALS-patienter varierer alt efter hvor mange funktioner der er nedsat, eksempelvis vil patienter luftvejproblemer gå langsommere. ALS-patienter har en gennemsnitligt gangfunktion på $1,02~m/s$ \citep{Hausdorff2000}, hvorfor en forsinkelse på 100 ms vurderes at være acceptabel \fxnote{skal denne forsinkelse være større eller mindre??}. 
 \\
 
 \textbf{Krav:}
 \begin{itemize}
 \item Mikrocontrolleren skal kommunikere trådløst med LEGO mindstorm NXT
-\item Skal maksimalt have en forsinkelse på 100 ms \fxnote{argumentation??}
+\item Skal maksimalt have en forsinkelse på 100 ms \fxnote{skal denne forsinkelse være større eller mindre??}
 \item BLE-dongle skal forsynes via USB
 \end{itemize}
