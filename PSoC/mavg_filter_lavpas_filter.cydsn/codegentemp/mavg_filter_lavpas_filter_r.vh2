@@ -1,5 +1,5 @@
 -- Project:   mavg_filter_lavpas_filter
--- Generated: 04/28/2016 12:39:05
+-- Generated: 05/05/2016 09:34:44
 -- PSoC Creator  3.3 SP1
 
 ENTITY mavg_filter_lavpas_filter IS
