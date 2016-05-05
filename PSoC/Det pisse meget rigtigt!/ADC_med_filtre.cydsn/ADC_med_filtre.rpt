@@ -1,21 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.396ms
+Loading plugins phase: Elapsed time ==> 0s.326ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -d CY8C4247LQI-BL483 -s C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
-ADD: sdb.M0065: information: Analog terminal "EMG.analog_0" on TopDesign is unconnected.
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Signal: Net_271)
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Shape_285.1)
-
-ADD: sdb.M0065: information: Analog terminal "Y2.analog_0" on TopDesign is unconnected.
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Signal: Net_157)
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Shape_277.1)
-
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.837ms
+Elaboration phase: Elapsed time ==> 2s.508ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.105ms
+HDL generation phase: Elapsed time ==> 0s.104ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -33,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.105ms
 ======================================================================
 Compiling:  ADC_med_filtre.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 ADC_med_filtre.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 ADC_med_filtre.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  ADC_med_filtre.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 ADC_med_filtre.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 ADC_med_filtre.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  ADC_med_filtre.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu May 05 09:43:02 2016
+Thu May 05 11:13:13 2016
 
 
 ======================================================================
@@ -59,7 +51,7 @@ Options  :    -yv2 -q10 ADC_med_filtre.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu May 05 09:43:02 2016
+Thu May 05 11:13:14 2016
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -91,11 +83,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  ADC_med_filtre.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu May 05 09:43:02 2016
+Thu May 05 11:13:14 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -106,9 +98,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.ctl'.
+Linking 'C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.v'.
+Linking 'C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
@@ -122,11 +114,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  ADC_med_filtre.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -dcpsoc3 -verilog ADC_med_filtre.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu May 05 09:43:02 2016
+Thu May 05 11:13:14 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -137,9 +129,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.ctl'.
+Linking 'C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.v'.
+Linking 'C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\codegentemp\ADC_med_filtre.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
@@ -187,8 +179,7 @@ Aliasing \ADC:Net_3207_1\ to \UART:Net_459\
 Aliasing \ADC:Net_3207_0\ to \UART:Net_459\
 Aliasing \ADC:Net_3235\ to \UART:Net_459\
 Aliasing tmpOE__Y1_net_0 to \UART:tmpOE__tx_net_0\
-Aliasing tmpOE__EMG_net_0 to \UART:tmpOE__tx_net_0\
-Aliasing tmpOE__Y2_net_0 to \UART:tmpOE__tx_net_0\
+Aliasing tmpOE__Y1_1_net_0 to \UART:tmpOE__tx_net_0\
 Removing Lhs of wire \UART:Net_652\[3] = \UART:Net_459\[2]
 Removing Lhs of wire \UART:Net_1194\[5] = \UART:Net_459\[2]
 Removing Lhs of wire \UART:Net_1195\[6] = \UART:Net_459\[2]
@@ -203,21 +194,20 @@ Removing Rhs of wire one[23] = \UART:tmpOE__tx_net_0\[17]
 Removing Lhs of wire \UART:tmpOE__rx_net_0\[28] = one[23]
 Removing Lhs of wire \UART:Net_1175\[32] = zero[22]
 Removing Lhs of wire \UART:Net_747\[33] = zero[22]
-Removing Lhs of wire \ADC:Net_3107\[128] = zero[22]
-Removing Lhs of wire \ADC:Net_3106\[129] = zero[22]
-Removing Lhs of wire \ADC:Net_3105\[130] = zero[22]
-Removing Lhs of wire \ADC:Net_3104\[131] = zero[22]
-Removing Lhs of wire \ADC:Net_3103\[132] = zero[22]
-Removing Lhs of wire \ADC:Net_17\[174] = \ADC:Net_1845\[59]
-Removing Lhs of wire \ADC:Net_3207_1\[196] = zero[22]
-Removing Lhs of wire \ADC:Net_3207_0\[197] = zero[22]
-Removing Lhs of wire \ADC:Net_3235\[198] = zero[22]
-Removing Lhs of wire tmpOE__Y1_net_0[267] = one[23]
-Removing Lhs of wire tmpOE__EMG_net_0[273] = one[23]
-Removing Lhs of wire tmpOE__Y2_net_0[280] = one[23]
+Removing Lhs of wire \ADC:Net_3107\[131] = zero[22]
+Removing Lhs of wire \ADC:Net_3106\[132] = zero[22]
+Removing Lhs of wire \ADC:Net_3105\[133] = zero[22]
+Removing Lhs of wire \ADC:Net_3104\[134] = zero[22]
+Removing Lhs of wire \ADC:Net_3103\[135] = zero[22]
+Removing Lhs of wire \ADC:Net_17\[180] = \ADC:Net_1845\[59]
+Removing Lhs of wire \ADC:Net_3207_1\[202] = zero[22]
+Removing Lhs of wire \ADC:Net_3207_0\[203] = zero[22]
+Removing Lhs of wire \ADC:Net_3235\[204] = zero[22]
+Removing Lhs of wire tmpOE__Y1_net_0[273] = one[23]
+Removing Lhs of wire tmpOE__Y1_1_net_0[281] = one[23]
 
 ------------------------------------------------------
-Aliased 0 equations, 26 wires.
+Aliased 0 equations, 25 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -239,16 +229,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj" -dcpsoc3 ADC_med_filtre.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj" -dcpsoc3 ADC_med_filtre.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.647ms
+Warp synthesis phase: Elapsed time ==> 0s.516ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Thursday, 05 May 2016 09:43:03
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -d CY8C4247LQI-BL483 ADC_med_filtre.v -verilog
+cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Thursday, 05 May 2016 11:13:14
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj -d CY8C4247LQI-BL483 ADC_med_filtre.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.017ms
+Design parsing phase: Elapsed time ==> 0s.070ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -399,7 +389,7 @@ Design Equations
         {
         }
 
-    Pin : Name = EMG(0)
+    Pin : Name = Y1_1(0)
         Attributes:
             In Group/Port: True
             In Sync Option: AUTO
@@ -432,47 +422,9 @@ Design Equations
             Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => EMG(0)__PA ,
-            pad => EMG(0)_PAD );
-        Properties:
-        {
-        }
-
-    Pin : Name = Y2(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: AUTO
-            Out Sync Option: AUTO
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: HI_Z_ANALOG
-            VTrip: EITHER
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: True
-            Can contain Digital: False
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO Multiplier Index: 0
-            SIO RefSel: VCC_IO
-            Required Capabilitites: ANALOG
-            Initial Value: 1
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => Y2(0)__PA ,
-            pad => Y2(0)_PAD );
+            pa_out => Y1_1(0)__PA ,
+            analog_term => Net_518 ,
+            pad => Y1_1(0)_PAD );
         Properties:
         {
         }
@@ -534,7 +486,7 @@ Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
 Digital Clocks                :    0 :    4 :    4 :  0.00 %
 Interrupts                    :    3 :   29 :   32 :  9.38 %
-IO                            :    9 :   29 :   38 : 23.68 %
+IO                            :    8 :   30 :   38 : 21.05 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CapSense                      :    0 :    1 :    1 :  0.00 %
 Die Temp                      :    0 :    1 :    1 :  0.00 %
@@ -555,20 +507,20 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.010ms
-Tech mapping phase: Elapsed time ==> 0s.057ms
+Technology Mapping: Elapsed time ==> 0s.163ms
+Tech mapping phase: Elapsed time ==> 0s.275ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.1989649s
+Elapsed time ==> 0.2076939s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.459ms
+Analog Placement phase: Elapsed time ==> 0s.448ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0027904 secs
+Route success=True, Iterations=1 Elapsed=0.0513305 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.004ms
+Analog Routing phase: Elapsed time ==> 0s.058ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -576,8 +528,11 @@ Dump of CyAnalogRoutingResultsDB
 Map of net to items {
   Net: Net_508 {
     p3_0
-    PASS0_SARMUX0_sw0
-    PASS0_sarmux_vplus
+  }
+  Net: Net_518 {
+    p3_1
+  }
+  Net: \ADC:Net_1851\ {
   }
   Net: \ADC:Net_3113\ {
   }
@@ -587,39 +542,102 @@ Map of net to items {
   }
   Net: \ADC:mux_bus_minus_1\ {
   }
-  Net: \ADC:mux_bus_plus_1\ {
+  Net: \ADC:mux_bus_minus_2\ {
+  }
+  Net: \ADC:mux_bus_plus_2\ {
+  }
+  Net: \ADC:muxout_plus\ {
+    PASS0_sarmux_vplus
+  }
+  Net: AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A {
+    PASS0_SARMUX0_sw0
+    PASS0_SARMUX0_sw1
+  }
+  Net: \ADC:muxout_minus\ {
+    PASS0_sarmux_vminus
+  }
+  Net: AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_B {
   }
 }
 Map of item to net {
   p3_0                                             -> Net_508
-  PASS0_SARMUX0_sw0                                -> Net_508
-  PASS0_sarmux_vplus                               -> Net_508
+  p3_1                                             -> Net_518
+  PASS0_sarmux_vplus                               -> \ADC:muxout_plus\
+  PASS0_SARMUX0_sw0                                -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
+  PASS0_SARMUX0_sw1                                -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
+  PASS0_sarmux_vminus                              -> \ADC:muxout_minus\
 }
 Mux Info {
+  Mux: \ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A {
+     Mouth: \ADC:muxout_plus\
+     Guts:  AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
+     IsSingleSwitching: False
+     IsStaticSwitching: False
+     IsAtMostOneSwitch: True
+    Arm: 0 {
+      Net:   Net_508
+      Outer: PASS0_SARMUX0_sw0
+      Inner: __open__
+      Path {
+        PASS0_SARMUX0_sw0
+        p3_0
+      }
+    }
+    Arm: 1 {
+      Net:   Net_518
+      Outer: PASS0_SARMUX0_sw1
+      Inner: __open__
+      Path {
+        PASS0_SARMUX0_sw1
+        p3_1
+      }
+    }
+  }
+  Mux: \ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_B {
+     Mouth: \ADC:muxout_minus\
+     Guts:  AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_B
+     IsSingleSwitching: False
+     IsStaticSwitching: False
+     IsAtMostOneSwitch: True
+    Arm: 0 {
+      Net:   \ADC:Net_1851\
+      Outer: __open__
+      Inner: __open__
+      Path {
+      }
+    }
+    Arm: 1 {
+      Net:   \ADC:Net_1851\
+      Outer: __open__
+      Inner: __open__
+      Path {
+      }
+    }
+  }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.040ms
+Analog Code Generation phase: Elapsed time ==> 0s.068ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.2 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
 <CYPRESSTAG name="PLD Packing Summary">
 No PLDs were packed.
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.013ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.024ms
+Partitioning: Elapsed time ==> 0s.067ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.001ms
+Annealing: Elapsed time ==> 0s.020ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
 Inital cost was 25, final cost is 25 (0.00% improvement).</CYPRESSTAG>
@@ -798,7 +816,7 @@ Pin : Name = Y1(0)
     }
 
 [IoId=1]: 
-Pin : Name = Y2(0)
+Pin : Name = Y1_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -831,48 +849,9 @@ Pin : Name = Y2(0)
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Y2(0)__PA ,
-        pad => Y2(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
-Pin : Name = EMG(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => EMG(0)__PA ,
-        pad => EMG(0)_PAD );
+        pa_out => Y1_1(0)__PA ,
+        analog_term => Net_518 ,
+        pad => Y1_1(0)_PAD );
     Properties:
     {
     }
@@ -936,8 +915,8 @@ SAR ADC group 0:
     PSoC4 SAR ADC @ F(SARADC,0): 
     p4sarcell: Name =\ADC:cy_psoc4_sar\
         PORT MAP (
-            vplus => Net_508 ,
-            vminus => \ADC:mux_bus_minus_0\ ,
+            vplus => \ADC:muxout_plus\ ,
+            vminus => \ADC:muxout_minus\ ,
             vref => \ADC:Net_3113\ ,
             ext_vref => \ADC:Net_3227\ ,
             clock => \ADC:Net_1845_ff6\ ,
@@ -980,6 +959,24 @@ PASSBLOCK group 0: empty
 ANAPUMP group 0: empty
 BLE group 0: empty
 GANGED_PICU group 0: empty
+
+Blocks not positioned by the digital component placer:
+    PSoC4 SAR Muxes @ <No Location>: 
+    p4sarmuxcell: Name =\ADC:cy_psoc4_sarmux_8\
+        PORT MAP (
+            muxin_plus_1 => Net_518 ,
+            muxin_plus_0 => Net_508 ,
+            muxin_minus_1 => \ADC:mux_bus_minus_1\ ,
+            muxin_minus_0 => \ADC:mux_bus_minus_0\ ,
+            cmn_neg => \ADC:Net_1851\ ,
+            vout_plus => \ADC:muxout_plus\ ,
+            vout_minus => \ADC:muxout_minus\ );
+        Properties:
+        {
+            cy_registers = ""
+            input_mode = "00"
+            muxin_width = 2
+        }
 </CYPRESSTAG>
 <CYPRESSTAG name="Port Configuration Details">
 
@@ -993,38 +990,37 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
      |   5 |     * |      NONE |         CMOS_OUT | \UART:tx(0)\ | In(\UART:Net_1062\)
 -----+-----+-------+-----------+------------------+--------------+--------------------
    3 |   0 |     * |      NONE |      HI_Z_ANALOG |        Y1(0) | Analog(Net_508)
-     |   1 |     * |      NONE |      HI_Z_ANALOG |        Y2(0) | 
-     |   2 |     * |      NONE |      HI_Z_ANALOG |       EMG(0) | 
+     |   1 |     * |      NONE |      HI_Z_ANALOG |      Y1_1(0) | Analog(Net_518)
 --------------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.654ms
+Digital component placer commit/Report: Elapsed time ==> 0s.014ms
+Digital Placement phase: Elapsed time ==> 0s.574ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.696ms
+Digital Routing phase: Elapsed time ==> 0s.518ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.331ms
+Bitstream and API generation phase: Elapsed time ==> 0s.342ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.028ms
+Bitstream verification phase: Elapsed time ==> 0s.068ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in ADC_med_filtre_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.246ms
+Static timing analysis phase: Elapsed time ==> 0s.180ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.000ms
+Data reporting phase: Elapsed time ==> 0s.006ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.389ms
+Design database save phase: Elapsed time ==> 0s.140ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.980ms
+cydsfit: Elapsed time ==> 2s.784ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.029ms
-API generation phase: Elapsed time ==> 1s.457ms
-Dependency generation phase: Elapsed time ==> 0s.022ms
-Cleanup phase: Elapsed time ==> 0s.001ms
+Fitter phase: Elapsed time ==> 2s.830ms
+API generation phase: Elapsed time ==> 0s.860ms
+Dependency generation phase: Elapsed time ==> 0s.031ms
+Cleanup phase: Elapsed time ==> 0s.002ms

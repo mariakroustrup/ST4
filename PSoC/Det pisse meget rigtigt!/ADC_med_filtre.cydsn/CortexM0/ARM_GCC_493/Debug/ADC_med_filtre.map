@@ -84,9 +84,9 @@ Common symbol       size              file
 
 avg_new             0x2               .\CortexM0\ARM_GCC_493\Debug\main.o
 ADC_countsPer10Volt
-                    0x4               .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                    0x8               .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
 value_in            0x2               .\CortexM0\ARM_GCC_493\Debug\main.o
-ADC_offset          0x2               .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+ADC_offset          0x4               .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
 
 Discarded input sections
 
@@ -100,8 +100,12 @@ Discarded input sections
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\main.o
- .text.mavg_filter
-                0x00000000      0x104 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.floor_and_convert
+                0x00000000       0x5c .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.mavg_filter2
+                0x00000000      0x10c .\CortexM0\ARM_GCC_493\Debug\main.o
+ .text.low_pass_filter
+                0x00000000      0x124 .\CortexM0\ARM_GCC_493\Debug\main.o
  COMMON         0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\main.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -176,7 +180,6 @@ Discarded input sections
                 0x00000000       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
- .rodata        0x00000000        0x4 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
  .text.ADC_Stop
                 0x00000000       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
  .text.ADC_StopConvert
@@ -424,6 +427,7 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000       0x7c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .text          0x00000000       0x48 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_aeabi_ldivmod.o)
@@ -448,14 +452,18 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsisf.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
+ .text          0x00000000       0x88 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
+ .text          0x00000000       0xe0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
+ .text          0x00000000       0xcc c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+ .text          0x00000000      0x6f4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(fixdfsi.o)
@@ -556,7 +564,7 @@ END GROUP
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
                 0x00000000                CY_APP_FOR_STACK_AND_COPIER = 0x0
-                0x200002d8                PROVIDE (__cy_heap_start, _end)
+                0x200002e0                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20004000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x4000))
                 0x20003c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
@@ -569,7 +577,7 @@ END GROUP
                 0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
                 0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
 
-.text           0x00000000     0x2954
+.text           0x00000000     0x1e30
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -588,167 +596,141 @@ END GROUP
                 0x00000258                . = MAX (., 0x100)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000258       0x60 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .text.floor_and_convert
-                0x000002b8       0x5c .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x000002b8                floor_and_convert
- .text.mavg_filter2
-                0x00000314      0x104 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x00000314                mavg_filter2
- .text.low_pass_filter
-                0x00000418      0x124 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x00000418                low_pass_filter
+ .text.mavg_filter
+                0x000002b8      0x104 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000002b8                mavg_filter
  .text.ADC_interrupt
-                0x0000053c       0x50 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x0000053c                ADC_interrupt
- .text.main     0x0000058c      0x110 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x0000058c                main
+                0x000003bc       0x50 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000003bc                ADC_interrupt
+ .text.main     0x0000040c       0xc8 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x0000040c                main
  .text.IntDefaultHandler
-                0x0000069c        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x0000069c                IntDefaultHandler
- .text.Start_c  0x000006a4       0x98 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x000006a4                Start_c
+                0x000004d4        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000004d4                IntDefaultHandler
+ .text.Start_c  0x000004dc       0x98 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x000004dc                Start_c
  .text.initialize_psoc
-                0x0000073c       0x70 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x0000073c                initialize_psoc
+                0x00000574       0x70 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000574                initialize_psoc
  .text.CYMEMZERO
-                0x000007ac       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+                0x000005e4       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x000007cc       0x80 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+                0x00000604       0x80 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x0000084c       0x3c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+                0x00000684       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
  .text.UART_Init
-                0x00000888        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
-                0x00000888                UART_Init
+                0x000006cc        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x000006cc                UART_Init
  .text.UART_Enable
-                0x00000894       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
-                0x00000894                UART_Enable
+                0x000006d8       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x000006d8                UART_Enable
  .text.UART_Start
-                0x000008b8       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
-                0x000008b8                UART_Start
+                0x000006fc       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x000006fc                UART_Start
  .text.UART_ScbEnableIntr
-                0x000008dc        0x8 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x00000720        0x8 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
  .text.UART_ScbModePostEnable
-                0x000008e4        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x00000728        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
  .text.UART_SpiUartWriteTxData
-                0x000008f0       0x2c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
-                0x000008f0                UART_SpiUartWriteTxData
+                0x00000734       0x2c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
+                0x00000734                UART_SpiUartWriteTxData
  .text.UART_UartInit
-                0x0000091c       0xb0 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
-                0x0000091c                UART_UartInit
+                0x00000760       0xb0 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
+                0x00000760                UART_UartInit
  .text.UART_UartPostEnable
-                0x000009cc       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
-                0x000009cc                UART_UartPostEnable
+                0x00000810       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
+                0x00000810                UART_UartPostEnable
  .text.ADC_Start
-                0x000009f0       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x000009f0                ADC_Start
+                0x00000834       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x00000834                ADC_Start
  .text.ADC_Init
-                0x00000a14      0x1d0 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x00000a14                ADC_Init
+                0x00000858      0x20c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x00000858                ADC_Init
  .text.ADC_Enable
-                0x00000be4       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x00000be4                ADC_Enable
+                0x00000a64       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x00000a64                ADC_Enable
  .text.ADC_StartConvert
-                0x00000c1c       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x00000c1c                ADC_StartConvert
+                0x00000a9c       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x00000a9c                ADC_StartConvert
  .text.ADC_GetResult16
-                0x00000c38       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x00000c38                ADC_GetResult16
- .text.ADC_ISR  0x00000c7c       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
-                0x00000c7c                ADC_ISR
+                0x00000ab8       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x00000ab8                ADC_GetResult16
+ .text.ADC_ISR  0x00000afc       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
+                0x00000afc                ADC_ISR
  .text.ADC_ISR_StartEx
-                0x00000c98       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                0x00000c98                ADC_ISR_StartEx
+                0x00000b18       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                0x00000b18                ADC_ISR_StartEx
  .text.ADC_ISR_SetVector
-                0x00000cbc       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                0x00000cbc                ADC_ISR_SetVector
+                0x00000b3c       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                0x00000b3c                ADC_ISR_SetVector
  .text.ADC_ISR_SetPriority
-                0x00000cd4       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                0x00000cd4                ADC_ISR_SetPriority
+                0x00000b54       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                0x00000b54                ADC_ISR_SetPriority
  .text.ADC_ISR_Enable
-                0x00000d24       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                0x00000d24                ADC_ISR_Enable
+                0x00000ba4       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                0x00000ba4                ADC_ISR_Enable
  .text.ADC_ISR_Disable
-                0x00000d38       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                0x00000d38                ADC_ISR_Disable
+                0x00000bb8       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                0x00000bb8                ADC_ISR_Disable
  .text.ADC_IRQ_Enable
-                0x00000d4c       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
-                0x00000d4c                ADC_IRQ_Enable
- .text          0x00000d60       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
-                0x00000d60                CyDelayCycles
-                0x00000d72                CyEnterCriticalSection
-                0x00000d7a                CyExitCriticalSection
+                0x00000bcc       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
+                0x00000bcc                ADC_IRQ_Enable
+ .text          0x00000be0       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
+                0x00000be0                CyDelayCycles
+                0x00000bf2                CyEnterCriticalSection
+                0x00000bfa                CyExitCriticalSection
  .text.CySysClkWriteImoFreq
-                0x00000d80       0x98 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000d80                CySysClkWriteImoFreq
+                0x00000c00       0x98 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000c00                CySysClkWriteImoFreq
  .text.CySysClkEcoStart
-                0x00000e18       0x74 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000e18                CySysClkEcoStart
+                0x00000c98       0x74 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000c98                CySysClkEcoStart
  .text.CySysClkEcoReadStatus
-                0x00000e8c       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000e8c                CySysClkEcoReadStatus
+                0x00000d0c       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000d0c                CySysClkEcoReadStatus
  .text.CyIntSetVector
-                0x00000eac       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000eac                CyIntSetVector
+                0x00000d2c       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000d2c                CyIntSetVector
  .text.CyIntSetPriority
-                0x00000ef8       0xa8 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000ef8                CyIntSetPriority
- .text.CyHalt   0x00000fa0       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000fa0                CyHalt
+                0x00000d78       0xa8 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000d78                CyIntSetPriority
+ .text.CyHalt   0x00000e20       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000e20                CyHalt
  .text.CyDelayUs
-                0x00000fb4       0x28 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00000fb4                CyDelayUs
+                0x00000e34       0x28 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00000e34                CyDelayUs
  .text.CySysClkWcoSetHighPowerMode
-                0x00000fdc       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+                0x00000e5c       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
  .text.CySysClkWcoSetLowPowerMode
-                0x00001024       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+                0x00000ea4       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
  .text.CySysClkWcoStart
-                0x0000106c       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
-                0x0000106c                CySysClkWcoStart
+                0x00000eec       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+                0x00000eec                CySysClkWcoStart
  .text.CySysClkWcoSetPowerMode
-                0x0000108c       0x40 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
-                0x0000108c                CySysClkWcoSetPowerMode
- .text          0x000010cc      0x1e0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
-                0x000010cc                __divsi3
-                0x000010cc                __aeabi_idiv
-                0x00001298                __aeabi_idivmod
- .text          0x000012ac        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x000012ac                __aeabi_idiv0
-                0x000012ac                __aeabi_ldiv0
- .text          0x000012b0       0x7c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
-                0x000012b0                __aeabi_cdrcmple
-                0x000012c0                __aeabi_cdcmple
-                0x000012c0                __aeabi_cdcmpeq
-                0x000012d0                __aeabi_dcmpeq
-                0x000012dc                __aeabi_dcmplt
-                0x000012f0                __aeabi_dcmple
-                0x00001304                __aeabi_dcmpgt
-                0x00001318                __aeabi_dcmpge
- .text          0x0000132c      0x650 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
-                0x0000132c                __aeabi_dadd
- .text          0x0000197c       0x88 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
-                0x0000197c                __nedf2
-                0x0000197c                __eqdf2
- .text          0x00001a04       0xe0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
-                0x00001a04                __gedf2
-                0x00001a04                __gtdf2
- .text          0x00001ae4       0xcc c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
-                0x00001ae4                __ledf2
-                0x00001ae4                __ltdf2
- .text          0x00001bb0      0x534 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
-                0x00001bb0                __aeabi_dmul
- .text          0x000020e4      0x6f4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
-                0x000020e4                __aeabi_dsub
- .text          0x000027d8       0x6c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(fixdfsi.o)
-                0x000027d8                __aeabi_d2iz
- .text          0x00002844       0x78 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
-                0x00002844                __aeabi_i2d
- .text          0x000028bc       0x3c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
-                0x000028bc                __clzsi2
+                0x00000f0c       0x40 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+                0x00000f0c                CySysClkWcoSetPowerMode
+ .text          0x00000f4c      0x1e0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+                0x00000f4c                __divsi3
+                0x00000f4c                __aeabi_idiv
+                0x00001118                __aeabi_idivmod
+ .text          0x0000112c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0000112c                __aeabi_idiv0
+                0x0000112c                __aeabi_ldiv0
+ .text          0x00001130      0x650 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
+                0x00001130                __aeabi_dadd
+ .text          0x00001780      0x534 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+                0x00001780                __aeabi_dmul
+ .text          0x00001cb4       0x6c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(fixdfsi.o)
+                0x00001cb4                __aeabi_d2iz
+ .text          0x00001d20       0x78 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
+                0x00001d20                __aeabi_i2d
+ .text          0x00001d98       0x3c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x00001d98                __clzsi2
  .text.__libc_init_array
-                0x000028f8       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x000028f8                __libc_init_array
- .text.memset   0x00002944       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
-                0x00002944                memset
+                0x00001dd4       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00001dd4                __libc_init_array
+ .text.memset   0x00001e20       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00001e20                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -761,81 +743,82 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00002954        0x0
+.v4_bx          0x00001e30        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002954        0x0
+.iplt           0x00001e30        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00002954        0x4
+.eh_frame       0x00001e30        0x4
  *(.eh_frame)
- .eh_frame      0x00002954        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .eh_frame      0x00002954        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
-                0x00002958                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00001e30        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .eh_frame      0x00001e30        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x00001e34                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002958                __exidx_end = .
+                0x00001e34                __exidx_end = .
 
-.rodata         0x00002958       0xc0
+.rodata         0x00001e34       0xcc
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00002958       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
- .rodata        0x00002970       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                0x00002970                cyImoFreqMhz2Reg
- .rodata        0x000029a0       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
-                0x000029e0                . = ALIGN (0x4)
+ .rodata        0x00001e34       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+ .rodata        0x00001e4c        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+ .rodata        0x00001e58       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                0x00001e58                cyImoFreqMhz2Reg
+ .rodata        0x00001e88       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+                0x00001ec8                . = ALIGN (0x4)
  *(.init)
- .init          0x000029e0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x000029e0                _init
- .init          0x000029e4        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x000029ec                . = ALIGN (0x4)
-                0x000029ec                __preinit_array_start = .
+ .init          0x00001ec8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00001ec8                _init
+ .init          0x00001ecc        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00001ed4                . = ALIGN (0x4)
+                0x00001ed4                __preinit_array_start = .
  *(.preinit_array)
-                0x000029ec                __preinit_array_end = .
-                0x000029ec                . = ALIGN (0x4)
-                0x000029ec                __init_array_start = .
+                0x00001ed4                __preinit_array_end = .
+                0x00001ed4                . = ALIGN (0x4)
+                0x00001ed4                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x000029ec        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .init_array    0x000029f0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x000029f4                __init_array_end = .
-                0x000029f4                . = ALIGN (0x4)
+ .init_array    0x00001ed4        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .init_array    0x00001ed8        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00001edc                __init_array_end = .
+                0x00001edc                . = ALIGN (0x4)
  *(.fini)
- .fini          0x000029f4        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x000029f4                _fini
- .fini          0x000029f8        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00002a00                . = ALIGN (0x4)
-                0x00002a00                __fini_array_start = .
+ .fini          0x00001edc        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00001edc                _fini
+ .fini          0x00001ee0        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00001ee8                . = ALIGN (0x4)
+                0x00001ee8                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00002a00        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .fini_array    0x00001ee8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00002a04                __fini_array_end = .
-                0x00002a04                . = ALIGN (0x4)
+                0x00001eec                __fini_array_end = .
+                0x00001eec                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00002a04                . = ALIGN (0x4)
+                0x00001eec                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00002a04                . = ALIGN (0x4)
-                0x00002a04                __cy_regions = .
-                0x00002a04        0x4 LONG 0x2a18 __cy_region_init_ram
-                0x00002a08        0x4 LONG 0x200000c8 __cy_region_start_data
-                0x00002a0c        0x4 LONG 0xf0 __cy_region_init_size_ram
-                0x00002a10        0x4 LONG 0x120 __cy_region_zero_size_ram
-                0x00002a14                __cy_regions_end = .
-                0x00002a18                . = ALIGN (0x8)
- *fill*         0x00002a14        0x4 
-                0x00002a18                _etext = .
+                0x00001eec                . = ALIGN (0x4)
+                0x00001eec                __cy_regions = .
+                0x00001eec        0x4 LONG 0x1f00 __cy_region_init_ram
+                0x00001ef0        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x00001ef4        0x4 LONG 0xf0 __cy_region_init_size_ram
+                0x00001ef8        0x4 LONG 0x128 __cy_region_zero_size_ram
+                0x00001efc                __cy_regions_end = .
+                0x00001f00                . = ALIGN (0x8)
+ *fill*         0x00001efc        0x4 
+                0x00001f00                _etext = .
 
 .cy_checksum_exclude
-                0x00002a18        0x0
+                0x00001f00        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x20000000       0xc0
@@ -848,7 +831,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
 
-.data           0x200000c8       0xf0 load address 0x00002a18
+.data           0x200000c8       0xf0 load address 0x00001f00
                 0x200000c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c8        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
@@ -873,16 +856,16 @@ END GROUP
  *(.ram)
                 0x200001b8                _edata = .
 
-.igot.plt       0x200001b8        0x0 load address 0x00002b08
+.igot.plt       0x200001b8        0x0 load address 0x00001ff0
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.bss            0x200001b8      0x120 load address 0x00002b08
+.bss            0x200001b8      0x128 load address 0x00001ff0
                 0x200001b8                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x200001b8       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  *fill*         0x200001d4        0x4 
- .bss           0x200001d8       0xf0 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .bss           0x200001d8       0xf8 .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x200001d8                x_mavg
                 0x20000228                y_mavg
                 0x20000230                x2_mavg
@@ -894,32 +877,31 @@ END GROUP
                 0x200002c0                i
                 0x200002c2                j
                 0x200002c4                result
-                0x200002c6                data_ready
- .bss           0x200002c8        0x1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
-                0x200002c8                UART_initVar
- .bss           0x200002c9        0x1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x200002c9                ADC_initVar
+                0x200002c8                data_ready
+ .bss           0x200002d0        0x1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+                0x200002d0                UART_initVar
+ .bss           0x200002d1        0x1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x200002d1                ADC_initVar
  *(COMMON)
- *fill*         0x200002ca        0x2 
- COMMON         0x200002cc        0x6 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                0x200002cc                ADC_countsPer10Volt
-                0x200002d0                ADC_offset
-                0x200002d8                . = ALIGN (0x8)
- *fill*         0x200002d2        0x6 
+ *fill*         0x200002d2        0x2 
+ COMMON         0x200002d4        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                0x200002d4                ADC_countsPer10Volt
+                0x200002dc                ADC_offset
+                0x200002e0                . = ALIGN (0x8)
  *(.ram.b)
-                0x200002d8                _end = .
-                0x200002d8                __end = .
-                0x200002d8                PROVIDE (end, .)
-                0x200002d8                PROVIDE (__bss_end__, .)
-                0x00002a18                __cy_region_init_ram = LOADADDR (.data)
+                0x200002e0                _end = .
+                0x200002e0                __end = .
+                0x200002e0                PROVIDE (end, .)
+                0x200002e0                PROVIDE (__bss_end__, .)
+                0x00001f00                __cy_region_init_ram = LOADADDR (.data)
                 0x000000f0                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000120                __cy_region_zero_size_ram = (_end - _edata)
+                0x00000128                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x200002d8      0x100 load address 0x00002b08
-                0x200002d8                . = _end
-                0x200003d8                . = (. + 0x100)
- *fill*         0x200002d8      0x100 
-                0x200003d8                __cy_heap_limit = .
+.heap           0x200002e0      0x100 load address 0x00001ff0
+                0x200002e0                . = _end
+                0x200003e0                . = (. + 0x100)
+ *fill*         0x200002e0      0x100 
+                0x200003e0                __cy_heap_limit = .
 
 .stack          0x20003c00      0x400
                 0x20003c00                __cy_stack_limit = .
@@ -955,7 +937,7 @@ END GROUP
                 0x90600000        0x4 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00002b08        0x0 load address 0x90600004
+.rel.dyn        0x00001ff0        0x0 load address 0x90600004
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .stab
@@ -1010,56 +992,56 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2d2a
+.debug_info     0x00000000     0x2d45
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x329 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_info    0x00000329       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x00000427      0x302 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_info    0x00000729      0x356 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
- .debug_info    0x00000a7f      0x1a6 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
- .debug_info    0x00000c25      0x20f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
- .debug_info    0x00000e34      0x2ba .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
- .debug_info    0x000010ee      0x47b .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
- .debug_info    0x00001569       0xc5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
- .debug_info    0x0000162e      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
- .debug_info    0x00001874      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
- .debug_info    0x00001aba       0x9e .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
- .debug_info    0x00001b58      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
- .debug_info    0x000024dd      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+ .debug_info    0x00000000      0x327 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000327       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00000425      0x302 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_info    0x00000727      0x356 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+ .debug_info    0x00000a7d      0x1a6 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+ .debug_info    0x00000c23      0x20f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
+ .debug_info    0x00000e32      0x2ba .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
+ .debug_info    0x000010ec      0x4a1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+ .debug_info    0x0000158d       0xc5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
+ .debug_info    0x00001652      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+ .debug_info    0x00001898      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
+ .debug_info    0x00001ade       0x95 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
+ .debug_info    0x00001b73      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+ .debug_info    0x000024f8      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
 
-.debug_abbrev   0x00000000      0xfe4
+.debug_abbrev   0x00000000      0xff3
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xe8 .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_abbrev  0x000000e8       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x00000145      0x17c .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_abbrev  0x000002c1      0x18a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
- .debug_abbrev  0x0000044b       0xcb .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
- .debug_abbrev  0x00000516      0x14f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
- .debug_abbrev  0x00000665      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
- .debug_abbrev  0x00000769      0x163 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
- .debug_abbrev  0x000008cc       0x65 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
- .debug_abbrev  0x00000931      0x16a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
- .debug_abbrev  0x00000a9b      0x16a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
- .debug_abbrev  0x00000c05       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000c19      0x1a7 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
- .debug_abbrev  0x00000dc0      0x224 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+ .debug_abbrev  0x00000000       0xf7 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x000000f7       0x5d .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x00000154      0x17c .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_abbrev  0x000002d0      0x18a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+ .debug_abbrev  0x0000045a       0xcb .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+ .debug_abbrev  0x00000525      0x14f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
+ .debug_abbrev  0x00000674      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
+ .debug_abbrev  0x00000778      0x163 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+ .debug_abbrev  0x000008db       0x65 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
+ .debug_abbrev  0x00000940      0x16a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+ .debug_abbrev  0x00000aaa      0x16a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
+ .debug_abbrev  0x00000c14       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000c28      0x1a7 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+ .debug_abbrev  0x00000dcf      0x224 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
 
-.debug_line     0x00000000     0x19e0
+.debug_line     0x00000000     0x19e5
  *(.debug_line)
- .debug_line    0x00000000      0x17b .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_line    0x0000017b       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x000001ce      0x1ca .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_line    0x00000398      0x1a5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
- .debug_line    0x0000053d      0x11e .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
- .debug_line    0x0000065b      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
- .debug_line    0x00000797      0x1a5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
- .debug_line    0x0000093c      0x29e .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
- .debug_line    0x00000bda       0x64 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
- .debug_line    0x00000c3e      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
- .debug_line    0x00000dad      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
- .debug_line    0x00000f1c       0x68 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
- .debug_line    0x00000f84      0x4af .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
- .debug_line    0x00001433      0x5ad .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+ .debug_line    0x00000000      0x179 .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_line    0x00000179       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x000001cc      0x1ca .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x00000396      0x1a6 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
+ .debug_line    0x0000053c      0x11e .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
+ .debug_line    0x0000065a      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
+ .debug_line    0x00000796      0x1a5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
+ .debug_line    0x0000093b      0x2a4 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+ .debug_line    0x00000bdf       0x64 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
+ .debug_line    0x00000c43      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+ .debug_line    0x00000db2      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
+ .debug_line    0x00000f21       0x68 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyBootAsmGnu.o)
+ .debug_line    0x00000f89      0x4af .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+ .debug_line    0x00001438      0x5ad .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
 
 .debug_frame    0x00000000     0x1b94
  *(.debug_frame)
@@ -1098,34 +1080,34 @@ END GROUP
  .debug_frame   0x00001b4c       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x00001b74       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x16a2
+.debug_str      0x00000000     0x16b6
  *(.debug_str)
  .debug_str     0x00000000      0x236 .\CortexM0\ARM_GCC_493\Debug\main.o
                                 0x27a (size before relaxing)
  .debug_str     0x00000236       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
-                                0x1dc (size before relaxing)
+                                0x1d3 (size before relaxing)
  .debug_str     0x00000291      0x12e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                                0x2d0 (size before relaxing)
+                                0x2c7 (size before relaxing)
  .debug_str     0x000003bf       0xf6 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(cyfitter_cfg.o)
-                                0x2c2 (size before relaxing)
+                                0x2b9 (size before relaxing)
  .debug_str     0x000004b5       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART.o)
-                                0x265 (size before relaxing)
+                                0x25c (size before relaxing)
  .debug_str     0x0000058c      0x137 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_SPI_UART.o)
-                                0x2d0 (size before relaxing)
+                                0x2c7 (size before relaxing)
  .debug_str     0x000006c3      0x191 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(UART_UART.o)
-                                0x32e (size before relaxing)
- .debug_str     0x00000854      0x1d1 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
-                                0x395 (size before relaxing)
- .debug_str     0x00000a25       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
-                                0x1bf (size before relaxing)
- .debug_str     0x00000a5c      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
-                                0x2db (size before relaxing)
- .debug_str     0x00000b87      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
-                                0x2db (size before relaxing)
- .debug_str     0x00000c8b      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
-                                0x6bb (size before relaxing)
- .debug_str     0x00001168      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
-                                0x6ee (size before relaxing)
+                                0x325 (size before relaxing)
+ .debug_str     0x00000854      0x1e5 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC.o)
+                                0x3a0 (size before relaxing)
+ .debug_str     0x00000a39       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_INT.o)
+                                0x1b6 (size before relaxing)
+ .debug_str     0x00000a70      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_ISR.o)
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000b9b      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(ADC_IRQ.o)
+                                0x2d2 (size before relaxing)
+ .debug_str     0x00000c9f      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLib.o)
+                                0x6b2 (size before relaxing)
+ .debug_str     0x0000117c      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a(CyLFClk.o)
+                                0x6e5 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

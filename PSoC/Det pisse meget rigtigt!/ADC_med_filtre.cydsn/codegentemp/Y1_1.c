@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Y2.c  
+* File Name: Y1_1.c  
 * Version 2.20
 *
 * Description:
@@ -13,35 +13,35 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Y2.h"
+#include "Y1_1.h"
 
 
-#if defined(Y2__PC)
-    #define Y2_SetP4PinDriveMode(shift, mode)  \
+#if defined(Y1_1__PC)
+    #define Y1_1_SetP4PinDriveMode(shift, mode)  \
     do { \
-        Y2_PC =   (Y2_PC & \
-                                (uint32)(~(uint32)(Y2_DRIVE_MODE_IND_MASK << \
-                                (Y2_DRIVE_MODE_BITS * (shift))))) | \
+        Y1_1_PC =   (Y1_1_PC & \
+                                (uint32)(~(uint32)(Y1_1_DRIVE_MODE_IND_MASK << \
+                                (Y1_1_DRIVE_MODE_BITS * (shift))))) | \
                                 (uint32)((uint32)(mode) << \
-                                (Y2_DRIVE_MODE_BITS * (shift))); \
+                                (Y1_1_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 #else
     #if (CY_PSOC4_4200L)
-        #define Y2_SetP4PinDriveMode(shift, mode)  \
+        #define Y1_1_SetP4PinDriveMode(shift, mode)  \
         do { \
-            Y2_USBIO_CTRL_REG = (Y2_USBIO_CTRL_REG & \
-                                    (uint32)(~(uint32)(Y2_DRIVE_MODE_IND_MASK << \
-                                    (Y2_DRIVE_MODE_BITS * (shift))))) | \
+            Y1_1_USBIO_CTRL_REG = (Y1_1_USBIO_CTRL_REG & \
+                                    (uint32)(~(uint32)(Y1_1_DRIVE_MODE_IND_MASK << \
+                                    (Y1_1_DRIVE_MODE_BITS * (shift))))) | \
                                     (uint32)((uint32)(mode) << \
-                                    (Y2_DRIVE_MODE_BITS * (shift))); \
+                                    (Y1_1_DRIVE_MODE_BITS * (shift))); \
         } while (0)
     #endif
 #endif
   
 
-#if defined(Y2__PC) || (CY_PSOC4_4200L) 
+#if defined(Y1_1__PC) || (CY_PSOC4_4200L) 
     /*******************************************************************************
-    * Function Name: Y2_SetDriveMode
+    * Function Name: Y1_1_SetDriveMode
     ****************************************************************************//**
     *
     * \brief Sets the drive mode for each of the Pins component's pins.
@@ -67,17 +67,17 @@
     *  APIs (primary method) or disable interrupts around this function.
     *
     * \funcusage
-    *  \snippet Y2_SUT.c usage_Y2_SetDriveMode
+    *  \snippet Y1_1_SUT.c usage_Y1_1_SetDriveMode
     *******************************************************************************/
-    void Y2_SetDriveMode(uint8 mode)
+    void Y1_1_SetDriveMode(uint8 mode)
     {
-		Y2_SetP4PinDriveMode(Y2__0__SHIFT, mode);
+		Y1_1_SetP4PinDriveMode(Y1_1__0__SHIFT, mode);
     }
 #endif
 
 
 /*******************************************************************************
-* Function Name: Y2_Write
+* Function Name: Y1_1_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -106,18 +106,18 @@
 *  this function.
 *
 * \funcusage
-*  \snippet Y2_SUT.c usage_Y2_Write
+*  \snippet Y1_1_SUT.c usage_Y1_1_Write
 *******************************************************************************/
-void Y2_Write(uint8 value)
+void Y1_1_Write(uint8 value)
 {
-    uint8 drVal = (uint8)(Y2_DR & (uint8)(~Y2_MASK));
-    drVal = (drVal | ((uint8)(value << Y2_SHIFT) & Y2_MASK));
-    Y2_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(Y1_1_DR & (uint8)(~Y1_1_MASK));
+    drVal = (drVal | ((uint8)(value << Y1_1_SHIFT) & Y1_1_MASK));
+    Y1_1_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: Y2_Read
+* Function Name: Y1_1_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -131,16 +131,16 @@ void Y2_Write(uint8 value)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet Y2_SUT.c usage_Y2_Read  
+*  \snippet Y1_1_SUT.c usage_Y1_1_Read  
 *******************************************************************************/
-uint8 Y2_Read(void)
+uint8 Y1_1_Read(void)
 {
-    return (uint8)((Y2_PS & Y2_MASK) >> Y2_SHIFT);
+    return (uint8)((Y1_1_PS & Y1_1_MASK) >> Y1_1_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: Y2_ReadDataReg
+* Function Name: Y1_1_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -149,8 +149,8 @@ uint8 Y2_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred Y2_Read() API because the 
-* Y2_ReadDataReg() reads the data register instead of the status 
+* preferred Y1_1_Read() API because the 
+* Y1_1_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -159,16 +159,16 @@ uint8 Y2_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet Y2_SUT.c usage_Y2_ReadDataReg 
+*  \snippet Y1_1_SUT.c usage_Y1_1_ReadDataReg 
 *******************************************************************************/
-uint8 Y2_ReadDataReg(void)
+uint8 Y1_1_ReadDataReg(void)
 {
-    return (uint8)((Y2_DR & Y2_MASK) >> Y2_SHIFT);
+    return (uint8)((Y1_1_DR & Y1_1_MASK) >> Y1_1_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: Y2_SetInterruptMode
+* Function Name: Y1_1_SetInterruptMode
 ****************************************************************************//**
 *
 * \brief Configures the interrupt mode for each of the Pins component's
@@ -181,12 +181,12 @@ uint8 Y2_ReadDataReg(void)
 * \param position
 *  The pin position as listed in the Pins component. You may OR these to be 
 *  able to configure the interrupt mode of multiple pins within a Pins 
-*  component. Or you may use Y2_INTR_ALL to configure the
+*  component. Or you may use Y1_1_INTR_ALL to configure the
 *  interrupt mode of all the pins in the Pins component.       
-*  - Y2_0_INTR       (First pin in the list)
-*  - Y2_1_INTR       (Second pin in the list)
+*  - Y1_1_0_INTR       (First pin in the list)
+*  - Y1_1_1_INTR       (Second pin in the list)
 *  - ...
-*  - Y2_INTR_ALL     (All pins in Pins component)
+*  - Y1_1_INTR_ALL     (All pins in Pins component)
 *
 * \param mode
 *  Interrupt mode for the selected pins. Valid options are documented in
@@ -202,19 +202,19 @@ uint8 Y2_ReadDataReg(void)
 *  port.
 *
 * \funcusage
-*  \snippet Y2_SUT.c usage_Y2_SetInterruptMode
+*  \snippet Y1_1_SUT.c usage_Y1_1_SetInterruptMode
 *******************************************************************************/
-void Y2_SetInterruptMode(uint16 position, uint16 mode)
+void Y1_1_SetInterruptMode(uint16 position, uint16 mode)
 {
     uint32 intrCfg;
     
-    intrCfg =  Y2_INTCFG & (uint32)(~(uint32)position);
-    Y2_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+    intrCfg =  Y1_1_INTCFG & (uint32)(~(uint32)position);
+    Y1_1_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Y2_ClearInterrupt
+* Function Name: Y1_1_ClearInterrupt
 ****************************************************************************//**
 *
 * \brief Clears any active interrupts attached with the component and returns 
@@ -231,13 +231,13 @@ void Y2_SetInterruptMode(uint16 position, uint16 mode)
 *  those associated with the Pins component.
 *
 * \funcusage
-*  \snippet Y2_SUT.c usage_Y2_ClearInterrupt
+*  \snippet Y1_1_SUT.c usage_Y1_1_ClearInterrupt
 *******************************************************************************/
-uint8 Y2_ClearInterrupt(void)
+uint8 Y1_1_ClearInterrupt(void)
 {
-	uint8 maskedStatus = (uint8)(Y2_INTSTAT & Y2_MASK);
-	Y2_INTSTAT = maskedStatus;
-    return maskedStatus >> Y2_SHIFT;
+	uint8 maskedStatus = (uint8)(Y1_1_INTSTAT & Y1_1_MASK);
+	Y1_1_INTSTAT = maskedStatus;
+    return maskedStatus >> Y1_1_SHIFT;
 }
 
 

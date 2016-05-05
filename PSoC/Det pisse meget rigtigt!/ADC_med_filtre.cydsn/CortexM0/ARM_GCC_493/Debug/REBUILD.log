@@ -1,4 +1,4 @@
---------------- Rebuild Started: 05/05/2016 09:42:56 Project: ADC_med_filtre, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Rebuild Started: 05/05/2016 11:13:09 Project: ADC_med_filtre, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\main.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\cymetadata.o"
@@ -14,10 +14,6 @@ Deleting file ".\CortexM0\ARM_GCC_493\Debug\ADC_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\ADC_INT.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\Y1.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\Y1_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_493\Debug\EMG.o"
-Deleting file ".\CortexM0\ARM_GCC_493\Debug\EMG_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_493\Debug\Y2.o"
-Deleting file ".\CortexM0\ARM_GCC_493\Debug\Y2_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_RX_ISR.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\ADC_ISR.o"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\UART_SCBCLK.o"
@@ -44,14 +40,8 @@ Deleting file ".\ADC_med_filtre_timing.html"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\C_FILE.P"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
 Deleting file ".\CortexM0\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
-cydsfit.exe -.appdatapath "C:\Users\Linette Helena\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj" -d CY8C4247LQI-BL483 -s "C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit.exe -.appdatapath "C:\Users\passw\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\ADC_med_filtre.cyprj" -d CY8C4247LQI-BL483 -s "C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
-ADD: sdb.M0065: information: Analog terminal "EMG.analog_0" on TopDesign is unconnected.
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Signal: Net_271)
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Shape_285.1)
-ADD: sdb.M0065: information: Analog terminal "Y2.analog_0" on TopDesign is unconnected.
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Signal: Net_157)
- * C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\TopDesign\TopDesign.cysch (Shape_277.1)
 HDL Generation ...
 Synthesis ...
 Place and Route ...
@@ -81,10 +71,6 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\P
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/ADC_INT.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\ADC_INT.c -o .\CortexM0\ARM_GCC_493\Debug\ADC_INT.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y1.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y1.c -o .\CortexM0\ARM_GCC_493\Debug\Y1.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y1_PM.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y1_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Y1_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/EMG.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\EMG.c -o .\CortexM0\ARM_GCC_493\Debug\EMG.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/EMG_PM.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\EMG_PM.c -o .\CortexM0\ARM_GCC_493\Debug\EMG_PM.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y2.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y2.c -o .\CortexM0\ARM_GCC_493\Debug\Y2.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y2_PM.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y2_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Y2_PM.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/UART_RX_ISR.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_RX_ISR.c -o .\CortexM0\ARM_GCC_493\Debug\UART_RX_ISR.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/ADC_ISR.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\ADC_ISR.c -o .\CortexM0\ARM_GCC_493\Debug\ADC_ISR.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/UART_SCBCLK.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\UART_SCBCLK.c -o .\CortexM0\ARM_GCC_493\Debug\UART_SCBCLK.o
@@ -101,11 +87,13 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\P
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\cyPm.c -o .\CortexM0\ARM_GCC_493\Debug\cyPm.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\cyutils.c -o .\CortexM0\ARM_GCC_493\Debug\cyutils.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/CyLFClk.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\CyLFClk.c -o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o
-arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a .\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_493\Debug\UART.o .\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_493\Debug\UART_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_UART.o .\CortexM0\ARM_GCC_493\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_493\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_493\Debug\ADC.o .\CortexM0\ARM_GCC_493\Debug\ADC_PM.o .\CortexM0\ARM_GCC_493\Debug\ADC_INT.o .\CortexM0\ARM_GCC_493\Debug\Y1.o .\CortexM0\ARM_GCC_493\Debug\Y1_PM.o .\CortexM0\ARM_GCC_493\Debug\EMG.o .\CortexM0\ARM_GCC_493\Debug\EMG_PM.o .\CortexM0\ARM_GCC_493\Debug\Y2.o .\CortexM0\ARM_GCC_493\Debug\Y2_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_RX_ISR.o .\CortexM0\ARM_GCC_493\Debug\ADC_ISR.o .\CortexM0\ARM_GCC_493\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_493\Debug\UART_tx.o .\CortexM0\ARM_GCC_493\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_rx.o .\CortexM0\ARM_GCC_493\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_493\Debug\ADC_IRQ.o .\CortexM0\ARM_GCC_493\Debug\ADC_intClock.o .\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_493\Debug\CyFlash.o .\CortexM0\ARM_GCC_493\Debug\CyLib.o .\CortexM0\ARM_GCC_493\Debug\cyPm.o .\CortexM0\ARM_GCC_493\Debug\cyutils.o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y1_1.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y1_1.c -o .\CortexM0\ARM_GCC_493\Debug\Y1_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_493\Debug/Y1_1_PM.lst -g -D DEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC4\Y1_1_PM.c -o .\CortexM0\ARM_GCC_493\Debug\Y1_1_PM.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a .\CortexM0\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_493\Debug\UART.o .\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_493\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_493\Debug\UART_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_UART.o .\CortexM0\ARM_GCC_493\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_493\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_493\Debug\ADC.o .\CortexM0\ARM_GCC_493\Debug\ADC_PM.o .\CortexM0\ARM_GCC_493\Debug\ADC_INT.o .\CortexM0\ARM_GCC_493\Debug\Y1.o .\CortexM0\ARM_GCC_493\Debug\Y1_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_RX_ISR.o .\CortexM0\ARM_GCC_493\Debug\ADC_ISR.o .\CortexM0\ARM_GCC_493\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_493\Debug\UART_tx.o .\CortexM0\ARM_GCC_493\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_493\Debug\UART_rx.o .\CortexM0\ARM_GCC_493\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_493\Debug\ADC_IRQ.o .\CortexM0\ARM_GCC_493\Debug\ADC_intClock.o .\CortexM0\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_493\Debug\CyFlash.o .\CortexM0\ARM_GCC_493\Debug\CyLib.o .\CortexM0\ARM_GCC_493\Debug\cyPm.o .\CortexM0\ARM_GCC_493\Debug\cyutils.o .\CortexM0\ARM_GCC_493\Debug\CyLFClk.o .\CortexM0\ARM_GCC_493\Debug\Y1_1.o .\CortexM0\ARM_GCC_493\Debug\Y1_1_PM.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.elf .\CortexM0\ARM_GCC_493\Debug\main.o .\CortexM0\ARM_GCC_493\Debug\cymetadata.o .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o .\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m0 -mthumb -g -ffunction-sections -O0 -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_493\Debug/ADC_med_filtre.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
-cyelftool.exe -C "C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.elf" --flash_row_size 128 --flash_size 131072
-cyelftool.exe -S "C:\Users\Linette Helena\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.elf"
-Flash used: 11008 of 131072 bytes (8,4 %).
-SRAM used: 2004 of 16384 bytes (12,2 %). Stack: 1024 bytes. Heap: 256 bytes.
---------------- Rebuild Succeeded: 05/05/2016 09:43:14 ---------------
+cyelftool.exe -C "C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.elf" --flash_row_size 128 --flash_size 131072
+cyelftool.exe -S "C:\Users\passw\Desktop\Det pisse meget rigtigt!\ADC_med_filtre.cydsn\CortexM0\ARM_GCC_493\Debug\ADC_med_filtre.elf"
+Flash used: 8192 of 131072 bytes (6,3 %).
+SRAM used: 2012 of 16384 bytes (12,3 %). Stack: 1024 bytes. Heap: 256 bytes.
+--------------- Rebuild Succeeded: 05/05/2016 11:13:24 ---------------

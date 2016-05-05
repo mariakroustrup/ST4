@@ -60,27 +60,27 @@ signed int mavg_filter(signed int data)
       x_mavg[i+1] = x_mavg[i];
    }
       
-   return floor_and_convert(y_mavg);
+   return (signed int) y_mavg;
 }
 
 
 /***********************************Moving average filter 2***********************************/
 signed int mavg_filter2(signed int data)
 {
-   x2_mavg[0] =  (double) data;      // Read received sample and perform type casts
-   
-   y2_mavg = 0;
-   for(i = 0;i <= FILTER_LENGTH_mavg2;i++)           // Run FIR filter for each received sample
+   x2_mavg[0] =  (int16) data;                     // Read received sample and perform type casts
+    
+   y2_mavg = 0;                                     // 
+   for(i = 0;i <= FILTER_LENGTH_mavg2;i++)          // Run FIR filter for each received sample
    {
-      y2_mavg += b2_mavg[i]*x2_mavg[i];
+      y2_mavg += b2_mavg[i]*x2_mavg[i];             // 
    } 
    
-   for(i = FILTER_LENGTH_mavg2-1;i >= 0;i--)         // Roll x array in order to hold old sample inputs
+   for(i = FILTER_LENGTH_mavg2-1;i >= 0;i--)        // Roll x array in order to hold old sample inputs
    {
-      x2_mavg[i+1] = x2_mavg[i];
+      x2_mavg[i+1] = x2_mavg[i];                    // 
    }
       
-   return floor_and_convert(y2_mavg);
+   return (signed int) y2_mavg;               // 
 }
 
 /***********************************Lavpas filter***********************************/
@@ -111,26 +111,26 @@ int low_pass_filter(int data)
     return floor_and_convert(y_low[0]);
 }
 
-/***********************************Main***********************************/
+/***********************************ISR***********************************/
 
 CY_ISR(ADC_interrupt)
 {
     int i;
     for(i=0; i<num_of_channels;i++)
     {
-        result[i] = ADC_GetResult16(i)-1024;
+        result[i] = ADC_GetResult16(i)-1010;
     }
     data_ready = TRUE;
 }
 
+/***********************************Main***********************************/
 int main()
 {
+    int16 mav_data;
     uint16 i;
-   
-   
     ADC_ISR_StartEx(ADC_interrupt);
-    UART_Start();                       /* Start SCB (UART mode) operation */
     CyGlobalIntEnable;
+    UART_Start();                       /* Initialize ADC */    
     ADC_Start();                        /* Initialize ADC */
     ADC_StartConvert();                 /* Start ADC conversions */
     ADC_IRQ_Enable();                   /* Enable ADC interrupts */    
@@ -143,28 +143,17 @@ int main()
             {
                 if (i==0)
                 {
-//                    UART_UartPutChar((mavg_filter(result[i])));
-//                    UART_UartPutChar((mavg_filter(result[i]>>8)));
+                    mav_data = mavg_filter(result[i]);
+                    UART_UartPutChar(mav_data);
+                    UART_UartPutChar(mav_data>>8);
+                }
+                 if (i==1)
+                {
                     UART_UartPutChar(result[i]);
                     UART_UartPutChar(result[i]>>8);
-                }
-                
-                if (i==1)
-                {
-                    UART_UartPutChar((mavg_filter2(result[i])));
-                    UART_UartPutChar((mavg_filter2(result[i]>>8)));
-                    //UART_UartPutChar(result[i]);
-                    //UART_UartPutChar(result[i]>>8);
-                }
-                
-                if (i==2)
-                {
-                    UART_UartPutChar(low_pass_filter(result[i]));
-                    UART_UartPutChar(low_pass_filter(result[i]>>8));
                 }
             }
             data_ready = FALSE;
         }
-
     }
 }

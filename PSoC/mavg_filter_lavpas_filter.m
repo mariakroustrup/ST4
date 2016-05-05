@@ -1,10 +1,10 @@
 clear all
 load Nedogop1
+%load matlab
 close all
 
 data=data(7,1:1000)*10000; %Ved accelerometer vælg måling 2. Ved EMG vælg måling 7
 data=data-data(1);
-
 
 L = length(data);
 

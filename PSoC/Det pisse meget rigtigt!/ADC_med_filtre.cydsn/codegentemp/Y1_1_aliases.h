@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: EMG.h  
+* File Name: Y1_1.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_EMG_ALIASES_H) /* Pins EMG_ALIASES_H */
-#define CY_PINS_EMG_ALIASES_H
+#if !defined(CY_PINS_Y1_1_ALIASES_H) /* Pins Y1_1_ALIASES_H */
+#define CY_PINS_Y1_1_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,17 +26,17 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define EMG_0			(EMG__0__PC)
-#define EMG_0_PS		(EMG__0__PS)
-#define EMG_0_PC		(EMG__0__PC)
-#define EMG_0_DR		(EMG__0__DR)
-#define EMG_0_SHIFT	(EMG__0__SHIFT)
-#define EMG_0_INTR	((uint16)((uint16)0x0003u << (EMG__0__SHIFT*2u)))
+#define Y1_1_0			(Y1_1__0__PC)
+#define Y1_1_0_PS		(Y1_1__0__PS)
+#define Y1_1_0_PC		(Y1_1__0__PC)
+#define Y1_1_0_DR		(Y1_1__0__DR)
+#define Y1_1_0_SHIFT	(Y1_1__0__SHIFT)
+#define Y1_1_0_INTR	((uint16)((uint16)0x0003u << (Y1_1__0__SHIFT*2u)))
 
-#define EMG_INTR_ALL	 ((uint16)(EMG_0_INTR))
+#define Y1_1_INTR_ALL	 ((uint16)(Y1_1_0_INTR))
 
 
-#endif /* End Pins EMG_ALIASES_H */
+#endif /* End Pins Y1_1_ALIASES_H */
 
 
 /* [] END OF FILE */

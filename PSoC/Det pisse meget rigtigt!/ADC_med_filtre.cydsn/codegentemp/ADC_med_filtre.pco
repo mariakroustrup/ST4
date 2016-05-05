@@ -1,5 +1,5 @@
 # ADC_med_filtre
-# 2016-05-05 07:43:04Z
+# 2016-05-05 09:13:15Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: SWDDebugEnabled
 dont_use_io iocell 0 6
@@ -14,8 +14,7 @@ set_location "ClockBlock" m0s8clockblockcell -1 -1 0
 set_io "\UART:tx(0)\" iocell 1 5
 set_io "\UART:rx(0)\" iocell 1 4
 set_io "Y1(0)" iocell 3 0
-set_io "EMG(0)" iocell 3 2
-set_io "Y2(0)" iocell 3 1
+set_io "Y1_1(0)" iocell 3 1
 set_location "\UART:SCB\" m0s8scbcell -1 -1 0
 set_location "\ADC:IRQ\" interrupt -1 -1 15
 set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0

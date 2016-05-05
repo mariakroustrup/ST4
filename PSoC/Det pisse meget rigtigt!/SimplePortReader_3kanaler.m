@@ -1,8 +1,8 @@
-comport = 'COM5'; % Vælg porten til jeres egen PSoC enhed
+comport = 'COM8'; % Vælg porten til jeres egen PSoC enhed
 
 serial_port = serial(comport, 'TimeOut', 2, 'BaudRate', 115200);
 
-num_of_channels = 1;    % Antallet af kanaler
+num_of_channels = 2;    % Antallet af kanaler
 data_length = 500;     % Antal samples per kanal i plottet
 data = NaN*ones(data_length,num_of_channels);   % Initialisering af data
 byte_per_channel = 2;   % Antal bytes per kanal (int16 = 2 bytes)
@@ -32,7 +32,7 @@ if port_open                        % Kør kun nedenstående, hvis porten kunne åb
         for i = 1:num_of_channels   % Pak byte_stream data ud til en matrice
             data(:,i) = [data(samples_per_channel+1:end,i) ; data_stream(i:num_of_channels:end)];
         end
-        plot(data*127.4508)                              % Plot data
+        plot(data)                              % Plot data
         %axis([0 data_length 0 2^11+50])  % Tilpas akserne
         legend('Y1-akse','Y2-akse','EMG');
         drawnow                                 % Tving grafen til at opdatere
