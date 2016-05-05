@@ -1,3 +1,13 @@
-\subsection{Analog til digital konvertering} \fxnote{Dette afsnit er meget uklart - omformuler og uddyb}
-Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digital. Det er muligt at konfigurere op til 8 analoge kanaler og læse dem samlet eller kun en enkelt indgang ad gangen. Der kan vælges mellem at anvende 8, 10 og 12 bit og kan sample op til 1 Million Samples Per Sekund (MSPS) med en opløsning på 12 bit. SAR ADC'en understøtter single ended og differentiale indgange. Derudover er det muligt at tilføje en indsprøjtning kanal ved scanningssekvens med firmwarekontrol ved runtime. ADC'en kan den sættes op så den i hardware udfører en gennemsnitsberegning. \citep{ADC2014}
+\subsection{Analog til digital konvertering}
+Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digitalt. Der ønskes at konfigurere 3 analoge kanaler, herunder Y-aksen på begge accelerometre samt EMG-måling. Opsætningen af ADC'en på mikrokontrolleren er illustreret på \autoref{fig:ADC_teori}. Der ønskes at læse signalerne hver for sig ved at måle single ended, hvorfor hvert input er koblet til $V_{ss}$.  Da der ønskes at anvende en 12 bit ADC, grundet kravet i \autoref{sec:ADC_teori}, indstilles denne til 12 bit, da vi anvender single ended svarer dette til at ADC'ens anvender 11 bit, hvorfor den inddeles i $2^{11}$ svarende til 2048 niveauer. ADC'en har et arbejdsområde fra $0-5~V$. LSB'en for ADC'en kan beregnes ud fra \autoref{equ:LSB}, hvilket giver $2,44~mV$  \citep{ADC2014}. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{figures/implementering/ADC_imp.png}
+\caption{ADC'ens opsætning på mikrokontrolleren \fxnote{Hvis der kobles flere til ting ADC'en skal dette skrives ind. Figuren er ikke endelig, så den skal udskiftes hvis det er.}}
+\label{fig:ADC_teori}
+\end{figure}
+
+I ADC'en er der indbygget en clock frekvens, da der ønskes at samples med 100 samples indstilles denne for at forholdet mellem clock frekvensen og samplingsfrekvensen er acceptabel(andet ord) skal samplingsfrekvens sættes til 101 samples per sekund, hvorved der opnås en hastighed på $1600~kHz$. 
+
+% Det er muligt at konfigurere op til 8 analoge kanaler og læse dem samlet eller kun en enkelt indgang ad gangen. Der kan vælges mellem at anvende 8, 10 og 12 bit og kan sample op til 1 Million Samples Per Sekund (MSPS) med en opløsning på 12 bit. SAR ADC'en understøtter single ended og differentiale indgange. Derudover er det muligt at tilføje en indsprøjtning kanal ved scanningssekvens med firmwarekontrol ved runtime. ADC'en kan den sættes op så den i hardware udfører en gennemsnitsberegning. 
