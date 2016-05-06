@@ -8,7 +8,7 @@ I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/filtre}
+\includegraphics[width=0.8\textwidth]{figures/filtre}
 \caption{De fire filtertyper; Butterworth, Chebyshev 1 \& 2 og elliptisk \citep{wikipedia2016}}
 \label{fig:filtre}
 \end{figure}
@@ -29,7 +29,7 @@ Et moving average filter er et simpelt lavpas FIR-filter, der oftest anvendes ti
 \label{fig:maf}
 \end{figure} 
 
-Af \autoref{eq:mafl} fremgår formlen for udregingen af et moving average filter. 
+Af \autoref{eq:mafl} fremgår formlen for udregningen af et moving average filter. 
 \begin{equation}
 y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \label{eq:mafl}
@@ -43,7 +43,7 @@ Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksemp
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=1.2\textwidth]{figures/problemloesning/lavpas_knaek.pdf}
+\includegraphics[width=1.0\textwidth]{figures/problemloesning/lavpas_knaek.pdf}
 \caption{Øverst ses graferne, hvor de blå linjer på graferne viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpas IIR-filtre med knækfrekvenser på hhv. 15, 20 og $25~Hz$. Nederst ses et udsnit af samme grafer for at illustere filterets påvirkning på signalet.}
 \label{fig:lp_knaek}
 \end{figure} 
@@ -55,7 +55,7 @@ Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=1.2\textwidth]{figures/problemloesning/lavpas_orden.pdf}
+\includegraphics[width=1.0\textwidth]{figures/problemloesning/lavpas_orden.pdf}
 \caption{Øverst ses graferne, hvor de blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpas IIR-filtre med ordner på hhv. 1, 2 og 3. Nederst ses et udsnit af samme grafer for at synliggøre, hvilken påvirkning de forskellige ordner har på signalet.}
 \label{fig:lp_orden}
 \end{figure} 
@@ -78,7 +78,7 @@ Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, 
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=1\textwidth]{figures/problemloesning/mavgfilter_matlab} 
+\includegraphics[width=1.2\textwidth]{figures/problemloesning/mavgfilter_matlab} 
 \caption{De blå linjer på grafen viser resultater fra pilotforsøget. De røde linjer på hver graf viser et moving average filter med filterlængde på hhv. 10, 15 og 20 samples. I starten af grafen ses et udslag, der svarer til forsinkelsen, som dannes på grund af det implementerede moving average filter. Denne forsinkelse er svarende til filterlængden.}
 \label{fig:mavgfilter}
 \end{figure}
@@ -88,5 +88,5 @@ Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, 
 \textbf{Krav:}
 \begin{itemize}
 \item Skal muliggøre en repræsentation af vinkler. 
-\item Skal have en filterlængde på $10~samples$
+\item Skal have en filterlængde på $10$ samples
 \end{itemize}

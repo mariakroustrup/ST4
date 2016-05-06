@@ -11,7 +11,7 @@ Outputtet fra målinger foretaget på biologiske signaler fremstår som et analo
 \noindent
 Samplingsprocessen sker ved diskretisering i tidsdomænet, hvor det kontinuerte signal konverteres til et diskret signal. Det er vigtigt at vælge en passende samplingsfrekvens for at undgå, at information fra det oprindelige signal går tabt \citep{morre2003}. Ved for høj samplingsfrekvens vil en større mængde data opsamles og derved benytte mere plads og processering \citep{wolf2004}. En for lav samplingsfrekvens vil derimod kunne rekonstruere signalet, således kurven ikke kan repræsentere det oprindelige signal, hvilket fremgår som alias \citep{morre2003}. I følge Nyquists sætning er det hensigtsmæssigt, at samplingsfrekvensen er mindst det dobbelte af frekvensen i det oprindelige signal \citep{morre2003}. I praksis anbefales det dog at sample med det ti dobbelte.
 
-Kvantificering sker ved diskretisering af amplituden. Det oprindelige signals amplitudeværdier inddeles ved kvantificering i trin. Værdierne mellem to trin repræsenteres af den samme digitale værdi. Dette gør at flere værdier kan ligge indenfor den samme digitale værdi \citep{morre2003}. Amplitudeniveauer, der er tilgængelige til at repræsentere det analoge signal, determineres af antal bits. En ADC med en opløsning på 12-bit inddeles i ${2}^{12}$, svarende til 4096 niveauer. Den mindste amplitudeniveau \fxnote{Steffens kommentar - sensitivitet?} som ADC'en kan opnå omtales Least Significant Bit (LSB) og bestemmes ud fra \autoref{equ:LSB}, hvor FSR, hvilket er en betegnelse for Full Scale voltage Range og n antal bits \citep{webster1998, wolf2004}.
+Kvantificering sker ved diskretisering af amplituden. Det oprindelige signals amplitudeværdier inddeles ved kvantificering i trin. Værdierne mellem to trin repræsenteres af den samme digitale værdi. Dette gør at flere værdier kan ligge indenfor den samme digitale værdi \citep{morre2003}. Amplitudeniveauer, der er tilgængelige til at repræsentere det analoge signal, determineres af antal bits. En ADC med en opløsning på 12-bit inddeles i ${2}^{12}$, svarende til 4096 niveauer. ADC'ens sensitivitet kan opnå omtales Least Significant Bit (LSB) og bestemmes ud fra \autoref{equ:LSB}, hvor FSR, hvilket er en betegnelse for Full Scale voltage Range og n antal bits \citep{webster1998, wolf2004}. \fxnote{Hvor mange bit vil være mest hensigtsmæssigt at have - argumenter for og i mod valg af lav eller høj bit?? }
 
 \begin{equation} \label{equ:LSB}
 LSB=\dfrac{FSR}{2^{12}}
@@ -26,9 +26,9 @@ Hvis spændingen, der pålægges ADC'en overstiger dens arbejdsområde, vil dett
 \begin{itemize}
 %\item Skal have en samplingsfrekvens på $100~Hz$
 \item Skal sample minimum tre inputs 
-\item Skal have en hastighed på XX
-\item Skal have en opløsning på XX bit
-\item Skal maksimalt have en LSB på XX
+\item Skal have en hastighed som ikke overskrider ADC'ens arbejdsområde \fxnote{Hvad vil hastigheden sige?}
+\item Skal have en opløsning på minimum/maksimum XX bit \fxnote{Denne værdi skal findes}
+\item Skal have en LSB som ikke overstiger ADC'en arbejdsområde.
 %\item Skal have en opløsning på minimum 10 bit
 %\item Skal modtage en spændingsforsyning på $XX~V$
 %\item Skal have en tolerence på $XX~\%$ (kvatificeringsfejl?)
