@@ -1,4 +1,13 @@
-\subsection{Implementering af IIR-lavpasfilter}
+\subsection{Implementering og test af IIR-lavpasfilter}
 Det ønskede 2. ordens IIR-lavpasfilter implementeres digitalt ved anvendelse af MATLAB samt PSoC.
 Ved implementering af dette filter benyttes MATLAB for således at beregne a og b koefficienterne for et Butterworth filter, der er nødvendigt for at kode filteret. Dertil defineres a og b koefficienterne samt filterlængden i PSoC, hvorefter disse anvendes til programmering af lavpasfilteret. 
+For at visualisere forskellen mellem det rå signal og det filtrede signal, sendes det optagede signal fra pilotforsøget \autoref{sec:pilotforsoeg} gennem mikrokontrolleren og visualiseres i MATLAB. Resultatet heraf fremgår på \autoref{fig:lavpas_imp}
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/blackbox}
+\caption{Lavpasfilter lavet på mikrokontrolleren visualiseret i MATLAB}
+\label{fig:lavpas_imp}
+\end{figure}
+ 
