@@ -1,0 +1,10 @@
+\subsection{EMG-algoritme}
+EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. 
+
+For at opfylde dette formål skal hældningen af grafen findes. Dette kan gøres ved differentiering, hvorved det vil være muligt at finde tangenthældningen i ét punkt ved differentialkvotienten. Det vælges at implementere en mere simpel metode til at tilnærmelsesvist at finde hældningen, ved \autoref{eq:haeldning}.
+
+\begin{equation}
+f'(x)\approx\dfrac{\Delta y(x)}{\Delta x}
+\label{eq:haeldning}
+\end{equation}
+
