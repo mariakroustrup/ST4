@@ -39,17 +39,17 @@ y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en ALS-patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kan være for tungt for mikrokontrolleren at arbejde med. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men skal stadig følge muskelsignalet under øvelsen.
 Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbåndet og ingen rippels i pas- og stopbåndet, da dette vil påvirke signalet.
 
-Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \ref{fig:lp_knaek}, hvor $15~Hz$, $20~Hz$ og $25~Hz$ er repræsenteret. 
+Først vælges filterets knækfrevkens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \ref{fig:lp_knaek}, hvor $2~Hz$, $5~Hz$ og $10~Hz$ er repræsenteret. 
 
 \begin{figure} [H]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/problemloesning/lavpas_knaek.pdf}
-\caption{Øverst ses graferne, hvor de blå linjer på graferne viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpas IIR-filtre med knækfrekvenser på hhv. 15, 20 og $25~Hz$. Nederst ses et udsnit af samme grafer for at illustere filterets påvirkning på signalet.}
+\caption{Øverst ses graferne, hvor de blå linjer på graferne viser resultater fra pilotforsøget. De røde linjer på hver graf viser lavpas IIR-filtre med knækfrekvenser på hhv. 2, 5 og $10~Hz$. Nederst ses et udsnit af samme grafer for at illustere filterets påvirkning på signalet.}
 \label{fig:lp_knaek}
 \end{figure} 
 
 \noindent
-Ud fra \ref{fig:lp_knaek} vælges en knækfrekvens på $20~Hz$, da denne følger signalet samtidigt med at udglatte spikes, der vil kunne forstyrre signalet til exoskelettet, hvilket de to andre knækfrekvenser ikke formår at gøre.
+Ud fra \ref{fig:lp_knaek} vælges en knækfrekvens på $5~Hz$, da filteret med denne knækfrekvens udglatter spikes og små svingninger i EMG-signalet, der vil kunne forstyrre signalet til exoskelettet. Samtidigt følger filteret signalet, som det kan ses på udsnittene nederst på \ref{fig:lp_knaek}, hvilket de to andre knækfrekvenser ikke formår at gøre.
 
 Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden der vil være mest optimal til filteret. 
 
@@ -69,7 +69,7 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 \begin{itemize}
 \item Skal følge inputsignalet mest muligt  
 \item Skal udformes som et Butterworth lavpasfilter
-\item Skal have en knækfrekvens på $20~Hz$
+\item Skal have en knækfrekvens på $5~Hz$
 \item Skal have en filterorden på 2
 \end{itemize}
 
