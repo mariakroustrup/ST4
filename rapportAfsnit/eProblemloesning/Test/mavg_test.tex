@@ -1,11 +1,22 @@
 \subsection{Test af et moving average filter}
-For at visualisere forskellen mellem det ufiltrede signal og det filtrede signal, sendes det optagede signal fra pilotforsøget \autoref{sec:pilotforsoeg} gennem mikrokontrolleren og visualiseres i MATLAB. Resultatet heraf fremgår på \autoref{fig:mavg_imp}
-
+For at teste om moving average filteret overholder de krav der er stillet i \autoref{sec:mavg_krav} visualiseres forskellen mellem det ufiltrede signal og det filtrede signal. Det optagede signal fra pilotforsøget \autoref{sec:pilotforsoeg} sendes til mikrokontrollen via UART-forbindelse, som modtager den retuneret værdi. De sendte og returnerede værdier visualiseres i MATLAB. Resultatet heraf fremgår på \autoref{fig:mavg_test}. 
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/blackbox}
-\caption{Lavpasfilter lavet på mikrokontrolleren visualiseret i MATLAB}
-\label{fig:mavg_imp}
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/accelerometer_filter.png}
+	\caption{ }
+	\label{fig:mavg_test}
 \end{figure}
- 
+
+% Her skal der skrives hvad der kan ses af testen ift ændringerne i signalet. Dernæst vil filteret blive testet ift. det delay der forekommer. 
+
+Da filteret kræver 10 samples for at retunere den første værdi, testes hvorvidt dette stemmer overens med det forventede delay på $100~ms$. Dertil ses også om der forårsages yderligere delay af filteret. Til at måle behandlingstiden, programmeres en timer funktion i mikrokontrolleren, der retunerer behandlingstiden til matlab. Det sendte signal og det modtaget delay ses i \autoref{fig:testmavgdelay}.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{fig/blackbox.png}
+	\caption{ }
+	\label{fig:testmavgdelay}
+\end{figure}
+
+Ud fra ovenstående resultater vurderes det at det filterede signal opfylder kravene for \autoref{sec:mavg_krav}. 
