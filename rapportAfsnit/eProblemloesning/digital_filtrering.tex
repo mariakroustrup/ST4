@@ -35,7 +35,7 @@ y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \label{eq:mafl}
 \end{equation}
 
-\subsubsection{Filtrering af EMG-signal}
+\subsubsection{Filtrering af EMG-signal} \label{sec:lavpas_krav}
 Under pilotforsøget i \autoref{sec:pilotforsoeg} kunne det ses, at udglatningen af signalet fra det analoge envelopefilter ikke er tilstrækkeligt i forhold til, at signalet skal få et exoskelet til at bevæge sig efter en ALS-patients ben. Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forstærkede, ensrettede og lavpasfiltrerede EMG-signal, vil et IIR-lavpasfilter være fordelagtigt at implementere, da et FIR-filter kan være for tungt for mikrokontrolleren at arbejde med. Dette andet, og digitale, lavpasfilter skal fungere som endnu et envelopefilter, så signalet bliver yderligere udglattet, men skal stadig følge muskelsignalet under øvelsen.
 Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse valg påvirker signalet. På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbåndet og ingen rippels i pas- og stopbåndet, da dette vil påvirke signalet.
 
@@ -73,7 +73,7 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 \item Skal have en filterorden på 2
 \end{itemize}
 
-\subsubsection{Filtrering af accelerometer-signaler}
+\subsubsection{Filtrering af accelerometer-signaler} \label{sec:mavg_krav}
 Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givede accelerometer. Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. Ved implementeringen af et moving average filter opstår der en forsinkelse, der svarer til filterlængden. Denne forsinkelse fremgår af \autoref{fig:mavgfilter}, hvor der ses et udslag i starten, der medfører denne forsinkelse. 
 
 \begin{figure} [H]
