@@ -14,7 +14,7 @@
 
 #define ARRAY_SIZE 3
 //#define FILTER_LENGTH_mavg 19
-#define FILTER_LENGTH_low 2
+
 
 
 #define StartMeasuring Measure_When_Low_Write(0);   // Used to start the Timer
@@ -32,11 +32,16 @@ double y_mavg = 0;
 double b_mavg[FILTER_LENGTH_mavg+1] = {0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1};
 
 
+//double x_low[FILTER_LENGTH_low+1] = {0, 0, 0};
+//double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
+//double b_low[FILTER_LENGTH_low+1] = {0.0201, 0.0402, 0.0201};
+//double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.5610, 0.6414};
+
+#define FILTER_LENGTH_low 2
 double x_low[FILTER_LENGTH_low+1] = {0, 0, 0};
 double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
-double b_low[FILTER_LENGTH_low+1] = {0.0201, 0.0402, 0.0201};
-double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.5610, 0.6414};
-
+double b_low[FILTER_LENGTH_low+1] = {0.0015, 0.0029, 0.0015};
+double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.8890, 0.8949};
 
 char current_byte = LOWBYTE;                        // Receive LOW byte first as default
 int16 value_in,value_out[2]={0,0},i=0,j=0,oldest,newest,diff,signed_data,old, low_pass_new, avg_new;
@@ -117,10 +122,10 @@ CY_ISR(RX_interrupt)
                 
         StartMeasuring
         value_out[1] = value_out[0];
-           //low_pass_new = low_pass_filter(value_in);
-           //value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
-            avg_new = mavg_filter(value_in);   
-            value_out[0] = avg_new; 
+           low_pass_new = low_pass_filter(value_in);
+           value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
+            //avg_new = mavg_filter(value_in);   
+            //value_out[0] = avg_new; 
         
         StopMeasuring
         
@@ -134,10 +139,11 @@ CY_ISR(RX_interrupt)
         }
        
        
-          UART_UartPutChar(avg_new);
-          UART_UartPutChar(avg_new>>8);  
-//        UART_UartPutChar(low_pass_new);
-//        UART_UartPutChar(low_pass_new>>8); 
+          //UART_UartPutChar(avg_new);
+          //UART_UartPutChar(avg_new>>8);
+      
+        UART_UartPutChar(low_pass_new);
+        UART_UartPutChar(low_pass_new>>8); 
     }
 }
 

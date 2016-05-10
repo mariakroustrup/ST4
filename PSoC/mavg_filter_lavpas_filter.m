@@ -3,7 +3,7 @@ load Nedogop1
 %load matlab
 close all
 
-data=data(2,1:1000)*1000; %Ved accelerometer vælg måling 2. Ved EMG vælg måling 7
+data=data(7,1:1000)*1000; %Ved accelerometer vælg måling 2. Ved EMG vælg måling 7
 data=data-data(1);
 
 L = length(data);
@@ -23,13 +23,13 @@ for i = 0:M:L-1,
     plot(data(1:i+M))
     hold on
     plot(return_data(1:i+M),'r')
-    legend('Ufiltreret accelerometer','Filtreret accelerometer')
+    legend('Ufiltreret EMG','Filtreret EMG')
     xlabel('Tid [s]')
     ylabel('Spænding [V]')
     set(gca,'fontsize',20);
     box off
     %axis([0 1000 1250 1500])
-    drawnow
+    %drawnow
 end
 toc
 fclose(Central_port)
