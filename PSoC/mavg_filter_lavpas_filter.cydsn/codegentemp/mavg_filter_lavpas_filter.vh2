@@ -2,7 +2,7 @@
 --	Conversion of mavg_filter_lavpas_filter.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu May 05 09:34:43 2016
+--	Tue May 10 12:29:03 2016
 --
 
 USE cypress.cypress.all;

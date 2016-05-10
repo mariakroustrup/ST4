@@ -23,11 +23,9 @@ for i = 0:M:L-1,
     plot(data(1:i+M))
     hold on
     plot(return_data(1:i+M),'r')
-    legend('Ufiltreret accelerometer','Filtreret accelerometer')
+    legend('Rå accelerometer','Filtreret accelerometer')
     xlabel('Tid [s]')
-    ylabel('Spænding [V]')
-    set(gca,'fontsize',20);
-    box off
+    ylabel('Spænd
     %axis([0 1000 1250 1500])
     drawnow
 end

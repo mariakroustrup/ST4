@@ -13,7 +13,7 @@
 #define LENGTH 5
 
 #define ARRAY_SIZE 3
-#define FILTER_LENGTH_mavg 19
+//#define FILTER_LENGTH_mavg 19
 #define FILTER_LENGTH_low 2
 
 
@@ -22,9 +22,15 @@
 
 int y[2] = {0,0};
 
-double x_mavg[FILTER_LENGTH_mavg+1] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+//double x_mavg[FILTER_LENGTH_mavg+1] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+//double y_mavg = 0;
+//double b_mavg[FILTER_LENGTH_mavg+1] = {0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05};
+#define FILTER_LENGTH_mavg 9
+//int y[2] = {0,0};
+double x_mavg[FILTER_LENGTH_mavg+1] = {0,0,0,0,0,0,0,0,0,0};
 double y_mavg = 0;
-double b_mavg[FILTER_LENGTH_mavg+1] = {0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05};
+double b_mavg[FILTER_LENGTH_mavg+1] = {0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1};
+
 
 double x_low[FILTER_LENGTH_low+1] = {0, 0, 0};
 double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
