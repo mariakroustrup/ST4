@@ -1,13 +1,2 @@
 \subsection{Implementering af et moving average filter}
 Det ønskes at implementere et moving average filter ved anvendelse af MATLAB samt PSoC. Koefficienten, a, defineres til at have en værdi på 1, da denne er konstant ved FIR-filtre. Koefficienten, b, defineres ved at dividere a med filterlængden. Disse koefficienter findes i MATLAB og bliver overført til moving average filteret programmeret i PSoC. 
-
-For at visualisere forskellen mellem det rå signal og det filtrede signal, sendes det optagede signal fra pilotforsøget \autoref{sec:pilotforsoeg} gennem mikrokontrolleren og visualiseres i MATLAB. Resultatet heraf fremgår på \autoref{fig:mavg_imp}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/blackbox}
-\caption{Lavpasfilter lavet på mikrokontrolleren visualiseret i MATLAB}
-\label{fig:mavg_imp}
-\end{figure}
- 
