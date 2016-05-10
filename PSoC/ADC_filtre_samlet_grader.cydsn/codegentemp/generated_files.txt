@@ -43,6 +43,34 @@
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Y2.h" value="NONE;Y2" />
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Y2_aliases.h" value="NONE;Y2" />
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Y2_PM.c" value="ARM_C_FILE;Y2" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\EMG.c" value="ARM_C_FILE;EMG" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\EMG.h" value="NONE;EMG" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\EMG_aliases.h" value="NONE;EMG" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\EMG_PM.c" value="ARM_C_FILE;EMG" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_SW2.c" value="ARM_C_FILE;Pin_SW2" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_SW2.h" value="NONE;Pin_SW2" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_SW2_aliases.h" value="NONE;Pin_SW2" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_SW2_PM.c" value="ARM_C_FILE;Pin_SW2" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\pin_SW2_int.c" value="ARM_C_FILE;pin_SW2_int" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\pin_SW2_int.h" value="NONE;pin_SW2_int" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Red.c" value="ARM_C_FILE;Pin_Red" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Red.h" value="NONE;Pin_Red" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Red_aliases.h" value="NONE;Pin_Red" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Red_PM.c" value="ARM_C_FILE;Pin_Red" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Green.c" value="ARM_C_FILE;Pin_Green" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Green.h" value="NONE;Pin_Green" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Green_aliases.h" value="NONE;Pin_Green" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Pin_Green_PM.c" value="ARM_C_FILE;Pin_Green" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Control_Reg_1.h" value="NONE;Control_Reg_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Control_Reg_1.c" value="ARM_C_FILE;Control_Reg_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Control_Reg_1_PM.c" value="ARM_C_FILE;Control_Reg_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Timer_1.c" value="ARM_C_FILE;Timer_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Timer_1.h" value="NONE;Timer_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Timer_1_PM.c" value="ARM_C_FILE;Timer_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Clock_1.c" value="ARM_C_FILE;Clock_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Clock_1.h" value="NONE;Clock_1" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Timer_ISR.c" value="ARM_C_FILE;Timer_ISR" />
+  <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\Timer_ISR.h" value="NONE;Timer_ISR" />
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
   <file name="C:\Users\Linette Helena\Desktop\ADC_filtre_samlet_grader.cydsn\codegentemp\UART_tx.c" value="ARM_C_FILE;UART_tx" />

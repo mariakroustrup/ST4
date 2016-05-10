@@ -15,7 +15,7 @@
 #define TRUE 1
 #define FALSE 0
 
-#define num_of_channels 2
+#define num_of_channels 3
 
 
 /* [] END OF FILE */
