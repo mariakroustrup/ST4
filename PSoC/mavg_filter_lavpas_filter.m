@@ -29,7 +29,7 @@ for i = 0:M:L-1,
     set(gca,'fontsize',20);
     box off
     %axis([0 1000 1250 1500])
-    %drawnow
+    drawnow
 end
 toc
 fclose(Central_port)
