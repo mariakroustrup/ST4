@@ -20,10 +20,10 @@ Kvantificering sker ved diskretisering af amplituden. Det oprindelige signals am
 \label{fig:ADC_bit}
 \end{figure}
 
-En ADC med en opløsning på 12-bit inddeles i ${2}^{12}$, svarende til 4096 niveauer. Dette giver en repræsentation af værdier fra 0 til 4096 eller fra -2048 til 2047.  Den sensitivitet som ADC'ens sensitivitet kan opnå, omtales Least Significant Bit (LSB) og bestemmes ud fra \autoref{equ:LSB}, hvor FSR, hvilket er en betegnelse for Full Scale voltage Range og n antal bits \citep{webster1998, wolf2004}.
+En ADC med en opløsning på 12-bit inddeles i ${2}^{12}$, svarende til 4096 niveauer. Dette giver en repræsentation af værdier fra 0 til 4096 eller fra -2048 til 2047.  Den sensitivitet som ADC'ens sensitivitet kan opnå, omtales Least Significant Bit (LSB) og bestemmes ud fra \autoref{equ:LSB}, hvor Full Scale voltage Range (FSR) er det totale spændingsområde for ADC'en angivet i $V$, og $n$ er antallet af bits i ADC'en \citep{webster1998, wolf2004}.
 
 \begin{equation} \label{equ:LSB}
-LSB=\dfrac{FSR}{2^{12}}
+LSB=\dfrac{FSR}{2^{n}}
 \end{equation}
 
 % = \dfrac{\dfrac{FSR}{{2}^{12}}}
@@ -36,9 +36,9 @@ Hvis spændingen, der pålægges ADC'en overstiger dens arbejdsområde, vil dett
 %\item Skal have en samplingsfrekvens på $100~Hz$
 \item Skal sample minimum tre inputs 
 %\item Skal have en hastighed som ikke overskrider ADC'ens arbejdsområde \fxnote{Hvad vil hastigheden sige?}
-\item Skal have en opløsning der ikke forringer signalet.
+\item Skal have en opløsning, der ikke forringer signalet.
 \item Skal have en samplingsfrekvens omkring 10 gange større end den højeste signalfrekvens
-\item Skal undgå at signalet ikke overstiger ADC'ens arbejdsområde.
+\item Skal undgå, at signalet ikke overstiger ADC'ens arbejdsområde
 %\item Skal have en opløsning på minimum 10 bit
 %\item Skal modtage en spændingsforsyning på $XX~V$
 %\item Skal have en tolerence på $XX~\%$ (kvatificeringsfejl?)
