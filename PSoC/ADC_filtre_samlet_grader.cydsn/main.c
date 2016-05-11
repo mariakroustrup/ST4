@@ -127,34 +127,34 @@ int low_pass_filter(int data)
 /***********************************Omregning til grader for rød***********************************/
 int roed_grader(int data)
 {
-    if ((data >= -207) && (data <= -206))
+    if ((data >= -204) && (data <= -202))
     {
-        data=(0+(10-0)*(data-(-207))/(-206-(-207)));
+        data=(0+(10-0)*(data-(-202))/(-204-(-202)));
         return data; 
     }
-    else if ((data >= -206) && (data <= -185))
+    else if ((data >= -202) && (data <= -185))
     {
-        data=(10+(30-10)*(data-(-206))/(-185-(-206)));
+        data=(10+(30-10)*(data-(-202))/(-185-(-202)));
         return data;
     }
-    else if ((data >= -185) && (data <= -145))
+    else if ((data >= -185) && (data <= -143))
     {
-        data=(30+(50-30)*(data-(-185))/(-145-(-185)));
+        data=(30+(50-30)*(data-(-185))/(-143-(-185)));
         return data;
     }
-    else if ((data >= -145) && (data <= -85))
+    else if ((data >= -143) && (data <= -84))
     {
-        data=(50+(70-50)*(data-(-145))/(-85-(-145)));
+        data=(50+(70-50)*(data-(-143))/(-84-(-143)));
         return data;
     }
-    else if ((data >= -85) && (data <= -48))
+    else if ((data >= -84) && (data <= -48))
     {
-        data=(70+(80-70)*(data-(-85))/(-48-(-85)));
+        data=(70+(80-70)*(data-(-84))/(-48-(-84)));
         return data;
     }
-    else if ((data >= -48) && (data <= -22))
+    else if ((data >= -48) && (data <= -7))
     {
-        data=(80+(90-80)*(data-(-48))/(-22-(-48)));
+        data=(80+(90-80)*(data-(-48))/(-7-(-48)));
         return data;
     }
     
@@ -168,34 +168,34 @@ int roed_grader(int data)
 /***********************************Omregning til grader for grøn***********************************/
 int groen_grader(int data)
 {
-    if ((data >= -194) && (data <= -185))
+    if ((data >= -190) && (data <= -186))
     {
-        data=(0+(10-0)*(data-(-194))/(-185-(-194)));
+        data=(0+(10-0)*(data-(-190))/(-186-(-190)));
         return data; 
     }
-    else if ((data >= -185) && (data <= -167))
+    else if ((data >= -186) && (data <= -163))
     {
-        data=(10+(30-10)*(data-(-185))/(-167-(-185)));
+        data=(10+(30-10)*(data-(-186))/(-163-(-186)));
         return data;
     }
-    else if ((data >= -167) && (data <= -132))
+    else if ((data >= -163) && (data <= -121))
     {
-        data=(30+(50-30)*(data-(-167))/(-132-(-167)));
+        data=(30+(50-30)*(data-(-163))/(-121-(-163)));
         return data;
     }
-    else if ((data >= -132) && (data <= -70))
+    else if ((data >= -121) && (data <= -62))
     {
-        data=(50+(70-50)*(data-(-132))/(-70-(-132)));
+        data=(50+(70-50)*(data-(-121))/(-62-(-121)));
         return data;
     }
-    else if ((data >= -70) && (data <= -31))
+    else if ((data >= -62) && (data <= -26))
     {
-        data=(70+(80-70)*(data-(-70))/(-31-(-70)));
+        data=(70+(80-70)*(data-(-62))/(-26-(-62)));
         return data;
     }
-    else if ((data >= -31) && (data <= 9))
+    else if ((data >= -26) && (data <=11))
     {
-        data=(80+(90-80)*(data-(-31))/(9-(-31)));
+        data=(80+(90-80)*(data-(-26))/(11-(-26)));
         return data;
     }
     
@@ -261,17 +261,17 @@ CY_ISR(ADC_interrupt)
         /* EMG */
         low_pass_data = low_pass_filter(EMG);        
         diff_data = differentiator(low_pass_data);
-        
-        
+            
         
         UART_UartPutChar(samlet_grader);                //plottes tilbage i MATLAB
         UART_UartPutChar(samlet_grader>>8);
+      
        
-        UART_UartPutChar(counter);             
-        UART_UartPutChar(counter>>8);
+        //UART_UartPutChar(counter);             
+        //UART_UartPutChar(counter>>8);
         
-        UART_UartPutChar(diff_data);
-        UART_UartPutChar(diff_data>>8);
+        //UART_UartPutChar(diff_data);
+        //UART_UartPutChar(diff_data>>8);
         
         data_ready = FALSE;
     }

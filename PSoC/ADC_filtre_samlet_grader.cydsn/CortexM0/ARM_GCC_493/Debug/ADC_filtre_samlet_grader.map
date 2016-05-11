@@ -774,17 +774,17 @@ END GROUP
                 0x00000598      0x124 .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x00000598                low_pass_filter
  .text.roed_grader
-                0x000006bc      0x114 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000006bc      0x11c .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x000006bc                roed_grader
  .text.groen_grader
-                0x000007d0      0x120 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x000007d0                groen_grader
+                0x000007d8      0x11c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000007d8                groen_grader
  .text.differentiator
-                0x000008f0       0x9c .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x000008f0                differentiator
+                0x000008f4       0x9c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x000008f4                differentiator
  .text.ADC_interrupt
-                0x0000098c      0x188 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x0000098c                ADC_interrupt
+                0x00000990      0x184 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000990                ADC_interrupt
  .text.Pin_SW2_handler
                 0x00000b14       0x4c .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x00000b14                Pin_SW2_handler
@@ -1311,7 +1311,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4028
+.debug_info     0x00000000     0x403a
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x473 .\CortexM0\ARM_GCC_493\Debug\main.o
  .debug_info    0x00000473       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -1324,16 +1324,16 @@ END GROUP
  .debug_info    0x000016da       0xc5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
  .debug_info    0x0000179f      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
  .debug_info    0x000019e5      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
- .debug_info    0x00001c2b       0x8f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
- .debug_info    0x00001cba      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
- .debug_info    0x0000263f      0x211 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
- .debug_info    0x00002850      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
- .debug_info    0x0000309d      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
- .debug_info    0x00003237      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
- .debug_info    0x0000347d      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
- .debug_info    0x00003617       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
- .debug_info    0x000036ee      0x6f4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
- .debug_info    0x00003de2      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+ .debug_info    0x00001c2b       0xa1 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
+ .debug_info    0x00001ccc      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+ .debug_info    0x00002651      0x211 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+ .debug_info    0x00002862      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+ .debug_info    0x000030af      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+ .debug_info    0x00003249      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+ .debug_info    0x0000348f      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+ .debug_info    0x00003629       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+ .debug_info    0x00003700      0x6f4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+ .debug_info    0x00003df4      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
 
 .debug_abbrev   0x00000000     0x169e
  *(.debug_abbrev)
@@ -1428,48 +1428,48 @@ END GROUP
  .debug_frame   0x00002784       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x000027ac       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x208e
+.debug_str      0x00000000     0x20a0
  *(.debug_str)
- .debug_str     0x00000000      0x2da .\CortexM0\ARM_GCC_493\Debug\main.o
-                                0x31e (size before relaxing)
- .debug_str     0x000002da       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
-                                0x1cd (size before relaxing)
- .debug_str     0x00000335      0x12e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                                0x2c1 (size before relaxing)
- .debug_str     0x00000463       0xfd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
-                                0x2b3 (size before relaxing)
- .debug_str     0x00000560       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
-                                0x256 (size before relaxing)
- .debug_str     0x00000637      0x137 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
-                                0x2c1 (size before relaxing)
- .debug_str     0x0000076e      0x191 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
-                                0x31f (size before relaxing)
- .debug_str     0x000008ff      0x1e5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                                0x39a (size before relaxing)
- .debug_str     0x00000ae4       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
-                                0x1b0 (size before relaxing)
- .debug_str     0x00000b1b      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                                0x2cc (size before relaxing)
- .debug_str     0x00000c46      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
-                                0x2cc (size before relaxing)
- .debug_str     0x00000d4a      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                                0x6ac (size before relaxing)
- .debug_str     0x00001227       0xdd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
-                                0x282 (size before relaxing)
- .debug_str     0x00001304      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
-                                0x6df (size before relaxing)
- .debug_str     0x0000183e       0xbb .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
-                                0x243 (size before relaxing)
- .debug_str     0x000018f9      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                                0x304 (size before relaxing)
- .debug_str     0x00001a35       0xa5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
-                                0x251 (size before relaxing)
- .debug_str     0x00001ada       0x58 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
-                                0x1c6 (size before relaxing)
- .debug_str     0x00001b32      0x43c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                                0x5cb (size before relaxing)
- .debug_str     0x00001f6e      0x120 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                                0x2e8 (size before relaxing)
+ .debug_str     0x00000000      0x2ec .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x330 (size before relaxing)
+ .debug_str     0x000002ec       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1df (size before relaxing)
+ .debug_str     0x00000347      0x12e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00000475       0xfd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+                                0x2c5 (size before relaxing)
+ .debug_str     0x00000572       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                                0x268 (size before relaxing)
+ .debug_str     0x00000649      0x137 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00000780      0x191 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
+                                0x331 (size before relaxing)
+ .debug_str     0x00000911      0x1e5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                                0x3ac (size before relaxing)
+ .debug_str     0x00000af6       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
+                                0x1c2 (size before relaxing)
+ .debug_str     0x00000b2d      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                                0x2de (size before relaxing)
+ .debug_str     0x00000c58      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
+                                0x2de (size before relaxing)
+ .debug_str     0x00000d5c      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                                0x6be (size before relaxing)
+ .debug_str     0x00001239       0xdd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+                                0x294 (size before relaxing)
+ .debug_str     0x00001316      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                                0x6f1 (size before relaxing)
+ .debug_str     0x00001850       0xbb .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+                                0x255 (size before relaxing)
+ .debug_str     0x0000190b      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                                0x316 (size before relaxing)
+ .debug_str     0x00001a47       0xa5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+                                0x263 (size before relaxing)
+ .debug_str     0x00001aec       0x58 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+                                0x1d8 (size before relaxing)
+ .debug_str     0x00001b44      0x43c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                                0x5dd (size before relaxing)
+ .debug_str     0x00001f80      0x120 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                                0x2fa (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

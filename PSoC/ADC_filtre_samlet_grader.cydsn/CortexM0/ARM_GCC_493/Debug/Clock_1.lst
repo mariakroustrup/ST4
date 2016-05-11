@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
   30:.\Generated_Source\PSoC4/Clock_1.c **** *
   31:.\Generated_Source\PSoC4/Clock_1.c **** * Parameters:
   32:.\Generated_Source\PSoC4/Clock_1.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 2
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Clock_1.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
   60              		.align	2
   61              	.L3:
   62 0024 00000140 		.word	1073807360
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 3
 
 
   63 0028 42000080 		.word	-2147483582
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
   94:.\Generated_Source\PSoC4/Clock_1.c **** *******************************************************************************/
   95:.\Generated_Source\PSoC4/Clock_1.c **** void Clock_1_Stop(void)
   96:.\Generated_Source\PSoC4/Clock_1.c **** {
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 4
 
 
   75              		.loc 1 96 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  110              		.code	16
  111              		.thumb_func
  112              		.type	Clock_1_SetFractionalDividerRegister, %function
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 5
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 5
 
 
  113              	Clock_1_SetFractionalDividerRegister:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  146:.\Generated_Source\PSoC4/Clock_1.c ****         ((uint32)((uint32)clkDivider <<  Clock_1_DIV_INT_SHIFT) & Clock_1_DIV_INT_MASK) |
  137              		.loc 1 146 0
  138 001c BB1D     		add	r3, r7, #6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 6
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 6
 
 
  139 001e 1B88     		ldrh	r3, [r3]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  161:.\Generated_Source\PSoC4/Clock_1.c **** /*******************************************************************************
  162:.\Generated_Source\PSoC4/Clock_1.c **** * Function Name: Clock_1_GetDividerRegister
  163:.\Generated_Source\PSoC4/Clock_1.c **** ********************************************************************************
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 7
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 7
 
 
  164:.\Generated_Source\PSoC4/Clock_1.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  182:.\Generated_Source\PSoC4/Clock_1.c **** 
  183:.\Generated_Source\PSoC4/Clock_1.c **** /*******************************************************************************
  184:.\Generated_Source\PSoC4/Clock_1.c **** * Function Name: Clock_1_GetFractionalDividerRegister
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 8
 
 
  185:.\Generated_Source\PSoC4/Clock_1.c **** ********************************************************************************
@@ -472,48 +472,48 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  237 0006 00000000 		.4byte	.Ldebug_abbrev0
  238 000a 04       		.byte	0x4
  239 000b 01       		.uleb128 0x1
- 240 000c EC000000 		.4byte	.LASF25
+ 240 000c BA000000 		.4byte	.LASF25
  241 0010 01       		.byte	0x1
- 242 0011 96000000 		.4byte	.LASF26
- 243 0015 24000000 		.4byte	.LASF27
+ 242 0011 64000000 		.4byte	.LASF26
+ 243 0015 7A010000 		.4byte	.LASF27
  244 0019 00000000 		.4byte	.Ldebug_ranges0+0
  245 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 9
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 9
 
 
  246 0021 00000000 		.4byte	.Ldebug_line0
  247 0025 02       		.uleb128 0x2
  248 0026 01       		.byte	0x1
  249 0027 06       		.byte	0x6
- 250 0028 2F020000 		.4byte	.LASF0
+ 250 0028 41020000 		.4byte	.LASF0
  251 002c 02       		.uleb128 0x2
  252 002d 01       		.byte	0x1
  253 002e 08       		.byte	0x8
- 254 002f 63000000 		.4byte	.LASF1
+ 254 002f 31000000 		.4byte	.LASF1
  255 0033 02       		.uleb128 0x2
  256 0034 02       		.byte	0x2
  257 0035 05       		.byte	0x5
- 258 0036 E4010000 		.4byte	.LASF2
+ 258 0036 03020000 		.4byte	.LASF2
  259 003a 02       		.uleb128 0x2
  260 003b 02       		.byte	0x2
  261 003c 07       		.byte	0x7
- 262 003d 83000000 		.4byte	.LASF3
+ 262 003d 51000000 		.4byte	.LASF3
  263 0041 02       		.uleb128 0x2
  264 0042 04       		.byte	0x4
  265 0043 05       		.byte	0x5
- 266 0044 26020000 		.4byte	.LASF4
+ 266 0044 38020000 		.4byte	.LASF4
  267 0048 02       		.uleb128 0x2
  268 0049 04       		.byte	0x4
  269 004a 07       		.byte	0x7
- 270 004b 71000000 		.4byte	.LASF5
+ 270 004b 3F000000 		.4byte	.LASF5
  271 004f 02       		.uleb128 0x2
  272 0050 08       		.byte	0x8
  273 0051 05       		.byte	0x5
- 274 0052 D1010000 		.4byte	.LASF6
+ 274 0052 F0010000 		.4byte	.LASF6
  275 0056 02       		.uleb128 0x2
  276 0057 08       		.byte	0x8
  277 0058 07       		.byte	0x7
- 278 0059 95010000 		.4byte	.LASF7
+ 278 0059 63010000 		.4byte	.LASF7
  279 005d 03       		.uleb128 0x3
  280 005e 04       		.byte	0x4
  281 005f 05       		.byte	0x5
@@ -521,24 +521,24 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  283 0064 02       		.uleb128 0x2
  284 0065 04       		.byte	0x4
  285 0066 07       		.byte	0x7
- 286 0067 88010000 		.4byte	.LASF8
+ 286 0067 56010000 		.4byte	.LASF8
  287 006b 04       		.uleb128 0x4
- 288 006c FB010000 		.4byte	.LASF9
+ 288 006c 0D020000 		.4byte	.LASF9
  289 0070 02       		.byte	0x2
  290 0071 3801     		.2byte	0x138
  291 0073 2C000000 		.4byte	0x2c
  292 0077 04       		.uleb128 0x4
- 293 0078 7A010000 		.4byte	.LASF10
+ 293 0078 48010000 		.4byte	.LASF10
  294 007c 02       		.byte	0x2
  295 007d 3901     		.2byte	0x139
  296 007f 3A000000 		.4byte	0x3a
  297 0083 04       		.uleb128 0x4
- 298 0084 81010000 		.4byte	.LASF11
+ 298 0084 4F010000 		.4byte	.LASF11
  299 0088 02       		.byte	0x2
  300 0089 3A01     		.2byte	0x13a
  301 008b 48000000 		.4byte	0x48
  302 008f 02       		.uleb128 0x2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 10
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 10
 
 
  303 0090 04       		.byte	0x4
@@ -547,11 +547,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  306 0096 02       		.uleb128 0x2
  307 0097 08       		.byte	0x8
  308 0098 04       		.byte	0x4
- 309 0099 C4000000 		.4byte	.LASF13
+ 309 0099 92000000 		.4byte	.LASF13
  310 009d 02       		.uleb128 0x2
  311 009e 01       		.byte	0x1
  312 009f 08       		.byte	0x8
- 313 00a0 DF010000 		.4byte	.LASF14
+ 313 00a0 FE010000 		.4byte	.LASF14
  314 00a4 04       		.uleb128 0x4
  315 00a5 00000000 		.4byte	.LASF15
  316 00a9 02       		.byte	0x2
@@ -569,7 +569,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  328 00c5 9C       		.byte	0x9c
  329 00c6 D9000000 		.4byte	0xd9
  330 00ca 07       		.uleb128 0x7
- 331 00cb D2000000 		.4byte	.LASF18
+ 331 00cb A0000000 		.4byte	.LASF18
  332 00cf 01       		.byte	0x1
  333 00d0 27       		.byte	0x27
  334 00d1 83000000 		.4byte	0x83
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  337 00d7 74       		.sleb128 -12
  338 00d8 00       		.byte	0
  339 00d9 08       		.uleb128 0x8
- 340 00da EE010000 		.4byte	.LASF28
+ 340 00da 24000000 		.4byte	.LASF28
  341 00de 01       		.byte	0x1
  342 00df 5F       		.byte	0x5f
  343 00e0 00000000 		.4byte	.LFB1
@@ -586,7 +586,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  345 00e8 01       		.uleb128 0x1
  346 00e9 9C       		.byte	0x9c
  347 00ea 06       		.uleb128 0x6
- 348 00eb 01020000 		.4byte	.LASF17
+ 348 00eb 13020000 		.4byte	.LASF17
  349 00ef 01       		.byte	0x1
  350 00f0 86       		.byte	0x86
  351 00f1 00000000 		.4byte	.LFB2
@@ -595,10 +595,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  354 00fa 9C       		.byte	0x9c
  355 00fb 38010000 		.4byte	0x138
  356 00ff 07       		.uleb128 0x7
- 357 0100 B9000000 		.4byte	.LASF19
+ 357 0100 87000000 		.4byte	.LASF19
  358 0104 01       		.byte	0x1
  359 0105 86       		.byte	0x86
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 11
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 11
 
 
  360 0106 77000000 		.4byte	0x77
@@ -606,7 +606,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  362 010b 91       		.byte	0x91
  363 010c 6E       		.sleb128 -18
  364 010d 07       		.uleb128 0x7
- 365 010e DE000000 		.4byte	.LASF20
+ 365 010e AC000000 		.4byte	.LASF20
  366 0112 01       		.byte	0x1
  367 0113 86       		.byte	0x86
  368 0114 6B000000 		.4byte	0x6b
@@ -622,7 +622,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  378 0127 91       		.byte	0x91
  379 0128 74       		.sleb128 -12
  380 0129 09       		.uleb128 0x9
- 381 012a CB000000 		.4byte	.LASF22
+ 381 012a 99000000 		.4byte	.LASF22
  382 012e 01       		.byte	0x1
  383 012f 89       		.byte	0x89
  384 0130 83000000 		.4byte	0x83
@@ -631,7 +631,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  387 0136 70       		.sleb128 -16
  388 0137 00       		.byte	0
  389 0138 0A       		.uleb128 0xa
- 390 0139 3B020000 		.4byte	.LASF23
+ 390 0139 4D020000 		.4byte	.LASF23
  391 013d 01       		.byte	0x1
  392 013e B0       		.byte	0xb0
  393 013f 77000000 		.4byte	0x77
@@ -640,7 +640,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  396 014b 01       		.uleb128 0x1
  397 014c 9C       		.byte	0x9c
  398 014d 0A       		.uleb128 0xa
- 399 014e AC010000 		.4byte	.LASF24
+ 399 014e CB010000 		.4byte	.LASF24
  400 0152 01       		.byte	0x1
  401 0153 C6       		.byte	0xc6
  402 0154 6B000000 		.4byte	0x6b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  414 0004 0E       		.uleb128 0xe
  415 0005 13       		.uleb128 0x13
  416 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 12
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 12
 
 
  417 0007 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  471 003d 06       		.uleb128 0x6
  472 003e 2E       		.uleb128 0x2e
  473 003f 01       		.byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 13
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 13
 
 
  474 0040 3F       		.uleb128 0x3f
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  528 0077 40       		.uleb128 0x40
  529 0078 18       		.uleb128 0x18
  530 0079 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 14
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 14
 
 
  531 007b 19       		.uleb128 0x19
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  585 0018 00000000 		.4byte	.LFB1
  586 001c 20000000 		.4byte	.LFE1-.LFB1
  587 0020 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 15
 
 
  588 0024 44000000 		.4byte	.LFE2-.LFB2
@@ -883,144 +883,145 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 1
  619      6B5F315F 
  619      53746172 
  619      74457800 
- 620              	.LASF27:
- 621 0024 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Desktop\\ADC_filtre_saml"
- 621      73657273 
- 621      5C4C696E 
- 621      65747465 
- 621      2048656C 
- 622 0053 65745F67 		.ascii	"et_grader.cydsn\000"
- 622      72616465 
- 622      722E6379 
- 622      64736E00 
- 623              	.LASF1:
- 624 0063 756E7369 		.ascii	"unsigned char\000"
- 624      676E6564 
- 624      20636861 
- 624      7200
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 16
+ 620              	.LASF28:
+ 621 0024 436C6F63 		.ascii	"Clock_1_Stop\000"
+ 621      6B5F315F 
+ 621      53746F70 
+ 621      00
+ 622              	.LASF1:
+ 623 0031 756E7369 		.ascii	"unsigned char\000"
+ 623      676E6564 
+ 623      20636861 
+ 623      7200
+ 624              	.LASF5:
+ 625 003f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 625      20756E73 
+ 625      69676E65 
+ 625      6420696E 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 16
 
 
- 625              	.LASF5:
- 626 0071 6C6F6E67 		.ascii	"long unsigned int\000"
- 626      20756E73 
- 626      69676E65 
- 626      6420696E 
- 626      7400
- 627              	.LASF3:
- 628 0083 73686F72 		.ascii	"short unsigned int\000"
- 628      7420756E 
- 628      7369676E 
- 628      65642069 
- 628      6E7400
- 629              	.LASF26:
- 630 0096 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Clock_1.c\000"
- 630      6E657261 
- 630      7465645F 
- 630      536F7572 
- 630      63655C50 
- 631              	.LASF19:
- 632 00b9 636C6B44 		.ascii	"clkDivider\000"
- 632      69766964 
- 632      657200
- 633              	.LASF13:
- 634 00c4 646F7562 		.ascii	"double\000"
- 634      6C6500
- 635              	.LASF22:
- 636 00cb 72656756 		.ascii	"regVal\000"
- 636      616C00
- 637              	.LASF18:
- 638 00d2 616C6967 		.ascii	"alignClkDiv\000"
- 638      6E436C6B 
- 638      44697600 
- 639              	.LASF20:
- 640 00de 636C6B46 		.ascii	"clkFractional\000"
- 640      72616374 
- 640      696F6E61 
- 640      6C00
- 641              	.LASF25:
- 642 00ec 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 642      4320342E 
- 642      392E3320 
- 642      32303135 
- 642      30333033 
- 643 011f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 643      20726576 
- 643      6973696F 
- 643      6E203232 
- 643      31323230 
- 644 0152 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 644      66756E63 
- 644      74696F6E 
- 644      2D736563 
- 644      74696F6E 
- 645              	.LASF10:
- 646 017a 75696E74 		.ascii	"uint16\000"
- 646      313600
- 647              	.LASF11:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 17
+ 625      7400
+ 626              	.LASF3:
+ 627 0051 73686F72 		.ascii	"short unsigned int\000"
+ 627      7420756E 
+ 627      7369676E 
+ 627      65642069 
+ 627      6E7400
+ 628              	.LASF26:
+ 629 0064 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Clock_1.c\000"
+ 629      6E657261 
+ 629      7465645F 
+ 629      536F7572 
+ 629      63655C50 
+ 630              	.LASF19:
+ 631 0087 636C6B44 		.ascii	"clkDivider\000"
+ 631      69766964 
+ 631      657200
+ 632              	.LASF13:
+ 633 0092 646F7562 		.ascii	"double\000"
+ 633      6C6500
+ 634              	.LASF22:
+ 635 0099 72656756 		.ascii	"regVal\000"
+ 635      616C00
+ 636              	.LASF18:
+ 637 00a0 616C6967 		.ascii	"alignClkDiv\000"
+ 637      6E436C6B 
+ 637      44697600 
+ 638              	.LASF20:
+ 639 00ac 636C6B46 		.ascii	"clkFractional\000"
+ 639      72616374 
+ 639      696F6E61 
+ 639      6C00
+ 640              	.LASF25:
+ 641 00ba 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 641      4320342E 
+ 641      392E3320 
+ 641      32303135 
+ 641      30333033 
+ 642 00ed 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 642      20726576 
+ 642      6973696F 
+ 642      6E203232 
+ 642      31323230 
+ 643 0120 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 643      66756E63 
+ 643      74696F6E 
+ 643      2D736563 
+ 643      74696F6E 
+ 644              	.LASF10:
+ 645 0148 75696E74 		.ascii	"uint16\000"
+ 645      313600
+ 646              	.LASF11:
+ 647 014f 75696E74 		.ascii	"uint32\000"
+ 647      333200
+ 648              	.LASF8:
+ 649 0156 756E7369 		.ascii	"unsigned int\000"
+ 649      676E6564 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 17
 
 
- 648 0181 75696E74 		.ascii	"uint32\000"
- 648      333200
- 649              	.LASF8:
- 650 0188 756E7369 		.ascii	"unsigned int\000"
- 650      676E6564 
- 650      20696E74 
- 650      00
- 651              	.LASF7:
- 652 0195 6C6F6E67 		.ascii	"long long unsigned int\000"
- 652      206C6F6E 
- 652      6720756E 
- 652      7369676E 
- 652      65642069 
- 653              	.LASF24:
- 654 01ac 436C6F63 		.ascii	"Clock_1_GetFractionalDividerRegister\000"
- 654      6B5F315F 
- 654      47657446 
- 654      72616374 
- 654      696F6E61 
- 655              	.LASF6:
- 656 01d1 6C6F6E67 		.ascii	"long long int\000"
- 656      206C6F6E 
- 656      6720696E 
- 656      7400
- 657              	.LASF14:
- 658 01df 63686172 		.ascii	"char\000"
- 658      00
- 659              	.LASF2:
- 660 01e4 73686F72 		.ascii	"short int\000"
- 660      7420696E 
- 660      7400
- 661              	.LASF28:
- 662 01ee 436C6F63 		.ascii	"Clock_1_Stop\000"
- 662      6B5F315F 
- 662      53746F70 
- 662      00
+ 649      20696E74 
+ 649      00
+ 650              	.LASF7:
+ 651 0163 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 651      206C6F6E 
+ 651      6720756E 
+ 651      7369676E 
+ 651      65642069 
+ 652              	.LASF27:
+ 653 017a 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Documents\\GitHub\\ST4\\"
+ 653      73657273 
+ 653      5C4C696E 
+ 653      65747465 
+ 653      2048656C 
+ 654 01a7 50536F43 		.ascii	"PSoC\\ADC_filtre_samlet_grader.cydsn\000"
+ 654      5C414443 
+ 654      5F66696C 
+ 654      7472655F 
+ 654      73616D6C 
+ 655              	.LASF24:
+ 656 01cb 436C6F63 		.ascii	"Clock_1_GetFractionalDividerRegister\000"
+ 656      6B5F315F 
+ 656      47657446 
+ 656      72616374 
+ 656      696F6E61 
+ 657              	.LASF6:
+ 658 01f0 6C6F6E67 		.ascii	"long long int\000"
+ 658      206C6F6E 
+ 658      6720696E 
+ 658      7400
+ 659              	.LASF14:
+ 660 01fe 63686172 		.ascii	"char\000"
+ 660      00
+ 661              	.LASF2:
+ 662 0203 73686F72 		.ascii	"short int\000"
+ 662      7420696E 
+ 662      7400
  663              	.LASF9:
- 664 01fb 75696E74 		.ascii	"uint8\000"
+ 664 020d 75696E74 		.ascii	"uint8\000"
  664      3800
  665              	.LASF17:
- 666 0201 436C6F63 		.ascii	"Clock_1_SetFractionalDividerRegister\000"
+ 666 0213 436C6F63 		.ascii	"Clock_1_SetFractionalDividerRegister\000"
  666      6B5F315F 
  666      53657446 
  666      72616374 
  666      696F6E61 
  667              	.LASF4:
- 668 0226 6C6F6E67 		.ascii	"long int\000"
+ 668 0238 6C6F6E67 		.ascii	"long int\000"
  668      20696E74 
  668      00
  669              	.LASF0:
- 670 022f 7369676E 		.ascii	"signed char\000"
+ 670 0241 7369676E 		.ascii	"signed char\000"
  670      65642063 
  670      68617200 
  671              	.LASF23:
- 672 023b 436C6F63 		.ascii	"Clock_1_GetDividerRegister\000"
+ 672 024d 436C6F63 		.ascii	"Clock_1_GetDividerRegister\000"
  672      6B5F315F 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccmfQef7.s 			page 18
+
+
  672      47657444 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cci1JPFY.s 			page 18
-
-
  672      69766964 
  672      65725265 
  673              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

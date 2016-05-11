@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader">
 <ExpandedNodeIds>
 <v>ADC_filtre_samlet_grader-000</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader</v>
@@ -159,6 +159,8 @@
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>ADC_filtre_samlet_grader-000</v>
+<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\TopDesign</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\ADC_filtre_samlet_grader.cydwr</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Header Files</v>
@@ -187,8 +189,6 @@
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\Clock_1\Clock_1.h</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\Control_Reg_1</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\Control_Reg_1\Control_Reg_1.c</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\Control_Reg_1\Control_Reg_1.h</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\Generated_Source\PSoC4\Control_Reg_1\Control_Reg_1_PM.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -289,34 +289,6 @@
 <VisibleNodeIds>
 <v>ADC_filtre_samlet_grader-000</v>
 <v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_INT.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_intClock.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_IRQ.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_ISR.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_PM.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\EMG.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\EMG_PM.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_Green.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_Green_PM.lst</v>
-<v>ADC_filtre_samlet_grader-000\ADC_filtre_samlet_grader\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_Red.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

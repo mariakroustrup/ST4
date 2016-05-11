@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
   14:.\Generated_Source\PSoC4/ADC.c **** * disclaimers, and limitations in the end user license agreement accompanying
   15:.\Generated_Source\PSoC4/ADC.c **** * the software package with which this file was provided.
   16:.\Generated_Source\PSoC4/ADC.c **** *******************************************************************************/
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 2
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 2
 
 
   17:.\Generated_Source\PSoC4/ADC.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
   48 0002 00AF     		add	r7, sp, #0
   49              		.cfi_def_cfa_register 7
   65:.\Generated_Source\PSoC4/ADC.c ****     /* If not Initialized then initialize all required hardware and software */
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 3
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 3
 
 
   66:.\Generated_Source\PSoC4/ADC.c ****     if(ADC_initVar == 0u)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
   86:.\Generated_Source\PSoC4/ADC.c **** *
   87:.\Generated_Source\PSoC4/ADC.c **** * Return:
   88:.\Generated_Source\PSoC4/ADC.c **** *  None.
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 4
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 4
 
 
   89:.\Generated_Source\PSoC4/ADC.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  133:.\Generated_Source\PSoC4/ADC.c ****                  (uint8)ADC_cy_psoc4_sarmux_8__CH_8_PIN
  134:.\Generated_Source\PSoC4/ADC.c ****             #endif /* End ADC_TOTAL_CHANNELS_NUM > 8u */
  135:.\Generated_Source\PSoC4/ADC.c ****             #if(ADC_TOTAL_CHANNELS_NUM > 9u)
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 5
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 5
 
 
  136:.\Generated_Source\PSoC4/ADC.c ****                 ,(uint8)(ADC_cy_psoc4_sarmux_8__CH_9_PORT << 4u) |
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  106 001c 1A60     		str	r2, [r3]
  178:.\Generated_Source\PSoC4/ADC.c ****     ADC_SAR_CTRL_REG |= ADC_DEFAULT_CTRL_REG_CFG | 
  179:.\Generated_Source\PSoC4/ADC.c ****         /* Enable the SAR internal pump when global pump is enabled */
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 6
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 6
 
 
  180:.\Generated_Source\PSoC4/ADC.c ****         (((ADC_PUMP_CTRL_REG & ADC_PUMP_CTRL_ENABLED) != 0u) ? 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  146              		.loc 1 190 0 discriminator 4
  147 0054 5F4B     		ldr	r3, .L16+60
  148 0056 5F4A     		ldr	r2, .L16+60
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 7
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 7
 
 
  149 0058 1268     		ldr	r2, [r2]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  211:.\Generated_Source\PSoC4/ADC.c ****             tmpRegVal |= ADC_SEL_CSEL_DFT_CHAR;
  212:.\Generated_Source\PSoC4/ADC.c ****         #else  /* clock speed < 9 Mhz */
  213:.\Generated_Source\PSoC4/ADC.c ****             tmpRegVal |= ADC_DLY_INC;
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 8
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 8
 
 
  214:.\Generated_Source\PSoC4/ADC.c ****         #endif /* clock speed > 9 Mhz */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  214 00c0 FB68     		ldr	r3, [r7, #12]
  215 00c2 D318     		add	r3, r2, r3
  216 00c4 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 9
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 9
 
 
  217 00c6 1A1C     		mov	r2, r3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  259:.\Generated_Source\PSoC4/ADC.c **** 
  260:.\Generated_Source\PSoC4/ADC.c ****             if((ADC_channelsConfig[chNum] & ADC_IS_RANGE_CTRL_EN_MASK) != 0u)
  249              		.loc 1 260 0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 10
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 10
 
 
  250 00fe 3C4B     		ldr	r3, .L16+88
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  280 0132 5B00     		lsl	r3, r3, #1
  281 0134 BB60     		str	r3, [r7, #8]
  282 0136 02E0     		b	.L12
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 11
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 11
 
 
  283              	.L11:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  309:.\Generated_Source\PSoC4/ADC.c ****         }
  310:.\Generated_Source\PSoC4/ADC.c ****         /* Calculate gain in counts per 10 volts with rounding */
  311:.\Generated_Source\PSoC4/ADC.c ****         ADC_countsPer10Volt[chNum] = (int16)(((counts * ADC_10MV_COUNTS) +
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 12
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 12
 
 
  313              		.loc 1 311 0 discriminator 2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  361 01c8 98000400 		.word	262296
  362 01cc 14003A40 		.word	1077542932
  363 01d0 04000400 		.word	262148
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 13
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 13
 
 
  364 01d4 00033A40 		.word	1077543680
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  400 0008 002B     		cmp	r3, #0
  401 000a 0EDB     		blt	.L18
  333:.\Generated_Source\PSoC4/ADC.c ****     {
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 14
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 14
 
 
  334:.\Generated_Source\PSoC4/ADC.c ****         #if(ADC_CY_SAR_IP_VER != ADC_CY_SAR_IP_VER0)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  348:.\Generated_Source\PSoC4/ADC.c **** 
  349:.\Generated_Source\PSoC4/ADC.c **** 
  350:.\Generated_Source\PSoC4/ADC.c **** /*******************************************************************************
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 15
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 15
 
 
  351:.\Generated_Source\PSoC4/ADC.c **** * Function Name: ADC_Stop
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  371:.\Generated_Source\PSoC4/ADC.c **** /*******************************************************************************
  372:.\Generated_Source\PSoC4/ADC.c **** * Function Name: ADC_StartConvert
  373:.\Generated_Source\PSoC4/ADC.c **** ********************************************************************************
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 16
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 16
 
 
  374:.\Generated_Source\PSoC4/ADC.c **** *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  504              		.align	2
  505              		.global	ADC_StopConvert
  506              		.code	16
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 17
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 17
 
 
  507              		.thumb_func
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  539              		.align	2
  540              		.global	ADC_IsEndConversion
  541              		.code	16
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 18
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 18
 
 
  542              		.thumb_func
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  563 0010 1340     		and	r3, r2
  564 0012 11D0     		beq	.L33
  565              	.L35:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 19
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 19
 
 
  455:.\Generated_Source\PSoC4/ADC.c ****     {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  484:.\Generated_Source\PSoC4/ADC.c **** 
  485:.\Generated_Source\PSoC4/ADC.c ****     return (status);
  591              		.loc 1 485 0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 20
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 20
 
 
  592 0038 FB68     		ldr	r3, [r7, #12]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  507:.\Generated_Source\PSoC4/ADC.c **** 
  508:.\Generated_Source\PSoC4/ADC.c ****     /* Halt CPU in debug mode if channel is out of valid range */
  509:.\Generated_Source\PSoC4/ADC.c ****     CYASSERT(chan < ADC_TOTAL_CHANNELS_NUM);
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 21
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 21
 
 
  625              		.loc 1 509 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  662 003e 80BD     		pop	{r7, pc}
  663              	.L45:
  664              		.align	2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 22
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 22
 
 
  665              	.L44:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  694 0010 1A60     		str	r2, [r3]
  552:.\Generated_Source\PSoC4/ADC.c **** }
  695              		.loc 1 552 0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 23
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 23
 
 
  696 0012 BD46     		mov	sp, r7
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  588:.\Generated_Source\PSoC4/ADC.c **** *
  589:.\Generated_Source\PSoC4/ADC.c **** * Return:
  590:.\Generated_Source\PSoC4/ADC.c **** *  None.
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 24
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 24
 
 
  591:.\Generated_Source\PSoC4/ADC.c **** *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  598:.\Generated_Source\PSoC4/ADC.c **** 
  599:.\Generated_Source\PSoC4/ADC.c **** 
  600:.\Generated_Source\PSoC4/ADC.c **** /*******************************************************************************
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 25
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 25
 
 
  601:.\Generated_Source\PSoC4/ADC.c **** * Function Name: ADC_SetHighLimit
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  798              	.LFE12:
  799              		.size	ADC_SetHighLimit, .-ADC_SetHighLimit
  800              		.section	.text.ADC_SetLimitMask,"ax",%progbits
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 26
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 26
 
 
  801              		.align	2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  832              	.L56:
  833 0018 38023A40 		.word	1077543480
  834              		.cfi_endproc
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 27
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 27
 
 
  835              	.LFE13:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  866 0016 80BD     		pop	{r7, pc}
  867              	.L60:
  868              		.align	2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 28
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 28
 
 
  869              	.L59:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  692:.\Generated_Source\PSoC4/ADC.c ****     CYASSERT(chan < ADC_TOTAL_CHANNELS_NUM);
  896              		.loc 1 692 0
  897 000e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 29
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 29
 
 
  898 0010 022B     		cmp	r3, #2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  714:.\Generated_Source\PSoC4/ADC.c **** *
  715:.\Generated_Source\PSoC4/ADC.c **** * Return:
  716:.\Generated_Source\PSoC4/ADC.c **** *  None.
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 30
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 30
 
 
  717:.\Generated_Source\PSoC4/ADC.c **** *
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  972              		.code	16
  973              		.thumb_func
  974              		.type	ADC_CountsTo_mVolts, %function
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 31
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 31
 
 
  975              	ADC_CountsTo_mVolts:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  997 0016 FFF7FEFF 		bl	CyHalt
  998              	.L70:
  762:.\Generated_Source\PSoC4/ADC.c **** 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 32
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 32
 
 
  763:.\Generated_Source\PSoC4/ADC.c ****         /* Divide the adcCount when accumulate averaging mode selected */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1040 005e CB58     		ldr	r3, [r1, r3]
  1041 0060 002B     		cmp	r3, #0
  1042 0062 00DA     		bge	.L74
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 33
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 33
 
 
  1043 0064 0133     		add	r3, r3, #1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1091              		.type	ADC_CountsTo_uVolts, %function
  1092              	ADC_CountsTo_uVolts:
  1093              	.LFB18:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 34
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 34
 
 
  780:.\Generated_Source\PSoC4/ADC.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1112 0010 FB68     		ldr	r3, [r7, #12]
  1113 0012 022B     		cmp	r3, #2
  1114 0014 02D9     		bls	.L79
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 35
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 35
 
 
  1115              		.loc 1 815 0 is_stmt 0 discriminator 1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1156 0064 DB17     		asr	r3, r3, #31
  1157 0066 1D1C     		mov	r5, r3
  1158 0068 221C     		mov	r2, r4
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 36
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 36
 
 
  1159 006a 2B1C     		mov	r3, r5
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  849:.\Generated_Source\PSoC4/ADC.c ****     * Global variables:
  850:.\Generated_Source\PSoC4/ADC.c ****     *  ADC_countsPer10Volt:  used to convert ADC counts to Volts.
  851:.\Generated_Source\PSoC4/ADC.c ****     *  ADC_Offset:  Used as the offset while converting ADC counts
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 37
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 37
 
 
  852:.\Generated_Source\PSoC4/ADC.c ****     *   to mVolts.
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1227 002e BB1C     		add	r3, r7, #2
  1228 0030 1A80     		strh	r2, [r3]
  872:.\Generated_Source\PSoC4/ADC.c **** 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 38
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 38
 
 
  873:.\Generated_Source\PSoC4/ADC.c ****         volts = ((float32)adcCounts * ADC_10V_COUNTS) / (float32)ADC_countsPer10Volt[chan];
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1279              	.Letext0:
  1280              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
  1281              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 39
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 39
 
 
  1282              	.Ldebug_info0:
@@ -2287,10 +2287,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1285 0006 00000000 		.4byte	.Ldebug_abbrev0
  1286 000a 04       		.byte	0x4
  1287 000b 01       		.uleb128 0x1
- 1288 000c F5020000 		.4byte	.LASF60
+ 1288 000c 07030000 		.4byte	.LASF60
  1289 0010 01       		.byte	0x1
- 1290 0011 23020000 		.4byte	.LASF61
- 1291 0015 50020000 		.4byte	.LASF62
+ 1290 0011 69020000 		.4byte	.LASF61
+ 1291 0015 76010000 		.4byte	.LASF62
  1292 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1293 001d 00000000 		.4byte	0
  1294 0021 00000000 		.4byte	.Ldebug_line0
@@ -2301,11 +2301,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1299 002c 02       		.uleb128 0x2
  1300 002d 01       		.byte	0x1
  1301 002e 08       		.byte	0x8
- 1302 002f 42020000 		.4byte	.LASF1
+ 1302 002f 88020000 		.4byte	.LASF1
  1303 0033 02       		.uleb128 0x2
  1304 0034 02       		.byte	0x2
  1305 0035 05       		.byte	0x5
- 1306 0036 8F020000 		.4byte	.LASF2
+ 1306 0036 A1020000 		.4byte	.LASF2
  1307 003a 02       		.uleb128 0x2
  1308 003b 02       		.byte	0x2
  1309 003c 07       		.byte	0x7
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1336 006c D0000000 		.4byte	.LASF9
  1337 0070 02       		.byte	0x2
  1338 0071 3801     		.2byte	0x138
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 40
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 40
 
 
  1339 0073 2C000000 		.4byte	0x2c
@@ -2353,7 +2353,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1348 0089 3A01     		.2byte	0x13a
  1349 008b 48000000 		.4byte	0x48
  1350 008f 04       		.uleb128 0x4
- 1351 0090 E1020000 		.4byte	.LASF12
+ 1351 0090 F3020000 		.4byte	.LASF12
  1352 0094 02       		.byte	0x2
  1353 0095 3C01     		.2byte	0x13c
  1354 0097 33000000 		.4byte	0x33
@@ -2363,29 +2363,29 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1358 00a1 3D01     		.2byte	0x13d
  1359 00a3 41000000 		.4byte	0x41
  1360 00a7 04       		.uleb128 0x4
- 1361 00a8 83010000 		.4byte	.LASF14
+ 1361 00a8 D4010000 		.4byte	.LASF14
  1362 00ac 02       		.byte	0x2
  1363 00ad 3E01     		.2byte	0x13e
  1364 00af B3000000 		.4byte	0xb3
  1365 00b3 02       		.uleb128 0x2
  1366 00b4 04       		.byte	0x4
  1367 00b5 04       		.byte	0x4
- 1368 00b6 EF010000 		.4byte	.LASF15
+ 1368 00b6 35020000 		.4byte	.LASF15
  1369 00ba 02       		.uleb128 0x2
  1370 00bb 08       		.byte	0x8
  1371 00bc 04       		.byte	0x4
  1372 00bd D6000000 		.4byte	.LASF16
  1373 00c1 04       		.uleb128 0x4
- 1374 00c2 CD010000 		.4byte	.LASF17
+ 1374 00c2 13020000 		.4byte	.LASF17
  1375 00c6 02       		.byte	0x2
  1376 00c7 4301     		.2byte	0x143
  1377 00c9 4F000000 		.4byte	0x4f
  1378 00cd 02       		.uleb128 0x2
  1379 00ce 01       		.byte	0x1
  1380 00cf 08       		.byte	0x8
- 1381 00d0 AD020000 		.4byte	.LASF18
+ 1381 00d0 BF020000 		.4byte	.LASF18
  1382 00d4 04       		.uleb128 0x4
- 1383 00d5 7D010000 		.4byte	.LASF19
+ 1383 00d5 CE010000 		.4byte	.LASF19
  1384 00d9 02       		.byte	0x2
  1385 00da E401     		.2byte	0x1e4
  1386 00dc E0000000 		.4byte	0xe0
@@ -2394,11 +2394,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1389 00e5 02       		.uleb128 0x2
  1390 00e6 04       		.byte	0x4
  1391 00e7 07       		.byte	0x7
- 1392 00e8 8B010000 		.4byte	.LASF20
+ 1392 00e8 DC010000 		.4byte	.LASF20
  1393 00ec 06       		.uleb128 0x6
  1394 00ed 95000000 		.4byte	.LASF25
  1395 00f1 01       		.byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 41
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 41
 
 
  1396 00f2 3F       		.byte	0x3f
@@ -2416,7 +2416,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1408 010d 9C       		.byte	0x9c
  1409 010e 4E010000 		.4byte	0x14e
  1410 0112 08       		.uleb128 0x8
- 1411 0113 A2020000 		.4byte	.LASF21
+ 1411 0113 B4020000 		.4byte	.LASF21
  1412 0117 01       		.byte	0x1
  1413 0118 60       		.byte	0x60
  1414 0119 83000000 		.4byte	0x83
@@ -2458,10 +2458,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1450 015e 0B       		.uleb128 0xb
  1451 015f 4E010000 		.4byte	0x14e
  1452 0163 0C       		.uleb128 0xc
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 42
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 42
 
 
- 1453 0164 D6020000 		.4byte	.LASF26
+ 1453 0164 E8020000 		.4byte	.LASF26
  1454 0168 01       		.byte	0x1
  1455 0169 4A01     		.2byte	0x14a
  1456 016b 00000000 		.4byte	.LFB4
@@ -2469,7 +2469,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1458 0173 01       		.uleb128 0x1
  1459 0174 9C       		.byte	0x9c
  1460 0175 0D       		.uleb128 0xd
- 1461 0176 99020000 		.4byte	.LASF27
+ 1461 0176 AB020000 		.4byte	.LASF27
  1462 017a 01       		.byte	0x1
  1463 017b 6D01     		.2byte	0x16d
  1464 017d 00000000 		.4byte	.LFB5
@@ -2493,7 +2493,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1482 01a9 01       		.uleb128 0x1
  1483 01aa 9C       		.byte	0x9c
  1484 01ab 0E       		.uleb128 0xe
- 1485 01ac AE010000 		.4byte	.LASF31
+ 1485 01ac FF010000 		.4byte	.LASF31
  1486 01b0 01       		.byte	0x1
  1487 01b1 C201     		.2byte	0x1c2
  1488 01b3 83000000 		.4byte	0x83
@@ -2518,12 +2518,12 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1507 01e0 02       		.uleb128 0x2
  1508 01e1 91       		.byte	0x91
  1509 01e2 74       		.sleb128 -12
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 43
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 43
 
 
  1510 01e3 00       		.byte	0
  1511 01e4 11       		.uleb128 0x11
- 1512 01e5 8A030000 		.4byte	.LASF32
+ 1512 01e5 9C030000 		.4byte	.LASF32
  1513 01e9 01       		.byte	0x1
  1514 01ea F801     		.2byte	0x1f8
  1515 01ec 8F000000 		.4byte	0x8f
@@ -2533,7 +2533,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1519 01f9 9C       		.byte	0x9c
  1520 01fa 1D020000 		.4byte	0x21d
  1521 01fe 0F       		.uleb128 0xf
- 1522 01ff A8020000 		.4byte	.LASF34
+ 1522 01ff BA020000 		.4byte	.LASF34
  1523 0203 01       		.byte	0x1
  1524 0204 F801     		.2byte	0x1f8
  1525 0206 83000000 		.4byte	0x83
@@ -2541,7 +2541,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1527 020b 91       		.byte	0x91
  1528 020c 6C       		.sleb128 -20
  1529 020d 10       		.uleb128 0x10
- 1530 020e 83030000 		.4byte	.LASF35
+ 1530 020e 95030000 		.4byte	.LASF35
  1531 0212 01       		.byte	0x1
  1532 0213 FA01     		.2byte	0x1fa
  1533 0215 83000000 		.4byte	0x83
@@ -2550,7 +2550,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1536 021b 74       		.sleb128 -12
  1537 021c 00       		.byte	0
  1538 021d 12       		.uleb128 0x12
- 1539 021e D3010000 		.4byte	.LASF37
+ 1539 021e 19020000 		.4byte	.LASF37
  1540 0222 01       		.byte	0x1
  1541 0223 2502     		.2byte	0x225
  1542 0225 00000000 		.4byte	.LFB10
@@ -2568,7 +2568,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1554 0241 74       		.sleb128 -12
  1555 0242 00       		.byte	0
  1556 0243 12       		.uleb128 0x12
- 1557 0244 13020000 		.4byte	.LASF39
+ 1557 0244 59020000 		.4byte	.LASF39
  1558 0248 01       		.byte	0x1
  1559 0249 5102     		.2byte	0x251
  1560 024b 00000000 		.4byte	.LFB11
@@ -2577,8 +2577,8 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1563 0254 9C       		.byte	0x9c
  1564 0255 69020000 		.4byte	0x269
  1565 0259 0F       		.uleb128 0xf
- 1566 025a 94010000 		.4byte	.LASF40
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 44
+ 1566 025a E5010000 		.4byte	.LASF40
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 44
 
 
  1567 025e 01       		.byte	0x1
@@ -2589,7 +2589,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1572 0267 74       		.sleb128 -12
  1573 0268 00       		.byte	0
  1574 0269 12       		.uleb128 0x12
- 1575 026a 9D010000 		.4byte	.LASF41
+ 1575 026a EE010000 		.4byte	.LASF41
  1576 026e 01       		.byte	0x1
  1577 026f 6602     		.2byte	0x266
  1578 0271 00000000 		.4byte	.LFB12
@@ -2598,7 +2598,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1581 027a 9C       		.byte	0x9c
  1582 027b 8F020000 		.4byte	0x28f
  1583 027f 0F       		.uleb128 0xf
- 1584 0280 F5010000 		.4byte	.LASF42
+ 1584 0280 3B020000 		.4byte	.LASF42
  1585 0284 01       		.byte	0x1
  1586 0285 6602     		.2byte	0x266
  1587 0287 83000000 		.4byte	0x83
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1621 02d0 01       		.byte	0x1
  1622 02d1 9502     		.2byte	0x295
  1623 02d3 83000000 		.4byte	0x83
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 45
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 45
 
 
  1624 02d7 02       		.uleb128 0x2
@@ -2646,7 +2646,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1626 02d9 74       		.sleb128 -12
  1627 02da 00       		.byte	0
  1628 02db 13       		.uleb128 0x13
- 1629 02dc E7020000 		.4byte	.LASF45
+ 1629 02dc F9020000 		.4byte	.LASF45
  1630 02e0 01       		.byte	0x1
  1631 02e1 B102     		.2byte	0x2b1
  1632 02e3 00000000 		.4byte	.LFB15
@@ -2655,7 +2655,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1635 02ec 9C       		.byte	0x9c
  1636 02ed 10030000 		.4byte	0x310
  1637 02f1 0F       		.uleb128 0xf
- 1638 02f2 A8020000 		.4byte	.LASF34
+ 1638 02f2 BA020000 		.4byte	.LASF34
  1639 02f6 01       		.byte	0x1
  1640 02f7 B102     		.2byte	0x2b1
  1641 02f9 83000000 		.4byte	0x83
@@ -2663,7 +2663,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1643 02fe 91       		.byte	0x91
  1644 02ff 74       		.sleb128 -12
  1645 0300 0F       		.uleb128 0xf
- 1646 0301 C5020000 		.4byte	.LASF46
+ 1646 0301 D7020000 		.4byte	.LASF46
  1647 0305 01       		.byte	0x1
  1648 0306 B102     		.2byte	0x2b1
  1649 0308 8F000000 		.4byte	0x8f
@@ -2672,7 +2672,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1652 030e 72       		.sleb128 -14
  1653 030f 00       		.byte	0
  1654 0310 13       		.uleb128 0x13
- 1655 0311 E3010000 		.4byte	.LASF47
+ 1655 0311 29020000 		.4byte	.LASF47
  1656 0315 01       		.byte	0x1
  1657 0316 D302     		.2byte	0x2d3
  1658 0318 00000000 		.4byte	.LFB16
@@ -2681,7 +2681,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1661 0321 9C       		.byte	0x9c
  1662 0322 45030000 		.4byte	0x345
  1663 0326 0F       		.uleb128 0xf
- 1664 0327 A8020000 		.4byte	.LASF34
+ 1664 0327 BA020000 		.4byte	.LASF34
  1665 032b 01       		.byte	0x1
  1666 032c D302     		.2byte	0x2d3
  1667 032e 83000000 		.4byte	0x83
@@ -2698,10 +2698,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1678 0343 70       		.sleb128 -16
  1679 0344 00       		.byte	0
  1680 0345 11       		.uleb128 0x11
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 46
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 46
 
 
- 1681 0346 FF010000 		.4byte	.LASF49
+ 1681 0346 45020000 		.4byte	.LASF49
  1682 034a 01       		.byte	0x1
  1683 034b F402     		.2byte	0x2f4
  1684 034d 8F000000 		.4byte	0x8f
@@ -2711,7 +2711,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1688 035a 9C       		.byte	0x9c
  1689 035b 8D030000 		.4byte	0x38d
  1690 035f 0F       		.uleb128 0xf
- 1691 0360 A8020000 		.4byte	.LASF34
+ 1691 0360 BA020000 		.4byte	.LASF34
  1692 0364 01       		.byte	0x1
  1693 0365 F402     		.2byte	0x2f4
  1694 0367 83000000 		.4byte	0x83
@@ -2719,7 +2719,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1696 036c 91       		.byte	0x91
  1697 036d 6C       		.sleb128 -20
  1698 036e 0F       		.uleb128 0xf
- 1699 036f CC020000 		.4byte	.LASF50
+ 1699 036f DE020000 		.4byte	.LASF50
  1700 0373 01       		.byte	0x1
  1701 0374 F402     		.2byte	0x2f4
  1702 0376 8F000000 		.4byte	0x8f
@@ -2727,7 +2727,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1704 037b 91       		.byte	0x91
  1705 037c 6A       		.sleb128 -22
  1706 037d 10       		.uleb128 0x10
- 1707 037e 76010000 		.4byte	.LASF51
+ 1707 037e C7010000 		.4byte	.LASF51
  1708 0382 01       		.byte	0x1
  1709 0383 F602     		.2byte	0x2f6
  1710 0385 8F000000 		.4byte	0x8f
@@ -2746,7 +2746,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1723 03a2 9C       		.byte	0x9c
  1724 03a3 D5030000 		.4byte	0x3d5
  1725 03a7 0F       		.uleb128 0xf
- 1726 03a8 A8020000 		.4byte	.LASF34
+ 1726 03a8 BA020000 		.4byte	.LASF34
  1727 03ac 01       		.byte	0x1
  1728 03ad 2A03     		.2byte	0x32a
  1729 03af 83000000 		.4byte	0x83
@@ -2754,11 +2754,11 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1731 03b4 91       		.byte	0x91
  1732 03b5 64       		.sleb128 -28
  1733 03b6 0F       		.uleb128 0xf
- 1734 03b7 CC020000 		.4byte	.LASF50
+ 1734 03b7 DE020000 		.4byte	.LASF50
  1735 03bb 01       		.byte	0x1
  1736 03bc 2A03     		.2byte	0x32a
  1737 03be 8F000000 		.4byte	0x8f
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 47
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 47
 
 
  1738 03c2 02       		.uleb128 0x2
@@ -2784,7 +2784,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1758 03ea 9C       		.byte	0x9c
  1759 03eb 1D040000 		.4byte	0x41d
  1760 03ef 0F       		.uleb128 0xf
- 1761 03f0 A8020000 		.4byte	.LASF34
+ 1761 03f0 BA020000 		.4byte	.LASF34
  1762 03f4 01       		.byte	0x1
  1763 03f5 5703     		.2byte	0x357
  1764 03f7 83000000 		.4byte	0x83
@@ -2792,7 +2792,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1766 03fc 91       		.byte	0x91
  1767 03fd 64       		.sleb128 -28
  1768 03fe 0F       		.uleb128 0xf
- 1769 03ff CC020000 		.4byte	.LASF50
+ 1769 03ff DE020000 		.4byte	.LASF50
  1770 0403 01       		.byte	0x1
  1771 0404 5703     		.2byte	0x357
  1772 0406 8F000000 		.4byte	0x8f
@@ -2816,9 +2816,9 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1790 042b 02       		.byte	0x2
  1791 042c 00       		.byte	0
  1792 042d 08       		.uleb128 0x8
- 1793 042e B2020000 		.4byte	.LASF56
+ 1793 042e C4020000 		.4byte	.LASF56
  1794 0432 01       		.byte	0x1
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 48
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 48
 
 
  1795 0433 21       		.byte	0x21
@@ -2844,7 +2844,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1815 0462 02       		.byte	0x2
  1816 0463 00       		.byte	0
  1817 0464 14       		.uleb128 0x14
- 1818 0465 C2010000 		.4byte	.LASF58
+ 1818 0465 96020000 		.4byte	.LASF58
  1819 0469 01       		.byte	0x1
  1820 046a 19       		.byte	0x19
  1821 046b 75040000 		.4byte	0x475
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1849 0002 01       		.byte	0x1
  1850 0003 25       		.uleb128 0x25
  1851 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 49
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 49
 
 
  1852 0005 13       		.uleb128 0x13
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1906 003b 00       		.byte	0
  1907 003c 00       		.byte	0
  1908 003d 06       		.uleb128 0x6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 50
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 50
 
 
  1909 003e 2E       		.uleb128 0x2e
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  1963 0076 3B       		.uleb128 0x3b
  1964 0077 0B       		.uleb128 0xb
  1965 0078 49       		.uleb128 0x49
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 51
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 51
 
 
  1966 0079 13       		.uleb128 0x13
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2020 00b0 2E       		.uleb128 0x2e
  2021 00b1 00       		.byte	0
  2022 00b2 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 52
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 52
 
 
  2023 00b3 19       		.uleb128 0x19
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2077 00eb 05       		.uleb128 0x5
  2078 00ec 49       		.uleb128 0x49
  2079 00ed 13       		.uleb128 0x13
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 53
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 53
 
 
  2080 00ee 02       		.uleb128 0x2
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2134 0125 0B       		.uleb128 0xb
  2135 0126 3B       		.uleb128 0x3b
  2136 0127 05       		.uleb128 0x5
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 54
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 54
 
 
  2137 0128 27       		.uleb128 0x27
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2191 0160 00       		.byte	0
  2192 0161 00       		.byte	0
  2193 0162 00       		.byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 55
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 55
 
 
  2194              		.section	.debug_aranges,"",%progbits
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2248 0018 00000000 		.4byte	.LFB5
  2249 001c 18000000 		.4byte	.LFE5
  2250 0020 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 56
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 56
 
 
  2251 0024 1C000000 		.4byte	.LFE6
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2292      00
  2293              	.LASF7:
  2294 0032 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 57
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 57
 
 
  2294      206C6F6E 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2317              	.LASF16:
  2318 00d6 646F7562 		.ascii	"double\000"
  2318      6C6500
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 58
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 58
 
 
  2319              	.LASF11:
@@ -3477,162 +3477,163 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 1
  2344      53746F70 
  2344      436F6E76 
  2344      65727400 
- 2345              	.LASF51:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 59
+ 2345              	.LASF62:
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 59
 
 
- 2346 0176 6D566F6C 		.ascii	"mVolts\000"
- 2346      747300
- 2347              	.LASF19:
- 2348 017d 72656733 		.ascii	"reg32\000"
- 2348      3200
- 2349              	.LASF14:
- 2350 0183 666C6F61 		.ascii	"float32\000"
- 2350      74333200 
- 2351              	.LASF20:
- 2352 018b 73697A65 		.ascii	"sizetype\000"
- 2352      74797065 
- 2352      00
- 2353              	.LASF40:
- 2354 0194 6C6F774C 		.ascii	"lowLimit\000"
- 2354      696D6974 
- 2354      00
- 2355              	.LASF41:
- 2356 019d 4144435F 		.ascii	"ADC_SetHighLimit\000"
- 2356      53657448 
- 2356      6967684C 
- 2356      696D6974 
- 2356      00
- 2357              	.LASF31:
- 2358 01ae 4144435F 		.ascii	"ADC_IsEndConversion\000"
- 2358      4973456E 
- 2358      64436F6E 
- 2358      76657273 
- 2358      696F6E00 
- 2359              	.LASF58:
- 2360 01c2 4144435F 		.ascii	"ADC_offset\000"
- 2360      6F666673 
- 2360      657400
- 2361              	.LASF17:
- 2362 01cd 696E7436 		.ascii	"int64\000"
- 2362      3400
- 2363              	.LASF37:
- 2364 01d3 4144435F 		.ascii	"ADC_SetChanMask\000"
- 2364      53657443 
- 2364      68616E4D 
- 2364      61736B00 
- 2365              	.LASF47:
- 2366 01e3 4144435F 		.ascii	"ADC_SetGain\000"
- 2366      53657447 
- 2366      61696E00 
- 2367              	.LASF15:
- 2368 01ef 666C6F61 		.ascii	"float\000"
- 2368      7400
- 2369              	.LASF42:
- 2370 01f5 68696768 		.ascii	"highLimit\000"
- 2370      4C696D69 
- 2370      7400
- 2371              	.LASF49:
- 2372 01ff 4144435F 		.ascii	"ADC_CountsTo_mVolts\000"
- 2372      436F756E 
- 2372      7473546F 
- 2372      5F6D566F 
- 2372      6C747300 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 60
+ 2346 0176 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Documents\\GitHub\\ST4\\"
+ 2346      73657273 
+ 2346      5C4C696E 
+ 2346      65747465 
+ 2346      2048656C 
+ 2347 01a3 50536F43 		.ascii	"PSoC\\ADC_filtre_samlet_grader.cydsn\000"
+ 2347      5C414443 
+ 2347      5F66696C 
+ 2347      7472655F 
+ 2347      73616D6C 
+ 2348              	.LASF51:
+ 2349 01c7 6D566F6C 		.ascii	"mVolts\000"
+ 2349      747300
+ 2350              	.LASF19:
+ 2351 01ce 72656733 		.ascii	"reg32\000"
+ 2351      3200
+ 2352              	.LASF14:
+ 2353 01d4 666C6F61 		.ascii	"float32\000"
+ 2353      74333200 
+ 2354              	.LASF20:
+ 2355 01dc 73697A65 		.ascii	"sizetype\000"
+ 2355      74797065 
+ 2355      00
+ 2356              	.LASF40:
+ 2357 01e5 6C6F774C 		.ascii	"lowLimit\000"
+ 2357      696D6974 
+ 2357      00
+ 2358              	.LASF41:
+ 2359 01ee 4144435F 		.ascii	"ADC_SetHighLimit\000"
+ 2359      53657448 
+ 2359      6967684C 
+ 2359      696D6974 
+ 2359      00
+ 2360              	.LASF31:
+ 2361 01ff 4144435F 		.ascii	"ADC_IsEndConversion\000"
+ 2361      4973456E 
+ 2361      64436F6E 
+ 2361      76657273 
+ 2361      696F6E00 
+ 2362              	.LASF17:
+ 2363 0213 696E7436 		.ascii	"int64\000"
+ 2363      3400
+ 2364              	.LASF37:
+ 2365 0219 4144435F 		.ascii	"ADC_SetChanMask\000"
+ 2365      53657443 
+ 2365      68616E4D 
+ 2365      61736B00 
+ 2366              	.LASF47:
+ 2367 0229 4144435F 		.ascii	"ADC_SetGain\000"
+ 2367      53657447 
+ 2367      61696E00 
+ 2368              	.LASF15:
+ 2369 0235 666C6F61 		.ascii	"float\000"
+ 2369      7400
+ 2370              	.LASF42:
+ 2371 023b 68696768 		.ascii	"highLimit\000"
+ 2371      4C696D69 
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 60
 
 
- 2373              	.LASF39:
- 2374 0213 4144435F 		.ascii	"ADC_SetLowLimit\000"
- 2374      5365744C 
- 2374      6F774C69 
- 2374      6D697400 
- 2375              	.LASF61:
- 2376 0223 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\ADC.c\000"
- 2376      6E657261 
- 2376      7465645F 
- 2376      536F7572 
- 2376      63655C50 
- 2377              	.LASF1:
- 2378 0242 756E7369 		.ascii	"unsigned char\000"
- 2378      676E6564 
- 2378      20636861 
- 2378      7200
- 2379              	.LASF62:
- 2380 0250 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Desktop\\ADC_filtre_saml"
- 2380      73657273 
- 2380      5C4C696E 
- 2380      65747465 
- 2380      2048656C 
- 2381 027f 65745F67 		.ascii	"et_grader.cydsn\000"
- 2381      72616465 
- 2381      722E6379 
- 2381      64736E00 
+ 2371      7400
+ 2372              	.LASF49:
+ 2373 0245 4144435F 		.ascii	"ADC_CountsTo_mVolts\000"
+ 2373      436F756E 
+ 2373      7473546F 
+ 2373      5F6D566F 
+ 2373      6C747300 
+ 2374              	.LASF39:
+ 2375 0259 4144435F 		.ascii	"ADC_SetLowLimit\000"
+ 2375      5365744C 
+ 2375      6F774C69 
+ 2375      6D697400 
+ 2376              	.LASF61:
+ 2377 0269 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\ADC.c\000"
+ 2377      6E657261 
+ 2377      7465645F 
+ 2377      536F7572 
+ 2377      63655C50 
+ 2378              	.LASF1:
+ 2379 0288 756E7369 		.ascii	"unsigned char\000"
+ 2379      676E6564 
+ 2379      20636861 
+ 2379      7200
+ 2380              	.LASF58:
+ 2381 0296 4144435F 		.ascii	"ADC_offset\000"
+ 2381      6F666673 
+ 2381      657400
  2382              	.LASF2:
- 2383 028f 73686F72 		.ascii	"short int\000"
+ 2383 02a1 73686F72 		.ascii	"short int\000"
  2383      7420696E 
  2383      7400
  2384              	.LASF27:
- 2385 0299 4144435F 		.ascii	"ADC_Stop\000"
+ 2385 02ab 4144435F 		.ascii	"ADC_Stop\000"
  2385      53746F70 
  2385      00
  2386              	.LASF21:
- 2387 02a2 63684E75 		.ascii	"chNum\000"
+ 2387 02b4 63684E75 		.ascii	"chNum\000"
  2387      6D00
  2388              	.LASF34:
- 2389 02a8 6368616E 		.ascii	"chan\000"
+ 2389 02ba 6368616E 		.ascii	"chan\000"
  2389      00
  2390              	.LASF18:
- 2391 02ad 63686172 		.ascii	"char\000"
+ 2391 02bf 63686172 		.ascii	"char\000"
  2391      00
  2392              	.LASF56:
- 2393 02b2 4144435F 		.ascii	"ADC_channelsConfig\000"
+ 2393 02c4 4144435F 		.ascii	"ADC_channelsConfig\000"
  2393      6368616E 
  2393      6E656C73 
  2393      436F6E66 
  2393      696700
  2394              	.LASF46:
- 2395 02c5 6F666673 		.ascii	"offset\000"
+ 2395 02d7 6F666673 		.ascii	"offset\000"
  2395      657400
  2396              	.LASF50:
- 2397 02cc 61646343 		.ascii	"adcCounts\000"
+ 2397 02de 61646343 		.ascii	"adcCounts\000"
  2397      6F756E74 
  2397      7300
+ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccBJiRjY.s 			page 61
+
+
  2398              	.LASF26:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccvG7Q7J.s 			page 61
-
-
- 2399 02d6 4144435F 		.ascii	"ADC_Enable\000"
+ 2399 02e8 4144435F 		.ascii	"ADC_Enable\000"
  2399      456E6162 
  2399      6C6500
  2400              	.LASF12:
- 2401 02e1 696E7431 		.ascii	"int16\000"
+ 2401 02f3 696E7431 		.ascii	"int16\000"
  2401      3600
  2402              	.LASF45:
- 2403 02e7 4144435F 		.ascii	"ADC_SetOffset\000"
+ 2403 02f9 4144435F 		.ascii	"ADC_SetOffset\000"
  2403      5365744F 
  2403      66667365 
  2403      7400
  2404              	.LASF60:
- 2405 02f5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2405 0307 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  2405      4320342E 
  2405      392E3320 
  2405      32303135 
  2405      30333033 
- 2406 0328 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2406 033a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  2406      20726576 
  2406      6973696F 
  2406      6E203232 
  2406      31323230 
- 2407 035b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2407 036d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  2407      66756E63 
  2407      74696F6E 
  2407      2D736563 
  2407      74696F6E 
  2408              	.LASF35:
- 2409 0383 72657375 		.ascii	"result\000"
+ 2409 0395 72657375 		.ascii	"result\000"
  2409      6C7400
  2410              	.LASF32:
- 2411 038a 4144435F 		.ascii	"ADC_GetResult16\000"
+ 2411 039c 4144435F 		.ascii	"ADC_GetResult16\000"
  2411      47657452 
  2411      6573756C 
  2411      74313600 
