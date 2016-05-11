@@ -12,8 +12,7 @@ På baggrund af disse resultater fremgår at de ønskede krav om maksimal fladhe
 Deruodver fremgår det at inputsignalet følger det ufiltrede signal dog med et delay. Til måling af behandlingstiden af dette, programmeres en timer funktion i mikrokontrolleren, der retunerer behandlingstiden til MATLAB. Ud fra dette ses et delay på 39 sekunder og 56 milisekunder.
 
 
-
-For at vurdere om filteret dæmper i forhold til de opstillede krav, udføres en sweep-test af frekvenser fra $0-500~Hz$, som er signalets forventede frekvensområde. Testen udføres for at undersøge om EMG-forstærkeren, forstærker som forventet. Inputspændingen sættes til $0,4~mV$. Det forventes at der forstærkes med 100 gange, hvilket giver en outputspænding på $40~mV$. Resultatet af denne test fremgår af \autoref{fig:lavpas_sweep}. 
+For at vurdere om filteret dæmper i forhold til de opstillede krav, udføres en sweep-test af frekvenser fra $0-500~Hz$ med en funktionsgenerator, som er signalets forventede frekvensområde. Da funktionsgeneratoren ikke kan indstilles til en frekvens på $0~Hz$ indstilles denne til $0,1 \mu~Hz$. Testen udføres for at undersøge om EMG-forstærkeren, forstærker som forventet. Inputspændingen sættes til $1~mV$. Det forventes at der forstærkes med 100 gange, hvilket giver en outputspænding på $40~mV$. Resultatet af denne test fremgår af \autoref{fig:lavpas_sweep}. 
 
 
 \begin{figure}[H]
