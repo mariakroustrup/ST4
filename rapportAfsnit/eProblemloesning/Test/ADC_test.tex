@@ -1,14 +1,13 @@
-ADC'ens samplingsfrekvens testes for at undersøge om den indstillede og reelle samplerate er identsik. Til denne test defineres en variable 'k' i mikrokontrolleren, som tæller op for hver gang at der er samplet data fra ADC'en. Denne værdi aflæses i matlab via usb forbindelsen mellem computer og mikrokontroller. 
+ADC'ens samplingsfrekvens testes for at undersøge om den indstillede og reelle samplerate er identsik. Til denne test defineres en variable 'k' i mikrokontrolleren, som tæller op for hver gang at der er konverteret data fra ADC'en. Hvis en konvertering mislykkes vil k-værdien ikke tælle op, og den givende sample registreres derfor ikke. Denne værdi aflæses i matlab via usb forbindelsen mellem computer og mikrokontroller. 
 
-Måden testen udføres på, er ved at starte konverteringen og et stopur på samme tid. Efter 5 minutter stoppes konverteringen og timeren. Værdierne aflæses og antallet af samples divideres med antallet af sekunder gået, hvoraf samplingfrekvensen udregnes.  
+Måden testen udføres på, er ved at starte konverteringen og et stopur på samme tid. Idet stopuret når 30 min stoppes uret og konvertering. Værdierne aflæses hvoraf samplingfrekvensen udregnes. Antallet af konverteringer målt under testten er $177066~samples$ over en periode af $1800,16~s$
 
+\begin{equation}\label{eq:ADC_test}
+Fs = \frac{177066~samples}{1800,16~s}
+\end{equation}
 
-%Samplingssfrekvens for ADC'en 
-%Dette testes ved anvendelse af en funktionsgenerator, hvor der ud fra nyquist teori vil genereres et signus signal med en given frekvens. 
-%Da ADC'en opsættes til at sample med $100~Hz$, vil funktionsgeneratoren blive sat til $10~Hz$, hvor til der forventes at der konverteres 10 samples pr. sinusperiode. Dette vil blive gjort gentagende gang, hvor det vil blive undersøget hvor nøgagtigt de givende samples rammer det samme punkt. Der skal her gøres opmærksom på funktionsgeneratorens egenskab til at bevare en konstant frekvens. Disse data samples og visualiseres i matlab.  
-%
-%Fejlfaktor:
-%Hvad for en funktionsgenerator benyttes der, og hvad siger databaldet om den evne til at vedligeholde en given frekvens?. 
-%
-%ADC'ens arbejdsområde:
-%Dette testes ved at påføre en spænding på ADC'en indgang, hvortil det undersøges om signalet går i mætning eller ej. ADC'ens arbejdsområde er bestemt af opsætningen på mikrokontrolleren.  
+Der forventes en samplingsfrekvens på $100~Hz$. Den reelle frekvens er udregnet til $98,36~Hz$ ud fra \autoref{eq:ADC_test}. Dette giver en afvigelse på $1,64\%$. Årsagen til denne afvigelse realateres til at stopuret og konverteringen ikke har været startet og stoppet på præcis samme tid. Dette resultere i at der ikke er en direkte relation mellem køretiden for ADC'en og stopuret. Yderligere tillader indstillerne for ADC, at der kan ændres i konverteringsteden for de enkelte kanaler, men stadig oplyse at der bevares en aktuel samplingsfrekvens på $100~Hz$. Dette antages ligeledes at have en indflydelse på samplingsfrekvensen, selvom den oplyses som værende $100~Hz$ 
+
+Tiltrods for afvigelsen godkendes ADC'en indstillinger alligevel. Dette relateres til at det er lavfrekvente signaler der samples, og at størrelsen på afvigelsen ikke har betydningen for repræsentationen af signalerne. 
+Med henblik på den endelige anvendelse i form af et exoskellet, vil systemet ligeledes skulle følge kroppens naturlige bevægelse. Hertil fremhæves at exoskelletet ikke skal tilpasse en ny position 100 gange i sekundet, da det ville uhensigtsmæssigt
+
