@@ -15,3 +15,6 @@ xlim([0 5])
 ylim([-20 1200])
 ylabel('Spænding [V]')
 xlabel('Tid [s]')
+legend('Input', 'Output')
+set(gca,'fontsize',20);
+box off
