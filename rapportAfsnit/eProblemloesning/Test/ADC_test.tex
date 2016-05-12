@@ -1,3 +1,4 @@
+\subsection{ADC}
 ADC'ens samplingsfrekvens testes for at undersøge om den indstillede og reelle samplerate er identsik. Til denne test defineres en variable 'k' i mikrokontrolleren, som tæller op for hver gang at der er konverteret data fra ADC'en. Hvis en konvertering mislykkes vil k-værdien ikke tælle op, og den givende sample registreres derfor ikke. Denne værdi aflæses i matlab via usb forbindelsen mellem computer og mikrokontroller. 
 
 Måden testen udføres på, er ved at starte konverteringen og et stopur på samme tid. Idet stopuret når 30 min stoppes uret og konvertering. Værdierne aflæses hvoraf samplingfrekvensen udregnes. Antallet af konverteringer målt under testten er $177066~samples$ over en periode af $1800,16~s$

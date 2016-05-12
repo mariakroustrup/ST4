@@ -227,6 +227,13 @@ E.~Bernmark and C.~Wiktorin.
 \newblock \emph{Applied Ergonomics}, 33, 2002.
 \newblock \doi{10.1016/S0003-6870(02)00072-8}.
 
+\bibitem[Technologies(2013)]{advancertech2013}
+Advancer Technologies.
+\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
+  Microcontroller Application}, 2013.
+\newblock URL
+  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+
 \bibitem[Webster and Clark(1998)]{webster1998}
 J.~G. Webster and J.~W. Clark.
 \newblock \emph{Medical Instrumentation Application and Design}, volume~3.
@@ -263,13 +270,6 @@ N.~Gupta.
 \newblock \emph{nside Bluetooth Low Energy}.
 \newblock Artech House, 2013.
 \newblock \doi{9781608075799}.
-
-\bibitem[Technologies(2013)]{advancertech2013}
-Advancer Technologies.
-\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
-  Microcontroller Application}, 2013.
-\newblock URL
-  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
 
 \bibitem[Devices(2009)]{analogdevices2009}
 Analog Devices.
