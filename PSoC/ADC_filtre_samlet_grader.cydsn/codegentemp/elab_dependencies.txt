@@ -1,5 +1,5 @@
-C:\Users\passw\Desktop\ADC_filtre_samlet_grader.cydsn\TopDesign\TopDesign.cysch
-C:\Users\passw\Desktop\ADC_filtre_samlet_grader.cydsn\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl
+C:\Users\Linette Helena\Desktop\hgjki\ADC_filtre_samlet_grader.cydsn\TopDesign\TopDesign.cysch
+C:\Users\Linette Helena\Desktop\hgjki\ADC_filtre_samlet_grader.cydsn\TopDesign\PSoC4\PSoC 4200 BLE\TopDesign.ctl
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\SCB_P4_v3_10\SCB_P4_v3_10.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\SCB_P4_v3_10\SCB_P4_v3_10.pdf
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\SCB_P4_v3_10\SCB_P4_v3_10.cycdx
@@ -1019,7 +1019,7 @@ C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprim
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h
-C:\Users\passw\Desktop\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cydwr
+C:\Users\Linette Helena\Desktop\hgjki\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cydwr
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC4\API\cm0gcc.ld
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC4\API\Cm0RealView.scat
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC4\API\Cm0Start.c

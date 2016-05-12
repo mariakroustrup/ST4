@@ -2,10 +2,10 @@
 #include <my_defines.h>
 #include <stdlib.h>
 
-#define LOWBYTE 0                                   // Used to toggle between HIGH byte and LOW byte
-#define HIGHBYTE 1                                  // Used to toggle between HIGH byte and LOW byte
 #define FALSE 0
 #define TRUE 1
+#define LED_ON 0u
+#define LED_OFF 1u
 
 /* Moving average filter */ 
 #define FILTER_LENGTH_mavg 9
@@ -28,7 +28,6 @@ double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
 double b_low[FILTER_LENGTH_low+1] = {0.0015, 0.0029, 0.0015};
 double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.8890, 0.8949};
 
-char current_byte = LOWBYTE;                        // Receive LOW byte first as default
 int16 value_in,value_out[2]={0,0},i=0,j=0,k=0, grader_groen, grader_roed, diff, old, counter=0; 
 char FirstCall = TRUE;
 
@@ -256,7 +255,24 @@ CY_ISR(ADC_interrupt)
         grader_groen = groen_grader(mav_data_groen);    //Grader tages til det filtrede signal
 
         samlet_grader=grader_roed+grader_groen;         //Graderne lægges sammen, således vinklen over knæet visualiseres
+              
         StopMeasuring
+        
+         if (samlet_grader<90)
+        {
+            Pin_Green_Write(LED_OFF); 
+            Pin_Red_Write(LED_ON);
+        }
+        if (samlet_grader>90)
+        {
+            Pin_Red_Write(LED_OFF);
+            Pin_Green_Write(LED_ON);
+        }
+        if (k==1)
+        {
+           Pin_Red_Write(LED_OFF);
+           Pin_Green_Write(LED_OFF);
+        }
         
         /* EMG */
         low_pass_data = low_pass_filter(EMG);        
@@ -282,17 +298,23 @@ CY_ISR(Pin_SW2_handler)
     
     if (j==0)
     {
+        k=0;
+        Pin_Green_Write(LED_ON);
+        Pin_Red_Write(LED_OFF);
         ADC_StartConvert();
-        j++;
+        j++; 
     }
     
     else 
     {
         ADC_StopConvert();
+        Pin_Red_Write(LED_OFF);
+        Pin_Green_Write(LED_OFF);
         j=0;
+        k=1;
     }
-    Pin_Green_Write(~ Pin_Green_Read());
-    Pin_SW2_ClearInterrupt();
+    
+    Pin_SW2_ClearInterrupt(); 
 }
 
 CY_ISR(Timer_interrupt)
@@ -313,6 +335,5 @@ int main()
     Timer_ISR_Enable();
     ADC_IRQ_Enable();                   /* Enable ADC interrupts */   
     CySysPmSleep();
-    return 0;
-   
+    return 0;  
 }
