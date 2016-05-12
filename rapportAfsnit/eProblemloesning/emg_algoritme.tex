@@ -1,14 +1,9 @@
-\subsection{EMG-algoritme}
-EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. 
+\subsection{EMG-algoritme}\label{sec:krav_emg_algo}
+EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. Det skal gøres ved, at EMG-algoritmen skal finde hældningen af EMG-signalet mellem samples og derefter udsende et signal alt efter, om  hældningen er faldende eller stigende. 
 
-For at opfylde dette formål skal hældningen af grafen findes. Dette kan gøres ved differentiering, hvorved det vil være muligt at finde tangenthældningen i ét punkt ved differentialkvotienten. Det vælges at implementere en mere simpel metode til at tilnærmelsesvist at finde hældningen ved \autoref{eq:haeldning}.
+\textbf{Krav:}
+\begin{itemize}
+\item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
+\item Skal kunne udsende ét signal, når muskelsignalet er faldende og et andet, når det er stigende
+\end{itemize}
 
-\begin{equation}
-f'(x)\approx\dfrac{\Delta y(x)}{\Delta x}
-\label{eq:haeldning}
-\end{equation}
-
-\noindent
-I \autoref{eq:haeldning} er $\Delta x$ tiden mellem to samples, og $\Delta y(x)$ den målte spænding fra rectus femoris til tiden $x$. 
-
-Hvis $f'(x)>1$ kommer der et output, som signalerer til prototypen, at knæleddet skal fleksere. Hvis derimod $f'(x)<1$ kommer der et andet output, som signalerer til prototypen, at knæleddet skal ekstendere.
