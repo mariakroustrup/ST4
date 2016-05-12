@@ -2,7 +2,7 @@
 --	Conversion of ADC_filtre_samlet_grader.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 11 11:32:18 2016
+--	Thu May 12 13:18:16 2016
 --
 
 USE cypress.cypress.all;

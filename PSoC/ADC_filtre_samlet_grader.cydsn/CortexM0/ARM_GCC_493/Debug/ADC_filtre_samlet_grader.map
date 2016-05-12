@@ -742,7 +742,7 @@ END GROUP
                 0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
                 0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
 
-.text           0x00000000     0x3998
+.text           0x00000000     0x3968
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -783,239 +783,238 @@ END GROUP
                 0x000008f4       0x9c .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x000008f4                differentiator
  .text.ADC_interrupt
-                0x00000990      0x184 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000990      0x148 .\CortexM0\ARM_GCC_493\Debug\main.o
                 0x00000990                ADC_interrupt
  .text.Pin_SW2_handler
-                0x00000b14       0x4c .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x00000b14                Pin_SW2_handler
+                0x00000ad8       0x4c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000ad8                Pin_SW2_handler
  .text.Timer_interrupt
-                0x00000b60       0x18 .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x00000b60                Timer_interrupt
- .text.main     0x00000b78       0x4c .\CortexM0\ARM_GCC_493\Debug\main.o
-                0x00000b78                main
+                0x00000b24       0x18 .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000b24                Timer_interrupt
+ .text.main     0x00000b3c       0x5c .\CortexM0\ARM_GCC_493\Debug\main.o
+                0x00000b3c                main
  .text.IntDefaultHandler
-                0x00000bc4        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x00000bc4                IntDefaultHandler
- .text.Start_c  0x00000bcc       0x98 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x00000bcc                Start_c
+                0x00000b98        0x8 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000b98                IntDefaultHandler
+ .text.Start_c  0x00000ba0       0x98 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000ba0                Start_c
  .text.initialize_psoc
-                0x00000c64       0x70 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x00000c64                initialize_psoc
+                0x00000c38       0x70 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00000c38                initialize_psoc
  .text.CYMEMZERO
-                0x00000cd4       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+                0x00000ca8       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000cf4       0x80 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+                0x00000cc8       0x80 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000d74       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+                0x00000d48       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
  .text.UART_Init
-                0x00000dbc        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
-                0x00000dbc                UART_Init
+                0x00000d90        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                0x00000d90                UART_Init
  .text.UART_Enable
-                0x00000dc8       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
-                0x00000dc8                UART_Enable
+                0x00000d9c       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                0x00000d9c                UART_Enable
  .text.UART_Start
-                0x00000dec       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
-                0x00000dec                UART_Start
+                0x00000dc0       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                0x00000dc0                UART_Start
  .text.UART_ScbEnableIntr
-                0x00000e10        0x8 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                0x00000de4        0x8 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
  .text.UART_ScbModePostEnable
-                0x00000e18        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                0x00000dec        0xc .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
  .text.UART_SpiUartWriteTxData
-                0x00000e24       0x2c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
-                0x00000e24                UART_SpiUartWriteTxData
+                0x00000df8       0x2c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
+                0x00000df8                UART_SpiUartWriteTxData
  .text.UART_UartInit
-                0x00000e50       0xb0 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
-                0x00000e50                UART_UartInit
+                0x00000e24       0xb0 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
+                0x00000e24                UART_UartInit
  .text.UART_UartPostEnable
-                0x00000f00       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
-                0x00000f00                UART_UartPostEnable
+                0x00000ed4       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
+                0x00000ed4                UART_UartPostEnable
  .text.ADC_Start
-                0x00000f24       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x00000f24                ADC_Start
+                0x00000ef8       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x00000ef8                ADC_Start
  .text.ADC_Init
-                0x00000f48      0x20c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x00000f48                ADC_Init
+                0x00000f1c      0x20c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x00000f1c                ADC_Init
  .text.ADC_Enable
-                0x00001154       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x00001154                ADC_Enable
+                0x00001128       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x00001128                ADC_Enable
  .text.ADC_StartConvert
-                0x0000118c       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x0000118c                ADC_StartConvert
+                0x00001160       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x00001160                ADC_StartConvert
  .text.ADC_StopConvert
-                0x000011a8       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x000011a8                ADC_StopConvert
+                0x0000117c       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x0000117c                ADC_StopConvert
  .text.ADC_GetResult16
-                0x000011c4       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                0x000011c4                ADC_GetResult16
- .text.ADC_ISR  0x00001208       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
-                0x00001208                ADC_ISR
+                0x00001198       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                0x00001198                ADC_GetResult16
+ .text.ADC_ISR  0x000011dc       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
+                0x000011dc                ADC_ISR
  .text.ADC_ISR_StartEx
-                0x00001224       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                0x00001224                ADC_ISR_StartEx
+                0x000011f8       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                0x000011f8                ADC_ISR_StartEx
  .text.ADC_ISR_SetVector
-                0x00001248       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                0x00001248                ADC_ISR_SetVector
+                0x0000121c       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                0x0000121c                ADC_ISR_SetVector
  .text.ADC_ISR_SetPriority
-                0x00001260       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                0x00001260                ADC_ISR_SetPriority
+                0x00001234       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                0x00001234                ADC_ISR_SetPriority
  .text.ADC_ISR_Enable
-                0x000012b0       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                0x000012b0                ADC_ISR_Enable
+                0x00001284       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                0x00001284                ADC_ISR_Enable
  .text.ADC_ISR_Disable
-                0x000012c4       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                0x000012c4                ADC_ISR_Disable
+                0x00001298       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                0x00001298                ADC_ISR_Disable
  .text.ADC_IRQ_Enable
-                0x000012d8       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
-                0x000012d8                ADC_IRQ_Enable
- *fill*         0x000012ec        0x4 
- .text          0x000012f0       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
-                0x000012f0                CyDelayCycles
-                0x00001302                CyEnterCriticalSection
-                0x0000130a                CyExitCriticalSection
+                0x000012ac       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
+                0x000012ac                ADC_IRQ_Enable
+ .text          0x000012c0       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
+                0x000012c0                CyDelayCycles
+                0x000012d2                CyEnterCriticalSection
+                0x000012da                CyExitCriticalSection
  .text.CySysClkWriteImoFreq
-                0x00001310       0x98 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x00001310                CySysClkWriteImoFreq
+                0x000012e0       0x98 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x000012e0                CySysClkWriteImoFreq
  .text.CySysClkEcoStart
-                0x000013a8       0x74 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x000013a8                CySysClkEcoStart
+                0x00001378       0x74 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x00001378                CySysClkEcoStart
  .text.CySysClkEcoReadStatus
-                0x0000141c       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x0000141c                CySysClkEcoReadStatus
+                0x000013ec       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x000013ec                CySysClkEcoReadStatus
  .text.CyIntSetVector
-                0x0000143c       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x0000143c                CyIntSetVector
+                0x0000140c       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x0000140c                CyIntSetVector
  .text.CyIntSetPriority
-                0x00001488       0xa8 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x00001488                CyIntSetPriority
- .text.CyHalt   0x00001530       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x00001530                CyHalt
+                0x00001458       0xa8 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x00001458                CyIntSetPriority
+ .text.CyHalt   0x00001500       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x00001500                CyHalt
  .text.CyDelayUs
-                0x00001544       0x28 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x00001544                CyDelayUs
+                0x00001514       0x28 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x00001514                CyDelayUs
  .text.CySysPmSleep
-                0x0000156c       0x34 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
-                0x0000156c                CySysPmSleep
+                0x0000153c       0x34 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+                0x0000153c                CySysPmSleep
  .text.CySysClkWcoSetHighPowerMode
-                0x000015a0       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                0x00001570       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
  .text.CySysClkWcoSetLowPowerMode
-                0x000015e8       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                0x000015b8       0x48 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
  .text.CySysClkWcoStart
-                0x00001630       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
-                0x00001630                CySysClkWcoStart
+                0x00001600       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                0x00001600                CySysClkWcoStart
  .text.CySysClkWcoSetPowerMode
-                0x00001650       0x40 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
-                0x00001650                CySysClkWcoSetPowerMode
+                0x00001620       0x40 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                0x00001620                CySysClkWcoSetPowerMode
  .text.Pin_SW2_ClearInterrupt
-                0x00001690       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
-                0x00001690                Pin_SW2_ClearInterrupt
+                0x00001660       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+                0x00001660                Pin_SW2_ClearInterrupt
  .text.pin_SW2_int_StartEx
-                0x000016c0       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                0x000016c0                pin_SW2_int_StartEx
+                0x00001690       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                0x00001690                pin_SW2_int_StartEx
  .text.pin_SW2_int_SetVector
-                0x000016e4       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                0x000016e4                pin_SW2_int_SetVector
+                0x000016b4       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                0x000016b4                pin_SW2_int_SetVector
  .text.pin_SW2_int_SetPriority
-                0x000016fc       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                0x000016fc                pin_SW2_int_SetPriority
+                0x000016cc       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                0x000016cc                pin_SW2_int_SetPriority
  .text.pin_SW2_int_Enable
-                0x0000174c       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                0x0000174c                pin_SW2_int_Enable
+                0x0000171c       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                0x0000171c                pin_SW2_int_Enable
  .text.pin_SW2_int_Disable
-                0x00001760       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
-                0x00001760                pin_SW2_int_Disable
+                0x00001730       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                0x00001730                pin_SW2_int_Disable
  .text.Pin_Green_Write
-                0x00001774       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
-                0x00001774                Pin_Green_Write
+                0x00001744       0x4c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+                0x00001744                Pin_Green_Write
  .text.Pin_Green_Read
-                0x000017c0       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
-                0x000017c0                Pin_Green_Read
+                0x00001790       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+                0x00001790                Pin_Green_Read
  .text.Control_Reg_1_Write
-                0x000017dc       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
-                0x000017dc                Control_Reg_1_Write
+                0x000017ac       0x20 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+                0x000017ac                Control_Reg_1_Write
  .text.Timer_1_Init
-                0x000017fc       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x000017fc                Timer_1_Init
+                0x000017cc       0x38 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x000017cc                Timer_1_Init
  .text.Timer_1_Enable
-                0x00001834       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x00001834                Timer_1_Enable
+                0x00001804       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x00001804                Timer_1_Enable
  .text.Timer_1_Start
-                0x00001864       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x00001864                Timer_1_Start
+                0x00001834       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x00001834                Timer_1_Start
  .text.Timer_1_WriteCounter
-                0x00001888       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x00001888                Timer_1_WriteCounter
+                0x00001858       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x00001858                Timer_1_WriteCounter
  .text.Timer_1_WritePeriod
-                0x000018a4       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x000018a4                Timer_1_WritePeriod
+                0x00001874       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x00001874                Timer_1_WritePeriod
  .text.Timer_1_ReadCapture
-                0x000018c0       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x000018c0                Timer_1_ReadCapture
+                0x00001890       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x00001890                Timer_1_ReadCapture
  .text.Timer_1_SetInterruptMode
-                0x000018d8       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                0x000018d8                Timer_1_SetInterruptMode
+                0x000018a8       0x18 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                0x000018a8                Timer_1_SetInterruptMode
  .text.Timer_ISR_StartEx
-                0x000018f0       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                0x000018f0                Timer_ISR_StartEx
+                0x000018c0       0x24 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                0x000018c0                Timer_ISR_StartEx
  .text.Timer_ISR_SetVector
-                0x00001914       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                0x00001914                Timer_ISR_SetVector
+                0x000018e4       0x1c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                0x000018e4                Timer_ISR_SetVector
  .text.Timer_ISR_SetPriority
-                0x00001930       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                0x00001930                Timer_ISR_SetPriority
+                0x00001900       0x50 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                0x00001900                Timer_ISR_SetPriority
  .text.Timer_ISR_Enable
-                0x00001980       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                0x00001980                Timer_ISR_Enable
+                0x00001950       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                0x00001950                Timer_ISR_Enable
  .text.Timer_ISR_Disable
-                0x00001994       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                0x00001994                Timer_ISR_Disable
- .text          0x000019a8      0x120 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
-                0x000019a8                __aeabi_uidiv
-                0x000019a8                __udivsi3
-                0x00001ab4                __aeabi_uidivmod
- .text          0x00001ac8      0x1e0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
-                0x00001ac8                __divsi3
-                0x00001ac8                __aeabi_idiv
-                0x00001c94                __aeabi_idivmod
- .text          0x00001ca8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x00001ca8                __aeabi_idiv0
-                0x00001ca8                __aeabi_ldiv0
- .text          0x00001cac       0x7c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
-                0x00001cac                __aeabi_cdrcmple
-                0x00001cbc                __aeabi_cdcmple
-                0x00001cbc                __aeabi_cdcmpeq
-                0x00001ccc                __aeabi_dcmpeq
-                0x00001cd8                __aeabi_dcmplt
-                0x00001cec                __aeabi_dcmple
-                0x00001d00                __aeabi_dcmpgt
-                0x00001d14                __aeabi_dcmpge
- .text          0x00001d28      0x650 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
-                0x00001d28                __aeabi_dadd
- .text          0x00002378      0x648 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(divdf3.o)
-                0x00002378                __aeabi_ddiv
- .text          0x000029c0       0x88 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
-                0x000029c0                __nedf2
-                0x000029c0                __eqdf2
- .text          0x00002a48       0xe0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
-                0x00002a48                __gedf2
-                0x00002a48                __gtdf2
- .text          0x00002b28       0xcc c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
-                0x00002b28                __ledf2
-                0x00002b28                __ltdf2
- .text          0x00002bf4      0x534 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
-                0x00002bf4                __aeabi_dmul
- .text          0x00003128      0x6f4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
-                0x00003128                __aeabi_dsub
- .text          0x0000381c       0x6c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(fixdfsi.o)
-                0x0000381c                __aeabi_d2iz
- .text          0x00003888       0x78 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
-                0x00003888                __aeabi_i2d
- .text          0x00003900       0x3c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
-                0x00003900                __clzsi2
+                0x00001964       0x14 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                0x00001964                Timer_ISR_Disable
+ .text          0x00001978      0x120 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x00001978                __aeabi_uidiv
+                0x00001978                __udivsi3
+                0x00001a84                __aeabi_uidivmod
+ .text          0x00001a98      0x1e0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_divsi3.o)
+                0x00001a98                __divsi3
+                0x00001a98                __aeabi_idiv
+                0x00001c64                __aeabi_idivmod
+ .text          0x00001c78        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00001c78                __aeabi_idiv0
+                0x00001c78                __aeabi_ldiv0
+ .text          0x00001c7c       0x7c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
+                0x00001c7c                __aeabi_cdrcmple
+                0x00001c8c                __aeabi_cdcmple
+                0x00001c8c                __aeabi_cdcmpeq
+                0x00001c9c                __aeabi_dcmpeq
+                0x00001ca8                __aeabi_dcmplt
+                0x00001cbc                __aeabi_dcmple
+                0x00001cd0                __aeabi_dcmpgt
+                0x00001ce4                __aeabi_dcmpge
+ .text          0x00001cf8      0x650 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(adddf3.o)
+                0x00001cf8                __aeabi_dadd
+ .text          0x00002348      0x648 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(divdf3.o)
+                0x00002348                __aeabi_ddiv
+ .text          0x00002990       0x88 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(eqdf2.o)
+                0x00002990                __nedf2
+                0x00002990                __eqdf2
+ .text          0x00002a18       0xe0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(gedf2.o)
+                0x00002a18                __gedf2
+                0x00002a18                __gtdf2
+ .text          0x00002af8       0xcc c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(ledf2.o)
+                0x00002af8                __ledf2
+                0x00002af8                __ltdf2
+ .text          0x00002bc4      0x534 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+                0x00002bc4                __aeabi_dmul
+ .text          0x000030f8      0x6f4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(subdf3.o)
+                0x000030f8                __aeabi_dsub
+ .text          0x000037ec       0x6c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(fixdfsi.o)
+                0x000037ec                __aeabi_d2iz
+ .text          0x00003858       0x78 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(floatsidf.o)
+                0x00003858                __aeabi_i2d
+ .text          0x000038d0       0x3c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x000038d0                __clzsi2
  .text.__libc_init_array
-                0x0000393c       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
-                0x0000393c                __libc_init_array
- .text.memset   0x00003988       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
-                0x00003988                memset
+                0x0000390c       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x0000390c                __libc_init_array
+ .text.memset   0x00003958       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x00003958                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1028,83 +1027,83 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00003998        0x0
+.v4_bx          0x00003968        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00003998        0x0
+.iplt           0x00003968        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00003998        0x4
+.eh_frame       0x00003968        0x4
  *(.eh_frame)
- .eh_frame      0x00003998        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .eh_frame      0x00003998        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
-                0x0000399c                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00003968        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .eh_frame      0x00003968        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtend.o
+                0x0000396c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000399c                __exidx_end = .
+                0x0000396c                __exidx_end = .
 
-.rodata         0x0000399c      0x13c
+.rodata         0x0000396c      0x13c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000399c       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
- .rodata        0x000039e0       0x10 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
- .rodata        0x000039f0       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                0x000039f0                cyImoFreqMhz2Reg
- .rodata        0x00003a20       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(divdf3.o)
- .rodata        0x00003a60       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
-                0x00003aa0                . = ALIGN (0x4)
+ .rodata        0x0000396c       0x44 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+ .rodata        0x000039b0       0x10 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+ .rodata        0x000039c0       0x30 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                0x000039c0                cyImoFreqMhz2Reg
+ .rodata        0x000039f0       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(divdf3.o)
+ .rodata        0x00003a30       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m\libgcc.a(muldf3.o)
+                0x00003a70                . = ALIGN (0x4)
  *(.init)
- .init          0x00003aa0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00003aa0                _init
- .init          0x00003aa4        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00003aac                . = ALIGN (0x4)
-                0x00003aac                __preinit_array_start = .
+ .init          0x00003a70        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00003a70                _init
+ .init          0x00003a74        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00003a7c                . = ALIGN (0x4)
+                0x00003a7c                __preinit_array_start = .
  *(.preinit_array)
-                0x00003aac                __preinit_array_end = .
-                0x00003aac                . = ALIGN (0x4)
-                0x00003aac                __init_array_start = .
+                0x00003a7c                __preinit_array_end = .
+                0x00003a7c                . = ALIGN (0x4)
+                0x00003a7c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00003aac        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
- .init_array    0x00003ab0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                0x00003ab4                __init_array_end = .
-                0x00003ab4                . = ALIGN (0x4)
+ .init_array    0x00003a7c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .init_array    0x00003a80        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                0x00003a84                __init_array_end = .
+                0x00003a84                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00003ab4        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00003ab4                _fini
- .fini          0x00003ab8        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00003ac0                . = ALIGN (0x4)
-                0x00003ac0                __fini_array_start = .
+ .fini          0x00003a84        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00003a84                _fini
+ .fini          0x00003a88        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00003a90                . = ALIGN (0x4)
+                0x00003a90                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00003ac0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+ .fini_array    0x00003a90        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00003ac4                __fini_array_end = .
-                0x00003ac4                . = ALIGN (0x4)
+                0x00003a94                __fini_array_end = .
+                0x00003a94                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00003ac4                . = ALIGN (0x4)
+                0x00003a94                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00003ac4                . = ALIGN (0x4)
-                0x00003ac4                __cy_regions = .
-                0x00003ac4        0x4 LONG 0x3ad8 __cy_region_init_ram
-                0x00003ac8        0x4 LONG 0x200000c8 __cy_region_start_data
-                0x00003acc        0x4 LONG 0xf0 __cy_region_init_size_ram
-                0x00003ad0        0x4 LONG 0x150 __cy_region_zero_size_ram
-                0x00003ad4                __cy_regions_end = .
-                0x00003ad8                . = ALIGN (0x8)
- *fill*         0x00003ad4        0x4 
-                0x00003ad8                _etext = .
+                0x00003a94                . = ALIGN (0x4)
+                0x00003a94                __cy_regions = .
+                0x00003a94        0x4 LONG 0x3aa8 __cy_region_init_ram
+                0x00003a98        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x00003a9c        0x4 LONG 0xf0 __cy_region_init_size_ram
+                0x00003aa0        0x4 LONG 0x150 __cy_region_zero_size_ram
+                0x00003aa4                __cy_regions_end = .
+                0x00003aa8                . = ALIGN (0x8)
+ *fill*         0x00003aa4        0x4 
+                0x00003aa8                _etext = .
 
 .cy_checksum_exclude
-                0x00003ad8        0x0
+                0x00003aa8        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x20000000       0xc0
@@ -1117,7 +1116,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
 
-.data           0x200000c8       0xf0 load address 0x00003ad8
+.data           0x200000c8       0xf0 load address 0x00003aa8
                 0x200000c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000c8        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
@@ -1142,10 +1141,10 @@ END GROUP
  *(.ram)
                 0x200001b8                _edata = .
 
-.igot.plt       0x200001b8        0x0 load address 0x00003bc8
+.igot.plt       0x200001b8        0x0 load address 0x00003b98
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.bss            0x200001b8      0x150 load address 0x00003bc8
+.bss            0x200001b8      0x150 load address 0x00003b98
                 0x200001b8                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1198,11 +1197,11 @@ END GROUP
                 0x20000308                __end = .
                 0x20000308                PROVIDE (end, .)
                 0x20000308                PROVIDE (__bss_end__, .)
-                0x00003ad8                __cy_region_init_ram = LOADADDR (.data)
+                0x00003aa8                __cy_region_init_ram = LOADADDR (.data)
                 0x000000f0                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000150                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x20000308      0x100 load address 0x00003bc8
+.heap           0x20000308      0x100 load address 0x00003b98
                 0x20000308                . = _end
                 0x20000408                . = (. + 0x100)
  *fill*         0x20000308      0x100 
@@ -1242,7 +1241,7 @@ END GROUP
                 0x90600000        0x4 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
                 0x90600000                cy_meta_chipprotect
 
-.rel.dyn        0x00003bc8        0x0 load address 0x90600004
+.rel.dyn        0x00003b98        0x0 load address 0x90600004
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
 .stab
@@ -1311,7 +1310,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x403a
+.debug_info     0x00000000     0x401f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x473 .\CortexM0\ARM_GCC_493\Debug\main.o
  .debug_info    0x00000473       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -1324,16 +1323,16 @@ END GROUP
  .debug_info    0x000016da       0xc5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
  .debug_info    0x0000179f      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
  .debug_info    0x000019e5      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
- .debug_info    0x00001c2b       0xa1 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
- .debug_info    0x00001ccc      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
- .debug_info    0x00002651      0x211 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
- .debug_info    0x00002862      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
- .debug_info    0x000030af      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
- .debug_info    0x00003249      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
- .debug_info    0x0000348f      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
- .debug_info    0x00003629       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
- .debug_info    0x00003700      0x6f4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
- .debug_info    0x00003df4      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+ .debug_info    0x00001c2b       0x86 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
+ .debug_info    0x00001cb1      0x985 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+ .debug_info    0x00002636      0x211 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+ .debug_info    0x00002847      0x84d .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+ .debug_info    0x00003094      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+ .debug_info    0x0000322e      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+ .debug_info    0x00003474      0x19a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+ .debug_info    0x0000360e       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+ .debug_info    0x000036e5      0x6f4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+ .debug_info    0x00003dd9      0x246 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
 
 .debug_abbrev   0x00000000     0x169e
  *(.debug_abbrev)
@@ -1359,29 +1358,29 @@ END GROUP
  .debug_abbrev  0x00001438       0xfc .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
  .debug_abbrev  0x00001534      0x16a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
 
-.debug_line     0x00000000     0x2468
+.debug_line     0x00000000     0x2469
  *(.debug_line)
- .debug_line    0x00000000      0x24a .\CortexM0\ARM_GCC_493\Debug\main.o
- .debug_line    0x0000024a       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x0000029d      0x1ca .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
- .debug_line    0x00000467      0x1b0 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
- .debug_line    0x00000617      0x11e .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
- .debug_line    0x00000735      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
- .debug_line    0x00000871      0x1a5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
- .debug_line    0x00000a16      0x2a4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
- .debug_line    0x00000cba       0x64 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
- .debug_line    0x00000d1e      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
- .debug_line    0x00000e8d      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
- .debug_line    0x00000ffc       0x68 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
- .debug_line    0x00001064      0x4af .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
- .debug_line    0x00001513      0x159 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
- .debug_line    0x0000166c      0x5ad .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
- .debug_line    0x00001c19       0xc1 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
- .debug_line    0x00001cda      0x173 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
- .debug_line    0x00001e4d       0xc3 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
- .debug_line    0x00001f10       0x78 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
- .debug_line    0x00001f88      0x36f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
- .debug_line    0x000022f7      0x171 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+ .debug_line    0x00000000      0x24b .\CortexM0\ARM_GCC_493\Debug\main.o
+ .debug_line    0x0000024b       0x53 .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x0000029e      0x1ca .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+ .debug_line    0x00000468      0x1b0 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+ .debug_line    0x00000618      0x11e .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+ .debug_line    0x00000736      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
+ .debug_line    0x00000872      0x1a5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
+ .debug_line    0x00000a17      0x2a4 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+ .debug_line    0x00000cbb       0x64 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
+ .debug_line    0x00000d1f      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+ .debug_line    0x00000e8e      0x16f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
+ .debug_line    0x00000ffd       0x68 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyBootAsmGnu.o)
+ .debug_line    0x00001065      0x4af .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+ .debug_line    0x00001514      0x159 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+ .debug_line    0x0000166d      0x5ad .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+ .debug_line    0x00001c1a       0xc1 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+ .debug_line    0x00001cdb      0x173 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+ .debug_line    0x00001e4e       0xc3 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+ .debug_line    0x00001f11       0x78 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+ .debug_line    0x00001f89      0x36f .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+ .debug_line    0x000022f8      0x171 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
 
 .debug_frame    0x00000000     0x27cc
  *(.debug_frame)
@@ -1428,48 +1427,48 @@ END GROUP
  .debug_frame   0x00002784       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x000027ac       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x20a0
+.debug_str      0x00000000     0x2085
  *(.debug_str)
- .debug_str     0x00000000      0x2ec .\CortexM0\ARM_GCC_493\Debug\main.o
-                                0x330 (size before relaxing)
- .debug_str     0x000002ec       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
-                                0x1df (size before relaxing)
- .debug_str     0x00000347      0x12e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                                0x2d3 (size before relaxing)
- .debug_str     0x00000475       0xfd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
-                                0x2c5 (size before relaxing)
- .debug_str     0x00000572       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
-                                0x268 (size before relaxing)
- .debug_str     0x00000649      0x137 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
-                                0x2d3 (size before relaxing)
- .debug_str     0x00000780      0x191 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
-                                0x331 (size before relaxing)
- .debug_str     0x00000911      0x1e5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
-                                0x3ac (size before relaxing)
- .debug_str     0x00000af6       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
-                                0x1c2 (size before relaxing)
- .debug_str     0x00000b2d      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
-                                0x2de (size before relaxing)
- .debug_str     0x00000c58      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
-                                0x2de (size before relaxing)
- .debug_str     0x00000d5c      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
-                                0x6be (size before relaxing)
- .debug_str     0x00001239       0xdd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
-                                0x294 (size before relaxing)
- .debug_str     0x00001316      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
-                                0x6f1 (size before relaxing)
- .debug_str     0x00001850       0xbb .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
-                                0x255 (size before relaxing)
- .debug_str     0x0000190b      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+ .debug_str     0x00000000      0x2d1 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x315 (size before relaxing)
+ .debug_str     0x000002d1       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1c4 (size before relaxing)
+ .debug_str     0x0000032c      0x12e .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x2b8 (size before relaxing)
+ .debug_str     0x0000045a       0xfd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyfitter_cfg.o)
+                                0x2aa (size before relaxing)
+ .debug_str     0x00000557       0xd7 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART.o)
+                                0x24d (size before relaxing)
+ .debug_str     0x0000062e      0x137 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_SPI_UART.o)
+                                0x2b8 (size before relaxing)
+ .debug_str     0x00000765      0x191 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(UART_UART.o)
                                 0x316 (size before relaxing)
- .debug_str     0x00001a47       0xa5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
-                                0x263 (size before relaxing)
- .debug_str     0x00001aec       0x58 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
-                                0x1d8 (size before relaxing)
- .debug_str     0x00001b44      0x43c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
-                                0x5dd (size before relaxing)
- .debug_str     0x00001f80      0x120 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
-                                0x2fa (size before relaxing)
+ .debug_str     0x000008f6      0x1e5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC.o)
+                                0x391 (size before relaxing)
+ .debug_str     0x00000adb       0x37 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_INT.o)
+                                0x1a7 (size before relaxing)
+ .debug_str     0x00000b12      0x12b .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_ISR.o)
+                                0x2c3 (size before relaxing)
+ .debug_str     0x00000c3d      0x104 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(ADC_IRQ.o)
+                                0x2c3 (size before relaxing)
+ .debug_str     0x00000d41      0x4dd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLib.o)
+                                0x6a3 (size before relaxing)
+ .debug_str     0x0000121e       0xdd .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(cyPm.o)
+                                0x279 (size before relaxing)
+ .debug_str     0x000012fb      0x53a .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(CyLFClk.o)
+                                0x6d6 (size before relaxing)
+ .debug_str     0x00001835       0xbb .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_SW2.o)
+                                0x23a (size before relaxing)
+ .debug_str     0x000018f0      0x13c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(pin_SW2_int.o)
+                                0x2fb (size before relaxing)
+ .debug_str     0x00001a2c       0xa5 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Pin_Green.o)
+                                0x248 (size before relaxing)
+ .debug_str     0x00001ad1       0x58 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Control_Reg_1.o)
+                                0x1bd (size before relaxing)
+ .debug_str     0x00001b29      0x43c .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_1.o)
+                                0x5c2 (size before relaxing)
+ .debug_str     0x00001f65      0x120 .\CortexM0\ARM_GCC_493\Debug\ADC_filtre_samlet_grader.a(Timer_ISR.o)
+                                0x2df (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

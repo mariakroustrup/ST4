@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
   26:.\Generated_Source\PSoC4/Timer_1_PM.c **** ********************************************************************************
   27:.\Generated_Source\PSoC4/Timer_1_PM.c **** *
   28:.\Generated_Source\PSoC4/Timer_1_PM.c **** * Summary:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 2
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 2
 
 
   29:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  All configuration registers are retention. Nothing to save here.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
   53              		.loc 1 59 0
   54              		.cfi_startproc
   55 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 3
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 3
 
 
   56              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
   98              		.thumb_func
   99              		.type	Timer_1_RestoreConfig, %function
  100              	Timer_1_RestoreConfig:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 4
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 4
 
 
  101              	.LFB4:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  102:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  None
  103:.\Generated_Source\PSoC4/Timer_1_PM.c **** *
  104:.\Generated_Source\PSoC4/Timer_1_PM.c **** * Return:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 5
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 5
 
 
  105:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  None
@@ -295,10 +295,10 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  164 000b 01       		.uleb128 0x1
  165 000c 8D000000 		.4byte	.LASF21
  166 0010 01       		.byte	0x1
- 167 0011 49010000 		.4byte	.LASF22
- 168 0015 BE010000 		.4byte	.LASF23
+ 167 0011 75010000 		.4byte	.LASF22
+ 168 0015 38010000 		.4byte	.LASF23
  169 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 6
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 6
 
 
  170 001d 00000000 		.4byte	0
@@ -306,19 +306,19 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  172 0025 02       		.uleb128 0x2
  173 0026 01       		.byte	0x1
  174 0027 06       		.byte	0x6
- 175 0028 88010000 		.4byte	.LASF0
+ 175 0028 B4010000 		.4byte	.LASF0
  176 002c 02       		.uleb128 0x2
  177 002d 01       		.byte	0x1
  178 002e 08       		.byte	0x8
- 179 002f 94010000 		.4byte	.LASF1
+ 179 002f C0010000 		.4byte	.LASF1
  180 0033 02       		.uleb128 0x2
  181 0034 02       		.byte	0x2
  182 0035 05       		.byte	0x5
- 183 0036 38010000 		.4byte	.LASF2
+ 183 0036 EA010000 		.4byte	.LASF2
  184 003a 02       		.uleb128 0x2
  185 003b 02       		.byte	0x2
  186 003c 07       		.byte	0x7
- 187 003d 75010000 		.4byte	.LASF3
+ 187 003d A1010000 		.4byte	.LASF3
  188 0041 02       		.uleb128 0x2
  189 0042 04       		.byte	0x4
  190 0043 05       		.byte	0x5
@@ -356,20 +356,20 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  222 0083 02       		.uleb128 0x2
  223 0084 04       		.byte	0x4
  224 0085 04       		.byte	0x4
- 225 0086 A2010000 		.4byte	.LASF11
+ 225 0086 CE010000 		.4byte	.LASF11
  226 008a 02       		.uleb128 0x2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 7
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 7
 
 
  227 008b 08       		.byte	0x8
  228 008c 04       		.byte	0x4
- 229 008d 42010000 		.4byte	.LASF12
+ 229 008d 6E010000 		.4byte	.LASF12
  230 0091 02       		.uleb128 0x2
  231 0092 01       		.byte	0x1
  232 0093 08       		.byte	0x8
  233 0094 2A010000 		.4byte	.LASF13
  234 0098 04       		.uleb128 0x4
- 235 0099 6F010000 		.4byte	.LASF14
+ 235 0099 9B010000 		.4byte	.LASF14
  236 009d 02       		.byte	0x2
  237 009e E401     		.2byte	0x1e4
  238 00a0 A4000000 		.4byte	0xa4
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  241 00a9 02       		.uleb128 0x2
  242 00aa 04       		.byte	0x4
  243 00ab 07       		.byte	0x7
- 244 00ac 25020000 		.4byte	.LASF15
+ 244 00ac 0A020000 		.4byte	.LASF15
  245 00b0 06       		.uleb128 0x6
  246 00b1 01       		.byte	0x1
  247 00b2 03       		.byte	0x3
@@ -392,7 +392,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  255 00c3 00       		.byte	0
  256 00c4 00       		.byte	0
  257 00c5 08       		.uleb128 0x8
- 258 00c6 0F020000 		.4byte	.LASF16
+ 258 00c6 F4010000 		.4byte	.LASF16
  259 00ca 03       		.byte	0x3
  260 00cb 24       		.byte	0x24
  261 00cc B0000000 		.4byte	0xb0
@@ -413,12 +413,12 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  276 00f0 01       		.uleb128 0x1
  277 00f1 9C       		.byte	0x9c
  278 00f2 09       		.uleb128 0x9
- 279 00f3 A8010000 		.4byte	.LASF19
+ 279 00f3 D4010000 		.4byte	.LASF19
  280 00f7 01       		.byte	0x1
  281 00f8 58       		.byte	0x58
  282 00f9 00000000 		.4byte	.LFB4
  283 00fd 08000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 8
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 8
 
 
  284 0101 01       		.uleb128 0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  338 0021 0B       		.uleb128 0xb
  339 0022 0B       		.uleb128 0xb
  340 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 9
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 9
 
 
  341 0024 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  395 005a 16       		.uleb128 0x16
  396 005b 00       		.byte	0
  397 005c 03       		.uleb128 0x3
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 10
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 10
 
 
  398 005d 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  452 0095 00       		.byte	0
  453 0096 0B       		.uleb128 0xb
  454 0097 34       		.uleb128 0x34
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 11
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 11
 
 
  455 0098 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  503      6720696E 
  503      7400
  504              	.LASF10:
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 12
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 12
 
 
  505 000e 75696E74 		.ascii	"uint32\000"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  525      66756E63 
  525      74696F6E 
  525      2D736563 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 13
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 13
 
 
  525      74696F6E 
@@ -734,68 +734,65 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 1
  531 012f 6C6F6E67 		.ascii	"long int\000"
  531      20696E74 
  531      00
- 532              	.LASF2:
- 533 0138 73686F72 		.ascii	"short int\000"
- 533      7420696E 
- 533      7400
- 534              	.LASF12:
- 535 0142 646F7562 		.ascii	"double\000"
- 535      6C6500
- 536              	.LASF22:
- 537 0149 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_1_PM.c\000"
- 537      6E657261 
- 537      7465645F 
- 537      536F7572 
- 537      63655C50 
- 538              	.LASF14:
- 539 016f 72656733 		.ascii	"reg32\000"
- 539      3200
- 540              	.LASF3:
- 541 0175 73686F72 		.ascii	"short unsigned int\000"
- 541      7420756E 
- 541      7369676E 
- 541      65642069 
- 541      6E7400
- 542              	.LASF0:
- 543 0188 7369676E 		.ascii	"signed char\000"
- 543      65642063 
- 543      68617200 
- 544              	.LASF1:
- 545 0194 756E7369 		.ascii	"unsigned char\000"
- 545      676E6564 
- 545      20636861 
- 545      7200
- 546              	.LASF11:
- 547 01a2 666C6F61 		.ascii	"float\000"
- 547      7400
- 548              	.LASF19:
- 549 01a8 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
- 549      725F315F 
- 549      52657374 
- 549      6F726543 
- 549      6F6E6669 
- 550              	.LASF23:
- 551 01be 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Documents\\GitHub\\ST4\\"
- 551      73657273 
- 551      5C4C696E 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\ccM2slgZ.s 			page 14
+ 532              	.LASF23:
+ 533 0138 433A5C55 		.ascii	"C:\\Users\\passw\\Desktop\\ADC_filtre_samlet_grader"
+ 533      73657273 
+ 533      5C706173 
+ 533      73775C44 
+ 533      65736B74 
+ 534 0167 2E637964 		.ascii	".cydsn\000"
+ 534      736E00
+ 535              	.LASF12:
+ 536 016e 646F7562 		.ascii	"double\000"
+ 536      6C6500
+ 537              	.LASF22:
+ 538 0175 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_1_PM.c\000"
+ 538      6E657261 
+ 538      7465645F 
+ 538      536F7572 
+ 538      63655C50 
+ 539              	.LASF14:
+ 540 019b 72656733 		.ascii	"reg32\000"
+ 540      3200
+ 541              	.LASF3:
+ 542 01a1 73686F72 		.ascii	"short unsigned int\000"
+ 542      7420756E 
+ 542      7369676E 
+ 542      65642069 
+ 542      6E7400
+ 543              	.LASF0:
+ 544 01b4 7369676E 		.ascii	"signed char\000"
+ 544      65642063 
+ 544      68617200 
+ 545              	.LASF1:
+ 546 01c0 756E7369 		.ascii	"unsigned char\000"
+ 546      676E6564 
+ 546      20636861 
+ 546      7200
+ 547              	.LASF11:
+ 548 01ce 666C6F61 		.ascii	"float\000"
+ 548      7400
+ 549              	.LASF19:
+ 550 01d4 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
+ 550      725F315F 
+ 550      52657374 
+ 550      6F726543 
+ 550      6F6E6669 
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccst4Unv.s 			page 14
 
 
- 551      65747465 
- 551      2048656C 
- 552 01eb 50536F43 		.ascii	"PSoC\\ADC_filtre_samlet_grader.cydsn\000"
- 552      5C414443 
- 552      5F66696C 
- 552      7472655F 
- 552      73616D6C 
+ 551              	.LASF2:
+ 552 01ea 73686F72 		.ascii	"short int\000"
+ 552      7420696E 
+ 552      7400
  553              	.LASF16:
- 554 020f 54696D65 		.ascii	"Timer_1_BACKUP_STRUCT\000"
+ 554 01f4 54696D65 		.ascii	"Timer_1_BACKUP_STRUCT\000"
  554      725F315F 
  554      4241434B 
  554      55505F53 
  554      54525543 
  555              	.LASF15:
- 556 0225 73697A65 		.ascii	"sizetype\000"
+ 556 020a 73697A65 		.ascii	"sizetype\000"
  556      74797065 
  556      00
  557              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

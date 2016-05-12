@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
   24:.\Generated_Source\PSoC4/EMG_PM.c **** * Function Name: EMG_Sleep
   25:.\Generated_Source\PSoC4/EMG_PM.c **** ****************************************************************************//**
   26:.\Generated_Source\PSoC4/EMG_PM.c **** *
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 2
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 2
 
 
   27:.\Generated_Source\PSoC4/EMG_PM.c **** * \brief Stores the pin configuration and prepares the pin for entering chip 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
   49              	.L2:
   50 0010 08030440 		.word	1074004744
   51 0014 00000000 		.word	EMG_backup
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 3
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 3
 
 
   52              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
   92:.\Generated_Source\PSoC4/EMG_PM.c ****     #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(EMG__SIO)
   93:.\Generated_Source\PSoC4/EMG_PM.c ****         EMG_SIO_REG = EMG_backup.sioState;
   94:.\Generated_Source\PSoC4/EMG_PM.c ****     #endif
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 4
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 4
 
 
   95:.\Generated_Source\PSoC4/EMG_PM.c **** }
@@ -205,48 +205,48 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
   96 0006 00000000 		.4byte	.Ldebug_abbrev0
   97 000a 04       		.byte	0x4
   98 000b 01       		.uleb128 0x1
-  99 000c 77000000 		.4byte	.LASF20
+  99 000c AD000000 		.4byte	.LASF20
  100 0010 01       		.byte	0x1
- 101 0011 30010000 		.4byte	.LASF21
- 102 0015 9F010000 		.4byte	.LASF22
+ 101 0011 66010000 		.4byte	.LASF21
+ 102 0015 77000000 		.4byte	.LASF22
  103 0019 00000000 		.4byte	.Ldebug_ranges0+0
  104 001d 00000000 		.4byte	0
  105 0021 00000000 		.4byte	.Ldebug_line0
  106 0025 02       		.uleb128 0x2
  107 0026 01       		.byte	0x1
  108 0027 06       		.byte	0x6
- 109 0028 93010000 		.4byte	.LASF0
+ 109 0028 C9010000 		.4byte	.LASF0
  110 002c 02       		.uleb128 0x2
  111 002d 01       		.byte	0x1
  112 002e 08       		.byte	0x8
- 113 002f 2B000000 		.4byte	.LASF1
+ 113 002f 32000000 		.4byte	.LASF1
  114 0033 02       		.uleb128 0x2
  115 0034 02       		.byte	0x2
  116 0035 05       		.byte	0x5
- 117 0036 78010000 		.4byte	.LASF2
+ 117 0036 AE010000 		.4byte	.LASF2
  118 003a 02       		.uleb128 0x2
  119 003b 02       		.byte	0x2
  120 003c 07       		.byte	0x7
- 121 003d 4B000000 		.4byte	.LASF3
+ 121 003d 52000000 		.4byte	.LASF3
  122 0041 02       		.uleb128 0x2
  123 0042 04       		.byte	0x4
  124 0043 05       		.byte	0x5
- 125 0044 8A010000 		.4byte	.LASF4
+ 125 0044 C0010000 		.4byte	.LASF4
  126 0048 02       		.uleb128 0x2
  127 0049 04       		.byte	0x4
  128 004a 07       		.byte	0x7
- 129 004b 39000000 		.4byte	.LASF5
+ 129 004b 40000000 		.4byte	.LASF5
  130 004f 02       		.uleb128 0x2
  131 0050 08       		.byte	0x8
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 5
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 5
 
 
  132 0051 05       		.byte	0x5
- 133 0052 65010000 		.4byte	.LASF6
+ 133 0052 9B010000 		.4byte	.LASF6
  134 0056 02       		.uleb128 0x2
  135 0057 08       		.byte	0x8
  136 0058 07       		.byte	0x7
- 137 0059 19010000 		.4byte	.LASF7
+ 137 0059 4F010000 		.4byte	.LASF7
  138 005d 03       		.uleb128 0x3
  139 005e 04       		.byte	0x4
  140 005f 05       		.byte	0x5
@@ -254,24 +254,24 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  142 0064 02       		.uleb128 0x2
  143 0065 04       		.byte	0x4
  144 0066 07       		.byte	0x7
- 145 0067 0C010000 		.4byte	.LASF8
+ 145 0067 42010000 		.4byte	.LASF8
  146 006b 04       		.uleb128 0x4
- 147 006c 05010000 		.4byte	.LASF12
+ 147 006c 3B010000 		.4byte	.LASF12
  148 0070 02       		.byte	0x2
  149 0071 3A01     		.2byte	0x13a
  150 0073 48000000 		.4byte	0x48
  151 0077 02       		.uleb128 0x2
  152 0078 04       		.byte	0x4
  153 0079 04       		.byte	0x4
- 154 007a 25000000 		.4byte	.LASF9
+ 154 007a 2C000000 		.4byte	.LASF9
  155 007e 02       		.uleb128 0x2
  156 007f 08       		.byte	0x8
  157 0080 04       		.byte	0x4
- 158 0081 70000000 		.4byte	.LASF10
+ 158 0081 1A000000 		.4byte	.LASF10
  159 0085 02       		.uleb128 0x2
  160 0086 01       		.byte	0x1
  161 0087 08       		.byte	0x8
- 162 0088 73010000 		.4byte	.LASF11
+ 162 0088 A9010000 		.4byte	.LASF11
  163 008c 04       		.uleb128 0x4
  164 008d 00000000 		.4byte	.LASF13
  165 0091 02       		.byte	0x2
@@ -285,20 +285,20 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  173 00a0 21       		.byte	0x21
  174 00a1 CA000000 		.4byte	0xca
  175 00a5 07       		.uleb128 0x7
- 176 00a6 82010000 		.4byte	.LASF14
+ 176 00a6 B8010000 		.4byte	.LASF14
  177 00aa 03       		.byte	0x3
  178 00ab 23       		.byte	0x23
  179 00ac 6B000000 		.4byte	0x6b
  180 00b0 00       		.byte	0
  181 00b1 07       		.uleb128 0x7
- 182 00b2 5C010000 		.4byte	.LASF15
+ 182 00b2 92010000 		.4byte	.LASF15
  183 00b6 03       		.byte	0x3
  184 00b7 24       		.byte	0x24
  185 00b8 6B000000 		.4byte	0x6b
  186 00bc 04       		.byte	0x4
  187 00bd 07       		.uleb128 0x7
  188 00be 06000000 		.4byte	.LASF16
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 6
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 6
 
 
  189 00c2 03       		.byte	0x3
@@ -307,12 +307,12 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  192 00c8 08       		.byte	0x8
  193 00c9 00       		.byte	0
  194 00ca 08       		.uleb128 0x8
- 195 00cb 5E000000 		.4byte	.LASF17
+ 195 00cb 65000000 		.4byte	.LASF17
  196 00cf 03       		.byte	0x3
  197 00d0 26       		.byte	0x26
  198 00d1 9D000000 		.4byte	0x9d
  199 00d5 09       		.uleb128 0x9
- 200 00d6 52010000 		.4byte	.LASF18
+ 200 00d6 88010000 		.4byte	.LASF18
  201 00da 01       		.byte	0x1
  202 00db 2C       		.byte	0x2c
  203 00dc 00000000 		.4byte	.LFB0
@@ -320,7 +320,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  205 00e4 01       		.uleb128 0x1
  206 00e5 9C       		.byte	0x9c
  207 00e6 09       		.uleb128 0x9
- 208 00e7 1A000000 		.4byte	.LASF19
+ 208 00e7 21000000 		.4byte	.LASF19
  209 00eb 01       		.byte	0x1
  210 00ec 50       		.byte	0x50
  211 00ed 00000000 		.4byte	.LFB1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  243 0011 00       		.byte	0
  244 0012 00       		.byte	0
  245 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 7
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 7
 
 
  246 0014 24       		.uleb128 0x24
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  300 004a 07       		.uleb128 0x7
  301 004b 0D       		.uleb128 0xd
  302 004c 00       		.byte	0
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 8
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 8
 
 
  303 004d 03       		.uleb128 0x3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  357 0084 0B       		.uleb128 0xb
  358 0085 3B       		.uleb128 0x3b
  359 0086 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 9
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 9
 
 
  360 0087 49       		.uleb128 0x49
@@ -528,121 +528,118 @@ ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 1
  397 000f 454D475F 		.ascii	"EMG_backup\000"
  397      6261636B 
  397      757000
- 398              	.LASF19:
- 399 001a 454D475F 		.ascii	"EMG_Wakeup\000"
- 399      57616B65 
- 399      757000
- 400              	.LASF9:
- 401 0025 666C6F61 		.ascii	"float\000"
- 401      7400
- 402              	.LASF1:
- 403 002b 756E7369 		.ascii	"unsigned char\000"
- 403      676E6564 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 10
+ 398              	.LASF10:
+ 399 001a 646F7562 		.ascii	"double\000"
+ 399      6C6500
+ 400              	.LASF19:
+ 401 0021 454D475F 		.ascii	"EMG_Wakeup\000"
+ 401      57616B65 
+ 401      757000
+ 402              	.LASF9:
+ 403 002c 666C6F61 		.ascii	"float\000"
+ 403      7400
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 10
 
 
- 403      20636861 
- 403      7200
- 404              	.LASF5:
- 405 0039 6C6F6E67 		.ascii	"long unsigned int\000"
- 405      20756E73 
- 405      69676E65 
- 405      6420696E 
- 405      7400
- 406              	.LASF3:
- 407 004b 73686F72 		.ascii	"short unsigned int\000"
- 407      7420756E 
- 407      7369676E 
- 407      65642069 
- 407      6E7400
- 408              	.LASF17:
- 409 005e 454D475F 		.ascii	"EMG_BACKUP_STRUCT\000"
- 409      4241434B 
- 409      55505F53 
- 409      54525543 
- 409      5400
- 410              	.LASF10:
- 411 0070 646F7562 		.ascii	"double\000"
- 411      6C6500
- 412              	.LASF20:
- 413 0077 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 413      4320342E 
- 413      392E3320 
- 413      32303135 
- 413      30333033 
- 414 00aa 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 414      20726576 
- 414      6973696F 
- 414      6E203232 
- 414      31323230 
- 415 00dd 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 415      66756E63 
- 415      74696F6E 
- 415      2D736563 
- 415      74696F6E 
- 416              	.LASF12:
- 417 0105 75696E74 		.ascii	"uint32\000"
- 417      333200
- 418              	.LASF8:
- 419 010c 756E7369 		.ascii	"unsigned int\000"
- 419      676E6564 
- 419      20696E74 
- 419      00
- 420              	.LASF7:
- 421 0119 6C6F6E67 		.ascii	"long long unsigned int\000"
- 421      206C6F6E 
- 421      6720756E 
- 421      7369676E 
- 421      65642069 
- 422              	.LASF21:
- 423 0130 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\EMG_PM.c\000"
- 423      6E657261 
- 423      7465645F 
-ARM GAS  C:\Users\LINETT~1\AppData\Local\Temp\cc2MA3fN.s 			page 11
+ 404              	.LASF1:
+ 405 0032 756E7369 		.ascii	"unsigned char\000"
+ 405      676E6564 
+ 405      20636861 
+ 405      7200
+ 406              	.LASF5:
+ 407 0040 6C6F6E67 		.ascii	"long unsigned int\000"
+ 407      20756E73 
+ 407      69676E65 
+ 407      6420696E 
+ 407      7400
+ 408              	.LASF3:
+ 409 0052 73686F72 		.ascii	"short unsigned int\000"
+ 409      7420756E 
+ 409      7369676E 
+ 409      65642069 
+ 409      6E7400
+ 410              	.LASF17:
+ 411 0065 454D475F 		.ascii	"EMG_BACKUP_STRUCT\000"
+ 411      4241434B 
+ 411      55505F53 
+ 411      54525543 
+ 411      5400
+ 412              	.LASF22:
+ 413 0077 433A5C55 		.ascii	"C:\\Users\\passw\\Desktop\\ADC_filtre_samlet_grader"
+ 413      73657273 
+ 413      5C706173 
+ 413      73775C44 
+ 413      65736B74 
+ 414 00a6 2E637964 		.ascii	".cydsn\000"
+ 414      736E00
+ 415              	.LASF20:
+ 416 00ad 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 416      4320342E 
+ 416      392E3320 
+ 416      32303135 
+ 416      30333033 
+ 417 00e0 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 417      20726576 
+ 417      6973696F 
+ 417      6E203232 
+ 417      31323230 
+ 418 0113 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 418      66756E63 
+ 418      74696F6E 
+ 418      2D736563 
+ 418      74696F6E 
+ 419              	.LASF12:
+ 420 013b 75696E74 		.ascii	"uint32\000"
+ 420      333200
+ 421              	.LASF8:
+ 422 0142 756E7369 		.ascii	"unsigned int\000"
+ 422      676E6564 
+ 422      20696E74 
+ 422      00
+ 423              	.LASF7:
+ 424 014f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\passw\AppData\Local\Temp\ccpqLmkc.s 			page 11
 
 
- 423      536F7572 
- 423      63655C50 
- 424              	.LASF18:
- 425 0152 454D475F 		.ascii	"EMG_Sleep\000"
- 425      536C6565 
- 425      7000
- 426              	.LASF15:
- 427 015c 73696F53 		.ascii	"sioState\000"
- 427      74617465 
- 427      00
- 428              	.LASF6:
- 429 0165 6C6F6E67 		.ascii	"long long int\000"
- 429      206C6F6E 
- 429      6720696E 
- 429      7400
- 430              	.LASF11:
- 431 0173 63686172 		.ascii	"char\000"
- 431      00
- 432              	.LASF2:
- 433 0178 73686F72 		.ascii	"short int\000"
- 433      7420696E 
- 433      7400
- 434              	.LASF14:
- 435 0182 70635374 		.ascii	"pcState\000"
- 435      61746500 
- 436              	.LASF4:
- 437 018a 6C6F6E67 		.ascii	"long int\000"
- 437      20696E74 
- 437      00
- 438              	.LASF0:
- 439 0193 7369676E 		.ascii	"signed char\000"
- 439      65642063 
- 439      68617200 
- 440              	.LASF22:
- 441 019f 433A5C55 		.ascii	"C:\\Users\\Linette Helena\\Documents\\GitHub\\ST4\\"
- 441      73657273 
- 441      5C4C696E 
- 441      65747465 
- 441      2048656C 
- 442 01cc 50536F43 		.ascii	"PSoC\\ADC_filtre_samlet_grader.cydsn\000"
- 442      5C414443 
- 442      5F66696C 
- 442      7472655F 
- 442      73616D6C 
+ 424      206C6F6E 
+ 424      6720756E 
+ 424      7369676E 
+ 424      65642069 
+ 425              	.LASF21:
+ 426 0166 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\EMG_PM.c\000"
+ 426      6E657261 
+ 426      7465645F 
+ 426      536F7572 
+ 426      63655C50 
+ 427              	.LASF18:
+ 428 0188 454D475F 		.ascii	"EMG_Sleep\000"
+ 428      536C6565 
+ 428      7000
+ 429              	.LASF15:
+ 430 0192 73696F53 		.ascii	"sioState\000"
+ 430      74617465 
+ 430      00
+ 431              	.LASF6:
+ 432 019b 6C6F6E67 		.ascii	"long long int\000"
+ 432      206C6F6E 
+ 432      6720696E 
+ 432      7400
+ 433              	.LASF11:
+ 434 01a9 63686172 		.ascii	"char\000"
+ 434      00
+ 435              	.LASF2:
+ 436 01ae 73686F72 		.ascii	"short int\000"
+ 436      7420696E 
+ 436      7400
+ 437              	.LASF14:
+ 438 01b8 70635374 		.ascii	"pcState\000"
+ 438      61746500 
+ 439              	.LASF4:
+ 440 01c0 6C6F6E67 		.ascii	"long int\000"
+ 440      20696E74 
+ 440      00
+ 441              	.LASF0:
+ 442 01c9 7369676E 		.ascii	"signed char\000"
+ 442      65642063 
+ 442      68617200 
  443              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
