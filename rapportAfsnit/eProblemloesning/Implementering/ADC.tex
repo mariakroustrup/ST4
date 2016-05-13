@@ -9,10 +9,5 @@ Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det a
 \label{fig:ADC_teori}
 \end{figure}
 
-I ADC'en er der indbygget en clock frekvens, da der ønskes at sample med 100 samples indstilles denne for at forholdet mellem clock frekvensen og samplingsfrekvensen er acceptabel(andet ord) skal samplingsfrekvens sættes til 101 samples per sekund, hvorved der opnås en hastighed på $1600~kHz$. Det er muligt at reducere konverteringstiden ved at øge ADC'ens clock frekvens. Når ADC'en skal starte på konverteringen, er det samplingstiden der også måles som tiden i clock cycles. Der er forskellige parametre, der kan indstilles i PSOC, herunder opløsning, samplingsraten og clock frekvensen. Disse parametre bestemmer ADC'ens konverteringsrate. Konvertingstiden er den inverste af konverteringsraten. Clock frekvensen kan indstilles mellem $xx~MHz$ og $yy~MHz$. \fxnote{Der skal skrives mere til i forhold til dette}..........
-
-
-
-
-
-
+I ADC'en er der indbygget en clock frekvens. Det er muligt at reducere konverteringstiden ved at øge ADC'ens clock frekvens. Når ADC'en skal starte på konverteringen, er det samplingstiden, der også måles som tiden i clock cycles. Der er forskellige parametre, der kan indstilles i PSoC, herunder opløsning, samplingsraten og clock frekvensen. Disse parametre bestemmer ADC'ens konverteringsrate. Konvertingstiden er den inverste af konverteringsraten. Clock frekvensen kan indstilles mellem $xx~MHz$ og $yy~MHz$.\citep{cypresspsoc42014} Da der ønskes at sample med 100 samples indstilles denne for at forholdet mellem clock frekvensen og samplingsfrekvensen er acceptabel(andet ord) skal samplingsfrekvens sættes til 101 samples per sekund, hvorved der opnås en hastighed på $1600~kHz$.
+ 
