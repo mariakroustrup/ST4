@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.378ms
+Loading plugins phase: Elapsed time ==> 0s.322ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -d CY8C4247LQI-BL483 -s C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 4s.228ms
+Elaboration phase: Elapsed time ==> 3s.311ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.151ms
+HDL generation phase: Elapsed time ==> 0s.095ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.151ms
 ======================================================================
 Compiling:  ADC_filtre_samlet_grader.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  ADC_filtre_samlet_grader.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  ADC_filtre_samlet_grader.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Fri May 13 13:04:21 2016
+Fri May 13 13:52:12 2016
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 ADC_filtre_samlet_grader.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Fri May 13 13:04:21 2016
+Fri May 13 13:52:12 2016
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -83,11 +83,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  ADC_filtre_samlet_grader.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Fri May 13 13:04:21 2016
+Fri May 13 13:52:12 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -98,9 +98,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.ctl'.
+Linking 'C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.v'.
+Linking 'C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
@@ -114,11 +114,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  ADC_filtre_samlet_grader.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -dcpsoc3 -verilog ADC_filtre_samlet_grader.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Fri May 13 13:04:21 2016
+Fri May 13 13:52:12 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -129,9 +129,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.ctl'.
+Linking 'C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.v'.
+Linking 'C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\codegentemp\ADC_filtre_samlet_grader.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
@@ -239,13 +239,13 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj" -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj" -dcpsoc3 ADC_filtre_samlet_grader.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.754ms
+Warp synthesis phase: Elapsed time ==> 0s.609ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Friday, 13 May 2016 13:04:22
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -d CY8C4247LQI-BL483 ADC_filtre_samlet_grader.v -verilog
+cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Friday, 13 May 2016 13:52:13
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj -d CY8C4247LQI-BL483 ADC_filtre_samlet_grader.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
 Design parsing phase: Elapsed time ==> 0s.018ms
@@ -260,8 +260,6 @@ Info: mpr.M0053: Information from the design wide resources Pin Editor has overr
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
 </CYPRESSTAG>
 </CYPRESSTAG>
-ADD: pft.M0040: information: The following 1 pin(s) will be assigned a location by the fitter: Debug(0)
-
 
 Removing unused cells resulting from optimization
 Done removing unused cells.
@@ -635,6 +633,9 @@ Design Equations
         PORT MAP (
             pa_out => Debug(0)__PA ,
             pad => Debug(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
     </CYPRESSTAG>
@@ -722,20 +723,20 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    1 :    1 :  0.00 %
   8-bit IDAC                  :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.032ms
-Tech mapping phase: Elapsed time ==> 0s.064ms
+Technology Mapping: Elapsed time ==> 0s.014ms
+Tech mapping phase: Elapsed time ==> 0s.055ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.1701486s
+Elapsed time ==> 0.1699602s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.451ms
+Analog Placement phase: Elapsed time ==> 0s.466ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0163729 secs
+Route success=True, Iterations=1 Elapsed=0.0134545 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.017ms
+Analog Routing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -854,12 +855,12 @@ Mux Info {
     }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.032ms
+Analog Code Generation phase: Elapsed time ==> 0s.030ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.3 sec.
+I2076: Total run-time: 0.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -933,47 +934,7 @@ Intr container @ [IntrContainer=(0)]:
         {
             int_type = "10"
         }
-Port 0 contains the following IO cells:
-[IoId=0]: 
-Pin : Name = Debug(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Debug(0)__PA ,
-        pad => Debug(0)_PAD );
-    Properties:
-    {
-    }
-
+Port 0 is empty
 Port 1 contains the following IO cells:
 [IoId=4]: 
 Pin : Name = \UART:rx(0)\
@@ -1331,6 +1292,46 @@ Pin : Name = EMG(0)
     {
     }
 
+[IoId=3]: 
+Pin : Name = Debug(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Debug(0)__PA ,
+        pad => Debug(0)_PAD );
+    Properties:
+    {
+    }
+
 [IoId=6]: 
 Pin : Name = Pin_Green(0)
     Attributes:
@@ -1503,8 +1504,6 @@ Port Configuration report
      |     |       | Interrupt |                  |              | 
 Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 -----+-----+-------+-----------+------------------+--------------+--------------------
-   0 |   0 |       |      NONE |         CMOS_OUT |     Debug(0) | 
------+-----+-------+-----------+------------------+--------------+--------------------
    1 |   4 |     * |      NONE |     HI_Z_DIGITAL | \UART:rx(0)\ | FB(\UART:Net_654\)
      |   5 |     * |      NONE |         CMOS_OUT | \UART:tx(0)\ | In(\UART:Net_1062\)
 -----+-----+-------+-----------+------------------+--------------+--------------------
@@ -1514,37 +1513,38 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
    3 |   0 |     * |      NONE |      HI_Z_ANALOG |        Y1(0) | Analog(Net_508)
      |   1 |     * |      NONE |      HI_Z_ANALOG |        Y2(0) | Analog(Net_526)
      |   2 |     * |      NONE |      HI_Z_ANALOG |       EMG(0) | Analog(Net_528)
+     |   3 |     * |      NONE |         CMOS_OUT |     Debug(0) | 
      |   6 |     * |      NONE |         CMOS_OUT | Pin_Green(0) | 
 --------------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.002ms
-Digital Placement phase: Elapsed time ==> 0s.584ms
+Digital component placer commit/Report: Elapsed time ==> 0s.001ms
+Digital Placement phase: Elapsed time ==> 0s.605ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.814ms
+Digital Routing phase: Elapsed time ==> 0s.640ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.341ms
+Bitstream and API generation phase: Elapsed time ==> 0s.324ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.023ms
+Bitstream verification phase: Elapsed time ==> 0s.032ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in ADC_filtre_samlet_grader_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.209ms
+Static timing analysis phase: Elapsed time ==> 0s.248ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.271ms
+Design database save phase: Elapsed time ==> 0s.263ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.850ms
+cydsfit: Elapsed time ==> 2s.721ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.905ms
-API generation phase: Elapsed time ==> 1s.745ms
-Dependency generation phase: Elapsed time ==> 0s.038ms
-Cleanup phase: Elapsed time ==> 0s.001ms
+Fitter phase: Elapsed time ==> 2s.776ms
+API generation phase: Elapsed time ==> 1s.600ms
+Dependency generation phase: Elapsed time ==> 0s.021ms
+Cleanup phase: Elapsed time ==> 0s.002ms

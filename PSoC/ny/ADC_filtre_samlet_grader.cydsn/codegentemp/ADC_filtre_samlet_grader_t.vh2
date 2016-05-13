@@ -1,5 +1,5 @@
--- Project:   C:\Users\Linette Helena\Desktop\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj
--- Generated: 05/13/2016 13:04:24
+-- Project:   C:\Users\Linette Helena\Documents\GitHub\ST4\PSoC\ny\ADC_filtre_samlet_grader.cydsn\ADC_filtre_samlet_grader.cyprj
+-- Generated: 05/13/2016 13:52:15
 -- PSoC Creator  3.3 SP1
 
 ENTITY ADC_filtre_samlet_grader IS
@@ -110,7 +110,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_filtre_samlet_grader IS
     ATTRIBUTE lib_model OF Pin_Green(0) : LABEL IS "iocell8";
     ATTRIBUTE Location OF Pin_Green(0) : LABEL IS "P3[6]";
     ATTRIBUTE lib_model OF Debug(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF Debug(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF Debug(0) : LABEL IS "P3[3]";
     ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,0)";
     ATTRIBUTE Location OF \ADC:IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(15)]";
     ATTRIBUTE Location OF \ADC:cy_psoc4_sar\ : LABEL IS "F(SARADC,0)";
