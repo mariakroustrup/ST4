@@ -1,0 +1,6 @@
+\section{Diskussion}
+Emner til fremhævning i diskussionen:
+
+
+Databehandling vedrørende accelerometeret:
+Alternativt kunne der have været implementeret et gain foran inputtet til accelerometeret, for give en bedre opløsning og dermed en bedre repræsentation af accelerometermålingerne. Dette blev dog ikke implementeret, da dette yderligere ville kræve en offset justering, da accelerometet teoretisk giver et offset ved $0~g$ svarende til den halve forsyningsspænding. Uden offset ville signalet resikere at gå i mætning ved ADC'en, alt efter hvor meget gain der ville blive implementeret. Dette blev yderligere fravalgt da fokuset for dette semester primært er relateret til det digitale.   

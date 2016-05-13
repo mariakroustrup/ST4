@@ -1,5 +1,0 @@
-\subsection{Low power mode}
-
-Der findes forskellige grader af low power mode. Herunder en sleep mode, deep-sleep mode, hibernate mode og stop mode. Systemet anvender sleep mode, hvor alle periphals udover CPU'en er tilgængelig. Systemet befinder sig i sleep mode hele tiden og kører dermed ingen instruktioner. Den venter i stedet på, at der forekommer et interrupt. Et hvert interrupt kan anvendes til at vække systemet fra sleep mode, herefter vil systemet gå ud af sin sleep mode, når der er udløst et interrupt. 
-
-Det kan være fordelagtigt at anvende sleep mode, når eksempelvis ADC'en eller digital kommunikation, hvor andre peripherals skal forblive aktive, men uden CPU'ens aktivitet er nødvendig. På denne måde vil det være muligt at reducere strømforbruget mellem AD-konvertinger samt transaktioner under den digitale kommunikation. 
