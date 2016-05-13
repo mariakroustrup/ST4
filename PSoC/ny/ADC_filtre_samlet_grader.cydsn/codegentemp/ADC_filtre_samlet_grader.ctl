@@ -1,6 +1,6 @@
 -- ======================================================================
 -- ADC_filtre_samlet_grader.ctl generated from ADC_filtre_samlet_grader
--- 05/13/2016 at 13:52
+-- 05/13/2016 at 13:03
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

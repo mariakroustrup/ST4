@@ -1,8 +1,8 @@
-comport = 'COM5'; % Vælg porten til jeres egen PSoC enhed
+comport = 'COM4'; % Vælg porten til jeres egen PSoC enhed
 
 serial_port = serial(comport, 'TimeOut', 2, 'BaudRate', 115200);
 
-num_of_channels = 1;    % Antallet af kanaler
+num_of_channels = 2;    % Antallet af kanaler
 data_length = 1000;     % Antal samples per kanal i plottet
 data = NaN*ones(data_length,num_of_channels);   % Initialisering af data
 byte_per_channel = 2;   % Antal bytes per kanal (int16 = 2 bytes)

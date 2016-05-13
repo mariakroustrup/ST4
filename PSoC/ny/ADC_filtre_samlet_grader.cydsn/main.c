@@ -28,7 +28,7 @@ double y_low[FILTER_LENGTH_low+1] = {0, 0, 0};
 double b_low[FILTER_LENGTH_low+1] = {0.0015, 0.0029, 0.0015};
 double a_low[FILTER_LENGTH_low+1] = {1.0000, -1.8890, 0.8949};
 
-int16 value_in,value_out[2]={0,0},i=0,j=0,k=0, grader_groen, grader_roed, diff, old, counter=0; 
+int16 value_in,value_out[2]={0,0},i=0,j=0,k=0, grader_groen, grader_roed, diff, diff2, old, counter=0; 
 char FirstCall = TRUE;
 
 int16 accroed = {0};
@@ -213,20 +213,22 @@ signed int differentiator(signed int new)
     if(diff > 1)        //Stigende 
     {
         diff = 10;
+        diff2 = diff;
         return diff;
     }
     
-    else if (diff < 1)  //faldene 
+    else if (diff == 0) //Ens
+    
+    {
+        return diff2;
+    }
+    
+    else //Faldende 
     {
         diff = -10;
+        diff2 = diff;
         return diff;
-    }
-    
-    else
-    {
-        diff=-200;
-        return diff;
-    }
+    } 
 }
 
 /***********************************ISR***********************************/
@@ -277,15 +279,19 @@ CY_ISR(ADC_interrupt)
         diff_data = differentiator(low_pass_data);
             
         
-        UART_UartPutChar(samlet_grader);                //plottes tilbage i MATLAB
-        UART_UartPutChar(samlet_grader>>8);
+        //UART_UartPutChar(samlet_grader);                //plottes tilbage i MATLAB
+        //UART_UartPutChar(samlet_grader>>8);
       
        
         //UART_UartPutChar(counter);             
         //UART_UartPutChar(counter>>8);
         
-        //UART_UartPutChar(diff_data);
-        //UART_UartPutChar(diff_data>>8);
+        UART_UartPutChar(low_pass_data);             
+        UART_UartPutChar(low_pass_data>>8);
+        
+        
+        UART_UartPutChar(diff_data);
+        UART_UartPutChar(diff_data>>8);
         
         data_ready = FALSE;
     }
