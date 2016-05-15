@@ -1,9 +1,70 @@
 \subsection{EMG-algoritme}
-For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelinput under et squat. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet, der vælges til at være hhv. $-10~V$ eller $10~V$, hvis muskelsignalet er faldende eller stigende, illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
+For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet, der vælges til at være hhv. $-10~V$ eller $10~V$, hvis muskelsignalet er faldende eller stigende, illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/EMG_algo_test}
-\caption{?}
+\includegraphics[width=0.9\textwidth]{figures/EMG_algo_test}
+\caption{Den blå graf illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf illustrerer, om muskelsignalet er hhv. faldende eller stigende ved enten at udsende et signal på $-10~V$ eller $10~V$.}
 \label{fig:emg_algo_test}
 \end{figure}
+
+\noindent
+Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne, hvor outputtet skifter spænding ved at udregne en forsinkelse i sekunder ud fra differensen på tidspunkterne for lokale ekstrema og skift i output. Dette fremgår af \autoref{tab:emg_algo}. 
+
+\iffalse
+\begin{tabular}{|c|c|c|}}
+\hline 
+EMG-ekstrema [s] & Output-skift [s] & Forsinkelse [s]\\ 
+\hline 
+0,29 & 0,32 & 0,03\\ 
+\hline 
+0,78 & 0,80 & 0,02\\ 
+\hline 
+0,83 & 0,86 & 0,03\\ 
+\hline 
+1,00 & 1,03 & 0,03\\ 
+\hline 
+1,10 & 1,12 & 0,02\\ 
+\hline 
+1,50 & 1,52 & 0,02\\ 
+\hline 
+2,46 & 2,49 & 0,03\\ 
+\hline 
+2,67 & 2,68 & 0,01\\ 
+\hline 
+2,94 & 2,96 & 0,02\\ 
+\hline 
+3,52 & 3,54 & 0,02\\ 
+\hline 
+3,62 & 3,63 & 0,01\\ 
+\hline 
+3,96 & 3,98 & 0,02\\ 
+\hline 
+4,33 & 4,34 & 0,01\\ 
+\hline 
+4,68 & 4,70 & 0,02\\ 
+\hline 
+5,04 & 5,05 & 0,01\\ 
+\hline 
+5,50 & 5,51 & 0,01\\ 
+\hline 
+5,67 & 5,69 & 0,02\\ 
+\hline 
+5,87 & 5,89 & 0,02\\ 
+\hline 
+7,48 & 7,54 & 0,06\\ 
+\hline 
+8,49 & 8,50 & 0,01\\ 
+\hline 
+8,83 & 8,85 & 0,02\\ 
+\hline 
+8,99 & 9,01 & 0,02\\ 
+\hline 
+9,07 & 9,09 & 0,02\\ 
+\hline 
+\label{tab:emg_algo}
+\end{tabular} 
+\fi
+
+\noindent
+I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet registreres som en ændring i output-signalet er mellem $0,01$ og $0,06~s$, gennemsnitligt $0,0287~s$. Denne forsinkelse kan godtages til dette, da ... \textbf{HJÆLP - hvorfor???}
