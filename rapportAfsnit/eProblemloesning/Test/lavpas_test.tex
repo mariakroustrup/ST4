@@ -9,6 +9,7 @@ De indsendte signaler er fra det optagede signal fra pilotforsøget. \autoref{se
 \label{fig:lavpas_imp}
 \end{figure}
 
+\noindent
 Figuren illustrer, at inputsignalet følger det ufiltrede signal dog med et delay. Til måling af behandlingstiden af dette, programmeres en timer funktion i mikrokontrolleren, der retunerer behandlingstiden til MATLAB. Ud fra dette ses et delay på XX sekunder. Dette krav accepteres, da dette ikke vil få en betydning, da der optages et antal samples og på baggrund af flere samples vurderes det, hvorvidt muskelaktiviteten er stigende eller faldende, hvilket medvirker til at systemet udfører en naturlig bevægelse.
 
 
@@ -21,7 +22,7 @@ For at vurdere om filteret er dæmpende i forhold til de opstillede krav, udfør
 \label{fig:lavps_sweep}
 \end{figure}
 
-
+\noindent
 En dæmpning på $-3~dB$ for den valgte knækfrekvens på $5~Hz$ bestemmes samt en decade længere ude svarende til en frekvens på $15~Hz$. Da der anvendes et 2. ordens filter, skal denne frekvens dæmpes ved $-40~dB$. Outputspændingen ved disse dæmpningsfaktorer er udregnet ved \autoref{equ:daempning1} og \autoref{equ:daempning2}. 
 
 \begin{equation} \label{equ:daempning1}

@@ -1,38 +1,11 @@
 \subsection{Vinkelberegning}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1003~V$ og accelerometeret placeret på skinnebenet til $-972~V$. De målte spændinger, hvor signalet er offsetjusteret fremgår af \autoref{tab:vinkelinterval_psoc}. .
+I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1003~V$ og accelerometeret placeret på skinnebenet til $-972~V$. De målte spændinger, hvor signalet er offsetjusteret fremgår af \autoref{tab:vinkelinterval_psoc}.
 
-%\begin{comment}
-%\begin{table}[H]
-%	\centering
-%	\begin{tabular}{|l|l|l|}
-%				%& \textit{Accelerometer placeret på låret} &				
-%	\textbf{Interval} & \textbf{Målt spænding} & \textbf{Målt spænding} 	\\ \hline	
-%    \textbf{0-10} 			& $0~V$							& $-186~V$   \\ \hline
-%    \textbf{10-30} 			& $-31~V$						& $-185~V$	\\ \hline
-%    \textbf{30-50} 			& $-67~V$						& $-168~V$	\\ \hline
-%    \textbf{50-70} 			& $-126~V$						& $-126~V$	\\ \hline
-%    \textbf{70-80} 			& $-168~V$						& $-67~V$	\\ \hline
-%    \textbf{80-90} 			& $-185~V$						& $-31~V$	\\ \hline
-%    				%& \textit{Accelerometer placeret på skinnebenet} &		
-%    	\textbf{Interval} & \textbf{Målt spænding} & \textbf{Målt spænding} 		\\ \hline	
-%    \textbf{0-10}			& $0~V$ 							& $-179~V$	    \\ \hline
-%    \textbf{10-30}			& $-16~V$						& $-176~V$	 	\\ \hline
-%    \textbf{30-50}			& $-52~V$						& $-153~V$		\\ \hline
-%    \textbf{50-70}			& $-111~V$						& $-111~V$		\\ \hline
-%    \textbf{70-80}			& $-153~V$						& $-52~V$	 	\\ \hline
-%     \textbf{80-90}			& $-176~V$						& $-16~V$	 	\\ \hline
-%	\end{tabular}
-%	\caption{Spændingen målt i vinklerne fra 0 til 90$^{\circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første spænding svarer til start intervallet og den sidste til slutningen afintervallet.}
-%	\label{tab:vinkelinterval_psoc}
-%\end{table}
-%\end{comment}
-
-
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|c|c|}
-         & \textit{Accelerometer placeret på låret}                           & \multicolumn{1}{l}{}                      \\ \hline
-Interval & Målt spænding {[}V{]}                                              & \multicolumn{1}{l}{Målt spænding {[}V{]}} \\ \hline
+         & \textit{Accelerometer placeret på låret}                           & \multicolumn{1}{|l|}{}                      \\ \hline
+\textbf{Interval} & \textbf{Målt spænding} {[}V{]}                                              & \multicolumn{1}{|l|}{\textbf{Målt spænding} {[}V{]}} \\ \hline
 0 - 10   & 0                                                                  & - 31                                      \\ \hline
 10 - 30  & - 31                                                               & - 67                                      \\ \hline
 30 - 50  & - 67                                                               & - 126                                     \\ \hline
@@ -41,8 +14,8 @@ Interval & Målt spænding {[}V{]}                                              
 \hline
 80 - 90  & -185                                                               & - 186                                     \\
 \hline
-         & \multicolumn{1}{l}{\textit{Accelerometer placeret på skinnebenet}} & \multicolumn{1}{l}{}                      \\ \hline
-Interval & Målt spænding {[}V{]}                                              & \multicolumn{1}{l}{Målt spænding {[}V{]}} \\ \hline
+         & \multicolumn{1}{|l|}{\textit{Accelerometer placeret på skinnebenet}} & \multicolumn{1}{l}{}                      \\ \hline
+\textbf{Interval} & \textbf{Målt spænding} {[}V{]}                                              & \multicolumn{1}{|l|}{\textbf{Målt spænding} {[}V{]}} \\ \hline
 0 - 10   & 0                                                                  & - 16                                      \\
 \hline
 10 - 30  & - 16                                                               & - 52                                      \\
@@ -59,6 +32,7 @@ Interval & Målt spænding {[}V{]}                                              
 \label{tab:vinkelinterval_psoc}        
 \end{table}
 
+\noident
 Spændingen er målt for vinklerne fra 0 til 90$^{\circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første målte spænding er for startværdien i intervallet og den sidste spænding er slutværdien i intervallet.
 
 Ud fra de målte værdier i de forskellige intervaller, er der opstillet en funktion indeholdt ifelse-løkker, hvorved det er muligt at vurdere, hvilket interval en given spænding befinder sig i. I hver enkelt løkke anvendes lineær interpolation, som har til opgave at finde en vinkel, der er svarende til en spænding som ligger mellem intervallet og returnerer denne. 
