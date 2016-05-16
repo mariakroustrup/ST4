@@ -1,0 +1,14 @@
+\section{Systemtest med kendt input}
+I dette afsnit vil det samlede system blive testet, så det er muligt at se, om systemet behandler dette input, som det forventes. På denne måde bliver det også muligt at konkludere, om systemet virker. 
+
+\subsection{Beskrivelse}
+For at teste det samlede system med et kendt input benyttes en funktionsgenerator, så der kan genereres et sinussignal på $???~Hz$ med en peak-peak-amplitude på $???~V$. På denne måde ses effekten af systemets blokke, når de er sammensat, da input-signalet og outputtet fra EMG-algoritmen herved kan sammenlignes i MATLAB.
+
+\textbf{YDERLIGERE BESKRIVELSE AF OPSTILLING}
+ 
+\subsection{Udførsel af test}
+
+EMG-algoritmen testes ved at bruge et 10 sekunders sinussignal som input samt variere den spænding, der almindeligvis kommer ind via accelerometrene, så spændingen overskrider de spændinger, der tilsvarer $180-90^{\circ}$. 
+Dermed kan udregnes, hvilket output der forventes til inputtet, og dette kan sammenholdes med det reelle output. Afvigelsen vil herefter kunne beregnes. 
+
+\subsection{Konklusion}
