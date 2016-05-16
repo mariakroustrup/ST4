@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {5.2.1}Analog-to-Digital Converter}{24}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}IIR-lavpasfilter}{25}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Moving average filter}{25}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Vinkelberegning}{26}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.4}Vinkelberegning}{25}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}EMG-algoritme}{27}{subsection.5.2.5}
 \contentsline {section}{\numberline {5.3}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{27}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Low power mode}{29}{subsection.5.3.1}
