@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{51}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -190,15 +190,16 @@ B.~J. Schoenfeld.
 \newblock \emph{Journal of Strength and Conditioning Research}, 2010.
 \newblock \doi{10.1519/JSC.0b013e3181bac2d7}.
 
-\bibitem[Corporation(2015)]{cypresspsoc2015}
-Cypress~Semiconductor Corporation.
-\newblock \emph{CY8CKIT-142 PSoC 4 BLE module}, 2015.
+\bibitem[Cypress(2015)]{cypresspsoc2015}
+Cypress.
+\newblock \emph{CY8CKIT-142 PSoC 4 BLE module}.
+\newblock Cypress Semiconductor Corporation, 2015.
 \newblock URL \url{http://www.cypress.com/file/140711/download}.
 
-\bibitem[Corporation(2014{\natexlab{a}})]{cypressguide2014}
-Cypress~Semiconductor Corporation.
-\newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
-  2014{\natexlab{a}}.
+\bibitem[Cypress(2014{\natexlab{a}})]{cypressguide2014}
+Cypress.
+\newblock \emph{CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide}.
+\newblock Cypress Semiconductor Corporation, 2014{\natexlab{a}}.
 \newblock URL \url{http://www.cypress.com/file/229211/download}.
 
 \bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
@@ -271,6 +272,14 @@ N.~Gupta.
 \newblock Artech House, 2013.
 \newblock \doi{9781608075799}.
 
+\bibitem[Hausdorff et~al.(2000)Hausdorff, Lertratanakul, and
+  Cudkowicz]{hausdorff2000}
+J.~M. Hausdorff, A.~Lertratanakul, and M.~E. Cudkowicz.
+\newblock \emph{Dynamic markers of altered gait rhythm in amyotrophic lateral
+  sclerosis}.
+\newblock the American Physiological Society, 2000.
+\newblock URL \url{http://jap.physiology.org/content/jap/88/6/2045.full.pdf}.
+
 \bibitem[Devices(2009)]{analogdevices2009}
 Analog Devices.
 \newblock \emph{EVAL-ADXL335Z}.
@@ -289,11 +298,29 @@ M.~Clifford and L.~Gomez.
 \newblock \emph{Measuring Tilt with Low-g Accelerometers}, 2005.
 \newblock URL \url{http://www.nxp.com/files/sensors/doc/app_note/AN3107.pdf}.
 
-\bibitem[Corporation(2014{\natexlab{b}})]{ADC2014}
-Cypress~Semiconductor Corporation.
-\newblock \emph{PSoC 4 Sequencing Successive Approximation ADC},
-  2014{\natexlab{b}}.
+\bibitem[Cypress(2014{\natexlab{b}})]{ADC2014}
+Cypress.
+\newblock \emph{PSoC 4 Sequencing Successive Approximation ADC}.
+\newblock Cypress Semiconductor Corporation, 2014{\natexlab{b}}.
 \newblock URL \url{http://www.cypress.com/file/135111/download}.
+
+\bibitem[Cypress(2014{\natexlab{c}})]{cypresspsoc42014}
+Cypress.
+\newblock \emph{Sequencing Succesive Approximation ADC}.
+\newblock Cypress Semiconductor Corporation, 2014{\natexlab{c}}.
+\newblock URL \url{http://www.cypress.com/file/135111/download}.
+
+\bibitem[Townsend(2014)]{townsend2014}
+K.~Townsend.
+\newblock \emph{Introduction to Bluetooth Low Energy}, 2014.
+\newblock URL
+  \url{https://cdn-learn.adafruit.com/downloads/pdf/introduction-to-bluetooth-low-energy.pdf}.
+
+\bibitem[Cypress()]{cypresspsoc420152}
+Cypress.
+\newblock \emph{PSoC 4 Low-Power Modes and Power Reductions Techniques}.
+\newblock Cypress Semiconductor Corporation.
+\newblock URL \url{http://www.cypress.com/file/121271/download}.
 
 \bibitem[Hermens et~al.(1999)Hermens, Freriks, and et~al.]{seniam2016}
 H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.

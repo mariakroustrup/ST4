@@ -1,13 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
-Database file #1: kilder.bib
+Database file #1: kilder2.bib
 Warning--I didn't find a database entry for "escamilla"
 Warning--I didn't find a database entry for "atmel2002"
-Warning--I didn't find a database entry for "hausdorff2000"
-Warning--I didn't find a database entry for "cypresspsoc42014"
 Warning--I didn't find a database entry for "cypress42015"
-Warning--I didn't find a database entry for "cypresspsoc420152"
 Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
 Warning--empty publisher in morre2003
-(There were 9 warnings)
+Warning--empty year in cypresspsoc420152
+(There were 7 warnings)
