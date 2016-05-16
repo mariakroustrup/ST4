@@ -1,0 +1,98 @@
+\changetocdepth {2}
+\select@language {danish}
+\contentsline {section}{Forord}{iii}{section*.3}
+\contentsline {section}{L\IeC {\ae }sevejledning}{iii}{section*.4}
+\contentsline {subsection}{Kildeh\IeC {\r a}ndtering}{iii}{section*.5}
+\contentsline {subsection}{Flowdiagram h\IeC {\r a}ndtering}{iii}{section*.6}
+\contentsline {chapter}{\chapternumberline {1}Indledning}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Indledning}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Initierende problemstilling}{1}{subsection.1.1.1}
+\contentsline {chapter}{\chapternumberline {2}Problemanalyse}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Amyotrofisk lateral sklerose}{2}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Livskvalitet hos ALS-patienter}{3}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Hj\IeC {\ae }lpemidler til brug ved ALS}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Teknologiske hj\IeC {\ae }lpemidler}{5}{subsection.2.2.1}
+\contentsline {subsubsection}{Udfordringer ved brug af hj\IeC {\ae }lpemidler}{5}{section*.13}
+\contentsline {subsection}{\numberline {2.2.2}Body augmentation som hj\IeC {\ae }lpemiddel}{5}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Gangfunktion}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Kn\IeC {\ae }ets opbygning}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Kn\IeC {\ae }ets funktion}{7}{subsection.2.3.2}
+\contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{7}{section*.16}
+\contentsline {section}{\numberline {2.4}Problemafgr\IeC {\ae }nsning}{8}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Problemformulering}{8}{subsection.2.4.1}
+\contentsline {chapter}{\chapternumberline {3}Systemudvikling}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Systembeskrivelse}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Overordnet krav til systemet}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Blokdiagram}{9}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}L\IeC {\o }sningsstrategi}{10}{section.3.2}
+\contentsline {chapter}{\chapternumberline {4}Teori og design}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Analog del}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Opsamling af EMG-signaler}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Opsamling af accelerometer-signaler}{12}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Sp\IeC {\ae }ndingsforsyning}{12}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Digital del}{13}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Analog-to-Digital Converter}{13}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Digital filtrering}{14}{subsection.4.2.2}
+\contentsline {subsubsection}{Filtrering af EMG-signal}{16}{section*.26}
+\contentsline {subsubsection}{Filtrering af accelerometer-signaler}{18}{section*.29}
+\contentsline {subsection}{\numberline {4.2.3}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{19}{subsection.4.2.3}
+\contentsline {chapter}{\chapternumberline {5}Implementering}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Analog del}{21}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Opsamling af EMG-signaler}{21}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Opsamling af accelerometer-signaler}{22}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Sp\IeC {\ae }ndingsforsyning}{23}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Digital del}{24}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Implementering af analog til digital konvertering}{24}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}IIR-lavpasfilter}{25}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Moving average filter}{25}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Vinkelberegning}{26}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}EMG-algoritme}{27}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{27}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Low power mode}{29}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Flowdiagram}{29}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Overordnet flowdiagram}{29}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Initialiserende flowdiagram}{30}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}EMG-algoritme}{31}{subsection.5.4.3}
+\contentsline {chapter}{\chapternumberline {6}Test}{32}{chapter.6}
+\contentsline {section}{\numberline {6.1}Analog del}{32}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}EMG-forst\IeC {\ae }rker}{32}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Accelerometre}{33}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Sp\IeC {\ae }ndingsforsyning}{33}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Digital del}{33}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}ADC}{34}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Lavpasfilter}{34}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Moving average filter}{37}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Vinkelberegning}{37}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}EMG-algoritme}{38}{subsection.6.2.5}
+\contentsline {section}{\numberline {6.3}Samlet systemtest}{40}{section.6.3}
+\contentsline {chapter}{\chapternumberline {7}Syntese}{41}{chapter.7}
+\contentsline {section}{\numberline {7.1}Diskussion}{41}{section.7.1}
+\contentsline {section}{\numberline {7.2}Konklusion}{41}{section.7.2}
+\contentsline {section}{\numberline {7.3}perspektivering}{41}{section.7.3}
+\contentsline {chapter}{Litteratur}{42}{section*.55}
+\contentsline {appendix}{\chapternumberline {A}Bilag}{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Pilotfors\IeC {\o }g}{46}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Form\IeC {\r a}l}{46}{subsection.A.1.1}
+\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{46}{section*.56}
+\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{46}{section*.57}
+\contentsline {subsection}{\numberline {A.1.2}Materialer}{46}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Fors\IeC {\o }gsopstilling}{47}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Oversigt af fors\IeC {\o }gsopstilling}{49}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Fremgangsm\IeC {\r a}de}{49}{subsection.A.1.5}
+\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{49}{section*.61}
+\contentsline {section}{\numberline {A.2}Databehandling}{49}{section.A.2}
+\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{50}{section*.62}
+\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{51}{section*.65}
+\contentsline {section}{\numberline {A.3}Test af accelerometer}{53}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Form\IeC {\r a}l}{53}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Materialer}{53}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Metode}{53}{subsection.A.3.3}
+\contentsline {subsection}{\numberline {A.3.4}Fors\IeC {\o }gsopstilling}{54}{subsection.A.3.4}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{54}{section*.70}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{54}{section*.72}
+\contentsline {subsection}{\numberline {A.3.5}Fremgangsm\IeC {\r a}de}{55}{subsection.A.3.5}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{55}{section*.73}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{55}{section*.74}
+\contentsline {subsection}{\numberline {A.3.6}Resultater}{55}{subsection.A.3.6}
+\contentsline {subsubsection}{Resultater for deltest 1}{55}{section*.75}
+\contentsline {subsubsection}{Resultater for deltest 2}{56}{section*.77}
