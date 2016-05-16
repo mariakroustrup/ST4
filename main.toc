@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Opsamling af accelerometer-signaler}{22}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Sp\IeC {\ae }ndingsforsyning}{23}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Digital del}{24}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Implementering af analog til digital konvertering}{24}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Analog-to-Digital Converter}{24}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}IIR-lavpasfilter}{25}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Moving average filter}{25}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Vinkelberegning}{26}{subsection.5.2.4}
