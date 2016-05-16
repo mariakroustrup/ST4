@@ -24,9 +24,21 @@
   Url                      = {https://www.mda.org/disease/amyotrophic-lateral-sclerosis/signs-and-symptoms/stages-of-als}
 }
 
+@Manual{armel2002,
+  Title                    = {AVRR222: 8-point Moving Average Filter},
+  Author                   = {Atmel},
+  Organization             = {Atmel Coropration},
+  Year                     = {2002},
+
+  Comment                  = {16-05-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {http://www.atmel.com/Images/doc0940.pdf}
+}
+
 @Article{bernmarka2002,
   Title                    = {A triaxial accelerometer for measuring arm movements},
-  Author                   = {E. Bernmark  and C. Wiktorin},
+  Author                   = {E. Bernmark and C. Wiktorin},
   Journal                  = {Applied Ergonomics},
   Year                     = {2002},
   Volume                   = {33},
@@ -85,9 +97,21 @@ et al.},
   Url                      = {http://www.nxp.com/files/sensors/doc/app_note/AN3107.pdf}
 }
 
+@Manual{cypresspsoc420152,
+  Title                    = {PSoC 4 Low-Power Modes and Power Reductions Techniques},
+  Author                   = {Cypress},
+  Organization             = {Cypress Semiconductor Corporation},
+
+  Comment                  = {16-05-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {http://www.cypress.com/file/121271/download}
+}
+
 @Manual{cypresspsoc2015,
   Title                    = {CY8CKIT-142 PSoC 4 BLE module},
-  Author                   = {Cypress Semiconductor Corporation},
+  Author                   = {Cypress},
+  Organization             = {Cypress Semiconductor Corporation},
   Year                     = {2015},
 
   Comment                  = {07-03-2016},
@@ -96,9 +120,22 @@ et al.},
   Url                      = {http://www.cypress.com/file/140711/download}
 }
 
+@Manual{cypresspsoc42015,
+  Title                    = {CY8CKIT-043 PSoC® 4 M-Series Prototyping Kit Guide},
+  Author                   = {Cypress},
+  Organization             = {Cypress Semiconductor Corporation},
+  Year                     = {2015},
+
+  Comment                  = {13-05-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {http://www.cypress.com/file/193101/download}
+}
+
 @Manual{ADC2014,
   Title                    = {PSoC 4 Sequencing Successive Approximation ADC},
-  Author                   = {Cypress Semiconductor Corporation},
+  Author                   = {Cypress},
+  Organization             = {Cypress Semiconductor Corporation},
   Year                     = {2014},
 
   Comment                  = {09-04-2016},
@@ -109,7 +146,8 @@ et al.},
 
 @Manual{cypressguide2014,
   Title                    = {CY8CKIT-042-BLE Bluetooth Low Energy (BLE) Pioneer Kit Guide},
-  Author                   = {Cypress Semiconductor Corporation},
+  Author                   = {Cypress},
+  Organization             = {Cypress Semiconductor Corporation},
   Year                     = {2014},
 
   Comment                  = {07-03-2016},
@@ -218,6 +256,19 @@ M.l W. Krzyzewski},
   Doi                      = {10.1109/ICECS.2005.4633430},
   Owner                    = {signehk},
   Timestamp                = {2016.04.28}
+}
+
+@Manual{hausdorff2000,
+  Title                    = {Dynamic markers of altered gait rhythm in amyotrophic lateral sclerosis},
+  Author                   = {J. M. Hausdorff and A. Lertratanakul and M. E. Cudkowicz},
+  Organization             = {the American Physiological Society},
+  Year                     = {2000},
+
+  Comment                  = {16-05-2016},
+  Journal                  = {the American Physiological Society},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {http://jap.physiology.org/content/jap/88/6/2045.full.pdf}
 }
 
 @Article{hefferman2006,
@@ -479,6 +530,16 @@ G. D. Borasio},
   Timestamp                = {2016.02.29}
 }
 
+@Manual{aalborguniversitet2014,
+  Title                    = {Studieordning for bacheloruddannelsen i Sundhedsteknologi},
+  Author                   = {Studienævnet for Sundhed, Teknologi og Idræt, Aalborg Universitet},
+  Year                     = {2014},
+
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {http://www.smh.aau.dk/digitalAssets/69/69987_bsc-sundhedsteknologi_2012_ver2_2014.pdf}
+}
+
 @Manual{advancertech2013,
   Title                    = {Three-lead Differential Muscle/Electromyography Sensor for Microcontroller Application},
   Author                   = {Advancer Technologies},
@@ -499,6 +560,17 @@ G. D. Borasio},
   Owner                    = {signehk},
   Timestamp                = {2016.02.29},
   Url                      = {http://patient.info/health/motor-neurone-disease-leaflet}
+}
+
+@Manual{townsend2014,
+  Title                    = {Introduction to Bluetooth Low Energy},
+  Author                   = {K. Townsend},
+  Year                     = {2014},
+
+  Comment                  = {16-05-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.16},
+  Url                      = {https://cdn-learn.adafruit.com/downloads/pdf/introduction-to-bluetooth-low-energy.pdf}
 }
 
 @Article{tramonti2012,
