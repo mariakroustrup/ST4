@@ -10,6 +10,7 @@ For at teste, hvorvidt moving average filteret overholder kravene, der er opstil
 
 % Her skal der skrives hvad der kan ses af testen ift ændringerne i signalet. Dernæst vil filteret blive testet ift. det delay der forekommer. 
 
+\noindent
 Da filteret kræver 10 samples for at retunere den første værdi testes det, hvorvidt dette stemmer overens med det forventede delay på $100~ms$. Dertil ses også om der forårsages yderligere delay af filteret. Til at måle behandlingstiden, programmeres en timer funktion i mikrokontrolleren, der retunerer behandlingstiden til MATLAB. Ud fra dette ses et delay på 34 sekunder og 60 milisekunder.
 
 Ud fra ovenstående resultater vurderes det, at det filterede signal opfylder kravene for \autoref{sec:mavg_krav}. 

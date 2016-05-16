@@ -7,6 +7,7 @@ Måden testen udføres på, er ved at starte konverteringen og et stopur på sam
 Fs = \frac{177066~samples}{1800,16~s}
 \end{equation}
 
+\noindent
 Der forventes en samplingsfrekvens på $100~Hz$. Den reelle frekvens er udregnet til $98,36~Hz$ ud fra \autoref{eq:ADC_test}. Dette giver en afvigelse på $1,64\%$. Årsagen til denne afvigelse realateres til at stopuret og konverteringen ikke har været startet og stoppet på præcis samme tid. Dette resultere i at der ikke er en direkte relation mellem køretiden for ADC'en og stopuret. Yderligere tillader indstillerne for ADC, at der kan ændres i konverteringsteden for de enkelte kanaler, men stadig oplyse at der bevares en aktuel samplingsfrekvens på $100~Hz$. Dette antages ligeledes at have en indflydelse på samplingsfrekvensen, selvom den oplyses som værende $100~Hz$ 
 
 Tiltrods for afvigelsen godkendes ADC'en indstillinger alligevel. Dette relateres til at det er lavfrekvente signaler der samples, og at størrelsen på afvigelsen ikke har betydningen for repræsentationen af signalerne. 
