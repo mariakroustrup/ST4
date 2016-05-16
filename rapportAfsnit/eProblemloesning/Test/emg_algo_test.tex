@@ -11,8 +11,8 @@ For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG
 \noindent
 Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne, hvor outputtet skifter spænding ved at udregne en forsinkelse i sekunder ud fra differensen på tidspunkterne for lokale ekstrema og skift i output. Dette fremgår af \autoref{tab:emg_algo}. 
 
-\iffalse
-\begin{tabular}{|c|c|c|}}
+%\iffalse
+\begin{tabular}{|c|c|c|}
 \hline 
 EMG-ekstrema [s] & Output-skift [s] & Forsinkelse [s]\\ 
 \hline 
@@ -61,10 +61,10 @@ EMG-ekstrema [s] & Output-skift [s] & Forsinkelse [s]\\
 8,99 & 9,01 & 0,02\\ 
 \hline 
 9,07 & 9,09 & 0,02\\ 
-\hline 
+%\hline 
 \label{tab:emg_algo}
 \end{tabular} 
-\fi
+%\fi
 
 \noindent
 I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet registreres som en ændring i output-signalet er mellem $0,01$ og $0,06~s$, gennemsnitligt $0,0287~s$. Denne forsinkelse kan godtages til dette, da ... \textbf{HJÆLP - hvorfor???}
