@@ -1,12 +1,23 @@
 \section{Diskussion}
-Emner til fremhævning i diskussionen:
+Formålet med projektet er at udvikle et system, som kan opsamle signaler fra kroppen, hvor der efterfølgende fortages digital signalbehandling med henblik på at datakommunikation. På baggrund af dette er der udviklet et systemet til at opsamle signaler fra rectus femoris, samt opsamle signaler fra acclerometre til at informere om henholdsvis muskelaktivitet og beregning af vinkler. Ud fra digital signalbehandling af disse signaler er der udviklet et system, som har til formål at støtte knæets omkringliggende muskler på ALS-patienters i forbindelse med udførelse af en squat-øvelse. På baggrund af teori, implementering og test af systemets enkelte blokke fremgår det at kravene til de enkelte blokke er overholdt. Der er dog nogle områder, hvor der kan overvejes andre alternativer for mulige forbedringer af hele systemet. 
+
+\subsection{Design af systemet}
+Systemet er udviklet så det meste af signalbehandlingen foregår digitalt, da fokus i forhold til studieordningen er på dette område. Hvis dette ikke var kravet for dette semester kunne det have været en fordel at nogle af blokkene var designet analogt, hvorved det vil være nemmere at finde  og rette op på eventuelle fejl i systemet. Et eksempel her på er i forhold til opsamling af EMG og accelerometer. 
+
+Den udleveret EMG-forstærker ensretninger, forstærker og envelopefiltrerer signalet, hvorved tolerance for databladet er accepteret. Ved at holde de enkelte blok hver for sig ved at implementere det analogt vil det være muligt at måle de enkelte blok og derved justere og stille krav indtil den ønskede effekt af blokken er opfyldt. Det er dog vurderet at eventuelle forsinkelser og ændringer ikke vil have den store betydning ved at anvende EMG-forstærkeren, da signalet er meget lavfrekvent og derfor ikke vil få en betydning for repræsentation af muskelaktiviteten. 
+
+For at give en bedre opløsning af accelerometeret kunne der være implementeret et gain inden opsamlingen, hvorved der opnås en bedre repræsentation af accelerometer-signalet. Dette blev ikke implementeret, da dette yderligere ville kræve en offsetjustering af signalet grundet at offset ved accelerometeret teoretisk ved den halve spændingsforsyning svarer til en påvirkning på $0~g$. Uden dette offset vil det kunne resultere i at signalet vil gå i mætningen, da dette vil kun overstige ADC'ens arbejdsområde alt efter hvor meget signalet forstærkes. 
+
+\subsection{Kommunikation}
 
 
-Databehandling vedrørende accelerometeret:
-Alternativt kunne der have været implementeret et gain foran inputtet til accelerometeret, for give en bedre opløsning og dermed en bedre repræsentation af accelerometermålingerne. Dette blev dog ikke implementeret, da dette yderligere ville kræve en offset justering, da accelerometet teoretisk giver et offset ved $0~g$ svarende til den halve forsyningsspænding. Uden offset ville signalet resikere at gå i mætning ved ADC'en, alt efter hvor meget gain der ville blive implementeret. Dette blev yderligere fravalgt da fokuset for dette semester primært er relateret til det digitale.   
 
 
+\subsection{Fordele og ulemper ved brugervenlighed}
 
-
-Alternativ sammensætning af system:
-Droppe den trådløse kommunikation, da der opnås bedre respons tid/ mindre delay. Hvad betydning har dette for systemet?? 
+%
+%
+%
+%
+%Alternativ sammensætning af system:
+%Droppe den trådløse kommunikation, da der opnås bedre respons tid/ mindre delay. Hvad betydning har dette for systemet?? 
