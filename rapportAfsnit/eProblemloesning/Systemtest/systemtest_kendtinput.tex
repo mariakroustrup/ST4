@@ -1,18 +1,18 @@
 \section{Systemtest med kendt input}
-I dette afsnit vil det samlede system blive testet, så det er muligt at se, om systemet behandler dette input, som det forventes. På denne måde bliver det også muligt at konkludere, om systemet virker. 
+I dette afsnit vil det samlede system blive testet, så det er muligt at se, om systemet behandler dette input, som det forventes. På baggrund af disse målinger er det muligt at konkludere, om systemet virker. 
 
 \subsection{Beskrivelse}
-For at teste det samlede system med et kendt input benyttes en funktionsgenerator, så der kan genereres et sinussignal på $???~Hz$ med en peak-peak-amplitude på $???~V$. På denne måde ses effekten af systemets blokke, når de er sammensat, da input-signalet og outputtet fra EMG-algoritmen herved kan sammenlignes i MATLAB. Sinussignalet kan sammenlignes med et EMG-signal, da sinussignalets frekvens og peak-peak-amplitude er nær ved, hvad der kunne forventes af EMG-signalet. 
+For at teste det samlede system med et kendt input benyttes en funktionsgenerator, så der kan genereres et sinussignal på $500~Hz$ med en peak-peak-amplitude på $4~mV$. På denne måde ses effekten af systemets blokke, når de er sammensat, da input-signalet og outputtet fra EMG-algoritmen herved kan sammenlignes i MATLAB. Sinussignalet kan sammenlignes med et EMG-signal, da sinussignalets frekvens og peak-peak-amplitude er nær ved, hvad der kunne forventes af EMG-signalet. 
 
 Systemet testes ved at måle systemets output i 10 sekunder, mens der benyttes et sinussignal som input, mens spænding, der almindeligvis kommer ind via accelerometrene, varieres således, at den overskrider de spændinger, der tilsvarer $90-180^{\circ}$. 
 Dermed kan udregnes et forventet output til det valgte input, hvilke kan sammenholdes med det reelle output. Afvigelsen herfra vil herefter kunne beregnes. 
  
 \subsection{Resultater af test}
-Fra testen plottes og visualiseres systemets input og output i MATLAB på \autoref{fig:test_kendtinput}. 
+Fra testen plottes og visualiseres systemets input som var et sinussignal og output i MATLAB på \autoref{fig:test_kendtinput}. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/blackbox.jpg}
+\includegraphics[width=0.4\textwidth]{figures/kontrol_test_sinus.jpg}
 \caption{???}
 \label{fig:test_kendtinput}
 \end{figure}
