@@ -28,3 +28,6 @@ Ligeledes kan vinklen fra accelerometeret på tibia udregnes til $41,429^{\circ}
 47,627^{\circ}+41,429^{\circ}=89,056^{\circ}
 \end{equation}
 Dette giver en afvigelse på $-1,049~\%$ fra $90^{\circ}$. Denne afvigelse kan godtages til dette systems formål, da der ikke er nogen fare forbundet med, at systemet overskrider de opstillede grænser for vinkler med $-1,049~\%$.
+
+\noindent
+En yderligere test er foretaget for at undersøge forsinkelsen af vinkelberegning. Denne test er udført ved at definere en debug-pin, hvor pinen ved funktionskaldet sættes høj og lav efterfølgende. For at illustrere disse målinger tilsluttes et oscilloskop pinen, hvorved der måles hvornår denne er høj. Resultatet af denne test gav en forsinkelse på  $3.6~\mu~s$. Dette betragtes ikke som værende af signifikant betydning, hvorfor denne forsinkelse accepteres.
