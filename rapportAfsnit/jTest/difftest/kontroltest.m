@@ -22,17 +22,12 @@ set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
 
 set(hAx(2), 'YLim',[-11 11]);
 set(get(hAx(2),'Ylabel'),'string','Digitalt output')
+box off 
 
 ymax = 10;
 ymin = 0;
-imax = 10;
+imax = 11;
 imin = 0;
-
-ymax2 = -10;
-ymin2 = 0;
-imax2 = 10;
-imin2 = 0;
-
 
 figure
 plot(t(1:1000), sinus(1:1000));
