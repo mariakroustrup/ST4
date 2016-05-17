@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -302,12 +302,6 @@ M.~Clifford and L.~Gomez.
 Cypress.
 \newblock \emph{PSoC 4 Sequencing Successive Approximation ADC}.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{b}}.
-\newblock URL \url{http://www.cypress.com/file/135111/download}.
-
-\bibitem[Cypress(2014{\natexlab{c}})]{cypresspsoc42014}
-Cypress.
-\newblock \emph{Sequencing Succesive Approximation ADC}.
-\newblock Cypress Semiconductor Corporation, 2014{\natexlab{c}}.
 \newblock URL \url{http://www.cypress.com/file/135111/download}.
 
 \bibitem[Townsend(2014)]{townsend2014}
