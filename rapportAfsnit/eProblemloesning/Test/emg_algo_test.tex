@@ -1,15 +1,15 @@
 \subsection{EMG-algoritme}
-For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet, der vælges til at være hhv. $-10~V$ eller $10~V$, hvis muskelsignalet er faldende eller stigende, illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
+For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10~V$ eller $10~V$, hvis muskelsignalet er faldende eller stigende. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/EMG_algo_test}
-\caption{Den blå graf illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf illustrerer, om muskelsignalet er hhv. faldende eller stigende ved enten at udsende et signal på $-10~V$ eller $10~V$.}
+\caption{Den blå graf illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf illustrerer, om muskelsignalet er henholdsvis faldende eller stigende ved enten at udsende et signal på $-10~V$ eller $10~V$.}
 \label{fig:emg_algo_test}
 \end{figure}
 
 \noindent
-Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne, hvor outputtet skifter spænding ved at udregne en forsinkelse i sekunder ud fra differensen på tidspunkterne for lokale ekstrema og skift i output. Dette fremgår af \autoref{tab:emg_algo}. 
+Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne, hvor outputtet skifter i spænding ved at udregne en forsinkelse i sekunder ud fra differensen på tidspunkterne for det lokale ekstrema og skift i output. Dette fremgår af \autoref{tab:emg_algo}. 
 
 \begin{table}[H]
 \centering
@@ -64,9 +64,13 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 9,07 & 9,09 & 0,02\\ 
 \hline 
 \end{tabular} 
+\caption{Tabel over ekstrema, outputskift og differensen mellem disse, der er noteret som forsinkelsen.}
 \label{tab:emg_algo}
-\caption{Tabel over ekstrema, outputskift og differensen mellem disse, der noteres som forsinkelsen.}
 \end{table}
 
 \noindent
-I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet registreres som en ændring i output-signalet er mellem $0,01$ og $0,06~s$, gennemsnitligt $0,0287~s$. Denne forsinkelse kan godtages til dette, da gennemsnitligt $28,7 ms$ ikke er betydeligt i forhold til den samlede forsinkelse på ??? \textbf{SKRIV MERE HER}.
+I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet registreres som en ændring i output-signalet er mellem $0,01$ og $0,06~s$. Den gennemsnitlige forsinkelse er på $0,0261~s$. Denne forsinkelse kan godtages til dette, da gennemsnitligt $26,1~ms$ ikke er betydeligt i forhold til den samlede forsinkelse på $0,832~\mu~s$
+
+
+
+ \textbf{SKRIV MERE HER}.
