@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
-Warning--I didn't find a database entry for "aalborguniversitet2014"
 Warning--I didn't find a database entry for "escamilla"
 Warning--I didn't find a database entry for "atmel2002"
 Warning--I didn't find a database entry for "cypress42015"
@@ -11,45 +10,45 @@ Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
 Warning--empty publisher in morre2003
 Warning--empty year in cypresspsoc420152
-You've used 50 entries,
+You've used 51 entries,
             2481 wiz_defined-function locations,
-            807 strings with 12108 characters,
-and the built_in function-call counts, 14310 in all, are:
-= -- 1260
-> -- 606
-< -- 42
-+ -- 271
-- -- 170
-* -- 886
-:= -- 2416
-add.period$ -- 189
-call.type$ -- 50
-change.case$ -- 66
-chr.to.int$ -- 49
-cite$ -- 54
-duplicate$ -- 865
-empty$ -- 1308
-format.name$ -- 242
-if$ -- 2984
+            810 strings with 12317 characters,
+and the built_in function-call counts, 14551 in all, are:
+= -- 1282
+> -- 613
+< -- 43
++ -- 275
+- -- 172
+* -- 899
+:= -- 2456
+add.period$ -- 192
+call.type$ -- 51
+change.case$ -- 67
+chr.to.int$ -- 50
+cite$ -- 55
+duplicate$ -- 881
+empty$ -- 1331
+format.name$ -- 245
+if$ -- 3033
 int.to.chr$ -- 2
-int.to.str$ -- 51
+int.to.str$ -- 52
 missing$ -- 38
-newline$ -- 297
-num.names$ -- 150
-pop$ -- 403
+newline$ -- 302
+num.names$ -- 153
+pop$ -- 410
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 51
 quote$ -- 0
-skip$ -- 512
+skip$ -- 523
 stack$ -- 0
-substring$ -- 100
-swap$ -- 130
+substring$ -- 102
+swap$ -- 133
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 317
+type$ -- 324
 warning$ -- 4
-while$ -- 100
+while$ -- 102
 width$ -- 0
-write$ -- 693
-(There were 8 warnings)
+write$ -- 705
+(There were 7 warnings)

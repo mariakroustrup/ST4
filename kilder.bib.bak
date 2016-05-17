@@ -530,16 +530,6 @@ G. D. Borasio},
   Timestamp                = {2016.02.29}
 }
 
-@Manual{aalborguniversitet2014,
-  Title                    = {Studieordning for bacheloruddannelsen i Sundhedsteknologi},
-  Author                   = {Studienævnet for Sundhed, Teknologi og Idræt, Aalborg Universitet},
-  Year                     = {2014},
-
-  Owner                    = {signehk},
-  Timestamp                = {2016.05.16},
-  Url                      = {http://www.smh.aau.dk/digitalAssets/69/69987_bsc-sundhedsteknologi_2012_ver2_2014.pdf}
-}
-
 @Manual{advancertech2013,
   Title                    = {Three-lead Differential Muscle/Electromyography Sensor for Microcontroller Application},
   Author                   = {Advancer Technologies},
