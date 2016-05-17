@@ -26,7 +26,7 @@ box off
 
 ymax = 10;
 ymin = 0;
-imax = 11;
+imax = 10;
 imin = 0;
 
 figure
