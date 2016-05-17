@@ -2,7 +2,7 @@
 Formålet med dette projekt er at udvikle et system, som kan opsamle signaler fra kroppen, hvor der efterfølgende foretages digital signalbehandling med henblik på datakommunikation. På baggrund af dette er der udviklet et systemet til at opsamle signaler fra rectus femoris, samt signaler fra accelerometrer til at informere om henholdsvis muskelaktivitet og vinkelberegning. Ud fra digital signalbehandling af disse signaler er der udviklet et system, som har til formål at støtte knæets omkringliggende muskler hos ALS-patienters i forbindelse med udførelsen af en squat-øvelse. På baggrund af teori, implementering og test af systemets enkelte blokke fremgår det, at kravene til de enkelte blokke er overholdt. Der er dog nogle områder, hvor andre alternativer kan overvejes for mulige forbedringer af hele systemet. 
 
 \subsection{Implementering}
-Systemet er udviklet, så størstedelen af signalbehandlingen foregår digitalt, da fokus i forhold til studieordningen er på dette område. Hvis dette ikke havde været et krav for dette semester, kunne det have været en fordel, at nogle af blokkene var designet analogt, hvorved det kunne være nemmere at finde samt rette op på eventuelle fejl i systemet. Et eksempel herpå er i forhold til opsamling af signaler fra EMG og accelerometrer. 
+Systemet er udviklet, så størstedelen af signalbehandlingen foregår digitalt, da dette er fokus i forhold til studieordningen. Hvis dette ikke havde været et krav for dette semester, kunne det have været en fordel, at nogle af blokkene var designet analogt, hvorved det kunne være nemmere at finde samt rette op på eventuelle fejl i systemet. Et eksempel herpå er i forhold til opsamling af signaler fra EMG og accelerometrer. 
 
 Den udleverede EMG-forstærker ensretter, forstærker og envelopefiltrerer signalet, hvorved tolerancen oplyst i databladet er accepteret. Ved at holde de enkelte blokke hver for sig ved at implementere det analogt, vil det være muligt at måle de enkelte blokke og derved justere og opstille krav indtil den ønskede effekt af blokken er opfyldt. Det er dog vurderet, at eventuelle forsinkelser og ændringer ikke vil have den store betydning ved at anvende EMG-forstærkeren, da signalet er meget lavfrekvent og det vil derfor ikke have en betydning for repræsentation af muskelaktiviteten. 
 
@@ -15,17 +15,16 @@ I projektet er der valgt at anvende trådløs kommunikation, da dette var en mul
 
 
 \subsection{Batteridrevet}
-På nuværende tidspunkt er systemet batteridrevet, hvilket giver noget med at undersøge batteriets leve tid samt hvordan systemet kan bliver mere effektiv i forhold til ikke at bruge at batteri???
+På nuværende tidspunkt er systemet batteridrevet, hvilket giver noget med at undersøge batteriets levetid samt hvordan systemet kan blive mere effektivt i forhold til ikke at bruge at batteri???
 ... skriv noget mere...
 
 \subsection{Brugervenlighed}
-Systemet vil ikke have nogen gavnlig effekt på ALS-patienter på nuværende tidspunkt, da systemet ikke er færdig udviklet. En prototype af systemet ved anvendelse af et exoskelet vil være med til at støtte musklerne omkring knæet under udførelse af squat-øvelse. Systemet vil dog ikke kunne have nogen gavnlig effekt set i forhold til ALS-patienter, hvorfor systemet ikke er særlig brugervenligt. 
+Systemet vil ikke være anvendelig for ALS-patienter på nuværende tidspunkt, da systemet ikke er færdigudviklet. En prototype af systemet ved anvendelse af et exoskelet vil støtte musklerne omkring knæet under udførelse af squat-øvelse. 
 
-På baggrund af det udviklede systemet vil det være muligt at videre udvikle systemet, så det kan støtte benmuskulaturen under gang, hvorved det vil være mere essentielt at anvende for ALS-patienter. For at kunne udvikle sådan et system skal der tages højde og undersøges flere ukendte parametre, som kan variere fra patient til patient. 
+På baggrund af det udviklede systemet vil det være muligt at videreudvikle systemet, så det kan støtte benmuskulaturen under gang, hvorved det vil være mere essentielt at anvende for ALS-patienter. For at kunne udvikle sådan et system skal flere ukendte parametre, som kan variere fra patient til patient undersøges. 
 
-For at systemet er mere brugervenlig er der implementeret LED'er som viser brugeren, hvornår knæet har bevæget sig over eller under den valgte vinkel på henholdsvis $180^{\circ}$ og $90^{\circ}$. For at optimere brugervenligheden kunne dette også gøres ved at indføre vibration som oplyser patienten om dette, hvilket vil være mere anvendeligt, da patienten ikke kan ses LED'erne under øvelsen.
+For at systemet er mere brugervenligt, er der implementeret LED'er som viser brugeren, hvornår knæet har bevæget sig over eller under den valgte vinkel på henholdsvis $180^{\circ}$ og $90^{\circ}$. For at optimere brugervenligheden kunne dette også gøres ved at indføre vibration, som oplyser patienten om dette, hvilket vil være mere optimalt, da patienten ikke kan ses LED'erne under øvelsen.
 
-Derudover har systemet en start- og stopfunktion, hvilket tillader at brugeren selv har mulighed for at bestemme hvornår øvelsen skal starte og stoppe. .... skriv noget mere ....
-
+Derudover har systemet en start- og stopfunktion. Dette kan både være en fordel og ulempe for brugeren. Det vil være nødvendigt at skulle starte og stoppe hver gang systemet skal anvendes, hvilket kan være til gene for brugeren over en længere tidsperiode. Det vil være fordelagtigt, da gør det muligt for brugeren selv at bestemme, hvornår øvelsen skal starte og stoppe.
 
 \subsection{Samlet systemtest}
