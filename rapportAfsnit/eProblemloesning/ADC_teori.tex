@@ -15,11 +15,12 @@ Kvantificering sker ved diskretisering af amplituden. Det oprindelige signals am
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/problemloesning/ADC_bit}
-\caption{Illustration af betydningen af bits. Ved en større bitværdi vil signalet blive repræsenteres bedre.}
+\includegraphics[width=0.6\textwidth]{figures/problemloesning/ADC_bit}
+\caption{Illustration af betydningen af bits. Ved en større bitværdi vil signalet blive repræsenteres bedre\citep{adc2010}.}
 \label{fig:ADC_bit}
 \end{figure}
 
+\noindent
 En ADC med en opløsning på 12-bit inddeles i ${2}^{12}$, svarende til 4096 niveauer. Dette giver en repræsentation af værdier fra 0 til 4096 eller fra -2048 til 2047.  Den sensitivitet som ADC'ens sensitivitet kan opnå, omtales Least Significant Bit (LSB) og bestemmes ud fra \autoref{equ:LSB}, hvor Full Scale voltage Range (FSR) er det totale spændingsområde for ADC'en angivet i $V$, og $n$ er antallet af bits i ADC'en \citep{webster1998, wolf2004}.
 
 \begin{equation} \label{equ:LSB}

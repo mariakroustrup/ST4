@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -197,10 +197,10 @@ B.~J. Schoenfeld.
 \newblock \emph{Journal of Strength and Conditioning Research}, 2010.
 \newblock \doi{10.1519/JSC.0b013e3181bac2d7}.
 
-\bibitem[Cypress(2015)]{cypresspsoc2015}
+\bibitem[Cypress(2015{\natexlab{a}})]{cypresspsoc2015}
 Cypress.
 \newblock \emph{CY8CKIT-142 PSoC 4 BLE module}.
-\newblock Cypress Semiconductor Corporation, 2015.
+\newblock Cypress Semiconductor Corporation, 2015{\natexlab{a}}.
 \newblock URL \url{http://www.cypress.com/file/140711/download}.
 
 \bibitem[Cypress(2014{\natexlab{a}})]{cypressguide2014}
@@ -255,6 +255,12 @@ S.~Wolf and R.~F.~M. Smith.
 \newblock Prentice Hall, 2004.
 \newblock \doi{978-0130421821}.
 
+\bibitem[Bil(2010)]{adc2010}
+\emph{Analog to Digital Converter}.
+\newblock Bildr, 2010.
+\newblock URL
+  \url{http://wiki.bildr.org/index.php?title=Analog_to_Digital_Converter_(ADC)}.
+
 \bibitem[Parr and Blandford(2012)]{blandford2012}
 J.~Parr and D.~Blandford.
 \newblock \emph{Introduction to Digital Signal Processing}.
@@ -272,6 +278,12 @@ J.~W. Nilsson and S.~A. Riedel.
 \newblock \emph{Electric Circuits}, volume~10.
 \newblock Pearson Education Limited, 2015.
 \newblock \doi{1-292-06054-9}.
+
+\bibitem[Atmel(2002)]{atmel2002}
+Atmel.
+\newblock \emph{AVRR222: 8-point Moving Average Filter}.
+\newblock Atmel Coropration, 2002.
+\newblock URL \url{http://www.atmel.com/Images/doc0940.pdf}.
 
 \bibitem[Gupta(2013)]{gupta2013}
 N.~Gupta.
@@ -310,6 +322,12 @@ Cypress.
 \newblock \emph{PSoC 4 Sequencing Successive Approximation ADC}.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{b}}.
 \newblock URL \url{http://www.cypress.com/file/135111/download}.
+
+\bibitem[Cypress(2015{\natexlab{b}})]{cypresspsoc42015}
+Cypress.
+\newblock \emph{CY8CKIT-043 PSoC® 4 M-Series Prototyping Kit Guide}.
+\newblock Cypress Semiconductor Corporation, 2015{\natexlab{b}}.
+\newblock URL \url{http://www.cypress.com/file/193101/download}.
 
 \bibitem[Townsend(2014)]{townsend2014}
 K.~Townsend.

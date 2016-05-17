@@ -5,7 +5,7 @@ I dette afsnit fremgår implementeringen af systemets blokke fra \autoref{sec:bl
 Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt ved at trykke på PSoC'ens user button, som får en grøn LED til at lyse og derefter igangsætter de efterfølgende funktioner. Dette igangsætter et timer interrupt, der tæller inden for XX interval. Herefter sker der en intialisering af systemet.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/implementering/overordnet_flow.png}
+\includegraphics[width=0.8\textwidth]{figures/implementering/overordnet_flow.png}
 \caption{Overordnet flowdigram som viser opbyggelsen af systemet}
 \label{fig:overordnet_flow}
 \end{figure}
@@ -16,7 +16,7 @@ Det analoge signal, som optages af de implemterende sensorer skal konverteres fr
 I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sker opsætningen af ADC'en. Efter modtagelsen af det analoge input sker en A/D-konvertering, hvor det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobes og signalet offsetjusteres. Efter setup skal det vurderes, hvorvidt inputtet befinder sig inden for en spænding svarende til 0 til 90 graders vinkel, hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/implementering/initialiserende_flow.png}
+\includegraphics[width=0.8\textwidth]{figures/implementering/initialiserende_flow.png}
 \caption{Initialiserende flowdigram som viser opbyggelsen af den intialiserende del af systemet}
 \label{fig:initialiserende_flow}
 \end{figure}
@@ -25,7 +25,7 @@ I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sk
 EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. Hvis inputtet fra accelerometret svarer til en spænding mellem 0 og 90 grader vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. Én sample sammenlignes med den efterfølgende sample for at vurdere, om muskelaktiviteten er stigende eller faldende. Hvis muskelaktiviteten er stigende, vil vinklen blive større, og herved slutter EMG-algoritmen og sender et input til prototypen med BLE, hvorved en fleksion af knæleddet påbegyndes. Hvis muskelaktiviteten er faldende, vil vinklen blive mindre, hvilket ligeledes slutter EMG-algoritmen og sender et input videre til BLE, hvorved en ektension af knæleddet påbegyndes. 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/implementering/EMG_algo.png}
+\includegraphics[width=1.0\textwidth]{figures/implementering/EMG_algo.png}
 \caption{EMG-algoritmen viser opbyggelsen af EMG-algortimens del af systemet.}
 \label{fig:Emg_algo}
 \end{figure}

@@ -4,51 +4,49 @@ The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
 Warning--I didn't find a database entry for "escamilla"
-Warning--I didn't find a database entry for "atmel2002"
-Warning--I didn't find a database entry for "cypress42015"
 Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
 Warning--empty publisher in morre2003
 Warning--empty year in cypresspsoc420152
-You've used 51 entries,
+You've used 54 entries,
             2481 wiz_defined-function locations,
-            810 strings with 12317 characters,
-and the built_in function-call counts, 14551 in all, are:
-= -- 1282
-> -- 613
-< -- 43
-+ -- 275
-- -- 172
-* -- 899
-:= -- 2456
-add.period$ -- 192
-call.type$ -- 51
-change.case$ -- 67
-chr.to.int$ -- 50
-cite$ -- 55
-duplicate$ -- 881
-empty$ -- 1331
-format.name$ -- 245
-if$ -- 3033
-int.to.chr$ -- 2
-int.to.str$ -- 52
+            820 strings with 12624 characters,
+and the built_in function-call counts, 15275 in all, are:
+= -- 1356
+> -- 627
+< -- 45
++ -- 286
+- -- 176
+* -- 943
+:= -- 2569
+add.period$ -- 203
+call.type$ -- 54
+change.case$ -- 70
+chr.to.int$ -- 52
+cite$ -- 58
+duplicate$ -- 929
+empty$ -- 1403
+format.name$ -- 251
+if$ -- 3187
+int.to.chr$ -- 3
+int.to.str$ -- 55
 missing$ -- 38
-newline$ -- 302
-num.names$ -- 153
-pop$ -- 410
+newline$ -- 319
+num.names$ -- 159
+pop$ -- 432
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 54
 quote$ -- 0
-skip$ -- 523
+skip$ -- 547
 stack$ -- 0
-substring$ -- 102
-swap$ -- 133
+substring$ -- 109
+swap$ -- 144
 text.length$ -- 4
-text.prefix$ -- 0
+text.prefix$ -- 1
 top$ -- 0
-type$ -- 324
+type$ -- 345
 warning$ -- 4
-while$ -- 102
+while$ -- 106
 width$ -- 0
-write$ -- 705
-(There were 7 warnings)
+write$ -- 745
+(There were 5 warnings)
