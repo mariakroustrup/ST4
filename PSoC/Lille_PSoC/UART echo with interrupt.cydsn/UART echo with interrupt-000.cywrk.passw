@@ -245,41 +245,6 @@
 <VisibleNodeIds>
 <v>UART echo with interrupt-000</v>
 <v>UART echo with interrupt-000\UART echo with interrupt</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\BLUE_LED.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\BLUE_LED_PM.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\CyDMA.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_BOOT.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_PM.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_rx.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_RX_ISR.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_rx_PM.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_SCBCLK.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_SPI_UART.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_SPI_UART_INT.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_tx.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_tx_PM.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_UART.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BLE_UART_BOOT.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_BOOT.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_PM.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_rx.lst</v>
-<v>UART echo with interrupt-000\UART echo with interrupt\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_RX_ISR.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -322,12 +287,15 @@
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
 </dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\main.c" />
-</OpenDocs>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

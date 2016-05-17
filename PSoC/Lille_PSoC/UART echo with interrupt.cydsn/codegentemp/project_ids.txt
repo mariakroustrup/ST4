@@ -1,0 +1,5 @@
+C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\UART echo with interrupt.cyprj|a2badd33-12da-4358-aa75-da0c5f99851e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|794ddc5b-eeb4-4fdb-9518-9f7f45bfc6c1
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|33aebdae-1f1c-4d37-a418-b6b6a73f7985
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f082295b-0344-46fe-b0d9-f2756194e879
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|be9c7cfa-027f-4183-9e3d-98821441b2b5

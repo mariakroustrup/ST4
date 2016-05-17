@@ -121,11 +121,11 @@ CY_ISR(RX_interrupt)
         current_byte = LOWBYTE;                     // Prepare to receive LOW byte on next interrupt
                 
         StartMeasuring
-        value_out[1] = value_out[0];
-           low_pass_new = low_pass_filter(value_in);
-           value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
-            //avg_new = mavg_filter(value_in);   
-            //value_out[0] = avg_new; 
+            value_out[1] = value_out[0];
+            //low_pass_new = low_pass_filter(value_in);
+            //value_out[0] = low_pass_new;                     // Value_in for at genskabe signalet
+            avg_new = mavg_filter(value_in);   
+            value_out[0] = avg_new; 
         
         StopMeasuring
         
@@ -142,8 +142,8 @@ CY_ISR(RX_interrupt)
           //UART_UartPutChar(avg_new);
           //UART_UartPutChar(avg_new>>8);
       
-        UART_UartPutChar(low_pass_new);
-        UART_UartPutChar(low_pass_new>>8); 
+        UART_UartPutChar(avg_new);
+        UART_UartPutChar(avg_new>>8); 
     }
 }
 

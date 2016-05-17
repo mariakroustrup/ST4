@@ -1,4 +1,4 @@
-comport = 'COM5'; % Vælg porten til jeres egen PSoC enhed
+comport = 'COM3'; % Vælg porten til jeres egen PSoC enhed
 
 serial_port = serial(comport, 'TimeOut', 2, 'BaudRate', 115200);
 

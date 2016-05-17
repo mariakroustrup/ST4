@@ -3,7 +3,7 @@ load Nedogop1
 %load matlab
 close all
 
-data=data(7,1:1000)*1000; %Ved accelerometer vælg måling 2. Ved EMG vælg måling 7
+data=data(2,1:1000)*1000; %Ved accelerometer vælg måling 2. Ved EMG vælg måling 7
 data=data-data(1);
 
 L = length(data);
@@ -14,7 +14,7 @@ set(Central_port,'baudrate',115200)
 
 fopen(Central_port)
 
-M = 4;
+M = 10;
 tic 
 for i = 0:M:L-1,
     fwrite(Central_port,data(i+1:i+M),'int16');

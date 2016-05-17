@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -52,26 +52,28 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
   37 0008 1A68     		ldr	r2, [r3]
   38 000a 1A60     		str	r2, [r3]
   13:.\main.c      ****     
-  14:.\main.c      ****     UART_BLE_UartPutChar(ch);
-  39              		.loc 1 14 0
+  14:.\main.c      ****     /* her kan vi kode!!!!!!!!!!!!!!! */
+  15:.\main.c      ****     
+  16:.\main.c      ****     UART_BLE_UartPutChar(ch);
+  39              		.loc 1 16 0
   40 000c FF23     		mov	r3, #255
   41 000e 1840     		and	r0, r3
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 2
+
+
   42              	.LVL1:
   43 0010 FFF7FEFF 		bl	UART_BLE_SpiUartWriteTxData
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 2
-
-
   44              	.LVL2:
-  15:.\main.c      ****     BLUE_LED_Write(~BLUE_LED_Read());
-  45              		.loc 1 15 0
+  17:.\main.c      ****     BLUE_LED_Write(~BLUE_LED_Read());
+  45              		.loc 1 17 0
   46 0014 FFF7FEFF 		bl	BLUE_LED_Read
   47              	.LVL3:
   48 0018 C043     		mvn	r0, r0
   49 001a C0B2     		uxtb	r0, r0
   50 001c FFF7FEFF 		bl	BLUE_LED_Write
   51              	.LVL4:
-  16:.\main.c      **** }
-  52              		.loc 1 16 0
+  18:.\main.c      **** }
+  52              		.loc 1 18 0
   53              		@ sp needed
   54 0020 08BD     		pop	{r3, pc}
   55              	.L3:
@@ -89,38 +91,38 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
   67              		.type	BLE_RX_interrupt, %function
   68              	BLE_RX_interrupt:
   69              	.LFB37:
-  17:.\main.c      **** 
-  18:.\main.c      **** CY_ISR(BLE_RX_interrupt)
-  19:.\main.c      **** {
-  70              		.loc 1 19 0
+  19:.\main.c      **** 
+  20:.\main.c      **** CY_ISR(BLE_RX_interrupt)
+  21:.\main.c      **** {
+  70              		.loc 1 21 0
   71              		.cfi_startproc
   72 0000 08B5     		push	{r3, lr}
   73              		.cfi_def_cfa_offset 8
   74              		.cfi_offset 3, -8
   75              		.cfi_offset 14, -4
-  20:.\main.c      ****     uint8 ch = UART_BLE_UartGetChar();
-  76              		.loc 1 20 0
+  22:.\main.c      ****     uint8 ch = UART_BLE_UartGetChar();
+  76              		.loc 1 22 0
   77 0002 FFF7FEFF 		bl	UART_BLE_UartGetChar
   78              	.LVL5:
-  21:.\main.c      ****     UART_BLE_ClearRxInterruptSource(UART_BLE_GetRxInterruptSource());
-  79              		.loc 1 21 0
+  23:.\main.c      ****     UART_BLE_ClearRxInterruptSource(UART_BLE_GetRxInterruptSource());
+  79              		.loc 1 23 0
   80 0006 044B     		ldr	r3, .L5
   81 0008 1A68     		ldr	r2, [r3]
   82 000a 1A60     		str	r2, [r3]
-  22:.\main.c      ****     UART_UartPutChar(ch);
-  83              		.loc 1 22 0
+  24:.\main.c      ****     UART_UartPutChar(ch);
+  83              		.loc 1 24 0
   84 000c FF23     		mov	r3, #255
   85 000e 1840     		and	r0, r3
   86              	.LVL6:
   87 0010 FFF7FEFF 		bl	UART_SpiUartWriteTxData
   88              	.LVL7:
-  23:.\main.c      **** }
-  89              		.loc 1 23 0
+  25:.\main.c      **** }
+  89              		.loc 1 25 0
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 3
+
+
   90              		@ sp needed
   91 0014 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 3
-
-
   92              	.L6:
   93 0016 C046     		.align	2
   94              	.L5:
@@ -136,51 +138,51 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  104              		.type	main, %function
  105              	main:
  106              	.LFB38:
-  24:.\main.c      **** 
-  25:.\main.c      **** int main()
-  26:.\main.c      **** {
- 107              		.loc 1 26 0
+  26:.\main.c      **** 
+  27:.\main.c      **** int main()
+  28:.\main.c      **** {
+ 107              		.loc 1 28 0
  108              		.cfi_startproc
  109 0000 08B5     		push	{r3, lr}
  110              		.cfi_def_cfa_offset 8
  111              		.cfi_offset 3, -8
  112              		.cfi_offset 14, -4
-  27:.\main.c      ****     CyGlobalIntEnable;                  /* Enable global interrupts */
- 113              		.loc 1 27 0
- 114              	@ 27 ".\main.c" 1
+  29:.\main.c      ****     CyGlobalIntEnable;                  /* Enable global interrupts */
+ 113              		.loc 1 29 0
+ 114              	@ 29 ".\main.c" 1
  115 0002 62B6     		CPSIE   i
  116              	@ 0 "" 2
-  28:.\main.c      ****     UART_RX_ISR_StartEx(RX_interrupt);  /* Set interrupt address */
- 117              		.loc 1 28 0
+  30:.\main.c      ****     UART_RX_ISR_StartEx(RX_interrupt);  /* Set interrupt address */
+ 117              		.loc 1 30 0
  118              		.code	16
  119 0004 0648     		ldr	r0, .L8
  120 0006 FFF7FEFF 		bl	UART_RX_ISR_StartEx
  121              	.LVL8:
-  29:.\main.c      ****     UART_BLE_RX_ISR_StartEx(BLE_RX_interrupt);  /* Set interrupt address */
- 122              		.loc 1 29 0
+  31:.\main.c      ****     UART_BLE_RX_ISR_StartEx(BLE_RX_interrupt);  /* Set interrupt address */
+ 122              		.loc 1 31 0
  123 000a 0648     		ldr	r0, .L8+4
  124 000c FFF7FEFF 		bl	UART_BLE_RX_ISR_StartEx
  125              	.LVL9:
-  30:.\main.c      ****     UART_Start();                       /* Start UART */
- 126              		.loc 1 30 0
+  32:.\main.c      ****     UART_Start();                       /* Start UART */
+ 126              		.loc 1 32 0
  127 0010 FFF7FEFF 		bl	UART_Start
  128              	.LVL10:
-  31:.\main.c      ****     UART_BLE_Start();                       /* Start UART */
- 129              		.loc 1 31 0
+  33:.\main.c      ****     UART_BLE_Start();                       /* Start UART */
+ 129              		.loc 1 33 0
  130 0014 FFF7FEFF 		bl	UART_BLE_Start
  131              	.LVL11:
-  32:.\main.c      ****     CySysPmSleep();                     /* Enter Sleep mode */
- 132              		.loc 1 32 0
+  34:.\main.c      ****     CySysPmSleep();                     /* Enter Sleep mode */
+ 132              		.loc 1 34 0
  133 0018 FFF7FEFF 		bl	CySysPmSleep
  134              	.LVL12:
-  33:.\main.c      ****     return 0;
-  34:.\main.c      **** }
- 135              		.loc 1 34 0
+  35:.\main.c      ****     return 0;
+  36:.\main.c      **** }
+ 135              		.loc 1 36 0
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 4
+
+
  136 001c 0020     		mov	r0, #0
  137              		@ sp needed
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 4
-
-
  138 001e 08BD     		pop	{r3, pc}
  139              	.L9:
  140              		.align	2
@@ -208,25 +210,25 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  162 0006 00000000 		.4byte	.Ldebug_abbrev0
  163 000a 04       		.byte	0x4
  164 000b 01       		.uleb128 0x1
- 165 000c D5010000 		.4byte	.LASF31
+ 165 000c D8010000 		.4byte	.LASF31
  166 0010 01       		.byte	0x1
- 167 0011 E2000000 		.4byte	.LASF32
- 168 0015 4B000000 		.4byte	.LASF33
+ 167 0011 98000000 		.4byte	.LASF32
+ 168 0015 DA000000 		.4byte	.LASF33
  169 0019 00000000 		.4byte	.Ldebug_ranges0+0
  170 001d 00000000 		.4byte	0
  171 0021 00000000 		.4byte	.Ldebug_line0
  172 0025 02       		.uleb128 0x2
  173 0026 01       		.byte	0x1
  174 0027 06       		.byte	0x6
- 175 0028 90020000 		.4byte	.LASF0
+ 175 0028 93020000 		.4byte	.LASF0
  176 002c 02       		.uleb128 0x2
  177 002d 01       		.byte	0x1
  178 002e 08       		.byte	0x8
- 179 002f AA000000 		.4byte	.LASF1
+ 179 002f 60000000 		.4byte	.LASF1
  180 0033 02       		.uleb128 0x2
  181 0034 02       		.byte	0x2
  182 0035 05       		.byte	0x5
- 183 0036 63020000 		.4byte	.LASF2
+ 183 0036 66020000 		.4byte	.LASF2
  184 003a 02       		.uleb128 0x2
  185 003b 02       		.byte	0x2
  186 003c 07       		.byte	0x7
@@ -234,22 +236,22 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  188 0041 02       		.uleb128 0x2
  189 0042 04       		.byte	0x4
  190 0043 05       		.byte	0x5
- 191 0044 82020000 		.4byte	.LASF4
+ 191 0044 85020000 		.4byte	.LASF4
  192 0048 02       		.uleb128 0x2
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 5
+
+
  193 0049 04       		.byte	0x4
  194 004a 07       		.byte	0x7
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 5
-
-
- 195 004b B8000000 		.4byte	.LASF5
+ 195 004b 6E000000 		.4byte	.LASF5
  196 004f 02       		.uleb128 0x2
  197 0050 08       		.byte	0x8
  198 0051 05       		.byte	0x5
- 199 0052 7B010000 		.4byte	.LASF6
+ 199 0052 7E010000 		.4byte	.LASF6
  200 0056 02       		.uleb128 0x2
  201 0057 08       		.byte	0x8
  202 0058 07       		.byte	0x7
- 203 0059 0D010000 		.4byte	.LASF7
+ 203 0059 C3000000 		.4byte	.LASF7
  204 005d 03       		.uleb128 0x3
  205 005e 04       		.byte	0x4
  206 005f 05       		.byte	0x5
@@ -257,29 +259,29 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  208 0064 02       		.uleb128 0x2
  209 0065 04       		.byte	0x4
  210 0066 07       		.byte	0x7
- 211 0067 00010000 		.4byte	.LASF8
+ 211 0067 B6000000 		.4byte	.LASF8
  212 006b 04       		.uleb128 0x4
- 213 006c CA000000 		.4byte	.LASF9
+ 213 006c 80000000 		.4byte	.LASF9
  214 0070 02       		.byte	0x2
  215 0071 3801     		.2byte	0x138
  216 0073 2C000000 		.4byte	0x2c
  217 0077 04       		.uleb128 0x4
- 218 0078 EB000000 		.4byte	.LASF10
+ 218 0078 A1000000 		.4byte	.LASF10
  219 007c 02       		.byte	0x2
  220 007d 3A01     		.2byte	0x13a
  221 007f 48000000 		.4byte	0x48
  222 0083 02       		.uleb128 0x2
  223 0084 04       		.byte	0x4
  224 0085 04       		.byte	0x4
- 225 0086 A4000000 		.4byte	.LASF11
+ 225 0086 5A000000 		.4byte	.LASF11
  226 008a 02       		.uleb128 0x2
  227 008b 08       		.byte	0x8
  228 008c 04       		.byte	0x4
- 229 008d DB000000 		.4byte	.LASF12
+ 229 008d 91000000 		.4byte	.LASF12
  230 0091 02       		.uleb128 0x2
  231 0092 01       		.byte	0x1
  232 0093 08       		.byte	0x8
- 233 0094 8B020000 		.4byte	.LASF13
+ 233 0094 8E020000 		.4byte	.LASF13
  234 0098 04       		.uleb128 0x4
  235 0099 18000000 		.4byte	.LASF14
  236 009d 02       		.byte	0x2
@@ -288,7 +290,7 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  239 00a4 05       		.uleb128 0x5
  240 00a5 77000000 		.4byte	0x77
  241 00a9 04       		.uleb128 0x4
- 242 00aa 24010000 		.4byte	.LASF15
+ 242 00aa 36010000 		.4byte	.LASF15
  243 00ae 02       		.byte	0x2
  244 00af F401     		.2byte	0x1f4
  245 00b1 B5000000 		.4byte	0xb5
@@ -296,13 +298,13 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  247 00b6 04       		.byte	0x4
  248 00b7 BB000000 		.4byte	0xbb
  249 00bb 07       		.uleb128 0x7
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 6
+
+
  250 00bc 02       		.uleb128 0x2
  251 00bd 04       		.byte	0x4
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 6
-
-
  252 00be 07       		.byte	0x7
- 253 00bf 6D010000 		.4byte	.LASF16
+ 253 00bf 70010000 		.4byte	.LASF16
  254 00c3 08       		.uleb128 0x8
  255 00c4 2B000000 		.4byte	.LASF17
  256 00c8 01       		.byte	0x1
@@ -332,9 +334,9 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  280 0106 CD010000 		.4byte	0x1cd
  281 010a 00       		.byte	0
  282 010b 08       		.uleb128 0x8
- 283 010c B5010000 		.4byte	.LASF18
+ 283 010c B8010000 		.4byte	.LASF18
  284 0110 01       		.byte	0x1
- 285 0111 12       		.byte	0x12
+ 285 0111 14       		.byte	0x14
  286 0112 00000000 		.4byte	.LFB37
  287 0116 1C000000 		.4byte	.LFE37-.LFB37
  288 011a 01       		.uleb128 0x1
@@ -343,7 +345,7 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  291 0120 09       		.uleb128 0x9
  292 0121 636800   		.ascii	"ch\000"
  293 0124 01       		.byte	0x1
- 294 0125 14       		.byte	0x14
+ 294 0125 16       		.byte	0x16
  295 0126 6B000000 		.4byte	0x6b
  296 012a 13000000 		.4byte	.LLST1
  297 012e 0A       		.uleb128 0xa
@@ -354,13 +356,13 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  302 013c EA010000 		.4byte	0x1ea
  303 0140 00       		.byte	0
  304 0141 0B       		.uleb128 0xb
- 305 0142 76010000 		.4byte	.LASF19
+ 305 0142 79010000 		.4byte	.LASF19
  306 0146 01       		.byte	0x1
- 307 0147 19       		.byte	0x19
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 7
+
+
+ 307 0147 1B       		.byte	0x1b
  308 0148 5D000000 		.4byte	0x5d
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 7
-
-
  309 014c 00000000 		.4byte	.LFB38
  310 0150 28000000 		.4byte	.LFE38-.LFB38
  311 0154 01       		.uleb128 0x1
@@ -399,12 +401,12 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  344 019f 2C020000 		.4byte	0x22c
  345 01a3 00       		.byte	0
  346 01a4 0E       		.uleb128 0xe
- 347 01a5 5C010000 		.4byte	.LASF20
+ 347 01a5 5F010000 		.4byte	.LASF20
  348 01a9 03       		.byte	0x3
  349 01aa 6A01     		.2byte	0x16a
  350 01ac 77000000 		.4byte	0x77
  351 01b0 0F       		.uleb128 0xf
- 352 01b1 31010000 		.4byte	.LASF22
+ 352 01b1 43010000 		.4byte	.LASF22
  353 01b5 05       		.byte	0x5
  354 01b6 8C01     		.2byte	0x18c
  355 01b8 C2010000 		.4byte	0x1c2
@@ -412,15 +414,15 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  357 01bd 77000000 		.4byte	0x77
  358 01c1 00       		.byte	0
  359 01c2 11       		.uleb128 0x11
- 360 01c3 F2000000 		.4byte	.LASF21
+ 360 01c3 A8000000 		.4byte	.LASF21
  361 01c7 04       		.byte	0x4
  362 01c8 32       		.byte	0x32
  363 01c9 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 8
+
+
  364 01cd 12       		.uleb128 0x12
- 365 01ce 4D010000 		.4byte	.LASF23
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 8
-
-
+ 365 01ce 4B000000 		.4byte	.LASF23
  366 01d2 04       		.byte	0x4
  367 01d3 33       		.byte	0x33
  368 01d4 DE010000 		.4byte	0x1de
@@ -428,12 +430,12 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  370 01d9 6B000000 		.4byte	0x6b
  371 01dd 00       		.byte	0
  372 01de 0E       		.uleb128 0xe
- 373 01df 6D020000 		.4byte	.LASF24
+ 373 01df 70020000 		.4byte	.LASF24
  374 01e3 05       		.byte	0x5
  375 01e4 6A01     		.2byte	0x16a
  376 01e6 77000000 		.4byte	0x77
  377 01ea 0F       		.uleb128 0xf
- 378 01eb 9D010000 		.4byte	.LASF25
+ 378 01eb A0010000 		.4byte	.LASF25
  379 01ef 03       		.byte	0x3
  380 01f0 8C01     		.2byte	0x18c
  381 01f2 FC010000 		.4byte	0x1fc
@@ -441,7 +443,7 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  383 01f7 77000000 		.4byte	0x77
  384 01fb 00       		.byte	0
  385 01fc 12       		.uleb128 0x12
- 386 01fd 89010000 		.4byte	.LASF26
+ 386 01fd 8C010000 		.4byte	.LASF26
  387 0201 06       		.byte	0x6
  388 0202 18       		.byte	0x18
  389 0203 0D020000 		.4byte	0x20d
@@ -457,11 +459,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  399 0219 A9000000 		.4byte	0xa9
  400 021d 00       		.byte	0
  401 021e 13       		.uleb128 0x13
- 402 021f D0000000 		.4byte	.LASF28
+ 402 021f 86000000 		.4byte	.LASF28
  403 0223 08       		.byte	0x8
  404 0224 68       		.byte	0x68
  405 0225 13       		.uleb128 0x13
- 406 0226 C6010000 		.4byte	.LASF29
+ 406 0226 C9010000 		.4byte	.LASF29
  407 022a 09       		.byte	0x9
  408 022b 68       		.byte	0x68
  409 022c 13       		.uleb128 0x13
@@ -476,11 +478,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  418 0002 01       		.byte	0x1
  419 0003 25       		.uleb128 0x25
  420 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 9
+
+
  421 0005 13       		.uleb128 0x13
  422 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 9
-
-
  423 0007 03       		.uleb128 0x3
  424 0008 0E       		.uleb128 0xe
  425 0009 1B       		.uleb128 0x1b
@@ -536,11 +538,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  475 003b 00       		.byte	0
  476 003c 00       		.byte	0
  477 003d 06       		.uleb128 0x6
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 10
+
+
  478 003e 0F       		.uleb128 0xf
  479 003f 00       		.byte	0
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 10
-
-
  480 0040 0B       		.uleb128 0xb
  481 0041 0B       		.uleb128 0xb
  482 0042 49       		.uleb128 0x49
@@ -596,11 +598,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  532 0075 00       		.byte	0
  533 0076 0A       		.uleb128 0xa
  534 0077 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 11
+
+
  535 007a 00       		.byte	0
  536 007b 11       		.uleb128 0x11
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 11
-
-
  537 007c 01       		.uleb128 0x1
  538 007d 31       		.uleb128 0x31
  539 007e 13       		.uleb128 0x13
@@ -656,11 +658,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  589 00b6 00       		.byte	0
  590 00b7 3F       		.uleb128 0x3f
  591 00b8 19       		.uleb128 0x19
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 12
+
+
  592 00b9 03       		.uleb128 0x3
  593 00ba 0E       		.uleb128 0xe
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 12
-
-
  594 00bb 3A       		.uleb128 0x3a
  595 00bc 0B       		.uleb128 0xb
  596 00bd 3B       		.uleb128 0x3b
@@ -716,11 +718,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  646 00ef 13       		.uleb128 0x13
  647 00f0 3C       		.uleb128 0x3c
  648 00f1 19       		.uleb128 0x19
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 13
+
+
  649 00f2 00       		.byte	0
  650 00f3 00       		.byte	0
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 13
-
-
  651 00f4 12       		.uleb128 0x12
  652 00f5 2E       		.uleb128 0x2e
  653 00f6 01       		.byte	0x1
@@ -776,11 +778,11 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  703 0022 00000000 		.4byte	0
  704              		.section	.debug_aranges,"",%progbits
  705 0000 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 14
+
+
  706 0004 0200     		.2byte	0x2
  707 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 14
-
-
  708 000a 04       		.byte	0x4
  709 000b 00       		.byte	0
  710 000c 0000     		.2byte	0
@@ -835,165 +837,165 @@ ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 1
  742      7369676E 
  742      65642069 
  742      6E7400
- 743              	.LASF33:
- 744 004b 433A5C55 		.ascii	"C:\\Users\\passw\\Desktop\\HWSW mm14\\UART echo wit"
- 744      73657273 
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 15
+ 743              	.LASF23:
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 15
 
 
- 744      5C706173 
- 744      73775C44 
- 744      65736B74 
- 745 0079 6820696E 		.ascii	"h interrupt\\UART echo with interrupt.cydsn\000"
- 745      74657272 
- 745      7570745C 
- 745      55415254 
- 745      20656368 
- 746              	.LASF11:
- 747 00a4 666C6F61 		.ascii	"float\000"
- 747      7400
- 748              	.LASF1:
- 749 00aa 756E7369 		.ascii	"unsigned char\000"
- 749      676E6564 
- 749      20636861 
- 749      7200
- 750              	.LASF5:
- 751 00b8 6C6F6E67 		.ascii	"long unsigned int\000"
- 751      20756E73 
- 751      69676E65 
- 751      6420696E 
- 751      7400
- 752              	.LASF9:
- 753 00ca 75696E74 		.ascii	"uint8\000"
- 753      3800
- 754              	.LASF28:
- 755 00d0 55415254 		.ascii	"UART_Start\000"
- 755      5F537461 
- 755      727400
- 756              	.LASF12:
- 757 00db 646F7562 		.ascii	"double\000"
- 757      6C6500
- 758              	.LASF32:
- 759 00e2 2E5C6D61 		.ascii	".\\main.c\000"
- 759      696E2E63 
- 759      00
- 760              	.LASF10:
- 761 00eb 75696E74 		.ascii	"uint32\000"
- 761      333200
- 762              	.LASF21:
- 763 00f2 424C5545 		.ascii	"BLUE_LED_Read\000"
- 763      5F4C4544 
- 763      5F526561 
- 763      6400
- 764              	.LASF8:
- 765 0100 756E7369 		.ascii	"unsigned int\000"
- 765      676E6564 
- 765      20696E74 
- 765      00
- 766              	.LASF7:
- 767 010d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 767      206C6F6E 
- 767      6720756E 
- 767      7369676E 
- 767      65642069 
- 768              	.LASF15:
- 769 0124 63796973 		.ascii	"cyisraddress\000"
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 16
+ 744 004b 424C5545 		.ascii	"BLUE_LED_Write\000"
+ 744      5F4C4544 
+ 744      5F577269 
+ 744      746500
+ 745              	.LASF11:
+ 746 005a 666C6F61 		.ascii	"float\000"
+ 746      7400
+ 747              	.LASF1:
+ 748 0060 756E7369 		.ascii	"unsigned char\000"
+ 748      676E6564 
+ 748      20636861 
+ 748      7200
+ 749              	.LASF5:
+ 750 006e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 750      20756E73 
+ 750      69676E65 
+ 750      6420696E 
+ 750      7400
+ 751              	.LASF9:
+ 752 0080 75696E74 		.ascii	"uint8\000"
+ 752      3800
+ 753              	.LASF28:
+ 754 0086 55415254 		.ascii	"UART_Start\000"
+ 754      5F537461 
+ 754      727400
+ 755              	.LASF12:
+ 756 0091 646F7562 		.ascii	"double\000"
+ 756      6C6500
+ 757              	.LASF32:
+ 758 0098 2E5C6D61 		.ascii	".\\main.c\000"
+ 758      696E2E63 
+ 758      00
+ 759              	.LASF10:
+ 760 00a1 75696E74 		.ascii	"uint32\000"
+ 760      333200
+ 761              	.LASF21:
+ 762 00a8 424C5545 		.ascii	"BLUE_LED_Read\000"
+ 762      5F4C4544 
+ 762      5F526561 
+ 762      6400
+ 763              	.LASF8:
+ 764 00b6 756E7369 		.ascii	"unsigned int\000"
+ 764      676E6564 
+ 764      20696E74 
+ 764      00
+ 765              	.LASF7:
+ 766 00c3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 766      206C6F6E 
+ 766      6720756E 
+ 766      7369676E 
+ 766      65642069 
+ 767              	.LASF33:
+ 768 00da 433A5C55 		.ascii	"C:\\Users\\passw\\OneDrive\\Documents\\GitHub\\ST4\\"
+ 768      73657273 
+ 768      5C706173 
+ 768      73775C4F 
+ 768      6E654472 
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 16
 
 
- 769      72616464 
- 769      72657373 
- 769      00
- 770              	.LASF22:
- 771 0131 55415254 		.ascii	"UART_BLE_SpiUartWriteTxData\000"
- 771      5F424C45 
- 771      5F537069 
- 771      55617274 
- 771      57726974 
- 772              	.LASF23:
- 773 014d 424C5545 		.ascii	"BLUE_LED_Write\000"
- 773      5F4C4544 
- 773      5F577269 
- 773      746500
+ 769 0107 50536F43 		.ascii	"PSoC\\Lille_PSoC\\UART echo with interrupt.cydsn\000"
+ 769      5C4C696C 
+ 769      6C655F50 
+ 769      536F435C 
+ 769      55415254 
+ 770              	.LASF15:
+ 771 0136 63796973 		.ascii	"cyisraddress\000"
+ 771      72616464 
+ 771      72657373 
+ 771      00
+ 772              	.LASF22:
+ 773 0143 55415254 		.ascii	"UART_BLE_SpiUartWriteTxData\000"
+ 773      5F424C45 
+ 773      5F537069 
+ 773      55617274 
+ 773      57726974 
  774              	.LASF20:
- 775 015c 55415254 		.ascii	"UART_UartGetChar\000"
+ 775 015f 55415254 		.ascii	"UART_UartGetChar\000"
  775      5F556172 
  775      74476574 
  775      43686172 
  775      00
  776              	.LASF16:
- 777 016d 73697A65 		.ascii	"sizetype\000"
+ 777 0170 73697A65 		.ascii	"sizetype\000"
  777      74797065 
  777      00
  778              	.LASF19:
- 779 0176 6D61696E 		.ascii	"main\000"
+ 779 0179 6D61696E 		.ascii	"main\000"
  779      00
  780              	.LASF6:
- 781 017b 6C6F6E67 		.ascii	"long long int\000"
+ 781 017e 6C6F6E67 		.ascii	"long long int\000"
  781      206C6F6E 
  781      6720696E 
  781      7400
  782              	.LASF26:
- 783 0189 55415254 		.ascii	"UART_RX_ISR_StartEx\000"
+ 783 018c 55415254 		.ascii	"UART_RX_ISR_StartEx\000"
  783      5F52585F 
  783      4953525F 
  783      53746172 
  783      74457800 
  784              	.LASF25:
- 785 019d 55415254 		.ascii	"UART_SpiUartWriteTxData\000"
+ 785 01a0 55415254 		.ascii	"UART_SpiUartWriteTxData\000"
  785      5F537069 
  785      55617274 
  785      57726974 
  785      65547844 
  786              	.LASF18:
- 787 01b5 424C455F 		.ascii	"BLE_RX_interrupt\000"
+ 787 01b8 424C455F 		.ascii	"BLE_RX_interrupt\000"
  787      52585F69 
  787      6E746572 
  787      72757074 
  787      00
  788              	.LASF29:
- 789 01c6 55415254 		.ascii	"UART_BLE_Start\000"
+ 789 01c9 55415254 		.ascii	"UART_BLE_Start\000"
  789      5F424C45 
  789      5F537461 
  789      727400
+ARM GAS  C:\Users\passw\AppData\Local\Temp\cc42vFwt.s 			page 17
+
+
  790              	.LASF31:
- 791 01d5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\passw\AppData\Local\Temp\ccmlfFjN.s 			page 17
-
-
+ 791 01d8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  791      4320342E 
  791      392E3320 
  791      32303135 
  791      30333033 
- 792 0208 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 792 020b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
  792      20726576 
  792      6973696F 
  792      6E203232 
  792      31323230 
- 793 023b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 793 023e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  793      66756E63 
  793      74696F6E 
  793      2D736563 
  793      74696F6E 
  794              	.LASF2:
- 795 0263 73686F72 		.ascii	"short int\000"
+ 795 0266 73686F72 		.ascii	"short int\000"
  795      7420696E 
  795      7400
  796              	.LASF24:
- 797 026d 55415254 		.ascii	"UART_BLE_UartGetChar\000"
+ 797 0270 55415254 		.ascii	"UART_BLE_UartGetChar\000"
  797      5F424C45 
  797      5F556172 
  797      74476574 
  797      43686172 
  798              	.LASF4:
- 799 0282 6C6F6E67 		.ascii	"long int\000"
+ 799 0285 6C6F6E67 		.ascii	"long int\000"
  799      20696E74 
  799      00
  800              	.LASF13:
- 801 028b 63686172 		.ascii	"char\000"
+ 801 028e 63686172 		.ascii	"char\000"
  801      00
  802              	.LASF0:
- 803 0290 7369676E 		.ascii	"signed char\000"
+ 803 0293 7369676E 		.ascii	"signed char\000"
  803      65642063 
  803      68617200 
  804              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

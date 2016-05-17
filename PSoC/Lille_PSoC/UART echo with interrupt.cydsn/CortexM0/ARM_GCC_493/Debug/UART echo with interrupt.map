@@ -940,7 +940,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x4186
+.debug_info     0x00000000     0x4189
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x234 .\CortexM0\ARM_GCC_493\Debug\main.o
  .debug_info    0x00000234       0xfe .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
@@ -954,12 +954,12 @@ END GROUP
  .debug_info    0x000016e1      0x20a .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE.o)
  .debug_info    0x000018eb      0x217 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_SPI_UART.o)
  .debug_info    0x00001b02      0x352 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_UART.o)
- .debug_info    0x00001e54       0xa9 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyBootAsmGnu.o)
- .debug_info    0x00001efd      0xcf4 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLib.o)
- .debug_info    0x00002bf1      0x2e9 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyPm.o)
- .debug_info    0x00002eda      0xda4 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLFClk.o)
- .debug_info    0x00003c7e      0x19d .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(BLUE_LED.o)
- .debug_info    0x00003e1b      0x36b .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyFlash.o)
+ .debug_info    0x00001e54       0xac .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyBootAsmGnu.o)
+ .debug_info    0x00001f00      0xcf4 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLib.o)
+ .debug_info    0x00002bf4      0x2e9 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyPm.o)
+ .debug_info    0x00002edd      0xda4 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLFClk.o)
+ .debug_info    0x00003c81      0x19d .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(BLUE_LED.o)
+ .debug_info    0x00003e1e      0x36b .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyFlash.o)
 
 .debug_abbrev   0x00000000     0x17eb
  *(.debug_abbrev)
@@ -1028,42 +1028,42 @@ END GROUP
  .debug_frame   0x000013f8       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x00001420       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1ae3
+.debug_str      0x00000000     0x1ae6
  *(.debug_str)
- .debug_str     0x00000000      0x256 .\CortexM0\ARM_GCC_493\Debug\main.o
-                                0x29c (size before relaxing)
- .debug_str     0x00000256       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
-                                0x1e7 (size before relaxing)
- .debug_str     0x000002b1      0x149 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
-                                0x30e (size before relaxing)
- .debug_str     0x000003fa       0xae .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyfitter_cfg.o)
-                                0x275 (size before relaxing)
- .debug_str     0x000004a8      0x17c .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_RX_ISR.o)
-                                0x34b (size before relaxing)
- .debug_str     0x00000624       0xe9 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART.o)
-                                0x28d (size before relaxing)
- .debug_str     0x0000070d      0x11f .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_SPI_UART.o)
-                                0x2db (size before relaxing)
- .debug_str     0x0000082c      0x150 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_UART.o)
-                                0x384 (size before relaxing)
- .debug_str     0x0000097c      0x15c .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_RX_ISR.o)
-                                0x383 (size before relaxing)
- .debug_str     0x00000ad8       0xfd .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE.o)
-                                0x2c1 (size before relaxing)
- .debug_str     0x00000bd5      0x117 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_SPI_UART.o)
-                                0x303 (size before relaxing)
- .debug_str     0x00000cec      0x126 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_UART.o)
-                                0x3cc (size before relaxing)
- .debug_str     0x00000e12      0x5a5 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLib.o)
-                                0x7db (size before relaxing)
- .debug_str     0x000013b7       0xd0 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyPm.o)
-                                0x2e0 (size before relaxing)
- .debug_str     0x00001487      0x505 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLFClk.o)
-                                0x71c (size before relaxing)
- .debug_str     0x0000198c       0xa5 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(BLUE_LED.o)
-                                0x264 (size before relaxing)
- .debug_str     0x00001a31       0xb2 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyFlash.o)
-                                0x2bd (size before relaxing)
+ .debug_str     0x00000000      0x259 .\CortexM0\ARM_GCC_493\Debug\main.o
+                                0x29f (size before relaxing)
+ .debug_str     0x00000259       0x5b .\CortexM0\ARM_GCC_493\Debug\cymetadata.o
+                                0x1ea (size before relaxing)
+ .debug_str     0x000002b4      0x149 .\CortexM0\ARM_GCC_493\Debug\Cm0Start.o
+                                0x311 (size before relaxing)
+ .debug_str     0x000003fd       0xae .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyfitter_cfg.o)
+                                0x278 (size before relaxing)
+ .debug_str     0x000004ab      0x17c .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_RX_ISR.o)
+                                0x34e (size before relaxing)
+ .debug_str     0x00000627       0xe9 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART.o)
+                                0x290 (size before relaxing)
+ .debug_str     0x00000710      0x11f .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_SPI_UART.o)
+                                0x2de (size before relaxing)
+ .debug_str     0x0000082f      0x150 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_UART.o)
+                                0x387 (size before relaxing)
+ .debug_str     0x0000097f      0x15c .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_RX_ISR.o)
+                                0x386 (size before relaxing)
+ .debug_str     0x00000adb       0xfd .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE.o)
+                                0x2c4 (size before relaxing)
+ .debug_str     0x00000bd8      0x117 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_SPI_UART.o)
+                                0x306 (size before relaxing)
+ .debug_str     0x00000cef      0x126 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(UART_BLE_UART.o)
+                                0x3cf (size before relaxing)
+ .debug_str     0x00000e15      0x5a5 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLib.o)
+                                0x7de (size before relaxing)
+ .debug_str     0x000013ba       0xd0 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(cyPm.o)
+                                0x2e3 (size before relaxing)
+ .debug_str     0x0000148a      0x505 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyLFClk.o)
+                                0x71f (size before relaxing)
+ .debug_str     0x0000198f       0xa5 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(BLUE_LED.o)
+                                0x267 (size before relaxing)
+ .debug_str     0x00001a34       0xb2 .\CortexM0\ARM_GCC_493\Debug\UART echo with interrupt.a(CyFlash.o)
+                                0x2c0 (size before relaxing)
 
 .debug_loc      0x00000000     0x1be5
  *(.debug_loc)

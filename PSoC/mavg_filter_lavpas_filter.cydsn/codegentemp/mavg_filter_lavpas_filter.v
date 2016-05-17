@@ -1,6 +1,6 @@
 // ======================================================================
 // mavg_filter_lavpas_filter.v generated from TopDesign.cysch
-// 05/10/2016 at 14:04
+// 05/17/2016 at 10:43
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
