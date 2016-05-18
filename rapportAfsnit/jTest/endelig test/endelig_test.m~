@@ -26,23 +26,23 @@ hold on
 [hAx,hLine1,hLine2] = plotyy(t, sinuss, t, grader);
 set(hAx(1),'fontsize',20);
 set(hAx(2),'fontsize',20);
-legend('Ufiltreret sinus','Filtreret sinus', 'Vinkel', 'Location', 'Southwest');
+legend('Ufiltreret sinus','Filtreret sinus', 'Vinkel');
 
 set(hAx(1), 'XLim',[0 10]);
 set(hAx(1),'XTick',[0:1:10]);
 set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
-set(hAx(2), 'YLim',[-130 180]);
-set(hAx(2),'YTick',[-130:30:180]);
+set(hAx(2), 'YLim',[0 200]);
+set(hAx(2),'YTick',[0:20:180]);
 set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
 
-set(hAx(1), 'YLim',[1.35 1.45]);
-set(hAx(1),'YTick',[1.35:0.01:1.45]);
+set(hAx(1), 'YLim',[1 1.5]);
+set(hAx(1),'YTick',[1.:0.1:1.5]);
 set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
 box off
 
 subplot(2,1,2)
-plot(t, diff);
+plot(t,diff);
 hold on
 xlabel('Tid [s]')
 ylabel('Spænding [V]')
