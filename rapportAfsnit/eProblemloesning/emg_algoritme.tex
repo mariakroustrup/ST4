@@ -1,10 +1,20 @@
 \subsection{EMG-algoritme}\label{sec:krav_emg_algo}
-EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. Det skal gøres ved, at EMG-algoritmen skal finde hældningen af EMG-signalet mellem samples og derefter udsende et signal alt efter, om  hældningen er faldende eller stigende. 
+EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. Dette skal gøres ved, at EMG-algoritmen skal finde hældningen af EMG-signalet mellem samples og derefter udsende et signal alt efter, om hældningen er faldende eller stigende. Dette signal skal indikere ændringen i outputsignalet. 
+For at undgå, at prototypen eksentenderer uden for det definerede område for squat-øvelsen, beskrevet i \autoref{sec:knaeled_squat} ønskes det, at der sker en ændring i outputsignalet, hvis signalet er over $180$ og under $90^{circ}$.
 
 \vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
-\item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
 \item Skal kunne udsende ét signal, når muskelsignalet er faldende og et andet, når det er stigende
+\item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
+\begin{itemize}
+\item Ved stigende muskelaktivitet skal dette indikeres som $10$
+\item Ved faldende muskelaktivitet skal dette indikeres som $-10$
 \end{itemize}
+\item Skal kunne indikere hvis vinklen befinder sig over $180$ og under $90^{\circ}$
+\begin{itemize}
+\item Dette skal indikeres ved at outputsignalet går i $0$
+\end{itemize}
+\end{itemize}
+
 

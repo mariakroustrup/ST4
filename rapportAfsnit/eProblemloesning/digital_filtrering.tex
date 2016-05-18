@@ -3,8 +3,16 @@ Der findes to former for digital filtrering; Infinite Impulse Response (IIR) og 
 
 FIR-filtre kan laves, således de har en lineær fase, og vil altid være stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan herved benyttes som et digitalt filter \citep{blandford2012}. 
 
-I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. Udover dette har IIR-filtre stejlere sidelobes end et FIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}. 
+I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. Udover dette har IIR-filtre stejlere sidelobes end et FIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. Disse a og b koefficienter fremgår af \autoref{eq:iirfilt}, der viser udregningen for et IIR-filter. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}. IIR-filtret udregnes ved anvendelse af formlen, der fremgår af \autoref{eq:iirfilt}.
+
+\noindent
+\begin{equation}
+y[n]=\dfrac{1}{a_0}(b_0x[n]+b_1x[n-1]+...+b_px[n-p]-a_1y[n-1]-a_2y[n-2]-...-a_qy[n-Q])
+\label{eq:iirfilt}
+\end{equation}
 \\
+
+
 
 \begin{figure}[H]
 \centering

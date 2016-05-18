@@ -57,7 +57,7 @@ set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
 
 set(hAx(1), 'YLim',[-0.5 1.5]);
 set(hAx(1),'YTick',[-0.5:0.2:1.5]);
-set(get(hAx(1),'Ylabel'),'string','EMG[V]');
+set(get(hAx(1),'Ylabel'),'string','EMG [V]');
 box off
 
 subplot(2,1,2)
