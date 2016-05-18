@@ -2,53 +2,33 @@
 I dette afsnit vil det samlede system blive testet, så det er muligt at se, om systemet behandler dette input, som det forventes. På baggrund af disse målinger er det muligt at konkludere, om systemet virker. 
 
 \subsection{Beskrivelse}
-For at teste om det samlede system med et kendt input benyttes en funktionsgenerator, så der kan genereres et sinussignal på $500~Hz$ med en peak-peak-amplitude på $4~mV$. Sinussignalets frekvens og amplitude er nær ved, hvad der kan forventes af et filtreret EMG-signal. Outputtet fra sinussignalet er filtreret gennem lavpasfiltreret. 
+For at teste accelerometer-signalerne indsendes der to spændinger svarende til de to accelerometre. Denne varireres over tid, således at spændingen svarer til $90-180^{\circ}$. Derudover testes det for om vinkel falder til $-200^{\circ}$, når spændingen svarende til $180^{\circ}$ overskrides. 
 
-Der foretages endnu en måling  samtidig for at test accelerometer-signalerne. Dette gøres ved at indsende to spændinger svarende til de to accelerometre. Denne varireres over tid, således at den overskrider de spændinger, der svarer til $90-180^{\circ}$.
+For at teste om det samlede system med et kendt input benyttes en funktionsgenerator, så der kan genereres et sinussignal på $500~Hz$ med en peak-peak-amplitude på $4~mV$. Sinussignalets frekvens og amplitude er nær ved, hvad der kan forventes af et filtreret EMG-signal. Outputtet fra sinussignalet er filtreret gennem det implementerede lavpasfilter. 
 
-Hele testen foretages i 10 sekunder og optages via mikrokontrolleren. Ud fra disse målinger, er det muligt at se effekten af systemets blokke, når de er sammensat ved at sammenligne input-signalet og outputtet af sinussignalet samt spændingerne for det samlede acclerometre. Resultaterne fra målingerne visualiseres i MATLAB. 
+
+Hele testen foretages i 10 sekunder og optages via mikrokontrolleren. Ud fra disse målinger, er det muligt at se effekten af systemets blokke, når de er sammensat ved at sammenligne input-signalet og outputtet af det samplede sinussignal samt spændingerne for det samlede acclerometre. Resultaterne fra målingerne visualiseres i MATLAB. 
 
 
 \subsection{Resultater af test}
-Fra testen plottes og visualiseres systemets input af sinussignalet og outputtet fra det filtrerede signal, samt den omregnede spænding til en vinkel for begge de målte spændinger. Derudover er der plottet den digitale ouputsignal fra EMG-algoritmen. Resultaterne fremgår af \autoref{fig:test_kendtinput}. 
+Fra testen plottes og visualiseres systemets input af det samplede sinussignal og outputtet fra det opsamlede digitalt filtrerede signal, samt spændingen fra de to accelerometre, der er omregnet til en samlet vinkel ved lineær interpolation. Derudover er der plottet det opsamlede digitale output som er behandlet i EMG-algortimen. Resultaterne fremgår af \autoref{fig:test_kendtinput_vinkel}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/kontrol_test_sinus.jpg}
-\caption{På den øverste figur, illustrer den blå graf inputsignalet svarende til en sinus på $500~Hz$ med en $V_{pp}$ på $4~mV$. Den røde graf illustrer sinussignalet som er filtreret, disse værdier er målt i spændingen, som det ses på den venstre Y-akse. Den gule graf viser den samlede spænding omregnet til en vinkel, hvilket fremgår af den højre Y-akse. På den nederste figur er den blå graf signalets digitale output i EMG-algoritmen}
+\caption{På den øverste figur illustrerer den blå graf den samlede vinkel. Det fremgår af grafen at vinkelen er stigende fra $90^{\circ}$ til $175^{\circ}$, hvorefter vinklen daler markant ned til $-115^{\circ}$. 
+På den midterste figur, illustrer den blå graf det opsamlede inputsignal, svarende til en sinus på $500~Hz$ med en $V_{pp}$ på $4~mV$. Den røde graf illustrer det opsamlede digitale outputsignal, disse værdier er målt i spændingen. 
+På den nederste figur illustrerer den blå graf signalets digitale output. Signalet går fra $10$ ved stigende muskelaktivitet til $-10$ ved en faldende muskelaktivitet, hvis grafen går i $0$ svarer dette til en overskridelse af en vinkel på $180^{\circ}$ eller en vinkel under $90^{\circ}$}
 \label{fig:test_kendtinput}
 \end{figure}
 
-På baggrund af målingerne for \autoref{fig:test_kendtinput} ses det at ved en stigende spænding svarende til $90-180^{\circ}$ vil vinklen stige, hvilket stemmer overens med forventningen. Det fremgår af grafen at ved en spænding svarende til omkring $180^{\circ}$, hvilket på grafen svarer til $175^{\circ}$ hvor den overskrider, hvorved grafen går i $-115^{\circ}$. I følge implementering skal signalet når det overstiger $180^{\circ}$ gå i $-200^{\circ}$. Disse faktorer er angiveligt fordi den ene spænding ikke har været tilsvarende, hvorved denne har været modsigende i forhold til beregningen af den samlede vinkel.
+På baggrund af målingerne for den øverste figur på \autoref{fig:test_kendtinput} fremgår det, at en stigende spænding svarende til $90-175^{\circ}$, får den samlede vinkel til at stige. Ved en vinkel på $175^{\circ}$ overskrider denne spændingen svarende til en vinkel på $180^{\circ}$, hvor vinklen daler markant på $1~ms$ ned til $-115^{\circ}$. 
+Dette burde ifølge det implementerede kode gå ned til en vinkel på $-200^{\circ}$ ved overskridelse af $180^{\circ}$.
+Disse faktorer er angiveligt fordi den målte spænding ikke har været $0~V$ ved forsøgets begyndelse, hvorfor den samlede vinkel ikke når den maksimale vinkel på $180^{\circ}$ og ikke daler til $-200^{\circ}$.
 
-Det fremgår af \autoref{fig:test_kendtinput}, hvis der ses på EMGsignalet 
+Det fremgår af den midterste figur og den nederste figur på \autoref{fig:test_kendtinput}, at der er en sammenhæng mellem det opsamlede filtrerede sinussignal og det opsamlede outputsignal. Når sinussignalet er faldende, daler outputsignalet markant fra $10$ til $-10$, hvorefter outputsignalet stiger markant fra $-10$ til $10$, når signussignalet stiger igen. Derudover ses det, at tiden hvor signalet befinder sig i $10$ eller $-10$ varierer alt efter hvor længe det opsamlede filtrerede sinussignals er stigende eller faldende .
 
-
- findes lokale maksima- og minimapunkter. For at kunne udregne forsinkelsen sammenlignes forskellen mellem de lokale ekstrema, hvor der undersøges hvornår outputtet skifter spænding, altså differensen mellem lokale ekstrema og skift i outputspænding. Resultaterne for dette fremgår af \autoref{tab:sinus_ekstrema}.
-
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Ekstrema {[}s{]}} & \textbf{Output-skift {[}s{]}} & \textbf{Forsinkelse {[}s{]}} \\ \hline
-3,0132                    & 2,8778                        & 0,1354                       \\ \hline
-2,9922                    & 2,8859                        & 0,1063                       \\ \hline
-2,9842                    & 2,8907                        & 0,0935                       \\ \hline
-2,9777                    & 2,8939                        & 0,0838                       \\ \hline
-2,9713                    & 2,9020                        & 0,0693                       \\ \hline
-2,9713                    & 2,9101                        & 0,0612                       \\ \hline
-2,9681                    & 2,9101                        & 0,0580                       \\ \hline
-2,9681                    & 2,9117                        & 0,0564                       \\ \hline
-2,9632                    & 2,9246                        & 0,0386                       \\ \hline
-2,9568                    & 2,9278                        & 0,0290                       \\ \hline
-\end{tabular}
-\caption{Målt ekstrema, output-skift og differensen mellem disse, som fremgår som forsinkelse}
-\label{tab:sinus_ekstrema}
-\end{table}
-
-Af \autoref{tab:sinus_ekstrema} fremgår det, at forsinkelsen fra inputsignalet registreres som en ændring  i output-signalet og er mellem $0,0290~s$ og $0,1354~s$. Ud fra dette er den gennemsnitlige forsinkelse beregnet til at være $0,07315~s$, hvilket svarer til omkring $73~ms$. 
-
+På den nederste figur på \autoref{fig:test_kendtinput} fremgår det at efter have befundet sig i $-10$ ved 9 sekunder, stiger til $0$. Dette er grundet målingerne i den øverste figur, hvor vinkelen når $175^{\circ}$. Dette stemmer overens med at, hvis vinklen overskrider de $180^{\circ}$ eller er under $90^{\circ}$ skal det opsamlede digitale signal gå i $0$. 
 
 \subsection{Konklusion}
 .....
