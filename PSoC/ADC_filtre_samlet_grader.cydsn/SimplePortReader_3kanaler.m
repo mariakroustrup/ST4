@@ -2,8 +2,8 @@ comport = 'COM7'; % Vælg porten til jeres egen PSoC enhed
 
 serial_port = serial(comport, 'TimeOut', 2, 'BaudRate', 115200);
 
-num_of_channels = 1;    % Antallet af kanaler
-data_length = 1000;     % Antal samples per kanal i plottet
+num_of_channels = 4;    % Antallet af kanaler
+data_length = 2000;     % Antal samples per kanal i plottet
 data = NaN*ones(data_length,num_of_channels);   % Initialisering af data
 byte_per_channel = 2;   % Antal bytes per kanal (int16 = 2 bytes)
 samples_per_channel = 22; % Antal samples per læsning fra porten
@@ -34,9 +34,10 @@ if port_open                        % Kør kun nedenstående, hvis porten kunne åb
         end
         plot(data) % Plot data
         %xlabel('Tid [s]')
+        ylim([80 190])
         %ylabel('Vinkel [\circ]')
         %axis([0 data_length -15 15])  % Tilpas akserne
-        %legend('EMG','Diff','Grader');
+        legend('Sinus','Filt. sinus','Diff','Grader');
         drawnow                                 % Tving grafen til at opdatere
         key = lower(get(H,'CurrentCharacter')); % Læs om der er trykket på en tast
     end
