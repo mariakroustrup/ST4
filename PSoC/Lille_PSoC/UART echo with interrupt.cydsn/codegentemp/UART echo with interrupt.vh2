@@ -2,7 +2,7 @@
 --	Conversion of UART echo with interrupt.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 18 16:38:16 2016
+--	Wed May 18 17:26:23 2016
 --
 
 USE cypress.cypress.all;

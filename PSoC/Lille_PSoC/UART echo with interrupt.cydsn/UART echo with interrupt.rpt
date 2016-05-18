@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.321ms
+Loading plugins phase: Elapsed time ==> 0s.310ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\UART echo with interrupt.cyprj -d CY8C4247AZI-M485 -s C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.751ms
+Elaboration phase: Elapsed time ==> 1s.910ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.086ms
+HDL generation phase: Elapsed time ==> 0s.079ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Wed May 18 16:38:15 2016
+Wed May 18 17:26:23 2016
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 UART echo with interrupt.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Wed May 18 16:38:15 2016
+Wed May 18 17:26:23 2016
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -83,7 +83,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Wed May 18 16:38:15 2016
+Wed May 18 17:26:23 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -110,7 +110,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Wed May 18 16:38:16 2016
+Wed May 18 17:26:23 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -230,14 +230,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\UART echo with interrupt.cyprj" -dcpsoc3 "UART echo with interrupt.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.374ms
+Warp synthesis phase: Elapsed time ==> 0s.730ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Wednesday, 18 May 2016 16:38:16
+cyp3fit: V3.3.0.7343, Family: PSoC3, Started at: Wednesday, 18 May 2016 17:26:24
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\UART echo with interrupt.cyprj -d CY8C4247AZI-M485 UART echo with interrupt.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.074ms
+Design parsing phase: Elapsed time ==> 0s.110ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -575,20 +575,20 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    2 :    2 :  0.00 %
   8-bit IDAC                  :    0 :    2 :    2 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.175ms
-Tech mapping phase: Elapsed time ==> 0s.301ms
+Technology Mapping: Elapsed time ==> 0s.149ms
+Tech mapping phase: Elapsed time ==> 0s.269ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.3579349s
+Elapsed time ==> 0.4357785s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.636ms
+Analog Placement phase: Elapsed time ==> 0s.710ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0043123 secs
+Route success=True, Iterations=1 Elapsed=0.0042215 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.009ms
+Analog Routing phase: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -599,7 +599,7 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.048ms
+Analog Code Generation phase: Elapsed time ==> 0s.050ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -611,17 +611,17 @@ I2076: Total run-time: 0.2 sec.
 <CYPRESSTAG name="PLD Packing Summary">
 No PLDs were packed.
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.014ms
+PLD Packing: Elapsed time ==> 0s.020ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.069ms
+Partitioning: Elapsed time ==> 0s.100ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.021ms
+Annealing: Elapsed time ==> 0s.025ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
 Inital cost was 28, final cost is 28 (0.00% improvement).</CYPRESSTAG>
@@ -701,46 +701,6 @@ Pin : Name = BLUE_LED(0)
     PORT MAP (
         pa_out => BLUE_LED(0)__PA ,
         pad => BLUE_LED(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=7]: 
-Pin : Name = Debug(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Debug(0)__PA ,
-        pad => Debug(0)_PAD );
     Properties:
     {
     }
@@ -825,6 +785,46 @@ Pin : Name = \UART_BLE:tx(0)\
         pa_out => \UART_BLE:tx(0)\__PA ,
         input => \UART_BLE:Net_1062\ ,
         pad => \UART_BLE:tx(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = Debug(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Debug(0)__PA ,
+        pad => Debug(0)_PAD );
     Properties:
     {
     }
@@ -1014,10 +1014,10 @@ Port Configuration report
 Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connections
 -----+-----+-------+-----------+------------------+------------------+------------------------
    1 |   6 |     * |      NONE |         CMOS_OUT |      BLUE_LED(0) | 
-     |   7 |     * |      NONE |         CMOS_OUT |         Debug(0) | 
 -----+-----+-------+-----------+------------------+------------------+------------------------
    3 |   0 |     * |      NONE |     HI_Z_DIGITAL | \UART_BLE:rx(0)\ | FB(\UART_BLE:Net_654\)
      |   1 |     * |      NONE |         CMOS_OUT | \UART_BLE:tx(0)\ | In(\UART_BLE:Net_1062\)
+     |   4 |     * |      NONE |         CMOS_OUT |         Debug(0) | 
 -----+-----+-------+-----------+------------------+------------------+------------------------
    7 |   0 |     * |      NONE |     HI_Z_DIGITAL |     \UART:rx(0)\ | FB(\UART:Net_654\)
      |   1 |     * |      NONE |         CMOS_OUT |     \UART:tx(0)\ | In(\UART:Net_1062\)
@@ -1025,32 +1025,32 @@ Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connectio
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.015ms
-Digital Placement phase: Elapsed time ==> 0s.588ms
+Digital component placer commit/Report: Elapsed time ==> 0s.010ms
+Digital Placement phase: Elapsed time ==> 1s.812ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.546ms
+Digital Routing phase: Elapsed time ==> 0s.983ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.395ms
+Bitstream and API generation phase: Elapsed time ==> 0s.397ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.071ms
+Bitstream verification phase: Elapsed time ==> 0s.109ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in UART echo with interrupt_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.165ms
+Static timing analysis phase: Elapsed time ==> 0s.450ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.004ms
+Data reporting phase: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.124ms
+Design database save phase: Elapsed time ==> 0s.140ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 3s.002ms
+cydsfit: Elapsed time ==> 5s.084ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.053ms
-API generation phase: Elapsed time ==> 1s.068ms
-Dependency generation phase: Elapsed time ==> 0s.017ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 5s.125ms
+API generation phase: Elapsed time ==> 1s.440ms
+Dependency generation phase: Elapsed time ==> 0s.010ms
+Cleanup phase: Elapsed time ==> 0s.009ms

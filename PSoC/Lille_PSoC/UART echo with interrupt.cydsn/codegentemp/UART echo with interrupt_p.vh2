@@ -1,5 +1,5 @@
 -- Project:   UART echo with interrupt
--- Generated: 05/18/2016 16:38:17
+-- Generated: 05/18/2016 17:26:25
 -- PSoC Creator  3.3 SP1
 
 ENTITY \UART echo with interrupt\ IS

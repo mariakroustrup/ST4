@@ -972,15 +972,15 @@ library (timing) {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pad_in";
-                intrinsic_rise : 13.585;
-                intrinsic_fall : 13.585;
+                intrinsic_rise : 11.815;
+                intrinsic_fall : 11.815;
             }
             timing () {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pad_in";
-                intrinsic_rise : 15.199;
-                intrinsic_fall : 15.199;
+                intrinsic_rise : 13.429;
+                intrinsic_fall : 13.429;
             }
         }
         pin (oe) {
@@ -1029,15 +1029,15 @@ library (timing) {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pin_input";
-                intrinsic_rise : 12.632;
-                intrinsic_fall : 12.632;
+                intrinsic_rise : 14.412;
+                intrinsic_fall : 14.412;
             }
             timing () {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pin_input";
-                intrinsic_rise : 15.130;
-                intrinsic_fall : 15.130;
+                intrinsic_rise : 16.910;
+                intrinsic_fall : 16.910;
             }
         }
         pin (fb) {
@@ -1046,15 +1046,15 @@ library (timing) {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pad_in";
-                intrinsic_rise : 13.826;
-                intrinsic_fall : 13.826;
+                intrinsic_rise : 12.056;
+                intrinsic_fall : 12.056;
             }
             timing () {
                 timing_sense : positive_unate;
                 timing_type : combinational;
                 related_pin : "pad_in";
-                intrinsic_rise : 16.097;
-                intrinsic_fall : 16.097;
+                intrinsic_rise : 14.327;
+                intrinsic_fall : 14.327;
             }
         }
     }

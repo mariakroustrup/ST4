@@ -1,5 +1,5 @@
 -- Project:   UART echo with interrupt
--- Generated: 05/18/2016 16:38:17
+-- Generated: 05/18/2016 17:26:27
 -- PSoC Creator  3.3 SP1
 
 ENTITY \UART echo with interrupt\ IS
@@ -89,7 +89,7 @@ ARCHITECTURE __DEFAULT__ OF \UART echo with interrupt\ IS
     ATTRIBUTE lib_model OF BLUE_LED(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF BLUE_LED(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF Debug(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF Debug(0) : LABEL IS "P1[7]";
+    ATTRIBUTE Location OF Debug(0) : LABEL IS "P3[4]";
     ATTRIBUTE Location OF UART_RX_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(11)]";
     ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,3)";
     ATTRIBUTE Location OF UART_BLE_RX_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(9)]";

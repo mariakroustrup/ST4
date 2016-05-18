@@ -12,8 +12,7 @@ CY_ISR(RX_interrupt)
     UART_ClearRxInterruptSource(UART_GetRxInterruptSource());
     
     /* her kan vi kode!!!!!!!!!!!!!!! */
-    Debug_Write(~Debug_Read());
-    
+     
     UART_BLE_UartPutChar(ch);
     BLUE_LED_Write(~BLUE_LED_Read());
 }
@@ -22,6 +21,8 @@ CY_ISR(BLE_RX_interrupt)
 {
     uint8 ch = UART_BLE_UartGetChar();
     UART_BLE_ClearRxInterruptSource(UART_BLE_GetRxInterruptSource());
+    
+    
     UART_UartPutChar(ch);
 }
 
