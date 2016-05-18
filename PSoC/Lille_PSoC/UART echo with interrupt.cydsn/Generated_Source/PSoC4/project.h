@@ -34,6 +34,8 @@
 #include "UART_BLE_BOOT.h"
 #include "BLUE_LED.h"
 #include "BLUE_LED_aliases.h"
+#include "Debug.h"
+#include "Debug_aliases.h"
 #include "UART_SCBCLK.h"
 #include "UART_tx.h"
 #include "UART_tx_aliases.h"

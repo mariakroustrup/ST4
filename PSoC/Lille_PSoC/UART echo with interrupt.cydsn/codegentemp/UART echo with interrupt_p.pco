@@ -10,4 +10,5 @@ set_location "\UART_BLE:SCB\" m0s8scbcell -1 -1 1
 set_location "UART_RX_ISR" interrupt -1 -1 11
 set_location "UART_BLE_RX_ISR" interrupt -1 -1 9
 set_io "BLUE_LED(0)" iocell 1 6
+set_io "Debug(0)" iocell 1 7
 set_io "\UART:tx(0)\" iocell 7 1

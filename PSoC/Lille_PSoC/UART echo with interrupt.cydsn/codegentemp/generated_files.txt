@@ -48,6 +48,10 @@
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\BLUE_LED.h" value="NONE;BLUE_LED" />
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\BLUE_LED_aliases.h" value="NONE;BLUE_LED" />
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\BLUE_LED_PM.c" value="ARM_C_FILE;BLUE_LED" />
+  <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\Debug.c" value="ARM_C_FILE;Debug" />
+  <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\Debug.h" value="NONE;Debug" />
+  <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\Debug_aliases.h" value="NONE;Debug" />
+  <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\Debug_PM.c" value="ARM_C_FILE;Debug" />
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
   <file name="C:\Users\passw\OneDrive\Documents\GitHub\ST4\PSoC\Lille_PSoC\UART echo with interrupt.cydsn\codegentemp\UART_tx.c" value="ARM_C_FILE;UART_tx" />

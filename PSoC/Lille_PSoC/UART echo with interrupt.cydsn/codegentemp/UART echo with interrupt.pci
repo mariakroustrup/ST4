@@ -1,5 +1,5 @@
 # UART echo with interrupt
-# 2016-05-17 10:10:35Z
+# 2016-05-18 14:38:17Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -11,3 +11,4 @@ set_io "\UART:rx(0)\" iocell 7 0
 set_io "\UART_BLE:tx(0)\" iocell 3 1
 set_io "\UART_BLE:rx(0)\" iocell 3 0
 set_io "BLUE_LED(0)" iocell 1 6
+set_io "Debug(0)" iocell 1 7

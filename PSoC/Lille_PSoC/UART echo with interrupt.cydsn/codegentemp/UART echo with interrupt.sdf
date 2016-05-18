@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2016-05-17T10:10:37Z")
+ (DATE "2016-05-18T14:38:18Z")
  (DESIGN "UART echo with interrupt")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -31,6 +31,7 @@
     (INTERCONNECT \\UART_BLE\:tx\(0\)_PAD\\ \\UART_BLE\:tx\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART_BLE\:rx\(0\)_PAD\\ \\UART_BLE\:rx\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT BLUE_LED\(0\)_PAD BLUE_LED\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Debug\(0\)_PAD Debug\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )
