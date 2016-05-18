@@ -1,4 +1,4 @@
-\subsection{Opsamling af EMG-signaler} \label{sec:EMG_krav}
+\subsection{Opsamling og behandling af EMG-signaler} \label{sec:EMG_imp}
 For at opfylde de krav, der er opstillet i \autoref{sec:EMG_krav} anvendes Muscle Sensor V3 fra Advancer Technologies, der fremover vil refereres til som 'EMG-forstærker'. Denne komponent måler en differens mellem de elektriske potentialer, der måles gennem elektroderne. EMG-forstærkeren overholder de opstillede krav, og kan anvendes direkte med mikrokontrolleren. EMG-forstærkeren består af en intrumenteringsforstærker, et passivt højpasfilter, en full-wave rectifier, et aktivt lavpasfilter og en justerbar forstærker \citep{advancertech2013}. 
 
 En illustration af, hvordan EMG-forstærkeren behandler et inputsignal fremgår af \autoref{fig:sinussignal}.
@@ -10,7 +10,7 @@ En illustration af, hvordan EMG-forstærkeren behandler et inputsignal fremgår 
 \end{figure}
 
 \noindent
-Med udgangspunkt i \autoref{fig:sinussignal} opfattes sinuskurven som muskelsignalet. Dette passerer et passivt højpasfilter bestående af en kondensator, der dæmper DC-støjen og dermed offsettet i signalet. Dette betyder, at muskelsignalet centeres omkring 0 på tids-aksen, hvilket er nødvendigt for at få ensretningen til at virke efter hensigten. Dernæst helbølgeensrettes signalet på midterste graf, ved at invertere signalets negative værdier, så signalet udelukkende består af positive værdier samtidigt med at beholde hele dets originale energi. Herefter envelopefiltreres signalet, hvilket ses som det udglattede signal på nederste graf. Til denne filtrering er der beregnet en knækfrekvens på $1,94~Hz$ ud fra \autoref{eq:lavcutfre}. $C$ og $R$ kan i databladet for EMG-forstærkeren aflæses til at være henholdsvis $1 \cdot 10^{-6}~F$ og $80,6 \cdot 10^3~\Omega$ \citep{advancertech2013}. 
+På \autoref{fig:sinussignal} kan sinuskurven opfattes som muskelsignalet. Dette passerer et passivt højpasfilter bestående af en kondensator, der dæmper DC-støjen og dermed offsettet i signalet. Dette betyder, at muskelsignalet centeres omkring 0 på tids-aksen, hvilket er nødvendigt for at få ensretningen til at virke efter hensigten, da ensretningen foregår omkring denne akse. Dernæst helbølgeensrettes signalet på midterste graf, ved at invertere signalets negative værdier, så signalet udelukkende består af positive værdier samtidigt med at beholde hele dets originale energi. Herefter envelopefiltreres signalet, hvilket ses som det udglattede signal på nederste graf. Til denne filtrering er der beregnet en knækfrekvens på $1,94~Hz$ ud fra \autoref{eq:lavcutfre}. $C$ og $R$ kan i databladet for EMG-forstærkeren aflæses til at være henholdsvis $1 \cdot 10^{-6}~F$ og $80,6 \cdot 10^3~\Omega$ \citep{advancertech2013}. 
 
 \begin{equation}\label{eq:lavcutfre}
 f_c = \frac{1}{2 \pi C R} = \frac{1}{2 \pi \cdot 1 \cdot 10^{-6}~F \cdot 80,6 \cdot 10^3~\Omega} = 1,94~Hz
