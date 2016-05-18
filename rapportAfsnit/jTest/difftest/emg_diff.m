@@ -42,10 +42,10 @@ box off
 
 set(hAx(2), 'YLim',[-20 20]);
 set(hAx(2),'YTick',[-20: 5: 20]);
-set(get(hAx(2),'Ylabel'),'string','Spænding [V]');
+set(get(hAx(2),'Ylabel'),'string','Digitalt output');
 
 %ylim([-0.1 0.2])
-%ylabel('Spænding [V]')
+%ylabel('Digitalt output')
 %yyaxis right
 %plot(t(1:1000), diff);
 %ylim([-20 20])

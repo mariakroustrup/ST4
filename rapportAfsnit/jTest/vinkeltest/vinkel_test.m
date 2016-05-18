@@ -24,10 +24,10 @@ set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
 set(hAx(1), 'YLim',[0 200]);
 set(hAx(1),'YTick',[0:20:200]);
-set(get(hAx(1),'Ylabel'),'string','Vinkel [\circ]');
+set(get(hAx(1),'Ylabel'),'string','Knæets vinkel [\circ]');
 box off
 
 set(hAx(2), 'YLim',[-210 20]);
 set(hAx(2),'YTick',[-210: 20: 20]);
-set(get(hAx(2),'Ylabel'),'string','Spænding [V]');
+set(get(hAx(2),'Ylabel'),'string','Accelerometre [V]');
 
