@@ -51,122 +51,122 @@ set(hAx(1), 'XLim',[0 10]);
 set(hAx(1),'XTick',[0:1:10]);
 set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
-set(hAx(2), 'YLim',[0 180]);
-set(hAx(2),'YTick',[0:20:180]);
+set(hAx(2), 'YLim',[-420 180]);
+set(hAx(2),'YTick',[-420:40:180]);
 set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
 
-set(hAx(1), 'YLim',[-0.5 1.8]);
-set(hAx(1),'YTick',[-0.5:0.2:2]);
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
+set(hAx(1), 'YLim',[-0.5 1.5]);
+set(hAx(1),'YTick',[-0.5:0.2:1.5]);
+set(get(hAx(1),'Ylabel'),'string','EMG[V]');
 box off
 
 subplot(2,1,2)
 plot(t,Dif1);
 hold on
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
-legend('Digtialt output')
+ylabel('Digital output')
 xlim([0 10])
+set(gca,'XTick',[0:1:10])
 ylim([-15 15])
 set(gca,'fontsize',20);
 box off
-
-
-% Plotter for anden maaling
-figure
-subplot(2,1,1)
-hold on
-[hAx,hLine1,hLine2] = plotyy(t, EMG2, t, Acc2);
-set(hAx(1),'fontsize',20);
-set(hAx(2),'fontsize',20);
-legend('EMG','Vinkel');
-
-set(hAx(1), 'XLim',[0 10]);
-set(hAx(1),'XTick',[0:1:10]);
-set(get(hAx(1),'Xlabel'),'string','Tid [s]');
-
-set(hAx(2), 'YLim',[0 250]);
-set(hAx(2),'YTick',[0:20:250]);
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
-
-set(hAx(1), 'YLim',[-0.5 1.8]);
-set(hAx(1),'YTick',[-0.5:0.2:2]);
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
-box off
-
-subplot(2,1,2)
-plot(t,Dif2);
-hold on
-xlabel('Tid [s]')
-ylabel('Digtialt output')
-legend('EMG-algoritme')
-xlim([0 10])
-ylim([-15 15])
-set(gca,'fontsize',20);
-box off
-
-% Plotter for tredje maaling
-figure
-subplot(2,1,1)
-hold on
-[hAx,hLine1,hLine2] = plotyy(t, EMG3, t, Acc4);
-set(hAx(1),'fontsize',20);
-set(hAx(2),'fontsize',20);
-legend('EMG','Vinkel');
-
-set(hAx(1), 'XLim',[0 10]);
-set(hAx(1),'XTick',[0:1:10]);
-set(get(hAx(1),'Xlabel'),'string','Tid [s]');
-
-set(hAx(2), 'YLim',[0 250]);
-set(hAx(2),'YTick',[0:20:250]);
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
-
-set(hAx(1), 'YLim',[-0.5 1.8]);
-set(hAx(1),'YTick',[-0.5:0.2:2]);
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
-box off
-
-subplot(2,1,2)
-plot(t,Dif3);
-hold on
-xlabel('Tid [s]')
-ylabel('Digtialt output')
-legend('EMG-algoritme')
-xlim([0 10])
-ylim([-15 15])
-set(gca,'fontsize',20);
-box off
- 
-% Plotter for fjerde maaling
-figure
-subplot(2,1,1)
-hold on
-[hAx,hLine1,hLine2] = plotyy(t, EMG4, t, Acc3);
-set(hAx(1),'fontsize',20);
-set(hAx(2),'fontsize',20);
-legend('EMG','Vinkel');
-
-set(hAx(1), 'XLim',[0 10]);
-set(hAx(1),'XTick',[0:1:10]);
-set(get(hAx(1),'Xlabel'),'string','Tid [s]');
-
-set(hAx(2), 'YLim',[0 250]);
-set(hAx(2),'YTick',[0:20:250]);
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
-
-set(hAx(1), 'YLim',[-0.5 1.8]);
-set(hAx(1),'YTick',[-0.5:0.2:2]);
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
-box off
-
-subplot(2,1,2)
-plot(t,Dif4);
-hold on
-xlabel('Tid [s]')
-ylabel('Digtialt output')
-legend('EMG-algoritme')
-xlim([0 10])
-ylim([-15 15])
-set(gca,'fontsize',20);
-box off
+% 
+% 
+% % Plotter for anden maaling
+% figure
+% subplot(2,1,1)
+% hold on
+% [hAx,hLine1,hLine2] = plotyy(t, EMG2, t, Acc2);
+% set(hAx(1),'fontsize',20);
+% set(hAx(2),'fontsize',20);
+% legend('EMG','Vinkel');
+% 
+% set(hAx(1), 'XLim',[0 10]);
+% set(hAx(1),'XTick',[0:1:10]);
+% set(get(hAx(1),'Xlabel'),'string','Tid [s]');
+% 
+% set(hAx(2), 'YLim',[0 250]);
+% set(hAx(2),'YTick',[0:20:250]);
+% set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
+% 
+% set(hAx(1), 'YLim',[-0.5 1.8]);
+% set(hAx(1),'YTick',[-0.5:0.2:2]);
+% set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
+% box off
+% 
+% subplot(2,1,2)
+% plot(t,Dif2);
+% hold on
+% xlabel('Tid [s]')
+% ylabel('Digtialt output')
+% legend('EMG-algoritme')
+% xlim([0 10])
+% ylim([-15 15])
+% set(gca,'fontsize',20);
+% box off
+% 
+% % Plotter for tredje maaling
+% figure
+% subplot(2,1,1)
+% hold on
+% [hAx,hLine1,hLine2] = plotyy(t, EMG3, t, Acc4);
+% set(hAx(1),'fontsize',20);
+% set(hAx(2),'fontsize',20);
+% legend('EMG','Vinkel');
+% 
+% set(hAx(1), 'XLim',[0 10]);
+% set(hAx(1),'XTick',[0:1:10]);
+% set(get(hAx(1),'Xlabel'),'string','Tid [s]');
+% 
+% set(hAx(2), 'YLim',[0 250]);
+% set(hAx(2),'YTick',[0:20:250]);
+% set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
+% 
+% set(hAx(1), 'YLim',[-0.5 1.8]);
+% set(hAx(1),'YTick',[-0.5:0.2:2]);
+% set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
+% box off
+% 
+% subplot(2,1,2)
+% plot(t,Dif3);
+% hold on
+% xlabel('Tid [s]')
+% ylabel('Digtialt output')
+% legend('EMG-algoritme')
+% xlim([0 10])
+% ylim([-15 15])
+% set(gca,'fontsize',20);
+% box off
+%  
+% % Plotter for fjerde maaling
+% figure
+% subplot(2,1,1)
+% hold on
+% [hAx,hLine1,hLine2] = plotyy(t, EMG4, t, Acc3);
+% set(hAx(1),'fontsize',20);
+% set(hAx(2),'fontsize',20);
+% legend('EMG','Vinkel');
+% 
+% set(hAx(1), 'XLim',[0 10]);
+% set(hAx(1),'XTick',[0:1:10]);
+% set(get(hAx(1),'Xlabel'),'string','Tid [s]');
+% 
+% set(hAx(2), 'YLim',[0 250]);
+% set(hAx(2),'YTick',[0:20:250]);
+% set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
+% 
+% set(hAx(1), 'YLim',[-0.5 1.8]);
+% set(hAx(1),'YTick',[-0.5:0.2:2]);
+% set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
+% box off
+% 
+% subplot(2,1,2)
+% plot(t,Dif4);
+% hold on
+% xlabel('Tid [s]')
+% ylabel('Digtialt output')
+% legend('EMG-algoritme')
+% xlim([0 10])
+% ylim([-15 15])
+% set(gca,'fontsize',20);
+% box off
