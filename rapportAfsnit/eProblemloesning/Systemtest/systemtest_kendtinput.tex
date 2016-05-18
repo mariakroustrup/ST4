@@ -18,7 +18,7 @@ Fra testen plottes og visualiseres systemets input af det samplede sinussignal o
 \includegraphics[width=0.4\textwidth]{figures/kontrol_test_sinus.jpg}
 \caption{På den øverste figur illustrerer den blå graf den samlede vinkel. Det fremgår af grafen at vinkelen er stigende fra $90^{\circ}$ til $175^{\circ}$, hvorefter vinklen daler markant ned til $-115^{\circ}$. 
 På den midterste figur, illustrer den blå graf det opsamlede inputsignal, svarende til en sinus på $500~Hz$ med en $V_{pp}$ på $4~mV$. Den røde graf illustrer det opsamlede digitale outputsignal, disse værdier er målt i spændingen. 
-På den nederste figur illustrerer den blå graf signalets digitale output. Signalet går fra $10$ ved stigende muskelaktivitet til $-10$ ved en faldende muskelaktivitet, hvis grafen går i $0$ svarer dette til en overskridelse af en vinkel på $180^{\circ}$ eller en vinkel under $90^{\circ}$}
+På den nederste figur illustrerer den blå graf signalets digitale output. Signalet går fra $10$ ved stigende muskelaktivitet til $-10$ ved en faldende muskelaktivitet, hvis grafen går i $0$ svarer dette til en overskridelse af en vinkel på $180^{\circ}$.}
 \label{fig:test_kendtinput}
 \end{figure}
 
@@ -28,4 +28,4 @@ Disse faktorer er angiveligt fordi den målte spænding ikke har været $0~V$ ve
 
 Det fremgår af den midterste figur og den nederste figur på \autoref{fig:test_kendtinput}, at der er en sammenhæng mellem det opsamlede filtrerede sinussignal og det opsamlede outputsignal. Når sinussignalet er faldende, daler outputsignalet markant fra $10$ til $-10$, hvorefter outputsignalet stiger markant fra $-10$ til $10$, når signussignalet stiger igen. Derudover ses det, at tiden hvor signalet befinder sig i $10$ eller $-10$ varierer alt efter hvor længe det opsamlede filtrerede sinussignals er stigende eller faldende .
 
-På den nederste figur på \autoref{fig:test_kendtinput} fremgår det at efter have befundet sig i $-10$ ved 9 sekunder, stiger til $0$. Dette er grundet målingerne i den øverste figur, hvor vinkelen når $175^{\circ}$. Dette stemmer overens med at, hvis vinklen  overskrider de $180^{\circ}$ eller er under $90^{\circ}$ skal det opsamlede digitale signal gå i $0$. 
+På den nederste figur på \autoref{fig:test_kendtinput} fremgår det at efter have befundet sig i $-10$ ved 9 sekunder, stiger til $0$. Dette er grundet målingerne i den øverste figur, hvor vinkelen når $175^{\circ}$. Dette stemmer overens med at, hvis vinklen  overskrider de $180^{\circ}$ skal det opsamlede digitale signal gå i $0$. 
