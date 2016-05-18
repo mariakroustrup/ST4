@@ -1,10 +1,23 @@
 \subsection{Vinkelberegning}
-Beregningen af vinkler har til formål at udregne, hvor meget knæet har bevæget sig under udførsel af en squat-øvelse. Vinklen af knæet udgøres af de to accelerometre målinger, hvor disse er lagt sammen for at få den samlede vinkel over knæet.
-Ved oprejst position befinder knæet sig i i $180^{\circ}$, hvor vinklen af knæet vil blive mindre ved udførelse af squat-øvelsen ned mod de $90^{\circ}$, hvorefter vinklen vil være stigende når de $90^{\circ}$ er opnået og der udføres en opadgående bevægelse. 
+Beregningen af vinkler har til formål at udregne, hvor meget knæets vinkel  har ændret sig under udførsel af en squat-øvelse. Vinklen af knæet udgøres af de to accelerometre målinger, hvor disse er lagt sammen for at få den samlede vinkel over knæet.
+Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ til $90^{\circ}$, dette svarer til at knæet befinder sig mellem $180$ og $90^{\circ}$. Det er på denne måde muligt, at vurdere hvordan knæets vinkel har ændret sig ved udførsel af en squat-øvelse. 
+For at sikre at knæet befinder sig inden for intervallet $180$ til $90^{\circ}$ under squat-øvelsen indikeres dette ved en LED, hvis intervallet overskrides. Yderligere ønskes det at outputtet ændres, hvis knæets vinkel er  over $180^{\circ}$.
 
+ 
 \vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
-\item Skal kunne kunne måle knæets vinkel mellem $180^{\circ}$ og $90^{\circ}$
 \item Skal kunne udsende ét signal som repræsenterer en given vinkel
+\item Skal kunne måle knæets vinkel mellem $180^{\circ}$ og $90^{\circ}$
+\begin{itemize}
+\item En grøn LED skal lyse når knæets vinkel befinder sig inden for dette interval
+\end{itemize}
+\item Skal indikere hvornår knæets vinkel er over $180^{\circ}$ og under $90^{\circ}$
+\begin{itemize}
+\item En rød LED skal lyse hvis knæets vinkel er over $180^{\circ}$ eller under $90^{\circ}$
+\end{itemize}
+\item Skal indikere hvornår knæet overstrækkes, hvilket svarer til $180^{\circ}$
+\begin{itemize}
+\item Hvis vinkel overstiger $180^{\circ}$ skal dette indikeres som et output på $-200^{\circ}$ for hvert accelerometer
+\end{itemize}
 \end{itemize}
