@@ -1,26 +1,22 @@
 \subsubsection{Trådløs kommunikation}
-Den trådløse kommunikation testes for at undersøge om kravene opstillet i \autoref{•}. 
+Den trådløse kommunikation testes for at undersøge om kravene opstillet i \autoref{sec:traadloes_komm_design}. 
 
+\noindent
+Kravet for at USB-dongle skal forsynes via USB overholdes i måden den trådløsekommunikation er implementeret. Her er BLE-donglen erstattet med en alternativ modtagerenhed som beskrevet i \autoref{traadloes_komm_imp}, og tilsluttes en computer via USB hvorfra den også forsynes. 
 
-Forsyning:
-Kravet på at USB-dongle skal forsynes via USB overholdes i måden den trådløsekommunikation er implementeret. Her er BLE-donglen erstattet med en alternativ modtagerenhed som beskrevet i \autoref{traadloes_komm_imp}.
+\noindent
+Til test af forsinkelse for transmissionne, defineres en debug pin på mikrokontrolleren og på modtagerenheden. Når data transmitteres sættes pin'en på mikrokontrolleren høj, samt på modtagerenheden når data modtages. Hertil kan der via et oscilloscope aflæses en forsinkelese mellem de to pin. 
 
-%Måden hvorpå den tråløse kommunikation er implementeret overholdes kravet om at BLE donglen er forsynet via USB. 
-
-Forsinkelse:
-Forsinkelsen for den trådløse kommunikation testes ved anvendelse af en debug pin på både mikrokontrolleren og på PSoC 4200M enheden der tilsluttes computeren. Da der er
-
-
-
-Afstanden:
-Til at teste kravet for afstand, programmeres mikrokontrolleren til at transmittere en værdi der tæller op fra nul. Dette værdi transmiteres 10 gange i sekundet til en computer hvorpå de modtaget data visualiseres i programmet Realterm.
+\noindent
+Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi der tæller op fra nul. Dette værdi transmiteres 10 gange i sekundet til en computer hvorpå de modtaget data visualiseres i programmet Realterm.
 Startpunket for testen er med en afstand på $1~m$ mellem modtagerenheden på computeren og mikrokontrolleren. 
 Hertil øges afstanden med $1~m$ indtil der opnåes en afstand svarende det opstillede krav på $2~m$. Yderligere fortsætes forøgelsen af afstanden op til max $4~m$, eller til der ikke længere modtages data. Dette er for at undersøge om de $2~m$ markerer grænsen for den tråløse kommunikation, og dermed definere et flexområde i forhold til det opstillede krav.  
 
 \begin{table}[H]
+\centering
 \begin{tabular}{|c|c|}
 \hline 
-Afstand [m] & Succsesfuld transmission \\ 
+Afstand [m] & Gennemført transmission \\ 
 \hline 
 1 & Ja \\ 
 \hline 
@@ -35,5 +31,6 @@ Afstand [m] & Succsesfuld transmission \\
 \label{tab:traadloes_komm_test_afstand}
 \end{table}
 
+Ud fra \autoref{tab:traadloes_komm_test_afstand}, kan der konkluderes et flexrum for den trådløse kommunikation der er $100~\%$ af det stillet krav. 
 
 Kommunikation med NXT:
