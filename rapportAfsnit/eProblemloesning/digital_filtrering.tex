@@ -3,7 +3,10 @@ Der findes to former for digital filtrering; Infinite Impulse Response (IIR) og 
 
 FIR-filtre kan laves, således de har en lineær fase, og vil altid være stabile. FIR-filtre designes ved at benytte eksempelvis frekvenssampling eller en bestemt vindue-type, hvilket giver en overførselsfunktion. Denne overførselsfunktion kan herved benyttes som et digitalt filter \citep{blandford2012}. 
 
-I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. Udover dette har IIR-filtre stejlere sidelobes end et FIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. Disse a og b koefficienter fremgår af \autoref{eq:iirfilt}, der viser udregningen for et IIR-filter. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}. IIR-filtret udregnes ved anvendelse af formlen, der fremgår af \autoref{eq:iirfilt}\citep{francis2009}.
+I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. Udover dette har IIR-filtre stejlere sidelobes end et FIR-filter med samme antal koefficienter. Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere. IIR-filtres designprocedure er udledt af den procedure, som de analoge filtre er designet efter. Af denne grund laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}.
+
+IIR-filteret består af et forward FIR-filter, der omfatter tælleren, b koefficienter, for nullerne samt et feedback FIR for nævneren, a koefficienterne, for polerne. IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autoref{eq:iirfilt} \citep{francis2009}. 
+
 
 \noindent
 \begin{equation}
@@ -11,6 +14,8 @@ y(n)=\sum^{n}_{i=0}b_(_i_)x(n-i)+\sum^{m}_{i=0}a_(_i_)y(m-i)
 \label{eq:iirfilt}
 \end{equation}
 \\
+
+Hvor $a_(_i_)$ samt  $b_(_i_)$ er IIR-filtrets koefficienter. 
 
 \begin{figure}[H]
 \centering
