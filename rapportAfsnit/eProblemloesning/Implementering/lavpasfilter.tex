@@ -1,6 +1,9 @@
 \subsubsection{IIR-lavpasfilter}
-Det ønskede 2. ordens IIR-lavpasfilter implementeres digitalt ved anvendelse af MATLAB samt PSoC.
-Ved implementering af dette filter benyttes MATLAB for således at beregne a og b koefficienterne for et Butterworth filter, der er nødvendigt for at kode filteret. Disse koefficienterne fremgår af \autoref{tab:koeff_lav}. Dertil defineres a og b koefficienterne samt filterlængden i PSoC, hvorefter disse anvendes til programmering af lavpasfilteret. 
+Det ønskede 2. ordens IIR-lavpasfilter ud fra kravene opstillet i \autoref{sec:lavpas_krav}, implementeres digitalt ved anvendelse af MATLAB samt PSoC.
+Ved implementering af dette filter benyttes MATLAB for således at beregne a- og b-koefficienterne for et Butterworth filter, der er nødvendigt for at kode filteret. Teorien hertil er beskrevet i \autoref{sec:teori_filter}. 
+
+
+Disse koefficienterne fremgår af \autoref{tab:koeff_lav}. Dertil defineres a- og b-koefficienterne samt filterlængden i PSoC, hvorefter disse anvendes til programmering af lavpasfilteret. 
 
 \begin{table}[H]
 \centering
