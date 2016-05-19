@@ -1,28 +1,20 @@
 \subsection{Vinkelberegning}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1003~V$ og accelerometeret placeret på skinnebenet til $-972~V$. De målte spændinger, hvor signalet er offsetjusteret fremgår af \autoref{tab:vinkelinterval_psoc}.
-
+I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1002$, hvilket svarer til en spænding på $-1,6162~V$ og accelerometeret placeret på skinnebenet til $-972$, svarende til en spænding på $-1,5743~V$. Det digitale output ved forskellige vinklet fremgår af \autoref{tab:vinkelinterval_psoc}.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
-                               & \textit{Accelerometer placeret på låret}                           & \multicolumn{1}{l}{}                       \\ \hline
-\multicolumn{1}{|c|}{\textbf{Interval}} & \multicolumn{1}{c|}{ \textbf{Målt spænding {[}V{]}}}                         & \multicolumn{1}{l|}{ \textbf{Målt spænding {[}V{]}}} \\ \hline
-\multicolumn{1}{|c|}{ \textbf{0 - 10}}   & \multicolumn{1}{c|}{0}                                             & \multicolumn{1}{c|}{- 31}                  \\ \hline
-\multicolumn{1}{|c|}{\textbf{10 - 30}}  & \multicolumn{1}{c|}{- 31}                                          & \multicolumn{1}{c|}{- 67}                  \\ \hline
-\multicolumn{1}{|c|}{\textbf{30 - 50}} & \multicolumn{1}{c|}{- 67}                                          & \multicolumn{1}{c|}{- 126}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{50 - 70}} & \multicolumn{1}{c|}{- 126}                                         & \multicolumn{1}{c|}{- 168}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{70 - 80}}  & \multicolumn{1}{c|}{- 168}                                         & \multicolumn{1}{c|}{- 185}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{80 - 90}} & \multicolumn{1}{c|}{-185}                                          & \multicolumn{1}{c|}{- 186}                 \\ \hline
-                               & \multicolumn{1}{l}{\textit{Accelerometer placeret på skinnebenet}} & \multicolumn{1}{c}{}                       \\ \hline
-\multicolumn{1}{|c|}{Interval} & \multicolumn{1}{c|}{\textbf{Målt spænding {[}V{]}}}                         & \multicolumn{1}{c|}{\textbf{Målt spænding {[}V{]}}} \\ \hline
-\multicolumn{1}{|c|}{\textbf{0 - 10}}  & \multicolumn{1}{c|}{0}                                             & \multicolumn{1}{c|}{- 16}                  \\ \hline
-\multicolumn{1}{|c|}{\textbf{10 - 30}}  & \multicolumn{1}{c|}{- 16}                                          & \multicolumn{1}{c|}{- 52}                  \\ \hline
-\multicolumn{1}{|c|}{\textbf{30 - 50}}  & \multicolumn{1}{c|}{- 52}                                          & \multicolumn{1}{c|}{- 111}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{50 - 70}} & \multicolumn{1}{c|}{- 111}                                         & \multicolumn{1}{c|}{- 153}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{70 - 80}}  & \multicolumn{1}{c|}{- 153}                                         & \multicolumn{1}{c|}{- 176}                 \\ \hline
-\multicolumn{1}{|c|}{\textbf{80 - 90}}  & \multicolumn{1}{c|}{- 176}                                         & \multicolumn{1}{c|}{- 179}                 \\ \hline
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \multicolumn{1}{l|}{\textbf{Digital output fra acclerometer placeret på låret}} & \multicolumn{1}{l|}{\textbf{Digital output fra accelerometer placeret på skinnebenet}} \\ \hline
+\textbf{0}                                                      & 0                                                                               & 0                                                                                      \\ \hline
+\textbf{10}                                                     & -31                                                                             & -16                                                                                    \\ \hline
+\textbf{30}                                                     & -67                                                                             & -52                                                                                    \\ \hline
+\textbf{50}                                                     & -126                                                                            & -111                                                                                   \\ \hline
+\textbf{70}                                                     & -168                                                                            & -153                                                                                   \\ \hline
+\textbf{80}                                                     & -185                                                                            & -176                                                                                   \\ \hline
+\textbf{90}                                                     & -186                                                                            & -179                                                                                   \\ \hline
 \end{tabular}
-\caption{Spændingen målt i vinklerne fra 0 til 90$^{\circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første spænding svarer til start intervallet og den sidste til slutningen af intervallet.}
+\caption{Digital output fra accelerometer placeret på både låret og skinnebenet svarende til en given spænding.}
 \label{tab:vinkelinterval_psoc}  
 \end{table}
 

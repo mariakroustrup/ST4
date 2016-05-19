@@ -1,11 +1,10 @@
-\subsection{Opsamling af accelerometer-signaler}\label{sec:acc_krav}
+\subsection{Opsamling af accelerometer-signaler}\label{sec:acc_imp}
 
-I dette projekt anvendes der på baggrund af krav opstillet i \autoref{sec:acc_teori} to accelerometre ADXL335Z fra Analog Devices. Accelerometerne er en 3-aksialt sensor, som har et arbejdsområde på minimum $\pm~3~g$, og en spænding som output. Det analoge outputsignal er proportionalt med accelerationen \citep{analogdevices2009}. 
+I dette projekt anvendes der på baggrund af krav opstillet i \autoref{sec:acc_teori} to accelerometre ADXL335Z fra Analog Devices. Accelerometerne er en 3-aksialt sensor, som har et arbejdsområde på minimum $\pm3~g$, og en spænding som output. Det analoge outputsignal er proportionalt med accelerationen \citep{analogdevices2009}. 
 
-Accelerometrene har en single-supply spændingsforsyning, som skal ligge mellem $1,8~-~3,6~V$.  Offsettet er afhængig af spændingen i spændingsforsyningen, da spændingen er $3,4~V$, bliver offsettet $1,7~V$, som er det halve af spændingsforsyningen. Båndbredden og støjen varierer for akserne. For x- og y-aksen ligger båndbredden mellem $0,5 - 1.600~Hz$ og støjen normalt på $150~\mu g/\sqrt{Hz}$ RMS. \fxnote{Den spektrale effekttæthed måles i $\mu g/$. Hvis dette divideres med kvadratroden af båndbredden af signalet $\sqrt{Hz}$, fås RMS af accelerationsstøjen ved en temperatur på $25^\circ$C} \citep{analogdevices2010}. %mens båndbredden for z-aksen ligger mellem $0,5 - 550~Hz$ og støjen normalt på $300~\mu g/\sqrt{Hz}$ RMS. 
+Accelerometrene har en single-supply spændingsforsyning, som skal ligge mellem $1,8~-~3,6~V$.  Offsettet er afhængig af forsyningsspændingen fra mikrokontrolleren, der forsyner accelerometrene. Forsyningsspændingen er $3,3~V$, og derved bliver offsettet $1,65~V$, som er det halve af forsyningsspændingen. Båndbredden og støjen varierer for akserne. For y-aksen ligger båndbredden mellem $0,5 - 1.600~Hz$.\fxnote{Den spektrale effekttæthed måles i $\mu g/$. Hvis dette divideres med kvadratroden af båndbredden af signalet $\sqrt{Hz}$, fås RMS af accelerationsstøjen ved en temperatur på $25^\circ$C} \citep{analogdevices2010}.
 
-Da accelerometrenes output er direkte proportienalt med dets input, afhænger sensitiviteten og offsettet af spændingsforsyningen. Ved en forsyningsspænding på $3~V$ er sensitiviteten typisk $300~mV/g$ \citep{analogdevices2010}. 
-
+Accelerometrenes outputsensitivitet varierer ligefrem proportionelt med forsyningsspændingen. Sensitiviteten har et range på $\pm10~\%$ \citep{analogdevices2010}. Ved en forsyningsspænding på $3,3~V$ er sensitiviteten $330~mV/g~\pm 10~\%$. 
 
 \begin{figure}[H]
 \centering

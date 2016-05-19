@@ -1,0 +1,33 @@
+\subsection{Samlet system}
+Under implementering af det samlede system er det nødvendigt at ændre flere parametre for at kunne opfylde de overordnet krav, beskrevet i  \autoref{sec:overordnet_krav}. Dette omfatter ændring af forsyningen af spænding til de enkelte komponenter, hvilket forårsager at spændingen for de udregnede vinklet er ændret.
+
+\subsubsection{Forsyning af spænding}
+Da systemet skal være batteridrevet, skal alle komponenter kobles til et batteri. Dette implementeres ved at mikrokontrollen, gum sticken og EMG-forstærkeren er får spænding fra spændingensregulatoreren, der leverer en spænding på $5,5~V$ til disse komponenter. Mikrokontrolleren er koblet til de to accelerometre og forsyner disse med spændinger på $3,3~V$. Opsætningen af dette er illustreret på \autoref{fig:samlet_spaending_imp}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/samlet_spaending}
+\caption{Illustration af koblingen af spænding til de enkelte komponenter.}
+\label{fig:samlet_spaending_imp}
+\end{figure}
+
+\subsubsection{Beregning af vinkler}
+Da spændingen accelerometrene modtager ændres fra $3,4$ til $3,3~V$, bliver offsettet for disse ligeledes ændret. Da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $-1,5904~V$, og for accelerometeret placeret på skinnebenet er $-1,5598~V$. Dette medvirker til at de udregnede vinkler for intervallet $90$ til $180^{\circ}$ ændres. De nye vinkler fremgår af \autoref{tab:samlet_vinkel_imp}. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \multicolumn{1}{l|}{\textbf{Digital output fra acclerometer placeret på låret}} & \multicolumn{1}{l|}{\textbf{Digital output fra accelerometer placeret på skinnebenet}} \\ \hline
+\textbf{0}                                                      & 0                                                                               & 0                                                                                      \\ \hline
+\textbf{10}                                                     & -25                                                                             & -4                                                                                     \\ \hline
+\textbf{30}                                                     & -60                                                                             & -42                                                                                    \\ \hline
+\textbf{50}                                                     & -122                                                                            & -101                                                                                   \\ \hline
+\textbf{70}                                                     & -165                                                                            & -142                                                                                   \\ \hline
+\textbf{80}                                                     & -191                                                                            & -164                                                                                   \\ \hline
+\textbf{90}                                                     & -195                                                                            & -170                                                                                   \\ \hline
+\end{tabular}
+\caption{Digitalt output fra accelerometer placeret på låret og skinnebenet svarende til en given vinkel.}
+\label{tab:samlet_vinkel_imp}
+\end{table}
+
