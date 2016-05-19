@@ -1,16 +1,16 @@
 \subsubsection{Trådløs kommunikation}
-Den trådløse kommunikation testes for at undersøge om kravene opstillet i \autoref{sec:traadloes_komm_design}. 
+Den trådløse kommunikation testes for at undersøge, hvorvidt kravene opstillet i \autoref{sec:traadloes_komm_design} opfyldes. 
 
 \noindent
-Kravet for at USB-dongle skal forsynes via USB overholdes i måden den trådløsekommunikation er implementeret. Her er BLE-donglen erstattet med en alternativ modtagerenhed som beskrevet i \autoref{traadloes_komm_imp}, og tilsluttes en computer via USB hvorfra den også forsynes. 
-
-%\noindent
-%Til test af forsinkelse for transmissionne, defineres en debug pin på mikrokontrolleren og på modtagerenheden. Når data transmitteres sættes pin'en på mikrokontrolleren høj, samt på modtagerenheden når data modtages. Hertil kan der via et oscilloscope aflæses en forsinkelese mellem de to pin. 
+Kravet for, at USB-donglen skal forsynes via USB opfyldes ved måden, hvorpå den trådløse kommunikation er implementeret. Her er BLE-donglen erstattet med en alternativ modtagerenhed som beskrevet i \autoref{traadloes_komm_imp}, og denne tilsluttes en computer via USB, hvorfra den ligeledes forsynes. 
 
 \noindent
-Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi der tæller op fra nul. Dette værdi transmiteres 10 gange i sekundet til en computer hvorpå de modtaget data visualiseres i programmet Realterm.
+Til test af forsinkelse for transmission, defineres en debug pin på mikrokontrolleren og på modtagerenheden. Når data transmitteres sættes pin'en på mikrokontrolleren høj, samt på modtagerenheden, når data modtages. Hertil kan der via et oscilloscope aflæses en forsinkelese mellem de to pin. 
+
+\noindent
+Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi, der tæller op fra nul. Denne værdi transmitteres 10 gange i sekundet til en computer, hvorpå de modtagede data visualiseres i programmet Realterm.
 Startpunket for testen er med en afstand på $1~m$ mellem modtagerenheden på computeren og mikrokontrolleren. 
-Hertil øges afstanden med $1~m$ indtil der opnåes en afstand svarende det opstillede krav på $2~m$. Yderligere fortsættes forøgelsen af afstanden op til max $4~m$, eller til der ikke længere modtages data. Dette er for at undersøge om de $2~m$ markerer grænsen for den tråløse kommunikation, og dermed definere et flexområde i forhold til det opstillede krav. Testen udføres under forhold hvor der er fri passage mellem mikrokontroller og modtager.  
+Hertil øges afstanden med $1~m$ indtil der opnås en afstand svarende til det opstillede krav på $2~m$. Yderligere fortsættes forøgelsen af afstanden op til max $4~m$, eller til der ikke længere modtages data. Dette er for at undersøge om de $2~m$ markerer grænsen for den tråløse kommunikation, og dermed definere et flexområde i forhold til det opstillede krav. Testen udføres under forhold, hvor der er fri passage mellem mikrokontroller og modtager.  
 
 \begin{table}[H]
 \centering
@@ -27,11 +27,11 @@ Afstand [m] & Gennemført transmission \\
 4 & Ja \\ 
 \hline 
 \end{tabular} 
-\caption{Data over afstands test for den trådløse kommunikation. Venstre søjle oplyser afstand mellem mikrokontroller og modtagerenhed, og den højre oplyser hvorvidt transmissionen har været succsesfuld eller ej.}
+\caption{Data over afstands test for den trådløse kommunikation. Venstre søjle oplyser afstand mellem mikrokontroller og modtagerenhed, og den højre oplyser, hvorvidt transmissionen har været succsesfuld eller ej.}
 \label{tab:traadloes_komm_test_afstand}
 \end{table}
 
-Ud fra \autoref{tab:traadloes_komm_test_afstand}, kan der konkluderes et flexrum for den trådløse kommunikation der er $100~\%$ af det stillet krav. Yderligere viste testen at systemet lagere data i en buffer, i tilfælde af at forbindelsen blev afbrudt. I det forbindelsen blev genetableret, blev den tabte data transmitteret, således ingen data gik tabt. 
+Ud fra \autoref{tab:traadloes_komm_test_afstand}, kan der konkluderes et flexrum for den trådløse kommunikation, der er $100~\%$ af det opstillede krav. Yderligere viste testen, at systemet lagrer data i en buffer i tilfælde af, at forbindelsen blev afbrudt. I det forbindelsen blev genetableret, blev den tabte data transmitteret, således ingen data gik tabt. Det kan derfor ligeledes konkluderes at de opstillede krav for trådløs kommunikation opfyldes.
 
 %Kommunikation med NXT:
  
