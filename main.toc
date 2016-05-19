@@ -41,10 +41,10 @@
 \contentsline {section}{\numberline {5.2}Digital del}{25}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Analog-to-Digital Converter}{25}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Digital filtrering}{26}{subsection.5.2.2}
-\contentsline {subsubsection}{IIR-lavpasfilter}{27}{section*.37}
+\contentsline {subsubsection}{IIR-lavpasfilter}{26}{section*.37}
 \contentsline {subsubsection}{Moving average filter}{27}{section*.39}
 \contentsline {subsection}{\numberline {5.2.3}Vinkelberegning}{27}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}EMG-algoritme}{29}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.4}EMG-algoritme}{28}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{29}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Low power mode}{30}{subsection.5.2.6}
 \contentsline {subsection}{\numberline {5.2.7}Flowdiagram}{31}{subsection.5.2.7}
