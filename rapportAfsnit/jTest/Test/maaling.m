@@ -70,8 +70,18 @@ set(gca,'XTick',[0:1:10])
 ylim([-15 15])
 set(gca,'fontsize',20);
 box off
-% 
-% 
+
+%%
+EMG112 = (maaling1.data (:,1))*(3.3/2^11);
+plot(t,EMG112);
+xlabel('Tid [s]')
+set(gca,'XTick',[0:1:10])
+ylabel('EMG [V]')
+set(gca,'YTick',[-0.5:0.2:2.1])
+set(gca,'fontsize',20);
+box off
+
+
 % % Plotter for anden maaling
 % figure
 % subplot(2,1,1)
