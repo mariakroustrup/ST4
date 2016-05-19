@@ -1,6 +1,12 @@
 \subsection{Vinkelberegning}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1002$, hvilket svarer til en spænding på $-1,6162~V$ og accelerometeret placeret på skinnebenet til $-972$, svarende til en spænding på $-1,5743~V$. Det digitale output ved forskellige vinklet fremgår af \autoref{tab:vinkelinterval_psoc}.
+I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinklerne over tid. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. 
+%Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Dette gør det ikke, da Ni USB-6009 og mikrokontrolleren har forskellige arbejdsområder,
+Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $-1002$, hvilket svarer til et offset på $-1,6162~V$ og accelerometeret placeret på skinnebenet til $-972$, svarende til et offset på $-1,5743~V$. Det digitale output ved forskellige vinklet fremgår af \autoref{tab:vinkelinterval_psoc}. Disse digitale output kan omregnes til spænding ved \autoref{eq:vinkler}, hvor $3,3~V$ er forsyningsspændingen, og $2^{11}$ er ADC'ens antal niveauer.  
 
+\begin{equation}
+\label{eq:vinkler}
+sp\text{æ}nding =digitalt~output\cdot \dfrac{3,3~V}{2^{11}}
+\end{equation}
 
 \begin{table}[H]
 \centering
@@ -20,9 +26,9 @@ I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vink
 \end{table}
 
 \noindent
-Spændingen er målt for vinklerne fra 0 til 90$^{\circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første målte spænding er for startværdien i intervallet og den sidste spænding er slutværdien i intervallet.
+Spændingen er målt for vinklerne $0, 10, 30, 50,70, 80$ og $90^{\circ}$ for accelerometrene placeret på både låret og skinnebenet. Den første målte spænding er for startværdien i intervallet og den sidste spænding er slutværdien i intervallet.
 
-Ud fra de målte værdier i de forskellige intervaller, er der opstillet en funktion indeholdt ifelse-løkker, hvorved det er muligt at vurdere, hvilket interval en given spænding befinder sig i. I hver enkelt løkke anvendes lineær interpolation, som har til opgave at finde en vinkel, der er svarende til en spænding som ligger mellem intervallet og returnerer denne. 
+Ud fra de målte værdier i de ovenstående vinkler, er der opstillet en funktion indeholdt ifelse-løkker, hvorved det er muligt at vurdere, hvilket interval en given spænding befinder sig i. I hver enkelt løkke anvendes lineær interpolation, som har til opgave at finde en vinkel, der er svarende til en spænding som ligger mellem intervallet og returnerer denne. 
 
 Når der er udført lineær interpolation over dataen skal de målte data fra låret samt skinnebenet ligges sammen for at få den samlede vinkel af, hvor langt personen har bevæget sig, og derved befinder sig i squat-øvelsen. Resultaterne er optaget på mikrokontrolleren og visualiseres i MATLAB, hvilket fremgår af \autoref{fig:acc_imp}.
  
@@ -30,7 +36,7 @@ Når der er udført lineær interpolation over dataen skal de målte data fra l�
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/accvinkel}
-\caption{Samlet vinkler af accelerometrene under udførelse af squat-øvelsen}
+\caption{Samlet vinkler af accelerometrene under udførelse af squat-øvelsen, der er defineret i \autoref{sec:knaeled_squat}.}
 \label{fig:acc_imp}
 \end{figure}
 
