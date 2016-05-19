@@ -5,7 +5,7 @@ Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det a
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/implementering/ADC_imp.jpg}
-\caption{ADC'ens opsætning på PSoC. Kanalerne Y1, Y2 og EMG er de kanaler, der modtager signaler fra henholdsvis accelerometret, der er placeret på femur, accelerometret, der er placeret på tibia, og EMG-signal. sdone er en outputterminal, der signalerer, at ADC'en har samplet det aktuelle input. eoc }
+\caption{ADC'ens opsætning på PSoC. Sucessive Approximation Register (SAR) er typen af ADC. Kanalerne Y1, Y2 og EMG er de kanaler, der modtager signaler fra henholdsvis accelerometret, der er placeret på femur, accelerometret, der er placeret på tibia, og EMG-signal. sdone er en outputterminal, der signalerer, at ADC'en har samplet det aktuelle input. eoc signalerer, når en konversionscyklus er gennemført, dermed kan værdierne fra de samplede kanaler aflæses i samplingsregistret. Når eoc signalerer dette, laver $ADC_ISR$ et interrupt, der igangsætter endnu en læsning af kanalerne \citep{ADC2014}.}
 \label{fig:ADC_teori}
 \end{figure}
 
