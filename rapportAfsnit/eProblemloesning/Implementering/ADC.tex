@@ -1,11 +1,11 @@
 \subsection{Analog-to-Digital Converter}
-Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digitalt. Der ønskes en konfigurering af 3 analoge kanaler, herunder Y-aksen på begge accelerometre samt EMG-forstærkeren. Opsætningen af ADC'en på mikrokontrolleren fremgår af \autoref{fig:ADC_teori}. Det ønskes at kunne læse signalerne hver for sig ved at måle single ended, hvorfor hvert input er tilkoblet $V_{ss}$. Da der ligeledes ønskes at anvende en 12 bit ADC på baggrund af kravet i \autoref{sec:ADC_teori}, indstilles denne til 12 bit. Da der anvendes single ended, svarer dette til at ADC'en anvender 11 bit, hvorfor den inddeles i $2^{11}$ svarende til 2048 niveauer. ADC'en har et arbejdsområde fra $0-5~V$. LSB'en for ADC'en kan beregnes ud fra \autoref{equ:LSB}, hvilket giver $2,44~mV$, hvis denne overskrides vil signalet gå i mætning \citep{ADC2014}. 
+Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digitalt. Der ønskes en konfigurering af 3 analoge kanaler, herunder Y-aksen på begge accelerometre samt EMG-forstærkeren. Opsætningen af ADC'en på mikrokontrolleren fremgår af \autoref{fig:ADC_teori}. Det ønskes at kunne læse signalerne ved at måle single ended, hvorfor hvert input er tilkoblet $V_{ss}$, der fungerer som jord. Da der ligeledes ønskes at anvende en 12 bits-ADC på baggrund af kravet i \autoref{sec:ADC_teori}, indstilles denne til en opløsning på 12 bit. Da der anvendes en single ended konfiguration af kanalerne, svarer dette til, at ADC'en anvender 11 bit. ADC'en har et arbejdsområde fra $0-5~V$ \citep{ADC2014}. LSB'en for ADC'en kan beregnes ud fra \autoref{equ:LSB}, hvilket giver $2,44~mV$. Hvis der sker ændringer i signalet, der er mindre end LSB på $2,44~mV$, vil dette ikke komme til udtryk i det konverterede signal. 
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/implementering/ADC_imp.jpg}
-\caption{ADC'ens opsætning på PSoC}
+\caption{ADC'ens opsætning på PSoC. Kanalerne Y1, Y2 og EMG er de kanaler, der modtager signaler fra henholdsvis accelerometret, der er placeret på femur, accelerometret, der er placeret på tibia, og EMG-signal. sdone er en outputterminal, der signalerer, at ADC'en har samplet det aktuelle input. eoc }
 \label{fig:ADC_teori}
 \end{figure}
 
