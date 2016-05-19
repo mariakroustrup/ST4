@@ -7,15 +7,12 @@ I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være 
 
 IIR-filteret består af et forward FIR-filter, der omfatter tælleren, b koefficienter, for nullerne samt et feedback FIR for nævneren, a koefficienterne, for polerne. IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autoref{eq:iirfilt} \citep{francis2009}. 
 
-
-\noindent
-\begin{equation}
-y(n)=\sum^{n}_{i=0}b_(_i_)x(n-i)+\sum^{m}_{i=0}a_(_i_)y(m-i)
-\label{eq:iirfilt}
+\begin{equation} \label{eq:iirfilt}
+	y(n)= \sum_{i=0}^{n} b_{(i)} \cdot x(n-i)+ \sum^{m}_{i=0} a_{(i)} \cdot y(m-i)
 \end{equation}
-\\
 
-Hvor $a_(_i_)$ samt  $b_(_i_)$ er IIR-filtrets koefficienter. 
+
+Hvor $a_{(i)}$ samt  $b_{(i)}$ er IIR-filtrets koefficienter. 
 
 \begin{figure}[H]
 \centering
@@ -43,7 +40,7 @@ Et moving average filter er et simpelt lavpas FIR-filter, der oftest anvendes ti
 \noindent
 Af \autoref{eq:mafl} fremgår formlen for udregningen af et moving average filter. 
 \begin{equation}
-y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
+	y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \label{eq:mafl}
 \end{equation}
 
