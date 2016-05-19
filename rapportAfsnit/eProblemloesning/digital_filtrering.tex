@@ -7,7 +7,11 @@ I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være 
 
 \noindent
 \begin{equation}
+
 y[n]=\dfrac{1}{a_0}(b_0x[n]+b_1x[n-1]+...+b_px[n-p]-a_1y[n-1]-a_2y[n-2]-...-a_qy[n-Q])
+
+y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
+
 \label{eq:iirfilt}
 \end{equation}
 \\
