@@ -1,19 +1,17 @@
 \subsection{Flowdiagram}
-I dette afsnit fremgår implementeringen af systemets blokke fra \autoref{sec:blokdiagram}. Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet, som beskriver hele processen og et initialiserende samt et, der viser EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i \autoref{sec:flowhaandtering}.
+I dette afsnit fremgår implementeringen af systemets digitale blokke, der er illustreret på \autoref{fig:blokdiagram_digital1}. Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet, som beskriver hele processen og et initialiserende samt et, der viser EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i \autoref{sec:flowhaandtering}.
 
 \subsubsection{Overordnet flowdiagram}
 Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt ved at trykke på PSoC'ens user button, som får en grøn LED til at lyse og derefter igangsætter de efterfølgende funktioner. Dette igangsætter et timer interrupt, der tæller inden for XX interval. Herefter sker der en intialisering af systemet.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/overordnet_flow.png}
-\caption{Overordnet flowdigram som viser opbyggelsen af systemet}
+\caption{Overordnet flowdigram, der viser systemets opbygning.}
 \label{fig:overordnet_flow}
 \end{figure}
 
-
-
 \subsubsection{Initialiserende flowdiagram}
-I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sker opsætningen af ADC'en. Efter modtagelsen af det analoge input sker en A/D-konvertering, hvor det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobes og signalet offsetjusteres. Efter setup skal det vurderes, hvorvidt inputtet befinder sig inden for en spænding svarende til 0 til 90 graders vinkel, hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
+I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sker opsætningen af ADC'en. A/D-konverteringen igangsættes, hvilket muliggør konverteringen af det analoge input, hvor det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobes og signalet offsetjusteres. Efter setup skal det vurderes, hvorvidt vinklen over knæet befinder sig mellem 0 og $90^{\circ}$'s vinkel, hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/initialiserende_flow.png}
