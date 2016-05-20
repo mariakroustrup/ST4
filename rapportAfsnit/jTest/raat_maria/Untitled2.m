@@ -42,7 +42,7 @@ semilogy(f,m1P1);
 xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 xlim([0 50])
-set(gca,'XTick',[0:10:50])
+set(gca,'XTick',[0:5:50])
 ylim([10^-9 10^-4])
 set(gca,'fontsize',20);
 box off
