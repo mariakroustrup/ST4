@@ -14,13 +14,14 @@ Fra testen plottes og visualiseres systemets input af det samplede sinussignal, 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/kontrol_test_sinus}
+\includegraphics[width=1\textwidth]{figures/kontrol_test_sinus}
 \caption{På den øverste figur illustreres den samlede vinkel over tid. Det fremgår af grafen, at vinklen er stigende fra $90^{\circ}$ til $175^{\circ}$, hvorefter vinklen falder markant til $-115^{\circ}$. Dette skyldes en overskridelse af spædningen for accelerometeret svarende til $180^{\circ}$.
 På den midterste figur illustrerer den blå graf det opsamlede inputsignal, svarende til en sinus på $500~Hz$ med en $V_{pp}$ på $4~mV$. Den røde graf illustrerer det samplede sinussignal med et implementeret digitalt lavpasfilter, disse værdier er målt i spænding. 
 På den nederste figur illustreres signalets digitale output. Signalet går fra $+10$ ved stigende muskelaktivitet til $-10$ ved en faldende muskelaktivitet. Grafen går i $0$, når en overskridelse af en vinkel $180^{\circ}$ opnås.}
 \label{fig:test_kendtinput}
 \end{figure}
 
+\noindent
 På baggrund af målingerne for den øverste figur på \autoref{fig:test_kendtinput} fremgår det, at en indsendt stigende spænding svarende til $90-175^{\circ}$, får den samlede vinkel til at stige. Ved en vinkel på $175^{\circ}$ overskrider det ene accelerometer dens maks spænding, hvorfor vinklen daler markant på $1~ms$ til $-115^{\circ}$. Dette burde ifølge den implementerede kode gå ned til en vinkel på $-200^{\circ}$ ved overskridelse af ét accelerometeres grænse spændinger. 
 Vinklen som ikke når $-400^{\circ}$ er en indikatior for, at det ene accelerometers spænding har været indenfor dens grænser, mens det andet accelerometer har overskredet dens grænser. Hertil kan det ses, at det ene accelerometer har haft indsendt en spænding svarende til $85^{\circ}$, mens det andet accelerometer har haft en spænding der har overskredet grænsen og derfor har en vinkel på $-200^{\circ}$.
 Det fremgår af den midterste samt nederste figur på \autoref{fig:test_kendtinput}, at der ses en sammenhæng mellem det opsamlede digital filtrerede sinussignal og det opsamlede outputsignal. Ved et stigende sinussignal vil outputsignalet indikerer $10$, hvilket svarer til en stigning af sinussignalet. Ved fald af sinussignalet vil outputsignalet indikerer et fald og dermed ligge i $-10$.

@@ -13,20 +13,22 @@ Af \ref{fig:test_squat} ses en illustration af systemet påsat forsøgspersonen,
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/test_squat}
+\includegraphics[width=1\textwidth]{figures/test_squat}
 \caption{Forsøgsopstilling til udførelse af symestemtest med bruger-input.}
 \label{fig:test_squat}
 \end{figure}
 
+\noindent
 På baggrund af testen er systemets input samt output plottet og visualiseret. Visualisering af de opsamlede signaler forekommer af \autoref{fig:test_brugerinput}. 
  
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/test_brugerinput}
+\includegraphics[width=1\textwidth]{figures/test_brugerinput}
 \caption{På den øverste figur ses muskelaktivitet ved udførelse af en squat-øvelse samt vinklen over knæet under øvelsen. Den blå graf illustrerer det samplede digital filtrerede EMG og den røde graf illustrerer vinklen over knæet. Hertil ses der et fald til under $-100^{\circ}$, hvilket illustrerer en overskridelse af $180^{\circ}$. Den nederste figur illusterer signalets digitale output i EMG-algoritmen. Denne visualiserer en stigning og et fald af det opsamlede EMG-signal, hvorved en stigning af muskelaktiviteten illustreres som værende $+10$ og et fald i muskelaktiviteten som værende $-10$. Ved grafen lig 0 illustreres en overskridelse af $90-180^{\circ}$ af knæet.}
 \label{fig:test_brugerinput}
 \end{figure}
 
+\noindent
 Ud fra testen ses der en sammenhæng mellem muskelaktiviteten under en squat-øvelse og vinklen over knæet under øvelsen. Ved en stigning af muskelaktiviteten ses et fald i grader over knæet, hvilket ses mellem $2-4~s$. Herved ses der ved fald af muskelaktiviteten en stigning af grader, hvilket ses mellem $4,5-6,5~s$.
 Ved starten af testen overstrækker forsøgspersonen knæet, hvilket ses ved, at vinklen er $-112^{\circ}$. Grunden til denne er $-112^{\circ}$ og ikke $-400^{\circ}$ er, at det ene accelerometer har været indenfor græsen på $180^{\circ}$ og den andet accelerometer har overskredet grænsen. Det ene accelerometer har derved haft en vinkel på $88^{\circ}$, mens det andet accelerometer har overskredet dens grænse og derfor er den samlet vinkel på $-112^{\circ}$. Det samme gør sig gældende ved slutningen af øvelsen. Ved overstrækning af knæet og dermed overskridelse af $180^{\circ}$ ses EMG-algorimten værende 0. 
 Efter $2~s$ overstrækkes knæet ikke længere og graderne begynder derved at falde i takt med muskelaktiviteten stiger. Ved en stigning af muskelaktiviteten ses EMG-algorimten ligeledes stigende. Ved $4~s$ er vinklen over knæet $81^{\circ}$, hvilket er en overskridelse af grænsen på $90^{\circ}$. Dette illustreres ved EMG-algoritmen går i 0. 
