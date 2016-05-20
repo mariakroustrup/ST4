@@ -20,6 +20,7 @@ Da filteret kræver 10 samples for at retunere den første værdi testes det, hv
 	\label{fig:forsinkelse}
 \end{figure}
 
+\noindent
 Resultatet fra denne test viser en forsinkelse af moving averge filteret på $0,09$ senkundt, hvilket er lavere end den forventede forsinkelse på $0,1$ sekundt og derfor accepteres. 
 
 Yderligere foretages en test af forsinkelsen, der forekommer i det filteret eksekveres. Til denne test er en debug pin blevet defineret, hvor denne pin sættes som høj før funktionskaldet og lav efter funktionskaldet. Et oscilloscope tilsluttes debug pinen, således det kan måles, hvor længe debug pinen er høj. Resultatet fra testen er en forsinkelse på $320~\mu s$ for data at passere filteret. Dette betragtes som værende ikke af signifikant betydning.    
@@ -27,7 +28,7 @@ Ud fra ovenstående resultater vurderes det, at det filterede signal opfylder kr
 
 
 \vspace{3mm}
-\textbf{Krav:}
+\textbf{Opsummering af krav:}
 \begin{itemize}
 \item[\text{\sffamily \checkmark}] Skal muliggøre en repræsentation af spændinger 
 \item[\text{\sffamily \checkmark}] Skal have en filterlængde på $10$ samples
