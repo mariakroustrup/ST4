@@ -12,7 +12,25 @@ For at teste, om omregningen fra spændingen fra accelerometeret til grader fung
 \noindent
 Det ses på \autoref{fig:spaending_vinkel_test}, at der er en sammenhæng mellem spænding og den samlede vinkel for accelerometrene. Der tages udgangspunkt i \autoref{tab:vinkelinterval_psoc} for omregningen, hvor spændingen for hvert accelerometer omregnes til grader. Disse lægges sammen for at udregne den samlede vinkel. Derudover illustrerer figuren, at vinklerne virker inden for det forventede arbejdsområde på $180^{\circ}$ til $90^{\circ}$, men ligeledes kan måle vinkler, der er lavere end $90^{\circ}$.
 
-På figuren aflæses, at systemet registrerer en vinkel på $90^{\circ}$, når  accelerometeret på femur giver en spænding på $-0,2191~V$ og accelerometeret på tibia giver en spænding på $-0,2336~V$. 
+På figuren aflæses, at systemet registrerer en vinkel på $90^{\circ}$, når  accelerometeret på femur giver en spænding på $-0,2191~V$ og accelerometeret på tibia giver en spænding på $-0,2336~V$. For at teste vinkelberegningen, sammenlignes de målte spændinger for accelerometrene, der er illustreret på \autoref{fig:spaending_vinkel_test}, og de beregnede værdier i \autoref{sec:imp_vinkler} omregnet en tilsvarende spænding. Spændingerne der er målt for accelerometrene er lagt sammen for, at få den samlede spænding der opnås. Resultaterne heraf fremgår på \autoref{tab:vinkel_test_afvigelse}.  
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Vinkel {[}\{\circ\}{]}} & \textbf{Test spænding{[}V{]}} & \textbf{Implementeret spænding {[}V{]}} & \textbf{Afvigelse {[}\%{]}} \\ \hline
+\textbf{180}                    & 0                         & -0,00323                       & 0,3 \%                      \\ \hline
+\textbf{160}                    & -0,1136                   & -0,11118                       & 2,1\%                       \\ \hline
+\textbf{140}                    & -0,2150                   & -0,2240                        & 4,2 \%                      \\ \hline
+\textbf{100}                    & -0,4044                   & -0,4109                        & 1,6 \%                      \\ \hline
+\textbf{80}                     & -0,5447                   & -0.4906                        & -3, 4 \%                    \\ \hline
+\end{tabular}
+\caption{Afvigelse mellem implementeret og testet spænding inddelt efter en vinkel på $180$, $160$, $140$, $100$ og $80^{\circ}$. Det fremgår at afvigelsen er mellem $0,3$ til $4,2~\%$}
+\label{tab:vinkel_test_afvigelse}
+\end{table}
+
+Ud fra \autoref{tab:vinkel_test_afvigelse} fremgår en afvigelse mellem $0,3$ og $4,2~\%$. Dette kan skyldes, at linearitet målt i \autoref{sec:acc_test} kun har en lineær sammenhæng, hvilket kan få betydning for anvendelse af lineær interpolation til beregning af intervallet for de enkelte grader i \autoref{sec:imp_vinkler}. Derudover fremgår det at de vinkler, hvor der er et interval på $40^{\circ}$ har en højere afvigelse end de vinkler, hvor intervallet er på $20^{\circ}$. Dette gør sig gældende for en vinkel $140^{\circ}$ og $80^{\circ}$. Vinklen på $80^{\circ}$ har ikke en betydning, da systemet er designet til at fungere inden for $90$ til $180^{circ}$.
+Det vurderes, at afvigelsen ikke har den store betydning for det samlede system, da $80^{\circ}$ ligger uden for intervallet på $90$ til $180^{\circ}$. Derudover er systemets primære opgave at signalere når knæets vinkel overstiger $90^{\circ}$ eller over $180^{\circ}$ ved en rød LED, hvorfor $140^{\circ}$ ikke vil have en betydning for dette, heraf godtages afvigelsen. 
 
 For at teste, hvorvidt LED'en på mikrokontrolleren signalerer en vinkel under $90$ eller over $180^{\circ}$, indstilles vinkeltesten, hvilket ses af \autoref{fig:vinkeltest} brugt i pilotforsøget til henholdsvis $40^{\circ}$, $100^{\circ}$ og $200^{\circ}$. Hertil ses LED'en lyse grøn ved de acceptable grader mellem $90-180^{\circ}$, og rød ved grader udenfor graderne $90-180^{\circ}$. Dette ses af \autoref{fig:mikro_LED}.
 
@@ -34,25 +52,6 @@ Ved en overskridelse af grænsen for vinklen, skal det ligeledes visualiseres. D
 
 Det ses af \autoref{fig:vinkeltest_graenser}, at forsøgspersonen overstrækker knæleddet, således begge accelerometre overstiger grænsen på $90^{\circ}$, der til sammen udgør en samlet vinkel på $180^{\circ}$. Dette visualiseres ved en vinkel på $-400^{\circ}$. 
 Efter 0,5 sekunder ses en vinkel på $-110^{\circ}$, hvilket er gældende, da det ene accelerometer har haft en spænding svarende til præcis $90^{\circ}$ og derfor ikke overskredet grænsen derpå. Ved squat-øvelsen begyndelse ses vinklen falde fra $180-73^{\circ}$, hvorefter den ses stigende igen. Til slut af målingen ses igen et fald under $-100^{\circ}$.
-
-
-
-%Disse spændinger kan omregnes til vinkler ved først at finde, hvad spændingen er for én grad ud fra \autoref{tab:vinkelinterval_psoc}  i dét spændingsinterval, hvori den aflæste spænding befinder sig. Det kan aflæses i tabellen, at spændingen fra accelerometeret på femur giver en vinkel mellem 30 og $50^{\circ}$.
-%
-%\begin{equation}
-%\dfrac{-143~V-(-84~V)}{20^{\circ}}=-2,95~V
-%\end{equation}
-%Derefter findes vinklen for accelerometeret.
-%
-%\begin{equation}
-%\dfrac{-84~V+136~V}{2,95~V}+30^{\circ}=47,627^{\circ}
-%\end{equation}
-%Ligeledes kan vinklen fra accelerometeret på tibia udregnes til $41,429^{\circ}$. Dette giver en samlet vinkel over leddet: 
-%%
-%\begin{equation}
-%47,627^{\circ}+41,429^{\circ}=89,056^{\circ}
-%\end{equation}
-%Dette giver en afvigelse på $-1,049~\%$ fra $90^{\circ}$. Denne afvigelse kan godtages til dette systems formål, da der ikke er nogen fare forbundet med, at systemet overskrider de opstillede grænser for vinkler med $-1,049~\%$.
 
 \noindent
 En yderligere test er foretaget for at undersøge forsinkelsen af vinkelberegning. Denne test er udført ved at definere en debug-pin, hvor pinen ved funktionskaldet sættes høj og lav efterfølgende. For at illustrere disse målinger tilsluttes et oscilloskop pinen, hvorved der måles hvornår denne er høj. Resultatet af denne test gav en forsinkelse på  $3.6~\mu~s$. Dette betragtes ikke som værende af signifikant betydning, hvorfor denne forsinkelse accepteres.
