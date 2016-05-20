@@ -83,7 +83,7 @@ Ud fra \ref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til v�
 \end{itemize}
 
 \subsubsection{Filtrering af accelerometer-signaler} \label{sec:mavg_krav}
-Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givede accelerometer. Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. Ved implementeringen af et moving average filter opstår der en forsinkelse, der svarer til filterlængden. Denne forsinkelse fremgår af \autoref{fig:mavgfilter}, hvor der ses et udslag i starten, der medfører denne forsinkelse. Denne forsinkelse opstår, da filtreringen først påbegyndes efter de antal samples, der svarer til filterlængden på 10, hvilket er svarende til en forsinkelse på 10 samples à 0,1 ms. 
+Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givende accelerometer. Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. Ved implementeringen af et moving average filter opstår der en forsinkelse, der svarer til filterlængden. Denne forsinkelse fremgår af \autoref{fig:mavgfilter}, hvor der ses et udslag i starten, der medfører denne forsinkelse. Denne forsinkelse opstår, da filtreringen først påbegyndes efter de antal samples, der svarer til filterlængden på 10, hvilket er svarende til en forsinkelse på 10 samples à $0,1~ms$. 
 
 \begin{figure} [H]
 \centering
@@ -98,4 +98,5 @@ Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, 
 \begin{itemize}
 \item Skal muliggøre en repræsentation af spændinger 
 \item Skal have en filterlængde på $10$ samples
+\item Skal have en maksimal forsinkelse på $100~ms$
 \end{itemize}
