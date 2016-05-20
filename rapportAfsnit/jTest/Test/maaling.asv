@@ -84,11 +84,10 @@ box off
 %% Test af vinkler - Der viser at -200 og -400 grader virker
 plot(t,Acc2)
 xlabel('Tid [s]')
-ylabel('Knæets vinkel [\circ]')
+ylabel('Accelerometer [^\circ]')
 xlim([0 10])
 set(gca,'XTick',[0:1:10])
-ylim([-450 200])
-set(gca,'YTick',[-450:50:200])
+set(gca,'XTick',[0:1:10])
 set(gca,'fontsize',20);
 box off
 
