@@ -22,17 +22,17 @@ figure
 hold on
 [hAx,hLine1,hLine2] = plotyy(t(1:1000), EMG, t(1:1000), diff);
 
-%plot(t(1:1000), EMG)
-%[ymax,imax,ymin,imin] = extrema(EMG)
-%hold on
-%plot(t(imax),ymax,'r*',t(imin),ymin,'g*');
+plot(t(1:1000), EMG)
+[ymax,imax,ymin,imin] = extrema(EMG)
+hold on
+plot(t(imax),ymax,'r*',t(imin),ymin,'g*');
 
 set(hAx(1),'fontsize',20);
 set(hAx(2),'fontsize',20);
 legend('Input','Output');
 
 set(hAx(1), 'XLim',[0 10]);
-set(hAx(1),'XTick',[0:1:10]);
+set(hAx(1),'XTick',[0:0.01:10]);
 set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
 set(hAx(1), 'YLim',[-0.1 0.2]);
