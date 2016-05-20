@@ -1,6 +1,8 @@
 \subsection{Spændingsforsyning} \label{test_spaendingsforsyning}
 Det forventes, at spændingsforsyningen leverer en konstant spænding til EMG-forstærkeren, så denne fungerer optimalt, og så EMG-signalerne ikke forstyrres. For at undersøge, om spændingsforsyningen opfylder de opstillede krav i \ref{sec:krav_spaending}, testes spændingsforsyningen med et multimeter, hvor outputspændingen måles. %Ét kabel tilsluttes $V_{cc}$, og ét andet tilsuttes ground. 
-Ud fra dette er den positive spænding målt til $5,574~V$ og den negative spænding til $-5,341~V$, hvilket giver en peak-to-peak-amplitude på $10,815~V$. Under testen, blev der ikke set udslag på multimeteret, hvorved spændingsforsyningen overholder kravet om at skulle kunne levere en jævn spænding. Dette betyder at spændingsforsyningen kan udsende en spænding, som er passede for at forsyne EMG-forstærkeren, der typisk kræver en spænding på typisk $\pm3V$, jf. \autoref{sec:EMG_krav}. 
+Ud fra dette er den positive spænding målt til $5,574~V$ og den negative spænding til $-5,341~V$, hvilket giver en peak-to-peak-amplitude på $10,815~V$.
+
+Under testen, blev der ikke set udslag på multimeteret, hvorved spændingsforsyningen overholder kravet om at skulle kunne levere en jævn spænding. Dette betyder at spændingsforsyningen kan udsende en spænding, som er passede for at forsyne EMG-forstærkeren, der typisk kræver en spænding på typisk $\pm3V$, jf. \autoref{sec:EMG_krav}. 
 Derudover testets der for om spændingsregulatoren udsender et signal, hvis den ikke leverer en konstant spændingen. Dokumentation for denne test fremgår  af \autoref{fig:spaendingsforsyning_LED}. Det blev målt at spændingsregulatoren leverede en spænding på omkring $\pm5,4~V$ når LED'en var tændt, mens den leverede en spænding på $0,0985~mV$ når LED'en var slukket.
 
 
@@ -11,4 +13,11 @@ Derudover testets der for om spændingsregulatoren udsender et signal, hvis den 
 \label{fig:spaendingsforsyning_LED}
 \end{figure}
 
+\vspace{3mm}
+\textbf{Krav:}
+\begin{itemize} 
+\item[\text{\sffamily \checkmark}] Skal kunne forsyne aktive komponenter i den analoge del af kredsløbet
+\item[\text{\sffamily \checkmark}] Skal kunne levere en jævn spænding
+\item[\text{\sffamily \checkmark}] Skal kunne give et signal, hvis der ikke leveres en konstant spænding
+\end{itemize}
 

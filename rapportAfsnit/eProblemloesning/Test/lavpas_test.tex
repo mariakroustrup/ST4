@@ -1,9 +1,9 @@
 \subsubsection{Lavpasfilter}
-For at undersøge, hvilken betydning det digitalt filtrede signal har i forhold til det samplede signal, visualiseres disse. De samplede signaler er fra pilotforsøget, som er beskrevet i \autoref{sec:pilotforsoeg}. Signalerne sendes til mikrokontrollen via en UART-forbindelse, hvorved den retunerede værdi modtages og visualiseret i MATLAB, hvilket fremgår af \autoref{fig:lavpas_imp}
+For at undersøge, hvilken betydning det digitalt filtrede signal har i forhold til det samplede signal, visualiseres disse. De samplede signaler er fra pilotforsøget, som er beskrevet i \autoref{sec:pilotforsoeg}. Signalerne sendes til mikrokontrollen via en UART-forbindelse, hvorved den retunerede værdi modtages og visualiseret i MATLAB, hvilket fremgår af \autoref{fig:lavpas_imp}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/EMG_test}
+\includegraphics[width=1\textwidth]{figures/EMG_test}
 \caption{Den blå graf illustrerer et samplede muskelsignal og den røde graf illustrerer et digitalt filtrede muskelsignal.}
 \label{fig:lavpas_imp}
 \end{figure}
@@ -44,6 +44,7 @@ Afvigelse_{15~Hz} = \frac{0,008V-0,01V}{0,01V} = -0,20  = -20 \%
 \noindent 
 Afvigelserne er for $5~HZ$ 14\%, mens det for $15~Hz$ er 20\%. Dette betyder at filteret ikke dæmper signalet nok. Da målingerne for outputspændingen, målt ved de forskellige frekvenser, ikke er målt nøjagtig aflæst, grundet downsampling, er det forventet, at der er en større afvigelse fra den teoretiske udregning. På baggrund af dette godtages filteret. 
 
+\vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
 \item[\text{\sffamily \checkmark}] Skal følge inputsignalet mest muligt  
