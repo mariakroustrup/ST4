@@ -24,7 +24,7 @@
   Url                      = {https://www.mda.org/disease/amyotrophic-lateral-sclerosis/signs-and-symptoms/stages-of-als}
 }
 
-@Manual{armel2002,
+@Manual{atmel2002,
   Title                    = {AVRR222: 8-point Moving Average Filter},
   Author                   = {Atmel},
   Organization             = {Atmel Coropration},
