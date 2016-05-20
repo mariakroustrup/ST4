@@ -29,6 +29,7 @@ På figuren aflæses, at systemet registrerer en vinkel på $90^{\circ}$, når  
 \label{tab:vinkel_test_afvigelse}
 \end{table}
 
+\noindent
 Ud fra \autoref{tab:vinkel_test_afvigelse} fremgår en afvigelse mellem $0,3$ og $4,2~\%$. Dette kan skyldes, at linearitet målt i \autoref{sec:acc_test} kun har en lineær sammenhæng, hvilket kan få betydning for anvendelse af lineær interpolation til beregning af intervallet for de enkelte grader i \autoref{sec:imp_vinkler}. Derudover fremgår det at de vinkler, hvor der er et interval på $40^{\circ}$ har en højere afvigelse end de vinkler, hvor intervallet er på $20^{\circ}$. Dette gør sig gældende for en vinkel $140^{\circ}$ og $80^{\circ}$. Vinklen på $80^{\circ}$ har ikke en betydning, da systemet er designet til at fungere inden for $90$ til $180^{circ}$.
 Det vurderes, at afvigelsen ikke har den store betydning for det samlede system, da $80^{\circ}$ ligger uden for intervallet på $90$ til $180^{\circ}$. Derudover er systemets primære opgave at signalere når knæets vinkel overstiger $90^{\circ}$ eller over $180^{\circ}$ ved en rød LED, hvorfor $140^{\circ}$ ikke vil have en betydning for dette, heraf godtages afvigelsen. 
 
@@ -41,6 +42,7 @@ For at teste, hvorvidt LED'en på mikrokontrolleren signalerer en vinkel under $
 \label{fig:mikro_LED}
 \end{figure}
 
+\noindent
 Ved en overskridelse af grænsen for vinklen, skal det ligeledes visualiseres. Der er foretaget en test, hvorved acceleromterne er påsat en forsøgsperson som overstrækker i knæledder, hvorefter en squat udføres. En visualisering heraf ses af \autoref{fig:vinkeltest_graenser}.
 
 \begin{figure}[H]
@@ -50,6 +52,7 @@ Ved en overskridelse af grænsen for vinklen, skal det ligeledes visualiseres. D
 \label{fig:vinkeltest_graenser}
 \end{figure}
 
+\noindent
 Det ses af \autoref{fig:vinkeltest_graenser}, at forsøgspersonen overstrækker knæleddet, således begge accelerometre overstiger grænsen på $90^{\circ}$, der til sammen udgør en samlet vinkel på $180^{\circ}$. Dette visualiseres ved en vinkel på $-400^{\circ}$. 
 Efter 0,5 sekunder ses en vinkel på $-110^{\circ}$, hvilket er gældende, da det ene accelerometer har haft en spænding svarende til præcis $90^{\circ}$ og derfor ikke overskredet grænsen derpå. Ved squat-øvelsen begyndelse ses vinklen falde fra $180-73^{\circ}$, hvorefter den ses stigende igen. Til slut af målingen ses igen et fald under $-100^{\circ}$.
 
