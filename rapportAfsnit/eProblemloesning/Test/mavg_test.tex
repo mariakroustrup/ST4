@@ -1,4 +1,4 @@
-\subsubsection{Moving average filter}
+\subsubsection{Moving average filter} \label{sec:mavg_test}
 Moving average filteret testes for at undersøge, hvorvidt de opstillede krav overholdes, samt undersøge om designet er korrekt implementeret. Måden, hvorpå dette testes er ved anvendelse af data fra pilotforsøget, da dette giver kontrolleret testforhold. 
 En computer med MATLAB benyttes til at sende en givende måling til mikrokontrolleren, hvorpå det digitale filter er implementeret. Mikrokontrolleren returnerer løbende den filtrerede værdi, der visualiseres i MATLAB. Ud fra dette ses om filteteret virker hensigtsmæssigt. 
 Resultatet af denne test fremgår af \autoref{fig:mavg_test}. 
@@ -23,7 +23,7 @@ Da filteret kræver 10 samples for at retunere den første værdi testes det, hv
 \noindent
 Resultatet fra denne test viser en forsinkelse af moving averge filteret på $0,09$ senkundt, hvilket er lavere end den forventede forsinkelse på $0,1$ sekundt og derfor accepteres. 
 
-Yderligere foretages en test af forsinkelsen, der forekommer i det filteret eksekveres. Til denne test er en debug pin blevet defineret, hvor denne pin sættes som høj før funktionskaldet og lav efter funktionskaldet. Et oscilloscope tilsluttes debug pinen, således det kan måles, hvor længe debug pinen er høj. Resultatet fra testen er en forsinkelse på $320~\mu s$ for data at passere filteret. Dette betragtes som værende ikke af signifikant betydning.    
+Yderligere foretages en test af forsinkelsen. Testen er udført på samme måde som forklaret i \auto{sec:lavpas_test}. Resultatet fra testen er en forsinkelse på $320~\mu s$ for data at passere filteret. Dette betragtes som værende ikke af signifikant betydning.    
 Ud fra ovenstående resultater vurderes det, at det filterede signal opfylder kravene for \autoref{sec:mavg_krav}. 
 
 
