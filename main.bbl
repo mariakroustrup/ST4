@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{56}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -267,6 +267,13 @@ J.~Parr and D.~Blandford.
 \newblock Pearson Education, 2012.
 \newblock \doi{9780131394063}.
 
+\bibitem[Francis(2009)]{francis2009}
+M.~Francis.
+\newblock \emph{Infinite Impulse Response Filter Structures in Xilinx FPGAs}.
+\newblock Xilinx, 2009.
+\newblock URL
+  \url{http://www.xilinx.com/support/documentation/white_papers/wp330.pdf}.
+
 \bibitem[Wikipedia(2016)]{wikipedia2016}
 Wikipedia.
 \newblock \emph{Filter signal processing}.
@@ -347,6 +354,11 @@ H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.
   ElectromMyoGraphy}.
 \newblock Roessingh Research and Development, 1999.
 \newblock \doi{90-75452-15-2}.
+
+\bibitem[DJO()]{djo}
+\emph{DonJoy}.
+\newblock DJO Global.
+\newblock URL \url{http://www.djoglobal.eu/en_UK/Donjoy.html}.
 
 \bibitem[Foot(2016)]{ankle2016}
 PA~Foot.

@@ -225,6 +225,18 @@ M.l W. Krzyzewski},
   Url                      = {http://pafootdoctors.com/ankle-fractures-stress-fractures-broken-ankle/}
 }
 
+@Manual{francis2009,
+  Title                    = {Infinite Impulse Response Filter Structures in Xilinx FPGAs},
+  Author                   = {M. Francis},
+  Organization             = {Xilinx},
+  Year                     = {2009},
+
+  Comment                  = {19-05-16},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.20},
+  Url                      = {http://www.xilinx.com/support/documentation/white_papers/wp330.pdf}
+}
+
 @Book{grehl2011,
   Title                    = {Depression and QOL in patients with ALS: How do self-ratings and ratings by relatives differ?},
   Author                   = {T. Grehl and M. Ruppand and P. Buddle, et. al.},
