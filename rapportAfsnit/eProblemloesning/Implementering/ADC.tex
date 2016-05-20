@@ -1,4 +1,4 @@
-\subsection{Analog-to-Digital Converter}
+\subsection{Analog-to-Digital Converter} \label{sec:ADC_imp}
 Mikrokontrolleren indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digitalt. Der ønskes en konfigurering af 3 analoge kanaler, herunder Y-aksen på begge accelerometre samt EMG-forstærkeren. Opsætningen af ADC'en på mikrokontrolleren fremgår af \autoref{fig:ADC_teori}. Det ønskes at kunne læse signalerne ved at måle single ended, hvorfor hvert input er tilkoblet $V_{ss}$, der fungerer som jord. Da der ligeledes ønskes at anvende en 12 bits-ADC på baggrund af kravet i \autoref{sec:ADC_teori}, indstilles denne til en opløsning på 12 bit. Da der anvendes en single ended konfiguration af kanalerne, svarer dette til, at ADC'en anvender 11 bit. ADC'en har et arbejdsområde fra $0-5~V$ \citep{ADC2014}. LSB'en for ADC'en kan beregnes ud fra \autoref{equ:LSB}, hvilket giver $2,44~mV$. Hvis der sker ændringer i signalet, der er mindre end LSB på $2,44~mV$, vil dette ikke komme til udtryk i det konverterede signal. 
 
 
