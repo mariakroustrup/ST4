@@ -1,7 +1,7 @@
 \section{Diskussion}
 Formålet med dette projekt er at udvikle et system, som kan opsamle signaler fra kroppen, hvor der er fokus på digital signalbehandling og datakommunikation \citep{aalborguniversitet2014}. På baggrund af dette er der udviklet et system, der kan måle muskelaktivtet fra rectus femoris ved hjælp af EMG og måle vinklen over knæet ved hjælp af accelerometre, og som har til formål at støtte knæets omkringliggende muskler, så ALS-patienter støttes i forbindelse med udførelsen af en squat-øvelse. På baggrund af teori, implementering og test af systemets enkelte blokke fremgår det, at kravene til de enkelte blokke er overholdt. Der er dog nogle områder, hvor andre alternativer kan overvejes for mulige forbedringer af hele systemet. 
 
-%\subsection{Implementering}
+\subsection{Implementering}
 Systemet er udviklet, så størstedelen af signalbehandlingen foregår digitalt, da dette er fokus i forhold til studieordningen. Hvis dette ikke havde været et krav for dette semester, kunne det have været en fordel, at nogle af blokkene var designet analogt, hvorved det kunne være nemmere at finde samt rette op på eventuelle fejl i systemet. Et eksempel herpå er i forhold til opsamling af signaler fra accelerometre. 
 
 For at give en bedre opløsning af accelerometrene kunne det være relevant at implementere en forstærker inden ADC'en, hvorved der opnås en bedre repræsentation af accelerometersignalerne. Denne forstærker blev ikke implementeret, da det ville kræve en analog offsetjustering af signalet, så signalet ikke vil gå i mætning, da signalet med offset vil kunne overstige ADC'ens arbejsområde. %. Offsettet er teoretisk ved en påvirkning af $0~g$ den halve spændingsforsyning. Uden denne offsetjustering vil det kunne resultere i, at signalet vil gå i mætningen, da dette vil kunne overstige ADC'ens arbejdsområde alt efter hvor meget signalet forstærkes, hvorved der yderligere skal tages højde for denne parameter.
@@ -29,4 +29,8 @@ I projektet er der valgt at anvende trådløs kommunikation, så ledninger ikke 
 
 %Derudover har systemet en start- og stopfunktion. Dette kan både være en fordel og ulempe for brugeren. Det vil være nødvendigt at skulle starte og stoppe hver gang systemet skal anvendes, hvilket kan være til gene for brugeren over en længere tidsperiode. Det vil være fordelagtigt, da gør det muligt for brugeren selv at bestemme, hvornår øvelsen skal starte og stoppe.
 
-%\subsection{Samlet systemtest}
+\subsection{Samlet systemtest}
+Overholder vi her de opstillede krav? 
+Nej: afvigelser på vinkel (hvorfor går det alligevel?)
+Brugersikkerhed - skriv noget til omkring dette - overholdes så kravene? 
+Følger kroppens naturlige bevægelser - intet exoskelet
