@@ -1,10 +1,10 @@
 \subsection{EMG-algoritme}
-For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10~V$ eller $10~V$, hvis muskelsignalet er faldende eller stigende. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
+For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10$ eller $10$, hvis muskelsignalet er faldende eller stigende. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/EMG_algo_test}
-\caption{Den blå graf og tilhørende venstre y-akse illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf og tilhørende højre y-akse illustrerer, om muskelsignalet er henholdsvis faldende eller stigende ved enten at udsende et signal på $-10~V$ eller $10~V$.}
+\caption{Den blå graf og tilhørende venstre y-akse illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf og tilhørende højre y-akse illustrerer, om muskelsignalet er henholdsvis faldende eller stigende ved enten at udsende et signal på $-10$ eller $10$.}
 \label{fig:emg_algo_test}
 \end{figure}
 
@@ -17,51 +17,51 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 \hline 
 \textbf{EMG-ekstrema [s]} & \textbf{Output-skift [s]} & \textbf{Forsinkelse [s]}\\ 
 \hline 
-0,29 & 0,32 & 0,03\\ 
+0,32 & 0,32 & 0,00\\ 
 \hline 
-0,78 & 0,80 & 0,02\\ 
+0,80 & 0,80 & 0,01\\ 
 \hline 
-0,83 & 0,86 & 0,03\\ 
+0,86 & 0,86 & 0,01\\ 
 \hline 
-1,00 & 1,03 & 0,03\\ 
+1,02 & 1,03 & 0,01\\ 
 \hline 
-1,10 & 1,12 & 0,02\\ 
+1,11 & 1,12 & 0,01\\ 
 \hline 
-1,50 & 1,52 & 0,02\\ 
+1,51 & 1,52 & 0,01\\ 
 \hline 
-2,46 & 2,49 & 0,03\\ 
+2,48 & 2,49 & 0,01\\ 
 \hline 
 2,67 & 2,68 & 0,01\\ 
 \hline 
-2,94 & 2,96 & 0,02\\ 
+2,95 & 2,96 & 0,01\\ 
 \hline 
-3,52 & 3,54 & 0,02\\ 
+3,53 & 3,54 & 0,01\\ 
 \hline 
 3,62 & 3,63 & 0,01\\ 
 \hline 
-3,96 & 3,98 & 0,02\\ 
+3,97 & 3,98 & 0,01\\ 
 \hline 
 4,33 & 4,34 & 0,01\\ 
 \hline 
-4,68 & 4,70 & 0,02\\ 
+4,69 & 4,70 & 0,01\\ 
 \hline 
 5,04 & 5,05 & 0,01\\ 
 \hline 
 5,50 & 5,51 & 0,01\\ 
 \hline 
-5,67 & 5,69 & 0,02\\ 
+5,68 & 5,69 & 0,01\\ 
 \hline 
-5,87 & 5,89 & 0,02\\ 
+5,88 & 5,89 & 0,01\\ 
 \hline 
-7,48 & 7,54 & 0,06\\ 
+7,53 & 7,54 & 0,01\\ 
 \hline 
 8,49 & 8,50 & 0,01\\ 
 \hline 
-8,83 & 8,85 & 0,02\\ 
+8,84 & 8,85 & 0,01\\ 
 \hline 
-8,99 & 9,01 & 0,02\\ 
+9,00 & 9,01 & 0,01\\ 
 \hline 
-9,07 & 9,09 & 0,02\\ 
+9,08 & 9,09 & 0,01\\ 
 \hline 
 \end{tabular} 
 \caption{Tabel over ekstrema, outputskift og differensen mellem disse, der er noteret som forsinkelsen.}
@@ -69,8 +69,6 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 \end{table}
 
 \noindent
-I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet registreres som en ændring i output-signalet er mellem $0,01$ og $0,06~s$. Den gennemsnitlige forsinkelse er på $0,0261~s$. Denne forsinkelse kan godtages til dette, da gennemsnitligt $26,1~ms$ ikke er betydeligt i forhold til den samlede forsinkelse på $832~\mu~s$??????
+I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet, der registreres som en ændring i output-signalet, er mellem $0,00$ og $0,01~s$. Den gennemsnitlige forsinkelse er dermed på $9,57~ms$. Målingen, der giver en forsinkelse på $0,00~s$, kan dog ikke passe, da EMG-algoritmen bruger én sample på at skifte output fra $10$ til $-10$ eller fra $-10$ til $10$. Ingen forsinkelse vil derfor betyde, at EMG-algoritmens output begynder at ændre sig fra $-10$ til $10$, før EMG-signalet er begyndt at stige. 
 
-
-
- \textbf{SKRIV MERE HER}.
+Forsinkelsen på $9,57~ms$ kan forklares af, at testen er udført ved at sample EMG-algoritmens input og output ved $100~Hz$. Af denne grund er der ikke mere end 100 samples per sekund, hvilket betyder, at der er $10~ms$ mellem hver sample. Forsinkelsen er derfor sandsynligvis mindre end $9,57~ms$, men det kan ikke lade sig gøre at måle mindre tal med den nuværende samplerate. 
