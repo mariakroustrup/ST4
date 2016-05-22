@@ -1,7 +1,9 @@
-\section{Diskussion}
+\section{Diskussion}\label{sec:diskussion}
+I dette afsnit vil systemet og projektet diskuteres, og relevante afvigelser fra systemkrav og blokkes krav vil derfor tages op. Diskussionen vil først tage udgangspunkt i tests af systemets enkelte blokke, og hvad de har betydet for det endelige system og dermed besvarelsen af projektets problemformulering, og derefter i de samlede systemtests. 
+
 Formålet med dette projekt er at udvikle et system, som kan opsamle signaler fra kroppen, hvor der er fokus på digital signalbehandling og datakommunikation \citep{aalborguniversitet2014}. På baggrund af dette er der udviklet et system, der kan måle muskelaktivtet fra rectus femoris ved hjælp af EMG og måle vinklen over knæet ved hjælp af accelerometre, og som har til formål at støtte knæets omkringliggende muskler, så ALS-patienter støttes i forbindelse med udførelsen af en squat-øvelse. På baggrund af teori, implementering og test af systemets enkelte blokke fremgår det, at kravene til de enkelte blokke er overholdt. Der er dog nogle områder, hvor andre alternativer kan overvejes for mulige forbedringer af hele systemet. 
 
-\subsection{Implementering}
+\subsection{Test af blokke}
 Systemet er udviklet, så størstedelen af signalbehandlingen foregår digitalt, da dette er fokus i forhold til studieordningen. Hvis dette ikke havde været et krav for dette semester, kunne det have været en fordel, at nogle af blokkene var designet analogt, hvorved det kunne være nemmere at finde samt rette op på eventuelle fejl i systemet. Et eksempel herpå er i forhold til opsamling af signaler fra accelerometre. 
 
 For at give en bedre opløsning af accelerometrene kunne det være relevant at implementere en forstærker inden ADC'en, hvorved der opnås en bedre repræsentation af accelerometersignalerne. Denne forstærker blev ikke implementeret, da det ville kræve en analog offsetjustering af signalet, så signalet ikke vil gå i mætning, da signalet med offset vil kunne overstige ADC'ens arbejsområde. %. Offsettet er teoretisk ved en påvirkning af $0~g$ den halve spændingsforsyning. Uden denne offsetjustering vil det kunne resultere i, at signalet vil gå i mætningen, da dette vil kunne overstige ADC'ens arbejdsområde alt efter hvor meget signalet forstærkes, hvorved der yderligere skal tages højde for denne parameter.
@@ -10,7 +12,7 @@ For at give en bedre opløsning af accelerometrene kunne det være relevant at i
 
 Systemet benytter herudover en udleveret komponent, EMG-forstærkeren, der ensretter, forstærker og envelopefiltrerer signalet. Denne blok kunne være fordelagtig at implementere som flere blokke, så det ville være muligt at teste og dokumentere disse hver for sig. På denne måde vil det være muligt at opstille krav til hver blok og justere og ændre disse blokke. Dette vil dog ikke påvirke systemet, som det er nu, da EMG-forstærkeren opfylder de opstillede krav. %Dog vil  eventuelle forsinkelser og ændringer ikke have den store betydning ved at anvende EMG-forstærkeren, da signalet er meget lavfrekvent og det vil derfor ikke have en betydning for repræsentation af muskelaktiviteten. 
 
-Testen af systemets vinkelberegning viste afvigelser mellem $0,3$ og $4,2~\%$. Dette kan resultere i, at systemet ikke fungerer som tiltænkt, hvis $90-180^{\circ}$ vinkel over knæet overskrides. Som nævnt i \autoref{sec:knaeled_squat}, kan sammenhængen mellem stigende og faldende muskelaktivitet og nedad og opadgående squat kun antages, når knæets vinkel befinder sig inden for $90-180^{\circ}$. Af denne grund kan det ikke antages, at systemet vil fungere, hvis vinkelberegningen skulle afvige ved enten $90^{\circ}$ eller $180^{\circ}$. For at forbedre dette, vil intervallerne mellem de grader, hvor accelerometrenes spænding er samplet, kunne indskrænkes. Dette vil kunne mindske afvigelserne på vinkelberegningen, da der ikke er en fuldstændig lineær sammenhæng mellem spændinger og vinkler - jo større intervallet derfor er, jo større er usikkerheden af vinkelberegningen også.
+Testen af systemets vinkelberegning viste afvigelser mellem $0,3$ og $4,2~\%$. Selvom den største afvigelse ikke er nær hverken $90^{\circ}$ eller $180^{\circ}$, kan resultere i, at systemet ikke fungerer som tiltænkt, hvis $90-180^{\circ}$'s vinkel over knæet alligevel overskrides grundet afvigelser. Som nævnt i \autoref{sec:knaeled_squat}, kan sammenhængen mellem stigende og faldende muskelaktivitet og nedad og opadgående squat kun antages, når knæets vinkel befinder sig inden for $90-180^{\circ}$. Af denne grund kan det ikke antages, at systemet vil fungere, hvis vinkelberegningen skulle afvige ved enten $90^{\circ}$ eller $180^{\circ}$. For at forbedre dette, vil intervallerne mellem de grader, hvor accelerometrenes spænding er samplet, kunne indskrænkes. Dette vil kunne mindske afvigelserne på vinkelberegningen, da der ikke er en fuldstændig lineær sammenhæng mellem spændinger og vinkler - jo større intervallet derfor er, jo større er usikkerheden af vinkelberegningen også.
 
 I projektet er der valgt at anvende trådløs kommunikation, så ledninger ikke vil være til gene for brugeren af systemet. Dog kan dette have konsekvenser i form af mulig forsinkelse, hvilket vil kunne medføre, at et muligt exoskelet ikke vil fungere i real-term. Dette kan løses ved at koble systemets dele med ledninger, så det ikke er trådløst, men det vil medføre, at rækkevidden af systemets enkelte dele er stærkt begrænset. Til implementering på et exoskelet vurderes dette dog ikke til at være et problem, da det da vil være hensigtsmæssigt at sætte systemet fast på exoskelettet, så det ikke er nødvendigt at bekymre sig om at være inden for rækkevidden af den trådløse kommunikation.
 
@@ -30,7 +32,18 @@ I projektet er der valgt at anvende trådløs kommunikation, så ledninger ikke 
 %Derudover har systemet en start- og stopfunktion. Dette kan både være en fordel og ulempe for brugeren. Det vil være nødvendigt at skulle starte og stoppe hver gang systemet skal anvendes, hvilket kan være til gene for brugeren over en længere tidsperiode. Det vil være fordelagtigt, da gør det muligt for brugeren selv at bestemme, hvornår øvelsen skal starte og stoppe.
 
 \subsection{Samlet systemtest}
-Overholder vi her de opstillede krav? 
-Nej: afvigelser på vinkel (hvorfor går det alligevel?)
-Brugersikkerhed - skriv noget til omkring dette - overholdes så kravene? 
-Følger kroppens naturlige bevægelser - intet exoskelet
+%% Hvordan påvirkes det samplede system af afvigelser i blokke?
+De afvigelser, der blev anset som værende ikke-væsentlige i test af de enkelte blokke, viste sig heller ikke at have en afgørende inflydelse på den samlede systemtest. Dog viser det sig, at konfigurationen af accelerometrene, der medfører, at der sendes et signal svarende til en vinkel på $-200-^{\circ}$, hvis ét af accelerometrene overskrider dens grænsespændinger, ikke er ideel.
+
+Grundet denne konfiguration udelukkes vinkler ved eksempelvis $175^{\circ}$, hvis det ene accelerometer overskrider dets vinkel-arbejdsområde, der er defineret i koden til vinkelberegning.  Det vil være mere brugbart, hvis det førnævnte signal først udsendes, når accelerometrenes samlede vinkel overskrider $90-180^{\circ}$. Dette vil både i testen med kendt input og bruger-input betyde, at systemet først vil overskride dets grænser, og dermed lyse rødt, når knæets vinkel reelt overskrider systemets vinkel-arbejdsområde.
+
+Det udledes fra systemtesten og dennes konklusion, at systemet opfylder de opstillede krav på trods af, at der ikke er blevet uarbejdet en egentlig prototype af et exoskelet, der kan efterligne knæets bevægelse under en squat-øvelse. Signalernes output, i form af digitale output på 10 og -10 fra muskelsignalerne, og i form af egentlige vinkler fra accelerometrene, når knæets vinkel er mellem $90$ og $180^{\circ}$, vil kunne videreføres til et exoskelet. 
+
+For at det kan lade sig gøre at udvikle et egentligt exoskelet, skal der tages højde for yderligere problemstillinger. Eksempelvis skal det testes, hvilken fart der vil være bedst egnet til at bevæge exoskelettet over knæet i, og hvor ofte dette exoskelet skal modtage data fra systemet. Dette skal gøres, så brugeren ikke oplever bevægelser som for hurtige, for langsomme eller som trinvise ryk, men derimod vil opleve bevægelsen som flydende, så den minder mest muligt om en rigtig squat-øvelse.
+
+%% På hvilke måder fungerer det ikke ideelt? For brugere af systemet? For selve systemet? 
+%% Hvad skal der gøres for, at det fungerer ideelt? 
+
+
+
+%% Hvad skal der til for, at kravene er opfyldt?
