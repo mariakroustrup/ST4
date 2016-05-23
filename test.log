@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  19 MAY 2016 18:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  23 MAY 2016 11:00
 entering extended mode
 **test.tex
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\test.tex"
@@ -1718,9 +1718,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 106.
+(hyperref)                setting the option has no effect on input line 104.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 106.
+Package hyperref Info: Option `colorlinks' set `true' on input line 104.
 
 Class memoir Warning: You are using the caption package with the memoir 
 (memoir)              class. This may cause unexpected or inconsistent 
@@ -1841,60 +1841,43 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 2.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
 \c__siunitx_mathtt_int=\count352
 
+("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/xFormaliteter/Laes
+evejledning.tex"
+Underfull \hbox (badness 1331) in paragraph at lines 10--11
+\T1/cmr/m/n/10.95 For at kunne forstå og læse flowdiagrammerne, som anvendes i 
+projektet, forklares
+ []
+
+<figures/flow.png, id=4, 345.29pt x 84.315pt>
+File: figures/flow.png Graphic file (type png)
+ <use figures/flow.png>
+Package pdftex.def Info: figures/flow.png used on input line 14.
+(pdftex.def)             Requested size: 132.30135pt x 32.30634pt.
+)
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/T
-est/test_emg_acc.tex"
+est/traadloes_komm_test.tex"
 
-LaTeX Warning: Reference `sec:pilotforsoeg' on page 1 undefined on input line 3
-.
-
-
-LaTeX Warning: Reference `sec:knaeled_squat' on page 1 undefined on input line 
-3.
-
-<figures/raat_EMG_test.png, id=4, 1028.34187pt x 490.08093pt>
-File: figures/raat_EMG_test.png Graphic file (type png)
-
-<use figures/raat_EMG_test.png>
-Package pdftex.def Info: figures/raat_EMG_test.png used on input line 7.
-(pdftex.def)             Requested size: 396.89731pt x 189.14912pt.
-
-<figures/fft_raat_EMG.png, id=7, 923.45pt x 623.32875pt>
-File: figures/fft_raat_EMG.png Graphic file (type png)
-
-<use figures/fft_raat_EMG.png>
-Package pdftex.def Info: figures/fft_raat_EMG.png used on input line 17.
-(pdftex.def)             Requested size: 396.89731pt x 267.90248pt.
+LaTeX Warning: Reference `sec:traadloes_komm_design' on page 1 undefined on inp
+ut line 2.
 
 
-LaTeX Warning: Reference `sec:test_spaendingsforsyning' on page 1 undefined on 
-input line 23.
-
-
-LaTeX Warning: Reference `sec:EMG_krav' on page 1 undefined on input line 24.
+LaTeX Warning: Reference `traadloes_komm_imp' on page 1 undefined on input line
+ 5.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
- <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/raat_EMG_test.png (PNG c
-opy)> <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/fft_raat_EMG.png (P
-NG copy)>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 29.
+ <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/flow.png>]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 40.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-
-LaTeX Warning: Reference `sec:acc_teori' on page 2 undefined on input line 39.
-
-
-LaTeX Warning: Reference `sec:test_acc' on page 2 undefined on input line 41.
-
-) [2] ("C:\Users\Linette Helena\Documents\GitHub\ST4\test.bbl")
+Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
+line 45.
+) [2]
+("C:\Users\Linette Helena\Documents\GitHub\ST4\test.bbl")
 
 AED: lastpage setting LastPage
-
-Package caption Warning: Unused \captionsetup[table] on input line 118.
-See the caption package documentation for explanation.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\test.aux")
@@ -1909,26 +1892,31 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 25873 strings out of 493921
- 451460 string characters out of 3144850
- 765790 words of memory out of 3000000
- 28752 multiletter control sequences out of 15000+200000
- 15863 words of font info for 49 fonts, out of 3000000 for 9000
+ 25919 strings out of 493921
+ 452172 string characters out of 3144850
+ 766790 words of memory out of 3000000
+ 28776 multiletter control sequences out of 15000+200000
+ 24051 words of font info for 70 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
- 57i,11n,92p,556b,763s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ 57i,11n,92p,792b,789s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
+C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on test.pdf (2 pages, 226366 bytes).
+les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on test.pdf (2 pages, 202121 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
