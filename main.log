@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  23 MAY 2016 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  23 MAY 2016 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3630,26 +3630,21 @@ Package pdftex.def Info: figures/ADC_instillinger_edit.png used on input line 7
 .
 (pdftex.def)             Requested size: 220.5pt x 161.8051pt.
 
-Underfull \hbox (badness 2197) in paragraph at lines 8--8
-\T1/cmr/m/it/10.95 for samplingsfrekvens samt clock frekvens. Yderligere ses de
- aktuelle frekvenser der
- []
-
 <figures/ADC_instillinger2_edit.png, id=1623, 520.344pt x 381.8265pt>
 File: figures/ADC_instillinger2_edit.png Graphic file (type png)
 
 <use figures/ADC_instillinger2_edit.png>
 Package pdftex.def Info: figures/ADC_instillinger2_edit.png used on input line 
-19.
+20.
 (pdftex.def)             Requested size: 220.5pt x 161.8051pt.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
  [77
 
  <./figures/ADC_instillinger_edit.png>])
@@ -3731,10 +3726,10 @@ public/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
 blic/cm-super/sfti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /cm-super/sftt1095.pfb>
-Output written on main.pdf (85 pages, 20842731 bytes).
+Output written on main.pdf (85 pages, 20845059 bytes).
 PDF statistics:
- 1822 PDF objects out of 2073 (max. 8388607)
- 1560 compressed objects within 16 object streams
+ 1825 PDF objects out of 2073 (max. 8388607)
+ 1563 compressed objects within 16 object streams
  367 named destinations out of 1000 (max. 500000)
  1018 words of extra memory for PDF output out of 10000 (max. 10000000)
 
