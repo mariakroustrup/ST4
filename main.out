@@ -64,7 +64,7 @@
 \BOOKMARK [1][-]{section.7.3}{Konklusion af systemtest}{chapter.7}% 64
 \BOOKMARK [0][-]{chapter.8}{Syntese}{}% 65
 \BOOKMARK [1][-]{section.8.1}{Diskussion}{chapter.8}% 66
-\BOOKMARK [2][-]{subsection.8.1.1}{Implementering}{section.8.1}% 67
+\BOOKMARK [2][-]{subsection.8.1.1}{Test af blokke}{section.8.1}% 67
 \BOOKMARK [2][-]{subsection.8.1.2}{Samlet systemtest}{section.8.1}% 68
 \BOOKMARK [1][-]{section.8.2}{Konklusion}{chapter.8}% 69
 \BOOKMARK [1][-]{section.8.3}{Perspektivering}{chapter.8}% 70
@@ -85,3 +85,5 @@
 \BOOKMARK [2][-]{subsection.A.2.4}{Fors\370gsopstilling}{section.A.2}% 85
 \BOOKMARK [2][-]{subsection.A.2.5}{Fremgangsm\345de}{section.A.2}% 86
 \BOOKMARK [2][-]{subsection.A.2.6}{Resultater}{section.A.2}% 87
+\BOOKMARK [0][-]{appendix.B}{Forst\345elsesgrundlag}{}% 88
+\BOOKMARK [1][-]{section.B.1}{Analog-to-digital converter}{appendix.B}% 89
