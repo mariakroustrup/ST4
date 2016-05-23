@@ -21,14 +21,14 @@ For at vurdere om filteret dæmper nok i forhold til de opstillede krav i \autor
 \end{figure}
 
 \noindent
-En dæmpning på $-3~dB$ for den valgte knækfrekvens på $5~Hz$ bestemmes, samt en dekade længere ude svarende til en frekvens på $50~Hz$. Da der anvendes et 2. ordens filter, skal denne frekvens dæmpes ved $-40~dB$. Da der er anvendt EMG-forstærkeren fremgår $50~Hz$ ikke, hvilket er beskrevet i \autoref{sec:EMG_imp}. Outputspændingen ved dennee dæmpningsfaktor er udregnet ved \autoref{equ:daempning1}. 
+En dæmpning på $-3~dB$ for den valgte knækfrekvens på $1,26~Hz$ bestemmes, samt en dekade længere ude svarende til en frekvens på $50~Hz$. Da der anvendes et 2. ordens filter, skal denne frekvens dæmpes ved $-40~dB$. Da der er anvendt EMG-forstærkeren fremgår $50~Hz$ ikke, hvilket er beskrevet i \autoref{sec:EMG_imp}. Outputspændingen ved dennee dæmpningsfaktor er udregnet ved \autoref{equ:daempning1}. 
 
 \begin{equation} \label{equ:daempning1}
 -3~dB = 20 \cdot log_{10} \cdot (\frac{V_{out}}{1}) \Rightarrow V_{out} = 0,7 V
 \end{equation}
 
 \noindent
-Da det ikke er muligt at aflæse nøjagtige værdier for Vpp tages der udgangspunkt i de nærmeste værdi. Værdien for $5~Hz$ er  aflæst til $0,06~V$. Afvigelsen fremgår af \autoref{equ:afvigelse1}.
+Da det ikke er muligt at aflæse nøjagtige værdier for Vpp tages der udgangspunkt i de nærmeste værdi. Værdien for $1,26~Hz$ er  aflæst til $0,06~V$. Afvigelsen fremgår af \autoref{equ:afvigelse1}.
 %Da målingerne for $V_{pp}$ ikke er muligt at aflæse nøjagtige værdier, hvorfor der tages udgangspunkt i de nærmeste værdier. Værdierne for $5~Hz$ er $0,06~V$. Afvigelsen fremgår af \autoref{equ:afvigelse1}.
 
 \begin{equation} \label{equ:afvigelse1}
@@ -36,13 +36,13 @@ Afviglese_{5~Hz} = \frac{0,06V-0,7V}{0,7V} \cdot 100\%  = - 14 \%
 \end{equation}
 
 \noindent 
-Afvigelserne for $5~HZ$ er 14\%. Dette betyder at filteret ikke dæmper signalet nok. Da målingerne for outputspændingen, målt ved de forskellige frekvenser, ikke er nøjagtig aflæst er det forventet, at der er en større afvigelse fra værdierne udregnet i \autoref{equ:daempning1}. På baggrund af dette godtages filteret. 
+Afvigelserne for $1,26~Hz$ er 14\%. Dette betyder at filteret ikke dæmper signalet nok. Da målingerne for outputspændingen, målt ved de forskellige frekvenser, ikke er nøjagtig aflæst er det forventet, at der er en større afvigelse fra værdierne udregnet i \autoref{equ:daempning1}. På baggrund af dette godtages filteret. 
 
 \vspace{3mm}
 \textbf{Opsummering af krav:}
 \begin{itemize}
 \item[\text{\sffamily \checkmark}] Skal følge inputsignalet mest muligt  
 \item[\text{\sffamily \checkmark}] Skal udformes som et Butterworth lavpasfilter
-\item[\text{\sffamily \checkmark}] Skal have en knækfrekvens på $5~Hz$
+\item[\text{\sffamily \checkmark}] Skal have en knækfrekvens på $1,26~Hz$
 \item[\text{\sffamily \checkmark}] Skal have en filterorden på 2
 \end{itemize}
