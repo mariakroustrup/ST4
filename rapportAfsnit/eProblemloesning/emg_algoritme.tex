@@ -1,17 +1,19 @@
 \subsection{EMG-algoritme}\label{sec:krav_emg_algo}
-EMG-algoritmen har til formål at få prototypen, og dermed knæleddet, til at fleksere, når muskelaktiviteten fra rectus femoris er stigende, og at få prototypen til at ekstendere, når muskelaktiviteten er faldende. Dette skal gøres ved, at EMG-algoritmen skal finde hældningen af EMG-signalet mellem samples og derefter udsende et signal alt efter, om hældningen er faldende eller stigende. Dette signal skal indikere ændringen i outputsignalet. 
-For at undgå, at prototypen eksentenderer uden for det definerede område for squat-øvelsen, beskrevet i \autoref{sec:knaeled_squat} ønskes det, at der sker en ændring i outputsignalet, hvis signalet er over $180$ og under $90^{\circ}$.
+EMG-algoritmen har til formål at styre fleksion samt ekstension af en prototype, og dermed knæleddet udfra rectus femoris' muskelaktivitet. Hertil skal knæet fleksere ved en stigende muskelaktivitet og ekstendere, når muskelaktiviteten er faldende.
+Dette bestemmes ved, at EMG-algoritmen skal finde hældningen af EMG-signalet mellem samples og derefter udsende et signal alt efter, om hældningen er aftagende eller stigende. Dette signal skal indikere ændringen i outputsignalet. Ved en stigning af muskelaktiviteten skal outputtet visualisere +10 og ved et fald i muskelaktiviteten visualiseres -10.
+For at undgå, at prototypen eksentenderer eller flekserer uden for det definerede område for squat-øvelsen, beskrevet i \autoref{sec:knaeled_squat} ønskes det, at EMG-algoritmen kun virker indenfor en vinkel af knæet mellem $90$ og $180^{\circ}$. Ved overskridelse af dette interval skal EMG-algoritmen vise et output på 0.
+
 
 \vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
-\item Skal kunne udsende ét signal, når muskelsignalet er faldende og et andet, når det er stigende
+\item Skal kunne visualisere, når muskelsignalet er faldende og et andet, når det er stigende
 \item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
 \begin{itemize}
 \item Ved stigende muskelaktivitet skal dette indikeres som et outputsignal på $+10$
 \item Ved faldende muskelaktivitet skal dette indikeres som et outputsignal på $-10$
 \end{itemize}
-\item Skal kunne indikere, hvis vinklen befinder sig over $180$ og under $90^{\circ}$
+\item Skal kunne indikere, hvis vinklen befinder sig under $90^{\circ}$ og over $180^{\circ}$
 \begin{itemize}
 \item Dette skal indikeres ved, at outputsignalet går i $0$
 \end{itemize}

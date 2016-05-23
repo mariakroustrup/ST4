@@ -1,21 +1,19 @@
 \section{Løsningsstrategi}
 %Intro til hvad der skal være hjernen i systemet.
 Til dette system benyttes komponenter fra Cypress's CY8CKIT-042-BLE udviklingskit. 
-Ud fra dette sæt er der udvalgt de nødvendige komponenter, således der kan fortages analog til digital konvertering af de signaler, der måles via sensorer. Yderligere skal systemet være i stand til at kommunikere trådløst med andre enheder, hvilket er muligt ved anvendelse af Bluetooth Low Energy (BLE).
+Ud fra dette sæt er der udvalgt de nødvendige komponenter, således der kan fortages analog til digital konvertering af de signaler, der måles via EMG-forstærker samt acceleromtrene. Yderligere skal systemet være i stand til at kommunikere trådløst med andre enheder, hvilket er muligt ved anvendelse af Bluetooth Low Energy (BLE).
+
+I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard, som fremover vil refereres til som en mikrokontroller. Derudover et CY8CKIT-142 PSoC 4 BLE modul, der vil refereres til som et BLE-modul, hvilket har en operationsfrekvens på  $2,4~GHz$. 
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/CY8CKIT-042.png}
-\caption{CY8CKIT-042 BLE Pioneer baseboard, samt CY8CKIT-142 PSoC 4 BLE modulet \citep{cypresspsoc2015}.}
+\includegraphics[width=0.7\textwidth]{figures/CY8CKIT-042.png}
+\caption{CY8CKIT-042 BLE Pioneer baseboard samt CY8CKIT-142 PSoC 4 BLE modulet, hvilket ses markeret.} \citep{cypresspsoc2015}.}
 \label{fig:CY8CKIT-042}
 \end{figure}
 
-\noindent
-I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKIT-042 BLE Pioneer baseboard, som fremover vil refereres til som en mikrokontroller. Derudover et CY8CKIT-142 PSoC 4 BLE modul, der vil refereres til som et BLE-modul, hvilket har en operationsfrekvens på  $2,4~GHz$. Baseboardet er platformen, hvorpå sensorerne vil blive tilkoblet, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}.
-Der er mulighed for udvidelse af baseboardet, ved anvendelse af moduler fra Cypress, samt Arduino shields eller 6-pins Digilent Pmod udvidelseskort \citep{cypressguide2014}. 
-\\
-
+Baseboardet er platformen, hvorpå EMG-forstærkeren samt accelerometre tilkobles, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}.
 
 %\subsection{Analog til digital konvertering}
 %CY8CKIT-142 Psoc  4 modulet indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digital. Det er muligt at konfigurere op til 8 analoge kanaler og læse dem samlet eller kun en enkelt indgang ad gangen. Der kan vælges mellem at anvende 8, 10 og 12 bit og kan sample op til 1 MSP'er med en opløsning på 12 bit.  SAR ADC'en understøtter single ended og differentiale indgange. Derudover er det muligt at tilføje en indsprøjtning kanal ved scanningssekvens med firmwarekontrol ved runtime. ADC'en kan den sættes op så den i hardware udfører en gennemsnitsberegning. \citep{ADC2014}

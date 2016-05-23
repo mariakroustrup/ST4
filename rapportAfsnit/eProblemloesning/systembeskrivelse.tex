@@ -1,18 +1,20 @@
 \section{Systembeskrivelse}
-Der ønskes at udvikle et system, med formål at støtte musklerne omkring knæleddet hos ALS-patienter under udførelse af en squat-øvelse. Dette gøres for at aflaste patienterne med henblik på at kunne undgå kørestol i de tidlige stadier af ALS. 
-Systemet skal kunne opsamle EMG-signaler fra rectus femoris samt en spænding fra de påsatte accelerometre, for således at kunne beregne vinklen over knæet. Disse signaler skal behandles således, at de kan omsættes til signaler, så en prototype af et exoskelet kan udføre en tilsvarende bevægelse. 
-Systemet har yderligere til formål at have mulighed for forstærkning af signalet, således mindre muskelkraft også vil kunne udløse den samme bevægelse af knæleddet. 
-Derudover skal systemet være brugervenligt ved at være kompakt, mobilt og ikke generende over for brugeren.
+Der ønskes at udvikle et system, der har til formål at støtte musklerne omkring knæleddet hos ALS-patienter under udførelse af en squat-øvelse. Dette gøres for at aflaste patienterne med henblik på at kunne undgå kørestol i de tidlige stadier af sygdommen. 
+Systemet skal kunne opsamle EMG-signaler fra rectus femoris samt en spænding fra påsatte accelerometre på henholdsvis låret samt skinnebenet, for således at kunne beregne vinklen over knæet. Disse signaler skal behandles således, at de kan omsættes til signaler, så en prototype af et exoskelet kan udføre en tilsvarende bevægelse. 
+Systemet har yderligere til formål at have mulighed for forstærkning af signalet, så mindre muskelkraft vil kunne udløse den samme bevægelse af knæleddet. 
+Systemet skal derudover være sikkert og ikke til gene for brugeren, hvorfor trådløs kommunikation anvendes, hvorved galvanisk adskillelse opnås. Herudover skal systemet være batteridrevet, for at undgå en tilkobling til elnettet. Derudover gøres systemet kompakt og mobilt ved at være batteridrevet. Hvis batterierne ikke kan levere nok strøm til at virke optimalt, skal dette indikeres ved en blinkende LED på spændingsforsyningen. 
 
 \subsection{Overordnet krav til systemet}  \label{sec:overordnet_krav}
 \begin{itemize}
-\item Systemet skal registrere muskelaktivitet af rectus femoris og vinklen af knæleddet
-\item Systemet skal være batteridrevet
-\item Systemet skal kunne overføre data trådløst til en computer
-%\item Systemet skal kunne ende ud i en prototype af et exoskelet
+\item Systemet skal registrere muskelaktivitet fra rectus femoris 
+\item Systemet skal registrere spænding fra accelerometrene, som omregnes til vinklen over knæet
+\item Systemet skal reagere på kroppens bevægelse under en squat-øvelse, således det vil kunne benyttes til en prototype af et exoskelet
 \item Systemet skal være sikkert og ikke til gene for brugeren 
+\item Systemet skal kunne overføre data trådløst til en computer
+\item Systemet skal være batteridrevet
 \item Systemet skal kunne indikere, hvis der ikke er strøm nok til at virke optimalt
-\item Systemet skal reagere på kroppens naturlige bevægelse under en squat-øvelse, så det vil kunne benyttes til en prototype af et exoskelet
+
+%\item Systemet skal kunne ende ud i en prototype af et exoskelet
 \end{itemize}
 
 
@@ -20,13 +22,11 @@ Derudover skal systemet være brugervenligt ved at være kompakt, mobilt og ikke
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{figures/blokdiagram.png}
-\caption{Systemets opbygning.}
+\caption{Systemets opbygning fra sensorer til exoskelet.}
 \label{fig:blokdiagram}
 \end{figure}
 
 \noindent
-I dette projekt er der valgt at udarbejde en prototype, som har til formål at bevæge knæleddet, når rectus femoris kontraherer. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG-elekroder og accelerometre, til at opsamle biologiske signaler. 
-For at registrere muskelaktivitet anvendes elektroder og en EMG-forstærker, der har til formål at forstærke, filtrere og ensrette muskelsignalet, der opsamles. 
-Der anvendes accelerometre som inputsignal. Inputsignalet omregnes til en vinkel svarende til knæleddets vinkel under en squat-øvelse. 
-De opsamlede signaler sendes herefter videre til den digitale del af systemet, hvilket er bestående af et Bluetooth Low Energy Pioneer kit (CY8CKIT-042-BLE), som opfanger de biologiske signaler og overfører dem trådløst til en CySmartUSB BLE Dongle sat i en computer, som kan kommunikere med prototypen af exoskelettet udarbejdet i LEGO Mindstorm \fxnote{tjek om dette er rigtigt}. 
-
+I dette projekt er der valgt at udarbejde et kontrolsystem til en prototype, som har til formål at fleksere samt ekstendere knæleddet, ved anvendelse af muskelaktivitet fra rectus femoris. Opbygningen af systemet fremgår af \autoref{fig:blokdiagram}. Der anvendes to sensorer, EMG-elekroder og accelerometre, til at opsamle signaler. 
+For at registrere muskelaktivitet anvendes elektroder og en EMG-forstærker, der har til formål at forstærke, filtrere og ensrette muskelsignalet, der opsamles. Hertil anvendes accelerometre ligeledes som et inputsignal.
+De opsamlede signaler sendes herefter videre til den digitale del af systemet, hvor en offsetjustering af accelerometer data, filtrering, algoritme samt trådløs kommunikation finder sted. Den digitale del er bestående af et Bluetooth Low Energy Pioneer kit (CY8CKIT-042-BLE), som opfanger signalerne fra EMG-forstærkeren samt accelerometrene. Herefter overføres disse trådløst til en CySmartUSB BLE-dongle sat i en computer, således en visualisering i MATLAB kan forekomme.
