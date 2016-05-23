@@ -33,11 +33,11 @@ Et moving average filter er et simpelt lavpas FIR-filter, der oftest anvendes ti
 \label{eq:mafl}
 \end{equation}
 
-Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter er et vindue med en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Værdien af det midterste element i vinduet vil erstattes med gennemsnitsværdien for de data, der er i hele vinduet. Det midsterste element i vinduet må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret filtret, således alle gennemsnitsværdier er baseret på de originale data. Det fremgår af \autoref{fig:maf} et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet af de 8 elementer i vinduet, hvorefter denne værdi erstatter værdien på den 4. plads i vinduet.\citep{atmel2002}
+Der kan vælges forskellig filterlængde ved implementeringen af filteret. Et moving average filter er et vindue med en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. Værdien af det midterste element i vinduet vil erstattes med gennemsnitsværdien for de data, der er i hele vinduet. Det midsterste element i vinduet må dog ikke erstattes med gennemsnitsværdien før vinduet har passeret filtret, således alle gennemsnitsværdier er baseret på de originale data. Der fremgår af \autoref{fig:maf} et vindue, der i dette tilfælde har en størrelse på 8. Her tages gennemsnittet af de 8 elementer i vinduet, hvorefter denne værdi erstatter værdien på den 4. plads i vinduet.\citep{atmel2002}
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/maf}
+\includegraphics[width=1\textwidth]{figures/maf}
 \caption{Gennemsnitsværdien beregnes for et vindue for et moving average filter \citep{atmel2002}.}
 \label{fig:maf}
 \end{figure} 
@@ -80,7 +80,8 @@ Ud fra \autoref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes ti
 \end{itemize}
 
 \subsubsection{Filtrering af accelerometer signaler} \label{sec:mavg_krav}
-Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givende accelerometer. 
+Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, vælges det at anvende et moving average filter. Dette forventes at give en mere anvendelig repræsentation af vinklen for det givende accelerometer. For at vælge filtrets længde afprøves forskellige længder, herunder 10, 15 og 20 samples. Dette fremgår af \autoref{fig:mavgfilter}.
+
 
 \begin{figure} [H]
 \centering

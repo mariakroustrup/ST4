@@ -1,22 +1,19 @@
 \subsection{Accelerometer algorimte}
 Accelerometer algoritmen har til formål at omregne accelerometrenes spændinger til en vinkel. Hvert accelerometer kan måle en vinkel mellem 0 og $90^{\circ}$, hvor de tilsammen kan måle en vinkel mellem 0 og $180^{\circ}$. Det er hertil muligt at bestemme vinklen over knæet ved placering af accelerometre henholdsvis parallelt med femur og parallelt med tibia. 
-Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ og $90^{\circ}$, hvilket svarer til at knæet befinder sig mellem $90$ og $180^{\circ}$. På baggrund af dette, anses intervallet herimellem væsentligt for udførelse af en squat-øvelse. Dertil visualiseres en overskridelse af intervallet ved en rød LED. Derudover ses en overskridelse for hvert accelerometer på $-200^{\circ}$, hvilket ved en overskridelse af begge accelerometre vil udgør en vinkel på $-400^{\circ}$.
+Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ og $90^{\circ}$, hvilket svarer til, at knæet befinder sig mellem $90$ og $180^{\circ}$. På baggrund af dette, anses intervallet herimellem væsentligt for udførelse af en squat-øvelse. Dertil visualiseres en vinkel, der befinder sig indenfor intervallet på $90-180^{\circ}$ med en grøn LED, hvor en overskridelse af intervallet indikeres med en rød LED. Derudover ses en overskridelse for hvert accelerometer på $-200^{\circ}$, hvilket ved en overskridelse af begge accelerometre vil visualisere en vinkel på $-400^{\circ}$.
  
 \vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
 \item Skal kunne udsende ét signal, som repræsenterer en given vinkel
-\item Skal kunne måle knæets vinkel mellem 90 og $180^{\circ}$
+\item Skal kunne måle knæets vinkel indenfor intervallet $90-180^{\circ}$
 \begin{itemize}
-\item En grøn LED skal lyse når knæets vinkel befinder sig inden for dette interval
+\item Dette skal indikeres ved en grøn LED
 \end{itemize}
-\item Skal indikere, hvornår knæets vinkel er under $90^{\circ}$ og over $180^{\circ}$
+\item Skal indikere, hvornår knæets vinkel er udenfor intervallet
 \begin{itemize}
-\item En rød LED skal lyse, hvis knæets vinkel er under $90^{\circ}$ og over $180^{\circ}$
-\end{itemize}
-\item Skal indikere, hvornår knæet overstrækkes, hvilket svarer til $180^{\circ}$
-\begin{itemize}
-\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som $-200^{\circ}$, hvortil det andet accelerometers vinkel ligges til de $-200^{\circ}$
+\item Dette skal indikeres ved en rød LED
+\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som et output på $-200^{\circ}$, hvortil det andet accelerometers vinkel ligges til de $-200^{\circ}$
 \item Hvis vinklen overstiger $90^{\circ}$ for hvert accelerometer, skal dette indikeres som et output på $-400^{\circ}$
 \end{itemize}
 \end{itemize}
