@@ -1,8 +1,9 @@
 \section{Systembeskrivelse}
 Der ønskes at udvikle et system, der har til formål at støtte musklerne omkring knæleddet hos ALS-patienter under udførelse af en squat-øvelse. Dette gøres for at aflaste patienterne med henblik på at kunne undgå kørestol i de tidlige stadier af sygdommen. 
-Systemet skal kunne opsamle EMG-signaler fra rectus femoris samt en spænding fra påsatte accelerometre på henholdsvis låret samt skinnebenet, for således at kunne beregne vinklen over knæet. Disse signaler skal behandles således, at de kan omsættes til signaler, så en prototype af et exoskelet kan udføre en tilsvarende bevægelse. 
+Systemet skal kunne opsamle EMG-signaler fra rectus femoris samt en spænding fra påsatte accelerometre parallelt med henholdsvis femur samt tibia, for således at kunne beregne vinklen over knæet. Disse signaler skal behandles således, at de kan omsættes til signaler, så en prototype af et exoskelet kan udføre en tilsvarende bevægelse. 
 Systemet har yderligere til formål at have mulighed for forstærkning af signalet, så mindre muskelkraft vil kunne udløse den samme bevægelse af knæleddet. 
 Systemet skal derudover være sikkert og ikke til gene for brugeren, hvorfor trådløs kommunikation anvendes, hvorved galvanisk adskillelse opnås. Herudover skal systemet være batteridrevet, for at undgå en tilkobling til elnettet. Sikkerheden ses yderligere beskrevet i \autoref{sec:brugersikkerhed}. Derudover gøres systemet kompakt og mobilt ved at være batteridrevet. Hvis batterierne ikke kan levere nok strøm til at virke optimalt, skal dette indikeres ved en blinkende LED på spændingsforsyningen. 
+For at undgå en betydende forsinkelse for det samlede system, opsættes et krav herfor. En forsinkelse på maksimum $100~ms$ anses derfor som værende acceptabel. 
 
 \subsection{Overordnet krav til systemet}  \label{sec:overordnet_krav}
 \begin{itemize}
@@ -13,6 +14,7 @@ Systemet skal derudover være sikkert og ikke til gene for brugeren, hvorfor tr�
 \item Systemet skal kunne overføre data trådløst til en computer
 \item Systemet skal være batteridrevet
 \item Systemet skal kunne indikere, hvis der ikke er strøm nok til at virke optimalt
+\item[\text{\sffamily \checkmark}] Systemet skal have en maksimal forsinkelse af hele systemet på $100~ms$
 %\item Systemet skal kunne ende ud i en prototype af et exoskelet
 \end{itemize}
 
