@@ -7,7 +7,7 @@ I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være 
 IIR-filteret består af et forward og feedback FIR-filter, der omfatter a og b koefficienter. IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autoref{eq:iirfilt} \citep{francis2009}. 
 
 \begin{equation} \label{eq:iirfilt}
-	y(n)= \sum_{i=0}^{n} b_{(i)} \cdot x(n-i)+ \sum^{m}_{i=0} a_{(i)} \cdot y(m-i)
+	y(n)= \sum_{m=0}^{M} b_{m} \cdot x(n-m)- \sum^{N}_{m=1} a_{m} \cdot y(n-m)
 \end{equation}
 
 
