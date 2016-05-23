@@ -25,41 +25,41 @@ y4 = filter(b4,a,x);
 
 
 figure
-subplot(4,1,1)
-plot(t,x,t,y1,'r')
-title('5 samples')
-xlabel('Samples')
-ylabel('Spænding [V]')
-ylim([1.4 1.65])
-set(gca,'fontsize',20);
-box off
-grid on
+% subplot(4,1,1)
+% plot(t,x,t,y1,'r')
+% title('5 samples')
+% xlabel('Samples')
+% ylabel('Spænding [V]')
+% ylim([1.4 1.65])
+% set(gca,'fontsize',20);
+% box off
+% grid on
 
-subplot(4,1,2)
+subplot(3,1,1)
 plot(t,x,t,y2,'r')
 title('10 samples')
 xlabel('Samples')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
 grid on
 
-subplot(4,1,3)
+subplot(3,1,2)
 plot(t,x,t,y3,'r')
 title('15 samples')
 xlabel('Samples')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
 grid on
 
-subplot(4,1,4)
+subplot(3,1,3)
 plot(t,x,t,y4,'r')
 title('20 samples')
 xlabel('Samples')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
