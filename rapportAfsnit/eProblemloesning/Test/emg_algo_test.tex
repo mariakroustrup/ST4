@@ -72,3 +72,18 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet, der registreres som en ændring i output-signalet, er mellem $0,00$ og $0,01~s$. Den gennemsnitlige forsinkelse er dermed på $9,57~ms$. Målingen, der giver en forsinkelse på $0,00~s$, kan dog ikke passe, da EMG-algoritmen bruger én sample på at skifte output fra $10$ til $-10$ eller fra $-10$ til $10$. Ingen forsinkelse vil derfor betyde, at EMG-algoritmens output begynder at ændre sig fra $-10$ til $10$, før EMG-signalet er begyndt at stige. 
 
 Forsinkelsen på $9,57~ms$ kan forklares af, at testen er udført ved at sample EMG-algoritmens input og output ved $100~Hz$. Af denne grund er der ikke mere end 100 samples per sekund, hvilket betyder, at der er $10~ms$ mellem hver sample. Forsinkelsen er derfor sandsynligvis mindre end $9,57~ms$, men det kan ikke lade sig gøre at måle mindre tal med den nuværende samplerate. 
+
+\vspace{3mm}
+\textbf{Opsummering af krav:}
+\begin{itemize}
+\item Skal kunne udsende ét signal, når muskelsignalet er faldende og et andet, når det er stigende
+\item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
+\begin{itemize}
+\item Ved stigende muskelaktivitet skal dette indikeres som et outputsignal på $+10$
+\item Ved faldende muskelaktivitet skal dette indikeres som et outputsignal på $-10$
+\end{itemize}
+\item Skal kunne indikere, hvis vinklen befinder sig over $180$ og under $90^{\circ}$
+\begin{itemize}
+\item Dette skal indikeres ved, at outputsignalet går i $0$
+\end{itemize}
+\end{itemize}

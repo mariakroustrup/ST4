@@ -2,7 +2,7 @@
 Under implementering af det samlede system er det nødvendigt at ændre flere parametre for at kunne opfylde de overordnet krav, beskrevet i  \autoref{sec:overordnet_krav}. Dette omfatter ændring af forsyningen af spænding til de enkelte komponenter, hvilket forårsager at spændingen for de udregnede vinkler er ændret.
 
 \subsubsection{Forsyning af spænding}
-Da systemet skal være batteridrevet, skal alle komponenter kobles til et batteri. Dette implementeres ved at mikrokontrollen, gum sticken og EMG-forstærkeren får spænding fra spændingensregulatoreren, der leverer en spænding på $5,5~V$ til disse komponenter. Mikrokontrolleren er koblet til de to accelerometre og forsyner disse med en spænding på $3,3~V$. Opsætningen af dette er illustreret på \autoref{fig:samlet_spaending_imp}. 
+Da systemet skal være batteridrevet, skal alle komponenter kobles til et batteri. Dette implementeres ved at mikrokontrollen og EMG-forstærkeren får spænding fra spændingensregulatoreren, der leverer en spænding på henholdsvis $5,5~V$ og $\pm 5.5~V$. Mikrokontrolleren er koblet til gumsticken og to accelerometre og forsyner disse med en spænding på $3,3~V$. Opsætningen af dette er illustreret på \autoref{fig:samlet_spaending_imp}. 
 
 \begin{figure}[H]
 \centering
@@ -12,13 +12,13 @@ Da systemet skal være batteridrevet, skal alle komponenter kobles til et batter
 \end{figure}
 
 \subsubsection{Beregning af vinkler}
-Da spændingen accelerometrene modtager ændres fra $3,4$ til $3,3~V$, bliver offsettet for disse ligeledes ændret. Dette gør sig gældende da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $-1,5904~V$, og for accelerometeret placeret på skinnebenet er $-1,5598~V$. Dette medvirker til, at de udregnede vinkler for intervallet $90-180^{\circ}$ ændres. De nye vinkler fremgår af \autoref{tab:samlet_vinkel_imp}. 
+Da spændingen accelerometrene modtager ændres fra $3,4$ til $3,3~V$, bliver offsettet for disse ligeledes ændret. Dette gør sig gældende da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $1,5904~V$, og for accelerometeret placeret på skinnebenet er $1,5598~V$. Dette medvirker til, at de udregnede konverterede for intervallet $90-180^{\circ}$ ændres. Det nye konverterede output svarende til en vinkel fremgår af \autoref{tab:samlet_vinkel_imp}. 
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
-\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Digital output fra acclerometer \\ placeret på låret\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Digital output fra accelerometer \\ placeret på skinnebenet\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra acclerometer \\ placeret på låret\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra accelerometer \\ placeret på skinnebenet\end{tabular}} \\ \hline
 \textbf{0}                                                      & -195                                                                               & -170                                                                                      \\ \hline
 \textbf{10}                                                     & -191                                                                             & -164                                                                                     \\ \hline
 \textbf{30}                                                     & -165                                                                             & -142                                                                                    \\ \hline
@@ -29,7 +29,7 @@ Da spændingen accelerometrene modtager ændres fra $3,4$ til $3,3~V$, bliver of
 & -4                                                                                   \\ \hline
 \textbf{90}                                                     & 0                                                                            & 0                                                                                   \\ \hline
 \end{tabular}
-\caption{Digitalt output fra accelerometer placeret på låret og skinnebenet svarende til en given vinkel.}
+\caption{Konverteret output fra accelerometer placeret på låret og på skinnebenet svarende til en given vinkel.}
 \label{tab:samlet_vinkel_imp}
 \end{table}
 
