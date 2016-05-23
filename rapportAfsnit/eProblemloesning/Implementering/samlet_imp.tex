@@ -11,8 +11,10 @@ Da systemet skal være batteridrevet, skal alle komponenter kobles til et batter
 \label{fig:samlet_spaending_imp}
 \end{figure}
 
+En yderligere test blev foretaget af mikrokontrollen. Dette blev gjort da det ønskes at systemet skal være batteridrevet, hvorfor mikrokontrollen ikke kan forsynes med USB som den førhen har gjort. Derfor testes der for hvor meget spændingen den leverer med en forsyning fra spændingsforsyningen og USB-kabel. Mikrokontrollen blev målt til at levere en spænding på $3,273~V$ med USB og $3,278~V$ ved forsyning af spændingsregulatoren.
+
 \subsubsection{Beregning af vinkler}
-Da spændingen accelerometrene modtager ændres fra $3,4$ til $3,3~V$, bliver offsettet for disse ligeledes ændret. Dette gør sig gældende da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $1,5904~V$, og for accelerometeret placeret på skinnebenet er $1,5598~V$. Dette medvirker til, at de udregnede konverterede for intervallet $90-180^{\circ}$ ændres. Det nye konverterede output svarende til en vinkel fremgår af \autoref{tab:samlet_vinkel_imp}. 
+Da spændingen accelerometrene modtager ændres, bliver offsettet for disse ligeledes ændret. Dette gør sig gældende da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $1,5904~V$, og for accelerometeret placeret på skinnebenet er $1,5598~V$. Dette medvirker til, at de udregnede konverterede for intervallet $90-180^{\circ}$ ændres. Det nye konverterede output svarende til en vinkel fremgår af \autoref{tab:samlet_vinkel_imp}. 
 
 \begin{table}[H]
 \centering
