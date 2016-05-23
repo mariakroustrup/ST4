@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  24 MAY 2016 01:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.3)  24 MAY 2016 01:07
 entering extended mode
 **main.tex
 ("C:\Users\Linette Helena\Documents\GitHub\ST4\main.tex"
@@ -1971,14 +1971,14 @@ File: figures/knaet.png Graphic file (type png)
 Package pdftex.def Info: figures/knaet.png used on input line 9.
 (pdftex.def)             Requested size: 352.80135pt x 224.07472pt.
  [5]
-<figures/knae_anatomi.jpg, id=692, 872.25874pt x 469.755pt>
-File: figures/knae_anatomi.jpg Graphic file (type jpg)
+<figures/knae_anatomi.png, id=692, 872.25874pt x 469.755pt>
+File: figures/knae_anatomi.png Graphic file (type png)
 
-<use figures/knae_anatomi.jpg>
-Package pdftex.def Info: figures/knae_anatomi.jpg used on input line 21.
+<use figures/knae_anatomi.png>
+Package pdftex.def Info: figures/knae_anatomi.png used on input line 21.
 (pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
  [6 <C:/Users/Linette Helena/Documents/GitHub/ST4/figures/knaet.png> <C:/Users/
-Linette Helena/Documents/GitHub/ST4/figures/knae_anatomi.jpg>] <figures/squat.p
+Linette Helena/Documents/GitHub/ST4/figures/knae_anatomi.png>] <figures/squat.p
 ng, id=713, 310.15875pt x 274.77657pt>
 File: figures/squat.png Graphic file (type png)
 
@@ -2741,7 +2741,7 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfsx2074.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti0900.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1095.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (88 pages, 21198064 bytes).
+Output written on main.pdf (88 pages, 21165508 bytes).
 PDF statistics:
  1882 PDF objects out of 2073 (max. 8388607)
  375 named destinations out of 1000 (max. 500000)
