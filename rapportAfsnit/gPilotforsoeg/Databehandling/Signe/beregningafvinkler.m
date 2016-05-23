@@ -92,7 +92,7 @@ end ;
 figure
 plot(t, grader(1:1000));
 xlabel('Tid [s]')
-ylabel('Vinkel [\circ]')
+ylabel('Knæets vinkel [\circ]')
 set(gca,'XTick',[0:1:10])
 ylim([0 90])
 set(gca,'YTick',[0:10:90])
@@ -113,11 +113,11 @@ set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
 set(hAx(2), 'YLim',[0 90]);
 set(hAx(2),'YTick',[0:10:90]);
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
+set(get(hAx(2),'Ylabel'),'string','Knæets vinkel [\circ]');
 
 set(hAx(1), 'YLim',[-0.1 1]);
 set(hAx(1),'YTick',[0:0.1:1]);
-set(get(hAx(1),'Ylabel'),'string','Spænding [V]');
+set(get(hAx(1),'Ylabel'),'string','EMG [V]');
 box off
 
 %% Deler vores data op

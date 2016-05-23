@@ -54,7 +54,7 @@ Elektoderne placeres midt for linjen mellem anterior spina iliaca superior og de
 \label{fig:laarmuskler}
 \end{figure}
 
-Referenceelektroden placeres, ligeledes efter SENIAM's anvisninger, omkring anklen \citep{seniam2016}. Placeringen af reference elektroden ses af \autoref{fig:reference}.
+Referenceelektroden placeres, ligeledes efter SENIAM's anvisninger, omkring anklen \citep{seniam2016}. Placeringen af referenceelektroden ses af \autoref{fig:reference}.
 
 \begin{figure}[H]
 \centering
@@ -64,7 +64,7 @@ Referenceelektroden placeres, ligeledes efter SENIAM's anvisninger, omkring ankl
 \end{figure}
 
 Til forsøget benyttes endvidere to accelerometre, som måler i X-, Y- samt Z-aksen. Disse benyttes for at kunne identificere vinklen af knæet under øvelsen. For så vidt muligt at stabilisere accelerometrene under udførelsen af forsøget, placeres disse på breadboards. 
-Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerometer midt på den laterale side af låret, parallelt med femur. Det andet accelerometer placeres midt på den laterale side af underbenet, parallelt med tibia. Disse breadboards påsættes benet ved brug af tape. Knæets vinkel i oprejst position måler 180$^{\circ}$, hvilket svarer til en 0 g-påvirkning. Vinklen af knæet ændres i takt med udførelse af en squat-øvelse, hvorved g-påvirkningen bevæger sig mod 1. Den samlede vinkel af knæet bestemmes ud fra de to accelerometres parametre. Udregningen for dette kan ses i \autoref{sec:test_acc}.
+Som det fremgår af \autoref{fig:accelerometervinkel} placeres det ene accelerometer midt på den laterale side af låret, parallelt med femur. Det andet accelerometer placeres midt på den laterale side af underbenet, parallelt med tibia. Disse breadboards påsættes benet ved brug af tape. Knæets vinkel i oprejst position måler 180$^{\circ}$, hvilket svarer til en 0 g-påvirkning. Vinklen af knæet ændres i takt med udførelse af en squat-øvelse, hvorved g-påvirkningen bevæger sig mod 1. Den samlede vinkel af knæet bestemmes ud fra de to accelerometres spændinger. Udregningen for dette kan ses i \autoref{sec:test_acc}.
 
 \begin{figure}[H]
 \centering
@@ -78,7 +78,7 @@ En squat-øvelse defineres, således den kan gengives på tværs af forsøgspers
 \begin{enumerate}
 \item Forsøgspersonen står i oprejst position. Fødderne placeres med en afstand svarende til ens skulderbredde, hvortil tåspidserne peges let ud til siderne
 \item Armene placeres over kors, som vist på \autoref{fig:squat}
-\item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på maksimalt 90$^{\circ}$ af knæet er opnået.
+\item Hofte og knæ bøjes således kroppen sænkes kontrolleret. Dette fortsættes indtil en vinkel på maksimalt $90^{\circ}$ af knæet er opnået.
 	\begin{itemize}
 	\item Ryggen holdes ret under squat-øvelsen 
 	\item Knæene må ikke gå ud over tåspidserne 
@@ -181,7 +181,7 @@ Ud fra \autoref{fig:baselineogemg}, ses baseline samt squat-øvelse for forsøgs
 Der er foretaget en frekvensanalyse af siddende og stående baselinemåling for at identificere støjsignaler. Dette ses af \autoref{fig:emgfft}, hvor der yderligere fremgår en frekvensanalyse af squat-øvelsen for identificering af frekvensområdet for bevægelsen. For graferne er der foretaget en semilogaritmisk skala på Y-aksen, for således at tydeliggøre de lavfrekvente signaler. Det ses ud fra målingerne et højere støjniveau på squat-øvelsen end baselinemålingerne, dette støjniveau er dog relativt lav. 
 Der observeres en DC-komponent ved $0~Hz$, hvilket svarer til det offset, der er på signalet. 
 Det fremgår ikke af figuren, hvorvidt der er $50~Hz$ støj på signalet, da der samples med $100~Hz$, hertil er Nyquist-frekvensen $50~Hz$. Herudover viser frekvensanalysen ikke amplituden af $50~Hz$ støj, dog antages den for at være tilstede, da dette er en kendt støjfaktor. 
-Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som værende relativt lavfrekvent $0,4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:sensorer}. 
+Af frekvensanalysen for squat-øvelsen identificeres frekvensområdet som værende relativt lavfrekvent $0,4-10~Hz$, hvorefter støjsignalerne dæmpes gradvist. Dette kan relateres til, at EMG-forstærkeren har en knækfrekvens på $1,94~Hz$, hvortil udregningen ses i \autoref{sec:EMG_krav}. 
 
 
 \subsubsection{Resultater for accelerometer målinger} \label{sec:acc_fft}

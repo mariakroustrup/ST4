@@ -29,7 +29,7 @@ plot(t, baseline_staaende_off(1:1150), 'g');
 plot(t, nedogop_emg_off([1:1150]), 'b');
 xlim([0 10]);
 xlabel('Tid [s]');
-ylabel('Spænding [V]');
+ylabel('EMG [V]');
 legend('Siddende baseline', 'Stående baseline', 'Squat-øvelse')
 set(gca,'fontsize',20);
 box off
