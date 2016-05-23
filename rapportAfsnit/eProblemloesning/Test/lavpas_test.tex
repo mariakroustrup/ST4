@@ -16,12 +16,13 @@ For at vurdere om filteret dæmper nok i forhold til de opstillede krav i \autor
 %Da funktionsgeneratoren ikke kan indstilles til en frekvens på $0~Hz$ indstilles denne til $1~\mu~Hz$. 
 Amplituden af sinussignalet sættes til 1 $V_{pp}$ med et offset på $1,65~V$, da dette fortages ved single ended måling, hvortil sinussignalet ikke kan svinge omkring $0~V$. Yderligere tilsluttes et oscilloscope til funktionsgeneratoren, for at kontrollere det generede signal. Heraf aflæses amplituden til $1,08~V$.  
 For at omregne det konverteret filtreret signal til en spænding, gangs de samplede værdier med LSB for ADC'en. 
-Da amplituden for ingangssignalet og det filtreret signal kendes, anvendes \autoref{eq:deampning_dB} til at udregne en dæmpning i dB.
+Da amplituden for ingangssignalet og det filtreret signal kendes, anvendes \autoref{eq:deampning_db} til at udregne en dæmpning i dB.
 
 \begin{equation}\label{eq:deampning_dB}
 	dB = 20*log10(\frac{V_{in}}{V_{out}})
 \end{equation}
 
+\noindent
 Dæmpningen for de forskellige frekvenser, fremgår af {fig:bodeplot}.
 
 \begin{figure}[H]
