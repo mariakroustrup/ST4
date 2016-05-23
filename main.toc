@@ -63,58 +63,58 @@
 \contentsline {subsection}{\numberline {6.2.1}Analog-to-Digital Converter}{40}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Digital filtrering}{41}{subsection.6.2.2}
 \contentsline {subsubsection}{Lavpasfilter}{41}{section*.61}
-\contentsline {subsubsection}{Moving average filter}{44}{section*.64}
+\contentsline {subsubsection}{Moving average filter}{43}{section*.64}
 \contentsline {subsection}{\numberline {6.2.3}Acclerometer-algoritme}{45}{subsection.6.2.3}
 \contentsline {subsection}{\numberline {6.2.4}EMG-algoritme}{48}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{51}{subsection.6.2.5}
-\contentsline {chapter}{\chapternumberline {7}Systemtest}{52}{chapter.7}
-\contentsline {section}{\numberline {7.1}Systemtest med kendt input}{52}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Beskrivelse}{52}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Resultater af test}{52}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Systemtest med bruger-input}{54}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Beskrivelse}{54}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Resultater af fors\IeC {\o }g}{54}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Konklusion af systemtest}{57}{section.7.3}
-\contentsline {chapter}{\chapternumberline {8}Syntese}{59}{chapter.8}
-\contentsline {section}{\numberline {8.1}Diskussion}{59}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Test af blokke}{59}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Samlet systemtest}{60}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Konklusion}{61}{section.8.2}
-\contentsline {section}{\numberline {8.3}Perspektivering}{61}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Et ideelt system}{62}{subsection.8.3.1}
-\contentsline {chapter}{Litteratur}{64}{section*.79}
-\contentsline {appendix}{\chapternumberline {A}Pilotfors\IeC {\o }g}{68}{appendix.A}
-\contentsline {subsection}{\numberline {A.0.2}Form\IeC {\r a}l}{68}{subsection.A.0.2}
-\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{68}{section*.80}
-\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{68}{section*.81}
-\contentsline {subsection}{\numberline {A.0.3}Materialer}{68}{subsection.A.0.3}
-\contentsline {subsection}{\numberline {A.0.4}Fors\IeC {\o }gsopstilling}{69}{subsection.A.0.4}
-\contentsline {subsection}{\numberline {A.0.5}Oversigt af fors\IeC {\o }gsopstilling}{71}{subsection.A.0.5}
-\contentsline {subsection}{\numberline {A.0.6}Fremgangsm\IeC {\r a}de}{71}{subsection.A.0.6}
-\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{71}{section*.85}
-\contentsline {subsection}{\numberline {A.0.7}Databehandling}{71}{subsection.A.0.7}
-\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{72}{section*.86}
-\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{73}{section*.89}
-\contentsline {appendix}{\chapternumberline {B}Test af accelerometer}{75}{appendix.B}
-\contentsline {subsection}{\numberline {B.0.8}Form\IeC {\r a}l}{75}{subsection.B.0.8}
-\contentsline {subsection}{\numberline {B.0.9}Materialer}{75}{subsection.B.0.9}
-\contentsline {subsection}{\numberline {B.0.10}Metode}{75}{subsection.B.0.10}
-\contentsline {subsection}{\numberline {B.0.11}Fors\IeC {\o }gsopstilling}{75}{subsection.B.0.11}
-\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{76}{section*.94}
-\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{76}{section*.96}
-\contentsline {subsection}{\numberline {B.0.12}Fremgangsm\IeC {\r a}de}{76}{subsection.B.0.12}
-\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{76}{section*.97}
-\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{77}{section*.98}
-\contentsline {subsection}{\numberline {B.0.13}Resultater}{77}{subsection.B.0.13}
-\contentsline {subsubsection}{Resultater for deltest 1}{77}{section*.99}
-\contentsline {subsubsection}{Resultater for deltest 2}{78}{section*.101}
-\contentsline {appendix}{\chapternumberline {C}ADC}{79}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ops\IeC {\ae }tning}{79}{section.C.1}
-\contentsline {subsection}{\numberline {C.1.1}Bestemmelse af samplingsfrekvens}{79}{subsection.C.1.1}
-\contentsline {subsection}{\numberline {C.1.2}Arbejdsomr\IeC {\r a}de for ADC}{80}{subsection.C.1.2}
-\contentsline {subsection}{\numberline {C.1.3}Gennemsnits samples}{80}{subsection.C.1.3}
-\contentsline {appendix}{\chapternumberline {D}Brugersikkerhed}{81}{appendix.D}
-\contentsline {section}{\numberline {D.1}Sikkerhedsforanstaltninger}{81}{section.D.1}
-\contentsline {subsection}{\numberline {D.1.1}Jording}{82}{subsection.D.1.1}
-\contentsline {subsection}{\numberline {D.1.2}Isolation}{82}{subsection.D.1.2}
-\contentsline {section}{\numberline {D.2}Implementering af brugersikkerhed}{82}{section.D.2}
+\contentsline {subsection}{\numberline {6.2.5}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{50}{subsection.6.2.5}
+\contentsline {chapter}{\chapternumberline {7}Systemtest}{51}{chapter.7}
+\contentsline {section}{\numberline {7.1}Systemtest med kendt input}{51}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Beskrivelse}{51}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Resultater af test}{51}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Systemtest med bruger-input}{53}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Beskrivelse}{53}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Resultater af fors\IeC {\o }g}{53}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Konklusion af systemtest}{56}{section.7.3}
+\contentsline {chapter}{\chapternumberline {8}Syntese}{58}{chapter.8}
+\contentsline {section}{\numberline {8.1}Diskussion}{58}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Test af blokke}{58}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Samlet systemtest}{59}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Konklusion}{60}{section.8.2}
+\contentsline {section}{\numberline {8.3}Perspektivering}{60}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Et ideelt system}{61}{subsection.8.3.1}
+\contentsline {chapter}{Litteratur}{63}{section*.79}
+\contentsline {appendix}{\chapternumberline {A}Pilotfors\IeC {\o }g}{67}{appendix.A}
+\contentsline {subsection}{\numberline {A.0.2}Form\IeC {\r a}l}{67}{subsection.A.0.2}
+\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{67}{section*.80}
+\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{67}{section*.81}
+\contentsline {subsection}{\numberline {A.0.3}Materialer}{67}{subsection.A.0.3}
+\contentsline {subsection}{\numberline {A.0.4}Fors\IeC {\o }gsopstilling}{68}{subsection.A.0.4}
+\contentsline {subsection}{\numberline {A.0.5}Oversigt af fors\IeC {\o }gsopstilling}{70}{subsection.A.0.5}
+\contentsline {subsection}{\numberline {A.0.6}Fremgangsm\IeC {\r a}de}{70}{subsection.A.0.6}
+\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{70}{section*.85}
+\contentsline {subsection}{\numberline {A.0.7}Databehandling}{70}{subsection.A.0.7}
+\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{71}{section*.86}
+\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{72}{section*.89}
+\contentsline {appendix}{\chapternumberline {B}Test af accelerometer}{74}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.8}Form\IeC {\r a}l}{74}{subsection.B.0.8}
+\contentsline {subsection}{\numberline {B.0.9}Materialer}{74}{subsection.B.0.9}
+\contentsline {subsection}{\numberline {B.0.10}Metode}{74}{subsection.B.0.10}
+\contentsline {subsection}{\numberline {B.0.11}Fors\IeC {\o }gsopstilling}{74}{subsection.B.0.11}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{75}{section*.94}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{75}{section*.96}
+\contentsline {subsection}{\numberline {B.0.12}Fremgangsm\IeC {\r a}de}{75}{subsection.B.0.12}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{75}{section*.97}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{76}{section*.98}
+\contentsline {subsection}{\numberline {B.0.13}Resultater}{76}{subsection.B.0.13}
+\contentsline {subsubsection}{Resultater for deltest 1}{76}{section*.99}
+\contentsline {subsubsection}{Resultater for deltest 2}{77}{section*.101}
+\contentsline {appendix}{\chapternumberline {C}ADC}{78}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ops\IeC {\ae }tning}{78}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Bestemmelse af samplingsfrekvens}{78}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Arbejdsomr\IeC {\r a}de for ADC}{79}{subsection.C.1.2}
+\contentsline {subsection}{\numberline {C.1.3}Gennemsnits samples}{79}{subsection.C.1.3}
+\contentsline {appendix}{\chapternumberline {D}Brugersikkerhed}{80}{appendix.D}
+\contentsline {section}{\numberline {D.1}Sikkerhedsforanstaltninger}{80}{section.D.1}
+\contentsline {subsection}{\numberline {D.1.1}Jording}{81}{subsection.D.1.1}
+\contentsline {subsection}{\numberline {D.1.2}Isolation}{81}{subsection.D.1.2}
+\contentsline {section}{\numberline {D.2}Implementering af brugersikkerhed}{81}{section.D.2}
