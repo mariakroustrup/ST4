@@ -53,7 +53,7 @@ set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
 set(hAx(2), 'YLim',[-420 180]);
 set(hAx(2),'YTick',[-420:40:180]);
-set(get(hAx(2),'Ylabel'),'string','Vinkel [\circ]');
+set(get(hAx(2),'Ylabel'),'string','Knæets vinkel [\circ]');
 
 set(hAx(1), 'YLim',[-0.5 1.5]);
 set(hAx(1),'YTick',[-0.5:0.2:1.5]);
