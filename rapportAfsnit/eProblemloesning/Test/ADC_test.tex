@@ -1,22 +1,23 @@
 \subsection{Analog-to-Digital Converter}
 
-For at teste, hvorvidt ADC'em kan sample tre inputs, foretages en test, hvorpå 3 kanaler opsættes. Dette fremgår af \autoref{fig:treinput}.
+For at teste, hvorvidt ADC'en kan sample tre inputs, foretages en test, hvorpå 3 kanaler opsættes. Dette fremgår af \autoref{fig:treinput}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{figures/treinput}
-\caption{Tre input samlpet samt visualiseret i MATLAB. Input-signalet er samplet fra acceleromterets tre akser.}
+\caption{Tre input samlpet samt visualiseret i MATLAB. Input-signalet er samplet fra et acceleromterets tre akser.}
 \label{fig:treinput}
 \end{figure}
 
 \noindent
-Det ses af \autoref{fig:treinput}, at ADC'en herved kan sample 3 inputs fra et accelerometer. Kanalerne kan herved ændres til et ønsket inputsignal eksempelvis et muskelsignal. 
+Det ses af \autoref{fig:treinput}, at ADC'en herved kan sample 3 inputs fra et accelerometer. Kanalerne kan herved ændres til et ønsket inputsignal eksempelvis et muskelsignal. Ligeledes ses det af figuren at der ikke fremkommer tydelige LSB trin, hvortil en opløsning på 11 bit antages som acceptabel.
 
-På baggrund af \autoref{sec:ADC_imp} er der valgt at anvende en ADC med et arbejdsområde på $2^{11}$, hvilket vurderes at være acceptabel og ikke forringer det ønskede signal under konverteringen. Dette ses ligeledes af \autoref{fig:treinput}.
+%På baggrund af \autoref{sec:ADC_imp} er der valgt at anvende en ADC med et arbejdsområde på $2^{11}$, hvilket vurderes at være acceptabel og ikke forringer det ønskede signal under konverteringen. Dette ses ligeledes af \autoref{fig:treinput}.
+Derudover fremgår det af \autoref{fig:treinput}, at signalet ikke overstiger ADC'ens arbejdsområde under store udsving af accelerometer-signalet. Hertil forventes det, at signalet ikke overstiger arbejdsområdet ved det samlede system, da en lignende bevægelse fremkommer usandsynlig. Yderligere vil testforholdene under test af det samlet system være kontrolleret, hvortil der forventes mindre udsving.
 
-Det fremgår \autoref{sec:pilotforsoeg} at frekvensområdet for muskelaktivitet befinder sig relativt lavfrekvent mellem $0,4-10~Hz$. Derved anses en samplingfrekvens på $100~Hz$ tilstrækkeligt. 
+Det blev påvist i \autoref{sec:pilotforsoeg} at frekvensområdet for muskelaktiviteten efter det har passeret EMG-forstærkeren befinder sig relativt lavfrekvent, mellem $0,4-10~Hz$. Hertil er en samplingsfrekvens på $100Hz$ er tilstrækkelig ud fra Nyquist, som beskrevet i \autoref{sec:ADC_teori}.
 
-Derudover fremgår det af \autoref{fig:treinput}, at signalet ikke overstiger ADC'ens arbejdsområde under store udsving af accelerometersignalet. Hertil forventes det, at signalet ikke overstiger arbejdsområdet ved det endelige system, da bevægelsen herunder er kontrolleret og med mindre udsving.
+%Det fremgår \autoref{sec:pilotforsoeg} at frekvensområdet for muskelaktivitet befinder sig relativt lavfrekvent mellem $0,4-10~Hz$. Derved anses en samplingfrekvens på $100~Hz$ tilstrækkeligt. 
 
 ADC'ens samplingsfrekvens testes for at undersøge om den indstillede og reelle samplerate er identisk. Til denne test defineres en variable, som tæller op for hver gang, at der er konverteret data fra ADC'en. Hvis en konvertering mislykkes vil den givende sample ikke registreres. De registrerede værdier videresendes via USB-forbindelse mellem computer og mikrokontroller, hvorefter dataen aflæses i MATLAB. 
 Testen foretages i 30 minutter, hvorved konverteringen samt tid startes på samme tid. De registrede data aflæses, hvorved en samplingsfrekvens udregnes af \autoref{eq:ADC_test}. Antallet af konverteringer målt under testen er $177066~samples$ over en periode af $1800,16~s$.
@@ -26,7 +27,11 @@ Fs = \frac{177066~samples}{1800,16~s}
 \end{equation}
 
 \noindent
-Der forventes en samplingsfrekvens på $100~Hz$. Den reelle frekvens er udregnet til $98,36~Hz$ ud fra \autoref{eq:ADC_test}. Dette giver en afvigelse på $1,64\%$. Afvigelsen kan relateres til, at tiden og konverteringen ikke har været startet og stoppet på præcis samme tid. Dette resulterer i, at der ikke er en direkte relation mellem køretiden for ADC'en og tiden. Yderligere tillader indstillingerne for ADC'en, at der kan ændres i konverteringstiden for de enkelte kanaler, men samtidig oplyse, at der bevares en aktuel samplingsfrekvens på $100~Hz$. Dette antages ligeledes at have en indflydelse på samplingsfrekvensen, selvom den oplyses som værende $100~Hz$. 
+Der forventes en samplingsfrekvens på $100~Hz$. Den reelle frekvens er udregnet til $98,36~Hz$ ud fra \autoref{eq:ADC_test}. Dette giver en afvigelse på $1,64\%$. Afvigelsen kan relateres til, at tiden og konverteringen ikke har været startet og stoppet på præcis samme tid. Dette resulterer i, at der ikke er en direkte relation mellem køretiden for ADC'en og tiden. Der blev yderligere foretaget en test af samplingsfrekvensen ved brug af et oscilloskop. Dette gav en samplingsfrekvens på $98,43~Hz$, hvilket afviger fra den teoretiske med $1,57\%$. 
+
+De 2 afvigelser kan yderligere relateres til den samlede konverteringstid for de 3 kanaler, der af \autoref{sec:ADC_bilag} er udregnet til $9,96~ms$. Dette oplyser ADC'en som en samplingsfrekvens på $100~Hz$, dog ville den reelle konverteringstid for dette være $10~ms$. 
+%fremgår det at Yderligere tillader indstillingerne for ADC'en, at der kan ændres i konverteringstiden for de enkelte kanaler, men samtidig oplyse, at der bevares en aktuel samplingsfrekvens på $100~Hz$. Dette antages ligeledes at have en indflydelse på samplingsfrekvensen, selvom den oplyses som værende $100~Hz$. 
+
 
 Tiltrods for afvigelsen godkendes ADC'en indstillinger. Dette relateres til, at lavfrekvente signaler samples, og at størrelsen på afvigelsen ikke har betydning for repræsentationen af signalerne. 
 Med henblik på den endelige anvendelse i form af et exoskellet, vil systemet ligeledes skulle følge kroppens naturlige bevægelse. Hertil fremhæves, at exoskelletet ikke skal tilpasse en ny position 100 gange i sekundet, da det ville være uhensigtsmæssigt.

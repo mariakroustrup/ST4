@@ -8,9 +8,8 @@ Kravet for, at USB-donglen skal forsynes via USB opfyldes ved måden, hvorved de
 %Til test af forsinkelse for transmission, defineres en debug pin på mikrokontrolleren og på modtagerenheden. Når data transmitteres sættes pin'en på mikrokontrolleren høj, samt på modtagerenheden, når data modtages. Hertil kan der via et oscilloscope aflæses en forsinkelese mellem de to pin. 
 
 \noindent
-Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi, der tæller op fra nul. Denne værdi transmitteres 10 gange i sekundet til en computer, hvorpå denne data visualiseres i programmet Realterm.
-Startpunket for testen er med en afstand på $1~m$ mellem modtagerenheden på computeren og mikrokontrolleren. 
-Hertil øges afstanden med $1~m$ indtil der opnås en afstand svarende til det opstillede krav på $2~m$. Yderligere fortsættes forøgelsen af afstanden op til maks $4~m$, eller til der ikke længere modtages data. Dette er for at undersøge om de $2~m$ markerer grænsen for den tråløse kommunikation, og dermed definere et flexområde i forhold til det opstillede krav. Testen udføres under forhold, hvor der er fri passage mellem mikrokontroller og modtager.  
+Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi, der tæller op fra nul. Denne værdi transmitteres 10 gange i sekundet til en computer, hvorpå denne data visualiseres i programmet RealTerm.
+Startpunket for testen er med en afstand på $1~m$ mellem modtagerenheden på computeren og mikrokontrolleren. Herefter øges afstanden med $1~m$ op til og med $4~m$, eller der ikke længere modtages data. Grunden til at der vælges at test på $4~m$ er for at sikre, at grænsen på den trådløse kommunikation ikke ligger på omkring $2~m$. Testen udføres under forhold, hvor der er fri passage mellem mikrokontroller og modtager.  
 
 \begin{table}[H]
 \centering
@@ -32,7 +31,7 @@ Afstand [m] & Gennemført transmission \\
 \end{table}
 
 \noindent
-Ud fra \autoref{tab:traadloes_komm_test_afstand} kan der konkluderes et flexrum for den trådløse kommunikation, der er $100~\%$ af det opstillede krav. Yderligere viste testen, at systemet lagrer data i en buffer i tilfælde af, at forbindelsen blev afbrudt. I det forbindelsen blev genetableret, blev den tabte data transmitteret, således ingen data gik tabt. Det kan derfor ligeledes konkluderes, at de opstillede krav for trådløs kommunikation opfyldes.
+Ud fra \autoref{tab:traadloes_komm_test_afstand} fremgår det at den trådløse kommunikation overholder en afstand på $2~m$, der er $100~\%$ af det opstillede krav. Yderligere viste testen, at systemet lagrer data i en buffer i tilfælde af en afbrudt forbindelse. Hvis dette sker vil forbindelsen blive genetableret, hvorpå den tabte data vil blive transmitteret, således ingen data er gået tabt. Det kan derfor ligeledes konkluderes, at de opstillede krav for trådløs kommunikation opfyldes.
 \vspace{3mm}
 
 \textbf{Opsummering af krav:}

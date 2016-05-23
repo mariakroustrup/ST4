@@ -1,5 +1,5 @@
 \subsection{EMG-algoritme}
-For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10$ eller $10$, hvis muskelsignalet er faldende eller stigende. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
+For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10$ eller $10$, hvis muskelsignalet er faldende eller stigende. Derudover ønskes det at outputsignalet er 0, hvis der opnås en vinkel på under $90$ eller over $180^{\circ}$. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
 
 \begin{figure}[H]
 \centering
@@ -15,13 +15,13 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 \centering
 \begin{tabular}{|c|c|c|}
 \hline 
-\textbf{EMG-ekstrema [s]} & \textbf{Output-skift [s]} & \textbf{Forsinkelse [s]}\\ 
+\textbf{EMG-ekstrema [s]} & \textbf{Output[s]} & \textbf{Forsinkelse [s]}\\ 
 \hline 
 0,32 & 0,32 & 0,00\\ 
 \hline 
-0,80 & 0,80 & 0,01\\ 
+0,79 & 0,80 & 0,01\\ 
 \hline 
-0,86 & 0,86 & 0,01\\ 
+0,85 & 0,86 & 0,01\\ 
 \hline 
 1,02 & 1,03 & 0,01\\ 
 \hline 
