@@ -84,30 +84,30 @@
 \contentsline {subsection}{\numberline {8.3.1}Et ideelt system}{60}{subsection.8.3.1}
 \contentsline {chapter}{Litteratur}{61}{section*.79}
 \contentsline {appendix}{\chapternumberline {A}Bilag}{65}{appendix.A}
-\contentsline {section}{\numberline {A.1}Pilotfors\IeC {\o }g}{65}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Form\IeC {\r a}l}{65}{subsection.A.1.1}
-\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{65}{section*.80}
-\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{65}{section*.81}
-\contentsline {subsection}{\numberline {A.1.2}Materialer}{65}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Fors\IeC {\o }gsopstilling}{66}{subsection.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}Oversigt af fors\IeC {\o }gsopstilling}{68}{subsection.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Fremgangsm\IeC {\r a}de}{68}{subsection.A.1.5}
-\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{68}{section*.85}
-\contentsline {subsection}{\numberline {A.1.6}Databehandling}{68}{subsection.A.1.6}
-\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{69}{section*.86}
-\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{70}{section*.89}
-\contentsline {section}{\numberline {A.2}Test af accelerometer}{72}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Form\IeC {\r a}l}{72}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Materialer}{72}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Metode}{72}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Fors\IeC {\o }gsopstilling}{73}{subsection.A.2.4}
-\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{73}{section*.94}
-\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{73}{section*.96}
-\contentsline {subsection}{\numberline {A.2.5}Fremgangsm\IeC {\r a}de}{74}{subsection.A.2.5}
-\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{74}{section*.97}
-\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{74}{section*.98}
-\contentsline {subsection}{\numberline {A.2.6}Resultater}{74}{subsection.A.2.6}
-\contentsline {subsubsection}{Resultater for deltest 1}{74}{section*.99}
-\contentsline {subsubsection}{Resultater for deltest 2}{75}{section*.101}
-\contentsline {appendix}{\chapternumberline {B}Forst\IeC {\r a}elsesgrundlag}{77}{appendix.B}
-\contentsline {section}{\numberline {B.1}Analog-to-digital converter}{77}{section.B.1}
+\contentsline {appendix}{\chapternumberline {B}Pilotfors\IeC {\o }g}{66}{appendix.B}
+\contentsline {subsection}{\numberline {B.0.2}Form\IeC {\r a}l}{66}{subsection.B.0.2}
+\contentsline {subsubsection}{EMG-m\IeC {\r a}ling}{66}{section*.80}
+\contentsline {subsubsection}{Accelerometer m\IeC {\r a}ling}{66}{section*.81}
+\contentsline {subsection}{\numberline {B.0.3}Materialer}{66}{subsection.B.0.3}
+\contentsline {subsection}{\numberline {B.0.4}Fors\IeC {\o }gsopstilling}{67}{subsection.B.0.4}
+\contentsline {subsection}{\numberline {B.0.5}Oversigt af fors\IeC {\o }gsopstilling}{69}{subsection.B.0.5}
+\contentsline {subsection}{\numberline {B.0.6}Fremgangsm\IeC {\r a}de}{69}{subsection.B.0.6}
+\contentsline {subsubsection}{Pilotfors\IeC {\o }g}{69}{section*.85}
+\contentsline {subsection}{\numberline {B.0.7}Databehandling}{69}{subsection.B.0.7}
+\contentsline {subsubsection}{Resultater for EMG-m\IeC {\r a}linger}{70}{section*.86}
+\contentsline {subsubsection}{Resultater for accelerometer m\IeC {\r a}linger}{71}{section*.89}
+\contentsline {appendix}{\chapternumberline {C}Test af accelerometer}{74}{appendix.C}
+\contentsline {subsection}{\numberline {C.0.8}Form\IeC {\r a}l}{74}{subsection.C.0.8}
+\contentsline {subsection}{\numberline {C.0.9}Materialer}{74}{subsection.C.0.9}
+\contentsline {subsection}{\numberline {C.0.10}Metode}{74}{subsection.C.0.10}
+\contentsline {subsection}{\numberline {C.0.11}Fors\IeC {\o }gsopstilling}{74}{subsection.C.0.11}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 1}{75}{section*.94}
+\contentsline {subsubsection}{Fors\IeC {\o }gsopstilling af deltest 2}{75}{section*.96}
+\contentsline {subsection}{\numberline {C.0.12}Fremgangsm\IeC {\r a}de}{75}{subsection.C.0.12}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 1}{75}{section*.97}
+\contentsline {subsubsection}{Fremgangsm\IeC {\r a}de for deltest 2}{76}{section*.98}
+\contentsline {subsection}{\numberline {C.0.13}Resultater}{76}{subsection.C.0.13}
+\contentsline {subsubsection}{Resultater for deltest 1}{76}{section*.99}
+\contentsline {subsubsection}{Resultater for deltest 2}{76}{section*.101}
+\contentsline {appendix}{\chapternumberline {D}Forst\IeC {\r a}elsesgrundlag}{78}{appendix.D}
+\contentsline {section}{\numberline {D.1}Analog-to-digital converter}{78}{section.D.1}

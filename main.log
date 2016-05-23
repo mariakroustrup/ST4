@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  23 MAY 2016 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.26)  23 MAY 2016 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3347,6 +3347,22 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
+ [65
+
+]
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
+
+Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
@@ -3372,16 +3388,16 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 49.
-[65
+[66
 
-] <figures/laarmuskel.png, id=1488, 329.73187pt x 514.92375pt>
+] <figures/laarmuskel.png, id=1496, 329.73187pt x 514.92375pt>
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
 Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
-<figures/reference.png, id=1493, 325.215pt x 410.53375pt>
+<figures/reference.png, id=1501, 325.215pt x 410.53375pt>
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
@@ -3395,8 +3411,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 68.
- [66 <./figures/laarmuskel.png> <./figures/reference.png>] <figures/acceleromet
-ervinkel.png, id=1506, 172.39406pt x 165.61874pt>
+ [67 <./figures/laarmuskel.png> <./figures/reference.png>] <figures/acceleromet
+ervinkel.png, id=1514, 172.39406pt x 165.61874pt>
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
@@ -3411,7 +3427,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 100.
- [67 <./figures/accelerometervinkel.png>]
+ [68 <./figures/accelerometervinkel.png>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 100.
 Package babel Info: Redefining danish shorthand "~
@@ -3425,7 +3441,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 160.
 
-<figures/Pilotforsoeg/baselineogemg.png, id=1519, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/baselineogemg.png, id=1527, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/baselineogemg.png>
@@ -3440,8 +3456,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 171.
- [68]
-<figures/Pilotforsoeg/emgfft.png, id=1527, 1445.4pt x 704.6325pt>
+ [69]
+<figures/Pilotforsoeg/emgfft.png, id=1537, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emgfft.png>
@@ -3450,7 +3466,7 @@ Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 176
 (pdftex.def)             Requested size: 374.85269pt x 182.73781pt.
 
 
-LaTeX Warning: Reference `sec:sensorer' on page 69 undefined on input line 184.
+LaTeX Warning: Reference `sec:sensorer' on page 70 undefined on input line 184.
 
 
 Package babel Info: Redefining danish shorthand "|
@@ -3461,9 +3477,9 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 185.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 185.
-[69 <./figures/Pilotforsoeg/baselineogemg.png (PNG copy)> <./figures/Pilotforso
+[70 <./figures/Pilotforsoeg/baselineogemg.png (PNG copy)> <./figures/Pilotforso
 eg/emgfft.png (PNG copy)>]
-<figures/Pilotforsoeg/accfft.png, id=1537, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accfft.png, id=1547, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accfft.png>
@@ -3484,8 +3500,8 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 206.
 
-[70 <./figures/Pilotforsoeg/accfft.png (PNG copy)>]
-<figures/Pilotforsoeg/emg_vinkler_tid.png, id=1552, 562.1pt x 421.575pt>
+[71 <./figures/Pilotforsoeg/accfft.png (PNG copy)>]
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=1562, 562.1pt x 421.575pt>
 File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler_tid.png>
@@ -3506,8 +3522,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 218.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 218.
-[71 <./figures/Pilotforsoeg/emg_vinkler_tid.png (PNG copy)>]
-<figures/Pilotforsoeg/emg_vinkler.png, id=1561, 1445.4pt x 704.6325pt>
+[72 <./figures/Pilotforsoeg/emg_vinkler_tid.png (PNG copy)>]
+<figures/Pilotforsoeg/emg_vinkler.png, id=1572, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emg_vinkler.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler.png>
@@ -3520,9 +3536,22 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
+ [73 <./figures/Pilotforsoeg/emg_vinkler.png (PNG copy)>]
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
 
 
-LaTeX Warning: Reference `sec:acc' on page 72 undefined on input line 3.
+LaTeX Warning: Reference `sec:acc' on page 74 undefined on input line 3.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 5.
 
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 5.
@@ -3537,20 +3566,20 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 28.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 33.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 33.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 33.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 33.
-[72 <./figures/Pilotforsoeg/emg_vinkler.png (PNG copy)>]
-Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 38.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 38.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 45.
+[74
 
-<figures/vinkeltest.jpg, id=1576, 752.8125pt x 1339.0025pt>
+] <figures/vinkeltest.jpg, id=1597, 752.8125pt x 1339.0025pt>
 File: figures/vinkeltest.jpg Graphic file (type jpg)
 
 <use figures/vinkeltest.jpg>
@@ -3561,50 +3590,41 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 69.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 73.
- [73 <./figures/vinkeltest.jpg>]
+(babel)             in language  on input line 83.
+ [75 <./figures/vinkeltest.jpg>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 91.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 91.
 
-<figures/lineaerregression.png, id=1593, 1434.86063pt x 704.6325pt>
+<figures/lineaerregression.png, id=1613, 1434.86063pt x 704.6325pt>
 File: figures/lineaerregression.png Graphic file (type png)
 
 <use figures/lineaerregression.png>
 Package pdftex.def Info: figures/lineaerregression.png used on input line 98.
 (pdftex.def)             Requested size: 441.0pt x 216.563pt.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 102.
- [74]
-<figures/paavirkning.png, id=1603, 1400.23125pt x 725.71124pt>
+(babel)             in language  on input line 108.
+ [76 <./figures/lineaerregression.png (PNG copy)>] <figures/paavirkning.png, id
+=1626, 1400.23125pt x 725.71124pt>
 File: figures/paavirkning.png Graphic file (type png)
 
 <use figures/paavirkning.png>
 Package pdftex.def Info: figures/paavirkning.png used on input line 112.
 (pdftex.def)             Requested size: 441.0pt x 228.55595pt.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 116.
- [75 <./figures/lineaerregression.png (PNG copy)>]) (./rapportAfsnit/mBilag/ADC
-_bilag.tex
+) (./rapportAfsnit/mBilag/ADC_bilag.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -3613,7 +3633,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
- [76 <./figures/paavirkning.png (PNG copy)>]
+ [77 <./figures/paavirkning.png (PNG copy)>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -3622,7 +3642,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 2.
- <figures/ADC_instillinger_edit.png, id=1620, 520.344pt x 381.8265pt>
+
+<figures/ADC_instillinger_edit.png, id=1636, 520.344pt x 381.8265pt>
 File: figures/ADC_instillinger_edit.png Graphic file (type png)
 
 <use figures/ADC_instillinger_edit.png>
@@ -3630,7 +3651,7 @@ Package pdftex.def Info: figures/ADC_instillinger_edit.png used on input line 7
 .
 (pdftex.def)             Requested size: 220.5pt x 161.8051pt.
 
-<figures/ADC_instillinger2_edit.png, id=1623, 520.344pt x 381.8265pt>
+<figures/ADC_instillinger2_edit.png, id=1639, 520.344pt x 381.8265pt>
 File: figures/ADC_instillinger2_edit.png Graphic file (type png)
 
 <use figures/ADC_instillinger2_edit.png>
@@ -3645,7 +3666,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 24.
- [77
+ [78
 
  <./figures/ADC_instillinger_edit.png>])
 
@@ -3661,7 +3682,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 130.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 130.
-[78 <./figures/ADC_instillinger2_edit.png>]
+[79 <./figures/ADC_instillinger2_edit.png>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 130.
 Package babel Info: Redefining danish shorthand "~
@@ -3674,9 +3695,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AA51E655980905D9860A1CABE95BC368;6001.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 93D5DE06628F36222747393C27880743;6017
+(rerunfilecheck)             After:  30446A535BA845BD817E7C5A5183F978;6031.
 
 LaTeX Warning: There were undefined references.
 
@@ -3686,50 +3713,89 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 27349 strings out of 493117
- 484899 string characters out of 6135433
+ 27363 strings out of 493117
+ 485111 string characters out of 6135433
  791486 words of memory out of 5000000
  29806 multiletter control sequences out of 15000+600000
  30823 words of font info for 80 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  57i,16n,92p,10456b,988s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/cm-super/sfss0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/cm-super/sftt1095.pfb>
-Output written on main.pdf (85 pages, 20845059 bytes).
+pdfTeX warning (dest): name{section.C.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.0.12} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.0.11} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.0.10} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.0.9} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.0.8} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.A.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
+/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sfss0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/cm-super/sfsx1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/cm-super/sfsx2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/c
+m-super/sftt1095.pfb>
+Output written on main.pdf (86 pages, 20845145 bytes).
 PDF statistics:
- 1825 PDF objects out of 2073 (max. 8388607)
- 1563 compressed objects within 16 object streams
- 367 named destinations out of 1000 (max. 500000)
+ 1845 PDF objects out of 2073 (max. 8388607)
+ 1582 compressed objects within 16 object streams
+ 381 named destinations out of 1000 (max. 500000)
  1018 words of extra memory for PDF output out of 10000 (max. 10000000)
 
