@@ -14,6 +14,12 @@ I \autoref{fig:CY8CKIT-042}, ses de valgte komponenter, der består af et CY8CKI
 
 Baseboardet er platformen, hvorpå EMG-forstærkeren samt accelerometre tilkobles, og hvor de analoge signaler konverteres til digitale signaler. Baseboardet har mulighed for tilkobling af en spændingsforsyning, bestående af et batteri, eller via mikro USB tilslutningen \citep{cypressguide2014}.
 
+
+\subsection{Low power mode}
+Det kan være fordelagtigt at anvende sleep mode, ved opsætning ADC'en eller digital kommunikation. Dette er situation hvor andre perifer enheder skal forblive aktive, men uden CPU'ens aktivitet er nødvendig. På denne måde vil det være muligt at reducere strømforbruget mellem A/D-konvertinger samt transaktioner under den digitale kommunikation.
+
+Der findes forskellige former af low power mode. Herunder sleep mode, deep-sleep mode, hibernate mode og stop mode. Systemet anvender sleep mode, hvor kun CPU'en er slukket, mens alle systemets andre enheder er aktive. Systemet befinder sig i sleep mode størstedelen af tiden, men dette bliver afbrudt, når der forekommer et interrupt.  \citep{cypresspsoc420152}
+
 %\subsection{Analog til digital konvertering}
 %CY8CKIT-142 Psoc  4 modulet indeholder en SAR ADC, som gør det muligt at konvertere det analoge signal til et digital. Det er muligt at konfigurere op til 8 analoge kanaler og læse dem samlet eller kun en enkelt indgang ad gangen. Der kan vælges mellem at anvende 8, 10 og 12 bit og kan sample op til 1 MSP'er med en opløsning på 12 bit.  SAR ADC'en understøtter single ended og differentiale indgange. Derudover er det muligt at tilføje en indsprøjtning kanal ved scanningssekvens med firmwarekontrol ved runtime. ADC'en kan den sættes op så den i hardware udfører en gennemsnitsberegning. \citep{ADC2014}
 %
