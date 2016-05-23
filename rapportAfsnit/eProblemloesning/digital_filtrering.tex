@@ -90,7 +90,8 @@ Ud fra accelerometer målingerne i pilotforsøget i \autoref{sec:pilotforsoeg}, 
 \label{fig:mavgfilter}
 \end{figure}
 
-Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. Ved implementeringen af et moving average filter opstår der en forsinkelse, der svarer til filterlængden. Denne forsinkelse fremgår af \autoref{fig:mavgfilter}, hvor der ses et udslag i starten, der medfører denne forsinkelse. Denne forsinkelse opstår, da filtreringen først påbegyndes efter de antal samples, der svarer til filterlængden på 10, hvilket er svarende til en forsinkelse på 10 samples à $100~ms$. 
+Ud fra \autoref{fig:mavgfilter} vælges en filterlængde på 10, da det vurderes, at dette giver en acceptabel forsinkelse af det filtrerede signal uden at påvirke signalet yderligere. Herudover vurderes det at være en passende filterlængde, da det filtrerede signal repræsenterer signalerne fra pilotforsøget i højere grad sammenlignet med de andre filterlængder. Ved design af et moving average filter går der 10 samples, hvilket svarer til filterlængden, dette betyder at der går $0,1~s$ før det filtrede værdi når samme værdi som det oprindelige signal. 
+%Denne forsinkelse fremgår af \autoref{fig:mavgfilter}, hvor der ses et udslag i starten, der medfører denne forsinkelse. Denne forsinkelse opstår, da filtreringen først påbegyndes efter de antal samples, der svarer til filterlængden på 10, hvilket er svarende til en forsinkelse på 10 samples à $100~ms$. 
 
 
 \vspace{3mm}
