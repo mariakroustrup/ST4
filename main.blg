@@ -1,53 +1,10 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: kilder.bib
 Warning--I didn't find a database entry for "escamilla"
 Warning--empty year in russell2015
 Warning--empty year in orthopedics2016
-Warning--empty publisher in morre2003
 Warning--empty year in cypresspsoc420152
+Warning--empty publisher in morre2003
 Warning--empty year in djo
-You've used 56 entries,
-            2481 wiz_defined-function locations,
-            829 strings with 12836 characters,
-and the built_in function-call counts, 15742 in all, are:
-= -- 1404
-> -- 634
-< -- 46
-+ -- 292
-- -- 178
-* -- 970
-:= -- 2638
-add.period$ -- 210
-call.type$ -- 56
-change.case$ -- 72
-chr.to.int$ -- 54
-cite$ -- 61
-duplicate$ -- 961
-empty$ -- 1452
-format.name$ -- 254
-if$ -- 3288
-int.to.chr$ -- 3
-int.to.str$ -- 57
-missing$ -- 38
-newline$ -- 330
-num.names$ -- 162
-pop$ -- 450
-preamble$ -- 1
-purify$ -- 56
-quote$ -- 0
-skip$ -- 563
-stack$ -- 0
-substring$ -- 114
-swap$ -- 150
-text.length$ -- 4
-text.prefix$ -- 2
-top$ -- 0
-type$ -- 359
-warning$ -- 5
-while$ -- 108
-width$ -- 0
-write$ -- 770
 (There were 6 warnings)

@@ -209,6 +209,12 @@ Cypress.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{a}}.
 \newblock URL \url{http://www.cypress.com/file/229211/download}.
 
+\bibitem[Cypress()]{cypresspsoc420152}
+Cypress.
+\newblock \emph{PSoC 4 Low-Power Modes and Power Reductions Techniques}.
+\newblock Cypress Semiconductor Corporation.
+\newblock URL \url{http://www.cypress.com/file/121271/download}.
+
 \bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
 R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
 \newblock Surface electromyography signal processing and classification
@@ -341,12 +347,6 @@ K.~Townsend.
 \newblock \emph{Introduction to Bluetooth Low Energy}, 2014.
 \newblock URL
   \url{https://cdn-learn.adafruit.com/downloads/pdf/introduction-to-bluetooth-low-energy.pdf}.
-
-\bibitem[Cypress()]{cypresspsoc420152}
-Cypress.
-\newblock \emph{PSoC 4 Low-Power Modes and Power Reductions Techniques}.
-\newblock Cypress Semiconductor Corporation.
-\newblock URL \url{http://www.cypress.com/file/121271/download}.
 
 \bibitem[Hermens et~al.(1999)Hermens, Freriks, and et~al.]{seniam2016}
 H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.
