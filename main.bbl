@@ -235,18 +235,25 @@ G.~Zouridakis and J.~Moore.
 \newblock 2003.
 \newblock \doi{978-1-4398-7071-6}.
 
-\bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
-E.~Bernmark and C.~Wiktorin.
-\newblock A triaxial accelerometer for measuring arm movements.
-\newblock \emph{Applied Ergonomics}, 33, 2002.
-\newblock \doi{10.1016/S0003-6870(02)00072-8}.
-
 \bibitem[Technologies(2013)]{advancertech2013}
 Advancer Technologies.
 \newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
   Microcontroller Application}, 2013.
 \newblock URL
   \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+
+\bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
+E.~Bernmark and C.~Wiktorin.
+\newblock A triaxial accelerometer for measuring arm movements.
+\newblock \emph{Applied Ergonomics}, 33, 2002.
+\newblock \doi{10.1016/S0003-6870(02)00072-8}.
+
+\bibitem[Devices(2009)]{analogdevices2009}
+Analog Devices.
+\newblock \emph{EVAL-ADXL335Z}.
+\newblock Analog Devices, 2009.
+\newblock URL
+  \url{http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}.
 
 \bibitem[Webster and Clark(1998)]{webster1998}
 J.~G. Webster and J.~W. Clark.
@@ -311,13 +318,6 @@ J.~M. Hausdorff, A.~Lertratanakul, and M.~E. Cudkowicz.
   sclerosis}.
 \newblock the American Physiological Society, 2000.
 \newblock URL \url{http://jap.physiology.org/content/jap/88/6/2045.full.pdf}.
-
-\bibitem[Devices(2009)]{analogdevices2009}
-Analog Devices.
-\newblock \emph{EVAL-ADXL335Z}.
-\newblock Analog Devices, 2009.
-\newblock URL
-  \url{http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}.
 
 \bibitem[Devices(2010)]{analogdevices2010}
 Analog Devices.
