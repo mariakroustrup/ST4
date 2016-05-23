@@ -1,17 +1,17 @@
 \subsection{Flowdiagram}
-I dette afsnit fremgår implementeringen af systemets digitale blokke, der er illustreret på \autoref{fig:blokdiagram_digital1}. Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet, som beskriver hele processen og et initialiserende samt et, der viser EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i \autoref{sec:flowhaandtering}.
+I dette afsnit fremgår implementeringen af systemets digitale blokke, der er illustreret på \autoref{fig:blokdiagram_digital}. Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet flowdiagram, et initialiserende og et for EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i \autoref{sec:flowhaandtering}.
 
 \subsubsection{Overordnet flowdiagram}
-Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at implementering af softwaren vil foreløbe skal der ske et interrupt ved at trykke på PSoC'ens user button, som får en grøn LED til at lyse og derefter igangsætter de efterfølgende funktioner. 
+Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at påbegynde konverteringen af data er det nødvendigt at give et interrupt ved at trykke på PSoC'ens user button. Dette får en grøn LED til at lyse og igangsætter efterfølgende funktioner. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/overordnet_flow.png}
-\caption{Overordnet flowdigram, der viser systemets opbygning. Blokkene \emph{Initialisering} og \emph{EMG-algoritme} er yderligere uddybet på hhv. \autoref{fig:initialiserende_flow} og \autoref{fig:Emg_algo}. }
+\caption{Overordnet flowdigram, der viser systemets opbygning. Blokkene \emph{initialisering} og \emph{EMG-algoritme} er yderligere uddybet på henholdsvis \autoref{fig:initialiserende_flow} og \autoref{fig:Emg_algo}.}
 \label{fig:overordnet_flow}
 \end{figure}
 
 \subsubsection{Initialiserende flowdiagram}
-I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sker opsætningen af ADC'en. A/D-konverteringen igangsættes, hvilket muliggør konverteringen af det analoge input, hvor det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobes og signalet offsetjusteres. Efter setup skal det vurderes, hvorvidt vinklen over knæet befinder sig mellem 90 og $180^{\circ}$'s vinkel, hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
+I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow}, opsættes ADC'en. A/D-konverteringen igangsættes, hvorved det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobles og signalet offsetjusteres. Efter setup vurderes, hvorvidt vinklen over knæet befinder sig mellem 90 og $180^{\circ}$. Hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/initialiserende_flow.png}
@@ -20,11 +20,11 @@ I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow} sk
 \end{figure}
 
 \subsubsection{EMG-algoritme}
-EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. Hvis inputtet fra accelerometret svarer til en spænding, der kan omregnes til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. Denne omregning sker ved \autoref{eq:vinkler} og derefter \autoref{equ:vinkler}. Én sample sammenlignes derefter med den efterfølgende sample for at vurdere, om muskelaktiviteten er stigende eller faldende. Hvis muskelaktiviteten er stigende, vil vinklen blive større, og herved slutter EMG-algoritmen og sender et input til prototypen med BLE, hvorved en fleksion af knæleddet påbegyndes. Hvis muskelaktiviteten er faldende, vil vinklen blive mindre, hvilket ligeledes slutter EMG-algoritmen og sender et input videre til BLE, hvorved en ektension af knæleddet påbegyndes. 
+EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. Hvis inputtet fra accelerometret svarer til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. Denne omregning sker ud fra \autoref{eq:vinkler} og \autoref{equ:vinkler}. Én sample sammenlignes derefter med den efterfølgende sample for at vurdere, om muskelaktiviteten er stigende eller faldende. Hvis muskelaktiviteten er stigende, vil vinklen blive større, og herved slutter EMG-algoritmen og sender et input til prototypen med BLE, hvorved en fleksion af knæleddet påbegyndes. Hvis muskelaktiviteten er faldende, vil vinklen blive mindre, hvilket ligeledes slutter EMG-algoritmen og sender et input videre til BLE, hvorved en ektension af knæleddet påbegyndes. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/implementering/EMG_algo.png}
-\caption{EMG-algoritmens flowdiagram, der viser opbyggelsen af EMG-algortimen. Den lyse grå del af dette flowdiagram er ikke en del af EMG-algoritmen, men viser algoritmens sammenhæng med resten af systemet. Dette er et uddybende flowdiagram, der passer sammen med det overordnede flowdiagram på \autoref{fig:overordnet_flow}.}
+\caption{EMG-algoritmens flowdiagram, der viser opbyggelsen af EMG-algortimen. Den grå del af dette flowdiagram er ikke en del af EMG-algoritmen, men viser algoritmens sammenhæng med resten af systemet. Dette er et uddybende flowdiagram, der passer sammen med det overordnede flowdiagram på \autoref{fig:overordnet_flow}.}
 \label{fig:Emg_algo}
 \end{figure}
 
