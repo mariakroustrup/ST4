@@ -76,13 +76,12 @@ Forsinkelsen på $9,57~ms$ kan forklares af, at testen er udført ved at sample 
 \vspace{3mm}
 \textbf{Opsummering af krav:}
 \begin{itemize}
-\item Skal kunne udsende ét signal, når muskelsignalet er faldende og et andet, når det er stigende
-\item Skal kunne detektere, om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
+\item Skal kunne detektere om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
 \begin{itemize}
 \item Ved stigende muskelaktivitet skal dette indikeres som et outputsignal på $+10$
 \item Ved faldende muskelaktivitet skal dette indikeres som et outputsignal på $-10$
 \end{itemize}
-\item Skal kunne indikere, hvis vinklen befinder sig over $180$ og under $90^{\circ}$
+\item Skal kunne indikere, hvis vinklen befinder sig udenfor intervallet $90-180^{\circ}$
 \begin{itemize}
 \item Dette skal indikeres ved, at outputsignalet går i $0$
 \end{itemize}

@@ -66,17 +66,14 @@ En yderligere test er foretaget for at undersøge forsinkelsen af vinkelberegnin
 \textbf{Opsummering af krav:}
 \begin{itemize}
 \item[\text{\sffamily \checkmark}] Skal kunne udsende ét signal som repræsenterer en given vinkel
-\item[\text{\sffamily \checkmark}] Skal kunne måle knæets vinkel mellem $180^{\circ}$ og $90^{\circ}$
+\item[\text{\sffamily \checkmark}] Skal kunne måle knæets vinkel indenfor intervallet $90-180^{\circ}$
 \begin{itemize}
-\item En grøn LED skal lyse, når knæets vinkel befinder sig inden for dette interval
+\item Dette skal indikeres ved en grøn LED
 \end{itemize}
-\item[\text{\sffamily \checkmark}] Skal indikere, hvornår knæets vinkel er over $180^{\circ}$ og under $90^{\circ}$
+\item[\text{\sffamily \checkmark}] Skal indikere, hvornår knæets vinkel er udenfor intervallet $90-180^{\circ}$
 \begin{itemize}
-\item En rød LED skal lyse, hvis knæets vinkel er over $180^{\circ}$ eller under $90^{\circ}$
-\end{itemize}
-\item[\text{\sffamily \checkmark}] Skal indikere, hvornår knæet overstrækkes, hvilket svarer til $180^{\circ}$
-\begin{itemize}
-\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som $-200^{\circ}$, hvortil det andet accelerometers vinkel ligges til de $-200^{\circ}$
+\item Dette skal indikeres ved en rød LED
+\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som et output på $-200^{\circ}$, hvortil det andet accelerometers vinkel lægges til de $-200^{\circ}$
 \item Hvis vinklen overstiger $90^{\circ}$ for hvert accelerometer, skal dette indikeres som et output på $-400^{\circ}$
 \end{itemize}
 \end{itemize}
