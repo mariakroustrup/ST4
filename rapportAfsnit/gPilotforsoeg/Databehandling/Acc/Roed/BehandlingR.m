@@ -77,11 +77,17 @@ plot(t, DataPO_1(1:L));
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved plan op')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 hold on
 plot(t, DataPO_2(1:L));
+set(gca, 'XTick', [0:1:10])
+xlabel('Tid [s]')
+ylabel('Accelerometer [V]')
 hold on
 plot(t, DataPO_3(1:L));
+set(gca, 'XTick', [0:1:10])
+xlabel('Tid [s]')
+ylabel('Accelerometer [V]')
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest'); 
 set(gca,'fontsize',20);
 box off
@@ -91,11 +97,18 @@ plot(t, DataPN_1(1:L));
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved plan ned')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
+set(gca, 'XTick', [0:1:10])
 hold on
 plot(t, DataPN_2(1:L));
+xlabel('Tid [s]')
+ylabel('Accelerometer [V]')
+set(gca, 'XTick', [0:1:10])
 hold on
 plot(t, DataPN_3(1:L));
+set(gca, 'XTick', [0:1:10])
+xlabel('Tid [s]')
+ylabel('Accelerometer [V]')
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 box off 
@@ -134,11 +147,12 @@ plot(t, DataLO_1(1:L));
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved lodret op')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 hold on
 plot(t, DataLO_2(1:L));
 hold on
 plot(t, DataLO_3(1:L));
+set(gca, 'XTick', [0:1:10])
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 box off
@@ -148,11 +162,12 @@ plot(t, DataLN_1(1:L));
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved lodret ned')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 hold on 
 plot(t, DataLN_2(1:L));
 hold on
 plot(t, DataLN_3(1:L));
+set(gca, 'XTick', [0:1:10])
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 box off
@@ -192,11 +207,12 @@ plot(t, DataVV_1(1:L));
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved vandret mod venstre')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 hold on
 plot(t, DataVV_2(1:L));
 hold on
 plot(t, DataVV_3(1:L));
+set(gca, 'XTick', [0:1:10]);
 legend(['X-akse'; 'Y-akse'; 'Z-akse'], 'Location', 'southwest');
 set(gca,'fontsize',20);
 box off
@@ -207,11 +223,13 @@ box off
 axis([0 10 1 2]);
 title('Gennemsnitlig spænding målt ved vandret mod højre')
 xlabel('Tid [s]')
-ylabel('Spænding [V]')
+ylabel('Accelerometer [V]')
 hold on 
 plot(t, DataVH_2(1:L));
 hold on
 plot(t, DataVH_3(1:L));
+
+set(gca, 'XTick', [0:1:10]);
 legend(['X-akse'; 'Y-akse'; 'Z-akse'],'Location', 'southwest');
 set(gca,'fontsize',20);
 box off

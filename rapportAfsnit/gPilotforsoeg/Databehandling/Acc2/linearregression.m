@@ -99,7 +99,7 @@ subplot(2,3,1)
 plot( fitresult{1}, xData1, yData1 );
 text(100,1.8,'R^2 = 0,9804','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på tibia:'; 'X-akse'});
@@ -112,7 +112,7 @@ subplot(2,3,2)
 plot( fitresult{2}, xData2, yData2 );
 text(100,1.8,'R^2 = 0,9800','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på tibia:'; 'Y-akse'});
@@ -125,7 +125,7 @@ subplot(2,3,3)
 plot( fitresult{3}, xData3, yData3 );
 text(100,1.8,'R^2 = 0,9812','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på tibia:'; 'Z-akse'});
@@ -138,7 +138,7 @@ subplot(2,3,4)
 plot( fitresult{4}, xData4, yData4 );
 text(100,1.8,'R^2 = 0,9806','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på femur:';'X-akse'});
@@ -151,7 +151,7 @@ subplot(2,3,5)
 plot( fitresult{5}, xData5, yData5 );
 text(100,1.8,'R^2 = 0,9790','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på femur:';'Y-akse'});
@@ -164,7 +164,7 @@ subplot(2,3,6)
 plot( fitresult{6}, xData6, yData6 );
 text(100,1.8,'R^2 = 0,9791','FontSize',20)
 xlabel('Vinkel [{\circ}]'); 
-ylabel('Spænding [V]');
+ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på femur:';'Z-akse'});
