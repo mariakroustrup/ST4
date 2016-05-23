@@ -21,5 +21,5 @@ Jording sikrer systemets bruger ved at benytte én fælles referenceværdi for a
 Isolation sikrer systemets bruger ved at sørge for, at strøm i form af fejl- eller lækstrømme ikke løber fra én del af systemet til en anden, da dette kan medføre makrochok. Ved at isolere, er det dermed ikke muligt for fejl- eller lækstrømme at nå systemets bruger \citep{webster1998}. 
 
 \section{Implementering af brugersikkerhed}
-I dette system kombineres jording og isolation for at sikre systemets bruger mest effektivt. Systemet jordes ved at have en fælles jord for alle systemets komponenter - denne kommer fra spændingsforsyningens GND-terminaler på \autoref{fig:spaendingsforsyning}. Isolation sikres ved at lade systemet være forsynet af batterier, så spændingen herfra ikke  
+I dette system kombineres jording og isolation for at sikre systemets bruger mest effektivt. Systemet jordes ved at have en fælles jord for alle systemets komponenter - denne kommer fra spændingsforsyningens GND-terminaler på \autoref{fig:spaendingsforsyning}. Isolation sikres ved at lade systemet være adskilt fra computeren, der benyttes til datavisualisering, ved brug af den trådløse BLE-forbindelse. Derudover adskilles systemet fra elnettet ved brug af batterier som spændingsforsyning. På denne måde kommer brugeren af systemet ikke i forbindelse med høje spændinger eller strømme. 
 
