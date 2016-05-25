@@ -1,11 +1,14 @@
 \section{Analog del} \label{sec:analog_del_krav}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{figures/implementering/Blokdiagram_analog.png}
-\caption{Blokdiagrammets analoge del}
+\caption{Blokdiagram over hele systemet, hvor den analoge del er fremhævet.}
 \label{fig:blokdiagram_analog}
 \end{figure}
 
 \noindent
-I det analoge system, som er illustreret på \autoref{fig:blokdiagram_analog}, benyttes sensorer til at opsamle signaler, der videresender disse informationer til en computer. Systemet skal være i stand til at opsamle EMG-signaler, hvor der ønskes en repræsentation af energimængden i signalet. For, at dette opnås skal signalet envelopefiltreres. Yderligere ønskes det at kunne justere forstærkningen, for at tilpasse amplituden af EMG-signalet, og dermed gøre systemet mere alsidigt, således det kan benyttes til flere brugere. Den justerbare forstærkning vil muliggøre, at ALS-patienter kan benytte systemet i takt med det progressive muskelsvind.
-Systemet skal ligeledes være i stand til at opsamle signaler fra accelerometrene, så accelerationen fra accelerometrene kan omregnes til en vinkel over knæet.
+I det analoge system, som er fremhævet på \autoref{fig:blokdiagram_analog}, benyttes elektroder og accelerometre til at opsamle signaler. Systemet skal være i stand til at opsamle ElektroMyoGrafi (EMG)-signaler, hvor outputtet ønskes som værende en repræsentation af energimængden i signalet. Signalet skal derfor envelopefiltreres. 
+Yderligere ønskes det at kunne justere forstærkningen, for at tilpasse amplituden af EMG-signalet, og dermed gøre systemet mere alsidigt, således det kan benyttes til flere brugere. 
+Den justerbare forstærkning vil ligeledes muliggøre, at ALS-patienter kan benytte systemet i takt med det progressive muskelsvind.
+Systemet skal herudover være i stand til at opsamle signaler fra accelerometrene, så accelerationen kan omregnes til en vinkel over knæet.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{56}
+\begin{thebibliography}{55}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -60,6 +60,14 @@ J.~Morris.
 \newblock \emph{The Neurodiagnostic Journal}, 2015.
 \newblock \doi{10.1080/21646821.2015.1075181}.
 
+\bibitem[Ilse et~al.(2015)Ilse, Prell, and M.~Walther]{ilse2015}
+B.~Ilse, T.~Prell, and et.~al. M.~Walther.
+\newblock Relationships between disease severity, social support and
+  health-related quality of life in patients with amyotrophic lateral
+  sclerosis.
+\newblock \emph{Social Indicators Research}, 2015.
+\newblock \doi{10.1007/s11205-014-0621-y}.
+
 \bibitem[of~Neurological~Disorders and Stroke(2016)]{nationalinstitute2016}
 National~Institute of~Neurological~Disorders and Stroke.
 \newblock \emph{Amyotrophic lateral sclerosis (ALS) Fact sheet}.
@@ -93,14 +101,6 @@ C.~Neudert, M.~Wasner, and G.~D. Borasio.
   sclerosis.
 \newblock \emph{Journal of palliative medicine}, 7, 2004.
 \newblock \doi{10.1089/1096621041838443}.
-
-\bibitem[Ilse et~al.(2015)Ilse, Prell, and M.~Walther]{ilse2015}
-B.~Ilse, T.~Prell, and et.~al. M.~Walther.
-\newblock Relationships between disease severity, social support and
-  health-related quality of life in patients with amyotrophic lateral
-  sclerosis.
-\newblock \emph{Social Indicators Research}, 2015.
-\newblock \doi{10.1007/s11205-014-0621-y}.
 
 \bibitem[Pagnini(2013)]{pagnini2013}
 F.~Pagnini.
@@ -209,12 +209,6 @@ Cypress.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{a}}.
 \newblock URL \url{http://www.cypress.com/file/229211/download}.
 
-\bibitem[Cypress()]{cypresspsoc420152}
-Cypress.
-\newblock \emph{PSoC 4 Low-Power Modes and Power Reductions Techniques}.
-\newblock Cypress Semiconductor Corporation.
-\newblock URL \url{http://www.cypress.com/file/121271/download}.
-
 \bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
 R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
 \newblock Surface electromyography signal processing and classification
@@ -235,25 +229,11 @@ G.~Zouridakis and J.~Moore.
 \newblock 2003.
 \newblock \doi{978-1-4398-7071-6}.
 
-\bibitem[Technologies(2013)]{advancertech2013}
-Advancer Technologies.
-\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
-  Microcontroller Application}, 2013.
-\newblock URL
-  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
-
 \bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
 E.~Bernmark and C.~Wiktorin.
 \newblock A triaxial accelerometer for measuring arm movements.
 \newblock \emph{Applied Ergonomics}, 33, 2002.
 \newblock \doi{10.1016/S0003-6870(02)00072-8}.
-
-\bibitem[Devices(2009)]{analogdevices2009}
-Analog Devices.
-\newblock \emph{EVAL-ADXL335Z}.
-\newblock Analog Devices, 2009.
-\newblock URL
-  \url{http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}.
 
 \bibitem[Webster and Clark(1998)]{webster1998}
 J.~G. Webster and J.~W. Clark.
@@ -318,6 +298,20 @@ J.~M. Hausdorff, A.~Lertratanakul, and M.~E. Cudkowicz.
   sclerosis}.
 \newblock the American Physiological Society, 2000.
 \newblock URL \url{http://jap.physiology.org/content/jap/88/6/2045.full.pdf}.
+
+\bibitem[Technologies(2013)]{advancertech2013}
+Advancer Technologies.
+\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
+  Microcontroller Application}, 2013.
+\newblock URL
+  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
+
+\bibitem[Devices(2009)]{analogdevices2009}
+Analog Devices.
+\newblock \emph{EVAL-ADXL335Z}.
+\newblock Analog Devices, 2009.
+\newblock URL
+  \url{http://www.analog.com/media/en/technical-documentation/evaluation-documentation/EVAL-ADXL335Z.pdf}.
 
 \bibitem[Devices(2010)]{analogdevices2010}
 Analog Devices.

@@ -1,6 +1,11 @@
-\subsection{Accelerometer algorimte}
-Accelerometer algoritmen har til formål at omregne accelerometrenes spændinger til en vinkel. Hvert accelerometer kan måle en vinkel mellem 0 og $90^{\circ}$, hvor de tilsammen kan måle en vinkel mellem 0 og $180^{\circ}$. Det er hertil muligt at bestemme vinklen over knæet ved placering af accelerometre henholdsvis parallelt med femur og parallelt med tibia. 
-Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ og $90^{\circ}$, hvilket svarer til, at knæet befinder sig mellem $90$ og $180^{\circ}$. På baggrund af dette, anses intervallet herimellem væsentligt for udførelse af en squat-øvelse. Dertil visualiseres en vinkel, der befinder sig indenfor intervallet på $90-180^{\circ}$ med en grøn LED, hvor en overskridelse af intervallet indikeres med en rød LED. Derudover ses en overskridelse for hvert accelerometer på $-200^{\circ}$, hvilket ved en overskridelse af begge accelerometre vil visualisere en vinkel på $-400^{\circ}$.
+\subsection{Accelerometeralgoritme}
+Accelerometeralgoritmen har til formål at omregne accelerometrenes spændinger til en vinkel. 
+Hvert accelerometer indstilles til at måle en vinkel mellem 0 og $90^{\circ}$, hvorfor de tilsammen kan måle en vinkel mellem 0 og $180^{\circ}$. 
+Det er hertil muligt at bestemme vinklen over knæet ved placering af accelerometrene parallelt med femur og parallelt med tibia. 
+Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ og $90^{\circ}$, hvilket svarer til, at knæet befinder sig mellem $90$ og $180^{\circ}$. 
+På baggrund af dette anses intervallet herimellem væsentligt for udførelse af en squat-øvelse. 
+Dertil visualiseres en vinkel, der befinder sig indenfor intervallet på $90-180^{\circ}$ med en grøn LED, hvor en overskridelse af intervallet indikeres med en rød LED. 
+Derudover vil en overskridelse af hvert accelerometer visualisere et output på $-200^{\circ}$, hvortil en overskridelse af begge accelerometre vil visualiseres som et output på $-400^{\circ}$, hvorved EMG-algoritmen ikke påbegyndes. EMG-algoritmen fremgår af \autoref{sec:krav_emg_algo}.
  
 \vspace{3mm}
 \textbf{Krav:}
@@ -13,7 +18,7 @@ Ifølge \autoref{sec:knaeled_squat} udføres en squat mellem $0$ og $90^{\circ}$
 \item Skal indikere, hvornår knæets vinkel er udenfor intervallet $90-180^{\circ}$
 \begin{itemize}
 \item Dette skal indikeres ved en rød LED
-\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som et output på $-200^{\circ}$, hvortil det andet accelerometers vinkel lægges til de $-200^{\circ}$
+\item Hvis vinklen for ét accelerometer overstiger $90^{\circ}$, indikeres dette som et output på $-200^{\circ}$, hvortil det andet accelerometers vinkel lægges til
 \item Hvis vinklen overstiger $90^{\circ}$ for hvert accelerometer, skal dette indikeres som et output på $-400^{\circ}$
 \end{itemize}
 \end{itemize}

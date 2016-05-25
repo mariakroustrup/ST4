@@ -5,33 +5,32 @@
 \contentsline {chapter}{\chapternumberline {2}Problemanalyse}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Amyotrofisk lateral sklerose}{2}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Livskvalitet hos ALS-patienter}{4}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Hj\IeC {\ae }lpemidler til ALS}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Hj\IeC {\ae }lpemidler til ALS-patienter}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Teknologiske hj\IeC {\ae }lpemidler}{5}{subsection.2.2.1}
 \contentsline {subsubsection}{Udfordringer ved brug af hj\IeC {\ae }lpemidler}{5}{section*.12}
-\contentsline {subsection}{\numberline {2.2.2}Body augmentation som hj\IeC {\ae }lpemiddel}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Body augmentation-system som hj\IeC {\ae }lpemiddel}{5}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Gangfunktion}{5}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Kn\IeC {\ae }ets opbygning}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Kn\IeC {\ae }ets funktion}{7}{subsection.2.3.2}
 \contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{7}{section*.15}
 \contentsline {section}{\numberline {2.4}Problemafgr\IeC {\ae }nsning}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Problemformulering}{8}{subsection.2.4.1}
-\contentsline {chapter}{\chapternumberline {3}Systemudvikling}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Systembeskrivelse}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Overordnet krav til systemet}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {2.4.1}Problemformulering}{9}{subsection.2.4.1}
+\contentsline {chapter}{\chapternumberline {3}Systemudvikling}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Systembeskrivelse}{10}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Overordnet krav til systemet}{10}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Blokdiagram}{10}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}L\IeC {\o }sningsstrategi}{10}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Low power mode}{11}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.2}L\IeC {\o }sningsstrategi}{11}{section.3.2}
 \contentsline {chapter}{\chapternumberline {4}Teori og design}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}Analog del}{12}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Opsamling af EMG-signaler}{12}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Opsamling af accelerometer-signaler}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.1}Opsamling og behandling af EMG-signaler}{12}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Opsamling af accelerometer signaler}{13}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Sp\IeC {\ae }ndingsforsyning}{13}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Digital del}{14}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Analog-to-Digital Converter}{14}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Digital filtrering}{16}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Digital filtrering}{15}{subsection.4.2.2}
 \contentsline {subsubsection}{Filtrering af EMG-signal}{17}{section*.25}
 \contentsline {subsubsection}{Filtrering af accelerometer signaler}{19}{section*.28}
-\contentsline {subsection}{\numberline {4.2.3}Accelerometer algorimte}{20}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Accelerometeralgoritme}{20}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}EMG-algoritme}{21}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Tr\IeC {\r a}dl\IeC {\o }s kommunikation}{21}{subsection.4.2.5}
 \contentsline {chapter}{\chapternumberline {5}Implementering}{23}{chapter.5}

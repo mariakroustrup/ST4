@@ -1,18 +1,23 @@
-\subsection{Opsamling af EMG-signaler} \label{sec:EMG_krav}
+\subsection{Opsamling og behandling af EMG-signaler} \label{sec:EMG_krav}
 EMG er en målemetode, som måler elektrisk aktivitet genereret af muskler \citep{chowdhury2013}. 
-Som tidligere nævnt i \autoref{sec:ALS} er ALS en neurodegenerativ sygdom, hvor musklen svinder ind, hvilket resulterer i mindsket muskelaktivitet. Dette påvirker EMG-målingerne, da den elektriske muskelaktivititet hos ALS-patienter derfor er mindre.
+Som nævnt i \autoref{sec:ALS} er ALS en neurodegenerativ sygdom, hvor musklen svinder ind, hvilket resulterer i mindsket muskelaktivitet, som påvirker EMG-signalet.
 
-Almindeligvis kan der anvendes to former for EMG-målinger. Den ene er en ikke-invasiv metode, der betegnes overflade-EMG, og den anden er en invasiv metode, intramuskulær-EMG \citep{chowdhury2013, keenan2012}. I dette projekt anvendes overflade-EMG for at opfylde projektets overordnede krav, hvilket ses af \autoref{sec:overordnet_krav}, om at være til mindst mulig gene for brugeren. Ved overflade-EMG foretages en måling over et samlet antal potentialer fra måleområdet via differensmåling, herved er det muligt at se aktivering af muskelfibre \citep{keenan2012}. EMG har et frekvensområde på $10-500~Hz$, hvorfor EMG-forstærkeren skal kunne opsamle frekvenser inden for dette område. Signaler uden for frekvensområdet, betegnes som støj \citep{morre2003, keenan2012}.  
+Almindeligvis anvendes to former for EMG-målinger. Den ene er en ikke-invasiv metode, der betegnes overflade-EMG, og den anden er en invasiv metode, intramuskulær-EMG \citep{chowdhury2013, keenan2012}. 
+I dette projekt anvendes overflade-EMG for at opfylde projektets overordnede krav, hvilket ses af \autoref{sec:overordnet_krav}, om at være til mindst mulig gene for brugeren. 
+Ved overflade-EMG foretages en måling over et samlet antal potentialer fra måleområdet via differensmåling, herved er det muligt at se aktivering af muskelfibre \citep{keenan2012}. 
+Studier viser, at EMG har et frekvensområde på $10-500~Hz$. 
+Signaler uden for frekvensområdet, betegnes som støj \citep{morre2003, keenan2012}.  
 
-Denne metode kan påvirkes af flere artefakter, som bevægelsespåvirkning og støjpåvirkning fra elnettet, hvilket ligger på frekvenser omkring $50~Hz$ \citep{keenan2012}.
+Overflade-EMG kan påvirkes af artefakter som bevægelsespåvirkning og støjpåvirkning fra elnettet, som har frekvenser omkring $50~Hz$ \citep{keenan2012}.
 Ligeledes kan der ved EMG-målinger fremkomme elektrisk støjpåvirkning fra omkringliggende biologiske signaler. Dette betegnes som crosstalk \citep{keenan2012}. 
 
-Ud fra EMG-forstærkerens datablad ses det, at denne skal forsynes med en typisk spænding på $\pm 5~V$ \citep{advancertech2013}, hvorfor et krav sættes herfor.
+
+Til forsyningen af denne analoge blok vælges en spænding ud fra komponenten, der implementeres i \autoref{sec:EMG_imp}.
 
 \vspace{3mm}
 \textbf{Krav:}
 \begin{itemize}
-\item Skal opsamle muskelsignal
+%\item Skal opsamle muskelsignal
 \item Skal være anvendeligt med overflade elektroder
 \item Skal opsamle muskelsignaler i frekvensområdet mellem $10$ og $500~Hz$
 \item Skal forsynes med minimum en spænding på $\pm5~V$ 

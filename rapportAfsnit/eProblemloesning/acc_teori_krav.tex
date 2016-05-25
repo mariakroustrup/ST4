@@ -1,9 +1,20 @@
-\subsection{Opsamling af accelerometer-signaler} \label{sec:acc_teori}
-Et accelerometer er en elektromekanisk enhed, som både kan måle statisk og dynamisk accereleration. Den statiske acceleration er i $1~g$-påvirkning, hvilket svarer til tyngdekraften. Alt efter accelerometerets retning, ændres aksen, hvori der måles $1~g$-påvirkning. Ud fra dette er det muligt at bestemme orienteringen af accelerometeret i forhold til jorden. Da det ønskes, at spændingen fra accelerometrene skal omregnes til vinkler, jf. \autoref{sec:overordnet_krav}, ønskes der en lineær sammenhæng mellem input og outputssignal, hvorfor accelerometeret skal have en lineraritet med en afvigelse på maks $1\%$. 
+\subsection{Opsamling af accelerometer signaler} \label{sec:acc_teori}
+Et accelerometer er en elektromekanisk enhed, som både kan måle statisk og dynamisk accereleration. 
+Den statiske acceleration er i $1~g$-påvirkning, hvilket svarer til tyngdekraftspåvirkningen. 
+Alt efter accelerometrets hældning, ændres aksen, hvori der måles $1~g$-påvirkning. 
+Ud fra dette er det muligt at bestemme orienteringen af accelerometret i forhold til Jordens centrum. 
+Der ønskes en lineær sammenhæng mellem input og outputssignal, hvorfor accelerometeret skal have en lineraritet med en afvigelse på maks $5\%$. Dette som følge af, at outputspændingen fra accelerometrene skal repræsentere en vinkel i grader.
 
-De dynamiske kræfter såsom bevægelse, stød og vibrationer, gør det muligt at analysere accelerometrets bevægelse samt hastighed. Ved bevægelse udsættes accelerometeret både for dynamisk og statisk acceleration. Studier har vist, at den højest mulige acceleration ved bevægelse af en arm går fra 0,5 til 2,0 g-påvirkning \citep{bernmarka2002}. Herved forventes dette ligeledes for et ben under en squat-øvelse. I dette projekt måles vinklen af knæet under en squat-øvelse, derfor vil det være mest hensigtsmæssigt at placere accelerometeret, således det måler i enten X- eller Y-asken. På baggrund af dette vælges Y-aksen.
+De dynamiske kræfter såsom bevægelse, stød og vibrationer, gør det muligt at analysere accelerometrets bevægelse samt hastighed. 
+Ved bevægelse udsættes accelerometeret både for dynamisk og statisk acceleration. 
+Studier har vist, at den højest mulige acceleration ved bevægelse af albueleddet går fra 0,5 til 2,0 g-påvirkning \citep{bernmarka2002}. 
+Herved forventes dette ligeledes for et ben under en squat-øvelse. 
+I dette projekt måles vinklen af knæet under en squat-øvelse, derfor vil det være mest hensigtsmæssigt at placere accelerometeret, således det måler i enten X- eller Y-asken. 
 
-Ud fra accelerometerets datablad ses det, at accelerometrene skal forsynes med en spænding på mellem $1,8$ og $3,6~V$ \citep{analogdevices2009}, hvorfor et krav sættes til en spænding på $3~V$.
+Til forsyningen af denne analoge blok vælges en spænding ud fra komponenten, der implementeres i \autoref{sec:acc_imp}.
+
+
+%Ud fra accelerometerets datablad ses det, at accelerometrene skal forsynes med en spænding på mellem $1,8$ og $3,6~V$ \citep{analogdevices2009}, hvorfor et krav sættes til en spænding på $3~V$.
 
 \vspace{3mm}
 \textbf{Krav:}
@@ -11,7 +22,7 @@ Ud fra accelerometerets datablad ses det, at accelerometrene skal forsynes med e
 \item Skal måle på minimum Y-aksen
 \item Skal have en linearitet med en afvigelse på $5~\%$
 \item Skal måle accelerationer i $\pm 2~g$
-\item Skal forsynes med en spænding på minimum $3~V$
+\item Skal forsynes med en spænding mellem $1,8$ og $3,6~V$
 %\item Skal give output i form af spænding
 %\item Skal forsynes af mikrokontrolleren
 \end{itemize}
