@@ -1,8 +1,10 @@
-\subsection{Samlet system} \label{sec:samlet_system}
-Under implementering af det samlede system er det nødvendigt at ændre flere parametre for at kunne opfylde de overordnet krav, beskrevet i  \autoref{sec:overordnet_krav}. Dette omfatter ændring af forsyningen af spænding til de enkelte komponenter, hvilket forårsager at spændingen for de udregnede vinkler er ændret.
+\section{Ændringer ved det samlede system} \label{sec:samlet_system}
+Under implementering af det samlede system er det nødvendigt at ændre flere parametre for at kunne opfylde de overordnede krav, der er beskrevet i \autoref{sec:overordnet_krav}. 
 
-\subsubsection{Forsyning af spænding}
-Da systemet skal være batteridrevet, skal alle komponenter kobles til et batteri. Dette implementeres ved at mikrokontrollen og EMG-forstærkeren får spænding fra spændingensregulatoreren, der leverer en spænding på henholdsvis $5,5~V$ og $\pm 5.5~V$. Mikrokontrolleren er koblet til gumsticken og to accelerometre og forsyner disse med en spænding på $3,3~V$. Opsætningen af dette er illustreret på \autoref{fig:samlet_spaending_imp}. 
+\subsection{Spændingsforsyning}
+Det implementeres, at systemet skal være batteridrevet, ved at mikrokontrollen og EMG-forstærkeren får spænding fra spændingensregulatoreren, der leverer en spænding på henholdsvis $5,5~V$ og $\pm 5,5~V$. 
+Mikrokontrolleren er koblet til gumsticken og to accelerometre og forsyner disse med en spænding på $3,3~V$. 
+Opsætningen af dette er illustreret på \autoref{fig:samlet_spaending_imp}. 
 
 \begin{figure}[H]
 \centering
@@ -11,16 +13,23 @@ Da systemet skal være batteridrevet, skal alle komponenter kobles til et batter
 \label{fig:samlet_spaending_imp}
 \end{figure}
 
-En yderligere test blev foretaget af mikrokontrollen. Dette blev gjort da det ønskes at systemet skal være batteridrevet, hvorfor mikrokontrollen ikke kan forsynes med USB som den førhen har gjort. Derfor testes der for hvor meget spændingen den leverer med en forsyning fra spændingsforsyningen og USB-kabel. Mikrokontrollen blev målt til at levere en spænding på $3,273~V$ med USB og $3,278~V$ ved forsyning af spændingsregulatoren.
+\noindent
+Mikrokontrolleren testes yderligere, da systemet ønskes at være batteridrevet, hvorfor mikrokontrolleren ikke kan forsynes via USB. 
+Derfor testes, hvor meget spænding mikrokontrollerens $3,3~V$'s forsyningspin leverer, idet mikrokontrolleren forsynes via henholdsvis USB og spændingsregulatoren. 
+Ved forsyning via USB, blev en spænding målt til $3,273~V$, og via spændingsregulatoren blev en spænding målt til $3,278~V$.
 
-\subsubsection{Beregning af vinkler}
-Da spændingen accelerometrene modtager ændres, bliver offsettet for disse ligeledes ændret. Dette gør sig gældende da disse afhænger af hinanden, som  beskrevet i \autoref{sec:acc_imp}. Offsettet for accelerometeret placeret på låret er $1,5904~V$, og for accelerometeret placeret på skinnebenet er $1,5598~V$. Dette medvirker til, at de udregnede konverterede for intervallet $90-180^{\circ}$ ændres. Det nye konverterede output svarende til en vinkel fremgår af \autoref{tab:samlet_vinkel_imp}. 
+\subsection{Accelerometeralgoritme}
+På baggrund af accelerometrenes fastgørelse på vinkeltesteren, der ses af \autoref{fig:vinkeltest}, har været uhensigtsmæssig, fortages nye målinger. 
+Hertil er vinkeltesteren blevet optimeret, således accelerometrene fastgørelse er mere stabil.
+  
+Offset for accelerometrene ændres ligeledes. Dette er målt til $1,5904~V$ og $1,5598~V$ for placering af accelerometre parallelt med henholdsvis femur og tibia. 
+Det nye konverterede output svarende til en vinkel fremgår af \autoref{tab:samlet_vinkel_imp}. 
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
-\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra acclerometer \\ placeret på låret\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra accelerometer \\ placeret på skinnebenet\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverterede output fra \\ accelerometer placeret \\ parallelt med femur \end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverterede output fra \\ accelerometer placeret \\ parallelt med tibia\end{tabular}} \\ \hline
 \textbf{0}                                                      & -195                                                                               & -170                                                                                      \\ \hline
 \textbf{10}                                                     & -191                                                                             & -164                                                                                     \\ \hline
 \textbf{30}                                                     & -165                                                                             & -142                                                                                    \\ \hline
@@ -31,7 +40,7 @@ Da spændingen accelerometrene modtager ændres, bliver offsettet for disse lige
 & -4                                                                                   \\ \hline
 \textbf{90}                                                     & 0                                                                            & 0                                                                                   \\ \hline
 \end{tabular}
-\caption{Konverteret output fra accelerometer placeret på låret og på skinnebenet svarende til en given vinkel.}
+\caption{Konverterede outputs fra accelerometre placeret parallelt med henholdsvis femur og tibia svarende til en given vinkel.}
 \label{tab:samlet_vinkel_imp}
 \end{table}
 

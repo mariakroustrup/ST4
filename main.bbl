@@ -1,4 +1,4 @@
-\begin{thebibliography}{55}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -209,6 +209,12 @@ Cypress.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{a}}.
 \newblock URL \url{http://www.cypress.com/file/229211/download}.
 
+\bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
+E.~Bernmark and C.~Wiktorin.
+\newblock A triaxial accelerometer for measuring arm movements.
+\newblock \emph{Applied Ergonomics}, 33, 2002.
+\newblock \doi{10.1016/S0003-6870(02)00072-8}.
+
 \bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
 R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
 \newblock Surface electromyography signal processing and classification
@@ -228,12 +234,6 @@ G.~Zouridakis and J.~Moore.
 \newblock \emph{Biomedical Technology and Devices Handbook}.
 \newblock 2003.
 \newblock \doi{978-1-4398-7071-6}.
-
-\bibitem[Bernmark and Wiktorin(2002)]{bernmarka2002}
-E.~Bernmark and C.~Wiktorin.
-\newblock A triaxial accelerometer for measuring arm movements.
-\newblock \emph{Applied Ergonomics}, 33, 2002.
-\newblock \doi{10.1016/S0003-6870(02)00072-8}.
 
 \bibitem[Webster and Clark(1998)]{webster1998}
 J.~G. Webster and J.~W. Clark.
@@ -291,21 +291,6 @@ N.~Gupta.
 \newblock Artech House, 2013.
 \newblock \doi{9781608075799}.
 
-\bibitem[Hausdorff et~al.(2000)Hausdorff, Lertratanakul, and
-  Cudkowicz]{hausdorff2000}
-J.~M. Hausdorff, A.~Lertratanakul, and M.~E. Cudkowicz.
-\newblock \emph{Dynamic markers of altered gait rhythm in amyotrophic lateral
-  sclerosis}.
-\newblock the American Physiological Society, 2000.
-\newblock URL \url{http://jap.physiology.org/content/jap/88/6/2045.full.pdf}.
-
-\bibitem[Technologies(2013)]{advancertech2013}
-Advancer Technologies.
-\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
-  Microcontroller Application}, 2013.
-\newblock URL
-  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
-
 \bibitem[Devices(2009)]{analogdevices2009}
 Analog Devices.
 \newblock \emph{EVAL-ADXL335Z}.
@@ -323,6 +308,13 @@ Analog Devices.
 M.~Clifford and L.~Gomez.
 \newblock \emph{Measuring Tilt with Low-g Accelerometers}, 2005.
 \newblock URL \url{http://www.nxp.com/files/sensors/doc/app_note/AN3107.pdf}.
+
+\bibitem[Technologies(2013)]{advancertech2013}
+Advancer Technologies.
+\newblock \emph{Three-lead Differential Muscle/Electromyography Sensor for
+  Microcontroller Application}, 2013.
+\newblock URL
+  \url{http://cdn.sparkfun.com/datasheets/Sensors/Biometric/Muscle%20Sensor%20v3%20Users%20Manual.pdf}.
 
 \bibitem[Cypress(2014{\natexlab{b}})]{ADC2014}
 Cypress.

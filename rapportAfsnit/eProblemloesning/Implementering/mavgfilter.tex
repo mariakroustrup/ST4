@@ -1,5 +1,7 @@
 \subsubsection{Moving average filter}
-Det ønskes at implementere et moving average filter ved anvendelse af MATLAB samt PSoC. Teorien bag filteret er beskrevet i \autoref{sec:mavg_krav}. Koefficienten, a, defineres til at have en værdi på 1, da denne er konstant for FIR-filtre. Koefficienten, b, defineres ved at dividere a med filterlængden, som er valgt til 10. Disse koefficienter er udregnet i MATLAB, og fremgår af \autoref{tab:koeff_mavg}. Til udregning af filteret anvendes \autoref{eq:mafl}. Koefficienterne implementeres herefter til moving average filteret, der er programmeret i PSoC. 
+Det ønskes at implementere et moving average filter ved anvendelse af MATLAB og PSoC. 
+Teorien bag filtret er beskrevet i \autoref{sec:mavg_krav}. Koefficienten, a, defineres til at have en værdi på 1, da denne er konstant for FIR-filtre. Koefficienten, b, defineres ved at dividere a med filterlængden på 10. 
+Disse koefficienter er udregnet i MATLAB, og fremgår af \autoref{tab:koeff_mavg}. Til udregning af filtret anvendes \autoref{eq:mafl}. Koefficienterne implementeres herefter til moving average filtret, der er programmeret i PSoC. 
 
 \begin{table}[H]
 \centering
@@ -8,6 +10,6 @@ Det ønskes at implementere et moving average filter ved anvendelse af MATLAB sa
 \textbf{a} & 1   &     &     &     &     &     &     &     &     &     \\ \hline
 \textbf{b} & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 & 0,1 \\ \hline
 \end{tabular}
-\caption{De udregnede a og b koefficienter for moving average filteret}
+\caption{De udregnede a- og b-koefficienter for moving average filtret.}
 \label{tab:koeff_mavg}
 \end{table}

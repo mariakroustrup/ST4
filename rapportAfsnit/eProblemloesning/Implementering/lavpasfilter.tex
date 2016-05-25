@@ -1,8 +1,10 @@
 \subsubsection{IIR-lavpasfilter}
-Det ønskede 2. ordens IIR-lavpasfilter er udarbejdet ud fra kravene opstillet i \autoref{sec:lavpas_krav}  og implementeres digitalt ved anvendelse af MATLAB samt PSoC. Teorien hertil er beskrevet i \autoref{sec:teori_filter}. 
-Ved implementering af dette filter benyttes MATLAB for således at beregne a- og b-koefficienterne for et Butterworth filter, der er nødvendigt for at kode filteret. For beregning af filteret anvendes \autoref{eq:iirfilt}. 
+Det ønskede 2. ordens IIR-lavpasfilter er udarbejdet ud fra kravene opstillet i \autoref{sec:lavpas_krav}  og implementeres digitalt ved anvendelse af MATLAB og PSoC. 
+Teorien hertil er beskrevet i \autoref{sec:teori_filter}. 
+Ved implementering af dette filter benyttes MATLAB for således at beregne a- og b-koefficienterne for et Butterworth filter. 
+For beregning af filtret anvendes \autoref{eq:iirfilt}. 
 
-Koefficienterne fremgår af \autoref{tab:koeff_lav}. Dertil defineres a- og b-koefficienterne samt filterlængden i PSoC, hvorefter disse anvendes til programmering af lavpasfilteret. 
+Koefficienterne fremgår af \autoref{tab:koeff_lav}. Dertil defineres a- og b-koefficienterne samt filterlængden i PSoC, hvorefter disse anvendes til programmering af lavpasfiltret. 
 
 \begin{table}[H]
 \centering
@@ -11,6 +13,6 @@ Koefficienterne fremgår af \autoref{tab:koeff_lav}. Dertil defineres a- og b-ko
 \textbf{a} & 1,0000 & -1,8890 & 0,0015 \\ \hline
 \textbf{b} & 0,0015 & 0,0029  & 0,0015 \\ \hline
 \end{tabular}
-\caption{De udregnede a og b koefficienter for et Butterworth filter}
+\caption{De udregnede a- og b-koefficienter for et Butterworth filter.}
 \label{tab:koeff_lav}
 \end{table}

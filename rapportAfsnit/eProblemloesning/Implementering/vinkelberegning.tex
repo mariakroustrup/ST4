@@ -1,47 +1,49 @@
-\subsection{Accelerometer algortime}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær sammenhæng mellem vinkel og spænding. Det er derfor muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme, hvilken som helst vinkel for en tilsvarende spænding. 
+\subsection{Accelerometeralgoritme}\label{sec:imp_vinkler}
+I \autoref{sec:test_acc} fremgår det, at der er lineær tendens mellem vinkel og spænding. Det er muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en vinkel for en tilsvarende spænding. 
 %Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Dette gør det ikke, da Ni USB-6009 og mikrokontrolleren har forskellige arbejdsområder,
-Derfor udføres der en ny måling af linearitet med mikrokontrolleren, hvor spændingen i de forskellige vinkler er målt. Efterfølgende er der aflæst et offset, som er trukket fra, for at centrere signalet omkring 0. Offsettet for accelerometeret placeret på låret er aflæst til $1002$, hvilket svarer til et offset på $1,6162~V$ og accelerometeret placeret på skinnebenet til $972$, svarende til et offset på $1,5743~V$. Det digitale output ved forskellige vinkler fremgår af \autoref{tab:vinkelinterval_psoc}. Disse digitale output er omregnet til en spænding ved \autoref{eq:vinkler}, hvor $3,3~V$ er forsyningsspændingen, og $2^{11}$ er ADC'ens oplæsning målt i bits.  
+Da der til kontrolsystemet anvendes en anden ADC end i \autoref{sec:test_acc}, udføres nye målinger for at undersøge relationen mellem spænding og vinkel.  
+Efterfølgende er der aflæst et offset, som er trukket fra signalet, for at centrere dette omkring 0. Offsettet for accelerometret placeret parallelt med femur er aflæst til et digitalt output på $1.002$, hvilket svarer til et offset på $1,6162~V$. Accelerometret placeret parallelt med tibia er aflæst til $972$, svarende til et offset på $1,5743~V$. Det digitale output ved forskellige vinkler fremgår af \autoref{tab:vinkelinterval_psoc}. Disse digitale output er omregnet til en spænding (U) ved \autoref{eq:vinkler}, hvor $3,3~V$ er forsyningsspændingen, og $2^{11}$ er ADC'ens opløsning målt i bit.  
 
 \begin{equation}
 \label{eq:vinkler}
-sp\text{æ}nding =digitalt~output\cdot \dfrac{3,3~V}{2^{11}}
+U = digitalt~output\cdot \dfrac{3,3~V}{2^{11}}
 \end{equation}
 
 \noindent
-Resultaterne for de nye målinger fremgår af \autoref{tab:vinkelinterval_psoc}, hvor det konverteret output for accelerometrene på henholdsvis låret og skinnebenet er angivet som en vinkel på 0, 10, 30, 50, 70, 80 og $90^{\circ}.$ 
+Resultaterne for de nye målinger fremgår af \autoref{tab:vinkelinterval_psoc}, hvor det konverterede output for accelerometrene placeret parallelt med henholdsvis femur og tibia er angivet som en vinkel på 0, 10, 30, 50, 70, 80 og $90^{\circ}$. 
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
-\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra acclerometer \\ placeret på låret\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverteret output fra accelerometer \\ placeret på skinnebenet\end{tabular}} \\ \hline
-0                                                      & -186                                                                                                     & -179                                                                                                            \\ \hline
-10                                                     & -185                                                                                                   & -176
+\multicolumn{1}{|l|}{\textbf{Vinkel {[}$^{\circ}${]}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverterede outputs fra \\ accelerometer placeret \\ parallelt med femur\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Konverterede outputs fra \\ accelerometer placeret \\ parallelt med tibia\end{tabular}} \\ \hline
+\textbf{0}                                                      & -186                                                                                                     & -179                                                                                                            \\ \hline
+\textbf{10}                                                     & -185                                                                                                   & -176
 \\ \hline
-30                                                     & -168                                                                                                   & -153                                                                                                          \\ \hline
-50                                                     & -126                                                                                                  & -111                                                                                                         \\ \hline
-70                                                     & -76                                                                                                  & -52                                                                                                         \\ \hline
-80                                                     & -31                                                                                                  & -16                                                                                                         \\ \hline
-90                                                     & 0
+\textbf{30}                                                     & -168                                                                                                   & -153                                                                                                          \\ \hline
+\textbf{50}                                                     & -126                                                                                                  & -111                                                                                                         \\ \hline
+\textbf{70} & -76                                                                                                  & -52                                                                                                         \\ \hline
+\textbf{80}                                                     & -31                                                                                                  & -16                                                                                                         \\ \hline
+\textbf{90}                                                     & 0
 & 0
 \\ \hline
 \end{tabular}
-\caption{Konverteret output fra accelerometer placeret på låret og på skinnebenet svarende til en given spænding.}
+\caption{Konverterede outputs fra accelerometrene placeret parallelt med henholdsvis femur og tibia svarende til givne vinkler.}
 \label{tab:vinkelinterval_psoc}  
 \end{table}
 
+\noindent
+Ud fra de målte værdier i \autoref{tab:vinkelinterval_psoc}, er der opstillet en funktion, der indeholder \textit{ifelse}-løkker, som gør det muligt at vurdere, hvilket interval en given spænding befinder sig indenfor. 
+I hver løkke anvendes lineær interpolation, som har til opgave at finde en vinkel, der er svarende til en spænding, som ligger mellem et interval og returnerer denne. 
 
-Ud fra de målte værdier i \autoref{tab:vinkelinterval_psoc}, er der opstillet en funktion indeholdt \textit{ifelse}-løkker, hvorved det er muligt at vurdere, hvilket interval en given spænding befinder sig indenfor. I hver enkelt løkke anvendes lineær interpolation, som har til opgave at finde en vinkel, der er svarende til en spænding som ligger mellem et interval og returnerer denne. 
-
-Når der er udført lineær interpolation over dataen skal de målte data fra låret samt skinnebenet ligges sammen for at få den samlede vinkel over knæet under squat-øvelsen. Denne øvelse er beskrevet i \autoref{sec:knaeled_squat}.
-Ved at implementere værdierne fra \autoref{tab:vinkelinterval_psoc} kan signalet repræsenteres som samlet grader over tid, som det ses af \autoref{fig:acc_imp}.
+Når der er udført lineær interpolation over dataen skal de målte accelerometerdata lægges sammen for at få den samlede vinkel over knæet. 
+Ved at implementere værdierne fra \autoref{tab:vinkelinterval_psoc} i mikrokontrolleren kan signalet repræsenteres som en samlet vinkel af knæet. Af \autoref{fig:acc_imp} fremgår vinklen over knæet ved udførelse af en squat-øvelse.
  
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/Pilotforsoeg/accvinkel}
-\caption{Samlet vinkler af accelerometrene under udførelse af squat-øvelsen, der er defineret i \autoref{sec:knaeled_squat}.}
+\includegraphics[width=1\textwidth]{figures/Pilotforsoeg/accvinkel}
+\caption{Vinklen over knæet under udførelsen af en squat-øvelse.}
 \label{fig:acc_imp}
 \end{figure}
 

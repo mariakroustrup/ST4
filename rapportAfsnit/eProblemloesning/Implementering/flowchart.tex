@@ -1,17 +1,30 @@
 \subsection{Flowdiagram} \label{sec:flow}
-I dette afsnit fremgår implementeringen af systemets digitale blokke, der er illustreret på \autoref{fig:blokdiagram_digital}. Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. Flowdiagrammene er opdelt og består af et overordnet flowdiagram, et initialiserende og et for EMG-algoritmen. Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i Læsevejledningen.
+I dette afsnit fremgår implementeringen af systemets digitale blokke, der er illustreret på \autoref{fig:blokdiagram_digital1}. 
+Disse flowdiagrammer er anvendt for at visualisere opbygningen samt sammenhængen mellem blokkene. 
+Flowdiagrammene er opdelt og består af et overordnet flowdiagram, et initialiserende og et for EMG-algoritmen. 
+Udover den visualiserende del vil det blive uddybet, hvilke funktioner de enkelte figurer indeholder. 
+Anvendelsen af de forskellige figurer i flowdiagrammerne er beskrevet i læsevejledningen.
 
 \subsubsection{Overordnet flowdiagram}
-Det analoge signal, som optages af de implemterende sensorer skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. For at påbegynde konverteringen af data er det nødvendigt at give et interrupt ved at trykke på PSoC'ens user button. Dette får en grøn LED til at lyse og igangsætter efterfølgende funktioner. 
+Det analoge signal, som optages af de implemterende sensorer, skal konverteres fra analogt til digitalt, hvorved det efterfølgende kan implementeres i softwaren. 
+Det overordnede flowdiagram fremgår af \autoref{fig:overordnet_flow}. 
+For at påbegynde konverteringen af data er det nødvendigt at give et interrupt ved at trykke på PSoC'ens user button. 
+Dette får en grøn LED til at lyse og igangsætter efterfølgende funktioner. 
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/overordnet_flow.png}
-\caption{Overordnet flowdigram, der viser systemets opbygning. Blokkene \emph{initialisering} og \emph{EMG-algoritme} er yderligere uddybet på henholdsvis \autoref{fig:initialiserende_flow} og \autoref{fig:Emg_algo}.}
+\caption{Overordnet flowdigram, der viser systemets opbygning. Blokkenes \emph{initialisering} og \emph{EMG-algoritmen} er yderligere uddybet på henholdsvis \autoref{fig:initialiserende_flow} og \autoref{fig:Emg_algo}.}
 \label{fig:overordnet_flow}
 \end{figure}
 
 \subsubsection{Initialiserende flowdiagram}
-I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow}, opsættes ADC'en. A/D-konverteringen igangsættes, hvorved det analoge signal digitaliseres. For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobles og signalet offsetjusteres. Efter setup vurderes, hvorvidt vinklen over knæet befinder sig mellem 90 og $180^{\circ}$. Hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der fremgår af \autoref{fig:overordnet_flow}. 
+I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow}, opsættes ADC'en. 
+A/D-konverteringen igangsættes, hvorved det analoge signal digitaliseres. 
+For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobles og accelerometersignalet offsetjusteres. 
+Efter setup vurderes, hvorvidt vinklen over knæet befinder sig mellem 90 og $180^{\circ}$, der beregnes ud fra \autoref{sec:imp_vinkler}. 
+Hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der ses på \autoref{fig:overordnet_flow}. 
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/implementering/initialiserende_flow.png}
@@ -20,7 +33,11 @@ I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow}, o
 \end{figure}
 
 \subsubsection{EMG-algoritme}
-EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. Hvis inputtet fra accelerometret svarer til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. Denne omregning sker ud fra \autoref{eq:vinkler} og \autoref{equ:vinkler}. Én sample sammenlignes derefter med den efterfølgende sample for at vurdere, om muskelaktiviteten er stigende eller faldende. Hvis muskelaktiviteten er stigende, vil vinklen blive større, og herved slutter EMG-algoritmen og sender et input til prototypen med BLE, hvorved en fleksion af knæleddet påbegyndes. Hvis muskelaktiviteten er faldende, vil vinklen blive mindre, hvilket ligeledes slutter EMG-algoritmen og sender et input videre til BLE, hvorved en ektension af knæleddet påbegyndes. 
+EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. 
+Hvis inputtet fra accelerometret svarer til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. 
+Denne omregning sker ud fra \autoref{eq:vinkler}. 
+Én sample sammenlignes derefter med den efterfølgende for at vurdere, om muskelaktiviteten er stigende eller faldende. Alt efter om muskelaktiviteten er stigende eller faldende vil et outputsignal på enten $+10$ eller $-10$ sendes via BLE, hvorefter EMG-algoritmen afsluttes. 
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/implementering/EMG_algo.png}
