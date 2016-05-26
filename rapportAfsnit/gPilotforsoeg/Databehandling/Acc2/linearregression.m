@@ -58,7 +58,7 @@ ft = fittype( 'poly1' );
 
 
 %% Fit: 'Grøn - z'.
-[xData3, yData3] = prepareCurveData( grader, groenZ );
+[xData3, yData3] = prepareCurveData( grader, flip(groenZ) );
 
 % Set up fittype and options.
 ft = fittype( 'poly1' );
@@ -67,7 +67,7 @@ ft = fittype( 'poly1' );
 [fitresult{3}, gof(3)] = fit( xData3, yData3, ft );
 
 %% Fit: 'Rød - x'.
-[xData4, yData4] = prepareCurveData( grader, flip(roedX) );
+[xData4, yData4] = prepareCurveData( grader, roedX );
 
 % Set up fittype and options.
 ft = fittype( 'poly1' );
@@ -76,7 +76,7 @@ ft = fittype( 'poly1' );
 [fitresult{4}, gof(4)] = fit( xData4, yData4, ft );
 
 %% Fit: 'Rød - y'.
-[xData5, yData5] = prepareCurveData( grader, flip(roedY1) );
+[xData5, yData5] = prepareCurveData( grader, roedY1 );
 
 % Set up fittype and options.
 ft = fittype( 'poly1' );
@@ -95,10 +95,10 @@ ft = fittype( 'poly1' );
 
 %% Plot alle 
 figure
-subplot(2,3,1)
+subplot(2,3,4)
 plot( fitresult{1}, xData1, yData1 );
 text(100,1.8,'R^2 = 0,9804','FontSize',20)
-xlabel('Knæets vinkel [{\circ}]'); 
+%xlabel('Knæets vinkel [{\circ}]'); 
 ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
@@ -108,11 +108,11 @@ legend off
 box off
 grid off
 
-subplot(2,3,2)
+subplot(2,3,5)
 plot( fitresult{2}, xData2, yData2 );
 text(100,1.8,'R^2 = 0,9800','FontSize',20)
 xlabel('Knæets vinkel [{\circ}]');  
-ylabel('Accelerometer [V]');
+%ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på tibia:'; 'Y-akse'});
@@ -121,11 +121,11 @@ legend off
 box off
 grid off
 
-subplot(2,3,3)
+subplot(2,3,6)
 plot( fitresult{3}, xData3, yData3 );
 text(100,1.8,'R^2 = 0,9812','FontSize',20)
-xlabel('Knæets vinkel [{\circ}]'); 
-ylabel('Accelerometer [V]');
+%xlabel('Knæets vinkel [{\circ}]'); 
+%ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på tibia:'; 'Z-akse'});
@@ -134,10 +134,10 @@ legend off
 box off
 grid off
 
-subplot(2,3,4)
+subplot(2,3,1)
 plot( fitresult{4}, xData4, yData4 );
 text(100,1.8,'R^2 = 0,9806','FontSize',20)
-xlabel('Knæets vinkel [{\circ}]'); 
+%xlabel('Knæets vinkel [{\circ}]'); 
 ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
@@ -147,11 +147,11 @@ legend off
 box off
 grid off
 
-subplot(2,3,5)
+subplot(2,3,2)
 plot( fitresult{5}, xData5, yData5 );
 text(100,1.8,'R^2 = 0,9790','FontSize',20)
 xlabel('Knæets vinkel [{\circ}]');  
-ylabel('Accelerometer [V]');
+%ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på femur:';'Y-akse'});
@@ -160,11 +160,11 @@ legend off
 box off
 grid off
 
-subplot(2,3,6)
+subplot(2,3,3)
 plot( fitresult{6}, xData6, yData6 );
 text(100,1.8,'R^2 = 0,9791','FontSize',20)
-xlabel('Knæets vinkel [{\circ}]'); 
-ylabel('Accelerometer [V]');
+%xlabel('Knæets vinkel [{\circ}]'); 
+%ylabel('Accelerometer [V]');
 ylim([1.2 2.01])
 set(gca, 'XTick', [0:50:200])
 title({'Accelerometer på femur:';'Z-akse'});
