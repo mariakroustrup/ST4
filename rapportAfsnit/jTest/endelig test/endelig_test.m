@@ -35,7 +35,7 @@ subplot(3,1,2)
 plot(t, sinus, t, lowpass);
 hold on
 xlabel('Tid [s]')
-ylabel('EMG [V]')
+ylabel('Sinussignal [V]')
 xlim([0 10])
 set(gca,'XTick',[0:1:10])
 legend('Input','Output');
