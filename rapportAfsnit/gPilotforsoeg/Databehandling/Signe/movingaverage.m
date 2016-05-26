@@ -43,7 +43,7 @@ ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
-grid on
+%grid on
 
 subplot(3,1,2)
 plot(t,x,t,y3,'r')
@@ -53,7 +53,7 @@ ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
-grid on
+%grid on
 
 subplot(3,1,3)
 plot(t,x,t,y4,'r')
@@ -63,5 +63,5 @@ ylabel('Accelerometer [V]')
 ylim([1.4 1.65])
 set(gca,'fontsize',20);
 box off
-grid on
+%grid on
 
