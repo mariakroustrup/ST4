@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 23:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 23:42
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -2080,33 +2080,42 @@ Package pdftex.def Info: figures/problemloesning/ADC_bit.png used on input line
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/di
 gital_filtrering.tex [16 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/
 problemloesning/ADC_bit.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+
+ []
+
 <figures/filtre.png, id=916, 376.40625pt x 301.125pt>
 File: figures/filtre.png Graphic file (type png)
  <use figures/filtre.png>
-Package pdftex.def Info: figures/filtre.png used on input line 24.
+Package pdftex.def Info: figures/filtre.png used on input line 27.
 (pdftex.def)             Requested size: 352.80135pt x 282.26262pt.
 
 [17 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/filtre.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+
+ []
+
 <figures/maf.png, id=939, 936.49875pt x 238.64156pt>
 File: figures/maf.png Graphic file (type png)
  <use figures/maf.png>
-Package pdftex.def Info: figures/maf.png used on input line 58.
+Package pdftex.def Info: figures/maf.png used on input line 63.
 (pdftex.def)             Requested size: 441.0pt x 112.38002pt.
 
-<figures/problemloesning/lavpas_knaek.pdf, id=944, 995.72pt x 569.12625pt>
+[18 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/maf.png>]
+<figures/problemloesning/lavpas_knaek.pdf, id=955, 995.72pt x 569.12625pt>
 File: figures/problemloesning/lavpas_knaek.pdf Graphic file (type pdf)
 
 <use figures/problemloesning/lavpas_knaek.pdf>
 Package pdftex.def Info: figures/problemloesning/lavpas_knaek.pdf used on input
- line 76.
+ line 81.
 (pdftex.def)             Requested size: 441.0pt x 252.06631pt.
- [18 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/maf.png>]
-<figures/problemloesning/lavpas_orden.pdf, id=960, 995.72pt x 569.12625pt>
+
+<figures/problemloesning/lavpas_orden.pdf, id=959, 995.72pt x 569.12625pt>
 File: figures/problemloesning/lavpas_orden.pdf Graphic file (type pdf)
 
 <use figures/problemloesning/lavpas_orden.pdf>
 Package pdftex.def Info: figures/problemloesning/lavpas_orden.pdf used on input
- line 89.
+ line 94.
 (pdftex.def)             Requested size: 441.0pt x 252.06631pt.
  [19 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/problemloesning/lavp
 as_knaek.pdf>]
@@ -2115,7 +2124,7 @@ as_knaek.pdf>]
 File: figures/problemloesning/mavgfilter_matlab.png Graphic file (type png)
  <use figures/problemloesning/mavgfilter_matlab.png>
 Package pdftex.def Info: figures/problemloesning/mavgfilter_matlab.png used on 
-input line 117.
+input line 122.
 (pdftex.def)             Requested size: 441.0pt x 222.73734pt.
  [20 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/problemloesning/lavp
 as_orden.pdf>])
@@ -2734,7 +2743,7 @@ m-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
 uper/sfti0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-supe
 r/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1095.pfb>
-Output written on main.pdf (92 pages, 21203383 bytes).
+Output written on main.pdf (92 pages, 21203784 bytes).
 PDF statistics:
  1914 PDF objects out of 2073 (max. 8388607)
  370 named destinations out of 1000 (max. 500000)

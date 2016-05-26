@@ -1,5 +1,5 @@
 \subsection{Accelerometeralgoritme}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær tendens mellem vinkel og spænding. Det er muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en vinkel for en tilsvarende spænding. En ligning af lineær interpolation fremgår af \autoref{eq:interpolation}.
+I \autoref{sec:test_acc} fremgår det, at der er lineær tendens mellem vinkel og spænding. Det er muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en vinkel for en tilsvarende spænding. En ligning af lineær interpolation fremgår af \autoref{eq:interpolation} \citep{samarin2012}.
 %Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Dette gør det ikke, da Ni USB-6009 og mikrokontrolleren har forskellige arbejdsområder,
 \begin{equation} \label{eq:interpolation}
 y=y_{0}+(y_{1}-y_{0})\dfrac{x-x_{0}}{x_{1}-x_{0}}
