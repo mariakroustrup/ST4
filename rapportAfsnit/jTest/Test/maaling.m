@@ -71,26 +71,26 @@ ylim([-15 15])
 set(gca,'fontsize',20);
 box off
 
-%%
-EMG112 = (maaling1.data (:,1))*(3.3/2^11);
-plot(t,EMG112);
-xlabel('Tid [s]')
-set(gca,'XTick',[0:1:10])
-ylabel('EMG [V]')
-set(gca,'YTick',[-0.5:0.2:2.1])
-set(gca,'fontsize',20);
-box off
-
-%% Test af vinkler - Der viser at -200 og -400 grader virker
-plot(t,Acc2)
-xlabel('Tid [s]')
-ylabel('Knæets vinkel [\circ]')
-xlim([0 10])
-set(gca,'XTick',[0:1:10])
-ylim([-450 200])
-set(gca,'YTick',[-450:50:200])
-set(gca,'fontsize',20);
-box off
+% %%
+% EMG112 = (maaling1.data (:,1))*(3.3/2^11);
+% plot(t,EMG112);
+% xlabel('Tid [s]')
+% set(gca,'XTick',[0:1:10])
+% ylabel('EMG [V]')
+% set(gca,'YTick',[-0.5:0.2:2.1])
+% set(gca,'fontsize',20);
+% box off
+% 
+% %% Test af vinkler - Der viser at -200 og -400 grader virker
+% plot(t,Acc2)
+% xlabel('Tid [s]')
+% ylabel('Knæets vinkel [\circ]')
+% xlim([0 10])
+% set(gca,'XTick',[0:1:10])
+% ylim([-450 200])
+% set(gca,'YTick',[-450:50:200])
+% set(gca,'fontsize',20);
+% box off
 
 
 % % Plotter for anden maaling
