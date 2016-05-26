@@ -74,10 +74,7 @@
 
 @Article{chowdhury2013,
   Title                    = {Surface Electromyography Signal Processing and Classification techniques},
-  Author                   = {R. H. Chowdhury and 
-M. B. I. Reaz and 
-M. A . B . M. Ali 
-et al.},
+  Author                   = {R. H. Chowdhury and M. B. I. Reaz and M. A. B. M. Ali and others},
   Journal                  = {Department of Electrical, Electronic and Systems Engineering, Universiti Kebangsaan Malaysia,},
   Year                     = {2013},
 
@@ -237,9 +234,20 @@ M.l W. Krzyzewski},
   Url                      = {http://www.xilinx.com/support/documentation/white_papers/wp330.pdf}
 }
 
+@Manual{rcfm2001,
+  Title                    = {ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder},
+  Author                   = {O. Gredal and others},
+  Organization             = {RehabiliteringsCenter for Muskelsvind},
+  Year                     = {2001},
+
+  Owner                    = {signehk},
+  Timestamp                = {2016.02.29},
+  Url                      = {http://rcfm.dk/wp-content/uploads/2015/02/ALS-og-respiration.pdf}
+}
+
 @Book{grehl2011,
   Title                    = {Depression and QOL in patients with ALS: How do self-ratings and ratings by relatives differ?},
-  Author                   = {T. Grehl and M. Ruppand and P. Buddle, et. al.},
+  Author                   = {T. Grehl and M. Ruppand and P. Buddle and others},
   Publisher                = {Springer Netherlands},
   Year                     = {2011},
 
@@ -345,8 +353,8 @@ M. Walther and others},
 
 @Article{keenan2012,
   Title                    = {Electromyography},
-  Author                   = {K. G Keenan and 
-R. M Enoka},
+  Author                   = {K. G. Keenan and 
+R. M. Enoka},
   Journal                  = {Encyclopedia of exercise medicine in health and disease},
   Year                     = {2012},
 
@@ -485,17 +493,6 @@ G. D. Borasio},
   Timestamp                = {2016.04.25}
 }
 
-@Manual{rcfm2001,
-  Title                    = {ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder},
-  Author                   = {O. Gredal, et. al.},
-  Organization             = {RehabiliteringsCenter for Muskelsvind},
-  Year                     = {2001},
-
-  Owner                    = {signehk},
-  Timestamp                = {2016.02.29},
-  Url                      = {http://rcfm.dk/wp-content/uploads/2015/02/ALS-og-respiration.pdf}
-}
-
 @Article{pagnini2013,
   Title                    = {Psychological wellbeing and quality of life inamyotrophic lateral sclerosis: A review},
   Author                   = {F. Pagnini},
@@ -588,7 +585,7 @@ G. D. Borasio},
 @Article{tramonti2012,
   Title                    = {Balancing between autonomy and
 support: Coping strategies by patients with amyotrophic lateral sclerosis},
-  Author                   = {F. Tramonti. and P. Bongioanni. and C. Fanciullacci and others},
+  Author                   = {F. Tramonti and P. Bongioanni and C. Fanciullacci and others},
   Journal                  = {Journal of the Neurological
 Sciences},
   Year                     = {2012},
