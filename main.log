@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 21:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 21:59
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -1977,12 +1977,12 @@ File: figures/knaet.png Graphic file (type png)
 Package pdftex.def Info: figures/knaet.png used on input line 9.
 (pdftex.def)             Requested size: 396.89731pt x 252.08054pt.
 
-<figures/knae_anatomi.png, id=749, 872.25874pt x 469.755pt>
+<figures/knae_anatomi.png, id=749, 346.29375pt x 420.06938pt>
 File: figures/knae_anatomi.png Graphic file (type png)
 
 <use figures/knae_anatomi.png>
 Package pdftex.def Info: figures/knae_anatomi.png used on input line 24.
-(pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
+(pdftex.def)             Requested size: 352.80135pt x 427.97156pt.
 
 
 Package natbib Warning: Citation `aaos2014' on page 6 undefined on input line 2
@@ -1992,24 +1992,24 @@ Package natbib Warning: Citation `aaos2014' on page 6 undefined on input line 2
 Package natbib Warning: Citation `aaos2014' on page 6 undefined on input line 2
 5.
 
-[6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>]
-<figures/laarmuskler.png, id=766, 648.17157pt x 535.2497pt>
+[6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>] [7 <C:/Use
+rs/passw/OneDrive/Documents/GitHub/ST4/figures/knae_anatomi.png>]
+<figures/laarmuskler.png, id=773, 321.45094pt x 410.2828pt>
 File: figures/laarmuskler.png Graphic file (type png)
 
 <use figures/laarmuskler.png>
 Package pdftex.def Info: figures/laarmuskler.png used on input line 42.
-(pdftex.def)             Requested size: 396.89731pt x 327.75142pt.
- [7 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knae_anatomi.png>]
-<figures/squat.png, id=781, 310.15875pt x 274.77657pt>
+(pdftex.def)             Requested size: 396.89731pt x 506.5981pt.
+ [8 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskler.png>]
+<figures/squat.png, id=787, 310.15875pt x 274.77657pt>
 File: figures/squat.png Graphic file (type png)
  <use figures/squat.png>
 Package pdftex.def Info: figures/squat.png used on input line 58.
 (pdftex.def)             Requested size: 220.5pt x 195.34427pt.
-
-[8 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskler.png>])
+)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/dProblemformulering
-/Problemafgraensning.tex) [9 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figu
-res/squat.png>] [10]
+/Problemafgraensning.tex [9 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figur
+es/squat.png>]) [10]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/sy
 stembeskrivelse.tex
 <figures/blokdiagram.png, id=812, 1177.39874pt x 222.8325pt>
@@ -2336,12 +2336,12 @@ File: figures/raat_EMG_test.png Graphic file (type png)
 Package pdftex.def Info: figures/raat_EMG_test.png used on input line 33.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 
-<figures/fft_raat_EMG.png, id=1251, 704.6325pt x 492.84125pt>
+<figures/fft_raat_EMG.png, id=1251, 1028.34187pt x 490.08093pt>
 File: figures/fft_raat_EMG.png Graphic file (type png)
 
 <use figures/fft_raat_EMG.png>
 Package pdftex.def Info: figures/fft_raat_EMG.png used on input line 47.
-(pdftex.def)             Requested size: 441.0pt x 308.44614pt.
+(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [38 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/raat_EMG_test.png (P
 NG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
@@ -2361,10 +2361,10 @@ File: figures/implementering/Blokdiagram_digital.png Graphic file (type png)
 Package pdftex.def Info: figures/implementering/Blokdiagram_digital.png used on
  input line 4.
 (pdftex.def)             Requested size: 441.0pt x 83.8016pt.
-
-[40 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/bat_test.png>])
+)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
-st/ADC_test.tex <figures/treinput.png, id=1284, 1028.34187pt x 490.08093pt>
+st/ADC_test.tex [40 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/bat_t
+est.png>] <figures/treinput.png, id=1284, 1028.34187pt x 490.08093pt>
 File: figures/treinput.png Graphic file (type png)
 
 <use figures/treinput.png>
@@ -2375,15 +2375,14 @@ py)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/digital_filtrering.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
-st/lavpas_test.tex [42]
-<figures/EMG_test.png, id=1308, 1028.34187pt x 490.08093pt>
+st/lavpas_test.tex <figures/EMG_test.png, id=1302, 1028.34187pt x 490.08093pt>
 File: figures/EMG_test.png Graphic file (type png)
 
 <use figures/EMG_test.png>
 Package pdftex.def Info: figures/EMG_test.png used on input line 9.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
-
-<figures/bodeplot_lavpas2.png, id=1312, 1445.4pt x 704.6325pt>
+ [42]
+<figures/bodeplot_lavpas2.png, id=1314, 1445.4pt x 704.6325pt>
 File: figures/bodeplot_lavpas2.png Graphic file (type png)
 
 <use figures/bodeplot_lavpas2.png>
@@ -2421,27 +2420,27 @@ Package pdftex.def Info: figures/vinkel_tibia_femur.png used on input line 7.
 (pdftex.def)             Requested size: 441.0pt x 214.98248pt.
  [46 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/vinkel_tibia_femur.p
 ng (PNG copy)>]
-<figures/spaending_vinkel_test.png, id=1359, 1028.34187pt x 490.08093pt>
+<figures/spaending_vinkel_test.png, id=1359, 898.35625pt x 466.74374pt>
 File: figures/spaending_vinkel_test.png Graphic file (type png)
 
 <use figures/spaending_vinkel_test.png>
 Package pdftex.def Info: figures/spaending_vinkel_test.png used on input line 4
 0.
-(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
+(pdftex.def)             Requested size: 441.0pt x 229.1195pt.
  [47 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/spaending_vinkel_tes
 t.png (PNG copy)>]
 <figures/mikro_LED.png, id=1368, 2047.65pt x 1273.75874pt>
 File: figures/mikro_LED.png Graphic file (type png)
 
 <use figures/mikro_LED.png>
-Package pdftex.def Info: figures/mikro_LED.png used on input line 55.
+Package pdftex.def Info: figures/mikro_LED.png used on input line 56.
 (pdftex.def)             Requested size: 441.0pt x 274.31926pt.
 
 <figures/vinkeltest_graenser.png, id=1370, 1028.34187pt x 490.08093pt>
 File: figures/vinkeltest_graenser.png Graphic file (type png)
 
 <use figures/vinkeltest_graenser.png>
-Package pdftex.def Info: figures/vinkeltest_graenser.png used on input line 67.
+Package pdftex.def Info: figures/vinkeltest_graenser.png used on input line 68.
 
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [48 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/mikro_LED.png>])
@@ -2468,12 +2467,12 @@ st/traadloes_komm_test.tex [51])
 stemtest/systemtest.tex [52]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Sy
 stemtest/systemtest_kendtinput.tex
-<figures/kontrol_test_sinus.png, id=1414, 1031.855pt x 803.0pt>
+<figures/kontrol_test_sinus.png, id=1414, 992.70876pt x 655.44875pt>
 File: figures/kontrol_test_sinus.png Graphic file (type png)
 
 <use figures/kontrol_test_sinus.png>
 Package pdftex.def Info: figures/kontrol_test_sinus.png used on input line 17.
-(pdftex.def)             Requested size: 441.0pt x 343.18805pt.
+(pdftex.def)             Requested size: 441.0pt x 291.17871pt.
  [53
 
 ] [54 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/kontrol_test_sinus.
@@ -2637,12 +2636,12 @@ File: figures/vinkeltest.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/vinkeltest.jpg used on input line 52.
 (pdftex.def)             Requested size: 264.60269pt x 470.63976pt.
  [77 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/vinkeltest.jpg>]
-<figures/lineaerregression.png, id=1682, 996.72375pt x 585.18625pt>
+<figures/lineaerregression.png, id=1682, 1051.93pt x 547.04375pt>
 File: figures/lineaerregression.png Graphic file (type png)
 
 <use figures/lineaerregression.png>
 Package pdftex.def Info: figures/lineaerregression.png used on input line 95.
-(pdftex.def)             Requested size: 441.0pt x 258.9114pt.
+(pdftex.def)             Requested size: 441.0pt x 229.33945pt.
  [78]
 <figures/paavirkning.png, id=1692, 1445.4pt x 852.18375pt>
 File: figures/paavirkning.png Graphic file (type png)
@@ -2738,7 +2737,7 @@ m-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
 uper/sfti0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-supe
 r/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1095.pfb>
-Output written on main.pdf (91 pages, 21696358 bytes).
+Output written on main.pdf (91 pages, 21209600 bytes).
 PDF statistics:
  1909 PDF objects out of 2073 (max. 8388607)
  368 named destinations out of 1000 (max. 500000)

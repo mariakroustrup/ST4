@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.3}Gangfunktion}{5}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Kn\IeC {\ae }ets opbygning}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Kn\IeC {\ae }ets funktion}{7}{subsection.2.3.2}
-\contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{8}{section*.16}
+\contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{9}{section*.16}
 \contentsline {section}{\numberline {2.4}Problemafgr\IeC {\ae }nsning}{9}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Problemformulering}{10}{subsection.2.4.1}
 \contentsline {chapter}{\chapternumberline {3}Systemudvikling}{11}{chapter.3}
@@ -58,10 +58,10 @@
 \contentsline {subsection}{\numberline {6.1.1}Opsamling af accelerometersignaler}{37}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Opsamling og behandling af EMG-signaler}{38}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {6.1.3}Sp\IeC {\ae }ndingsforsyning}{39}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Digital del}{41}{section.6.2}
+\contentsline {section}{\numberline {6.2}Digital del}{40}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Analog-to-Digital Converter}{41}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Digital filtrering}{42}{subsection.6.2.2}
-\contentsline {subsubsection}{Lavpasfilter}{43}{section*.60}
+\contentsline {subsubsection}{Lavpasfilter}{42}{section*.60}
 \contentsline {subsubsection}{Moving average filter}{44}{section*.63}
 \contentsline {subsection}{\numberline {6.2.3}Accelerometeralgoritme}{46}{subsection.6.2.3}
 \contentsline {subsection}{\numberline {6.2.4}EMG-algoritme}{49}{subsection.6.2.4}
