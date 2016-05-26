@@ -544,7 +544,8 @@ G. D. Borasio},
 
 @Manual{aalborguniversitet2014,
   Title                    = {Studieordning for bacheloruddannelsen i Sundhedsteknologi},
-  Author                   = {Studienævnet for Sundhed, Teknologi og Idræt, Aalborg Universitet},
+  Author                   = {Studienævnet for Sundhed, Teknologi og Idræt},
+  Organization             = {Aalborg Universitet},
   Year                     = {2014},
 
   Owner                    = {signehk},
@@ -669,6 +670,16 @@ J. Moore},
   Journal                  = {CRC Press},
   Owner                    = {signehk},
   Timestamp                = {2016.03.10}
+}
+
+@Manual{djo,
+  Title                    = {DonJoy},
+  Organization             = {DJO Global},
+
+  Comment                  = {20-05-2016},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.20},
+  Url                      = {http://www.djoglobal.eu/en_UK/Donjoy.html}
 }
 
 @Manual{adc2010,
