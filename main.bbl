@@ -6,9 +6,9 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[Studienævnet~for Sundhed(2014)]{aalborguniversitet2014}
-Aalborg~Universitet Studienævnet~for Sundhed, Teknologi og~Idræt.
-\newblock \emph{Studieordning for bacheloruddannelsen i Sundhedsteknologi},
-  2014.
+Teknologi og~Idræt Studienævnet~for Sundhed.
+\newblock \emph{Studieordning for bacheloruddannelsen i Sundhedsteknologi}.
+\newblock Aalborg Universitet, 2014.
 \newblock URL
   \url{http://www.smh.aau.dk/digitalAssets/69/69987_bsc-sundhedsteknologi_2012_ver2_2014.pdf}.
 
@@ -41,8 +41,8 @@ C.~Henschke.
   Berlin, Germany}, 2012.
 \newblock \doi{10.1016/j.healthpol.2012.01.013}.
 
-\bibitem[Russell et~al.()Russell, Andersen, and N.~Witting]{russell2015}
-M.~B. Russell, J.~S. Andersen, and et.~al. N.~Witting.
+\bibitem[Russell et~al.()Russell, Andersen, Witting, et~al.]{russell2015}
+M.~B. Russell, J.~S. Andersen, N.~Witting, et~al.
 \newblock \emph{Amytrofisk lateral sklerose}.
 \newblock Lægehåndbogen.
 
@@ -60,8 +60,8 @@ J.~Morris.
 \newblock \emph{The Neurodiagnostic Journal}, 2015.
 \newblock \doi{10.1080/21646821.2015.1075181}.
 
-\bibitem[Ilse et~al.(2015)Ilse, Prell, and M.~Walther]{ilse2015}
-B.~Ilse, T.~Prell, and et.~al. M.~Walther.
+\bibitem[Ilse et~al.(2015)Ilse, Prell, Walther, et~al.]{ilse2015}
+B.~Ilse, T.~Prell, M.~Walther, et~al.
 \newblock Relationships between disease severity, social support and
   health-related quality of life in patients with amyotrophic lateral
   sclerosis.
@@ -75,8 +75,8 @@ National~Institute of~Neurological~Disorders and Stroke.
 \newblock URL
   \url{nih.gov/disorders/amyotrophiclateralsclerosis/detail_ALS.htm}.
 
-\bibitem[Miller et~al.(2005)Miller, Gelinas, and et. al.]{miller2005}
-R.~G. Miller, D.~F. Gelinas, and P.~O’Connor. et. al.
+\bibitem[Miller et~al.(2005)Miller, Gelinas, O’Connor, et~al.]{miller2005}
+R.~G. Miller, D.~F. Gelinas, P.~O’Connor, et~al.
 \newblock \emph{American Academy of Neurology: Amyotrophic Lateral Sclerosis}.
 \newblock Demos Medical Publishing, 2005.
 \newblock \doi{9781934559062}.
@@ -109,9 +109,9 @@ F.~Pagnini.
 \newblock \emph{International Journal of Psychology}, 48, 2013.
 \newblock \doi{http://dx.doi.org/10.1080/00207594.2012.691977}.
 
-\bibitem[Tramonti. et~al.(2012)Tramonti., Bongioanni., and
-  C.~Fanciullacci]{tramonti2012}
-F.~Tramonti., P.~Bongioanni., and et.~al. C.~Fanciullacci.
+\bibitem[Tramonti. et~al.(2012)Tramonti., Bongioanni., Fanciullacci,
+  et~al.]{tramonti2012}
+F.~Tramonti., P.~Bongioanni., C.~Fanciullacci, et~al.
 \newblock Balancing between autonomy and support: Coping strategies by patients
   with amyotrophic lateral sclerosis.
 \newblock \emph{Journal of the Neurological Sciences}, 320, 2012.
@@ -124,9 +124,9 @@ F.~Tramonti., P.~Bongioanni., and et.~al. C.~Fanciullacci.
 \newblock Gyldendal Akademisk, 2010.
 \newblock \doi{9788762808034}.
 
-\bibitem[Heffernan et~al.(2006)Heffernan, Jenkinson, and
-  T.~Holmes]{hefferman2006}
-C.~Heffernan, C.~Jenkinson, and et.~al. T.~Holmes.
+\bibitem[Heffernan et~al.(2006)Heffernan, Jenkinson, Holmes,
+  et~al.]{hefferman2006}
+C.~Heffernan, C.~Jenkinson, T.~Holmes, et~al.
 \newblock Management of respiration in mnd/als patients: An evidence based
   review.
 \newblock \emph{Amyotrophic Lateral Sclerosis}, 7, 2006.
@@ -144,8 +144,8 @@ J.~A. Erlen.
 \newblock Technology: possibilities and pitfalls.
 \newblock \emph{Orthopedic nursing}, 2003.
 
-\bibitem[Yang et~al.(2008)Yang, Zhang, and Y.~Chen]{yang2008}
-C.~J. Yang, J.~F. Zhang, and et.~al. Y.~Chen.
+\bibitem[Yang et~al.(2008)Yang, Zhang, Chen, et~al.]{yang2008}
+C.~J. Yang, J.~F. Zhang, Y.~Chen, et~al.
 \newblock A review of exoskeleton-type systems and their key technologies.
 \newblock \emph{Journal of Mechanical Engineering Science}, 222, 2008.
 \newblock \doi{10.1243/09544062JMES936}.
@@ -334,8 +334,8 @@ K.~Townsend.
 \newblock URL
   \url{https://cdn-learn.adafruit.com/downloads/pdf/introduction-to-bluetooth-low-energy.pdf}.
 
-\bibitem[Hermens et~al.(1999)Hermens, Freriks, and et~al.]{seniam2016}
-H.~J. Hermens, B.~Freriks, and R.~Merletti et~al.
+\bibitem[Hermens et~al.(1999)Hermens, Freriks, Merletti, et~al.]{seniam2016}
+H.~J. Hermens, B.~Freriks, R.~Merletti, et~al.
 \newblock \emph{SENIAM 8: European Recommendations for Surface
   ElectromMyoGraphy}.
 \newblock Roessingh Research and Development, 1999.
