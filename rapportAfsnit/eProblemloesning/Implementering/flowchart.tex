@@ -13,8 +13,8 @@ Dette får en grøn LED til at lyse og igangsætter efterfølgende funktioner.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/implementering/overordnet_flow.png}
-\caption{Overordnet flowdigram, der viser systemets opbygning. Blokkenes \emph{initialisering} og \emph{EMG-algoritmen} er yderligere uddybet på henholdsvis \autoref{fig:initialiserende_flow} og \autoref{fig:Emg_algo}.}
+\includegraphics[width=0.3\textwidth]{figures/implementering/overordnet_flow.png}
+\caption{Overordnet flowdigram, der viser systemets opbygning. De stiplede grå blokke er ikke en del af systemet, men viser kontrolsystemets sammenhæng med et eventuelt exoskelet. Blokkene \emph{Initialisering}, \emph{Accelerometeralgoritme} og \emph{EMG-algoritme} er yderligere uddybet på henholdsvis \autoref{fig:initialiserende_flow}, \autoref{fig:acc_algo} og \autoref{fig:Emg_algo}.}
 \label{fig:overordnet_flow}
 \end{figure}
 
@@ -22,8 +22,7 @@ Dette får en grøn LED til at lyse og igangsætter efterfølgende funktioner.
 I intialiseringsprocessen, der fremgår af \autoref{fig:initialiserende_flow}, opsættes ADC'en. 
 A/D-konverteringen igangsættes, hvorved det analoge signal digitaliseres. 
 For at kunne behandle dataen og kommunikere trådløst igangsættes et setup, hvor BLE tilkobles og accelerometersignalet offsetjusteres. 
-Efter setup vurderes, hvorvidt vinklen over knæet befinder sig mellem 90 og $180^{\circ}$, der beregnes ud fra \autoref{sec:imp_vinkler}. 
-Hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår af det overordnede flowdiagram, der ses på \autoref{fig:overordnet_flow}. 
+Efter setup vil accelerometersignalet gå ind i accelerometeralgoritmen, hvilket fremgår af det overordnede flowdiagram, der ses på \autoref{fig:overordnet_flow}.  
 
 \begin{figure}[H]
 \centering
@@ -32,16 +31,26 @@ Hvis dette er tilfældet, vil signalet starte EMG-algoritmen, hvilket fremgår a
 \label{fig:initialiserende_flow}
 \end{figure}
 
-\subsubsection{EMG-algoritme}
-EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. 
-Hvis inputtet fra accelerometret svarer til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. 
-Denne omregning sker ud fra \autoref{eq:vinkler}. 
-Én sample sammenlignes derefter med den efterfølgende for at vurdere, om muskelaktiviteten er stigende eller faldende. Alt efter om muskelaktiviteten er stigende eller faldende vil et outputsignal på enten $+10$ eller $-10$ sendes via BLE, hvorefter EMG-algoritmen afsluttes. 
+\subsubsection{Accelerometeralgoritme}
+Accelerometeralgoritmen fremgår af \autoref{fig:acc_algo}. I denne algoritme vurderes det, hvorvidt knæets vinkel befinder sig mellem 90 og $180^{\circ}$. Hvis vinklen ikke gør dette, tændes en rød LED for at indikere, at systemet ikke fungerer ved knæets aktuelle vinkel. Herefter starter accelerometeralgoritmen igen, og der vurderes igen, om knæets vinkel befinder sig inden for 90 og $180^{\circ}$. Hvis knæets vinkel er mellem de ovenstående vinkler, tændes en grøn LED, og accelerometeralgoritmen afsluttes. Når dette sker, vil signalet starte EMG-algoritmen, der fremgår af det overordnede flowdiagram på \autoref{fig:overordnet_flow}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/implementering/EMG_algo.png}
-\caption{EMG-algoritmens flowdiagram, der viser opbyggelsen af EMG-algoritmen. Den grå del af dette flowdiagram er ikke en del af EMG-algoritmen, men viser algoritmens sammenhæng med resten af systemet. Dette er et uddybende flowdiagram, der passer sammen med det overordnede flowdiagram på \autoref{fig:overordnet_flow}.}
+\includegraphics[width=0.5\textwidth]{figures/implementering/acc_algo.png}
+\caption{Accelerometeralgoritmens flowdiagram, der viser opbyggelsen af denne algoritme. Dette er et uddybende flowdiagram, der passer sammen med det overordnede flowdiagram på \autoref{fig:overordnet_flow}.}
+\label{fig:acc_algo}
+\end{figure}
+
+\subsubsection{EMG-algoritme}
+EMG-algoritmen fremgår af \autoref{fig:Emg_algo}. 
+%Hvis inputtet fra accelerometret svarer til en vinkel over knæet mellem 90 og $180^{\circ}$ vurderes det, hvorvidt muskelaktiviteten er faldende eller stigende. 
+I denne algoritme vurderes det, hvorvidt muskelaktiviteten er stigende eller faldende ud fra \autoref{eq:vinkler}. 
+Én sample sammenlignes derfor med den efterfølgende for at vurdere, om tangenthældningen mellem disse samples stiger eller falder. Alt efter om muskelaktiviteten er stigende eller faldende vil dette medføre et outputsignal på enten $+10$ eller $-10$, hvorefter EMG-algoritmen afsluttes, og systemet vil derefter gå ind i accelerometeralgoritmen igen. Når EMG-algoritmen afsluttes sendes outputsignalet via trådløs kommunikation, så der muliggøres kommunikation med et eventuelt exoskelet. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/implementering/EMG_algo.png}
+\caption{EMG-algoritmens flowdiagram, der viser opbyggelsen af EMG-algoritmen. Dette er et uddybende flowdiagram, der passer sammen med det overordnede flowdiagram på \autoref{fig:overordnet_flow}.}
 \label{fig:Emg_algo}
 \end{figure}
 
