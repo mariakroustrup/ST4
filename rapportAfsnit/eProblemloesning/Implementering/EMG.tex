@@ -19,7 +19,7 @@ Denne ensretning er en helbølgeensretning, hvilket ses af den midterste graf p�
 Helbølgeensretning sker ved at invertere signalets negative værdier, således signalet kun har udslag i positiv retning. %Dette betyder at der ikke sker ændringer i det oprindelige signals energi. 
 Herefter envelopefiltreres signalet, hvilket ses som det udglattede signal på nederste graf i \autoref{fig:sinussignal}. 
 
-Envelopefilteret har til formål at stabilisere signalet, hvilket er implementeret i EMG-forstærkeren ved et lavpasfilter. 
+Envelopefiltret har til formål at stabilisere signalet, hvilket er implementeret i EMG-forstærkeren ved et lavpasfilter. 
 Filtreret er beregnet til at have en knækfrekvens ($f_c$) på $1,94~Hz$ ud fra \autoref{eq:lavcutfre}. 
 Denne  beregnes ud fra filtrerets modstande ($R$) og kondensatorer ($C$). 
 Disse værdier er fundet i databladet for EMG-forstærkeren, hvor $C$ er aflæst til $1 \cdot 10^{-6}~F$ og $R$ til $80,6 \cdot 10^3~\Omega$ \citep{advancertech2013}. 

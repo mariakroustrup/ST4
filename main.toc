@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.3}Gangfunktion}{5}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Kn\IeC {\ae }ets opbygning}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Kn\IeC {\ae }ets funktion}{7}{subsection.2.3.2}
-\contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{9}{section*.16}
+\contentsline {subsubsection}{Kn\IeC {\ae }ets funktion under en squat-\IeC {\o }velse}{8}{section*.16}
 \contentsline {section}{\numberline {2.4}Problemafgr\IeC {\ae }nsning}{9}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Problemformulering}{10}{subsection.2.4.1}
 \contentsline {chapter}{\chapternumberline {3}Systemudvikling}{11}{chapter.3}
@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {3.2}L\IeC {\o }sningsstrategi}{12}{section.3.2}
 \contentsline {chapter}{\chapternumberline {4}Teori og design}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Analog del}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Opsamling af accelerometer signaler}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Opsamling af accelerometersignaler}{13}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Opsamling og behandling af EMG-signaler}{14}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Sp\IeC {\ae }ndingsforsyning}{14}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Digital del}{15}{section.4.2}
@@ -85,7 +85,7 @@
 \contentsline {appendix}{\chapternumberline {A}Pilotfors\IeC {\o }g}{68}{appendix.A}
 \contentsline {section}{\numberline {A.1}Form\IeC {\r a}l}{68}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}EMG-m\IeC {\r a}ling}{68}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Accelerometer m\IeC {\r a}ling}{68}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.2}Accelerometerm\IeC {\r a}ling}{68}{subsection.A.1.2}
 \contentsline {section}{\numberline {A.2}Materialer}{68}{section.A.2}
 \contentsline {section}{\numberline {A.3}Metode}{69}{section.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Fors\IeC {\o }gsopstilling}{70}{subsection.A.3.1}

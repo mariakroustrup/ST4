@@ -7,9 +7,9 @@ Denne overførselsfunktion kan herved benyttes som et digitalt filter \citep{bla
 
 I modsætning til FIR-filtre, har IIR-filtre ikke en lineær fase, og kan være ustabile. 
 Udover dette har IIR-filtre stejlere hældning i transitionsbåndet end et FIR-filter med samme antal koefficienter. 
-Dette betyder, at filteret er mindre hukommelseskrævende og kan arbejde hurtigere \citep{blandford2012}. 
+Dette betyder, at filtret er mindre hukommelseskrævende og kan arbejde hurtigere \citep{blandford2012}. 
 IIR-filtrets designprocedure er udledt af samme procedure, som de analoge filtre er designet efter.
-IIR-filteret består af et forward og feedback FIR-filter, der omfatter a og b koefficienter. 
+IIR-filtret består af et forward og feedback FIR-filter, der omfatter a og b koefficienter. 
 IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autoref{eq:iirfilt} \citep{francis2009}. 
 
 \begin{equation} \label{eq:iirfilt}
@@ -66,10 +66,10 @@ Da der derfor ønskes at frafiltrere yderligere højfrekvent støj fra det forst
 Dette digitale lavpasfilter skal fungere som endnu et envelopefilter, således signalet yderligere bliver udglattet. 
 Af denne grund testes forskellige filterdesigns på resultaterne fra pilotforsøget. 
 Dette indebærer, at forskellige knækfrekvenser og filterordener undersøges for at teste, hvordan disse påvirker signalet. 
-På denne måde bliver det muligt at beslutte, hvordan filteret skal designes, og hvilke krav der skal opstilles. 
+På denne måde bliver det muligt at beslutte, hvordan filtret skal designes, og hvilke krav der skal opstilles. 
 Filtrene designes som Butterworth-konfigurationer, da der ønskes maksimal fladhed i både pas-, transistions- og stopbåndet samt ingen ripples i pas- og stopbåndet, da dette vil påvirke signalet.
 
-Først vælges filterets knækfrekvens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \autoref{fig:lp_knaek}, hvor $1~Hz$, $1,26~Hz$ og $3~Hz$ er repræsenteret. 
+Først vælges filtrets knækfrekvens ved at afprøve flere forskellige. Eksempler på disse knækfrekvenser ses på \autoref{fig:lp_knaek}, hvor $1~Hz$, $1,26~Hz$ og $3~Hz$ er repræsenteret. 
 
 \begin{figure} [H]
 \centering
@@ -79,10 +79,10 @@ Først vælges filterets knækfrekvens ved at afprøve flere forskellige. Eksemp
 \end{figure} 
 
 \noindent
-Ud fra \autoref{fig:lp_knaek} vælges en knækfrekvens på $1,26~Hz$, da filteret med denne knækfrekvens udglatter spikes og små svingninger i EMG-signalet, der vil kunne forstyrre signalet til exoskelettet. 
-Samtidigt følger filteret signalet, som det kan ses på udsnittene nederst på \autoref{fig:lp_knaek}, hvilket de to andre knækfrekvenser ikke formår at gøre.
+Ud fra \autoref{fig:lp_knaek} vælges en knækfrekvens på $1,26~Hz$, da filtret med denne knækfrekvens udglatter spikes og små svingninger i EMG-signalet, der vil kunne forstyrre signalet til exoskelettet. 
+Samtidigt følger filtret signalet, som det kan ses på udsnittene nederst på \autoref{fig:lp_knaek}, hvilket de to andre knækfrekvenser ikke formår at gøre.
 
-Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden der vil være mest optimal til filteret. Dette fremgår af \autoref{fig:lp_orden}.
+Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden der vil være mest optimal til filtret. Dette fremgår af \autoref{fig:lp_orden}.
 
 \begin{figure} [H]
 \centering
@@ -93,7 +93,7 @@ Herefter bestemmes, på samme måde som ved knækfrekvensen, hvilken filterorden
 
 \noindent
 Ud fra \autoref{fig:lp_orden} vælges en filterorden på 2, da denne vurderes til være tilstrækkelig. 
-Der ses ingen større forskel i outputsignalet fra filteret, hvis filterordenen hæves yderligere. 
+Der ses ingen større forskel i outputsignalet fra filtret, hvis filterordenen hæves yderligere. 
 Dertil vurderes det, at en filterorden på 1 ikke er tilstrækkelig, da dette filters outputsignal afviger mest fra inputsignalet. 
 
 \vspace{3mm}
