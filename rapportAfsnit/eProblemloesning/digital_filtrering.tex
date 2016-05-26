@@ -13,7 +13,7 @@ IIR-filteret består af et forward og feedback FIR-filter, der omfatter a og b k
 IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autoref{eq:iirfilt} \citep{francis2009}. 
 
 \begin{equation} \label{eq:iirfilt}
-	y(n)= \sum_{m=0}^{M} b_{m} \cdot x(n-m)- \sum^{N}_{m=1} a_{m} \cdot y(n-m)
+	y(n)= \sum_{m=0}^{M} b_{m} \cdot x(M-m)- \sum^{N}_{m=1} a_{m} \cdot y(N-m)
 \end{equation}
 
 \noindent
