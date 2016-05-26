@@ -2,8 +2,8 @@
 frekvens = 100;
 
 % 1. mulighed
-Wn = [5]/frekvens/2
-n = 1;
+Wn = [1]/(frekvens/2)
+n = 2;
 
 [b,a]  = butter(n, Wn,'low');
 
@@ -18,8 +18,8 @@ n1 = 2;
 a_filt1 = filtfilt(b1,a1,nedogop_emg_off);
 
 % 3. mulighed
-Wn2 = [5]/frekvens/2
-n2 = 3;
+Wn2 = [3]/(frekvens/2)
+n2 = 2;
 
 [b2,a2]  = butter(n2, Wn2,'low');
 
@@ -59,8 +59,8 @@ set(gca, 'XTick', [0:2.5:10])
 ylabel('EMG [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('1. orden')
-%title('1 Hz knækfrekvens')
+%title('1. orden')
+title('1 Hz knækfrekvens')
 box off
 
 subplot(2,3,2)
@@ -73,8 +73,8 @@ xlabel('Tid [s]');
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('2. orden')
-%title('1.26 Hz knækfrekvens')
+%title('2. orden')
+title('1,26 Hz knækfrekvens')
 box off
 
 subplot(2,3,3)
@@ -87,8 +87,8 @@ set(gca, 'XTick', [0:2.5:10])
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('3. orden')
-%title('3 Hz knækfrekvens')
+%title('3. orden')
+title('3 Hz knækfrekvens')
 box off
 
 subplot(2,3,4)
@@ -101,8 +101,8 @@ ylim([0.5 0.75]);
 ylabel('EMG [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('1. orden')
-%title('1 Hz knækfrekvens')
+%title('1. orden')
+title('1 Hz knækfrekvens')
 box off
 
 subplot(2,3,5)
@@ -115,8 +115,8 @@ xlabel('Tid [s]');
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('2. orden')
-%title('1,26 Hz knækfrekvens')
+%title('2. orden')
+title('1,26 Hz knækfrekvens')
 box off
 
 subplot(2,3,6)
@@ -129,8 +129,8 @@ ylim([0.5 0.75]);
 %ylabel('Spænding [V]');
 %legend('Ufiltreret', 'Filtreret')
 set(gca,'fontsize',20);
-title('3. orden')
-%title('3 Hz knækfrekvens')
+%title('3. orden')
+title('3 Hz knækfrekvens')
 box off
 
 heigth = 20;
@@ -140,7 +140,7 @@ set(h,'Units','centimeters');
 set(h,'Position',[1 1 width heigth]);
 pos = get(h,'Position');
 set(h,'PaperPositionMode','Auto','PaperUnits','centimeters','PaperSize',[pos(3), pos(4)])
-saveas(h, 'lavpas_orden', 'pdf')
+saveas(h, 'lavpas_knaek', 'pdf')
 
 % h1 = figure;
 % subplot(3,1,1)
