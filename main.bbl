@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{56}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -46,8 +46,8 @@ M.~B. Russell, J.~S. Andersen, N.~Witting, et~al.
 \newblock \emph{Amytrofisk lateral sklerose}.
 \newblock Lægehåndbogen.
 
-\bibitem[Grehl et~al.(2011)Grehl, Ruppand, and P.~Buddle]{grehl2011}
-T.~Grehl, M.~Ruppand, and et.~al. P.~Buddle.
+\bibitem[Grehl et~al.(2011)Grehl, Ruppand, Buddle, et~al.]{grehl2011}
+T.~Grehl, M.~Ruppand, P.~Buddle, et~al.
 \newblock \emph{Depression and QOL in patients with ALS: How do self-ratings
   and ratings by relatives differ?}
 \newblock Springer Netherlands, 2011.
@@ -109,9 +109,9 @@ F.~Pagnini.
 \newblock \emph{International Journal of Psychology}, 48, 2013.
 \newblock \doi{http://dx.doi.org/10.1080/00207594.2012.691977}.
 
-\bibitem[Tramonti. et~al.(2012)Tramonti., Bongioanni., Fanciullacci,
+\bibitem[Tramonti et~al.(2012)Tramonti, Bongioanni, Fanciullacci,
   et~al.]{tramonti2012}
-F.~Tramonti., P.~Bongioanni., C.~Fanciullacci, et~al.
+F.~Tramonti, P.~Bongioanni, C.~Fanciullacci, et~al.
 \newblock Balancing between autonomy and support: Coping strategies by patients
   with amyotrophic lateral sclerosis.
 \newblock \emph{Journal of the Neurological Sciences}, 320, 2012.
@@ -132,8 +132,8 @@ C.~Heffernan, C.~Jenkinson, T.~Holmes, et~al.
 \newblock \emph{Amyotrophic Lateral Sclerosis}, 7, 2006.
 \newblock \doi{10.1080/14660820510043235}.
 
-\bibitem[O.~Gredal(2001)]{rcfm2001}
-et.~al. O.~Gredal.
+\bibitem[Gredal et~al.(2001)]{rcfm2001}
+O.~Gredal et~al.
 \newblock \emph{ALS og vejrtrækning: Hjælpemidler og behandlingsmuligheder}.
 \newblock RehabiliteringsCenter for Muskelsvind, 2001.
 \newblock URL
@@ -179,6 +179,11 @@ F.~H. Martini, J.~L. Nath, and E.~F. Bartholomew.
 \newblock Pearson, 2012.
 \newblock \doi{978-0-321-70933-2}.
 
+\bibitem[Ame(2014)]{aaos2014}
+\emph{Anterior cruciate ligament (ACL) injuries}.
+\newblock American Academy of Orthpaedic Surgeons, 2014.
+\newblock URL \url{http://orthoinfo.aaos.org/topic.cfm?topic=a00549}.
+
 \bibitem[Escamilla and Krzyzewski(2001)]{escamilla2001}
 R.~F. Escamilla and M.l~W. Krzyzewski.
 \newblock Knee biomechanics of the dynamic squat exercise.
@@ -215,8 +220,8 @@ E.~Bernmark and C.~Wiktorin.
 \newblock \emph{Applied Ergonomics}, 33, 2002.
 \newblock \doi{10.1016/S0003-6870(02)00072-8}.
 
-\bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, and et~al.]{chowdhury2013}
-R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
+\bibitem[Chowdhury et~al.(2013)Chowdhury, Reaz, Ali, et~al.]{chowdhury2013}
+R.~H. Chowdhury, M.~B.~I. Reaz, M.~A. B.~M. Ali, et~al.
 \newblock Surface electromyography signal processing and classification
   techniques.
 \newblock \emph{Department of Electrical, Electronic and Systems Engineering,
@@ -224,7 +229,7 @@ R.~H. Chowdhury, M.~B.~I. Reaz, and M.~A . B . M.~Ali et~al.
 \newblock \doi{10.3390/s120912431}.
 
 \bibitem[Keenan and Enoka(2012)]{keenan2012}
-K.~G Keenan and R.~M Enoka.
+K.~G. Keenan and R.~M. Enoka.
 \newblock Electromyography.
 \newblock \emph{Encyclopedia of exercise medicine in health and disease}, 2012.
 \newblock \doi{10.1007/978-540-29807-6_298}.
@@ -321,6 +326,13 @@ Cypress.
 \newblock \emph{PSoC 4 Sequencing Successive Approximation ADC}.
 \newblock Cypress Semiconductor Corporation, 2014{\natexlab{b}}.
 \newblock URL \url{http://www.cypress.com/file/135111/download}.
+
+\bibitem[Samarin(2012)]{samarin2012}
+M.~K. Samarin.
+\newblock \emph{Linear Interpolation}.
+\newblock Encyclopedia of Mathematics, 2012.
+\newblock URL
+  \url{http://www.encyclopediaofmath.org/index.php?title=Linear_interpolation&oldid=27068}.
 
 \bibitem[Cypress(2015{\natexlab{b}})]{cypresspsoc42015}
 Cypress.
