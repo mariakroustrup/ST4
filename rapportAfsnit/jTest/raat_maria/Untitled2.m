@@ -43,7 +43,9 @@ xlabel('Frekvens (Hz)')
 ylabel('Størrelse')
 xlim([0 50])
 set(gca,'XTick',[0:5:50])
+set(gca,'ytick',[0,0.0001, 0.001, 1]*10e-4)
 ylim([10^-9 10^-4])
 set(gca,'fontsize',20);
+grid on
 box off
 
