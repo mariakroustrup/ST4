@@ -26,7 +26,7 @@ set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
 set(hAx(1), 'YLim',[0 200]);
 set(hAx(1),'YTick',[0:20:200]);
-set(get(hAx(1),'Ylabel'),'string','Knæets vinkel [\circ]');
+set(get(hAx(1),'Ylabel'),'string','Samlet vinkel [\circ]');
 box off
 
 set(hAx(2), 'YLim',[-0.4 0.2]);
