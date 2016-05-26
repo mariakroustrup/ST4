@@ -2,7 +2,7 @@
 \label{sec:test_acc}
 I dette projekt anvendes to accelerometre, som er beskrevet i \autoref{sec:acc_teori}. Disse anvendes som sensorer til opsamling af acceleration, der giver et outputsignal i form af en spænding. For at kunne anvende et accelerometer er det vigtigt at kende forskellige tolerancer i forhold til deres datablade, hvorfor et forsøg udføres for at kunne tage højde for disse parametre.
 
-\subsection{Formål}\label{sec:acc_formaal}
+\section{Formål}\label{sec:acc_formaal}
 Denne test har til formål at identificere en given spænding for forskellige vinkler. Derudover identificeres %støjsignaler i outputsignalet samt 
 offsettet og sensitiviteten for at teste accelerometrenes tolerancer.
 
@@ -13,7 +13,7 @@ offsettet og sensitiviteten for at teste accelerometrenes tolerancer.
 %\item Identificering af spænding ved forskellige vinkler
 \end{enumerate}
 
-\subsection{Materialer}
+\section{Materialer}
 \begin{itemize}
 \item Accelerometre ADXL$335$
 \item Tape
@@ -25,71 +25,70 @@ offsettet og sensitiviteten for at teste accelerometrenes tolerancer.
 \item NI USB-6009
 \end{itemize}
 
-\subsection{Metode}
-Der opstilles en metode til hvert formål i \autoref{sec:acc_formaal}. Formål 1 opfyldes ved deltest 1, og formål 2 og 3 opfyldes ved deltest 2.
+\section{Metode}
+Der opstilles en metode til hvert formål i \autoref{sec:acc_formaal}. Formål 1 opfyldes ved deltest 1, og formål 2 opfyldes ved deltest 2.
 \begin{enumerate}
 %\item Der foretages målinger i accelerometerets tre akser og i de seks positioner som accelerometeret, hvorved støj som accelerometeret påvirkes med kan identificeres
-\item Der foretages målinger i accelerometerets tre akser i 11 positioner, hvorved der testes for linearitet
-\item Der foretages målinger i accelerometerets tre akser i de seks positioner, der ses af \autoref{sec:acc_fremgangsmaade}, hvorefter offset kan bestemmes ud fra målingerne. Offsettet bestemmes ud fra accelerometerets 0 g-påvirkning, der måles vinkelret på planet, hvilket svarer til at accelerometeret ikke udsættes for tyngdekraften
+\item Der foretages målinger i accelerometrets tre akser i 11 positioner, hvorved der testes for linearitet
+\item Der foretages målinger i accelerometrets tre akser i de seks positioner, der ses af \autoref{sec:acc_fremgangsmaade}, hvorefter offset kan bestemmes ud fra målingerne. Offsettet bestemmes ud fra accelerometrets 0 g-påvirkning, der måles vinkelret på planet, hvilket svarer til at accelerometret ikke udsættes for tyngdekraften
 % Sensitiviteten måles ud fra en 1 g-påvirkning
 %\item Ud fra målingerne ved 0 og 1 g-påvirkning kan spændingen ved $1^{\circ}$ og $90^{\circ}$ beregnes ved \autoref{equ:vinkler}
 \end{enumerate}
 
-\subsection{Forsøgsopstilling}
+\section{Forsøgsopstilling}
 Hver forsøgsopstilling udføres for begge accelerometre.
 
-\subsubsection{Forsøgsopstilling af deltest 1}
+\subsection{Deltest 1}
 \begin{itemize}
-\item Accelerometeret påsættes vinkeltesteren på \autoref{fig:vinkeltest}
+\item Accelerometret påsættes vinkeltesteren på \autoref{fig:vinkeltest}
 \begin{itemize}
-\item Accelerometeret indstilles efter fremgangsmåden for hver øvelse, som er illustreret i \autoref{sec:vinkel_fremgangsmaade}
+\item Accelerometret indstilles efter fremgangsmåden for hver øvelse, som er illustreret i \autoref{sec:vinkel_fremgangsmaade}
 \end{itemize}
-\item Accelerometeret tilkobles NI USB-6009, der yderligere tilkobles en computer
+\item Accelerometret tilkobles NI USB-6009, der yderligere tilkobles en computer
 \end{itemize}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/vinkeltest}
-\caption{Vinkeltester, som anvendes under forsøget til at holde accelerometeret i bestemte vinkler.}
+\includegraphics[width=0.6\textwidth]{figures/vinkeltest}
+\caption{Vinkeltester, som anvendes under forsøget til at holde accelerometret i bestemte vinkler.}
 \label{fig:vinkeltest}
 \end{figure}
 
-\subsubsection{Forsøgsopstilling af deltest 2}
+\subsection{Deltest 2}
 \begin{itemize}
-\item Accelerometeret påsættes breadboardet med tape
-\item Accelerometeret stilles skiftevis vertikalt og horisontalt, således de forskellige akser testes
+\item Accelerometret påsættes breadboardet med tape
+\item Accelerometret stilles skiftevis vertikalt og horisontalt, således de forskellige akser testes
 \begin{itemize}
-\item Accelerometeret placeres efter fremgangsmåden for hver øvelse, hvilket er illustreret af \autoref{sec:acc_fremgangsmaade}
+\item Accelerometret placeres efter fremgangsmåden for hver øvelse, hvilket er illustreret af \autoref{sec:acc_fremgangsmaade}
 \end{itemize}
-\item Accelerometeret tilkobles NI USB-6009, der yderligere tilkobles en computer
+\item Accelerometret tilkobles NI USB-6009, der yderligere tilkobles en computer
 \end{itemize}
 
-\subsection{Fremgangsmåde}  
+\section{Fremgangsmåde}  
 
-\subsubsection{Fremgangsmåde for deltest 1} \label{sec:vinkel_fremgangsmaade}
-Vinkler mellem $0-180^{\circ}$ med $20^{\circ}$ interval samt 90 grader, måles og samples for hvert accelerometer i de tre akser i 10 sekunder ved $100~Hz$, hvilket er udregnet ud fra Nyquist. Samplingsfrekvensen er dermed det dobbelte af båndbredden for accelerometrene \citep{analogdevices2010}. Målingerne er udført for begge accelerometre i henholdsvis X-, Y- og Z-aksen, og vinklen ændres ved at justere vinkeltesteren på \autoref{fig:vinkeltest}, så følgende vinkler fremgår af modellen:
+\subsection{Deltest 1} \label{sec:vinkel_fremgangsmaade}
+Vinkler på henholdsvis 0, 20, 40, 60, 80, 90, 100, 120, 140, 160 og $180^{\circ}$ måles og samples for hvert accelerometer i de tre akser i 10 sekunder ved $100~Hz$, hvilket er udregnet ud fra Nyquists sætning. Samplingsfrekvensen er dermed det dobbelte af båndbredden for accelerometrene \citep{analogdevices2010}. Målingerne er udført for begge accelerometre i henholdsvis X-, Y- og Z-aksen, og vinklen ændres ved at justere vinkeltesteren på \autoref{fig:vinkeltest}, så følgende vinkler fremgår af modellen:
 
 \begin{itemize}
 \item $0^{\circ}$ til $180^{\circ}$ med $20^{\circ}$'s intervaller
 \item $90^{\circ}$  
 \end{itemize}
 
-
-\subsubsection{Fremgangsmåde for deltest 2}\label{sec:acc_fremgangsmaade}
+\subsection{Deltest 2}\label{sec:acc_fremgangsmaade}
 Der foretages målinger i seks forskellige positioner. Hver position måles tre gange og samles i 10 sekunder ved $100~Hz$. De forskellige positioner er illustreret i \autoref{sec:acc_imp} af \autoref{fig:acc}, og er som følger: 
 \begin{itemize}
-\item Accelerometeret stilles lodret opad
-\item Accelerometeret stilles lodret nedad
-\item Accelerometeret stilles vandret mod højre
-\item Accelerometeret stilles vandret mod venstre
-\item Accelerometeret ligges plan på bordet med toppen opad
-\item Accelerometeret ligges plan på bordet med toppen nedad
+\item Accelerometret stilles lodret opad
+\item Accelerometret stilles lodret nedad
+\item Accelerometret stilles vandret mod højre
+\item Accelerometret stilles vandret mod venstre
+\item Accelerometret ligges plan på bordet med toppen opad
+\item Accelerometret ligges plan på bordet med toppen nedad
 \end{itemize}
 
-\subsection{Resultater} 
+\section{Resultater} 
 
-\subsubsection{Resultater for deltest 1} \label{sec:resul_linear}
-For deltest 1 udføres en lineær regression, hvor data fra målingerne af begge accelerometres output ved hver målt vinkel plottes som en funktion af vinklerne. Derefter udføres den lineære regression, og $R^2$-værdien findes, så det kan bestemmes, om punkterne er lineære. Plots, regressioner og $R^2$-værdier kan ses på \autoref{fig:acc_lineaerregression}.
+\subsection{Deltest 1} \label{sec:resul_linear}
+For deltest 1 udføres lineær regression, hvor data fra målingerne af begge accelerometres output ved hver målt vinkel plottes som en funktion af vinklerne. Derefter udføres den lineære regression, og $R^2$-værdien findes, så det kan bestemmes, om punkterne er lineære. Plots, regressioner og $R^2$-værdier kan ses på \autoref{fig:acc_lineaerregression}.
 
 \begin{figure}[H]
 \centering
@@ -98,9 +97,10 @@ For deltest 1 udføres en lineær regression, hvor data fra målingerne af begge
 \label{fig:acc_lineaerregression}
 \end{figure}
 
-Ud fra \autoref{fig:acc_lineaerregression} kan det ses, at $R^2$-værdierne er mellem 0,9790 og 0,9812. Graferne ville have en perfekt lineær sammenhæng, hvis $R^2=1$. Det kan derfor siges, at der her ses en lineær tendens ud fra disse målinger, selvom punkterne på alle seks grafer viser en s-formet bølge omkring regressionslinjen, hvilket giver afvigelserne fra den perfekte lineære sammenhæng.
+\noindent
+Ud fra \autoref{fig:acc_lineaerregression} kan det ses, at $R^2$-værdierne er mellem 0,9790 og 0,9812, hvilket svarer til, at sammenhængen er $2\%$ fra at være perfekt lineær. Graferne ville have en perfekt lineær sammenhæng, hvis $R^2=1$. Det kan derfor siges, at der her ses en lineær tendens ud fra disse målinger, selvom punkterne på alle seks grafer viser en s-formet bølge omkring regressionslinjen, hvilket giver afvigelserne fra den perfekte lineære sammenhæng.
 
-\subsubsection{Resultater for deltest 2}
+\subsection{Deltest 2}
 Ud fra de tre målinger foretaget i de seks forskellige positioner beregnes den gennemsnitlige værdi af målingerne på de forskellige akser, herefter plottes disse i. På denne måde bliver det muligt at se, hvilken akse der påvirkes mest under øvelsen. Målingerne fremgår af \autoref{fig:acc_paavirkning2}. 
 
 \begin{figure}[H]
@@ -110,7 +110,8 @@ Ud fra de tre målinger foretaget i de seks forskellige positioner beregnes den 
 \label{fig:acc_paavirkning2}
 \end{figure}
 
-Offset bestemmes ud fra de målinger, hvor accelerometeret påvirkes i $0~g$-påvirkning. Den akse, hvor accelerometeret påvirkes med 0 g i alle seks forskellige positioner fremgår af \autoref{fig:acc}. Resultaterne fra målingerne ses af \autoref{tab:acc_offset}. 
+\noindent
+Offset bestemmes ud fra de målinger, hvor accelerometret påvirkes i $0~g$-påvirkning. Den akse, hvor accelerometret påvirkes med 0 g i alle seks forskellige positioner fremgår af \autoref{fig:acc}. Resultaterne fra målingerne på Y-aksen ses på \autoref{tab:acc_offset}. 
 
 \begin{table}[H]
 	\centering
@@ -129,7 +130,7 @@ Offset bestemmes ud fra de målinger, hvor accelerometeret påvirkes i $0~g$-på
     %\textbf{Plan ned} 			& X 		& $1,6787~V$	\\ \hline
     \textbf{Negativ} 			& $1,6413~V$	& $3,45 \%$	\\ \hline
 	\end{tabular}
-	\caption{Offsettet for accelerometeret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometeret udsættes for en 0 g-påvirkning i y-planet.}
+	\caption{Offsettet for accelerometret, samt dens afvigelse i forhold til databladet bestemt for Y-aksen. Accelerometret udsættes for en 0 g-påvirkning i Y-planet.}
 	\label{tab:acc_offset}
 \end{table}
 

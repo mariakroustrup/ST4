@@ -2,8 +2,13 @@
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{figures/implementering/Blokdiagram_digital.png}
-\caption{Blokdiagrammets digitale del}
+\caption{Blokdiagram over hele systemet, hvor den digitale del er fremhævet.}
 \label{fig:blokdiagram_digital1}
 \end{figure}
 
-For at undersøge om systemet opfylder kravene i \autoref{sec:digital_del_krav}, skal den digitale del af systemet som vist på \autoref{fig:blokdiagram_digital1} testes. Dette gøres ved at teste de enkelte blokke hver for sig og vurdere om de opfylder de stillede krav. Den digitale del indeholder A/D-konvertering, offsetjustering af accelerometer samt filtrering af accelerometre- og EMG-signaler. Herefter udføres algortimer, hvorved der i EMG-algoritmen vurderes om muskelaktiviteten er stigende eller faldende. Yderligere udføres en accelerometer-algortimen hvori der de konverteret inputs omregnes til vinkler. I det data har passeret algoritmerne, transmitteres data via BLE-kommunikation.
+For at undersøge om systemet opfylder kravene i \autoref{sec:digital_del_krav}, skal den digitale del af systemet som fremhævet på \autoref{fig:blokdiagram_digital1} testes. 
+Dette gøres ved at teste de enkelte blokke hver for sig og vurdere, om de opstillede krav opfyldes. 
+Den digitale del indeholder A/D-konvertering, offsetjustering af accelerometer samt filtrering af accelerometer- og EMG-signaler. 
+Herefter udføres en accelerometer-algoritme, hvori de konverterede inputs omregnes til vinkler. 
+Yderligere udføres en EMG-algoritme, hvor der vurderes, om muskelaktiviteten er stigende eller faldende. 
+Idet data har passeret algoritmerne, transmitteres data via BLE-kommunikation.

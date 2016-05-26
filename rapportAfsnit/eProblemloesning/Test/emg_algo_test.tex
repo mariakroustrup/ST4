@@ -1,21 +1,26 @@
 \subsection{EMG-algoritme}
-For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $-10$ eller $10$, hvis muskelsignalet er faldende eller stigende. Derudover ønskes det at outputsignalet er 0, hvis der opnås en vinkel på under $90$ eller over $180^{\circ}$. Dette illustreres ved hjælp af MATLAB på \autoref{fig:emg_algo_test}. 
+For at undersøge, om kravene i \autoref{sec:krav_emg_algo} opfyldes, testes EMG-algoritmen ved et muskelsignal på 10 sekunder, der varierer i amplitude. 
+Inputtet til algoritmen, det filtrerede muskelsignal, og outputtet vælges til at være henholdsvis $+10$ eller $-10$, hvis muskelsignalet er stigende eller faldende. 
+Derudover ønskes det, at outputsignalet er 0, hvis der måles en vinkel undenfor $90$ til $180^{\circ}$. 
+Dette illustreres på \autoref{fig:emg_algo_test}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/EMG_algo_test}
-\caption{Den blå graf og tilhørende venstre y-akse illustrerer det filtrerede muskelsignal, der er EMG-algoritmens input, og den røde graf og tilhørende højre y-akse illustrerer, om muskelsignalet er henholdsvis faldende eller stigende ved enten at udsende et signal på $-10$ eller $10$.}
+\caption{Den blå graf, tilhørende venstre Y-akse, illustrerer det samplede filtrerede muskelsignal, der er EMG-algoritmens input. Den røde graf, tilhørende højre Y-akse, illustrerer, om muskelsignalet er henholdsvis stigende eller faldende ved enten at give et output på $+10$ eller $-10$.}
 \label{fig:emg_algo_test}
 \end{figure}
 
 \noindent
-Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne, hvor outputtet skifter i spænding ved at udregne en forsinkelse i sekunder ud fra differensen på tidspunkterne for det lokale ekstrema og skift i output. Dette fremgår af \autoref{tab:emg_algo}. 
+Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtets lokale minima- og maksimapunkter. 
+Tidspunkterne for disse lokale ekstrema sammenlignes med tidspunkterne for outputtet.  Herved udregnes en forsinkelse i sekunder ud fra differensen på tidspunkterne for det lokale ekstrema og skift i output. 
+Dette fremgår af \autoref{tab:emg_algo}. 
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline 
-\textbf{EMG-ekstrema [s]} & \textbf{Output[s]} & \textbf{Forsinkelse [s]}\\ 
+\textbf{EMG-ekstrema [s]} & \textbf{Ændring i output [s]} & \textbf{Forsinkelse [s]}\\ 
 \hline 
 0,32 & 0,32 & 0,00\\ 
 \hline 
@@ -64,19 +69,22 @@ Ud fra de data, der fremgår af \autoref{fig:emg_algo_test}, findes EMG-inputtet
 9,08 & 9,09 & 0,01\\ 
 \hline 
 \end{tabular} 
-\caption{Tabel over ekstrema, outputskift og differensen mellem disse, der er noteret som forsinkelsen.}
+\caption{Tabel over ekstrema, ændring i output og differensen mellem disse, der er noteret som forsinkelsen.}
 \label{tab:emg_algo}
 \end{table}
 
 \noindent
-I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet, der registreres som en ændring i output-signalet, er mellem $0,00$ og $0,01~s$. Den gennemsnitlige forsinkelse er dermed på $9,57~ms$. Målingen, der giver en forsinkelse på $0,00~s$, kan dog ikke passe, da EMG-algoritmen bruger én sample på at skifte output fra $10$ til $-10$ eller fra $-10$ til $10$. Ingen forsinkelse vil derfor betyde, at EMG-algoritmens output begynder at ændre sig fra $-10$ til $10$, før EMG-signalet er begyndt at stige. 
+I \autoref{tab:emg_algo} fremgår det, at forsinkelsen fra inputtet af muskelsignalet, der registreres som en ændring i output-signalet, er mellem $0,00$ og $0,01~s$. 
+Den gennemsnitlige forsinkelse er dermed på $9,57~ms$. 
+Målingen, der giver en forsinkelse på $0,00~s$, som ikke stemmer overens, da EMG-algoritmen bruger én sample med en varighed á $0,01~s$ på at skifte output fra $+10$ til $-10$ eller fra $-10$ til $+10$. 
+Ingen forsinkelse vil derfor betyde, at EMG-algoritmens output begynder at ændre sig fra $+10$ til $-10$, før EMG-signalet er begyndt at falde. 
 
-Forsinkelsen på $9,57~ms$ kan forklares af, at testen er udført ved at sample EMG-algoritmens input og output ved $100~Hz$. Af denne grund er der ikke mere end 100 samples per sekund, hvilket betyder, at der er $10~ms$ mellem hver sample. Forsinkelsen er derfor sandsynligvis mindre end $9,57~ms$, men det kan ikke lade sig gøre at måle mindre tal med den nuværende samplerate. 
+Forsinkelsen på $9,57~ms$ kan forklares af, at testen er udført ved at sample EMG-algoritmens input og output ved $100~Hz$. Af denne grund er der ikke mere end 100 samples per sekund, hvilket betyder, at der er $10~ms$ mellem hver sample. Forsinkelsen er derfor sandsynligvis mindre end $9,57~ms$, da det ikke er muligt at måle flere decimaler med den nuværende samplerate. 
 
 \vspace{3mm}
 \textbf{Opsummering af krav:}
 \begin{itemize}
-\item[\text{\sffamily \checkmark}] Skal kunne detektere om muskelaktiviteten er faldende eller stigende mellem to samples med 0,01 sekunders mellemrum
+\item[\text{\sffamily \checkmark}] Skal kunne detektere om muskelaktiviteten er faldende eller stigende mellem to samples 
 \begin{itemize}
 \item Ved stigende muskelaktivitet skal dette indikeres som et outputsignal på $+10$
 \item Ved faldende muskelaktivitet skal dette indikeres som et outputsignal på $-10$

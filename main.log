@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 01:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 16:37
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -1849,7 +1849,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 6.
 \c__siunitx_mathtt_int=\count352
 
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/xFormaliteter/Forsi
-de.tex <figures/Forside.jpg, id=391, 738.76pt x 424.58624pt>
+de.tex <figures/Forside.jpg, id=435, 738.76pt x 424.58624pt>
 File: figures/Forside.jpg Graphic file (type jpg)
 
 <use figures/Forside.jpg>
@@ -1857,7 +1857,7 @@ Package pdftex.def Info: figures/Forside.jpg used on input line 45.
 (pdftex.def)             Requested size: 441.0pt x 253.45149pt.
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/xFormaliteter/titel
-blad.tex <figures/AAU-logo-stud-DK-RGB.pdf, id=392, 136.51pt x 97.09073pt>
+blad.tex <figures/AAU-logo-stud-DK-RGB.pdf, id=436, 136.51pt x 97.09073pt>
 File: figures/AAU-logo-stud-DK-RGB.pdf Graphic file (type pdf)
 
 <use figures/AAU-logo-stud-DK-RGB.pdf>
@@ -1905,7 +1905,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 1.
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/xFormaliteter/Laese
-vejledning.tex <figures/flow.png, id=439, 345.29pt x 84.315pt>
+vejledning.tex <figures/flow.png, id=483, 345.29pt x 84.315pt>
 File: figures/flow.png Graphic file (type png)
 
 <use figures/flow.png>
@@ -1926,14 +1926,14 @@ rende_spg.tex) [1
 
 ]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/ALS
-.tex <figures/affectedneuron.png, id=603, 772.38562pt x 195.73125pt>
+.tex <figures/affectedneuron.png, id=658, 772.38562pt x 195.73125pt>
 File: figures/affectedneuron.png Graphic file (type png)
 
 <use figures/affectedneuron.png>
 Package pdftex.def Info: figures/affectedneuron.png used on input line 9.
 (pdftex.def)             Requested size: 441.0pt x 111.75313pt.
 
-<figures/motorneuroner.png, id=608, 372.79276pt x 485.4135pt>
+<figures/motorneuroner.png, id=663, 372.79276pt x 485.4135pt>
 File: figures/motorneuroner.png Graphic file (type png)
 
 <use figures/motorneuroner.png>
@@ -1942,7 +1942,7 @@ Package pdftex.def Info: figures/motorneuroner.png used on input line 23.
  [2
 
  <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/affectedneuron.png>]
-<figures/stadier.png, id=624, 623.32875pt x 148.555pt>
+<figures/stadier.png, id=679, 623.32875pt x 148.555pt>
 File: figures/stadier.png Graphic file (type png)
 
 <use figures/stadier.png>
@@ -1967,14 +1967,14 @@ eringer: en overordnet
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Nuv
 aerende_teknologier.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/cProblemanalyse/Kna
-eleddet.tex [5] <figures/knaet.png, id=689, 484.81125pt x 307.90031pt>
+eleddet.tex [5] <figures/knaet.png, id=744, 484.81125pt x 307.90031pt>
 File: figures/knaet.png Graphic file (type png)
 
 <use figures/knaet.png>
 Package pdftex.def Info: figures/knaet.png used on input line 9.
 (pdftex.def)             Requested size: 396.89731pt x 252.08054pt.
 
-<figures/knae_anatomi.png, id=694, 872.25874pt x 469.755pt>
+<figures/knae_anatomi.png, id=749, 872.25874pt x 469.755pt>
 File: figures/knae_anatomi.png Graphic file (type png)
 
 <use figures/knae_anatomi.png>
@@ -1982,7 +1982,7 @@ Package pdftex.def Info: figures/knae_anatomi.png used on input line 24.
 (pdftex.def)             Requested size: 352.80135pt x 189.99886pt.
  [6 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/knaet.png>] [7 <C:/Us
 ers/passw/OneDrive/Documents/GitHub/ST4/figures/knae_anatomi.png>] <figures/squ
-at.png, id=725, 310.15875pt x 274.77657pt>
+at.png, id=780, 310.15875pt x 274.77657pt>
 File: figures/squat.png Graphic file (type png)
 
 <use figures/squat.png>
@@ -1994,7 +1994,7 @@ Package pdftex.def Info: figures/squat.png used on input line 50.
 es/squat.png>]) [9]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/sy
 stembeskrivelse.tex
-<figures/blokdiagram.png, id=748, 1167.36125pt x 221.82875pt>
+<figures/blokdiagram.png, id=803, 1167.36125pt x 221.82875pt>
 File: figures/blokdiagram.png Graphic file (type png)
 
 <use figures/blokdiagram.png>
@@ -2005,7 +2005,7 @@ Package pdftex.def Info: figures/blokdiagram.png used on input line 29.
 esningsstrategi.tex [10
 
  <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/blokdiagram.png>] <figur
-es/CY8CKIT-042.png, id=760, 727.21687pt x 468.24937pt>
+es/CY8CKIT-042.png, id=815, 727.21687pt x 468.24937pt>
 File: figures/CY8CKIT-042.png Graphic file (type png)
 
 <use figures/CY8CKIT-042.png>
@@ -2014,7 +2014,7 @@ Package pdftex.def Info: figures/CY8CKIT-042.png used on input line 10.
 ) [11 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/CY8CKIT-042.png>]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/op
 samling.tex
-<figures/implementering/Blokdiagram_analog.png, id=773, 1167.36125pt x 221.8287
+<figures/implementering/Blokdiagram_analog.png, id=828, 1167.36125pt x 221.8287
 5pt>
 File: figures/implementering/Blokdiagram_analog.png Graphic file (type png)
  <use figures/implementering/Blokdiagram_analog.png>
@@ -2033,7 +2033,7 @@ G_teori_krav.tex)
 aendingsforsyning.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/in
 dledning_digital.tex
-<figures/implementering/Blokdiagram_digital.png, id=797, 1167.36125pt x 221.828
+<figures/implementering/Blokdiagram_digital.png, id=852, 1167.36125pt x 221.828
 75pt>
 File: figures/implementering/Blokdiagram_digital.png Graphic file (type png)
  <use figures/implementering/Blokdiagram_digital.png>
@@ -2042,7 +2042,7 @@ Package pdftex.def Info: figures/implementering/Blokdiagram_digital.png used on
 (pdftex.def)             Requested size: 441.0pt x 83.8016pt.
  [13])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/ad
-c_teori.tex <figures/problemloesning/adc.png, id=810, 329.5512pt x 159.4758pt>
+c_teori.tex <figures/problemloesning/adc.png, id=865, 329.5512pt x 159.4758pt>
 File: figures/problemloesning/adc.png Graphic file (type png)
 
 <use figures/problemloesning/adc.png>
@@ -2057,7 +2057,7 @@ ng fra analogt til digitalt signal. Den blå graf
 [14 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/implementering/Blokdi
 agram_digital.png> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/proble
 mloesning/adc.png>]
-<figures/problemloesning/ADC_bit.png, id=828, 149.1171pt x 61.1886pt>
+<figures/problemloesning/ADC_bit.png, id=883, 149.1171pt x 61.1886pt>
 File: figures/problemloesning/ADC_bit.png Graphic file (type png)
 
 <use figures/problemloesning/ADC_bit.png>
@@ -2068,20 +2068,20 @@ Package pdftex.def Info: figures/problemloesning/ADC_bit.png used on input line
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/di
 gital_filtrering.tex [15 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/
 problemloesning/ADC_bit.png>]
-<figures/filtre.png, id=854, 376.40625pt x 301.125pt>
+<figures/filtre.png, id=909, 376.40625pt x 301.125pt>
 File: figures/filtre.png Graphic file (type png)
  <use figures/filtre.png>
 Package pdftex.def Info: figures/filtre.png used on input line 24.
 (pdftex.def)             Requested size: 352.80135pt x 282.26262pt.
 
 [16 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/filtre.png>]
-<figures/maf.png, id=877, 936.49875pt x 238.64156pt>
+<figures/maf.png, id=932, 936.49875pt x 238.64156pt>
 File: figures/maf.png Graphic file (type png)
  <use figures/maf.png>
 Package pdftex.def Info: figures/maf.png used on input line 58.
 (pdftex.def)             Requested size: 441.0pt x 112.38002pt.
 
-<figures/problemloesning/lavpas_knaek.pdf, id=882, 995.72pt x 569.12625pt>
+<figures/problemloesning/lavpas_knaek.pdf, id=937, 995.72pt x 569.12625pt>
 File: figures/problemloesning/lavpas_knaek.pdf Graphic file (type pdf)
 
 <use figures/problemloesning/lavpas_knaek.pdf>
@@ -2089,7 +2089,7 @@ Package pdftex.def Info: figures/problemloesning/lavpas_knaek.pdf used on input
  line 76.
 (pdftex.def)             Requested size: 441.0pt x 252.06631pt.
  [17 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/maf.png>]
-<figures/problemloesning/lavpas_orden.pdf, id=897, 995.72pt x 569.12625pt>
+<figures/problemloesning/lavpas_orden.pdf, id=952, 995.72pt x 569.12625pt>
 File: figures/problemloesning/lavpas_orden.pdf Graphic file (type pdf)
 
 <use figures/problemloesning/lavpas_orden.pdf>
@@ -2098,7 +2098,7 @@ Package pdftex.def Info: figures/problemloesning/lavpas_orden.pdf used on input
 (pdftex.def)             Requested size: 441.0pt x 252.06631pt.
  [18 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/problemloesning/lavp
 as_knaek.pdf>]
-<figures/problemloesning/mavgfilter_matlab.png, id=911, 1179.40625pt x 795.9737
+<figures/problemloesning/mavgfilter_matlab.png, id=966, 1179.40625pt x 795.9737
 5pt>
 File: figures/problemloesning/mavgfilter_matlab.png Graphic file (type png)
  <use figures/problemloesning/mavgfilter_matlab.png>
@@ -2114,7 +2114,7 @@ blemloesning/mavgfilter_matlab.png (PNG copy)>])
 g_algoritme.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/tr
 aadloes_kommunikation.tex
-<figures/BLEToBLEdongle.png, id=934, 991.90575pt x 290.2845pt>
+<figures/BLEToBLEdongle.png, id=989, 991.90575pt x 290.2845pt>
 File: figures/BLEToBLEdongle.png Graphic file (type png)
 
 <use figures/BLEToBLEdongle.png>
@@ -2138,7 +2138,7 @@ input line 4.
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/acc.tex
-<figures/acc_paavirkning.png, id=958, 716.6775pt x 472.01344pt>
+<figures/acc_paavirkning.png, id=1013, 716.6775pt x 472.01344pt>
 File: figures/acc_paavirkning.png Graphic file (type png)
 
 <use figures/acc_paavirkning.png>
@@ -2155,7 +2155,7 @@ et i forskellige positioner. Til venstre måles
 ])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/EMG.tex
-<figures/sinussignal.png, id=975, 273.27094pt x 217.5628pt>
+<figures/sinussignal.png, id=1030, 273.27094pt x 217.5628pt>
 File: figures/sinussignal.png Graphic file (type png)
 
 <use figures/sinussignal.png>
@@ -2166,7 +2166,7 @@ Package pdftex.def Info: figures/sinussignal.png used on input line 9.
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/spaendingsforsyning_imp.tex [25 <C:/Users/passw/OneDrive/Documents
 /GitHub/ST4/figures/sinussignal.png>]
-<figures/spaendingsforsyning.png, id=1005, 647.41875pt x 198.14024pt>
+<figures/spaendingsforsyning.png, id=1060, 647.41875pt x 198.14024pt>
 File: figures/spaendingsforsyning.png Graphic file (type png)
 
 <use figures/spaendingsforsyning.png>
@@ -2191,7 +2191,7 @@ Package pdftex.def Info: figures/implementering/Blokdiagram_digital.png used on
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/ADC.tex
-<figures/implementering/ADC_imp.jpg, id=1012, 599.23875pt x 408.52625pt>
+<figures/implementering/ADC_imp.jpg, id=1067, 599.23875pt x 408.52625pt>
 File: figures/implementering/ADC_imp.jpg Graphic file (type jpg)
 
 <use figures/implementering/ADC_imp.jpg>
@@ -2215,7 +2215,7 @@ neres a- og b-koefficienterne samt
 plementering/mavgfilter.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/vinkelberegning.tex [28]
-<figures/Pilotforsoeg/accvinkel.png, id=1065, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accvinkel.png, id=1120, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accvinkel.png>
@@ -2228,7 +2228,7 @@ plementering/emg_algo_imp.tex [29 <C:/Users/passw/OneDrive/Documents/GitHub/ST4
 /figures/Pilotforsoeg/accvinkel.png (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
 plementering/traadloes_komm_imp.tex
-<figures/PSoC_4200_opdelt.png, id=1078, 840.13875pt x 274.626pt>
+<figures/PSoC_4200_opdelt.png, id=1133, 840.13875pt x 274.626pt>
 File: figures/PSoC_4200_opdelt.png Graphic file (type png)
 
 <use figures/PSoC_4200_opdelt.png>
@@ -2241,7 +2241,7 @@ Overfull \hbox (10.76894pt too wide) in paragraph at lines 22--23
  []
 
 [30 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/PSoC_4200_opdelt.png>
-] <figures/traadloes_komm.png, id=1094, 427.5975pt x 78.2925pt>
+] <figures/traadloes_komm.png, id=1149, 427.5975pt x 78.2925pt>
 File: figures/traadloes_komm.png Graphic file (type png)
 
 <use figures/traadloes_komm.png>
@@ -2256,7 +2256,7 @@ t visualisere opbygningen samt
  []
 
 
-<figures/implementering/overordnet_flow.png, id=1104, 439.6425pt x 680.5425pt>
+<figures/implementering/overordnet_flow.png, id=1159, 439.6425pt x 680.5425pt>
 File: figures/implementering/overordnet_flow.png Graphic file (type png)
 
 <use figures/implementering/overordnet_flow.png>
@@ -2266,7 +2266,7 @@ ut line 16.
  [31 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/traadloes_komm.png>]
  [32 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/implementering/overo
 rdnet_flow.png>]
-<figures/implementering/initialiserende_flow.png, id=1131, 448.67625pt x 324.21
+<figures/implementering/initialiserende_flow.png, id=1186, 448.67625pt x 324.21
 124pt>
 File: figures/implementering/initialiserende_flow.png Graphic file (type png)
  <use figures/implementering/initialiserende_flow.png>
@@ -2274,7 +2274,7 @@ Package pdftex.def Info: figures/implementering/initialiserende_flow.png used o
 n input line 30.
 (pdftex.def)             Requested size: 352.80135pt x 254.94173pt.
 
-<figures/implementering/EMG_algo.png, id=1136, 588.1975pt x 419.5675pt>
+<figures/implementering/EMG_algo.png, id=1191, 588.1975pt x 419.5675pt>
 File: figures/implementering/EMG_algo.png Graphic file (type png)
 
 <use figures/implementering/EMG_algo.png>
@@ -2290,7 +2290,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 5--8
 everer en spænding på
  []
 
-<figures/samlet_spaending.png, id=1148, 485.815pt x 214.8025pt>
+<figures/samlet_spaending.png, id=1203, 485.815pt x 214.8025pt>
 File: figures/samlet_spaending.png Graphic file (type png)
 
 <use figures/samlet_spaending.png>
@@ -2311,14 +2311,14 @@ input line 4.
 st/test_emg_acc.tex [36
 
 ]
-<figures/raat_EMG_test.png, id=1182, 1028.34187pt x 490.08093pt>
+<figures/raat_EMG_test.png, id=1237, 1028.34187pt x 490.08093pt>
 File: figures/raat_EMG_test.png Graphic file (type png)
 
 <use figures/raat_EMG_test.png>
 Package pdftex.def Info: figures/raat_EMG_test.png used on input line 33.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 
-<figures/fft_raat_EMG.png, id=1187, 704.6325pt x 492.84125pt>
+<figures/fft_raat_EMG.png, id=1242, 704.6325pt x 492.84125pt>
 File: figures/fft_raat_EMG.png Graphic file (type png)
 
 <use figures/fft_raat_EMG.png>
@@ -2329,7 +2329,7 @@ NG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/spaendingsforsyning_test.tex [38 <C:/Users/passw/OneDrive/Documents/GitHub/S
 T4/figures/fft_raat_EMG.png (PNG copy)>]
-<figures/bat_test.png, id=1209, 1967.35pt x 2055.68pt>
+<figures/bat_test.png, id=1264, 1967.35pt x 2055.68pt>
 File: figures/bat_test.png Graphic file (type png)
 
 <use figures/bat_test.png>
@@ -2346,11 +2346,11 @@ Package pdftex.def Info: figures/implementering/Blokdiagram_digital.png used on
 
 [39 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/bat_test.png>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
-st/ADC_test.tex <figures/treinput.png, id=1220, 1028.34187pt x 490.08093pt>
+st/ADC_test.tex <figures/treinput.png, id=1275, 1028.34187pt x 490.08093pt>
 File: figures/treinput.png Graphic file (type png)
 
 <use figures/treinput.png>
-Package pdftex.def Info: figures/treinput.png used on input line 7.
+Package pdftex.def Info: figures/treinput.png used on input line 8.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [40 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/treinput.png (PNG co
 py)>])
@@ -2358,88 +2358,91 @@ py)>])
 st/digital_filtrering.tex)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/lavpas_test.tex [41]
-<figures/EMG_test.png, id=1243, 1028.34187pt x 490.08093pt>
+<figures/EMG_test.png, id=1298, 1028.34187pt x 490.08093pt>
 File: figures/EMG_test.png Graphic file (type png)
 
 <use figures/EMG_test.png>
-Package pdftex.def Info: figures/EMG_test.png used on input line 6.
+Package pdftex.def Info: figures/EMG_test.png used on input line 9.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 
-<figures/bodeplot_lavpas2.png, id=1246, 1445.4pt x 704.6325pt>
+<figures/bodeplot_lavpas2.png, id=1302, 1445.4pt x 704.6325pt>
 File: figures/bodeplot_lavpas2.png Graphic file (type png)
 
 <use figures/bodeplot_lavpas2.png>
-Package pdftex.def Info: figures/bodeplot_lavpas2.png used on input line 30.
-(pdftex.def)             Requested size: 352.80135pt x 171.986pt.
+Package pdftex.def Info: figures/bodeplot_lavpas2.png used on input line 41.
+(pdftex.def)             Requested size: 441.0pt x 214.98248pt.
  [42 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/EMG_test.png (PNG co
 py)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/mavg_test.tex
-<figures/accelerometer_filter.png, id=1257, 1028.34187pt x 490.08093pt>
+<figures/accelerometer_filter.png, id=1315, 1028.34187pt x 490.08093pt>
 File: figures/accelerometer_filter.png Graphic file (type png)
 
 <use figures/accelerometer_filter.png>
-Package pdftex.def Info: figures/accelerometer_filter.png used on input line 8.
-
+Package pdftex.def Info: figures/accelerometer_filter.png used on input line 11
+.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [43 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/bodeplot_lavpas2.png
  (PNG copy)>]
-<figures/forsinkelse.png, id=1267, 1028.34187pt x 490.08093pt>
+<figures/forsinkelse.png, id=1324, 1028.34187pt x 490.08093pt>
 File: figures/forsinkelse.png Graphic file (type png)
 
 <use figures/forsinkelse.png>
-Package pdftex.def Info: figures/forsinkelse.png used on input line 19.
+Package pdftex.def Info: figures/forsinkelse.png used on input line 25.
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [44 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometer_filter
 .png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/forsinke
 lse.png (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/test_grader.tex
-<figures/spaending_vinkel_test.png, id=1278, 1028.34187pt x 490.08093pt>
+<figures/spaending_vinkel_test.png, id=1335, 1028.34187pt x 490.08093pt>
 File: figures/spaending_vinkel_test.png Graphic file (type png)
 
 <use figures/spaending_vinkel_test.png>
-Package pdftex.def Info: figures/spaending_vinkel_test.png used on input line 7
+Package pdftex.def Info: figures/spaending_vinkel_test.png used on input line 8
 .
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
  [45 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/spaending_vinkel_tes
 t.png (PNG copy)>]
-<figures/mikro_LED.png, id=1293, 2047.65pt x 1273.75874pt>
+<figures/mikro_LED.png, id=1351, 2047.65pt x 1273.75874pt>
 File: figures/mikro_LED.png Graphic file (type png)
 
 <use figures/mikro_LED.png>
-Package pdftex.def Info: figures/mikro_LED.png used on input line 42.
+Package pdftex.def Info: figures/mikro_LED.png used on input line 52.
 (pdftex.def)             Requested size: 441.0pt x 274.31926pt.
  [46 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/mikro_LED.png>]
-<figures/vinkeltest_graenser.png, id=1302, 1028.34187pt x 490.08093pt>
+<figures/vinkeltest_graenser.png, id=1359, 1028.34187pt x 490.08093pt>
 File: figures/vinkeltest_graenser.png Graphic file (type png)
 
 <use figures/vinkeltest_graenser.png>
-Package pdftex.def Info: figures/vinkeltest_graenser.png used on input line 52.
+Package pdftex.def Info: figures/vinkeltest_graenser.png used on input line 64.
 
 (pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
 st/emg_algo_test.tex [47 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/
 vinkeltest_graenser.png (PNG copy)>]
-<figures/EMG_algo_test.png, id=1312, 643.40375pt x 421.575pt>
+<figures/EMG_algo_test.png, id=1370, 643.40375pt x 421.575pt>
 File: figures/EMG_algo_test.png Graphic file (type png)
 
 <use figures/EMG_algo_test.png>
-Package pdftex.def Info: figures/EMG_algo_test.png used on input line 6.
+Package pdftex.def Info: figures/EMG_algo_test.png used on input line 9.
 (pdftex.def)             Requested size: 396.89731pt x 260.06795pt.
- [48 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/EMG_algo_test.png (P
-NG copy)>] [49])
+
+Underfull \hbox (badness 1092) in paragraph at lines 10--10
+\T1/cmr/m/it/10.95 muskelsignal, der er EMG-algoritmens input. Den røde graf, t
+ilhørende højre Y-akse,
+ []
+
+[48 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/EMG_algo_test.png (PN
+G copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Te
-st/traadloes_komm_test.tex
-Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
-line 44.
-)
+st/traadloes_komm_test.tex [49])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Sy
 stemtest/systemtest.tex [50]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Sy
 stemtest/systemtest_kendtinput.tex
-<figures/kontrol_test_sinus.png, id=1344, 1031.855pt x 803.0pt>
+<figures/kontrol_test_sinus.png, id=1397, 1031.855pt x 803.0pt>
 File: figures/kontrol_test_sinus.png Graphic file (type png)
 
 <use figures/kontrol_test_sinus.png>
@@ -2451,14 +2454,14 @@ Package pdftex.def Info: figures/kontrol_test_sinus.png used on input line 17.
 png (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Sy
 stemtest/systemtest_brugerinput.tex
-<figures/test_squat.png, id=1366, 321.45094pt x 456.20438pt>
+<figures/test_squat.png, id=1419, 321.45094pt x 456.20438pt>
 File: figures/test_squat.png Graphic file (type png)
 
 <use figures/test_squat.png>
 Package pdftex.def Info: figures/test_squat.png used on input line 16.
-(pdftex.def)             Requested size: 441.0pt x 625.88724pt.
+(pdftex.def)             Requested size: 308.69865pt x 438.11827pt.
  [53]
-<figures/test_brugerinput.png, id=1378, 1122.1925pt x 792.9625pt>
+<figures/test_brugerinput.png, id=1431, 1122.1925pt x 792.9625pt>
 File: figures/test_brugerinput.png Graphic file (type png)
 
 <use figures/test_brugerinput.png>
@@ -2466,14 +2469,14 @@ Package pdftex.def Info: figures/test_brugerinput.png used on input line 26.
 (pdftex.def)             Requested size: 441.0pt x 311.61356pt.
  [54 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/test_squat.png>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Sy
-stemtest/systemtest_konklusion.tex
-Underfull \hbox (badness 1163) in paragraph at lines 38--1
-\T1/cmr/m/n/10.95 knæene igen, hvorefter begge accelerometre overskrider deres 
-grænser, hvorfor grafen
+stemtest/systemtest_konklusion.tex [55 <C:/Users/passw/OneDrive/Documents/GitHu
+b/ST4/figures/test_brugerinput.png (PNG copy)>]
+Underfull \hbox (badness 1152) in paragraph at lines 13--14
+[]\T1/cmr/m/n/10.95 Derudover blev det, på baggrund af målinger foretaget i [][
+]afsnit 6.1.3[][][], påvist, at
  []
 
-[55 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/test_brugerinput.png 
-(PNG copy)>] [56])) [57]
+)) [56]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/rSyntese/diskussion
 .tex
 Underfull \hbox (badness 1748) in paragraph at lines 9--10
@@ -2481,185 +2484,182 @@ Underfull \hbox (badness 1748) in paragraph at lines 9--10
  være relevant at
  []
 
-[58
+[57
 
-])
+]
+Underfull \hbox (badness 1005) in paragraph at lines 42--43
+[]\T1/cmr/m/n/10.95 For at muliggøre udviklingen af et exoskelet, skal der tage
+s højde for yderligere
+ []
+
+)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/rSyntese/konklusion
-.tex [59])
+.tex [58])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/rSyntese/perspektiv
-ering.tex [60] <figures/exoskelet.png, id=1432, 401.5pt x 401.5pt>
+ering.tex [59] <figures/exoskelet.png, id=1476, 401.5pt x 401.5pt>
 File: figures/exoskelet.png Graphic file (type png)
 
 <use figures/exoskelet.png>
 Package pdftex.def Info: figures/exoskelet.png used on input line 12.
 (pdftex.def)             Requested size: 220.5pt x 220.5071pt.
- [61 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/exoskelet.png>]) (C:
+ [60 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/exoskelet.png>]) (C:
 \Users\passw\OneDrive\Documents\GitHub\ST4\main.bbl
-[62]
+[61]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [63
+) [62
 
 ]
-[64] [65])
+[63] [64])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/Pilot
-forsoeg.tex [66]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
-
-
+forsoeg.tex [65]
 Underfull \hbox (badness 1137) in paragraph at lines 46--49
 \T1/cmr/m/n/10.95 Hertil anvendes én positiv-, negativ- samt én referenceelektr
 ode. Forinden påsættelse
  []
 
-[67
+[66
 
-] <figures/laarmuskel.png, id=1522, 329.73187pt x 514.92375pt>
+] <figures/laarmuskel.png, id=1561, 329.73187pt x 514.92375pt>
 File: figures/laarmuskel.png Graphic file (type png)
 
 <use figures/laarmuskel.png>
 Package pdftex.def Info: figures/laarmuskel.png used on input line 52.
 (pdftex.def)             Requested size: 132.30135pt x 206.61012pt.
 
-<figures/reference.png, id=1527, 325.215pt x 410.53375pt>
+<figures/reference.png, id=1566, 325.215pt x 410.53375pt>
 File: figures/reference.png Graphic file (type png)
 
 <use figures/reference.png>
-Package pdftex.def Info: figures/reference.png used on input line 61.
+Package pdftex.def Info: figures/reference.png used on input line 62.
 (pdftex.def)             Requested size: 132.30135pt x 167.0107pt.
- [68 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/
+ [67 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/laarmuskel.png> <C:/
 Users/passw/OneDrive/Documents/GitHub/ST4/figures/reference.png>]
-<figures/accelerometervinkel.png, id=1539, 172.39406pt x 165.61874pt>
+<figures/accelerometervinkel.png, id=1578, 172.39406pt x 165.61874pt>
 File: figures/accelerometervinkel.png Graphic file (type png)
 
 <use figures/accelerometervinkel.png>
-Package pdftex.def Info: figures/accelerometervinkel.png used on input line 71.
+Package pdftex.def Info: figures/accelerometervinkel.png used on input line 73.
 
 (pdftex.def)             Requested size: 176.39731pt x 169.46715pt.
- [69 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometervinkel.
+ [68 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/accelerometervinkel.
 png>]
-<figures/Pilotforsoeg/baselineogemg.png, id=1552, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/baselineogemg.png, id=1591, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/baselineogemg.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/baselineogemg.png>
 Package pdftex.def Info: figures/Pilotforsoeg/baselineogemg.png used on input l
-ine 167.
-(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
- [70]
-<figures/Pilotforsoeg/emgfft.png, id=1560, 1445.4pt x 704.6325pt>
+ine 170.
+(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
+ [69]
+<figures/Pilotforsoeg/emgfft.png, id=1599, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emgfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emgfft.png>
-Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 176
+Package pdftex.def Info: figures/Pilotforsoeg/emgfft.png used on input line 179
 .
-(pdftex.def)             Requested size: 374.85269pt x 182.73781pt.
- [71 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
+(pdftex.def)             Requested size: 441.0pt x 214.98248pt.
+ [70 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/baselin
 eogemg.png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pi
 lotforsoeg/emgfft.png (PNG copy)>]
-<figures/Pilotforsoeg/accfft.png, id=1571, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/accfft.png, id=1610, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/accfft.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/accfft.png>
-Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 191
+Package pdftex.def Info: figures/Pilotforsoeg/accfft.png used on input line 194
 .
-(pdftex.def)             Requested size: 374.85269pt x 178.64249pt.
+(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 File: figures/Pilotforsoeg/accvinkel.png Graphic file (type png)
  <use figures/Pilotforsoeg/accvinkel.png>
 Package pdftex.def Info: figures/Pilotforsoeg/accvinkel.png used on input line 
-202.
-(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
+207.
+(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 
-[72 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.p
+[71 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/accfft.p
 ng (PNG copy)>]
-<figures/Pilotforsoeg/emg_vinkler_tid.png, id=1587, 1028.34187pt x 490.08093pt>
+<figures/Pilotforsoeg/emg_vinkler_tid.png, id=1623, 1028.34187pt x 490.08093pt>
 File: figures/Pilotforsoeg/emg_vinkler_tid.png Graphic file (type png)
 <use figures/Pilotforsoeg/emg_vinkler_tid.png>
 Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler_tid.png used on input
- line 211.
-(pdftex.def)             Requested size: 352.80135pt x 168.13586pt.
+ line 218.
+(pdftex.def)             Requested size: 441.0pt x 210.16985pt.
 
-Underfull \hbox (badness 1048) in paragraph at lines 217--218
+Underfull \hbox (badness 1448) in paragraph at lines 223--225
 \T1/cmr/m/n/10.95 mellem vinklerne og mængden af muskelaktivitet. Ved fleksion 
-bliver vinkelen større
+bliver vinklen større
  []
 
-<figures/Pilotforsoeg/emg_vinkler.png, id=1589, 1445.4pt x 704.6325pt>
+<figures/Pilotforsoeg/emg_vinkler.png, id=1625, 1445.4pt x 704.6325pt>
 File: figures/Pilotforsoeg/emg_vinkler.png Graphic file (type png)
 
 <use figures/Pilotforsoeg/emg_vinkler.png>
 Package pdftex.def Info: figures/Pilotforsoeg/emg_vinkler.png used on input lin
-e 225.
-(pdftex.def)             Requested size: 352.80135pt x 171.986pt.
-)
+e 228.
+(pdftex.def)             Requested size: 441.0pt x 214.98248pt.
+ [72 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/emg_vin
+kler_tid.png (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/gPilotforsoeg/test_
 acc.tex [73 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/Pilotforsoeg/
-emg_vinkler_tid.png (PNG copy)> <C:/Users/passw/OneDrive/Documents/GitHub/ST4/f
-igures/Pilotforsoeg/emg_vinkler.png (PNG copy)>]
+emg_vinkler.png (PNG copy)>] [74
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
-
-[74
-
-] <figures/vinkeltest.jpg, id=1613, 752.8125pt x 1339.0025pt>
+]
+<figures/vinkeltest.jpg, id=1654, 752.8125pt x 1339.0025pt>
 File: figures/vinkeltest.jpg Graphic file (type jpg)
 
 <use figures/vinkeltest.jpg>
 Package pdftex.def Info: figures/vinkeltest.jpg used on input line 52.
-(pdftex.def)             Requested size: 176.39731pt x 313.74622pt.
+(pdftex.def)             Requested size: 264.60269pt x 470.63976pt.
  [75 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/vinkeltest.jpg>]
-<figures/lineaerregression.png, id=1628, 996.72375pt x 585.18625pt>
+<figures/lineaerregression.png, id=1666, 996.72375pt x 585.18625pt>
 File: figures/lineaerregression.png Graphic file (type png)
 
 <use figures/lineaerregression.png>
-Package pdftex.def Info: figures/lineaerregression.png used on input line 96.
+Package pdftex.def Info: figures/lineaerregression.png used on input line 95.
 (pdftex.def)             Requested size: 441.0pt x 258.9114pt.
- [76 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/lineaerregression.pn
-g (PNG copy)>]
-<figures/paavirkning.png, id=1637, 1426.32875pt x 791.95876pt>
+ [76]
+<figures/paavirkning.png, id=1675, 1426.32875pt x 791.95876pt>
 File: figures/paavirkning.png Graphic file (type png)
 
 <use figures/paavirkning.png>
 Package pdftex.def Info: figures/paavirkning.png used on input line 108.
 (pdftex.def)             Requested size: 441.0pt x 244.86421pt.
-)
+ [77 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/lineaerregression.pn
+g (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/mBilag/ADC_bilag.te
-x [77 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/paavirkning.png (PN
-G copy)>] <figures/ADC_instillinger_edit.png, id=1648, 520.344pt x 381.8265pt>
+x [78 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/paavirkning.png (PN
+G copy)>] <figures/ADC_instillinger_edit.png, id=1691, 520.344pt x 381.8265pt>
 File: figures/ADC_instillinger_edit.png Graphic file (type png)
 
 <use figures/ADC_instillinger_edit.png>
 Package pdftex.def Info: figures/ADC_instillinger_edit.png used on input line 7
 .
-(pdftex.def)             Requested size: 220.5pt x 161.8051pt.
+(pdftex.def)             Requested size: 352.80135pt x 258.89865pt.
+ [79
 
-<figures/ADC_instillinger2_edit.png, id=1651, 520.344pt x 381.8265pt>
+ <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/ADC_instillinger_edit.pn
+g>]
+<figures/ADC_instillinger2_edit.png, id=1702, 520.344pt x 381.8265pt>
 File: figures/ADC_instillinger2_edit.png Graphic file (type png)
 
 <use figures/ADC_instillinger2_edit.png>
 Package pdftex.def Info: figures/ADC_instillinger2_edit.png used on input line 
 19.
-(pdftex.def)             Requested size: 220.5pt x 161.8051pt.
- [78
-
- <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/ADC_instillinger_edit.pn
-g>])
+(pdftex.def)             Requested size: 352.80135pt x 258.89865pt.
+)
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/mBilag/Brugersikker
-hed.tex [79 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/ADC_instillin
-ger2_edit.png>] <figures/makromikro.png, id=1672, 721.69624pt x 545.03625pt>
+hed.tex [80 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/ADC_instillin
+ger2_edit.png>] <figures/makromikro.png, id=1714, 721.69624pt x 545.03625pt>
 File: figures/makromikro.png Graphic file (type png)
 
 <use figures/makromikro.png>
 Package pdftex.def Info: figures/makromikro.png used on input line 6.
-(pdftex.def)             Requested size: 264.60269pt x 199.83061pt.
- [80
+(pdftex.def)             Requested size: 441.0pt x 333.04547pt.
+ [81
 
  <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/makromikro.png>]) 
 AED: lastpage setting LastPage
-[81]
+[82]
 \tf@toc=\write5
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
@@ -2667,7 +2667,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7B95289C8A74F1D8BBADFC87F2BF2410;6803.
+(rerunfilecheck)             Checksum: CEBA0B609351CAFDB1C32C73FDF86C9F;7471.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2675,11 +2675,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 27354 strings out of 493921
- 493569 string characters out of 3144876
+ 27334 strings out of 493921
+ 493391 string characters out of 3144876
  770798 words of memory out of 3000000
- 29583 multiletter control sequences out of 15000+200000
- 30823 words of font info for 80 fonts, out of 3000000 for 9000
+ 29576 multiletter control sequences out of 15000+200000
+ 26048 words of font info for 64 fonts, out of 3000000 for 9000
  843 hyphenation exceptions out of 8191
  57i,16n,92p,1113b,1006s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
@@ -2697,23 +2697,20 @@ x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfbi1095.pfb><C:/Program Files (x86
 iKTeX 2.9/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/cm-super/sfrm0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/cm-super/sfrm1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/cm-super/sfrm1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/cm-super/sfrm1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
-m-super/sfrm2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
-uper/sfss0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-supe
-r/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/s
-fsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti
-0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfti109
-5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095.p
-fb>
-Output written on main.pdf (88 pages, 21123304 bytes).
+/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/cm-super/sfrm1440.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/cm-super/sfrm1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/cm-super/sfrm2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/cm-super/sfsx1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
+m-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
+uper/sfti0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-supe
+r/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/s
+ftt1095.pfb>
+Output written on main.pdf (89 pages, 21064603 bytes).
 PDF statistics:
- 1858 PDF objects out of 2073 (max. 8388607)
- 366 named destinations out of 1000 (max. 500000)
- 1087 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1891 PDF objects out of 2073 (max. 8388607)
+ 364 named destinations out of 1000 (max. 500000)
+ 1175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

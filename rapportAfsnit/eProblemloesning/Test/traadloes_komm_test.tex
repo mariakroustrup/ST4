@@ -1,37 +1,34 @@
 \subsection{Trådløs kommunikation}
 Den trådløse kommunikation testes for at undersøge, hvorvidt kravene opstillet i \autoref{sec:traadloes_komm_design} opfyldes. 
 
-\noindent
 Kravet for, at USB-donglen skal forsynes via USB opfyldes ved måden, hvorved den trådløse kommunikation er implementeret. Her er BLE-donglen erstattet med en alternativ modtagerenhed som beskrevet i \autoref{traadloes_komm_imp}, og denne tilsluttes en computer via USB, hvorfra den forsynes. 
 
 %\noindent
 %Til test af forsinkelse for transmission, defineres en debug pin på mikrokontrolleren og på modtagerenheden. Når data transmitteres sættes pin'en på mikrokontrolleren høj, samt på modtagerenheden, når data modtages. Hertil kan der via et oscilloscope aflæses en forsinkelese mellem de to pin. 
-
-\noindent
-Til test af afstand, programmeres mikrokontrolleren til at transmittere en værdi, der tæller op fra nul. Denne værdi transmitteres 10 gange i sekundet til en computer, hvorpå denne data visualiseres i programmet RealTerm.
-Startpunket for testen er med en afstand på $1~m$ mellem modtagerenheden på computeren og mikrokontrolleren. Herefter øges afstanden med $1~m$ op til og med $4~m$, eller der ikke længere modtages data. Grunden til at der vælges at test på $4~m$ er for at sikre, at grænsen på den trådløse kommunikation ikke ligger på omkring $2~m$. Testen udføres under forhold, hvor der er fri passage mellem mikrokontroller og modtager.  
+Til test af rækkevidde, programmeres mikrokontrolleren til at transmittere en værdi, der tæller op fra nul. Denne værdi transmitteres 10 gange i sekundet til en computer, hvorpå denne data visualiseres i programmet RealTerm.
+Afstanden på $1~m$ testes mellem modtagerenheden på computeren og mikrokontrolleren. Herefter øges afstanden med $1~m$ op til $4~m$, eller der ikke længere modtages data. Grunden til at det vælges at teste rækkevidden op til $4~m$ er for at sikre, at grænsen på den trådløse kommunikation ikke ligger på omkring $2~m$, som er den ønskede rækkevidde. Testen udføres under forhold, hvor der er fri passage mellem mikrokontroller og modtager.  
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
 \hline 
-Afstand [m] & Gennemført transmission \\ 
+\textbf{Afstand [m]} & \textbf{Gennemført transmission} \\ 
 \hline 
-1 & Ja \\ 
+\textbf{1} & Ja \\ 
 \hline 
-2 & Ja \\ 
+\textbf{2} & Ja \\ 
 \hline 
-3 & Ja \\ 
+\textbf{3} & Ja \\ 
 \hline 
-4 & Ja \\ 
+\textbf{4} & Ja \\ 
 \hline 
 \end{tabular} 
-\caption{Data over afstandstest for den trådløse kommunikation. Venstre søjle oplyser afstand mellem mikrokontroller og modtagerenhed. Den højre oplyser, hvorvidt transmissionen har været succsesfuld eller ej.}
+\caption{Data ved test af rækkevidde af den trådløse kommunikation. Venstre søjle oplyser afstand mellem mikrokontroller og modtagerenhed. Den højre oplyser, hvorvidt transmissionen har været succsesfuld.}
 \label{tab:traadloes_komm_test_afstand}
 \end{table}
 
 \noindent
-Ud fra \autoref{tab:traadloes_komm_test_afstand} fremgår det at den trådløse kommunikation overholder en afstand på $2~m$, der er $100~\%$ af det opstillede krav. Yderligere viste testen, at systemet lagrer data i en buffer i tilfælde af en afbrudt forbindelse. Hvis dette sker vil forbindelsen blive genetableret, hvorpå den tabte data vil blive transmitteret, således ingen data er gået tabt. Det kan derfor ligeledes konkluderes, at de opstillede krav for trådløs kommunikation opfyldes.
+Ud fra \autoref{tab:traadloes_komm_test_afstand} fremgår det, at den trådløse kommunikation overholder en afstand på $2~m$, der er $100~\%$ af det opstillede krav. Yderligere viser testen, at systemet lagrer data i en buffer i tilfælde af en afbrudt forbindelse. Hvis dette sker, vil den tabte data blive transmitteret, når forbindelsen genetableres, således ingen data går tabt. Det kan derfor konkluderes, at de opstillede krav for trådløs kommunikation opfyldes.
 \vspace{3mm}
 
 \textbf{Opsummering af krav:}
@@ -41,6 +38,6 @@ Ud fra \autoref{tab:traadloes_komm_test_afstand} fremgår det at den trådløse 
 \begin{itemize}
 \item[\text{\sffamily \checkmark}] En anden modtagerenhed er implementeret, hvilket forsynes via USB
 \end{itemize}
-\item Skal have en maksimal forsinkelse på 100 ms \fxnote{skal denne forsinkelse være større eller mindre?? - HUSK at ændre i brødteksten også!}
+%\item Skal have en maksimal forsinkelse på 100 ms \fxnote{skal denne forsinkelse være større eller mindre?? - HUSK at ændre i brødteksten også!}
 \item[\text{\sffamily \checkmark}] Skal have en kommunikationsrækkevidde på $2~m$
 \end{itemize}
