@@ -1,8 +1,15 @@
 \subsection{Accelerometeralgoritme}\label{sec:imp_vinkler}
-I \autoref{sec:test_acc} fremgår det, at der er lineær tendens mellem vinkel og spænding. Det er muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en vinkel for en tilsvarende spænding. 
+I \autoref{sec:test_acc} fremgår det, at der er lineær tendens mellem vinkel og spænding. Det er muligt at udføre en lineær interpolation over dataen af målinger fra accelerometrene i forskellige vinkler. På denne måde er det muligt at bestemme en vinkel for en tilsvarende spænding. En ligning af lineær interpolation fremgår af \autoref{eq:interpolation} \citep{samarin2012}.
 %Da målingerne af linearitet, målt i \autoref{sec:test_acc}, er foretaget med Ni USB-6009 stemmer spændingerne ikke overens, når det samples på mikrokontrolleren. Dette gør det ikke, da Ni USB-6009 og mikrokontrolleren har forskellige arbejdsområder,
+\begin{equation} \label{eq:interpolation}
+y=y_{0}+(y_{1}-y_{0})\dfrac{x-x_{0}}{x_{1}-x_{0}}
+\end{equation}
+
+\noindent
+Af formlen defineres $y_0$ og $y_1$ intervallet af grader for interpolationen, hvor $x_0$ og $x_1$ er de tilhørende samplede spændinger fra acceleromtrene for de målte y-værdier.   
+
 Da der til kontrolsystemet anvendes en anden ADC end i \autoref{sec:test_acc}, udføres nye målinger for at undersøge relationen mellem spænding og vinkel.  
-Efterfølgende er der aflæst et offset, som er trukket fra signalet, for at centrere dette omkring 0. Offsettet for accelerometret placeret parallelt med femur er aflæst til et digitalt output på $1.002$, hvilket svarer til et offset på $1,6162~V$. Accelerometret placeret parallelt med tibia er aflæst til $972$, svarende til et offset på $1,5743~V$. Det digitale output ved forskellige vinkler fremgår af \autoref{tab:vinkelinterval_psoc}. Disse digitale output er omregnet til en spænding (U) ved \autoref{eq:vinkler}, hvor $3,3~V$ er forsyningsspændingen, og $2^{11}$ er ADC'ens opløsning målt i bit.  
+Efterfølgende er der aflæst et offset, som er trukket fra signalet, for at centrere dette omkring 0. Offsettet for accelerometret placeret parallelt med femur er aflæst til et digitalt output på $1.002$, hvilket svarer til et offset på $1,6162~V$. Accelerometret placeret parallelt med tibia er aflæst til $972$, svarende til et offset på $1,5743~V$. De digitale outputs er omregnet til en spænding (U) ved \autoref{eq:vinkler}, hvor $3,3~V$ er forsyningsspændingen, og $2^{11}$ er ADC'ens opløsning målt i bit.  
 
 \begin{equation}
 \label{eq:vinkler}

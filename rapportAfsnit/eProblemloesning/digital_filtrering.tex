@@ -15,6 +15,9 @@ IIR-filtret udregnes ved anvendelse af følgende formel, der fremgår af \autore
 \begin{equation} \label{eq:iirfilt}
 	y(n)= \sum_{m=0}^{M} b_{m} \cdot x(M-m)- \sum^{N}_{m=1} a_{m} \cdot y(N-m)
 \end{equation}
+\noindent
+Hvor M-værdien er feedforward filtrets orden og N-værdien er feedback filtrets orden. \\
+
 
 \noindent
 På baggrund af den samme procedure laves IIR-filtre, ligesom analoge filtre, som Butterworth, Chebyshev type 1 og 2 og elliptiske filtre \citep{blandford2012}. Disse er illustreret på \autoref{fig:filtre}.
@@ -45,6 +48,8 @@ Filtrets formel for udregning ses af \autoref{eq:mafl}.
 	y[i]=\dfrac{1}{M}\sum^{M-1}_{j=0} x[i-j]
 \label{eq:mafl}
 \end{equation}
+\noindent
+Hvor M-værdien betegner filterlængden. \\
 
 \noindent 
 Et moving average filter er et vindue med en bestemt størrelse, der bevæger sig henad et array med ét element ad gangen. 

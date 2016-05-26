@@ -538,6 +538,17 @@ G. D. Borasio},
   Timestamp                = {2016.02.29}
 }
 
+@Book{smith1999,
+  Title                    = {The Scientist and Engineer’s Guide to Digital Signal Processing},
+  Author                   = {S. Smith},
+  Publisher                = {California Technical Publishing},
+  Year                     = {1999},
+
+  Doi                      = {0-9660176-7-6},
+  Owner                    = {signehk},
+  Timestamp                = {2016.05.26}
+}
+
 @Manual{aalborguniversitet2014,
   Title                    = {Studieordning for bacheloruddannelsen i Sundhedsteknologi},
   Author                   = {Studienævnet for Sundhed, Teknologi og Idræt},

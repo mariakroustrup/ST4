@@ -89,20 +89,26 @@ end ;
 
 %% Plots
 % Plot af grader i forhold til tid
+temp = grader(1:1000);
+temp = -temp;
+temp = temp+180;
+
 figure
-plot(t, grader(1:1000));
+%plot(t, grader(1:1000)+90);
+plot(t, temp);
 xlabel('Tid [s]')
 ylabel('Knæets vinkel [\circ]')
 set(gca,'XTick',[0:1:10])
-ylim([0 90])
-set(gca,'YTick',[0:10:90])
+ylim([90 180])
+set(gca,'YTick',[90:10:180])
 set(gca,'fontsize',20);
 box off 
 
 % Plot af EMG og accelerometer med to y akser
 figure
 hold on
-[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000));
+%[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, grader(1:1000));
+[hAx,hLine1,hLine2] = plotyy(t, Nedogop_emgo(1:1000), t, temp);
 set(hAx(1),'fontsize',20);
 set(hAx(2),'fontsize',20);
 legend('EMG','Vinkel');
@@ -111,8 +117,8 @@ set(hAx(1), 'XLim',[0 10]);
 set(hAx(1),'XTick',[0:1:10]);
 set(get(hAx(1),'Xlabel'),'string','Tid [s]');
 
-set(hAx(2), 'YLim',[0 90]);
-set(hAx(2),'YTick',[0:10:90]);
+set(hAx(2), 'YLim',[90 180]);
+set(hAx(2),'YTick',[90:10:180]);
 set(get(hAx(2),'Ylabel'),'string','Knæets vinkel [\circ]');
 
 set(hAx(1), 'YLim',[-0.1 1]);
