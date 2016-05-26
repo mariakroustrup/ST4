@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 16:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.11)  26 MAY 2016 16:50
 entering extended mode
 **main.tex
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\main.tex
@@ -1994,12 +1994,12 @@ Package pdftex.def Info: figures/squat.png used on input line 50.
 es/squat.png>]) [9]
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/sy
 stembeskrivelse.tex
-<figures/blokdiagram.png, id=803, 1167.36125pt x 221.82875pt>
+<figures/blokdiagram.png, id=803, 1177.39874pt x 221.82875pt>
 File: figures/blokdiagram.png Graphic file (type png)
 
 <use figures/blokdiagram.png>
 Package pdftex.def Info: figures/blokdiagram.png used on input line 29.
-(pdftex.def)             Requested size: 441.0pt x 83.8016pt.
+(pdftex.def)             Requested size: 441.0pt x 83.0874pt.
 )
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/lo
 esningsstrategi.tex [10
@@ -2266,21 +2266,21 @@ ut line 16.
  [31 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/traadloes_komm.png>]
  [32 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/implementering/overo
 rdnet_flow.png>]
-<figures/implementering/initialiserende_flow.png, id=1186, 448.67625pt x 324.21
-124pt>
+<figures/implementering/initialiserende_flow.png, id=1186, 468.75125pt x 309.15
+5pt>
 File: figures/implementering/initialiserende_flow.png Graphic file (type png)
  <use figures/implementering/initialiserende_flow.png>
 Package pdftex.def Info: figures/implementering/initialiserende_flow.png used o
 n input line 30.
-(pdftex.def)             Requested size: 352.80135pt x 254.94173pt.
+(pdftex.def)             Requested size: 352.80135pt x 232.68176pt.
 
-<figures/implementering/EMG_algo.png, id=1191, 588.1975pt x 419.5675pt>
+<figures/implementering/EMG_algo.png, id=1191, 592.2125pt x 454.69875pt>
 File: figures/implementering/EMG_algo.png Graphic file (type png)
 
 <use figures/implementering/EMG_algo.png>
 Package pdftex.def Info: figures/implementering/EMG_algo.png used on input line
  43.
-(pdftex.def)             Requested size: 441.0pt x 314.5724pt.
+(pdftex.def)             Requested size: 441.0pt x 338.60875pt.
  [33 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/implementering/initi
 aliserende_flow.png>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/eProblemloesning/Im
@@ -2290,12 +2290,12 @@ Underfull \hbox (badness 1331) in paragraph at lines 5--8
 everer en spænding på
  []
 
-<figures/samlet_spaending.png, id=1203, 485.815pt x 214.8025pt>
+<figures/samlet_spaending.png, id=1203, 484.81125pt x 213.79875pt>
 File: figures/samlet_spaending.png Graphic file (type png)
 
 <use figures/samlet_spaending.png>
 Package pdftex.def Info: figures/samlet_spaending.png used on input line 11.
-(pdftex.def)             Requested size: 352.80135pt x 155.98839pt.
+(pdftex.def)             Requested size: 352.80135pt x 155.59222pt.
  [34 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/implementering/EMG_a
 lgo.png>]) [35 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/samlet_spa
 ending.png>]
@@ -2618,12 +2618,12 @@ File: figures/lineaerregression.png Graphic file (type png)
 Package pdftex.def Info: figures/lineaerregression.png used on input line 95.
 (pdftex.def)             Requested size: 441.0pt x 258.9114pt.
  [76]
-<figures/paavirkning.png, id=1675, 1426.32875pt x 791.95876pt>
+<figures/paavirkning.png, id=1675, 1445.4pt x 852.18375pt>
 File: figures/paavirkning.png Graphic file (type png)
 
 <use figures/paavirkning.png>
 Package pdftex.def Info: figures/paavirkning.png used on input line 108.
-(pdftex.def)             Requested size: 441.0pt x 244.86421pt.
+(pdftex.def)             Requested size: 441.0pt x 260.00018pt.
  [77 <C:/Users/passw/OneDrive/Documents/GitHub/ST4/figures/lineaerregression.pn
 g (PNG copy)>])
 (C:\Users\passw\OneDrive\Documents\GitHub\ST4\rapportAfsnit/mBilag/ADC_bilag.te
@@ -2708,7 +2708,7 @@ m-super/sfsx2074.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
 uper/sfti0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-supe
 r/sfti1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1095.pfb>
-Output written on main.pdf (89 pages, 21064603 bytes).
+Output written on main.pdf (89 pages, 21062113 bytes).
 PDF statistics:
  1891 PDF objects out of 2073 (max. 8388607)
  364 named destinations out of 1000 (max. 500000)
