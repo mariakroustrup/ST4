@@ -1,8 +1,11 @@
+% For at køre dette script: Kør først 'databehandling_resultater.m', der
+% ligger i "Resultater"-mappen. Det valgte filter er altid "2. mulighed". 
+
 %% Filterkonfigurationer
 frekvens = 100;
 
 % 1. mulighed
-Wn = [1]/(frekvens/2)
+Wn = [1]/(frekvens/2);
 n = 2;
 
 [b,a]  = butter(n, Wn,'low');
@@ -10,15 +13,15 @@ n = 2;
 a_filt = filtfilt(b,a,nedogop_emg_off);
 
 % 2. mulighed
-Wn1 = [5]/frekvens/2;
-n1 = 2;
+Wn1 =[1.26]/(frekvens/2); %knækfrevekns = 2
+n1 = 2; %orden = 2
 
 [b1,a1]  = butter(n1, Wn1,'low')
 
 a_filt1 = filtfilt(b1,a1,nedogop_emg_off);
 
 % 3. mulighed
-Wn2 = [3]/(frekvens/2)
+Wn2 = [3]/(frekvens/2);
 n2 = 2;
 
 [b2,a2]  = butter(n2, Wn2,'low');
